@@ -21,31 +21,30 @@ The JSON format (Schema) is not the final version and is still under discussions
 {
   bib             : {} "object" 
       title             : "string" 
-      authors	      : []  
-      institutes	      : [] 
-      references  	: [] 
-      facility	      : [] 
-      history	      : [] 
-  subent-001        : {} "object" 
+      authors           : []  
+      institutes        : [] 
+      references        : [] 
+      facility          : [] 
+      history           : [] 
+  subent-001      : {} "object" 
       extra_information :    "object" 
             analysis	      : [ pointer: {} ]
-            correction  	: [ pointer: {} ]
-            decay-data  	: [ pointer: {} ]
-            detector	      : [ pointer: {} ]
-            err-analys  	: [ pointer: {} ]
-            facility	      : [ pointer: {} ]
-            monitor	      : [ pointer: {} ]
-            sample	      : [ pointer: {} ]
-            status	      : [ pointer: {} ]
-  subent-002       : {}"objext" 
-      reaction	      : [ pointer: {} ]
+            correction        : [ pointer: {} ]
+            decay-data        : [ pointer: {} ]
+            detector          : [ pointer: {} ]
+            err-analys        : [ pointer: {} ]
+            facility          : [ pointer: {} ]
+            monitor           : [ pointer: {} ]
+            sample            : [ pointer: {} ]
+            status            : [ pointer: {} ]
+  subent-002      : {}"objext" 
+      reaction          : [ pointer: {} ]
       extra_information :    "object" 
-            inc-source	      : [ pointer: {} ]
-            method	      : [ pointer: {} ]
+            inc-source        : [ pointer: {} ]
+            method            : [ pointer: {} ]
       common            : {}
             heads             : []
             units             : []
-      data                    : []
       data              : {}
             heads             : []
             units             : []
