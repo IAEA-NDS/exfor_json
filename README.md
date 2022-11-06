@@ -19,15 +19,15 @@ git clone https://github.com/shinokumura/exfor_json.git
 The JSON format (Schema) is not the final version and is still under discussions. The current schema looks as follows:
 ```
 {
-  bib             : {} "object" 
+  bib             : {}
       title             : "string" 
       authors           : []  
       institutes        : [] 
       references        : [] 
       facility          : [] 
       history           : [] 
-  subent-001      : {} "object" 
-      extra_information :    "object" 
+  subent-001      : {}
+      extra_information : {}
             analysis	      : [ pointer: {} ]
             correction        : [ pointer: {} ]
             decay-data        : [ pointer: {} ]
@@ -37,9 +37,9 @@ The JSON format (Schema) is not the final version and is still under discussions
             monitor           : [ pointer: {} ]
             sample            : [ pointer: {} ]
             status            : [ pointer: {} ]
-  subent-002      : {}"objext" 
+  subent-002      : {}
       reaction          : [ pointer: {} ]
-      extra_information :    "object" 
+      extra_information : {}
             inc-source        : [ pointer: {} ]
             method            : [ pointer: {} ]
       common            : {}
