@@ -16,7 +16,7 @@ git clone https://github.com/shinokumura/exfor_json.git
 ```
 
 ### EXFOR_to_JSON format
-The JSON format (Schema) is not the final version and is still under discussions. The current schema looks as follows:
+The JSON format (Schema) is not the final version and still under discussions. The current schema looks as follows:
 ```
 {
   bib             : {}
@@ -55,9 +55,10 @@ The JSON format (Schema) is not the final version and is still under discussions
 
 
 ### Use index
-Index of reactions are stored in json (index.json) and pickle (index.pickle) files.
-If the PRODUCT (SF4) in REACTION filed is either of MASS, ELEM, or ELEM/MASS, you cannot know real products until reading DATA block. In such cases, following index stores the columns by replacing MASS, ELEM, or ELEM/MASS to the real products defined in the DATA block.
-The format is as follows:
+The index of reactions is stored in json (index.json) and pickle (index.pickle) files.
+![image](https://github.com/IAEA-NDS/exfor_dictionary/blob/main/SF.png)
+If the PRODUCT (SF4) in REACTION filed is either of MASS, ELEM, or ELEM/MASS, you will not know the real products until reading the DATA block. In such cases, the ```residual``` column stores the real products defined in the ```DATA``` block in addition to the MASS, ELEM, or ELEM/MASS in ```sf4```.
+The index format is as follows:
 ```
         id  entry subentry pointer  year       author  min_inc_en  max_inc_en points     target     process            sf4       residual   sf5      sf6   sf7    sf8   sf9
 C0290-009-0  C0290      009      XX  1981    R.A.Cecil   3.370e-04   3.370e-04      1   13-AL-27  10-NE-20,X         0-NN-1         0-NN-1  None    DA/DE  None   None  None
@@ -68,7 +69,7 @@ Note: The minimum and maximum energy values are still subject to discussion due 
 
 
 ### Load reaction index from pickle file
-Load Python pickle after unzip [``index.pickle.zip``](https://github.com/shinokumura/exfor_json/blob/main/index.pickle.zip). You can load and manipulate data using Pandas DataFrame for instance:
+Load Python pickle after unzipping [``index.pickle.zip``](https://github.com/shinokumura/exfor_json/blob/main/index.pickle.zip). You can load and manipulate data using Pandas DataFrame for instance:
 
 ```
 import pandas as pd
@@ -88,7 +89,7 @@ print(df)
 ```
 
 ### Load reaction index from json file
-Load JSON file after unzip [``index.json.zip``](https://github.com/shinokumura/exfor_json/blob/main/index.json.zip). You can load and manipulate data using Pandas DataFrame for instance:
+Load JSON file after unzipping [``index.json.zip``](https://github.com/shinokumura/exfor_json/blob/main/index.json.zip). You can load and manipulate data using Pandas DataFrame for instance:
 
 ```
 import pandas as pd
