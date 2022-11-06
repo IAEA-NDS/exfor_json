@@ -15,10 +15,50 @@ You can download the repository from a terminal using:
 git clone https://github.com/shinokumura/exfor_json.git
 ```
 
+### EXFOR_to_JSON format
+The JSON format (Schema) is not the final version and is still under discussions. The current schema looks as follows:
+```
+{
+  bib             : {} "object" 
+      title             : "string" 
+      authors	      : []  
+      institutes	      : [] 
+      references  	: [] 
+      facility	      : [] 
+      history	      : [] 
+  subent-001        : {} "object" 
+      extra_information :    "object" 
+            analysis	      : [ pointer: {} ]
+            correction  	: [ pointer: {} ]
+            decay-data  	: [ pointer: {} ]
+            detector	      : [ pointer: {} ]
+            err-analys  	: [ pointer: {} ]
+            facility	      : [ pointer: {} ]
+            monitor	      : [ pointer: {} ]
+            sample	      : [ pointer: {} ]
+            status	      : [ pointer: {} ]
+  subent-002       : {}"objext" 
+      reaction	      : [ pointer: {} ]
+      extra_information :    "object" 
+            inc-source	      : [ pointer: {} ]
+            method	      : [ pointer: {} ]
+      common            : {}
+            heads             : []
+            units             : []
+      data                    : []
+      data              : {}
+            heads             : []
+            units             : []
+            data              : []
+}
+```
+
+
 
 ### Use index
-Index of reactions are stored in json (index.json) and pickle (index.pickle) files. The format is as follows:
-
+Index of reactions are stored in json (index.json) and pickle (index.pickle) files.
+If the PRODUCT (SF4) in REACTION filed is either of MASS, ELEM, or ELEM/MASS, you cannot know real products until reading DATA block. In such cases, following index stores the columns by replacing MASS, ELEM, or ELEM/MASS to the real products defined in the DATA block.
+The format is as follows:
 ```
         id  entry subentry pointer  year       author  min_inc_en  max_inc_en points     target     process            sf4       residual   sf5      sf6   sf7    sf8   sf9
 C0290-009-0  C0290      009      XX  1981    R.A.Cecil   3.370e-04   3.370e-04      1   13-AL-27  10-NE-20,X         0-NN-1         0-NN-1  None    DA/DE  None   None  None
