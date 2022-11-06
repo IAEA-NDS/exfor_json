@@ -53,11 +53,42 @@ The JSON format (Schema) is not the final version and still under discussions. T
 ```
 
 
+### Use EXFOR_to_JSON format
+A symple example of plotting the data in Entry #12898, Subentry #002 is as follows:
+```
+import json
+import pandas as pd
+import matplotlib.pyplot as plt
+
+f = open("json/128/12898.json")
+data = json.load(f)
+
+entry_data = data["12898-002"]["data"]
+
+## Header
+print("data headers:   ", entry_data["heads"])
+## Unit
+print("data units:     ", entry_data["units"])
+
+## Load to Python dictionary
+dict = {entry_data["heads"][i]: entry_data["data"][i]  for i in range(len(entry_data["heads"]))}
+
+## Load dictionary to pd.DataFrame
+df = pd.DataFrame(dict, index=None)
+df["dy"] = df["DATA      2"] * df["ERR-T     2"]/100
+print(df)
+
+df.plot(x ="EN", y="DATA      2", yerr='dy', kind="scatter")
+plt.show()
+```
+
+
 
 ### Use index
 The index of reactions is stored in json (index.json) and pickle (index.pickle) files.
 ![image](https://github.com/IAEA-NDS/exfor_dictionary/blob/main/SF.png)
-If the PRODUCT (SF4) in REACTION filed is either of MASS, ELEM, or ELEM/MASS, you will not know the real products until reading the DATA block. In such cases, the ```residual``` column stores the real products defined in the ```DATA``` block in addition to the MASS, ELEM, or ELEM/MASS in ```sf4```.
+
+If the PRODUCT (```SF4```) in ```REACTION``` filed is either MASS, ELEM, or ELEM/MASS, you will not know the real products until reading the ```DATA``` block. In such cases, the ```residual``` column stores the real products defined in the ```DATA``` block in addition to the MASS, ELEM, or ELEM/MASS in ```sf4```.
 The index format is as follows:
 ```
         id  entry subentry pointer  year       author  min_inc_en  max_inc_en points     target     process            sf4       residual   sf5      sf6   sf7    sf8   sf9
