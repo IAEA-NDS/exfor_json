@@ -19,36 +19,41 @@ git clone https://github.com/shinokumura/exfor_json.git
 The JSON format (Schema) is not the final version and still under discussions. The current schema looks as follows:
 ```
 {
-  bib             : {}
+  entry           : "string" 
+  last_updated    : "string" 
+  number_of_rev   : "string"
+  histories       : []
+  bib_record            : {}
       title             : "string" 
       authors           : []  
       institutes        : [] 
       references        : [] 
       facility          : [] 
-      history           : [] 
-  subent-001      : {}
-      extra_information : {}
-            analysis	      : [ pointer: {} ]
-            correction        : [ pointer: {} ]
-            decay-data        : [ pointer: {} ]
-            detector          : [ pointer: {} ]
-            err-analys        : [ pointer: {} ]
-            facility          : [ pointer: {} ]
-            monitor           : [ pointer: {} ]
-            sample            : [ pointer: {} ]
-            status            : [ pointer: {} ]
-  subent-002      : {}
-      reaction          : [ pointer: {} ]
-      extra_information : {}
-            inc-source        : [ pointer: {} ]
-            method            : [ pointer: {} ]
-      common            : {}
-            heads             : []
-            units             : []
-      data              : {}
-            heads             : []
-            units             : []
-            data              : []
+      history           : []
+  data_tables     : {}
+      001               : {}
+            extra_information : {}
+                  analysis	      : [ pointer: {} ]
+                  correction        : [ pointer: {} ]
+                  decay-data        : [ pointer: {} ]
+                  detector          : [ pointer: {} ]
+                  err-analys        : [ pointer: {} ]
+                  facility          : [ pointer: {} ]
+                  monitor           : [ pointer: {} ]
+                  sample            : [ pointer: {} ]
+                  status            : [ pointer: {} ]
+      002         : {}
+            reaction          : [ pointer: {} ]
+            extra_information : {}
+                  inc-source        : [ pointer: {} ]
+                  method            : [ pointer: {} ]
+            common            : {}
+                  heads             : []
+                  units             : []
+            data              : {}
+                  heads             : []
+                  units             : []
+                  data              : []
 }
 ```
 
