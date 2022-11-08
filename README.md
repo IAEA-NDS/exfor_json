@@ -30,30 +30,33 @@ The JSON format (Schema) is not the final version and still under discussions. T
       references        : [] 
       facility          : [] 
       history           : []
-  data_tables     : {}
-      001               : {}
-            extra_information : {}
-                  analysis	      : [ pointer: {} ]
-                  correction        : [ pointer: {} ]
-                  decay-data        : [ pointer: {} ]
-                  detector          : [ pointer: {} ]
-                  err-analys        : [ pointer: {} ]
-                  facility          : [ pointer: {} ]
-                  monitor           : [ pointer: {} ]
-                  sample            : [ pointer: {} ]
-                  status            : [ pointer: {} ]
-      002         : {}
-            reaction          : [ pointer: {} ]
-            extra_information : {}
-                  inc-source        : [ pointer: {} ]
-                  method            : [ pointer: {} ]
-            common            : {}
-                  heads             : []
-                  units             : []
-            data              : {}
-                  heads             : []
-                  units             : []
-                  data              : []
+  experimental_conditions : {}
+    001           : {}
+      analysis	        : [ pointer: {} ]
+      correction        : [ pointer: {} ]
+      decay-data        : [ pointer: {} ]
+      detector          : [ pointer: {} ]
+      err-analys        : [ pointer: {} ]
+      facility          : [ pointer: {} ]
+      monitor           : [ pointer: {} ]
+      sample            : [ pointer: {} ]
+      status            : [ pointer: {} ]
+    002           : {}
+  data_tables      : {}
+    001          : {}
+      common            : {}
+          heads             : []
+          units             : []
+    002          : {}
+      reaction          : [ pointer: {} ]
+      common            : {}
+          heads             : []
+          units             : []
+          data              : []
+      data              : {}
+          heads             : []
+          units             : []
+          data              : []
 }
 ```
 
