@@ -51,37 +51,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,281,325,197705)",
-          "free_txt": [],
-          "publication_year": "1977"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,1CANCRC)",
-          "free_txt": [
-            " NRU reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(1CANCRC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,281,325,197705)",
+        "free_txt": [],
+        "publication_year": "1977",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,1CANCRC)",
+        "free_txt": [
+          " NRU reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1CANCRC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(N,2G)1-H-3,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-2(N,2G)1-H-3,,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-2",
               [
@@ -99,11 +94,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(8-O-16(N,2G)8-O-17,,SIG)",
+        "children": [
+          {
+            "code": [
+              "8-O-16",
+              [
+                "N,2G"
+              ],
+              "8-O-17,,SIG"
+            ],
+            "type": null,
+            "target": "8-O-16",
+            "process": "N,2G",
+            "sf49": "8-O-17,,SIG",
+            "sf4": "8-O-17",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(8-O-16(N,G)8-O-17,,SIG)",
+        "children": [
+          {
+            "code": [
+              "8-O-16",
+              [
+                "N,G"
+              ],
+              "8-O-17,,SIG"
+            ],
+            "type": null,
+            "target": "8-O-16",
+            "process": "N,G",
+            "sf49": "8-O-17,,SIG",
+            "sf4": "8-O-17",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -130,32 +188,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(N,2G)8-O-17,,SIG)",
-          "0": {
-            "code": [
-              "8-O-16",
-              [
-                "N,2G"
-              ],
-              "8-O-17,,SIG"
-            ],
-            "type": null,
-            "target": "8-O-16",
-            "process": "N,2G",
-            "sf49": "8-O-17,,SIG",
-            "sf4": "8-O-17",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -182,32 +214,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(N,G)8-O-17,,SIG)",
-          "0": {
-            "code": [
-              "8-O-16",
-              [
-                "N,G"
-              ],
-              "8-O-17,,SIG"
-            ],
-            "type": null,
-            "target": "8-O-16",
-            "process": "N,G",
-            "sf49": "8-O-17,,SIG",
-            "sf4": "8-O-17",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -246,8 +252,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -255,40 +261,32 @@
               " reactions in materials other than the sample."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               " Two germanium-lithium detectors"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,1CANCRC)",
             "free_txt": [
               " NRU reactor"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(THCOL)",
             "free_txt": [
@@ -296,30 +294,24 @@
               " reflection, thermalized in the target before capture."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
               " Coincidence of pulses in Ge(Li) detectors"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Heavy water sample."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -333,8 +325,8 @@
     "002": {},
     "003": {},
     "004": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": "(1-H-2(N,G)1-H-3,,SIG)",
             "free_txt": []

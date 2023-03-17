@@ -48,35 +48,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CJP,50,1689,1972)",
-          "free_txt": [],
-          "publication_year": "1972"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1CANOTC)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(1CANOTC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CJP,50,1689,1972)",
+        "free_txt": [],
+        "publication_year": "1972",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1CANOTC)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1CANOTC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(7-N-14(G,N)7-N-13,PAR,DA,,BRS)",
-          "0": {
+      "0": {
+        "x4_code": "(7-N-14(G,N)7-N-13,PAR,DA,,BRS)",
+        "children": [
+          {
             "code": [
               "7-N-14",
               [
@@ -94,11 +89,74 @@
             "sf7": null,
             "sf8": "BRS",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(7-N-14(G,N)7-N-13,PAR,INT/DA,,4PI/BRS)",
+        "children": [
+          {
+            "code": [
+              "7-N-14",
+              [
+                "G,N"
+              ],
+              "7-N-13,PAR,INT/DA,,4PI/BRS"
+            ],
+            "type": null,
+            "target": "7-N-14",
+            "process": "G,N",
+            "sf49": "7-N-13,PAR,INT/DA,,4PI/BRS",
+            "sf4": "7-N-13",
+            "sf5": "PAR",
+            "sf6": "INT/DA",
+            "sf7": null,
+            "sf8": "4PI/BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(7-N-14(G,X)0-NN-1,,INT,,BRS)",
+        "children": [
+          {
+            "code": [
+              "7-N-14",
+              [
+                "G,X"
+              ],
+              "0-NN-1,,INT,,BRS"
+            ],
+            "type": null,
+            "target": "7-N-14",
+            "process": "G,X",
+            "sf49": "0-NN-1,,INT,,BRS",
+            "sf4": "0-NN-1",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL",
@@ -415,32 +473,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(7-N-14(G,N)7-N-13,PAR,INT/DA,,4PI/BRS)",
-          "0": {
-            "code": [
-              "7-N-14",
-              [
-                "G,N"
-              ],
-              "7-N-13,PAR,INT/DA,,4PI/BRS"
-            ],
-            "type": null,
-            "target": "7-N-14",
-            "process": "G,N",
-            "sf49": "7-N-13,PAR,INT/DA,,4PI/BRS",
-            "sf4": "7-N-13",
-            "sf5": "PAR",
-            "sf6": "INT/DA",
-            "sf7": null,
-            "sf8": "4PI/BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL",
@@ -484,32 +516,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(7-N-14(G,X)0-NN-1,,INT,,BRS)",
-          "0": {
-            "code": [
-              "7-N-14",
-              [
-                "G,X"
-              ],
-              "0-NN-1,,INT,,BRS"
-            ],
-            "type": null,
-            "target": "7-N-14",
-            "process": "G,X",
-            "sf49": "0-NN-1,,INT,,BRS",
-            "sf4": "0-NN-1",
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -543,8 +549,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(UNFLD)",
             "free_txt": [
@@ -576,10 +582,8 @@
               " 1971)."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -587,10 +591,8 @@
               " 1%) and detector efficiency."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -615,10 +617,8 @@
               " neutron-producing interactions was also found."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -626,26 +626,20 @@
               " NE102 plastic scintillator."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1CANOTC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -658,18 +652,14 @@
               " steps of 2 MeV from 15.5 to 29.5 MeV."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-2(G,N)1-H-1,,DA)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -682,18 +672,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -706,8 +694,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -715,20 +703,16 @@
               " 90-degrees differential cross section."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,M0500002)",
             "free_txt": []
@@ -744,18 +728,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

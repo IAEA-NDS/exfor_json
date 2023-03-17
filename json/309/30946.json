@@ -38,28 +38,56 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(P,IA-1128,63,196601)",
-          "free_txt": [
-            " Brief, data given"
-          ],
-          "publication_year": "1966"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": null,
-          "free_txt": [
-            "No information given, but the compiler assumes that the",
-            "irradiations were done at the IRR-1 swimming pool type",
-            "reactor at the Soreq Nuclear Research Center."
-          ]
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(P,IA-1128,63,196601)",
+        "free_txt": [
+          " Brief, data given"
+        ],
+        "publication_year": "1966",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": null,
+        "free_txt": [
+          "No information given, but the compiler assumes that the",
+          "irradiations were done at the IRR-1 swimming pool type",
+          "reactor at the Soreq Nuclear Research Center."
+        ],
+        "pointer": "0"
+      }
+    ]
+  },
+  "reactions": {
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)ELEM/MASS,IND,FY,,MXW)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,IND,FY,,MXW"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,IND,FY,,MXW",
+            "sf4": "ELEM/MASS",
+            "sf5": "IND",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -79,32 +107,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)ELEM/MASS,IND,FY,,MXW)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,IND,FY,,MXW"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,IND,FY,,MXW",
-            "sf4": "ELEM/MASS",
-            "sf5": "IND",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ASSUM2    2",
@@ -165,8 +167,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -178,10 +180,8 @@
               "irradiation."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": null,
             "free_txt": [
@@ -190,10 +190,8 @@
               "reactor at the Soreq Nuclear Research Center."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(RCHEM)",
             "free_txt": [
@@ -212,8 +210,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -225,10 +223,58 @@
               "analysis of raw data."
             ]
           }
+        ],
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "by commpiler: apparently was the independent yield of",
+              "I-134 used to normalize the measured relative direct",
+              "yields obtained by method 1). It was calculated from",
+              "the fractional independent yield given by Wahl",
+              " (ASSUM3) and the I-134 cumulative yield by Katcoff."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Data from text on page 64 of progress report IA-1128."
+            ]
+          }
         ]
       },
-      "assumed": {
-        "3": [
+      "1": {
+        "assumed": [
+          {
+            "x4_code": "(ASSUM1,92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
+            "free_txt": []
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(R,,S.KATCOFF,J,NUC,18,(11),201,1960)",
+            "free_txt": []
+          }
+        ]
+      },
+      "2": {
+        "assumed": [
+          {
+            "x4_code": "(ASSUM2,92-U-235(N,F)53-I-134,CUM,FY,,MXW)",
+            "free_txt": []
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(R,,S.KATCOFF,J,NUC,18,(11),201,1960)",
+            "free_txt": []
+          }
+        ]
+      },
+      "3": {
+        "assumed": [
           {
             "x4_code": "(ASSUM3,(92-U-235(N,F)53-I-134,IND,FY,,MXW)/(92-U-235(N,F)53-I-134,CUM,FY,,MXW))",
             "free_txt": [
@@ -243,37 +289,11 @@
               " average of 2 values given in Table 9 of Wahl's paper."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "by commpiler: apparently was the independent yield of",
-              "I-134 used to normalize the measured relative direct",
-              "yields obtained by method 1). It was calculated from",
-              "the fractional independent yield given by Wahl",
-              " (ASSUM3) and the I-134 cumulative yield by Katcoff."
-            ]
-          }
-        ]
-      },
-      "rel-ref": {
-        "3": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,A.C.WAHL,J,JIN,6,263,1958)",
             "free_txt": []
-          }
-        ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "Data from text on page 64 of progress report IA-1128."
-            ]
           }
         ]
       }

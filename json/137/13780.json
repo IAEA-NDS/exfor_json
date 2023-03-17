@@ -128,37 +128,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,59,1131,1999)",
-          "free_txt": [],
-          "publication_year": "1999"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALAS)",
-          "free_txt": [
-            " LANSCE."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,59,1131,1999)",
+        "free_txt": [],
+        "publication_year": "1999",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALAS)",
+        "free_txt": [
+          " LANSCE."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(41-NB-93(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(41-NB-93(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "41-NB-93",
               [
@@ -176,13 +171,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(41-NB-93(N,EL),,WID,,G)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(41-NB-93(N,EL),,WID,,G)",
+        "children": [
+          {
             "code": [
               "41-NB-93",
               [
@@ -200,13 +197,15 @@
             "sf7": null,
             "sf8": "G",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "(41-NB-93(N,TOT),LON,POL,,DSP/ASY/MSC)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "(41-NB-93(N,TOT),LON,POL,,DSP/ASY/MSC)",
+        "children": [
+          {
             "code": [
               "41-NB-93",
               [
@@ -224,11 +223,46 @@
             "sf7": null,
             "sf8": "DSP/ASY/MSC",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Longitudinal PV asymmetry"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Longitudinal PV asymmetry"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(41-NB-93(N,EL),,STF)",
+        "children": [
+          {
+            "code": [
+              "41-NB-93",
+              [
+                "N,EL"
+              ],
+              ",,STF"
+            ],
+            "type": null,
+            "target": "41-NB-93",
+            "process": "N,EL",
+            "sf49": ",,STF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "STF",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "POL-BM"
@@ -497,32 +531,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(41-NB-93(N,EL),,STF)",
-          "0": {
-            "code": [
-              "41-NB-93",
-              [
-                "N,EL"
-              ],
-              ",,STF"
-            ],
-            "type": null,
-            "target": "41-NB-93",
-            "process": "N,EL",
-            "sf49": ",,STF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "STF",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -556,46 +564,38 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " 10B-loaded liquid scintillation detector."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALAS)",
             "free_txt": [
               " LANSCE."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(POLNS)",
             "free_txt": [
               " 70% polarized neutron beam."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -605,10 +605,8 @@
               " asymmetry for 0.73-eV resonance in 139La."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -616,10 +614,8 @@
               " Areal density of target 5.10E+23 atoms/cm2 of niobium."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -630,28 +626,24 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(MLA)",
             "free_txt": [
               " FITX multilevel Reich-Moore fitting code."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on sources of uncertainty."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -662,8 +654,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -671,10 +663,8 @@
               " is the number of levels analyzed."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

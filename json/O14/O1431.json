@@ -61,40 +61,35 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,EPJ/A,27,(S1),187,2006)",
-          "free_txt": [],
-          "publication_year": "2006"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,2GERTUB)",
-          "free_txt": [
-            "  The experiment has been carried out at",
-            "an electrostatic cascade accelerator at beam energies",
-            "below 60 keV maintained by a highly stabilized power",
-            "supply."
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(2GERTUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,EPJ/A,27,(S1),187,2006)",
+        "free_txt": [],
+        "publication_year": "2006",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,2GERTUB)",
+        "free_txt": [
+          "  The experiment has been carried out at",
+          "an electrostatic cascade accelerator at beam energies",
+          "below 60 keV maintained by a highly stabilized power",
+          "supply."
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(2GERTUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(D,N)2-HE-3,,DA,,COS/RS)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-2(D,N)2-HE-3,,DA,,COS/RS)",
+        "children": [
+          {
             "code": [
               "1-H-2",
               [
@@ -112,11 +107,93 @@
             "sf7": null,
             "sf8": "COS/RS",
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-2(D,P)1-H-3,,DA,,COS/RS)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "D,P"
+              ],
+              "1-H-3,,DA,,COS/RS"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "D,P",
+            "sf49": "1-H-3,,DA,,COS/RS",
+            "sf4": "1-H-3",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "COS/RS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((1-H-2(D,N)2-HE-3,,SIG)/(1-H-2(D,P)1-H-3,,SIG))",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "D,N"
+              ],
+              "2-HE-3,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "D,N",
+            "sf49": "2-HE-3,,SIG",
+            "sf4": "2-HE-3",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "1-H-2",
+              [
+                "D,P"
+              ],
+              "1-H-3,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "D,P",
+            "sf49": "1-H-3,,SIG",
+            "sf4": "1-H-3",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "NUMBER-CM"
@@ -280,32 +357,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(D,P)1-H-3,,DA,,COS/RS)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "D,P"
-              ],
-              "1-H-3,,DA,,COS/RS"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "D,P",
-            "sf49": "1-H-3,,DA,,COS/RS",
-            "sf4": "1-H-3",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "COS/RS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "NUMBER-CM"
@@ -469,51 +520,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-2(D,N)2-HE-3,,SIG)/(1-H-2(D,P)1-H-3,,SIG))",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "D,N"
-              ],
-              "2-HE-3,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "D,N",
-            "sf49": "2-HE-3,,SIG",
-            "sf4": "2-HE-3",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "1-H-2",
-              [
-                "D,P"
-              ],
-              "1-H-3,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "D,P",
-            "sf49": "1-H-3,,SIG",
-            "sf4": "1-H-3",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -667,8 +673,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -684,10 +690,8 @@
               "renormalized to the ones of Ta."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SI)",
             "free_txt": [
@@ -704,10 +708,8 @@
               "radioactive alpha-source."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -723,10 +725,8 @@
               "property of Rf-ion source inherent to their design."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,2GERTUB)",
             "free_txt": [
@@ -736,10 +736,8 @@
               "supply."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(BCINT)",
             "free_txt": []
@@ -757,18 +755,14 @@
               "the target < 200 uA depending on the energy."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P,T,HE3)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -777,10 +771,8 @@
               "irradiation."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -791,8 +783,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -801,10 +793,8 @@
               "around 90-degree."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(3.)",
             "free_txt": [
@@ -826,10 +816,8 @@
               "used."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(HE3)",
             "free_txt": []
@@ -838,8 +826,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -848,10 +836,8 @@
               "around 90-degree."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(3.)",
             "free_txt": [
@@ -877,8 +863,8 @@
       }
     },
     "004": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(3.)",
             "free_txt": [
@@ -900,10 +886,8 @@
               "used."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,O1431002)",
             "free_txt": []

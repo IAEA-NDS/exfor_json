@@ -37,38 +37,33 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ZP/A,325,69,198609)",
-          "free_txt": [],
-          "publication_year": "1986"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CCW,3TAITAI)",
-          "free_txt": [
-            " Neutron generator with 150 keV",
-            "              nonanalysed deuteron beam"
-          ],
-          "facility_type": "(CCW)",
-          "institute": "(3TAITAI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ZP/A,325,69,198609)",
+        "free_txt": [],
+        "publication_year": "1986",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CCW,3TAITAI)",
+        "free_txt": [
+          " Neutron generator with 150 keV",
+          "              nonanalysed deuteron beam"
+        ],
+        "pointer": "0",
+        "facility_type": "(CCW)",
+        "institute": "(3TAITAI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(N,A)11-NA-24,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(13-AL-27(N,A)11-NA-24,,SIG)",
+        "children": [
+          {
             "code": [
               "13-AL-27",
               [
@@ -86,11 +81,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(13-AL-27(N,P)12-MG-27,,SIG)",
+        "children": [
+          {
+            "code": [
+              "13-AL-27",
+              [
+                "N,P"
+              ],
+              "12-MG-27,,SIG"
+            ],
+            "type": null,
+            "target": "13-AL-27",
+            "process": "N,P",
+            "sf49": "12-MG-27,,SIG",
+            "sf4": "12-MG-27",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(14-SI-28(N,P)13-AL-28,,SIG)",
+        "children": [
+          {
+            "code": [
+              "14-SI-28",
+              [
+                "N,P"
+              ],
+              "13-AL-28,,SIG"
+            ],
+            "type": null,
+            "target": "14-SI-28",
+            "process": "N,P",
+            "sf49": "13-AL-28,,SIG",
+            "sf4": "13-AL-28",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "DATA-ERR"
@@ -132,32 +190,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(N,P)12-MG-27,,SIG)",
-          "0": {
-            "code": [
-              "13-AL-27",
-              [
-                "N,P"
-              ],
-              "12-MG-27,,SIG"
-            ],
-            "type": null,
-            "target": "13-AL-27",
-            "process": "N,P",
-            "sf49": "12-MG-27,,SIG",
-            "sf4": "12-MG-27",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "DATA-ERR"
@@ -199,32 +231,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(N,P)13-AL-28,,SIG)",
-          "0": {
-            "code": [
-              "14-SI-28",
-              [
-                "N,P"
-              ],
-              "13-AL-28,,SIG"
-            ],
-            "type": null,
-            "target": "14-SI-28",
-            "process": "N,P",
-            "sf49": "13-AL-28,,SIG",
-            "sf4": "13-AL-28",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "DATA-ERR"
@@ -268,8 +274,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -281,10 +287,8 @@
               "-true coincidence losses"
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -294,10 +298,8 @@
               "separate entries.See EXFOR 30820 for Kossuth results"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": []
@@ -306,10 +308,8 @@
             "x4_code": "(NAICR)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -318,10 +318,8 @@
               "-efficiency"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CCW,3TAITAI)",
             "free_txt": [
@@ -329,44 +327,34 @@
               "              nonanalysed deuteron beam"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(DG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Natural Si and Al samples"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -380,8 +368,8 @@
       }
     },
     "002": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -397,8 +385,8 @@
       }
     },
     "003": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -414,8 +402,8 @@
       }
     },
     "004": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [

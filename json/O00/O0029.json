@@ -32,35 +32,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,98,25,1955)",
-          "free_txt": [],
-          "publication_year": "1955"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USACRD)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(1USACRD)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,98,25,1955)",
+        "free_txt": [],
+        "publication_year": "1955",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USACRD)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USACRD)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(P,F),,SIG,,,DERIV)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-232(P,F),,SIG,,,DERIV)",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -78,11 +73,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(P,N)91-PA-232,,SIG)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "P,N"
+              ],
+              "91-PA-232,,SIG"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "P,N",
+            "sf49": "91-PA-232,,SIG",
+            "sf4": "91-PA-232",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(90-TH-232(P,3N)91-PA-230,,SIG)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "P,3N"
+              ],
+              "91-PA-230,,SIG"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "P,3N",
+            "sf49": "91-PA-230,,SIG",
+            "sf4": "91-PA-230",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -160,32 +218,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(P,N)91-PA-232,,SIG)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "P,N"
-              ],
-              "91-PA-232,,SIG"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "P,N",
-            "sf49": "91-PA-232,,SIG",
-            "sf4": "91-PA-232",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -249,32 +281,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(P,3N)91-PA-230,,SIG)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "P,3N"
-              ],
-              "91-PA-230,,SIG"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "P,3N",
-            "sf49": "91-PA-230,,SIG",
-            "sf4": "91-PA-230",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -324,26 +330,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
               ".Charged-particle emission."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GEMUC)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -351,26 +353,20 @@
               "                                     the uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USACRD)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(BCINT,STTA,CHSEP)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,O0661001,H.A.Tewes+,J,PR,88,860,1952)",
             "free_txt": [
@@ -378,20 +374,16 @@
               "and values used in ASSUMED (see Subent 002)."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "A stack of 2-mil thorium foils were used."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -402,8 +394,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -412,10 +404,8 @@
               "al. (1982) or estimated by the author"
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM,90-TH-232(P,F)40-ZR-97,CUM,FY)",
             "free_txt": [
@@ -424,10 +414,8 @@
               " 21 MeV are estimated."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(D,O0020024,H.Kudo+,J,PR/C,25,3011,1982)",
             "free_txt": []
@@ -436,8 +424,8 @@
       }
     },
     "003": {
-      "rel-ref": {
-        "0": [
+      "0": {
+        "rel-ref": [
           {
             "x4_code": "(A,O0020027,H.Kudo+,J,PR/C,25,3011,1982)",
             "free_txt": []
@@ -446,8 +434,8 @@
       }
     },
     "004": {
-      "rel-ref": {
-        "0": [
+      "0": {
+        "rel-ref": [
           {
             "x4_code": "(D,O0020025,H.Kudo+,J,PR/C,25,3011,1982)",
             "free_txt": []

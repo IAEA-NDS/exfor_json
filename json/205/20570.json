@@ -48,46 +48,42 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,73KIEV,3,27,1973)",
-          "free_txt": [
-            " in French"
-          ],
-          "publication_year": "1973"
-        },
-        {
-          "x4_code": "(C,76ANL,,208,1976)",
-          "free_txt": [
-            "  Revised (final) data in table"
-          ],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2FR CAD)",
-          "free_txt": [
-            " 5 MeV Van de Graaff"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2FR CAD)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,73KIEV,3,27,1973)",
+        "free_txt": [
+          " in French"
+        ],
+        "publication_year": "1973",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,76ANL,,208,1976)",
+        "free_txt": [
+          "  Revised (final) data in table"
+        ],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2FR CAD)",
+        "free_txt": [
+          " 5 MeV Van de Graaff"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2FR CAD)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -105,11 +101,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(94-PU-239(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(94-PU-241(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-241",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-241",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1"
@@ -333,32 +392,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,F),,SIG)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1"
@@ -478,32 +511,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-241(N,F),,SIG)",
-          "0": {
-            "code": [
-              "94-PU-241",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-241",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1"
@@ -569,8 +576,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -580,10 +587,8 @@
               " - non-detected fission events."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": []
@@ -596,20 +601,16 @@
               " 1.5 MeV."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2FR CAD)",
             "free_txt": [
               " 5 MeV Van de Graaff"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -622,10 +623,8 @@
               "   above 550 keV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -641,10 +640,8 @@
               " neutrons"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,P.H.White,J,JNE/AB,19,325,1965)",
             "free_txt": [
@@ -657,10 +654,8 @@
               " Description on the directional counter"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -671,8 +666,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -685,10 +680,8 @@
               " Uncertainty in neutron flux (1.8%)"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -701,10 +694,8 @@
               "    Sample enriched to 97.663 atom perc. U-235."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -721,8 +712,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -735,10 +726,8 @@
               " Uncertainty in neutron flux (1.8%)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -762,8 +751,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -776,10 +765,8 @@
               " Uncertainty in neutron flux (1.8%)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [

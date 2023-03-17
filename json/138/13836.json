@@ -68,45 +68,41 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,6,(1),266,197207)",
-          "free_txt": [],
-          "publication_year": "1972"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,1USABNL)",
-          "free_txt": [
-            " Brookhaven High Flux Beam Reactor (HFBR)"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(1USABNL)"
-        },
-        {
-          "x4_code": "(CHOPF,1USABNL)",
-          "free_txt": [
-            " Fast chopper at Brookhaven."
-          ],
-          "facility_type": "(CHOPF)",
-          "institute": "(1USABNL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,6,(1),266,197207)",
+        "free_txt": [],
+        "publication_year": "1972",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USABNL)",
+        "free_txt": [
+          " Brookhaven High Flux Beam Reactor (HFBR)"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USABNL)"
+      },
+      {
+        "x4_code": "(CHOPF,1USABNL)",
+        "free_txt": [
+          " Fast chopper at Brookhaven."
+        ],
+        "pointer": "0",
+        "facility_type": "(CHOPF)",
+        "institute": "(1USABNL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,G)90-TH-233,,SPC,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-232(N,G)90-TH-233,,SPC,,SPA)",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -124,11 +120,46 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(N,G)90-TH-233,,SPC,,RES)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,G"
+              ],
+              "90-TH-233,,SPC,,RES"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,G",
+            "sf49": "90-TH-233,,SPC,,RES",
+            "sf4": "90-TH-233",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": "RES",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-MAX"
@@ -367,32 +398,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,G)90-TH-233,,SPC,,RES)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,G"
-              ],
-              "90-TH-233,,SPC,,RES"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,G",
-            "sf49": "90-TH-233,,SPC,,RES",
-            "sf4": "90-TH-233",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": "RES",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1366,8 +1371,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1375,30 +1380,24 @@
               " 4786.5(20) keV."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Corrections for gamma-ray detection efficiency applied."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               " Ge(Li) detector of 10 cm3."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1406,10 +1405,8 @@
               " contributions to uncertainty given."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,1USABNL)",
             "free_txt": [
@@ -1422,20 +1419,16 @@
               " Fast chopper at Brookhaven."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " 22-m flight path."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,W.R.Kane,W,Kane,1972)",
             "free_txt": []
@@ -1448,10 +1441,8 @@
             "x4_code": "(12241003,R.E.Wood+,J,PR,98,639,1955)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1476,10 +1467,8 @@
               " values of Bhat and the gold parameters of Wood."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1487,10 +1476,8 @@
               " standard geometry."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1507,8 +1494,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1517,10 +1504,8 @@
               " lines located 1022 keV below the given energies."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [

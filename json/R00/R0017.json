@@ -37,39 +37,34 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,20,1583,1979)",
-          "free_txt": [],
-          "publication_year": "1979"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2FR STR)",
-          "free_txt": [
-            " 7.5 and 3 MV VdG",
-            "Beam energy was calibrated using the neutron threshold",
-            " of 13C(p,n)13N at E=3235.7+-0.7 keV."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2FR STR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,20,1583,1979)",
+        "free_txt": [],
+        "publication_year": "1979",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2FR STR)",
+        "free_txt": [
+          " 7.5 and 3 MV VdG",
+          "Beam energy was calibrated using the neutron threshold",
+          " of 13C(p,n)13N at E=3235.7+-0.7 keV."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2FR STR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-10(P,A)4-BE-7,PAR,SIG,G,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(5-B-10(P,A)4-BE-7,PAR,SIG,G,REL)",
+        "children": [
+          {
             "code": [
               "5-B-10",
               [
@@ -87,11 +82,74 @@
             "sf7": "G",
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(5-B-10(P,INL)5-B-10,PAR,SIG,G,REL)",
+        "children": [
+          {
+            "code": [
+              "5-B-10",
+              [
+                "P,INL"
+              ],
+              "5-B-10,PAR,SIG,G,REL"
+            ],
+            "type": null,
+            "target": "5-B-10",
+            "process": "P,INL",
+            "sf49": "5-B-10,PAR,SIG,G,REL",
+            "sf4": "5-B-10",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": "G",
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(5-B-10(P,A)4-BE-7,PAR,SIG,G,REL)",
+        "children": [
+          {
+            "code": [
+              "5-B-10",
+              [
+                "P,A"
+              ],
+              "4-BE-7,PAR,SIG,G,REL"
+            ],
+            "type": null,
+            "target": "5-B-10",
+            "process": "P,A",
+            "sf49": "4-BE-7,PAR,SIG,G,REL",
+            "sf4": "4-BE-7",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": "G",
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E"
@@ -325,32 +383,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-10(P,INL)5-B-10,PAR,SIG,G,REL)",
-          "0": {
-            "code": [
-              "5-B-10",
-              [
-                "P,INL"
-              ],
-              "5-B-10,PAR,SIG,G,REL"
-            ],
-            "type": null,
-            "target": "5-B-10",
-            "process": "P,INL",
-            "sf49": "5-B-10,PAR,SIG,G,REL",
-            "sf4": "5-B-10",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": "G",
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E"
@@ -580,32 +612,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-10(P,A)4-BE-7,PAR,SIG,G,REL)",
-          "0": {
-            "code": [
-              "5-B-10",
-              [
-                "P,A"
-              ],
-              "4-BE-7,PAR,SIG,G,REL"
-            ],
-            "type": null,
-            "target": "5-B-10",
-            "process": "P,A",
-            "sf49": "4-BE-7,PAR,SIG,G,REL",
-            "sf4": "4-BE-7",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": "G",
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E"
@@ -709,18 +715,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No error analysis given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2FR STR)",
             "free_txt": [
@@ -729,28 +733,22 @@
               " of 13C(p,n)13N at E=3235.7+-0.7 keV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(SITA,BCINT)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Enriched 10B (~30 ug/cm2 thick) with C or Ta backing"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -761,8 +759,8 @@
       }
     },
     "002": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -774,8 +772,8 @@
       }
     },
     "003": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -787,8 +785,8 @@
       }
     },
     "004": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [

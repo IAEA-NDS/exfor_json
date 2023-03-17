@@ -32,46 +32,43 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,72,729(1),1947)",
-          "free_txt": [
-            "#doi:10.1103/physrev.72.729"
-          ],
-          "publication_year": "1947"
-        },
-        {
-          "x4_code": "(R,MDDC-232,1946)",
-          "free_txt": [
-            " Preliminary results."
-          ],
-          "publication_year": "1946"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USALAS)",
-          "free_txt": [
-            "  42-inch Los Alamos cyclotron."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,72,729(1),1947)",
+        "free_txt": [
+          "#doi:10.1103/physrev.72.729"
+        ],
+        "publication_year": "1947",
+        "pointer": "0",
+        "doi": "10.1103/physrev.72.729"
+      },
+      {
+        "x4_code": "(R,MDDC-232,1946)",
+        "free_txt": [
+          " Preliminary results."
+        ],
+        "publication_year": "1946",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USALAS)",
+        "free_txt": [
+          "  42-inch Los Alamos cyclotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(79-AU-197(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "79-AU-197",
               [
@@ -89,11 +86,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(79-AU-197(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(79-AU-197(N,TOT),,WID,,SQ/S0)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,TOT"
+              ],
+              ",,WID,,SQ/S0"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "N,TOT",
+            "sf49": ",,WID,,SQ/S0",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "SQ/S0",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -153,32 +213,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -205,32 +239,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,TOT),,WID,,SQ/S0)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "N,TOT"
-              ],
-              ",,WID,,SQ/S0"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "N,TOT",
-            "sf49": ",,WID,,SQ/S0",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "SQ/S0",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -254,8 +262,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -264,36 +272,28 @@
               "the 68-microsecond mean life of the moderator."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(BF3)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USALAS)",
             "free_txt": [
               "  42-inch Los Alamos cyclotron."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-BE)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -308,10 +308,8 @@
               "path from the moderator to a BF3-ion chamber."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,12184001,W.W.Havens Jr+,J,PR,71,165,1947)",
             "free_txt": [
@@ -319,10 +317,8 @@
               "resonance energy."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -333,18 +329,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No details on sources of uncertainties."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -355,18 +349,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No details on sources of uncertainties."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -377,8 +369,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -395,10 +387,8 @@
               "resonance, and Gamma = resonance width."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,14688002)",
             "free_txt": []

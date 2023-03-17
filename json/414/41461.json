@@ -66,44 +66,40 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,59,(11),1934,1996)",
-          "free_txt": [],
-          "publication_year": "1996"
-        },
-        {
-          "x4_code": "(J,PAN,59,1865,1996)",
-          "free_txt": [
-            " Engl. translation of J,YF,59 ."
-          ],
-          "publication_year": "1996"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,4RUSFEI)",
-          "free_txt": [
-            "  Neutron generator KG-2.5"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(4RUSFEI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,59,(11),1934,1996)",
+        "free_txt": [],
+        "publication_year": "1996",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PAN,59,1865,1996)",
+        "free_txt": [
+          " Engl. translation of J,YF,59 ."
+        ],
+        "publication_year": "1996",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,4RUSFEI)",
+        "free_txt": [
+          "  Neutron generator KG-2.5"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(4RUSFEI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,F)0-NN-1,PR,KE)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(N,F)0-NN-1,PR,KE)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -121,11 +117,93 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,F),PR,NU)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              ",PR,NU"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": ",PR,NU",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((92-U-238(N,F),PR,NU/DE,,NPD)/(98-CF-252(0,F),PR,NU/DE,,NPD))",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              ",PR,NU/DE,,NPD"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": ",PR,NU/DE,,NPD",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU/DE",
+            "sf7": null,
+            "sf8": "NPD",
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              ",PR,NU/DE,,NPD"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": ",PR,NU/DE,,NPD",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU/DE",
+            "sf7": null,
+            "sf8": "NPD",
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": " Experimental ratio of normalized to 1.0 neutron spectra"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -155,32 +233,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,F),PR,NU)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              ",PR,NU"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": ",PR,NU",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -210,51 +262,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(N,F),PR,NU/DE,,NPD)/(98-CF-252(0,F),PR,NU/DE,,NPD))",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              ",PR,NU/DE,,NPD"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": ",PR,NU/DE,,NPD",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU/DE",
-            "sf7": null,
-            "sf8": "NPD",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              ",PR,NU/DE,,NPD"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": ",PR,NU/DE,,NPD",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU/DE",
-            "sf7": null,
-            "sf8": "NPD",
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": " Experimental ratio of normalized to 1.0 neutron spectra"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -580,18 +587,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               " This work was made under support of RFBR #94-05692."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
@@ -608,10 +613,8 @@
               " threshold 250 keV, absolute efficiency near 30 %."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -619,30 +622,24 @@
               "         correction errors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,4RUSFEI)",
             "free_txt": [
               "  Neutron generator KG-2.5"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
               "    T-Ti-targets"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -650,18 +647,14 @@
               "      neutron beam."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(98-CF-252(0,F),PR,DE,N)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -673,8 +666,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -685,8 +678,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -697,18 +690,16 @@
       }
     },
     "004": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E,N)",
             "free_txt": [
               " Energy of fission neutrons"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

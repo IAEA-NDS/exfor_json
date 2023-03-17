@@ -64,46 +64,42 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NIM/B,269,159,2011)",
-          "free_txt": [
-            " Final data"
-          ],
-          "publication_year": "2011"
-        },
-        {
-          "x4_code": "((S,ISINN-18,257,2011)=(S,JINR-E3-2011-26,257,2011))",
-          "free_txt": [
-            " Same data given for except for error of RI (45 b)"
-          ],
-          "publication_year": "2011"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,3KORPUE)",
-          "free_txt": [
-            " Pohang Neutron Facility"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(3KORPUE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NIM/B,269,159,2011)",
+        "free_txt": [
+          " Final data"
+        ],
+        "publication_year": "2011",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((S,ISINN-18,257,2011)=(S,JINR-E3-2011-26,257,2011))",
+        "free_txt": [
+          " Same data given for except for error of RI (45 b)"
+        ],
+        "publication_year": "2011",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,3KORPUE)",
+        "free_txt": [
+          " Pohang Neutron Facility"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(3KORPUE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(67-HO-165(N,G)67-HO-166-G,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(67-HO-165(N,G)67-HO-166-G,,SIG)",
+        "children": [
+          {
             "code": [
               "67-HO-165",
               [
@@ -121,11 +117,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(67-HO-165(N,G)67-HO-166-G,,RI)",
+        "children": [
+          {
+            "code": [
+              "67-HO-165",
+              [
+                "N,G"
+              ],
+              "67-HO-166-G,,RI"
+            ],
+            "type": null,
+            "target": "67-HO-165",
+            "process": "N,G",
+            "sf49": "67-HO-166-G,,RI",
+            "sf4": "67-HO-166-G",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MONIT",
@@ -179,32 +210,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(67-HO-165(N,G)67-HO-166-G,,RI)",
-          "0": {
-            "code": [
-              "67-HO-165",
-              [
-                "N,G"
-              ],
-              "67-HO-166-G,,RI"
-            ],
-            "type": null,
-            "target": "67-HO-165",
-            "process": "N,G",
-            "sf49": "67-HO-166-G,,RI",
-            "sf4": "67-HO-166-G",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "MONIT1",
@@ -270,8 +275,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -279,10 +284,8 @@
               " Nucl.Instrum.Meth.B gives the latest data."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -291,30 +294,24 @@
               " relative to NaI(Tl) detector for the peak"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,3KORPUE)",
             "free_txt": [
               " Pohang Neutron Facility"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
               " Ta(g,n) photonuclear reaction"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -329,10 +326,8 @@
               " radioactive isotope"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -356,10 +351,8 @@
               "without a Cd cover with a thickness of 0.5 mm"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -370,24 +363,20 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(67-HO-166-G,26.824HR,DG,80.576,0.0656)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(79-AU-198,2.69517D,DG,411.80,0.9558)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -406,10 +395,8 @@
               " - Total Systematic uncertainty (4.15%)"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
@@ -418,24 +405,20 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(67-HO-166-G,26.824HR,DG,80.576,0.0656)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(79-AU-198,2.69517D,DG,411.80,0.9558)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -454,10 +437,8 @@
               " - Total Systematic uncertainty (6.95%)"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "((MONIT1),S.F.Mughabghab,B,NEUT.CS 1B,,1984)",
             "free_txt": []
@@ -466,10 +447,8 @@
             "x4_code": "((MONIT2),S.F.Mughabghab,B,NEUT.CS 1B,,1984)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []

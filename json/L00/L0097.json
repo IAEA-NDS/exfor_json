@@ -29,38 +29,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,143,449,1970)",
-          "free_txt": [],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,2SWDLND)",
-          "free_txt": [
-            " 1.2 GeV electron synchrotron at the",
-            "  Department of Physics, University of Lund."
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(2SWDLND)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,143,449,1970)",
+        "free_txt": [],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,2SWDLND)",
+        "free_txt": [
+          " 1.2 GeV electron synchrotron at the",
+          "  Department of Physics, University of Lund."
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(2SWDLND)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(G,F)ELEM/MASS,CUM,FY,,REL/BRS)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(G,F)ELEM/MASS,CUM,FY,,REL/BRS)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -78,11 +73,74 @@
             "sf7": null,
             "sf8": "REL/BRS",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(G,F)MASS,CUM,FY,,REL/BRS)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "G,F"
+              ],
+              "MASS,CUM,FY,,REL/BRS"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "G,F",
+            "sf49": "MASS,CUM,FY,,REL/BRS",
+            "sf4": "MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "REL/BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(83-BI-209(G,F)MASS,CUM,FY,,REL/BRS)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "G,F"
+              ],
+              "MASS,CUM,FY,,REL/BRS"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "G,F",
+            "sf49": "MASS,CUM,FY,,REL/BRS",
+            "sf4": "MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "REL/BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -410,32 +468,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(G,F)MASS,CUM,FY,,REL/BRS)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "G,F"
-              ],
-              "MASS,CUM,FY,,REL/BRS"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "G,F",
-            "sf49": "MASS,CUM,FY,,REL/BRS",
-            "sf4": "MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "REL/BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -624,32 +656,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(G,F)MASS,CUM,FY,,REL/BRS)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "G,F"
-              ],
-              "MASS,CUM,FY,,REL/BRS"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "G,F",
-            "sf49": "MASS,CUM,FY,,REL/BRS",
-            "sf4": "MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "REL/BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MAX"
@@ -701,18 +707,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               " 30 cm3 Ge(Li) detector"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,2SWDLND)",
             "free_txt": [
@@ -720,20 +724,16 @@
               "  Department of Physics, University of Lund."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": [
               " bremsstrahlung"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -745,18 +745,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -767,18 +765,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -789,18 +785,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

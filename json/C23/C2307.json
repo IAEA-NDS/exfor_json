@@ -23,39 +23,35 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,114,1600,1959)",
-          "free_txt": [
-            "#doi:10.1103/PhysRev.114.1600"
-          ],
-          "publication_year": "1959"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USABNL)",
-          "free_txt": [
-            " The Brookhaven 60-in. Cyclotron."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USABNL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,114,1600,1959)",
+        "free_txt": [
+          "#doi:10.1103/PhysRev.114.1600"
+        ],
+        "publication_year": "1959",
+        "pointer": "0",
+        "doi": "10.1103/PhysRev.114.1600"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USABNL)",
+        "free_txt": [
+          " The Brookhaven 60-in. Cyclotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USABNL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-58(A,N)30-ZN-61,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(28-NI-58(A,N)30-ZN-61,,SIG)",
+        "children": [
+          {
             "code": [
               "28-NI-58",
               [
@@ -73,11 +69,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(28-NI-58(A,X)29-CU-61,CUM,SIG)",
+        "children": [
+          {
+            "code": [
+              "28-NI-58",
+              [
+                "A,X"
+              ],
+              "29-CU-61,CUM,SIG"
+            ],
+            "type": null,
+            "target": "28-NI-58",
+            "process": "A,X",
+            "sf49": "29-CU-61,CUM,SIG",
+            "sf4": "29-CU-61",
+            "sf5": "CUM",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(28-NI-60(A,N)30-ZN-63,,SIG)",
+        "children": [
+          {
+            "code": [
+              "28-NI-60",
+              [
+                "A,N"
+              ],
+              "30-ZN-63,,SIG"
+            ],
+            "type": null,
+            "target": "28-NI-60",
+            "process": "A,N",
+            "sf49": "30-ZN-63,,SIG",
+            "sf4": "30-ZN-63",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -113,32 +172,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-58(A,X)29-CU-61,CUM,SIG)",
-          "0": {
-            "code": [
-              "28-NI-58",
-              [
-                "A,X"
-              ],
-              "29-CU-61,CUM,SIG"
-            ],
-            "type": null,
-            "target": "28-NI-58",
-            "process": "A,X",
-            "sf49": "29-CU-61,CUM,SIG",
-            "sf4": "29-CU-61",
-            "sf5": "CUM",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -177,32 +210,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-60(A,N)30-ZN-63,,SIG)",
-          "0": {
-            "code": [
-              "28-NI-60",
-              [
-                "A,N"
-              ],
-              "30-ZN-63,,SIG"
-            ],
-            "type": null,
-            "target": "28-NI-60",
-            "process": "A,N",
-            "sf49": "30-ZN-63,,SIG",
-            "sf4": "30-ZN-63",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -243,8 +250,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
@@ -256,10 +263,8 @@
               "Ni60(alpha,n)Zn63 reaction by Ghoshal."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -267,54 +272,42 @@
               "100-channel pulse-height analyzer."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Estimates of the probable errors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USABNL)",
             "free_txt": [
               " The Brookhaven 60-in. Cyclotron."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP,ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "((MONIT)B0017001,S.N.Ghoshal,J,PR,80,939,1950)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(28-NI-60(A,N)30-ZN-63,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(28-NI-58,ENR=0.984)",
             "free_txt": []
@@ -329,16 +322,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(30-ZN-61,88.5SEC,B+,4.38,0.80)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -349,16 +340,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(29-CU-61,3.3HR)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -369,8 +358,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

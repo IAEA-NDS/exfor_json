@@ -54,58 +54,55 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PTE,,(5),27,2006)",
-          "free_txt": [
-            "    Main Reference"
-          ],
-          "publication_year": "2006"
-        },
-        {
-          "x4_code": "(J,IET,49,(5),617,2006)",
-          "free_txt": [
-            " English translation of J,PTE",
-            "#doi:10.1134/S0020441206050022"
-          ],
-          "publication_year": "2006"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            "  Reactor IBR-2.",
-            " Spectrometric setup consist of two rotor-type",
-            " mechanical neutron choppers with dc motors,",
-            " an electronic system for stabilizing the rotation of",
-            " rotors and phasing the moment of opening slits along",
-            " a neutron beam with a neutron pulse,collimators, and",
-            " neutron detectors.",
-            " The angular rotational velocity of rotors changes from",
-            " 0 to 6000 rpm, their synchronization with the neutron",
-            " pulse is provided with accuracy of 10 microsec  at",
-            " minimum time of opening slits along the neutron beam",
-            " of 20 microsec."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PTE,,(5),27,2006)",
+        "free_txt": [
+          "    Main Reference"
+        ],
+        "publication_year": "2006",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,IET,49,(5),617,2006)",
+        "free_txt": [
+          " English translation of J,PTE",
+          "#doi:10.1134/S0020441206050022"
+        ],
+        "publication_year": "2006",
+        "pointer": "0",
+        "doi": "10.1134/S0020441206050022"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          "  Reactor IBR-2.",
+          " Spectrometric setup consist of two rotor-type",
+          " mechanical neutron choppers with dc motors,",
+          " an electronic system for stabilizing the rotation of",
+          " rotors and phasing the moment of opening slits along",
+          " a neutron beam with a neutron pulse,collimators, and",
+          " neutron detectors.",
+          " The angular rotational velocity of rotors changes from",
+          " 0 to 6000 rpm, their synchronization with the neutron",
+          " pulse is provided with accuracy of 10 microsec  at",
+          " minimum time of opening slits along the neutron beam",
+          " of 20 microsec."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(74-W-0(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(74-W-0(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "74-W-0",
               [
@@ -123,11 +120,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Total cross-section"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Total cross-section"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(74-W-0(N,TOT),,TRN)",
+        "children": [
+          {
+            "code": [
+              "74-W-0",
+              [
+                "N,TOT"
+              ],
+              ",,TRN"
+            ],
+            "type": null,
+            "target": "74-W-0",
+            "process": "N,TOT",
+            "sf49": ",,TRN",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "TRN",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Total transmission"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -159,32 +191,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(74-W-0(N,TOT),,TRN)",
-          "0": {
-            "code": [
-              "74-W-0",
-              [
-                "N,TOT"
-              ],
-              ",,TRN"
-            ],
-            "type": null,
-            "target": "74-W-0",
-            "process": "N,TOT",
-            "sf49": ",,TRN",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "TRN",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Total transmission"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -223,8 +229,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
@@ -232,20 +238,16 @@
               "       chopper."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Errors are not specified."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
@@ -263,10 +265,8 @@
               " of 20 microsec."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -274,20 +274,16 @@
               "       neutron guide."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "  Time-Of-Flight, Flight path 32.6m"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -299,8 +295,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -310,10 +306,8 @@
               " (22.03.2007)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -328,8 +322,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -339,10 +333,8 @@
               " (22.03.2007)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [

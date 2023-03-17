@@ -89,33 +89,88 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,2007NICE,1,591,200704)",
-          "free_txt": [
-            "#doi:10.1051/ndata:07463"
-          ],
-          "publication_year": "2007"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2JPNKTO)",
-          "free_txt": [
-            "  Electron LINAC at Kyoto University",
-            "                 Research Reactor Institute KURRI.",
-            "Beam energy 30 MeV, average current 30 microA, pulse",
-            "width 0.1 microsec, repetition rate 100 Hz.",
-            "Data acquisition system consists of main ADC modules,",
-            "fast timing modules, coincidence modules."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2JPNKTO)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(C,2007NICE,1,591,200704)",
+        "free_txt": [
+          "#doi:10.1051/ndata:07463"
+        ],
+        "publication_year": "2007",
+        "pointer": "0",
+        "doi": "10.1051/ndata:07463"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2JPNKTO)",
+        "free_txt": [
+          "  Electron LINAC at Kyoto University",
+          "                 Research Reactor Institute KURRI.",
+          "Beam energy 30 MeV, average current 30 microA, pulse",
+          "width 0.1 microsec, repetition rate 100 Hz.",
+          "Data acquisition system consists of main ADC modules,",
+          "fast timing modules, coincidence modules."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2JPNKTO)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "1": {
+        "x4_code": "(93-NP-237(N,G)93-NP-238,,SIG,,RAW)",
+        "children": [
+          {
+            "code": [
+              "93-NP-237",
+              [
+                "N,G"
+              ],
+              "93-NP-238,,SIG,,RAW"
+            ],
+            "type": null,
+            "target": "93-NP-237",
+            "process": "N,G",
+            "sf49": "93-NP-238,,SIG,,RAW",
+            "sf4": "93-NP-238",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "RAW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Uncorrected for self-shielding, multiple scattering to which resonance analysis by SAMMY was performed"
+      },
+      "2": {
+        "x4_code": "(93-NP-237(N,G)93-NP-238,,SIG)",
+        "children": [
+          {
+            "code": [
+              "93-NP-237",
+              [
+                "N,G"
+              ],
+              "93-NP-238,,SIG"
+            ],
+            "type": null,
+            "target": "93-NP-237",
+            "process": "N,G",
+            "sf49": "93-NP-238,,SIG",
+            "sf4": "93-NP-238",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Corrected for self-shielding, multiple scattering by MCNP"
+      }
     }
   },
   "data_tables": {
@@ -185,56 +240,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(93-NP-237(N,G)93-NP-238,,SIG,,RAW)",
-          "0": {
-            "code": [
-              "93-NP-237",
-              [
-                "N,G"
-              ],
-              "93-NP-238,,SIG,,RAW"
-            ],
-            "type": null,
-            "target": "93-NP-237",
-            "process": "N,G",
-            "sf49": "93-NP-238,,SIG,,RAW",
-            "sf4": "93-NP-238",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "RAW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Uncorrected for self-shielding, multiple scattering to which resonance analysis by SAMMY was performed"
-        },
-        "2": {
-          "x4_code": "(93-NP-237(N,G)93-NP-238,,SIG)",
-          "0": {
-            "code": [
-              "93-NP-237",
-              [
-                "N,G"
-              ],
-              "93-NP-238,,SIG"
-            ],
-            "type": null,
-            "target": "93-NP-237",
-            "process": "N,G",
-            "sf49": "93-NP-238,,SIG",
-            "sf4": "93-NP-238",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Corrected for self-shielding, multiple scattering by MCNP"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -14024,8 +14029,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -14034,10 +14039,8 @@
               "information was taken into account."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -14045,10 +14048,8 @@
               " < 15 eV by SAMMY code."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM1,93-NP-237(N,G)93-NP-238,,SIG)",
             "free_txt": [
@@ -14080,10 +14081,8 @@
               " Data were used to define the MONIT value as average."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -14096,10 +14095,8 @@
               " Self-shielding correction."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SPEC,GE)",
             "free_txt": [
@@ -14109,10 +14106,8 @@
               "Events from 30 Ge detectors were stored with list mode."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S,2.,15.)",
             "free_txt": [
@@ -14120,10 +14115,8 @@
               " Total error was estimated to be 5% to about 10 %."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2JPNKTO)",
             "free_txt": [
@@ -14135,10 +14128,8 @@
               "fast timing modules, coincidence modules."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -14148,10 +14139,8 @@
               "gamma-flash."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -14161,10 +14150,8 @@
               "on Fig.5 of C,2007NICE."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -14183,10 +14170,8 @@
               "NaCl sample."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(93-NP-237(N,G)93-NP-238,,SIG)",
             "free_txt": [
@@ -14202,10 +14187,8 @@
               " Normalization could be reliable to less than 10%"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,,M.Igashira+,S,AIP-769,601,2005)",
             "free_txt": [
@@ -14273,10 +14256,8 @@
               " For ASSUM5."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -14304,8 +14285,8 @@
       }
     },
     "002": {
-      "correction": {
-        "2": [
+      "2": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -14314,8 +14295,8 @@
           }
         ]
       },
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -14330,30 +14311,24 @@
               " Total uncertainty"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               " Correction factor obtained by MCNP"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               " 5 MBq sample"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

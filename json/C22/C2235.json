@@ -89,39 +89,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,93,044323,2016)",
-          "free_txt": [],
-          "publication_year": "2016"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USAMSU)",
-          "free_txt": [
-            " Experiment performed at ATLAS",
-            "facility at Argonne National Laboratory using HELIOS",
-            "solenoidal spectrometer"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USAMSU)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,93,044323,2016)",
+        "free_txt": [],
+        "publication_year": "2016",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USAMSU)",
+        "free_txt": [
+          " Experiment performed at ATLAS",
+          "facility at Argonne National Laboratory using HELIOS",
+          "solenoidal spectrometer"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USAMSU)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-2(6-C-14,HE3)5-B-13,PAR,DA,RSD)=(6-C-14(D,HE3)5-B-13,PAR,DA))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-2(6-C-14,HE3)5-B-13,PAR,DA,RSD)=(6-C-14(D,HE3)5-B-13,PAR,DA))",
+        "children": [
+          {
             "code": [
               "1-H-2",
               [
@@ -140,7 +135,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "6-C-14",
               [
@@ -158,11 +153,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((1-H-2(6-C-15,HE3)5-B-14,PAR,DA,RSD)=(6-C-15(D,HE3)5-B-14,PAR,DA))",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "6-C-15,HE3"
+              ],
+              "5-B-14,PAR,DA,RSD"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "6-C-15,HE3",
+            "sf49": "5-B-14,PAR,DA,RSD",
+            "sf4": "5-B-14",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "RSD",
+            "sf8": null,
+            "sf9": null
           },
-          "type": "=",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "6-C-15",
+              [
+                "D,HE3"
+              ],
+              "5-B-14,PAR,DA"
+            ],
+            "type": null,
+            "target": "6-C-15",
+            "process": "D,HE3",
+            "sf49": "5-B-14,PAR,DA",
+            "sf4": "5-B-14",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -391,51 +440,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-2(6-C-15,HE3)5-B-14,PAR,DA,RSD)=(6-C-15(D,HE3)5-B-14,PAR,DA))",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "6-C-15,HE3"
-              ],
-              "5-B-14,PAR,DA,RSD"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "6-C-15,HE3",
-            "sf49": "5-B-14,PAR,DA,RSD",
-            "sf4": "5-B-14",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "RSD",
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "6-C-15",
-              [
-                "D,HE3"
-              ],
-              "5-B-14,PAR,DA"
-            ],
-            "type": null,
-            "target": "6-C-15",
-            "process": "D,HE3",
-            "sf49": "5-B-14,PAR,DA",
-            "sf4": "5-B-14",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -541,8 +545,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(MAGSP)",
             "free_txt": [
@@ -582,10 +586,8 @@
               "to attenuate the incident flux to manageable level."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -594,10 +596,8 @@
               "cross-section scale"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USAMSU)",
             "free_txt": [
@@ -606,20 +606,16 @@
               "solenoidal spectrometer"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": [
               " Inverse kinematics was used."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -631,8 +627,8 @@
       }
     },
     "002": {
-      "inc-source": {
-        "0": [
+      "0": {
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -640,10 +636,8 @@
               "enriched 14C material in a Cs sputter source."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -655,8 +649,8 @@
       }
     },
     "003": {
-      "inc-source": {
-        "0": [
+      "0": {
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -667,10 +661,8 @@
               "intensity approx. 5E+05 part/s"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

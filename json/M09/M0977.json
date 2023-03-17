@@ -30,44 +30,44 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,82,196,2019)",
-          "free_txt": [
-            "#doi:10.1134/S0044002719030152"
-          ],
-          "publication_year": "2019"
-        },
-        {
-          "x4_code": "(J,PAN,82,212,2019)",
-          "free_txt": [
-            " English translation of YF,82,196,2019.",
-            "#doi:10.1134/S1063778819030153"
-          ],
-          "publication_year": "2019"
-        },
-        {
-          "x4_code": "(C,2018VORNZH,,97,2018)",
-          "free_txt": [
-            " New photoneutron reaction cross section data for",
-            " 153Eu and 165Ho.",
-            " Data for 165Ho."
-          ],
-          "publication_year": "2018"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,82,196,2019)",
+        "free_txt": [
+          "#doi:10.1134/S0044002719030152"
+        ],
+        "publication_year": "2019",
+        "pointer": "0",
+        "doi": "10.1134/S0044002719030152"
+      },
+      {
+        "x4_code": "(J,PAN,82,212,2019)",
+        "free_txt": [
+          " English translation of YF,82,196,2019.",
+          "#doi:10.1134/S1063778819030153"
+        ],
+        "publication_year": "2019",
+        "pointer": "0",
+        "doi": "10.1134/S1063778819030153"
+      },
+      {
+        "x4_code": "(C,2018VORNZH,,97,2018)",
+        "free_txt": [
+          " New photoneutron reaction cross section data for",
+          " 153Eu and 165Ho.",
+          " Data for 165Ho."
+        ],
+        "publication_year": "2018",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(45-RH-103(G,X)0-NN-1,UNW,SIG,,,EVAL)",
-          "0": {
+      "0": {
+        "x4_code": "(45-RH-103(G,X)0-NN-1,UNW,SIG,,,EVAL)",
+        "children": [
+          {
             "code": [
               "45-RH-103",
               [
@@ -85,11 +85,196 @@
             "sf7": null,
             "sf8": null,
             "sf9": "EVAL"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((45-RH-103(G,N)45-RH-102,,SIG,,,EVAL)+(45-RH-103(G,N+P)44-RU-101,,SIG,,,EVAL))",
+        "children": [
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "G,N"
+              ],
+              "45-RH-102,,SIG,,,EVAL"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "G,N",
+            "sf49": "45-RH-102,,SIG,,,EVAL",
+            "sf4": "45-RH-102",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "EVAL"
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "G,N+P"
+              ],
+              "44-RU-101,,SIG,,,EVAL"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "G,N+P",
+            "sf49": "44-RU-101,,SIG,,,EVAL",
+            "sf4": "44-RU-101",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "EVAL"
+          }
+        ],
+        "type": "+",
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(45-RH-103(G,2N)45-RH-101,,SIG,,,EVAL)",
+        "children": [
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "G,2N"
+              ],
+              "45-RH-101,,SIG,,,EVAL"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "G,2N",
+            "sf49": "45-RH-101,,SIG,,,EVAL",
+            "sf4": "45-RH-101",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "EVAL"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(45-RH-103(G,X)0-NN-1,UNW,INT,,,EVAL)",
+        "children": [
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "G,X"
+              ],
+              "0-NN-1,UNW,INT,,,EVAL"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "G,X",
+            "sf49": "0-NN-1,UNW,INT,,,EVAL",
+            "sf4": "0-NN-1",
+            "sf5": "UNW",
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "EVAL"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "((45-RH-103(G,N)45-RH-102,,INT,,,EVAL)+(45-RH-103(G,N+P)44-RU-101,,INT,,,EVAL))",
+        "children": [
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "G,N"
+              ],
+              "45-RH-102,,INT,,,EVAL"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "G,N",
+            "sf49": "45-RH-102,,INT,,,EVAL",
+            "sf4": "45-RH-102",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "EVAL"
+          },
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "G,N+P"
+              ],
+              "44-RU-101,,INT,,,EVAL"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "G,N+P",
+            "sf49": "44-RU-101,,INT,,,EVAL",
+            "sf4": "44-RU-101",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "EVAL"
+          }
+        ],
+        "type": "+",
+        "free_text": ""
+      }
+    },
+    "007": {
+      "0": {
+        "x4_code": "(45-RH-103(G,2N)45-RH-101,,INT,,,EVAL)",
+        "children": [
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "G,2N"
+              ],
+              "45-RH-101,,INT,,,EVAL"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "G,2N",
+            "sf49": "45-RH-101,,INT,,,EVAL",
+            "sf4": "45-RH-101",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "EVAL"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -287,51 +472,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((45-RH-103(G,N)45-RH-102,,SIG,,,EVAL)+(45-RH-103(G,N+P)44-RU-101,,SIG,,,EVAL))",
-          "0": {
-            "code": [
-              "45-RH-103",
-              [
-                "G,N"
-              ],
-              "45-RH-102,,SIG,,,EVAL"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "G,N",
-            "sf49": "45-RH-102,,SIG,,,EVAL",
-            "sf4": "45-RH-102",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EVAL"
-          },
-          "1": {
-            "code": [
-              "45-RH-103",
-              [
-                "G,N+P"
-              ],
-              "44-RU-101,,SIG,,,EVAL"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "G,N+P",
-            "sf49": "44-RU-101,,SIG,,,EVAL",
-            "sf4": "44-RU-101",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EVAL"
-          },
-          "type": "+",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -529,32 +669,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(45-RH-103(G,2N)45-RH-101,,SIG,,,EVAL)",
-          "0": {
-            "code": [
-              "45-RH-103",
-              [
-                "G,2N"
-              ],
-              "45-RH-101,,SIG,,,EVAL"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "G,2N",
-            "sf49": "45-RH-101,,SIG,,,EVAL",
-            "sf4": "45-RH-101",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EVAL"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -668,32 +782,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(45-RH-103(G,X)0-NN-1,UNW,INT,,,EVAL)",
-          "0": {
-            "code": [
-              "45-RH-103",
-              [
-                "G,X"
-              ],
-              "0-NN-1,UNW,INT,,,EVAL"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "G,X",
-            "sf49": "0-NN-1,UNW,INT,,,EVAL",
-            "sf4": "0-NN-1",
-            "sf5": "UNW",
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EVAL"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -729,51 +817,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "((45-RH-103(G,N)45-RH-102,,INT,,,EVAL)+(45-RH-103(G,N+P)44-RU-101,,INT,,,EVAL))",
-          "0": {
-            "code": [
-              "45-RH-103",
-              [
-                "G,N"
-              ],
-              "45-RH-102,,INT,,,EVAL"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "G,N",
-            "sf49": "45-RH-102,,INT,,,EVAL",
-            "sf4": "45-RH-102",
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EVAL"
-          },
-          "1": {
-            "code": [
-              "45-RH-103",
-              [
-                "G,N+P"
-              ],
-              "44-RU-101,,INT,,,EVAL"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "G,N+P",
-            "sf49": "44-RU-101,,INT,,,EVAL",
-            "sf4": "44-RU-101",
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EVAL"
-          },
-          "type": "+",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -809,32 +852,6 @@
       }
     },
     "007": {
-      "reaction": {
-        "0": {
-          "x4_code": "(45-RH-103(G,2N)45-RH-101,,INT,,,EVAL)",
-          "0": {
-            "code": [
-              "45-RH-103",
-              [
-                "G,2N"
-              ],
-              "45-RH-101,,INT,,,EVAL"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "G,2N",
-            "sf49": "45-RH-101,,INT,,,EVAL",
-            "sf4": "45-RH-101",
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EVAL"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -869,8 +886,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -893,28 +910,22 @@
               " reaction cross sections SIG-exp(gamma,xn)."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Mean-root-squared errors."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(QMPH,ARAD)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -925,8 +936,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -934,10 +945,8 @@
               " sum: SIG(gamma,sn) = SIG(gamma,1n) + SIG(gamma,2n)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,M0977003)",
             "free_txt": [
@@ -961,8 +970,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -980,10 +989,8 @@
               " Saclay."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,L0035002,A.Lepretre+,J,NP/A,219,39,1974)",
             "free_txt": [
@@ -998,10 +1005,8 @@
               " reactions based on the Fermi gas densities."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,L0035002)",
             "free_txt": [
@@ -1019,8 +1024,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1038,10 +1043,8 @@
               " Saclay."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,L0035002,A.Lepretre+,J,NP/A,219,39,1974)",
             "free_txt": [
@@ -1056,10 +1059,8 @@
               " reactions based on the Fermi gas densities."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,L0035002)",
             "free_txt": [
@@ -1077,18 +1078,16 @@
       }
     },
     "005": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Integration of evaluated cross section."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1105,18 +1104,16 @@
       }
     },
     "006": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Integration of evaluated cross section."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1133,18 +1130,16 @@
       }
     },
     "007": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Integration of evaluated cross section."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

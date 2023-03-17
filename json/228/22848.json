@@ -63,41 +63,36 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NST,41,406,2004)",
-          "free_txt": [
-            "  Main reference, data given"
-          ],
-          "publication_year": "2004"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,2JPNTIT)",
-          "free_txt": [
-            " The 3.2 MV Pelletron Accelerator of the",
-            " Research Laboratory For Nuclear Reactors at the Tokyo",
-            " Institute of Technology."
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(2JPNTIT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NST,41,406,2004)",
+        "free_txt": [
+          "  Main reference, data given"
+        ],
+        "publication_year": "2004",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,2JPNTIT)",
+        "free_txt": [
+          " The 3.2 MV Pelletron Accelerator of the",
+          " Research Laboratory For Nuclear Reactors at the Tokyo",
+          " Institute of Technology."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2JPNTIT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(N,G)83-BI-210,,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(83-BI-209(N,G)83-BI-210,,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "83-BI-209",
               [
@@ -115,11 +110,74 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "   Averaged over    neutron incident energy interval"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "   Averaged over    neutron incident energy interval"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(83-BI-209(N,G)83-BI-210,,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "N,G"
+              ],
+              "83-BI-210,,SIG,,AV"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "N,G",
+            "sf49": "83-BI-210,,SIG,,AV",
+            "sf4": "83-BI-210",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "   Averaged over    neutron spectrum width"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(83-BI-209(N,G)83-BI-210,,MLT/DE,,REL)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "N,G"
+              ],
+              "83-BI-210,,MLT/DE,,REL"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "N,G",
+            "sf49": "83-BI-210,,MLT/DE,,REL",
+            "sf4": "83-BI-210",
+            "sf5": null,
+            "sf6": "MLT/DE",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "   Reference                       quantity not given"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -194,32 +252,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(N,G)83-BI-210,,SIG,,AV)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "N,G"
-              ],
-              "83-BI-210,,SIG,,AV"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "N,G",
-            "sf49": "83-BI-210,,SIG,,AV",
-            "sf4": "83-BI-210",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "   Averaged over    neutron spectrum width"
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -278,32 +310,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(N,G)83-BI-210,,MLT/DE,,REL)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "N,G"
-              ],
-              "83-BI-210,,MLT/DE,,REL"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "N,G",
-            "sf49": "83-BI-210,,MLT/DE,,REL",
-            "sf4": "83-BI-210",
-            "sf5": null,
-            "sf6": "MLT/DE",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "   Reference                       quantity not given"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -981,16 +987,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(G-SPC)",
             "free_txt": []
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1000,10 +1004,8 @@
               " cross-sections employed in calculations"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -1025,10 +1027,8 @@
               "   used for 520 keV"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2JPNTIT)",
             "free_txt": [
@@ -1037,10 +1037,8 @@
               " Institute of Technology."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -1053,10 +1051,8 @@
               " average proton current 13 micro-A"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1067,36 +1063,28 @@
             "x4_code": "(GSPEC,SITA)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G,N)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,22482001,S.Mizuno+,J,NST,36,493,1999)",
             "free_txt": [
               "                                 Experimental details"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1113,8 +1101,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1162,10 +1150,8 @@
               " shielding and multiple-scattering correction factors"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1177,8 +1163,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1226,20 +1212,16 @@
               " shielding and multiple-scattering correction factors"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Broad neutron spectrum"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1251,18 +1233,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Error not specified"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

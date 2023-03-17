@@ -62,37 +62,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,62,025803,2000)",
-          "free_txt": [],
-          "publication_year": "2000"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,1USATNL)",
-          "free_txt": [
-            ". Beam polarization 70-85%."
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(1USATNL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,62,025803,2000)",
+        "free_txt": [],
+        "publication_year": "2000",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,1USATNL)",
+        "free_txt": [
+          ". Beam polarization 70-85%."
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(1USATNL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(5-B-11(P,G)6-C-12,PAR,SIG)",
-          "0": {
+      "1": {
+        "x4_code": "(5-B-11(P,G)6-C-12,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "5-B-11",
               [
@@ -110,13 +105,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(5-B-11(P,G)6-C-12,PAR,SIG,,SFC)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(5-B-11(P,G)6-C-12,PAR,SIG,,SFC)",
+        "children": [
+          {
             "code": [
               "5-B-11",
               [
@@ -134,11 +131,46 @@
             "sf7": null,
             "sf8": "SFC",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(5-B-11(P,G)6-C-12,PAR,POL/DA,,ANA)",
+        "children": [
+          {
+            "code": [
+              "5-B-11",
+              [
+                "P,G"
+              ],
+              "6-C-12,PAR,POL/DA,,ANA"
+            ],
+            "type": null,
+            "target": "5-B-11",
+            "process": "P,G",
+            "sf49": "6-C-12,PAR,POL/DA,,ANA",
+            "sf4": "6-C-12",
+            "sf5": "PAR",
+            "sf6": "POL/DA",
+            "sf7": null,
+            "sf8": "ANA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -210,32 +242,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-11(P,G)6-C-12,PAR,POL/DA,,ANA)",
-          "0": {
-            "code": [
-              "5-B-11",
-              [
-                "P,G"
-              ],
-              "6-C-12,PAR,POL/DA,,ANA"
-            ],
-            "type": null,
-            "target": "5-B-11",
-            "process": "P,G",
-            "sf49": "6-C-12,PAR,POL/DA,,ANA",
-            "sf4": "6-C-12",
-            "sf5": "PAR",
-            "sf6": "POL/DA",
-            "sf7": null,
-            "sf8": "ANA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG"
@@ -301,8 +307,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -311,48 +317,38 @@
               " NY, 1977) used to calculate proton energy."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Corrected for background and detector efficiency."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
               " NaI detector used to detect gamma rays."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,1USATNL)",
             "free_txt": [
               ". Beam polarization 70-85%."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(ATOMI)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -360,10 +356,8 @@
               " measuring alpha particles from 11B(p,alpha) reactions."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -372,10 +366,8 @@
               " microg/cm2 which was sufficient to stop proton beam."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -388,8 +380,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -397,18 +389,14 @@
               " Statistical uncertainty 5-10%."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,CECIL+,J,NP/A,539,75,1992)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -417,10 +405,8 @@
               " deduced by E. Cecil."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -432,8 +418,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -441,10 +427,8 @@
               " Statistical uncertainty 5-10%."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [

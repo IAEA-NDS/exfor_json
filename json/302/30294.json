@@ -42,28 +42,24 @@
         ]
       }
     ],
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,3BANDAC)",
-          "free_txt": [
-            " Dacca 3 MeV Van de Graaff accelerator"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(3BANDAC)"
-        }
-      ]
-    }
+    "facilities": [
+      {
+        "x4_code": "(VDG,3BANDAC)",
+        "free_txt": [
+          " Dacca 3 MeV Van de Graaff accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(3BANDAC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(N,A)12-MG-25,PAR,SIG,,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(14-SI-28(N,A)12-MG-25,PAR,SIG,,REL)",
+        "children": [
+          {
             "code": [
               "14-SI-28",
               [
@@ -81,11 +77,74 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(26-FE-54(N,A)24-CR-51,PAR,SIG,,RAW)",
+        "children": [
+          {
+            "code": [
+              "26-FE-54",
+              [
+                "N,A"
+              ],
+              "24-CR-51,PAR,SIG,,RAW"
+            ],
+            "type": null,
+            "target": "26-FE-54",
+            "process": "N,A",
+            "sf49": "24-CR-51,PAR,SIG,,RAW",
+            "sf4": "24-CR-51",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "RAW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Yield of alpha particle energy spectra."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(79-AU-197(N,A)77-IR-194,PAR,SIG,,RAW)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,A"
+              ],
+              "77-IR-194,PAR,SIG,,RAW"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "N,A",
+            "sf49": "77-IR-194,PAR,SIG,,RAW",
+            "sf4": "77-IR-194",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "RAW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Yield of alpha particle energy spectra."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -1078,32 +1137,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-54(N,A)24-CR-51,PAR,SIG,,RAW)",
-          "0": {
-            "code": [
-              "26-FE-54",
-              [
-                "N,A"
-              ],
-              "24-CR-51,PAR,SIG,,RAW"
-            ],
-            "type": null,
-            "target": "26-FE-54",
-            "process": "N,A",
-            "sf49": "24-CR-51,PAR,SIG,,RAW",
-            "sf4": "24-CR-51",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "RAW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Yield of alpha particle energy spectra."
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -1247,32 +1280,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,A)77-IR-194,PAR,SIG,,RAW)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "N,A"
-              ],
-              "77-IR-194,PAR,SIG,,RAW"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "N,A",
-            "sf49": "77-IR-194,PAR,SIG,,RAW",
-            "sf4": "77-IR-194",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "RAW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Yield of alpha particle energy spectra."
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -1362,8 +1369,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SOLST)",
             "free_txt": [
@@ -1380,30 +1387,24 @@
               "the incident beam, monitored the neutron flux."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,3BANDAC)",
             "free_txt": [
               " Dacca 3 MeV Van de Graaff accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
               " Solid Ti-T target of 100 microgram/cm2."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1411,10 +1412,8 @@
               "25 keV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1425,8 +1424,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1434,10 +1433,8 @@
               "those predicted by Ericson."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1449,20 +1446,16 @@
               "        'E'         =    1.96 MeV."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No error given."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1474,8 +1467,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1483,10 +1476,8 @@
               "aluminium dummy target holder."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1495,20 +1486,16 @@
               "330 keV."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " corresponds to ground state of Cr-51(resid. nucl.)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1516,10 +1503,8 @@
               "enriched to 97% Fe-54."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1531,18 +1516,16 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Background was subtracted."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1550,10 +1533,8 @@
               "total contributed spectra."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1562,30 +1543,24 @@
               "found to be about 2.0 MeV."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " corresponds to ground state of Ir-194(resid.nucl.)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Gold target of thickness 30 to 40 mg/cm2, rolling strip"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

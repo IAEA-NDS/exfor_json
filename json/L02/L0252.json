@@ -55,41 +55,37 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,42,2148,1990)",
-          "free_txt": [
-            "#NSR: 1990WI15"
-          ],
-          "publication_year": "1990",
-          "doi": "10.1103/PhysRevC.42.2148"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(MICRT,1USAUI)",
-          "free_txt": [
-            "  Superconducting microtron MUSL-2 in",
-            "the University of Illinois at Urbana-Champaign"
-          ],
-          "facility_type": "(MICRT)",
-          "institute": "(1USAUI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,42,2148,1990)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.42.2148",
+          "#NSR: 1990WI15"
+        ],
+        "publication_year": "1990",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.42.2148"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(MICRT,1USAUI)",
+        "free_txt": [
+          "  Superconducting microtron MUSL-2 in",
+          "the University of Illinois at Urbana-Champaign"
+        ],
+        "pointer": "0",
+        "facility_type": "(MICRT)",
+        "institute": "(1USAUI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(G,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(G,F),,SIG)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -107,11 +103,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(G,F),,DA,FF,REL)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "G,F"
+              ],
+              ",,DA,FF,REL"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "G,F",
+            "sf49": ",,DA,FF,REL",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "FF",
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-238(G,F)MASS,SEC,FY,,BRA/REL)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "G,F"
+              ],
+              "MASS,SEC,FY,,BRA/REL"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "G,F",
+            "sf49": "MASS,SEC,FY,,BRA/REL",
+            "sf4": "MASS",
+            "sf5": "SEC",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "BRA/REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RSL"
@@ -408,32 +467,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(G,F),,DA,FF,REL)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "G,F"
-              ],
-              ",,DA,FF,REL"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "G,F",
-            "sf49": ",,DA,FF,REL",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "FF",
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -501,32 +534,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(G,F)MASS,SEC,FY,,BRA/REL)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "G,F"
-              ],
-              "MASS,SEC,FY,,BRA/REL"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "G,F",
-            "sf49": "MASS,SEC,FY,,BRA/REL",
-            "sf4": "MASS",
-            "sf5": "SEC",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "BRA/REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MAX"
@@ -862,8 +869,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(D4PI,PPAC)",
             "free_txt": [
@@ -890,10 +897,8 @@
               "photons."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(MICRT,1USAUI)",
             "free_txt": [
@@ -901,28 +906,22 @@
               "the University of Illinois at Urbana-Champaign"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(TAGD)",
             "free_txt": [
               "   Bremsstrahlung monochromator"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -936,8 +935,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -946,20 +945,16 @@
               "EN=(14.0970-16.1196)MeV 3-rd run"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on sources of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -971,18 +966,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on sources of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -994,18 +987,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information on uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

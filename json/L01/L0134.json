@@ -45,36 +45,31 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,27,470,1983)",
-          "free_txt": [],
-          "publication_year": "1983"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(MICRT)",
-          "free_txt": [
-            " University of Illinois photon tagging",
-            " facility (MUSL-2)"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,27,470,1983)",
+        "free_txt": [],
+        "publication_year": "1983",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(MICRT)",
+        "free_txt": [
+          " University of Illinois photon tagging",
+          " facility (MUSL-2)"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(G,P)13-AL-27,PAR,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(14-SI-28(G,P)13-AL-27,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "14-SI-28",
               [
@@ -92,11 +87,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(14-SI-28(G,A)12-MG-24,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "14-SI-28",
+              [
+                "G,A"
+              ],
+              "12-MG-24,PAR,SIG"
+            ],
+            "type": null,
+            "target": "14-SI-28",
+            "process": "G,A",
+            "sf49": "12-MG-24,PAR,SIG",
+            "sf4": "12-MG-24",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(14-SI-28(G,P)13-AL-27,,SIG)",
+        "children": [
+          {
+            "code": [
+              "14-SI-28",
+              [
+                "G,P"
+              ],
+              "13-AL-27,,SIG"
+            ],
+            "type": null,
+            "target": "14-SI-28",
+            "process": "G,P",
+            "sf49": "13-AL-27,,SIG",
+            "sf4": "13-AL-27",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -2488,32 +2546,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(G,A)12-MG-24,PAR,SIG)",
-          "0": {
-            "code": [
-              "14-SI-28",
-              [
-                "G,A"
-              ],
-              "12-MG-24,PAR,SIG"
-            ],
-            "type": null,
-            "target": "14-SI-28",
-            "process": "G,A",
-            "sf49": "12-MG-24,PAR,SIG",
-            "sf4": "12-MG-24",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -3177,32 +3209,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(G,P)13-AL-27,,SIG)",
-          "0": {
-            "code": [
-              "14-SI-28",
-              [
-                "G,P"
-              ],
-              "13-AL-27,,SIG"
-            ],
-            "type": null,
-            "target": "14-SI-28",
-            "process": "G,P",
-            "sf49": "13-AL-27,,SIG",
-            "sf4": "13-AL-27",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -3441,8 +3447,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -3456,10 +3462,8 @@
               " Si detector"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(MICRT)",
             "free_txt": [
@@ -3467,28 +3471,22 @@
               " facility (MUSL-2)"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST,TAGD)",
             "free_txt": [
               " Bremsstrahlung"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3499,26 +3497,22 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-EXC,13-AL-27)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -3529,26 +3523,22 @@
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-EXC,12-MG-24)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -3559,18 +3549,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

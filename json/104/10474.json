@@ -52,43 +52,39 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,70,281,197906)",
-          "free_txt": [],
-          "publication_year": "1979"
-        },
-        {
-          "x4_code": "(C,75WASH,1,246,197503)",
-          "free_txt": [],
-          "publication_year": "1975"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM,1USAANL)",
-          "free_txt": [
-            " Tandem Dynamitron. Argonne fast neutron",
-            " generator."
-          ],
-          "facility_type": "(DYNAM)",
-          "institute": "(1USAANL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,70,281,197906)",
+        "free_txt": [],
+        "publication_year": "1979",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,75WASH,1,246,197503)",
+        "free_txt": [],
+        "publication_year": "1975",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM,1USAANL)",
+        "free_txt": [
+          " Tandem Dynamitron. Argonne fast neutron",
+          " generator."
+        ],
+        "pointer": "0",
+        "facility_type": "(DYNAM)",
+        "institute": "(1USAANL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-0(N,EL)6-C-0,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-0(N,EL)6-C-0,,DA)",
+        "children": [
+          {
             "code": [
               "6-C-0",
               [
@@ -106,11 +102,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-0(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-0",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "6-C-0",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-0(N,EL)6-C-0,,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-0",
+              [
+                "N,EL"
+              ],
+              "6-C-0,,SIG"
+            ],
+            "type": null,
+            "target": "6-C-0",
+            "process": "N,EL",
+            "sf49": "6-C-0,,SIG",
+            "sf4": "6-C-0",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -1890,32 +1949,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-0(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "6-C-0",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "6-C-0",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-RSL"
@@ -2281,32 +2314,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-0(N,EL)6-C-0,,SIG)",
-          "0": {
-            "code": [
-              "6-C-0",
-              [
-                "N,EL"
-              ],
-              "6-C-0,,SIG"
-            ],
-            "type": null,
-            "target": "6-C-0",
-            "process": "N,EL",
-            "sf49": "6-C-0,,SIG",
-            "sf4": "6-C-0",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2390,8 +2397,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2400,20 +2407,16 @@
               "In-scattering effects are negligible."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " Hydrogeneous scintillator"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2421,10 +2424,8 @@
               "Data taken until 1% statistical error achieved."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM,1USAANL)",
             "free_txt": [
@@ -2432,30 +2433,24 @@
               " generator."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
               " Protons on lithium-7"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Incident neutron energy resolution 20 - 50 keV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -2465,10 +2460,8 @@
               " sample and void through beam."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
             "free_txt": [
@@ -2476,10 +2469,8 @@
               "Resonances in Si and S used to verify energy scale"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2487,10 +2478,8 @@
               " radii of 2-2.5 cm."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -2503,8 +2492,8 @@
     "002": {},
     "003": {},
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,10474002)",
             "free_txt": []

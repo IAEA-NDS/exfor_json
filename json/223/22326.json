@@ -50,39 +50,34 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,94GATLIN,,230,199405)",
-          "free_txt": [
-            " MAIN REF."
-          ],
-          "publication_year": "1994"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2JPNYOK)",
-          "free_txt": [
-            " THE RIKKYO UNIVERSITY REACTOR."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2JPNYOK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,94GATLIN,,230,199405)",
+        "free_txt": [
+          " MAIN REF."
+        ],
+        "publication_year": "1994",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2JPNYOK)",
+        "free_txt": [
+          " THE RIKKYO UNIVERSITY REACTOR."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2JPNYOK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(43-TC-99(N,G)43-TC-100,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(43-TC-99(N,G)43-TC-100,,SIG)",
+        "children": [
+          {
             "code": [
               "43-TC-99",
               [
@@ -100,11 +95,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(43-TC-99(N,G)43-TC-100,,RI)",
+        "children": [
+          {
+            "code": [
+              "43-TC-99",
+              [
+                "N,G"
+              ],
+              "43-TC-100,,RI"
+            ],
+            "type": null,
+            "target": "43-TC-99",
+            "process": "N,G",
+            "sf49": "43-TC-100,,RI",
+            "sf4": "43-TC-100",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -131,32 +161,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(43-TC-99(N,G)43-TC-100,,RI)",
-          "0": {
-            "code": [
-              "43-TC-99",
-              [
-                "N,G"
-              ],
-              "43-TC-100,,RI"
-            ],
-            "type": null,
-            "target": "43-TC-99",
-            "process": "N,G",
-            "sf49": "43-TC-100,,RI",
-            "sf4": "43-TC-100",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -185,18 +189,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               ".CORRECTIONS WERE MADE FOR EPITHERMAL NEUTRONS."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE )",
             "free_txt": [
@@ -205,38 +207,30 @@
               " WITH FAST ELECTRONICS."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "   ERRORS ARE NOT SPECIFIED"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2JPNYOK)",
             "free_txt": [
               " THE RIKKYO UNIVERSITY REACTOR."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC )",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -244,10 +238,8 @@
               " FORMED BOTH WITH AND WITHOUT CD SHIELDS."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -259,20 +251,16 @@
               " NEUTRONS/CM2/SEC, AND THE EPITHERMAL INDEX 0.033."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(DG)",
             "free_txt": [
               "    540 AND 591 KEV GAMMA-RAYS FROM TC-100."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -283,10 +271,8 @@
               " METHOD, AND WAS FOUND TO BE 461 KBQ/G."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -297,16 +283,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(43-TC-100,15.5SEC,DG,540./591.)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -317,8 +301,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -326,10 +310,8 @@
               " BY THE SECOMG COMPILER (S.M.)"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(43-TC-100,15.5SEC,DG,540./591.)",
             "free_txt": []

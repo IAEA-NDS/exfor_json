@@ -45,35 +45,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,22,152,8007)",
-          "free_txt": [],
-          "publication_year": "1980"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM)",
-          "free_txt": [
-            " ARGONNE FAST NEUTRON GENERATOR FACILITY"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,22,152,8007)",
+        "free_txt": [],
+        "publication_year": "1980",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM)",
+        "free_txt": [
+          " ARGONNE FAST NEUTRON GENERATOR FACILITY"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,F)MASS,CHN,FY)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-232(N,F)MASS,CHN,FY)",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -91,11 +86,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(N,F),,NU,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,F"
+              ],
+              ",,NU,,,DERIV"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,F",
+            "sf49": ",,NU,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(90-TH-232(N,F)MASS,CHN,FY)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,F"
+              ],
+              "MASS,CHN,FY"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,F",
+            "sf49": "MASS,CHN,FY",
+            "sf4": "MASS",
+            "sf5": "CHN",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -503,32 +561,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,F),,NU,,,DERIV)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,F"
-              ],
-              ",,NU,,,DERIV"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,F",
-            "sf49": ",,NU,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -566,32 +598,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,F)MASS,CHN,FY)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,F"
-              ],
-              "MASS,CHN,FY"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,F",
-            "sf49": "MASS,CHN,FY",
-            "sf4": "MASS",
-            "sf5": "CHN",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1725,8 +1731,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1736,20 +1742,16 @@
               " PROCEDURE."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM)",
             "free_txt": [
               " ARGONNE FAST NEUTRON GENERATOR FACILITY"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -1762,10 +1764,8 @@
               " DEUTERONS ON DEUTERIUM FOR NEUTRONS ABOVE 5-MEV"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-238(N,F),,SIG)",
             "free_txt": [
@@ -1777,10 +1777,8 @@
               " GAMMA INTENSITIES OF DECAY DATA"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1788,10 +1786,8 @@
               " WITH AVERAGE MASS OF 1.3-GMS."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1802,8 +1798,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1817,10 +1813,8 @@
               " EFFECTS."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "((1.)33-AS-77,38.8HR,B)",
             "free_txt": []
@@ -1868,10 +1862,8 @@
               " CHART OF THE NUCLIDES."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
@@ -1886,10 +1878,8 @@
               " COUNTER WITH AUTOMATIC SAMPLE CHANGER."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(RCHEM)",
             "free_txt": [
@@ -1901,8 +1891,8 @@
       }
     },
     "003": {
-      "method": {
-        "0": [
+      "0": {
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1913,8 +1903,8 @@
       }
     },
     "004": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1926,10 +1916,8 @@
               " EFFECTS."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "((1.)34-SE-83-G,22.6MIN,DG,356.7,.686)",
             "free_txt": []
@@ -2054,20 +2042,16 @@
             "x4_code": "((28.)60-ND-149,1.76HR,DG,114.3,.188,DG,211.3,.273)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               " 80-CM**3 LITHIUM DRIFTED GERMANIUM DETECTOR"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [

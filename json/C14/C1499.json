@@ -1,17 +1,24 @@
 {
   "entry": "C1499",
-  "last_updated": "2007-05-21",
-  "number_of_revisions": "1",
+  "last_updated": "2023-01-04",
+  "number_of_revisions": "2",
   "histories": [
     {
       "x4_code": "(20070105C)",
       "free_txt": [
         " DR"
       ]
+    },
+    {
+      "x4_code": "(20220725A)",
+      "free_txt": [
+        " OS. REACTION modified in subs.4,5,",
+        " ERR-T changed to DATA-ERR"
+      ]
     }
   ],
   "bib_record": {
-    "title": "Precision measurements of 2H(d, p)3H and 2H(d,n)3He total cross sections at Big Bang nucleosynthesis energies",
+    "title": "Precision measurements of 2H(d,p)3H and 2H(d,n)3He total cross sections at Big Bang nucleosynthesis energies",
     "authors": [
       {
         "name": "D.S.Leonard"
@@ -39,39 +46,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,73,045801,2006)",
-          "free_txt": [],
-          "publication_year": "2006"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,1USATNL)",
-          "free_txt": [
-            " the TUNL Low-Energy Beam Facility",
-            " (LEBF): the Atomic Beam Polarized Ion Source and",
-            " Mini-Tandem accelerator"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(1USATNL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,73,045801,2006)",
+        "free_txt": [],
+        "publication_year": "2006",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,1USATNL)",
+        "free_txt": [
+          " the TUNL Low-Energy Beam Facility",
+          " (LEBF): the Atomic Beam Polarized Ion Source and",
+          " Mini-Tandem accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(1USATNL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(D,P)1-H-3,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-2(D,P)1-H-3,,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-2",
               [
@@ -89,17 +91,108 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-2(D,N)2-HE-3,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "D,N"
+              ],
+              "2-HE-3,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "D,N",
+            "sf49": "2-HE-3,,SIG",
+            "sf4": "2-HE-3",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-2(D,N)2-HE-3,,DA,,LEG/RS)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "D,N"
+              ],
+              "2-HE-3,,DA,,LEG/RS"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "D,N",
+            "sf49": "2-HE-3,,DA,,LEG/RS",
+            "sf4": "2-HE-3",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG/RS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(1-H-2(D,P)1-H-3,,DA,,LEG/RS)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "D,P"
+              ],
+              "1-H-3,,DA,,LEG/RS"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "D,P",
+            "sf49": "1-H-3,,DA,,LEG/RS",
+            "sf4": "1-H-3",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG/RS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
           "EN",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
@@ -141,38 +234,12 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(D,N)2-HE-3,,SIG)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "D,N"
-              ],
-              "2-HE-3,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "D,N",
-            "sf49": "2-HE-3,,SIG",
-            "sf4": "2-HE-3",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
           "EN",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
@@ -214,39 +281,13 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(D,N)2-HE-3,,DA,,LEG/RS0)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "D,N"
-              ],
-              "2-HE-3,,DA,,LEG/RS0"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "D,N",
-            "sf49": "2-HE-3,,DA,,LEG/RS0",
-            "sf4": "2-HE-3",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG/RS0",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
           "EN",
-          "NUMBER-CM",
+          "NUMBER",
           "DATA-CM",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
@@ -331,39 +372,13 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(D,P)1-H-3,,DA,,LEG/RS0)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "D,P"
-              ],
-              "1-H-3,,DA,,LEG/RS0"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "D,P",
-            "sf49": "1-H-3,,DA,,LEG/RS0",
-            "sf4": "1-H-3",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG/RS0",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
           "EN",
-          "NUMBER-CM",
+          "NUMBER",
           "DATA-CM",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
@@ -450,8 +465,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -462,15 +477,13 @@
               " depths and 1.50 cm2 active areas."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " The uncertainties for the normalized data input",
-              " into the fits were calculated by first-order",
+              " The uncertainties for the normalized data",
+              " input into the fits were calculated by first-order",
               " propagation of the uncertainties in the peak sums.",
               " Correlations arising from shared monitor normalization",
               " counts were not taken into account because the",
@@ -481,10 +494,8 @@
               " the error matrix."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,1USATNL)",
             "free_txt": [
@@ -493,10 +504,8 @@
               " Mini-Tandem accelerator"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -504,10 +513,8 @@
               " 560, and 650 keV."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -521,8 +528,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -533,8 +540,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -545,8 +552,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -557,8 +564,8 @@
       }
     },
     "005": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -34,35 +34,30 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JIN,30,1995,1968)",
-          "free_txt": [],
-          "publication_year": "1968"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2UK HAR)",
-          "free_txt": [],
-          "facility_type": "(REAC)",
-          "institute": "(2UK HAR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JIN,30,1995,1968)",
+        "free_txt": [],
+        "publication_year": "1968",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2UK HAR)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2UK HAR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)34-SE-87,CUM,FY,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)34-SE-87,CUM,FY,,SPA)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -80,11 +75,74 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(34-SE-87(0,B-)35-BR-87,,PN)",
+        "children": [
+          {
+            "code": [
+              "34-SE-87",
+              [
+                "0,B-"
+              ],
+              "35-BR-87,,PN"
+            ],
+            "type": null,
+            "target": "34-SE-87",
+            "process": "0,B-",
+            "sf49": "35-BR-87,,PN",
+            "sf4": "35-BR-87",
+            "sf5": null,
+            "sf6": "PN",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)34-SE-87,DL/CUM,NU,,SPA)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "34-SE-87,DL/CUM,NU,,SPA"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "34-SE-87,DL/CUM,NU,,SPA",
+            "sf4": "34-SE-87",
+            "sf5": "DL/CUM",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Absolute delayed neutron yield from Se-87"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -118,32 +176,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(34-SE-87(0,B-)35-BR-87,,PN)",
-          "0": {
-            "code": [
-              "34-SE-87",
-              [
-                "0,B-"
-              ],
-              "35-BR-87,,PN"
-            ],
-            "type": null,
-            "target": "34-SE-87",
-            "process": "0,B-",
-            "sf49": "35-BR-87,,PN",
-            "sf4": "35-BR-87",
-            "sf5": null,
-            "sf6": "PN",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -165,32 +197,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)34-SE-87,DL/CUM,NU,,SPA)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "34-SE-87,DL/CUM,NU,,SPA"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "34-SE-87,DL/CUM,NU,,SPA",
-            "sf4": "34-SE-87",
-            "sf5": "DL/CUM",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Absolute delayed neutron yield from Se-87"
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -221,18 +227,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
               " Neutron decay curve analyzed."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -240,26 +244,20 @@
               " J.Inorg.Nucl.Chem.,30,1995,1968"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2UK HAR)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP)",
             "free_txt": [
@@ -273,10 +271,8 @@
               "+- standard deviation, sec       1.2  4.5 2.0    3.8"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,23351001,L.Tomlinson+,J,JIN,30,1125,1968)",
             "free_txt": [
@@ -287,8 +283,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -297,10 +293,8 @@
               "in from Se-87."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(34-SE-87,5.8SEC)",
             "free_txt": [
@@ -313,10 +307,8 @@
               "Weighted mean of two exp.values of Herrmann"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -324,18 +316,14 @@
               "   Mid-separation time error +-0.5sec."
             ]
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(35-BR-87,DN)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,22571001,G.Herrmann,C,67VIENNA,,147,1967)",
             "free_txt": [
@@ -348,10 +336,8 @@
               " Theoretical cumulative yield 1.09% ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -362,8 +348,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -376,30 +362,24 @@
               "more accurate."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM,35-BR-87(0,B-)36-KR-87,,PN)",
             "free_txt": [
               " 2.8 %"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(34-SE-87,5.8SEC)",
             "free_txt": [
               " 5.8+-0.5 sec measured HL"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -410,8 +390,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -419,20 +399,16 @@
               " multiplied by measured Pn value."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(34-SE-87,5.8SEC)",
             "free_txt": [
               " 5.8+-0.5 sec measured HL"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -48,42 +48,100 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NST,44,(12),1500,200712)",
-          "free_txt": [
-            " Main reference, data given"
-          ],
-          "publication_year": "2007"
-        },
-        {
-          "x4_code": "(J,NST,40,559,2003)",
-          "free_txt": [
-            "   Neutron spectrum determination"
-          ],
-          "publication_year": "2003"
-        },
-        {
-          "x4_code": "(J,NST,43,1441,2006)",
-          "free_txt": [
-            "  Neutron spectrum determination"
-          ],
-          "publication_year": "2006"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,NST,44,(12),1500,200712)",
+        "free_txt": [
+          " Main reference, data given"
+        ],
+        "publication_year": "2007",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NST,40,559,2003)",
+        "free_txt": [
+          "   Neutron spectrum determination"
+        ],
+        "publication_year": "2003",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NST,43,1441,2006)",
+        "free_txt": [
+          "  Neutron spectrum determination"
+        ],
+        "publication_year": "2006",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2JPNKTO)",
+        "free_txt": [
+          "  Kyoto University Research Reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2JPNKTO)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(95-AM-241(N,G)95-AM-242-G,,SIG)",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,G"
+              ],
+              "95-AM-242-G,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,G",
+            "sf49": "95-AM-242-G,,SIG",
+            "sf4": "95-AM-242-G",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Cross section at             neutron velocity 2200 m/sec"
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2JPNKTO)",
-          "free_txt": [
-            "  Kyoto University Research Reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2JPNKTO)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(95-AM-241(N,G)95-AM-242-G,,RI)",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,G"
+              ],
+              "95-AM-242-G,,RI"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,G",
+            "sf49": "95-AM-242-G,,RI",
+            "sf4": "95-AM-242-G",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Full resonance                                 integral"
+      }
     }
   },
   "data_tables": {
@@ -183,32 +241,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,G)95-AM-242-G,,SIG)",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,G"
-              ],
-              "95-AM-242-G,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,G",
-            "sf49": "95-AM-242-G,,SIG",
-            "sf4": "95-AM-242-G",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Cross section at             neutron velocity 2200 m/sec"
-        }
-      },
       "common": {
         "heads": [
           "MONIT1",
@@ -357,32 +389,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,G)95-AM-242-G,,RI)",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,G"
-              ],
-              "95-AM-242-G,,RI"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,G",
-            "sf49": "95-AM-242-G,,RI",
-            "sf4": "95-AM-242-G",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Full resonance                                 integral"
-        }
-      },
       "common": {
         "heads": [
           "MONIT3",
@@ -533,16 +539,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": []
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM1,95-AM-241(N,G)95-AM-242-M,,SIG)",
             "free_txt": []
@@ -555,10 +559,8 @@
             "x4_code": "(ASSUM3,95-AM-241(N,F),,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(95-AM-241,432.2YR,A,5486.,0.845,                   A,5443.,0.130)",
             "free_txt": []
@@ -579,10 +581,8 @@
             "x4_code": "(94-PU-238,87.7YR,A,5499.,0.7091,                  A,5456.,0.2898)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -598,10 +598,8 @@
               "   1.33 MeV gamma peak of Co-60."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -671,20 +669,16 @@
               "  Error of the 9th miscellaneous value"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2JPNKTO)",
             "free_txt": [
               "  Kyoto University Research Reactor"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -692,10 +686,8 @@
               "        Research Reactor, KUR"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -704,10 +696,8 @@
               " the help of Gadolinium neutron filter."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -734,10 +724,8 @@
               "  this filter."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -795,10 +783,8 @@
               "<MISC12> <95-AM-243(N,G)95-AM-244,,RI>=1820+-70 barn"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G,A)",
             "free_txt": [
@@ -806,10 +792,8 @@
               "  alpha particles from irradiated Am-241 samples"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,R.B.FIRESTONE+,B,FIRESTONE,,1995)",
             "free_txt": [
@@ -840,10 +824,8 @@
               " determination"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -872,8 +854,8 @@
       }
     },
     "002": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM4,27-CO-59(N,G)27-CO-60,,RI)",
             "free_txt": []
@@ -882,10 +864,8 @@
             "x4_code": "(ASSUM5,79-AU-197(N,G)79-AU-198,,RI)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(27-CO-60-G,5.2714YR,DG,1173.,0.999736,                     DG,1333.,0.999856)",
             "free_txt": []
@@ -894,10 +874,8 @@
             "x4_code": "(79-AU-198-G,2.69517D,DG,412.,0.9558)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)27-CO-59(N,G)27-CO-60,,SIG)",
             "free_txt": []
@@ -910,8 +888,8 @@
       }
     },
     "003": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM4,27-CO-59(N,G)27-CO-60,,SIG)",
             "free_txt": []
@@ -920,10 +898,8 @@
             "x4_code": "(ASSUM5,79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(27-CO-60-G,5.2714YR,DG,1173.,0.999736,                     DG,1333.,0.999856)",
             "free_txt": []
@@ -932,10 +908,8 @@
             "x4_code": "(79-AU-198-G,2.69517D,DG,412.,0.9558)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT3)27-CO-59(N,G)27-CO-60,,RI)",
             "free_txt": []

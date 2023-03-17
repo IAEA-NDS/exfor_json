@@ -34,44 +34,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,EUR-3454E,6704)",
-          "free_txt": [],
-          "publication_year": "1967"
-        },
-        {
-          "x4_code": "(W,KNITTER,6805)",
-          "free_txt": [
-            " LETTER TO CCDN"
-          ],
-          "publication_year": "1968"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG  )",
-          "free_txt": [
-            "    THE 3 MEV VAN DE GRAAFF OF CBNM.",
-            "PROTON BEAM PULSE WIDTH = 1 NS,",
-            "REPETITION RATE = 1 MHZ."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,EUR-3454E,6704)",
+        "free_txt": [],
+        "publication_year": "1967",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,KNITTER,6805)",
+        "free_txt": [
+          " LETTER TO CCDN"
+        ],
+        "publication_year": "1968",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG  )",
+        "free_txt": [
+          "    THE 3 MEV VAN DE GRAAFF OF CBNM.",
+          "PROTON BEAM PULSE WIDTH = 1 NS,",
+          "REPETITION RATE = 1 MHZ."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-6(N,EL)3-LI-6,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(3-LI-6(N,EL)3-LI-6,,SIG)",
+        "children": [
+          {
             "code": [
               "3-LI-6",
               [
@@ -89,11 +85,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(3-LI-6(N,EL)3-LI-6,,DA)",
+        "children": [
+          {
+            "code": [
+              "3-LI-6",
+              [
+                "N,EL"
+              ],
+              "3-LI-6,,DA"
+            ],
+            "type": null,
+            "target": "3-LI-6",
+            "process": "N,EL",
+            "sf49": "3-LI-6,,DA",
+            "sf4": "3-LI-6",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(3-LI-6(N,EL)3-LI-6,,DA,,LEG)",
+        "children": [
+          {
+            "code": [
+              "3-LI-6",
+              [
+                "N,EL"
+              ],
+              "3-LI-6,,DA,,LEG"
+            ],
+            "type": null,
+            "target": "3-LI-6",
+            "process": "N,EL",
+            "sf49": "3-LI-6,,DA,,LEG",
+            "sf4": "3-LI-6",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -177,32 +236,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-6(N,EL)3-LI-6,,DA)",
-          "0": {
-            "code": [
-              "3-LI-6",
-              [
-                "N,EL"
-              ],
-              "3-LI-6,,DA"
-            ],
-            "type": null,
-            "target": "3-LI-6",
-            "process": "N,EL",
-            "sf49": "3-LI-6,,DA",
-            "sf4": "3-LI-6",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1564,32 +1597,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-6(N,EL)3-LI-6,,DA,,LEG)",
-          "0": {
-            "code": [
-              "3-LI-6",
-              [
-                "N,EL"
-              ],
-              "3-LI-6,,DA,,LEG"
-            ],
-            "type": null,
-            "target": "3-LI-6",
-            "process": "N,EL",
-            "sf49": "3-LI-6,,DA,,LEG",
-            "sf4": "3-LI-6",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2183,18 +2190,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "NO INFORMATION"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG  )",
             "free_txt": [
@@ -2203,10 +2208,8 @@
               "REPETITION RATE = 1 MHZ."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T  )",
             "free_txt": [
@@ -2214,28 +2217,22 @@
               "0.6 OR 1.0 MG/CM**2"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF  )",
             "free_txt": [
               "    TIME-OF-FLIGHT"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": [
@@ -2246,8 +2243,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP)",
             "free_txt": [
@@ -2260,8 +2257,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2272,8 +2269,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP)",
             "free_txt": [

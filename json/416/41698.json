@@ -35,34 +35,31 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,17,935,1973)",
-          "free_txt": [
-            " Issue 5."
-          ],
-          "publication_year": "1973"
-        },
-        {
-          "x4_code": "(J,SNP,17,489,1973)",
-          "free_txt": [
-            " Engl.translation of YF,17,935,1973"
-          ],
-          "publication_year": "1973"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,17,935,1973)",
+        "free_txt": [
+          " Issue 5."
+        ],
+        "publication_year": "1973",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SNP,17,489,1973)",
+        "free_txt": [
+          " Engl.translation of YF,17,935,1973"
+        ],
+        "publication_year": "1973",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F),SEC,FY/DE,FF,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F),SEC,FY/DE,FF,REL)",
+        "children": [
+          {
             "code": [
               "98-CF-252",
               [
@@ -80,11 +77,74 @@
             "sf7": "FF",
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Units are counts. FF kinetic energy spectrum after prompt neutron emission."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Units are counts. FF kinetic energy spectrum after prompt neutron emission."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F)ELEM,CHG,FY,,MSC)",
+        "children": [
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              "ELEM,CHG,FY,,MSC"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": "ELEM,CHG,FY,,MSC",
+            "sf4": "ELEM",
+            "sf5": "CHG",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "MSC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Units are %. Intensity for each element relative to sum ofintensities of all elements (heavy fragments) for givenkinetic energy."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F),PR/PAR,FY,G,MSC)",
+        "children": [
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              ",PR/PAR,FY,G,MSC"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": ",PR/PAR,FY,G,MSC",
+            "sf4": null,
+            "sf5": "PR/PAR",
+            "sf6": "FY",
+            "sf7": "G",
+            "sf8": "MSC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Units are %. Spectra of K-rays from heavy fragments at differentkinetic energy of light fragment.Spectra were normalized to the same square."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-ERR-DIG",
@@ -331,32 +391,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F)ELEM,CHG,FY,,MSC)",
-          "0": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              "ELEM,CHG,FY,,MSC"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": "ELEM,CHG,FY,,MSC",
-            "sf4": "ELEM",
-            "sf5": "CHG",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "MSC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Units are %. Intensity for each element relative to sum ofintensities of all elements (heavy fragments) for givenkinetic energy."
-        }
-      },
       "common": {
         "heads": [
           "ERR-DIG"
@@ -620,32 +654,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F),PR/PAR,FY,G,MSC)",
-          "0": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              ",PR/PAR,FY,G,MSC"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": ",PR/PAR,FY,G,MSC",
-            "sf4": null,
-            "sf5": "PR/PAR",
-            "sf6": "FY",
-            "sf7": "G",
-            "sf8": "MSC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Units are %. Spectra of K-rays from heavy fragments at differentkinetic energy of light fragment.Spectra were normalized to the same square."
-        }
-      },
       "common": {
         "heads": [
           "E-ERR-DIG",
@@ -3428,8 +3436,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SI)",
             "free_txt": [
@@ -3440,10 +3448,8 @@
               "measurement. Placed at 1.5 mm distance from Cf source."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3455,8 +3461,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3464,10 +3470,8 @@
               "scale X - 0.058 MeV, scale Y - 7.5 counts."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -3478,16 +3482,14 @@
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-MIN,LF)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3502,10 +3504,8 @@
               "article."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -3516,8 +3516,8 @@
       }
     },
     "004": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E1-MIN,LF)",
             "free_txt": []
@@ -3526,10 +3526,8 @@
             "x4_code": "(E,G)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3544,10 +3542,8 @@
               "article."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

@@ -40,37 +40,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,28,24,8307)",
-          "free_txt": [],
-          "publication_year": "1983"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USAORL)",
-          "free_txt": [
-            "  ORELA"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,28,24,8307)",
+        "free_txt": [],
+        "publication_year": "1983",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USAORL)",
+        "free_txt": [
+          "  ORELA"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(14-SI-30(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(14-SI-30(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "14-SI-30",
               [
@@ -88,13 +83,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(14-SI-30(N,0),,L)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(14-SI-30(N,0),,L)",
+        "children": [
+          {
             "code": [
               "14-SI-30",
               [
@@ -112,13 +109,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "(14-SI-30(N,0),,J)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "(14-SI-30(N,0),,J)",
+        "children": [
+          {
             "code": [
               "14-SI-30",
               [
@@ -136,13 +135,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "4": {
-          "x4_code": "(14-SI-30(N,EL),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "4": {
+        "x4_code": "(14-SI-30(N,EL),,WID)",
+        "children": [
+          {
             "code": [
               "14-SI-30",
               [
@@ -160,11 +161,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(14-SI-30(N,TOT),,SIG,,RAW)",
+        "children": [
+          {
+            "code": [
+              "14-SI-30",
+              [
+                "N,TOT"
+              ],
+              ",,SIG,,RAW"
+            ],
+            "type": null,
+            "target": "14-SI-30",
+            "process": "N,TOT",
+            "sf49": ",,SIG,,RAW",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "RAW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " ENRICHED SI-O(2) NOT CORRECTED FOR OXYGEN CONTENT."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -372,32 +408,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-30(N,TOT),,SIG,,RAW)",
-          "0": {
-            "code": [
-              "14-SI-30",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,RAW"
-            ],
-            "type": null,
-            "target": "14-SI-30",
-            "process": "N,TOT",
-            "sf49": ",,SIG,,RAW",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "RAW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " ENRICHED SI-O(2) NOT CORRECTED FOR OXYGEN CONTENT."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -30687,8 +30697,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -30698,10 +30708,8 @@
               " DEAD-TIME."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -30716,40 +30724,32 @@
               "  CM DIAMETER FOR THE RANGE 200 EV TO 50 KEV."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USAORL)",
             "free_txt": [
               "  ORELA"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
               " WATER-MODERATED TANTALUM TARGET"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " 78.203 METER FLIGHT PATH"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -30760,10 +30760,8 @@
               "    SI-29          0.67 PERCENT"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -30774,18 +30772,16 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(MLA)",
             "free_txt": [
               "  R-MATRIX"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -30796,18 +30792,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  NO INFORMATION GIVEN"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

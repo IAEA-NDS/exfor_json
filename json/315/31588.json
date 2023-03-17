@@ -39,40 +39,36 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NIM/B,251,304,2006)",
-          "free_txt": [
-            "#doi:10.1016/j.nimb.2006.05.027"
-          ],
-          "publication_year": "2006"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,3ARGCAB)",
-          "free_txt": [
-            " 25 MeV Electron LINAC based pulsed",
-            " neutron source at Centro Atomico Bariloche"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(3ARGCAB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NIM/B,251,304,2006)",
+        "free_txt": [
+          "#doi:10.1016/j.nimb.2006.05.027"
+        ],
+        "publication_year": "2006",
+        "pointer": "0",
+        "doi": "10.1016/j.nimb.2006.05.027"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,3ARGCAB)",
+        "free_txt": [
+          " 25 MeV Electron LINAC based pulsed",
+          " neutron source at Centro Atomico Bariloche"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(3ARGCAB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-BNZ(N,TOT),,SIG/TMP)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-BNZ(N,TOT),,SIG/TMP)",
+        "children": [
+          {
             "code": [
               "1-H-BNZ",
               [
@@ -90,11 +86,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-WTR(N,TOT),,SIG/TMP)",
+        "children": [
+          {
+            "code": [
+              "1-H-WTR",
+              [
+                "N,TOT"
+              ],
+              ",,SIG/TMP"
+            ],
+            "type": null,
+            "target": "1-H-WTR",
+            "process": "N,TOT",
+            "sf49": ",,SIG/TMP",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG/TMP",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "TEMP",
@@ -441,32 +472,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-WTR(N,TOT),,SIG/TMP)",
-          "0": {
-            "code": [
-              "1-H-WTR",
-              [
-                "N,TOT"
-              ],
-              ",,SIG/TMP"
-            ],
-            "type": null,
-            "target": "1-H-WTR",
-            "process": "N,TOT",
-            "sf49": ",,SIG/TMP",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG/TMP",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "TEMP",
@@ -860,8 +865,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -870,10 +875,8 @@
               "Negligible are in-scattering and multiple scattering."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
@@ -885,10 +888,8 @@
               " resonances, at the end of an evacuated flight-path."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -900,10 +901,8 @@
               " which were less than 1.8% in every case."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,3ARGCAB)",
             "free_txt": [
@@ -911,10 +910,8 @@
               " neutron source at Centro Atomico Bariloche"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -926,10 +923,8 @@
               " experiments."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -938,20 +933,16 @@
               " Standard normalized transmission measurement."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": [
               " neutrons"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -968,8 +959,8 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -984,8 +975,8 @@
       }
     },
     "003": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [

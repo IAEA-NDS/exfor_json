@@ -77,41 +77,39 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,78,025803,2008)",
-          "free_txt": [
-            " (a,n) data in table"
-          ],
-          "publication_year": "2008"
-        },
-        {
-          "x4_code": "(J,NP/A,688,499,2001)",
-          "free_txt": [
-            "   Description on scat. exp."
-          ],
-          "publication_year": "2001"
-        },
-        {
-          "x4_code": "(R,FZKA-6783,2002)",
-          "free_txt": [
-            "      M.Heil's thesis"
-          ],
-          "publication_year": "2002"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,78,025803,2008)",
+        "free_txt": [
+          " (a,n) data in table"
+        ],
+        "publication_year": "2008",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,688,499,2001)",
+        "free_txt": [
+          "   Description on scat. exp."
+        ],
+        "publication_year": "2001",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,FZKA-6783,2002)",
+        "free_txt": [
+          "      M.Heil's thesis"
+        ],
+        "publication_year": "2002",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-13(A,N)8-O-16,,SIG,,SFC)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-13(A,N)8-O-16,,SIG,,SFC)",
+        "children": [
+          {
             "code": [
               "6-C-13",
               [
@@ -129,11 +127,74 @@
             "sf7": null,
             "sf8": "SFC",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-13(A,EL)6-C-13,,DA)",
+        "children": [
+          {
+            "code": [
+              "6-C-13",
+              [
+                "A,EL"
+              ],
+              "6-C-13,,DA"
+            ],
+            "type": null,
+            "target": "6-C-13",
+            "process": "A,EL",
+            "sf49": "6-C-13,,DA",
+            "sf4": "6-C-13",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-13(A,EL)6-C-13,,DA)",
+        "children": [
+          {
+            "code": [
+              "6-C-13",
+              [
+                "A,EL"
+              ],
+              "6-C-13,,DA"
+            ],
+            "type": null,
+            "target": "6-C-13",
+            "process": "A,EL",
+            "sf49": "6-C-13,,DA",
+            "sf4": "6-C-13",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -213,32 +274,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-13(A,EL)6-C-13,,DA)",
-          "0": {
-            "code": [
-              "6-C-13",
-              [
-                "A,EL"
-              ],
-              "6-C-13,,DA"
-            ],
-            "type": null,
-            "target": "6-C-13",
-            "process": "A,EL",
-            "sf49": "6-C-13,,DA",
-            "sf4": "6-C-13",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-SYS"
@@ -31078,32 +31113,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-13(A,EL)6-C-13,,DA)",
-          "0": {
-            "code": [
-              "6-C-13",
-              [
-                "A,EL"
-              ],
-              "6-C-13,,DA"
-            ],
-            "type": null,
-            "target": "6-C-13",
-            "process": "A,EL",
-            "sf49": "6-C-13,,DA",
-            "sf4": "6-C-13",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-SYS"
@@ -34121,8 +34130,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -34135,20 +34144,16 @@
               " Systematic uncertainty."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(BCINT)",
             "free_txt": [
               " Faraday cup"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -34159,8 +34164,8 @@
       }
     },
     "002": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BAF2)",
             "free_txt": [
@@ -34169,20 +34174,16 @@
               " diameter of 20 cm and a thickness of 15 cm."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2GERJUL)",
             "free_txt": [
               " Karlsruhe 3.7 MV VdG accelerator"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -34194,10 +34195,8 @@
               "The thickness of the 13C layer was 22 ug/cm2"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -34208,18 +34207,16 @@
       }
     },
     "003": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SI,SI)",
             "free_txt": [
               " Chamber contained 29 silicon detectors"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -34234,10 +34231,8 @@
               "rate was always < 10%."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,1USANOT)",
             "free_txt": [
@@ -34246,10 +34241,8 @@
               "measured between 2.9 and 6.2 MeV."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -34259,10 +34252,8 @@
               "9.6 and 12.1 g/cm2 in thickness."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -34273,18 +34264,16 @@
       }
     },
     "004": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SI,SI)",
             "free_txt": [
               " Chamber contained 29 silicon detectors"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -34299,10 +34288,8 @@
               "rate was always < 10%."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,1USANOT)",
             "free_txt": [
@@ -34311,10 +34298,8 @@
               "was measured between 2.5 and 3.5MeV."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -34324,10 +34309,8 @@
               "9.6 and 12.1 g/cm2 in thickness."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

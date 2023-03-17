@@ -48,37 +48,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,164,140,1971)",
-          "free_txt": [],
-          "publication_year": "1971"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(BETAT,2GERHEI)",
-          "free_txt": [
-            " Heidelberg 33 MeV betatron."
-          ],
-          "facility_type": "(BETAT)",
-          "institute": "(2GERHEI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,164,140,1971)",
+        "free_txt": [],
+        "publication_year": "1971",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(BETAT,2GERHEI)",
+        "free_txt": [
+          " Heidelberg 33 MeV betatron."
+        ],
+        "pointer": "0",
+        "facility_type": "(BETAT)",
+        "institute": "(2GERHEI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((82-PB-208(G,P)81-TL-207,,SIG,,BRS)+(82-PB-208(G,X)81-TL-206,,SIG,,BRS))",
-          "0": {
+      "0": {
+        "x4_code": "((82-PB-208(G,P)81-TL-207,,SIG,,BRS)+(82-PB-208(G,X)81-TL-206,,SIG,,BRS))",
+        "children": [
+          {
             "code": [
               "82-PB-208",
               [
@@ -97,7 +92,7 @@
             "sf8": "BRS",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "82-PB-208",
               [
@@ -115,11 +110,65 @@
             "sf7": null,
             "sf8": "BRS",
             "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((82-PB-208(G,P)81-TL-207,,INT,,BRS)+(82-PB-208(G,X)81-TL-206,,INT,,BRS))",
+        "children": [
+          {
+            "code": [
+              "82-PB-208",
+              [
+                "G,P"
+              ],
+              "81-TL-207,,INT,,BRS"
+            ],
+            "type": null,
+            "target": "82-PB-208",
+            "process": "G,P",
+            "sf49": "81-TL-207,,INT,,BRS",
+            "sf4": "81-TL-207",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
           },
-          "type": "+",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "82-PB-208",
+              [
+                "G,X"
+              ],
+              "81-TL-206,,INT,,BRS"
+            ],
+            "type": null,
+            "target": "82-PB-208",
+            "process": "G,X",
+            "sf49": "81-TL-206,,INT,,BRS",
+            "sf4": "81-TL-206",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -266,51 +315,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((82-PB-208(G,P)81-TL-207,,INT,,BRS)+(82-PB-208(G,X)81-TL-206,,INT,,BRS))",
-          "0": {
-            "code": [
-              "82-PB-208",
-              [
-                "G,P"
-              ],
-              "81-TL-207,,INT,,BRS"
-            ],
-            "type": null,
-            "target": "82-PB-208",
-            "process": "G,P",
-            "sf49": "81-TL-207,,INT,,BRS",
-            "sf4": "81-TL-207",
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "82-PB-208",
-              [
-                "G,X"
-              ],
-              "81-TL-206,,INT,,BRS"
-            ],
-            "type": null,
-            "target": "82-PB-208",
-            "process": "G,X",
-            "sf49": "81-TL-206,,INT,,BRS",
-            "sf4": "81-TL-206",
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": "+",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -344,18 +348,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(PLA)",
             "free_txt": [
               " Penfold-Leiss method."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -370,48 +372,38 @@
               " threshold to 33 MeV was 26.8 (0.4) MeV*mb."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
               " Ionization chamber."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Mean-root-squared uncertainties."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(BETAT,2GERHEI)",
             "free_txt": [
               " Heidelberg 33 MeV betatron."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": []
@@ -420,10 +412,8 @@
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -436,8 +426,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -445,10 +435,8 @@
               " activity at energies above 25 MeV."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(81-TL-207-G,4.79MIN,B-)",
             "free_txt": []
@@ -457,10 +445,8 @@
             "x4_code": "(81-TL-206-G,4.30MIN,B-)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -471,8 +457,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(81-TL-207-G,4.79MIN,B-)",
             "free_txt": []
@@ -481,10 +467,8 @@
             "x4_code": "(81-TL-206-G,4.30MIN,B-)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,M0602003)",
             "free_txt": [

@@ -67,61 +67,59 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CNP,17,(1),45,1995)",
-          "free_txt": [
-            " translation"
-          ],
-          "publication_year": "1995"
-        },
-        {
-          "x4_code": "(J,PHE,19,223,1995)",
-          "free_txt": [
-            " in Chinese"
-          ],
-          "publication_year": "1995"
-        },
-        {
-          "x4_code": "((S,ISINN-2,253,1994)=(S,JINR-E3-94-419,253,1994))",
-          "free_txt": [
-            " G.Y.Tang+, Same cross section given"
-          ],
-          "publication_year": "1994"
-        },
-        {
-          "x4_code": "(J,CNDP,10,14,1993)",
-          "free_txt": [
-            " G.Y.Tang+, Preliminary cross section given"
-          ],
-          "publication_year": "1993"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,3CPRBJG)",
-          "free_txt": [
-            " 4.5 MV Van de Graaff accelerator at",
-            "Institute of Heavy Ion Physics, Peking University."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(3CPRBJG)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CNP,17,(1),45,1995)",
+        "free_txt": [
+          " translation"
+        ],
+        "publication_year": "1995",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PHE,19,223,1995)",
+        "free_txt": [
+          " in Chinese"
+        ],
+        "publication_year": "1995",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((S,ISINN-2,253,1994)=(S,JINR-E3-94-419,253,1994))",
+        "free_txt": [
+          " G.Y.Tang+, Same cross section given"
+        ],
+        "publication_year": "1994",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,CNDP,10,14,1993)",
+        "free_txt": [
+          " G.Y.Tang+, Preliminary cross section given"
+        ],
+        "publication_year": "1993",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,3CPRBJG)",
+        "free_txt": [
+          " 4.5 MV Van de Graaff accelerator at",
+          "Institute of Heavy Ion Physics, Peking University."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(3CPRBJG)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-58(N,A)26-FE-55,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(28-NI-58(N,A)26-FE-55,,SIG)",
+        "children": [
+          {
             "code": [
               "28-NI-58",
               [
@@ -139,11 +137,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(28-NI-58(N,A)26-FE-55,,SIG)",
+        "children": [
+          {
+            "code": [
+              "28-NI-58",
+              [
+                "N,A"
+              ],
+              "26-FE-55,,SIG"
+            ],
+            "type": null,
+            "target": "28-NI-58",
+            "process": "N,A",
+            "sf49": "26-FE-55,,SIG",
+            "sf4": "26-FE-55",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -175,32 +208,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-58(N,A)26-FE-55,,SIG)",
-          "0": {
-            "code": [
-              "28-NI-58",
-              [
-                "N,A"
-              ],
-              "26-FE-55,,SIG"
-            ],
-            "type": null,
-            "target": "28-NI-58",
-            "process": "N,A",
-            "sf49": "26-FE-55,,SIG",
-            "sf4": "26-FE-55",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -234,38 +241,32 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(ANGD)",
             "free_txt": [
               " Angular distribution (relative)"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
               " Grid ionization chamber, made at NLJINR, Dubna."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No error analysis given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,3CPRBJG)",
             "free_txt": [
@@ -273,26 +274,20 @@
               "Institute of Heavy Ion Physics, Peking University."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(PHD)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-238(N,F),,SIG)",
             "free_txt": [
@@ -305,10 +300,8 @@
               "section."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -321,8 +314,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -339,8 +332,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

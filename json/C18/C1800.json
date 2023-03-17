@@ -99,40 +99,35 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,EPJ/A,42,457,2009)",
-          "free_txt": [],
-          "publication_year": "2009"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,1USAORL)",
-          "free_txt": [
-            " Experiment performed at the HRIBF",
-            "facility at Oak Ridge National Laboratory using",
-            "primary cyclotron ORIC, 25-MV tandem Van de Graaff",
-            "and the Daresbury Recoil Separator."
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,EPJ/A,42,457,2009)",
+        "free_txt": [],
+        "publication_year": "2009",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,1USAORL)",
+        "free_txt": [
+          " Experiment performed at the HRIBF",
+          "facility at Oak Ridge National Laboratory using",
+          "primary cyclotron ORIC, 25-MV tandem Van de Graaff",
+          "and the Daresbury Recoil Separator."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(9-F-17,G),,WID/STR)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-1(9-F-17,G),,WID/STR)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -150,11 +145,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(4-BE-7,G)5-B-8,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "4-BE-7,G"
+              ],
+              "5-B-8,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "4-BE-7,G",
+            "sf49": "5-B-8,,SIG",
+            "sf4": "5-B-8",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-1(4-BE-7,G)5-B-8,,SIG,,SFC)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "4-BE-7,G"
+              ],
+              "5-B-8,,SIG,,SFC"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "4-BE-7,G",
+            "sf49": "5-B-8,,SIG,,SFC",
+            "sf4": "5-B-8",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SFC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -186,32 +244,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(4-BE-7,G)5-B-8,,SIG)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "4-BE-7,G"
-              ],
-              "5-B-8,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "4-BE-7,G",
-            "sf49": "5-B-8,,SIG",
-            "sf4": "5-B-8",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -238,32 +270,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(4-BE-7,G)5-B-8,,SIG,,SFC)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "4-BE-7,G"
-              ],
-              "5-B-8,,SIG,,SFC"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "4-BE-7,G",
-            "sf49": "5-B-8,,SIG,,SFC",
-            "sf4": "5-B-8",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -292,8 +298,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SPEC)",
             "free_txt": [
@@ -313,10 +319,8 @@
               "counter"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,1USAORL)",
             "free_txt": [
@@ -326,10 +330,8 @@
               "and the Daresbury Recoil Separator."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(OLMS)",
             "free_txt": [
@@ -337,10 +339,8 @@
               "Wien filters was used."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -352,8 +352,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -366,10 +366,8 @@
               " Systematic uncertainty"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -379,18 +377,14 @@
               "17F ions/s  were obtained."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,C0759003,D.W.Bardayan+,J,PRL,83,45,1999)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -402,18 +396,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Uncertainty dominated by statistics"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -426,10 +418,8 @@
               "= 7/1."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -440,8 +430,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -450,20 +440,16 @@
               "Descouvemont and Baye."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Uncertainty dominated by statistics"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

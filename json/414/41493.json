@@ -60,45 +60,94 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,IZV,70,(5),673,200605)",
-          "free_txt": [
-            " Main reference."
-          ],
-          "publication_year": "2006"
-        },
-        {
-          "x4_code": "(J,BAS,70,(5),774,2006)",
-          "free_txt": [
-            "Engl.translation of IZV,70,5,673"
-          ],
-          "publication_year": "2006"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4UZ UZB)",
-          "free_txt": [
-            " WWR-SM reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4UZ UZB)"
-        },
-        {
-          "x4_code": "(SPECM,4UZ UZB)",
-          "free_txt": [
-            " Electromagnetic mass spectrometer",
-            " placed on horizontal channel of reactor",
-            " Mass resolution M/deltaM about 1100."
-          ],
-          "facility_type": "(SPECM)",
-          "institute": "(4UZ UZB)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,IZV,70,(5),673,200605)",
+        "free_txt": [
+          " Main reference."
+        ],
+        "publication_year": "2006",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,BAS,70,(5),774,2006)",
+        "free_txt": [
+          "Engl.translation of IZV,70,5,673"
+        ],
+        "publication_year": "2006",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4UZ UZB)",
+        "free_txt": [
+          " WWR-SM reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4UZ UZB)"
+      },
+      {
+        "x4_code": "(SPECM,4UZ UZB)",
+        "free_txt": [
+          " Electromagnetic mass spectrometer",
+          " placed on horizontal channel of reactor",
+          " Mass resolution M/deltaM about 1100."
+        ],
+        "pointer": "0",
+        "facility_type": "(SPECM)",
+        "institute": "(4UZ UZB)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "((94-PU-239(N,F)MASS,PRE,FY/DE,,MXW)//(94-PU-239(N,F)MASS,PRE,FY/DE,,MXW))",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              "MASS,PRE,FY/DE,,MXW"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": "MASS,PRE,FY/DE,,MXW",
+            "sf4": "MASS",
+            "sf5": "PRE",
+            "sf6": "FY/DE",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          },
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              "MASS,PRE,FY/DE,,MXW"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": "MASS,PRE,FY/DE,,MXW",
+            "sf4": "MASS",
+            "sf5": "PRE",
+            "sf6": "FY/DE",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": " Relative mass yields of fission products at different kinetic energies of heavy fission products. Units of data in Fig.2 are %."
+      }
     }
   },
   "data_tables": {
@@ -123,51 +172,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-239(N,F)MASS,PRE,FY/DE,,MXW)//(94-PU-239(N,F)MASS,PRE,FY/DE,,MXW))",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "MASS,PRE,FY/DE,,MXW"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": "MASS,PRE,FY/DE,,MXW",
-            "sf4": "MASS",
-            "sf5": "PRE",
-            "sf6": "FY/DE",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "MASS,PRE,FY/DE,,MXW"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": "MASS,PRE,FY/DE,,MXW",
-            "sf4": "MASS",
-            "sf5": "PRE",
-            "sf6": "FY/DE",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": " Relative mass yields of fission products at different kinetic energies of heavy fission products. Units of data in Fig.2 are %."
-        }
-      },
       "common": {
         "heads": [
           "MASS-DN"
@@ -497,8 +501,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": [
@@ -511,20 +515,16 @@
               " Semi-conductor silicon detector."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E,HF)",
             "free_txt": [
               " Kinetic energy of heavy fission products"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-1,,2.)",
             "free_txt": [
@@ -538,10 +538,8 @@
               " Error of average kinetic energy."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4UZ UZB)",
             "free_txt": [
@@ -556,10 +554,8 @@
               " Mass resolution M/deltaM about 1100."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -567,10 +563,8 @@
               "   2.E+12 neutron/cm**2/sec.Cadmium ratio = 25 ."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,V.I.Kogan+,C,89LENING,134,1989)",
             "free_txt": [
@@ -578,10 +572,8 @@
               "                                    setup."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -594,8 +586,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -606,10 +598,8 @@
               "Normalization was made to total yield for each energy."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -617,10 +607,8 @@
               "author, probably E 60. -> 62.5 in second point."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

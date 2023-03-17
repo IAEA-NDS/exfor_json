@@ -44,38 +44,33 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ANE,59,25,2013)",
-          "free_txt": [],
-          "publication_year": "2013"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(MICRT,3INDPOO)",
-          "free_txt": [
-            " 4 MeV Race-Track Microtron accelerator",
-            "based neutron source"
-          ],
-          "facility_type": "(MICRT)",
-          "institute": "(3INDPOO)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ANE,59,25,2013)",
+        "free_txt": [],
+        "publication_year": "2013",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(MICRT,3INDPOO)",
+        "free_txt": [
+          " 4 MeV Race-Track Microtron accelerator",
+          "based neutron source"
+        ],
+        "pointer": "0",
+        "facility_type": "(MICRT)",
+        "institute": "(3INDPOO)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(11-NA-23(N,G)11-NA-24,,SIG,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(11-NA-23(N,G)11-NA-24,,SIG,,SPA)",
+        "children": [
+          {
             "code": [
               "11-NA-23",
               [
@@ -93,11 +88,74 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(23-V-51(N,G)23-V-52,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "23-V-51",
+              [
+                "N,G"
+              ],
+              "23-V-52,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "23-V-51",
+            "process": "N,G",
+            "sf49": "23-V-52,,SIG,,SPA",
+            "sf4": "23-V-52",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(53-I-127(N,G)53-I-128,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "53-I-127",
+              [
+                "N,G"
+              ],
+              "53-I-128,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "53-I-127",
+            "process": "N,G",
+            "sf49": "53-I-128,,SIG,,SPA",
+            "sf4": "53-I-128",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -124,32 +182,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(23-V-51(N,G)23-V-52,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "23-V-51",
-              [
-                "N,G"
-              ],
-              "23-V-52,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "23-V-51",
-            "process": "N,G",
-            "sf49": "23-V-52,,SIG,,SPA",
-            "sf4": "23-V-52",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -176,32 +208,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(53-I-127(N,G)53-I-128,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "53-I-127",
-              [
-                "N,G"
-              ],
-              "53-I-128,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "53-I-127",
-            "process": "N,G",
-            "sf49": "53-I-128,,SIG,,SPA",
-            "sf4": "53-I-128",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -230,26 +236,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information on uncertainty given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(MICRT,3INDPOO)",
             "free_txt": [
@@ -257,10 +259,8 @@
               "based neutron source"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
@@ -270,10 +270,8 @@
               "give continuous energy neutrons."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -281,10 +279,8 @@
               "FLUKA, but not available."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -297,26 +293,22 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(11-NA-24,14.96HR,DG,1369.,1.,                  DG,2754.,1.)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
               " Irrad./Cool./Counting.=1200/30/7200 seconds"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -327,26 +319,22 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(23-V-52,3.75MIN,DG,1434.,1.)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
               " Irrad./Cool./Counting.= 600/30/637.34 seconds"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -357,26 +345,22 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(53-I-128,24.99MIN,DG,441.,0.14,                   DG,528.,0.014,                   DG,743.,0.002,                   DG,969.,0.003)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
               " Irrad./Cool./Counting.= 2100/30/1800 seconds"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

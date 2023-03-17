@@ -64,51 +64,48 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,80KIEV,2,119,198009)",
-          "free_txt": [
-            "   Data table."
-          ],
-          "publication_year": "1980"
-        },
-        {
-          "x4_code": "(C,79KNOX,,438,197910)",
-          "free_txt": [],
-          "publication_year": "1979"
-        },
-        {
-          "x4_code": "(R,IAE-3769,1983)",
-          "free_txt": [
-            "  Data confirmed."
-          ],
-          "publication_year": "1983"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,4RUSKUR)",
-          "free_txt": [
-            "    LUE-60"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(4RUSKUR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,80KIEV,2,119,198009)",
+        "free_txt": [
+          "   Data table."
+        ],
+        "publication_year": "1980",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,79KNOX,,438,197910)",
+        "free_txt": [],
+        "publication_year": "1979",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,IAE-3769,1983)",
+        "free_txt": [
+          "  Data confirmed."
+        ],
+        "publication_year": "1983",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,4RUSKUR)",
+        "free_txt": [
+          "    LUE-60"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4RUSKUR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,ABS),,ALF,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,ABS),,ALF,,AV)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -126,11 +123,46 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Averaged over energy"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Averaged over energy"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,ABS),,ALF,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,ABS"
+              ],
+              ",,ALF,,AV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,ABS",
+            "sf49": ",,ALF,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "ALF",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Averaged over energy"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1"
@@ -232,32 +264,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,ABS),,ALF,,AV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,ABS"
-              ],
-              ",,ALF,,AV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,ABS",
-            "sf49": ",,ALF,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "ALF",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Averaged over energy"
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -308,8 +314,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -317,20 +323,16 @@
               " ROMASHKA-3. Scintillation volume is 100 litres."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,4RUSKUR)",
             "free_txt": [
               "    LUE-60"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -338,10 +340,8 @@
               "           and neutrons. 26m flight path."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -352,8 +352,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T,,5.5)",
             "free_txt": [
@@ -392,20 +392,16 @@
               "0.3        4.5        2.         1.5        5.5"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               " 2 G of metallic uranium."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -417,8 +413,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -427,10 +423,8 @@
               "the same as in main cycle."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -462,10 +456,8 @@
               " Statistical uncertainty."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

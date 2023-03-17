@@ -44,45 +44,41 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,181,177,7202)",
-          "free_txt": [],
-          "publication_year": "1972"
-        },
-        {
-          "x4_code": "(R,INFN/BE-70/2,7002)",
-          "free_txt": [
-            " DESCRIBES THE EXPERIMENTAL",
-            "                      SET UP."
-          ],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG  )",
-          "free_txt": [
-            " 5.5 MEV VAN DER GRAAFF ACCELERATOR OF THE",
-            "        LABORATORI NAZIONALI DI LEGNARO, USED IN",
-            "        PULSED MODE."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,181,177,7202)",
+        "free_txt": [],
+        "publication_year": "1972",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INFN/BE-70/2,7002)",
+        "free_txt": [
+          " DESCRIBES THE EXPERIMENTAL",
+          "                      SET UP."
+        ],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG  )",
+        "free_txt": [
+          " 5.5 MEV VAN DER GRAAFF ACCELERATOR OF THE",
+          "        LABORATORI NAZIONALI DI LEGNARO, USED IN",
+          "        PULSED MODE."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,EL)6-C-12,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(N,EL)6-C-12,,DA)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -100,11 +96,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ".ANGULAR DISTRIBUTION DUE TO POLARIZED NEUTRONS."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ".ANGULAR DISTRIBUTION DUE TO POLARIZED NEUTRONS."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-12(N,EL)6-C-12,,POL/DA)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "N,EL"
+              ],
+              "6-C-12,,POL/DA"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "N,EL",
+            "sf49": "6-C-12,,POL/DA",
+            "sf4": "6-C-12",
+            "sf5": null,
+            "sf6": "POL/DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RSL"
@@ -218,32 +249,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,EL)6-C-12,,POL/DA)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "N,EL"
-              ],
-              "6-C-12,,POL/DA"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "N,EL",
-            "sf49": "6-C-12,,POL/DA",
-            "sf4": "6-C-12",
-            "sf5": null,
-            "sf6": "POL/DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -575,8 +580,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN )",
             "free_txt": [
@@ -592,10 +597,8 @@
               "        MONITOR THE NEUTRON FLUX."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG  )",
             "free_txt": [
@@ -604,10 +607,8 @@
               "        PULSED MODE."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(POLNS)",
             "free_txt": [
@@ -631,10 +632,8 @@
               "        NEUTRON ENERGIES BETWEEN 1.9 AND 2.8 MEV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF  )",
             "free_txt": [
@@ -644,10 +643,8 @@
               "        DUE TO GAMMAS AND NOISE."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -658,8 +655,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -669,10 +666,8 @@
               " ARK.FYS.,34,(1967),481."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -682,10 +677,8 @@
               " BY DRIGO ET AL., REPORT INFN/BE-70/2, (1970)."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -694,20 +687,16 @@
               " INCLUDED."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC )",
             "free_txt": [
               " POLARIZATION OF INCIDENT NEUTRONS."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -718,8 +707,8 @@
       }
     },
     "003": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -729,10 +718,8 @@
               " (1967),197."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -741,20 +728,16 @@
               " IN INITIAL NEUTRON POLARIZATION."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC )",
             "free_txt": [
               " POLARIZATION OF INCIDENT NEUTRONS."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

@@ -86,44 +86,40 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AJ,372,683,1991)",
-          "free_txt": [],
-          "publication_year": "1991"
-        },
-        {
-          "x4_code": "(J,NIM/B,56-57,492,1991)",
-          "free_txt": [
-            " Same cross sections in text"
-          ],
-          "publication_year": "1991"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2JPNTIT)",
-          "free_txt": [
-            " 3.2 MV Pelletron"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2JPNTIT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AJ,372,683,1991)",
+        "free_txt": [],
+        "publication_year": "1991",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NIM/B,56-57,492,1991)",
+        "free_txt": [
+          " Same cross sections in text"
+        ],
+        "publication_year": "1991",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2JPNTIT)",
+        "free_txt": [
+          " 3.2 MV Pelletron"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2JPNTIT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,G)6-C-13,,SPC,,SPA/REL)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(N,G)6-C-13,,SPC,,SPA/REL)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -141,11 +137,74 @@
             "sf7": null,
             "sf8": "SPA/REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(6-C-12(N,G)6-C-13,PAR,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "N,G"
+              ],
+              "6-C-13,PAR,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "N,G",
+            "sf49": "6-C-13,PAR,SIG,,SPA",
+            "sf4": "6-C-13",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "007": {
+      "0": {
+        "x4_code": "(6-C-12(N,G)6-C-13,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "N,G"
+              ],
+              "6-C-13,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "N,G",
+            "sf49": "6-C-13,,SIG,,SPA",
+            "sf4": "6-C-13",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "005": {
       "common": {
         "heads": [
           "EN-MEAN"
@@ -201,32 +260,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,G)6-C-13,PAR,SIG,,SPA)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "N,G"
-              ],
-              "6-C-13,PAR,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "N,G",
-            "sf49": "6-C-13,PAR,SIG,,SPA",
-            "sf4": "6-C-13",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MEAN"
@@ -282,32 +315,6 @@
       }
     },
     "007": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,G)6-C-13,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "N,G"
-              ],
-              "6-C-13,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "N,G",
-            "sf49": "6-C-13,,SIG,,SPA",
-            "sf4": "6-C-13",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -351,8 +358,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -363,10 +370,8 @@
               " - Neutron self-shielding and multiple scattering"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -385,20 +390,16 @@
               " beam."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2JPNTIT)",
             "free_txt": [
               " 3.2 MV Pelletron"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -407,10 +408,8 @@
               " metallic layers evaporated on to a Cu disk"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -418,18 +417,14 @@
               " captures were discriminated by time-of-flight."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,PHD,PHWT)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -441,10 +436,8 @@
               "C, Au and blank runs were done cyclically."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -455,18 +448,16 @@
       }
     },
     "005": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainty"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(0.)",
             "free_txt": [
@@ -491,10 +482,8 @@
               "  capture state -> 3rd excited state"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,F.Ajzenberg-Selove,J,NP/A,449,1,1986)",
             "free_txt": [
@@ -505,18 +494,16 @@
       }
     },
     "006": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainty"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -525,26 +512,20 @@
               " (Yasuki Nagai, 2017-01-30)"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,S.Mughabghab,3,ENDF/B-V,1379,1979)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,22271005)",
             "free_txt": [
@@ -555,8 +536,8 @@
       }
     },
     "007": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -583,10 +564,8 @@
               " Au standard cross section         (5%)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,22271006)",
             "free_txt": [

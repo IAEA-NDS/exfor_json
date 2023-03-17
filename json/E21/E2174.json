@@ -193,41 +193,37 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PRL,104,062701,201002)",
-          "free_txt": [],
-          "publication_year": "2010"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2JPNIPC)",
-          "free_txt": [],
-          "facility_type": "(CYCLO)",
-          "institute": "(2JPNIPC)"
-        },
-        {
-          "x4_code": "(PRJFS,2JPNIPC)",
-          "free_txt": [],
-          "facility_type": "(PRJFS)",
-          "institute": "(2JPNIPC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PRL,104,062701,201002)",
+        "free_txt": [],
+        "publication_year": "2010",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2JPNIPC)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2JPNIPC)"
+      },
+      {
+        "x4_code": "(PRJFS,2JPNIPC)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2JPNIPC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(6-C-19,NON),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-1(6-C-19,NON),,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -245,11 +241,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(6-C-20,NON),,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "6-C-20,NON"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "6-C-20,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-1(6-C-22,NON),,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "6-C-22,NON"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "6-C-22,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -276,32 +335,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(6-C-20,NON),,SIG)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "6-C-20,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "6-C-20,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -328,32 +361,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(6-C-22,NON),,SIG)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "6-C-22,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "6-C-22,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -382,18 +389,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
               " Glauber approximation"
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -401,18 +406,14 @@
               "approximated sigma-R ~ sigma-I"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR,SI,PPAC)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2JPNIPC)",
             "free_txt": []
@@ -421,26 +422,20 @@
             "x4_code": "(PRJFS,2JPNIPC)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TRN)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -454,18 +449,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -476,18 +469,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -498,18 +489,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

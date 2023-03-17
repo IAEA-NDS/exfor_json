@@ -50,50 +50,47 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AKE,28,(3),228,1976)",
-          "free_txt": [],
-          "publication_year": "1976"
-        },
-        {
-          "x4_code": "(W,KROPFF MORENO,197608)",
-          "free_txt": [
-            " numerical values and preprint"
-          ],
-          "publication_year": "1976"
-        },
-        {
-          "x4_code": "(J,ANE,3,(1),55,1976)",
-          "free_txt": [
-            " experimental detail."
-          ],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": [
-            " 25 MeV electron linear accelerator at the",
-            "Centro Atomico Bariloche."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AKE,28,(3),228,1976)",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,KROPFF MORENO,197608)",
+        "free_txt": [
+          " numerical values and preprint"
+        ],
+        "publication_year": "1976",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,ANE,3,(1),55,1976)",
+        "free_txt": [
+          " experimental detail."
+        ],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC)",
+        "free_txt": [
+          " 25 MeV electron linear accelerator at the",
+          "Centro Atomico Bariloche."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(80-HG-0(N,TOT),,SIG/TMP)",
-          "0": {
+      "0": {
+        "x4_code": "(80-HG-0(N,TOT),,SIG/TMP)",
+        "children": [
+          {
             "code": [
               "80-HG-0",
               [
@@ -111,11 +108,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(80-HG-0(N,0),,EN)",
+        "children": [
+          {
+            "code": [
+              "80-HG-0",
+              [
+                "N,0"
+              ],
+              ",,EN"
+            ],
+            "type": null,
+            "target": "80-HG-0",
+            "process": "N,0",
+            "sf49": ",,EN",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "EN",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(80-HG-0(N,EL)80-HG-0,POT,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "80-HG-0",
+              [
+                "N,EL"
+              ],
+              "80-HG-0,POT,SIG,,AV"
+            ],
+            "type": null,
+            "target": "80-HG-0",
+            "process": "N,EL",
+            "sf49": "80-HG-0,POT,SIG,,AV",
+            "sf4": "80-HG-0",
+            "sf5": "POT",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "TEMP",
@@ -736,32 +796,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(80-HG-0(N,0),,EN)",
-          "0": {
-            "code": [
-              "80-HG-0",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
-            "target": "80-HG-0",
-            "process": "N,0",
-            "sf49": ",,EN",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "EN",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -783,32 +817,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(80-HG-0(N,EL)80-HG-0,POT,SIG,,AV)",
-          "0": {
-            "code": [
-              "80-HG-0",
-              [
-                "N,EL"
-              ],
-              "80-HG-0,POT,SIG,,AV"
-            ],
-            "type": null,
-            "target": "80-HG-0",
-            "process": "N,EL",
-            "sf49": "80-HG-0,POT,SIG,,AV",
-            "sf4": "80-HG-0",
-            "sf5": "POT",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -842,26 +850,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
               " Seven He-3 counters."
             ]
           }
-        ]
-      },
-      "exp-year": {
-        "0": [
+        ],
+        "exp-year": [
           {
             "x4_code": "(1975)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC)",
             "free_txt": [
@@ -869,10 +873,8 @@
               "Centro Atomico Bariloche."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -880,10 +882,8 @@
               "paraffin-moderator for increase of low energy neutrons."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -891,20 +891,16 @@
               "See detail in Annals of Nucl.Energy,3(1976)55."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "Absolute, transmission measurement."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -912,10 +908,8 @@
               "at (20+-0.5) Deg-C."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -926,8 +920,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -936,10 +930,8 @@
               "Below 0.1eV, the cross-section has a ' 1/v ' behaviour."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -962,10 +954,8 @@
               "                                   due to statistics."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -977,18 +967,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(SLA)",
             "free_txt": [
               " One-level Breit Wigner formula."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1001,20 +989,16 @@
               " belongs to Hg-199."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No further information."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1025,28 +1009,24 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(SLA)",
             "free_txt": [
               " One-level Breit Wigner formula."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No further information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

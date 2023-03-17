@@ -128,67 +128,65 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PRL,94,212502,20050603)",
-          "free_txt": [
-            "  Main reference, graphs are",
-            "                            given"
-          ],
-          "publication_year": "2005"
-        },
-        {
-          "x4_code": "(W,KIRCH,200509)",
-          "free_txt": [
-            "  ICANS-XVII, 17th Meeting of the",
-            "     International Collaboration on Advanced Neutron",
-            "     Sources, April 25-29, 2005, Santa Fe, New Mexico.",
-            "     Tables of cross section"
-          ],
-          "publication_year": "2005"
-        },
-        {
-          "x4_code": "(J,NIM/A,533,491,2004)",
-          "free_txt": [
-            "  Experimental details"
-          ],
-          "publication_year": "2004"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2FR ILL)",
-          "free_txt": [
-            "  VCN and UCN at the PF-2 instrument",
-            "        of the Institute Laue-Langevin"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2FR ILL)"
-        },
-        {
-          "x4_code": "(SELVE,2SWTPSI)",
-          "free_txt": [
-            " Velocity selector, SANS-1 instrument",
-            "     of the SINQ facility at Paul Scherrer Institute"
-          ],
-          "facility_type": "(SELVE)",
-          "institute": "(2SWTPSI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PRL,94,212502,20050603)",
+        "free_txt": [
+          "  Main reference, graphs are",
+          "                            given"
+        ],
+        "publication_year": "2005",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,KIRCH,200509)",
+        "free_txt": [
+          "  ICANS-XVII, 17th Meeting of the",
+          "     International Collaboration on Advanced Neutron",
+          "     Sources, April 25-29, 2005, Santa Fe, New Mexico.",
+          "     Tables of cross section"
+        ],
+        "publication_year": "2005",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NIM/A,533,491,2004)",
+        "free_txt": [
+          "  Experimental details"
+        ],
+        "publication_year": "2004",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2FR ILL)",
+        "free_txt": [
+          "  VCN and UCN at the PF-2 instrument",
+          "        of the Institute Laue-Langevin"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2FR ILL)"
+      },
+      {
+        "x4_code": "(SELVE,2SWTPSI)",
+        "free_txt": [
+          " Velocity selector, SANS-1 instrument",
+          "     of the SINQ facility at Paul Scherrer Institute"
+        ],
+        "pointer": "0",
+        "facility_type": "(SELVE)",
+        "institute": "(2SWTPSI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-DXX(N,TOT),FA,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-DXX(N,TOT),FA,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-DXX",
               [
@@ -206,11 +204,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "      Gaseous molecular           deuterium at 25 grad K"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "      Gaseous molecular           deuterium at 25 grad K"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-DXX(N,TOT),BA,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-DXX",
+              [
+                "N,TOT"
+              ],
+              ",BA,SIG"
+            ],
+            "type": null,
+            "target": "1-H-DXX",
+            "process": "N,TOT",
+            "sf49": ",BA,SIG",
+            "sf4": null,
+            "sf5": "BA",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "      Liquid molecular           deuterium at 19 grad K"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "TEMP",
@@ -380,32 +413,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-DXX(N,TOT),BA,SIG)",
-          "0": {
-            "code": [
-              "1-H-DXX",
-              [
-                "N,TOT"
-              ],
-              ",BA,SIG"
-            ],
-            "type": null,
-            "target": "1-H-DXX",
-            "process": "N,TOT",
-            "sf49": ",BA,SIG",
-            "sf4": null,
-            "sf5": "BA",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "      Liquid molecular           deuterium at 19 grad K"
-        }
-      },
       "common": {
         "heads": [
           "TEMP",
@@ -622,18 +629,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "   Not specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2FR ILL)",
             "free_txt": [
@@ -648,10 +653,8 @@
               "     of the SINQ facility at Paul Scherrer Institute"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -662,8 +665,8 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -674,10 +677,8 @@
               " cell varied from 10 to 11.1 mm"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -689,8 +690,8 @@
       }
     },
     "003": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -698,10 +699,8 @@
               " mol. Thickness of the cell varied from 10 to 11.1 mm"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

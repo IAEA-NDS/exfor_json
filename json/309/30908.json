@@ -50,35 +50,92 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,402,247,1983)",
-          "free_txt": [],
-          "publication_year": "1983"
-        },
-        {
-          "x4_code": "(J,NIM,117,533,1974)",
-          "free_txt": [
-            " The experimental set-up is",
-            "                     described in detail"
-          ],
-          "publication_year": "1974"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,NP/A,402,247,1983)",
+        "free_txt": [],
+        "publication_year": "1983",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NIM,117,533,1974)",
+        "free_txt": [
+          " The experimental set-up is",
+          "                     described in detail"
+        ],
+        "publication_year": "1974",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,3IRQNRI)",
+        "free_txt": [
+          "  The experiments were performed on the",
+          "horizontal beam tube of IRT-5000 reactor."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(3IRQNRI)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(60-ND-144(N,INL)60-ND-144,,SPC,,REL/SPA)",
+        "children": [
+          {
+            "code": [
+              "60-ND-144",
+              [
+                "N,INL"
+              ],
+              "60-ND-144,,SPC,,REL/SPA"
+            ],
+            "type": null,
+            "target": "60-ND-144",
+            "process": "N,INL",
+            "sf49": "60-ND-144,,SPC,,REL/SPA",
+            "sf4": "60-ND-144",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": "REL/SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Intensities given relative to 696.3 keV gammatransition, measured at angle of 90 degrees."
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,3IRQNRI)",
-          "free_txt": [
-            "  The experiments were performed on the",
-            "horizontal beam tube of IRT-5000 reactor."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(3IRQNRI)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(60-ND-144(N,INL)60-ND-144,PAR,DA,G,LEG/RS)",
+        "children": [
+          {
+            "code": [
+              "60-ND-144",
+              [
+                "N,INL"
+              ],
+              "60-ND-144,PAR,DA,G,LEG/RS"
+            ],
+            "type": null,
+            "target": "60-ND-144",
+            "process": "N,INL",
+            "sf49": "60-ND-144,PAR,DA,G,LEG/RS",
+            "sf4": "60-ND-144",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "G",
+            "sf8": "LEG/RS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "The isotropic 669.7 keV(-1/2)-(-3/2) gamma-transitionwas used to normalize the angular distribution data."
+      }
     }
   },
   "data_tables": {
@@ -98,32 +155,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(60-ND-144(N,INL)60-ND-144,,SPC,,REL/SPA)",
-          "0": {
-            "code": [
-              "60-ND-144",
-              [
-                "N,INL"
-              ],
-              "60-ND-144,,SPC,,REL/SPA"
-            ],
-            "type": null,
-            "target": "60-ND-144",
-            "process": "N,INL",
-            "sf49": "60-ND-144,,SPC,,REL/SPA",
-            "sf4": "60-ND-144",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": "REL/SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Intensities given relative to 696.3 keV gammatransition, measured at angle of 90 degrees."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -717,32 +748,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(60-ND-144(N,INL)60-ND-144,PAR,DA,G,LEG/RS)",
-          "0": {
-            "code": [
-              "60-ND-144",
-              [
-                "N,INL"
-              ],
-              "60-ND-144,PAR,DA,G,LEG/RS"
-            ],
-            "type": null,
-            "target": "60-ND-144",
-            "process": "N,INL",
-            "sf49": "60-ND-144,PAR,DA,G,LEG/RS",
-            "sf4": "60-ND-144",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "G",
-            "sf8": "LEG/RS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "The isotropic 669.7 keV(-1/2)-(-3/2) gamma-transitionwas used to normalize the angular distribution data."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1076,8 +1081,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1085,10 +1090,8 @@
               "computer program."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1097,10 +1100,8 @@
               "normalized."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -1108,20 +1109,16 @@
               "       detector was 3keV and the eff. 6% At 1332 keV."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No given information"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,3IRQNRI)",
             "free_txt": [
@@ -1129,20 +1126,16 @@
               "horizontal beam tube of IRT-5000 reactor."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               " 5MW power"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1150,10 +1143,8 @@
               "depleted uranium"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
@@ -1161,10 +1152,8 @@
               "was detected at 5 angles:90,110,125,135 and 148 deg."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1175,8 +1164,8 @@
       }
     },
     "002": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1189,10 +1178,8 @@
               "Also possible g-transition from 2581.6 keV level"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1204,8 +1191,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1219,10 +1206,8 @@
               "fluctuation correction."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

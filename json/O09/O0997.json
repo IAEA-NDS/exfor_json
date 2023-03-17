@@ -81,45 +81,41 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,99PRAHA,,(PC-24),1999)",
-          "free_txt": [],
-          "publication_year": "1999"
-        },
-        {
-          "x4_code": "(R,ISTC-839B,72,2001)",
-          "free_txt": [
-            " Some corrected data for 0.1 and",
-            "0.8 GeV. Similar data for 0.2-, 1.2-, 1.6-GeV."
-          ],
-          "publication_year": "2001"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,4RUSITE)",
-          "free_txt": [
-            " ITEP U-10 synchrotron was used."
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(4RUSITE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,99PRAHA,,(PC-24),1999)",
+        "free_txt": [],
+        "publication_year": "1999",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,ISTC-839B,72,2001)",
+        "free_txt": [
+          " Some corrected data for 0.1 and",
+          "0.8 GeV. Similar data for 0.2-, 1.2-, 1.6-GeV."
+        ],
+        "publication_year": "2001",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,4RUSITE)",
+        "free_txt": [
+          " ITEP U-10 synchrotron was used."
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(4RUSITE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(P,X)ELEM/MASS,IND,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-232(P,X)ELEM/MASS,IND,SIG)",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -137,11 +133,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(P,X)ELEM/MASS,CUM,SIG)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "P,X"
+              ],
+              "ELEM/MASS,CUM,SIG"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "P,X",
+            "sf49": "ELEM/MASS,CUM,SIG",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -585,32 +616,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(P,X)ELEM/MASS,CUM,SIG)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "P,X"
-              ],
-              "ELEM/MASS,CUM,SIG"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "P,X",
-            "sf49": "ELEM/MASS,CUM,SIG",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1542,8 +1547,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -1551,18 +1556,14 @@
               "codes-simulated yields."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1577,20 +1578,16 @@
               "error."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,4RUSITE)",
             "free_txt": [
               " ITEP U-10 synchrotron was used."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB)",
             "free_txt": []
@@ -1599,10 +1596,8 @@
             "x4_code": "(GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(13-AL-27(P,X)11-NA-22,,SIG)",
             "free_txt": []
@@ -1618,10 +1613,8 @@
               "All data are given in ISTC-839B-99."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1630,10 +1623,8 @@
               "          at 0.8-GeV protons- 89.6 mg,"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1645,8 +1636,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1659,8 +1650,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [

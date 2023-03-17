@@ -47,42 +47,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AE,63,362,1987)",
-          "free_txt": [],
-          "publication_year": "1987"
-        },
-        {
-          "x4_code": "(J,SJA,63,876,1987)",
-          "free_txt": [
-            " English translation of AE,63,362,1987."
-          ],
-          "publication_year": "1987"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(BETAT,4RUSRGU)",
-          "free_txt": [],
-          "facility_type": "(BETAT)",
-          "institute": "(4RUSRGU)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AE,63,362,1987)",
+        "free_txt": [],
+        "publication_year": "1987",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SJA,63,876,1987)",
+        "free_txt": [
+          " English translation of AE,63,362,1987."
+        ],
+        "publication_year": "1987",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(BETAT,4RUSRGU)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(BETAT)",
+        "institute": "(4RUSRGU)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(40-ZR-90(G,N)40-ZR-89-M/G,,SIG/RAT,,BRA)",
-          "0": {
+      "0": {
+        "x4_code": "(40-ZR-90(G,N)40-ZR-89-M/G,,SIG/RAT,,BRA)",
+        "children": [
+          {
             "code": [
               "40-ZR-90",
               [
@@ -100,11 +96,65 @@
             "sf7": null,
             "sf8": "BRA",
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((40-ZR-90(G,N)40-ZR-89,,SIG,,BRA)/(40-ZR-90(G,2N)40-ZR-88,,SIG,,BRA))",
+        "children": [
+          {
+            "code": [
+              "40-ZR-90",
+              [
+                "G,N"
+              ],
+              "40-ZR-89,,SIG,,BRA"
+            ],
+            "type": null,
+            "target": "40-ZR-90",
+            "process": "G,N",
+            "sf49": "40-ZR-89,,SIG,,BRA",
+            "sf4": "40-ZR-89",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "40-ZR-90",
+              [
+                "G,2N"
+              ],
+              "40-ZR-88,,SIG,,BRA"
+            ],
+            "type": null,
+            "target": "40-ZR-90",
+            "process": "G,2N",
+            "sf49": "40-ZR-88,,SIG,,BRA",
+            "sf4": "40-ZR-88",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -149,51 +199,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((40-ZR-90(G,N)40-ZR-89,,SIG,,BRA)/(40-ZR-90(G,2N)40-ZR-88,,SIG,,BRA))",
-          "0": {
-            "code": [
-              "40-ZR-90",
-              [
-                "G,N"
-              ],
-              "40-ZR-89,,SIG,,BRA"
-            ],
-            "type": null,
-            "target": "40-ZR-90",
-            "process": "G,N",
-            "sf49": "40-ZR-89,,SIG,,BRA",
-            "sf4": "40-ZR-89",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRA",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "40-ZR-90",
-              [
-                "G,2N"
-              ],
-              "40-ZR-88,,SIG,,BRA"
-            ],
-            "type": null,
-            "target": "40-ZR-90",
-            "process": "G,2N",
-            "sf49": "40-ZR-88,,SIG,,BRA",
-            "sf4": "40-ZR-88",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRA",
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -231,8 +236,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -241,52 +246,40 @@
               " bremsstrahlung beams from 21.5 up to 24.5 MeV."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical errors are presented."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(BETAT,4RUSRGU)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

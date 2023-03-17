@@ -51,42 +51,100 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,50,108,197302)",
-          "free_txt": [
-            " Main reference. Curve of spectrum"
-          ],
-          "publication_year": "1973"
-        },
-        {
-          "x4_code": "(W,Knitter,197211)",
-          "free_txt": [
-            " Data of fission neutron spectrum."
-          ],
-          "publication_year": "1972"
-        },
-        {
-          "x4_code": "(C,71VIENNA,,41,197108)",
-          "free_txt": [
-            "    Review of U and Pu data."
-          ],
-          "publication_year": "1971"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,NSE,50,108,197302)",
+        "free_txt": [
+          " Main reference. Curve of spectrum"
+        ],
+        "publication_year": "1973",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,Knitter,197211)",
+        "free_txt": [
+          " Data of fission neutron spectrum."
+        ],
+        "publication_year": "1972",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,71VIENNA,,41,197108)",
+        "free_txt": [
+          "    Review of U and Pu data."
+        ],
+        "publication_year": "1971",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2ZZZGEL)",
+        "free_txt": [
+          "  3 MV Van de Graaff accelerator of CBNM"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)0-NN-1,PR,KE)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "0-NN-1,PR,KE"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "0-NN-1,PR,KE",
+            "sf4": "0-NN-1",
+            "sf5": "PR",
+            "sf6": "KE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Average fission                            neutron energy"
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2ZZZGEL)",
-          "free_txt": [
-            "  3 MV Van de Graaff accelerator of CBNM"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),PR,NU/DE,,REL)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",PR,NU/DE,,REL"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",PR,NU/DE,,REL",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU/DE",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Number of fission  neutrons per unit energy interval, arbitrary units."
+      }
     }
   },
   "data_tables": {
@@ -106,32 +164,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)0-NN-1,PR,KE)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "0-NN-1,PR,KE"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "0-NN-1,PR,KE",
-            "sf4": "0-NN-1",
-            "sf5": "PR",
-            "sf6": "KE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Average fission                            neutron energy"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -168,32 +200,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),PR,NU/DE,,REL)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",PR,NU/DE,,REL"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",PR,NU/DE,,REL",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU/DE",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Number of fission  neutrons per unit energy interval, arbitrary units."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -492,8 +498,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -502,10 +508,8 @@
               " by inelastic scattering and fission processes."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -520,20 +524,16 @@
               " 45, 90 and 135 deg were used."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2ZZZGEL)",
             "free_txt": [
               "  3 MV Van de Graaff accelerator of CBNM"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
             "free_txt": [
@@ -541,10 +541,8 @@
               "           495 micro-g/cm2 thickness."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -552,10 +550,8 @@
               " including that due to the sample-to-target geometry."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -563,10 +559,8 @@
               " 141 cm."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,20394001,H.-H.Knitter+,J,ZP,257,108,197212)",
             "free_txt": [
@@ -574,10 +568,8 @@
               "  neutron spectrum at 1.50 MeV. See entry 20394."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(92-U-235,0.9315)",
             "free_txt": [
@@ -594,8 +586,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -605,10 +597,8 @@
               "       A =(0.990+-0.027), B =(2.132+-0.274)."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -636,10 +626,8 @@
               "        1.5 per-cent."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -655,8 +643,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -664,10 +652,8 @@
               " uncertainty in the background subtraction."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

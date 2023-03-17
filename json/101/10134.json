@@ -48,37 +48,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,35,350,1969)",
-          "free_txt": [],
-          "publication_year": "1969"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALRL)",
-          "free_txt": [
-            " 33 MeV electron linear accelerator."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALRL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,35,350,1969)",
+        "free_txt": [],
+        "publication_year": "1969",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALRL)",
+        "free_txt": [
+          " 33 MeV electron linear accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALRL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -96,11 +91,74 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,TOT),,SIG,,RAW)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,TOT"
+              ],
+              ",,SIG,,RAW"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,TOT",
+            "sf49": ",,SIG,,RAW",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "RAW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "The sigma total values have not been corrected forresolution effects."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-235(N,TOT),,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,TOT"
+              ],
+              ",,SIG,,AV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,TOT",
+            "sf49": ",,SIG,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "DATA-ERR"
@@ -160,32 +218,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,TOT),,SIG,,RAW)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,RAW"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,TOT",
-            "sf49": ",,SIG,,RAW",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "RAW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "The sigma total values have not been corrected forresolution effects."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -242,32 +274,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,TOT),,SIG,,AV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,AV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,TOT",
-            "sf49": ",,SIG,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -308,8 +314,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -317,36 +323,28 @@
               "into data system. Data was added."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALRL)",
             "free_txt": [
               " 33 MeV electron linear accelerator."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(92-U-235,ENR=0.932)",
             "free_txt": [
@@ -359,16 +357,14 @@
       }
     },
     "002": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(FISCH,BF3)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -376,10 +372,8 @@
               "absolute fission cross section is 4%."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -388,10 +382,8 @@
               "are unaffected by the resolution."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -402,16 +394,14 @@
       }
     },
     "003": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(FISCH,BF3)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -419,10 +409,8 @@
               "with the U fission chamber."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -433,18 +421,16 @@
       }
     },
     "004": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GLASD,SCIN)",
             "free_txt": [
               " 6Li-loaded glass scintillator."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -453,10 +439,8 @@
               "have been corrected for resolution effects."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

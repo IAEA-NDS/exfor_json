@@ -56,57 +56,80 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,SNP,16,641,1973)",
-          "free_txt": [
-            " Engl.translation of:"
-          ],
-          "publication_year": "1973"
-        },
-        {
-          "x4_code": "(J,YF,16,1167,1972)",
-          "free_txt": [
-            " Issue 6."
-          ],
-          "publication_year": "1972"
-        },
-        {
-          "x4_code": "(R,JINR-P15-6218,1976)",
-          "free_txt": [
-            " Preprint."
-          ],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,4ZZZDUB)",
-          "free_txt": [
-            " Fm-256 was synthesized in the internal",
-            "Ne-22 (130 MeV ion energy, about 6E+13 prt/sec",
-            "intensity) ion beam of U-300 cyclotron by reaction",
-            "U-238(Ne-22,p3n)Md-256 -> E.C.(90.%,HL=1.33hr -> Fm-256",
-            "which cross-section is about 2.E-33 cm**2."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,SNP,16,641,1973)",
+        "free_txt": [
+          " Engl.translation of:"
+        ],
+        "publication_year": "1973",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,YF,16,1167,1972)",
+        "free_txt": [
+          " Issue 6."
+        ],
+        "publication_year": "1972",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,JINR-P15-6218,1976)",
+        "free_txt": [
+          " Preprint."
+        ],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,4ZZZDUB)",
+        "free_txt": [
+          " Fm-256 was synthesized in the internal",
+          "Ne-22 (130 MeV ion energy, about 6E+13 prt/sec",
+          "intensity) ion beam of U-300 cyclotron by reaction",
+          "U-238(Ne-22,p3n)Md-256 -> E.C.(90.%,HL=1.33hr -> Fm-256",
+          "which cross-section is about 2.E-33 cm**2."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(100-FM-256(0,F),PR,NU)",
-          "0": {
+      "1": {
+        "x4_code": "(100-FM-256(0,F),PR,NU)",
+        "children": [
+          {
+            "code": [
+              "100-FM-256",
+              [
+                "0,F"
+              ],
+              ",PR,NU"
+            ],
+            "type": null,
+            "target": "100-FM-256",
+            "process": "0,F",
+            "sf49": ",PR,NU",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "((100-FM-256(0,F),PR,NU)/(96-CM-244(0,F),PR,NU))",
+        "children": [
+          {
             "code": [
               "100-FM-256",
               [
@@ -125,31 +148,7 @@
             "sf8": null,
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "((100-FM-256(0,F),PR,NU)/(96-CM-244(0,F),PR,NU))",
-          "0": {
-            "code": [
-              "100-FM-256",
-              [
-                "0,F"
-              ],
-              ",PR,NU"
-            ],
-            "type": null,
-            "target": "100-FM-256",
-            "process": "0,F",
-            "sf49": ",PR,NU",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
+          {
             "code": [
               "96-CM-244",
               [
@@ -167,11 +166,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(100-FM-256(0,F),PR/NUM,NU,,REL)",
+        "children": [
+          {
+            "code": [
+              "100-FM-256",
+              [
+                "0,F"
+              ],
+              ",PR/NUM,NU,,REL"
+            ],
+            "type": null,
+            "target": "100-FM-256",
+            "process": "0,F",
+            "sf49": ",PR/NUM,NU,,REL",
+            "sf4": null,
+            "sf5": "PR/NUM",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Total number of events 204. Distributions of multiplicities of registered neutrons number of events."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(96-CM-244(0,F),PR/NUM,NU,,REL)",
+        "children": [
+          {
+            "code": [
+              "96-CM-244",
+              [
+                "0,F"
+              ],
+              ",PR/NUM,NU,,REL"
+            ],
+            "type": null,
+            "target": "96-CM-244",
+            "process": "0,F",
+            "sf49": ",PR/NUM,NU,,REL",
+            "sf4": null,
+            "sf5": "PR/NUM",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Total number of events 7169. Distributions of multiplicities of registered neutrons number of events."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MONIT",
@@ -240,32 +302,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(100-FM-256(0,F),PR/NUM,NU,,REL)",
-          "0": {
-            "code": [
-              "100-FM-256",
-              [
-                "0,F"
-              ],
-              ",PR/NUM,NU,,REL"
-            ],
-            "type": null,
-            "target": "100-FM-256",
-            "process": "0,F",
-            "sf49": ",PR/NUM,NU,,REL",
-            "sf4": null,
-            "sf5": "PR/NUM",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Total number of events 204. Distributions of multiplicities of registered neutrons number of events."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -301,32 +337,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(96-CM-244(0,F),PR/NUM,NU,,REL)",
-          "0": {
-            "code": [
-              "96-CM-244",
-              [
-                "0,F"
-              ],
-              ",PR/NUM,NU,,REL"
-            ],
-            "type": null,
-            "target": "96-CM-244",
-            "process": "0,F",
-            "sf49": ",PR/NUM,NU,,REL",
-            "sf4": null,
-            "sf5": "PR/NUM",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Total number of events 7169. Distributions of multiplicities of registered neutrons number of events."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -364,8 +374,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(COIN,LONGC,SIBAR)",
             "free_txt": [
@@ -378,10 +388,8 @@
               "background < 0.001 n/fis."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -390,10 +398,8 @@
               "introduce an error > 0.1 % in measured NU."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,4ZZZDUB)",
             "free_txt": [
@@ -404,10 +410,8 @@
               "which cross-section is about 2.E-33 cm**2."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -419,8 +423,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -428,20 +432,16 @@
               " with FM-256 half-life 2.62 hr (97% spon.fission)"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               "   Statistical error."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -456,18 +456,25 @@
               "  (SIGnu)**2,  (prt/fis)**2 ."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,A.H.Jaffey+,J,NP/A,145,1,1970)",
             "free_txt": []
           }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table II of Sov.Nucl.Phys.,v.16,p.641,1973 -NU.",
+              "Text, page 642 for ratio and MISC data."
+            ]
+          }
         ]
       },
-      "monitor": {
-        "1": [
+      "1": {
+        "monitor": [
           {
             "x4_code": "(96-CM-244(0,F),PR,NU)",
             "free_txt": [
@@ -478,22 +485,11 @@
             ]
           }
         ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              " Table II of Sov.Nucl.Phys.,v.16,p.641,1973 -NU.",
-              "Text, page 642 for ratio and MISC data."
-            ]
-          }
-        ]
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -504,8 +500,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -42,35 +42,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,64,733,1977)",
-          "free_txt": [],
-          "publication_year": "1977"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM)",
-          "free_txt": [
-            " Argonne tandem dynamitron"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,64,733,1977)",
+        "free_txt": [],
+        "publication_year": "1977",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM)",
+        "free_txt": [
+          " Argonne tandem dynamitron"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(23-V-0(N,TOT),,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(23-V-0(N,TOT),,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "23-V-0",
               [
@@ -88,11 +83,74 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(23-V-0(N,EL)23-V-0,,DA)",
+        "children": [
+          {
+            "code": [
+              "23-V-0",
+              [
+                "N,EL"
+              ],
+              "23-V-0,,DA"
+            ],
+            "type": null,
+            "target": "23-V-0",
+            "process": "N,EL",
+            "sf49": "23-V-0,,DA",
+            "sf4": "23-V-0",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(23-V-0(N,INL)23-V-0,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "23-V-0",
+              [
+                "N,INL"
+              ],
+              "23-V-0,PAR,SIG"
+            ],
+            "type": null,
+            "target": "23-V-0",
+            "process": "N,INL",
+            "sf49": "23-V-0,PAR,SIG",
+            "sf4": "23-V-0",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -254,32 +312,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(23-V-0(N,EL)23-V-0,,DA)",
-          "0": {
-            "code": [
-              "23-V-0",
-              [
-                "N,EL"
-              ],
-              "23-V-0,,DA"
-            ],
-            "type": null,
-            "target": "23-V-0",
-            "process": "N,EL",
-            "sf49": "23-V-0,,DA",
-            "sf4": "23-V-0",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR"
@@ -2003,32 +2035,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(23-V-0(N,INL)23-V-0,PAR,SIG)",
-          "0": {
-            "code": [
-              "23-V-0",
-              [
-                "N,INL"
-              ],
-              "23-V-0,PAR,SIG"
-            ],
-            "type": null,
-            "target": "23-V-0",
-            "process": "N,INL",
-            "sf49": "23-V-0,PAR,SIG",
-            "sf4": "23-V-0",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2397,8 +2403,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2406,28 +2412,22 @@
               " beam attenuation, and angular resolution effects."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM)",
             "free_txt": [
               " Argonne tandem dynamitron"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2435,10 +2435,8 @@
               " cylinders of greater than 99% chemical purity."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -2450,8 +2448,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2460,18 +2458,14 @@
               " intervals of 100 keV."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2480,10 +2474,8 @@
               " appreciably smaller."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2497,8 +2489,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2507,20 +2499,16 @@
               " inelastic-scattered contributions."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " Proton-recoil liquid scintillators"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2534,38 +2522,30 @@
               " angles (3-5%)."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Energy resolution varied from 20 to 50 keV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Pulsed-beam time-of-flight."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,J.C.Hopkins+,J,ND/A,9,137,1971)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": []
@@ -2574,18 +2554,16 @@
       }
     },
     "004": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " Proton-recoil liquid scintillators"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2597,38 +2575,30 @@
               " correction procedures."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Energy resolution varied from 20 to 50 keV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Pulsed-beam time-of-flight"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,J.C.Hopkins+,J,ND/A,9,137,1971)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": []

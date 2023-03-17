@@ -69,49 +69,46 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CPL,27,(3),032102,2010)",
-          "free_txt": [
-            "#doi:10.1088/0256-307X/27/3/032102"
-          ],
-          "publication_year": "2010"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,3CPRAEP)",
-          "free_txt": [
-            "HI-13 tandem accelerator at China",
-            "Institute of Atomic Energy."
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(3CPRAEP)"
-        },
-        {
-          "x4_code": "(SELVE,3CPRAEP)",
-          "free_txt": [
-            "Radioactive secondary beam line",
-            "at HI-13 tandem accelerator laboratory."
-          ],
-          "facility_type": "(SELVE)",
-          "institute": "(3CPRAEP)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CPL,27,(3),032102,2010)",
+        "free_txt": [
+          "#doi:10.1088/0256-307X/27/3/032102"
+        ],
+        "publication_year": "2010",
+        "pointer": "0",
+        "doi": "10.1088/0256-307X/27/3/032102"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,3CPRAEP)",
+        "free_txt": [
+          "HI-13 tandem accelerator at China",
+          "Institute of Atomic Energy."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(3CPRAEP)"
+      },
+      {
+        "x4_code": "(SELVE,3CPRAEP)",
+        "free_txt": [
+          "Radioactive secondary beam line",
+          "at HI-13 tandem accelerator laboratory."
+        ],
+        "pointer": "0",
+        "facility_type": "(SELVE)",
+        "institute": "(3CPRAEP)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(9-F-17,EL)1-H-1,,DA,P)=(9-F-17(P,EL)9-F-17,,DA,RSD))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-1(9-F-17,EL)1-H-1,,DA,P)=(9-F-17(P,EL)9-F-17,,DA,RSD))",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -130,7 +127,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "9-F-17",
               [
@@ -148,11 +145,110 @@
             "sf7": "RSD",
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "((1-H-1(9-F-17,0),,EN)=(9-F-17(P,0),,EN))",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "9-F-17,0"
+              ],
+              ",,EN"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "9-F-17,0",
+            "sf49": ",,EN",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "EN",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "=",
-          "free_text": ""
-        }
+          {
+            "code": [
+              "9-F-17",
+              [
+                "P,0"
+              ],
+              ",,EN"
+            ],
+            "type": null,
+            "target": "9-F-17",
+            "process": "P,0",
+            "sf49": ",,EN",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "EN",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "((1-H-1(9-F-17,EL),,WID)=(9-F-17(P,EL),,WID))",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "9-F-17,EL"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "9-F-17,EL",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "9-F-17",
+              [
+                "P,EL"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "9-F-17",
+            "process": "P,EL",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG",
@@ -304,94 +400,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "((1-H-1(9-F-17,0),,EN)=(9-F-17(P,0),,EN))",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "9-F-17,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "9-F-17,0",
-            "sf49": ",,EN",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "EN",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "9-F-17",
-              [
-                "P,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
-            "target": "9-F-17",
-            "process": "P,0",
-            "sf49": ",,EN",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "EN",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "((1-H-1(9-F-17,EL),,WID)=(9-F-17(P,EL),,WID))",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "9-F-17,EL"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "9-F-17,EL",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "9-F-17",
-              [
-                "P,EL"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "9-F-17",
-            "process": "P,EL",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -429,8 +437,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(MLA)",
             "free_txt": [
@@ -439,10 +447,8 @@
               "parameters are deduced from the R-matrix fitting."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(COIN,SI,SISD)",
             "free_txt": [
@@ -452,10 +458,8 @@
               "detector and a 982 micron multiguard silicon quadrant."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -486,10 +490,8 @@
               " The error of the H atom number 4%."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,3CPRAEP)",
             "free_txt": [
@@ -504,10 +506,8 @@
               "at HI-13 tandem accelerator laboratory."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -521,18 +521,14 @@
               "the 17F purity was better than 70%."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -540,20 +536,16 @@
               "with a 13.2 micron silicon detector.)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "TARGET- (CH2)n in thickness of 6.0 milligram/cm2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

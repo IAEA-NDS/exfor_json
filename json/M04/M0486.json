@@ -30,42 +30,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,10,469,1969)",
-          "free_txt": [],
-          "publication_year": "1969"
-        },
-        {
-          "x4_code": "(J,SNP,10,268,1970)",
-          "free_txt": [
-            " - Eng.trans.of YF,10,469,1969"
-          ],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,4RUSLEB)",
-          "free_txt": [],
-          "facility_type": "(SYNCH)",
-          "institute": "(4RUSLEB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,10,469,1969)",
+        "free_txt": [],
+        "publication_year": "1969",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SNP,10,268,1970)",
+        "free_txt": [
+          " - Eng.trans.of YF,10,469,1969"
+        ],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,4RUSLEB)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(4RUSLEB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(G,2N+P)1-H-1,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(2-HE-4(G,2N+P)1-H-1,,SIG)",
+        "children": [
+          {
             "code": [
               "2-HE-4",
               [
@@ -83,11 +79,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(2-HE-4(G,2N+P)1-H-1,,INT,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "G,2N+P"
+              ],
+              "1-H-1,,INT,,,DERIV"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "G,2N+P",
+            "sf49": "1-H-1,,INT,,,DERIV",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -129,32 +160,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(G,2N+P)1-H-1,,INT,,,DERIV)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "G,2N+P"
-              ],
-              "1-H-1,,INT,,,DERIV"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "G,2N+P",
-            "sf49": "1-H-1,,INT,,,DERIV",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -188,8 +193,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -204,10 +209,8 @@
               "of delta-electrons per unit length of track."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -225,10 +228,8 @@
               "correction was made."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -238,20 +239,16 @@
               "150 MeV."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": [
               " Cloud chamber in magnetic field."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -261,18 +258,14 @@
               "were estimated to be not larger than 6%."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,4RUSLEB)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(QMPH,KINDT)",
             "free_txt": [
@@ -281,26 +274,20 @@
               "photon."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(MAGFR)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -311,8 +298,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -323,8 +310,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,M0486002)",
             "free_txt": [

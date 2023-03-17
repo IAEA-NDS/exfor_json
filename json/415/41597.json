@@ -46,48 +46,44 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YK,,(1-2),37,2013)",
-          "free_txt": [
-            " For 2011-2012 years, published at 2013 ."
-          ],
-          "publication_year": "2013"
-        },
-        {
-          "x4_code": "(R,INDC(CCP)-0455,21,2014)",
-          "free_txt": [
-            "  Engl.translation of YK,,(1-2),37,2013"
-          ],
-          "publication_year": "2014"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4RUSLIN)",
-          "free_txt": [
-            " Radial channel #7 of the research",
-            "reactor WWR-M equipped with a neutron mirror guide of",
-            "3m length."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4RUSLIN)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YK,,(1-2),37,2013)",
+        "free_txt": [
+          " For 2011-2012 years, published at 2013 ."
+        ],
+        "publication_year": "2013",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(CCP)-0455,21,2014)",
+        "free_txt": [
+          "  Engl.translation of YK,,(1-2),37,2013"
+        ],
+        "publication_year": "2014",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4RUSLIN)",
+        "free_txt": [
+          " Radial channel #7 of the research",
+          "reactor WWR-M equipped with a neutron mirror guide of",
+          "3m length."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4RUSLIN)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-235(N,F),PR,NU/DE)/(98-CF-252(0,F),PR,NU/DE))",
-          "0": {
+      "0": {
+        "x4_code": "((92-U-235(N,F),PR,NU/DE)/(98-CF-252(0,F),PR,NU/DE))",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -106,7 +102,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "98-CF-252",
               [
@@ -124,11 +120,126 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": "Ratio of prompt fission neutrons spectra."
-        }
+          }
+        ],
+        "type": "/",
+        "free_text": "Ratio of prompt fission neutrons spectra."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),PR,NU/DE)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",PR,NU/DE"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",PR,NU/DE",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU/DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Total prompt fission neutron spectrum."
+      }
+    },
+    "004": {
+      "1": {
+        "x4_code": "(92-U-235(N,F)0-NN-1,PR,KEM)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "0-NN-1,PR,KEM"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "0-NN-1,PR,KEM",
+            "sf4": "0-NN-1",
+            "sf5": "PR",
+            "sf6": "KEM",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(92-U-235(N,F)0-NN-1,PR,KE)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "0-NN-1,PR,KE"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "0-NN-1,PR,KE",
+            "sf4": "0-NN-1",
+            "sf5": "PR",
+            "sf6": "KE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "(92-U-235(N,F),PR,NU)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",PR,NU"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",PR,NU",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Parameters of Maxwellian distribution"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -841,32 +952,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),PR,NU/DE)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",PR,NU/DE"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",PR,NU/DE",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU/DE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Total prompt fission neutron spectrum."
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -1160,80 +1245,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "1": {
-          "x4_code": "(92-U-235(N,F)0-NN-1,PR,KEM)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "0-NN-1,PR,KEM"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "0-NN-1,PR,KEM",
-            "sf4": "0-NN-1",
-            "sf5": "PR",
-            "sf6": "KEM",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(92-U-235(N,F)0-NN-1,PR,KE)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "0-NN-1,PR,KE"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "0-NN-1,PR,KE",
-            "sf4": "0-NN-1",
-            "sf5": "PR",
-            "sf6": "KE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "(92-U-235(N,F),PR,NU)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",PR,NU"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",PR,NU",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Parameters of Maxwellian distribution"
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -1339,8 +1350,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1359,10 +1370,8 @@
               " fission neutron spectrum of 235U(n,f)."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(MWPC)",
             "free_txt": [
@@ -1389,10 +1398,8 @@
               " Neutron registration threshold 150-200 keV."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4RUSLIN)",
             "free_txt": [
@@ -1401,10 +1408,8 @@
               "3m length."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -1416,10 +1421,8 @@
               "with isobutane up to a pressure of 4-5 Torr."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1428,10 +1431,8 @@
               "section) was equal to approximately 2E+7 1/cm**2/sec ."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1460,10 +1461,8 @@
               "at the same position as the 235U target."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,41516001,A.S.Vorobyev+,J,NIM/A,598,795,2009)",
             "free_txt": [
@@ -1472,10 +1471,8 @@
               "changed and the data processing was improved."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1487,10 +1484,8 @@
               " steel foil."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1501,8 +1496,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1542,10 +1537,8 @@
               "TOF base h/D."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -1580,10 +1573,8 @@
               " Total correction factor."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1597,8 +1588,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1612,18 +1603,14 @@
               " Uncertainty of Cf spectrum."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,,3,ENDF/B-VII.1,,2011)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)98-CF-252(0,F),PR,NU/DE,,NPD)",
             "free_txt": []
@@ -1632,10 +1619,8 @@
             "x4_code": "((MONIT2)98-CF-252(0,F),PR,NU)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1652,8 +1637,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1666,20 +1651,16 @@
               "be done by Watt distribution."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Total uncertainty ."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -1719,10 +1700,8 @@
               "distribution, see MISC1 for definition."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

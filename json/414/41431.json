@@ -41,28 +41,103 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,83KIEV,2,366,198310)",
-          "free_txt": [
-            " Main Reference"
-          ],
-          "publication_year": "1983"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(C,83KIEV,2,366,198310)",
+        "free_txt": [
+          " Main Reference"
+        ],
+        "publication_year": "1983",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,4RUSKUR)",
+        "free_txt": [
+          " Linear Accelerator of Electrons"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4RUSKUR)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(51-SB-121(N,0),,J)",
+        "children": [
+          {
+            "code": [
+              "51-SB-121",
+              [
+                "N,0"
+              ],
+              ",,J"
+            ],
+            "type": null,
+            "target": "51-SB-121",
+            "process": "N,0",
+            "sf49": ",,J",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "J",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Spin of Neutron Level"
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,4RUSKUR)",
-          "free_txt": [
-            " Linear Accelerator of Electrons"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(4RUSKUR)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "((51-SB-121(N,G)51-SB-122,,SPC,,AV)//(51-SB-121(N,G)51-SB-122,,SPC,,AV))",
+        "children": [
+          {
+            "code": [
+              "51-SB-121",
+              [
+                "N,G"
+              ],
+              "51-SB-122,,SPC,,AV"
+            ],
+            "type": null,
+            "target": "51-SB-121",
+            "process": "N,G",
+            "sf49": "51-SB-122,,SPC,,AV",
+            "sf4": "51-SB-122",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          },
+          {
+            "code": [
+              "51-SB-121",
+              [
+                "N,G"
+              ],
+              "51-SB-122,,SPC,,AV"
+            ],
+            "type": null,
+            "target": "51-SB-121",
+            "process": "N,G",
+            "sf49": "51-SB-122,,SPC,,AV",
+            "sf4": "51-SB-122",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": "     Experimental Ratio of Averaged Intensities For 50-100 KeV Interval To 100-130 KeV Interval."
+      }
     }
   },
   "data_tables": {
@@ -82,32 +157,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(51-SB-121(N,0),,J)",
-          "0": {
-            "code": [
-              "51-SB-121",
-              [
-                "N,0"
-              ],
-              ",,J"
-            ],
-            "type": null,
-            "target": "51-SB-121",
-            "process": "N,0",
-            "sf49": ",,J",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "J",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Spin of Neutron Level"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -181,51 +230,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((51-SB-121(N,G)51-SB-122,,SPC,,AV)//(51-SB-121(N,G)51-SB-122,,SPC,,AV))",
-          "0": {
-            "code": [
-              "51-SB-121",
-              [
-                "N,G"
-              ],
-              "51-SB-122,,SPC,,AV"
-            ],
-            "type": null,
-            "target": "51-SB-121",
-            "process": "N,G",
-            "sf49": "51-SB-122,,SPC,,AV",
-            "sf4": "51-SB-122",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "51-SB-121",
-              [
-                "N,G"
-              ],
-              "51-SB-122,,SPC,,AV"
-            ],
-            "type": null,
-            "target": "51-SB-121",
-            "process": "N,G",
-            "sf49": "51-SB-122,,SPC,,AV",
-            "sf4": "51-SB-122",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": "     Experimental Ratio of Averaged Intensities For 50-100 KeV Interval To 100-130 KeV Interval."
-        }
-      },
       "common": {
         "heads": [
           "E-MIN-NM",
@@ -359,38 +363,32 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
               " Two Scintillation Detectors Nai(TL)"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               ".Errors, If Present, are not Specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,4RUSKUR)",
             "free_txt": [
               " Linear Accelerator of Electrons"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -401,10 +399,8 @@
             "x4_code": "(GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -412,10 +408,8 @@
               "     12 G Weight and 0.5 G/Cm2 Thickness."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(PRELM)",
             "free_txt": [

@@ -41,46 +41,42 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,85SANTA,1,617,198505)",
-          "free_txt": [
-            "  Data For Bismuth are Given"
-          ],
-          "publication_year": "1985"
-        },
-        {
-          "x4_code": "(R,JINR-P3-84-669,1984)",
-          "free_txt": [
-            "   Data For Molibdenum",
-            "                          And Cadmium"
-          ],
-          "publication_year": "1984"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC)",
-          "free_txt": [
-            " Fast Pulse Reactor Ibr-30 in Connection with",
-            "            Iron, Molybdenum and Cobalt Filters"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,85SANTA,1,617,198505)",
+        "free_txt": [
+          "  Data For Bismuth are Given"
+        ],
+        "publication_year": "1985",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,JINR-P3-84-669,1984)",
+        "free_txt": [
+          "   Data For Molibdenum",
+          "                          And Cadmium"
+        ],
+        "publication_year": "1984",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC)",
+        "free_txt": [
+          " Fast Pulse Reactor Ibr-30 in Connection with",
+          "            Iron, Molybdenum and Cobalt Filters"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(83-BI-209(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "83-BI-209",
               [
@@ -98,11 +94,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(42-MO-0(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "42-MO-0",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "42-MO-0",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(48-CD-0(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "48-CD-0",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "48-CD-0",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RSL",
@@ -382,32 +441,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(42-MO-0(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "42-MO-0",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "42-MO-0",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-RSL"
@@ -497,32 +530,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(48-CD-0(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "48-CD-0",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "48-CD-0",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-RSL-FW"
@@ -668,18 +675,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S   )",
             "free_txt": [
               " Errors are not Specified,Assumed Statistical"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -691,8 +696,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -700,28 +705,22 @@
               "  2 Pc at 130 eV and 4 Pc at 5 eV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "  Flight Path is 500M"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(83-BI-209(N,TOT),,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -729,10 +728,8 @@
               "        Container"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -743,28 +740,24 @@
       }
     },
     "003": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
               "    Lithium Glass Detector Ne-908"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "  Flight Base is 1000 M"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -775,18 +768,16 @@
       }
     },
     "004": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
               "    Lithium Glass Detector Ne-908"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -794,20 +785,16 @@
               "       In Neutron Beam"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "      Flight Base is  1000 M"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

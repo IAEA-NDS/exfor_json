@@ -35,43 +35,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,FCY/L,11,(2/186),186,2014)",
-          "free_txt": [],
-          "publication_year": "2014"
-        },
-        {
-          "x4_code": "(J,PPN/L,11,101,2014)",
-          "free_txt": [
-            " Engl.translation of FCY/L,11,186.",
-            "#doi:10.1134/S1547477114020289"
-          ],
-          "publication_year": "2014"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,4ZZZDUB)",
-          "free_txt": [],
-          "facility_type": "(SYNCH)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,FCY/L,11,(2/186),186,2014)",
+        "free_txt": [],
+        "publication_year": "2014",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PPN/L,11,101,2014)",
+        "free_txt": [
+          " Engl.translation of FCY/L,11,186.",
+          "#doi:10.1134/S1547477114020289"
+        ],
+        "publication_year": "2014",
+        "pointer": "0",
+        "doi": "10.1134/S1547477114020289"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,4ZZZDUB)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -89,11 +86,72 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(1-H-1(N,EL)1-H-1,,SIG,,MSC)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,EL"
+              ],
+              "1-H-1,,SIG,,MSC"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,EL",
+            "sf49": "1-H-1,,SIG,,MSC",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MSC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Elastic cross section with charge-exchange (cos(ANGLEp)>0)"
       },
+      "2": {
+        "x4_code": "(1-H-1(N,EL)1-H-1,,SIG,,MSC)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,EL"
+              ],
+              "1-H-1,,SIG,,MSC"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,EL",
+            "sf49": "1-H-1,,SIG,,MSC",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MSC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Elastic cross section without charge-exchange (cos(ANGLEp)<0)"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -126,56 +184,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(1-H-1(N,EL)1-H-1,,SIG,,MSC)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,EL"
-              ],
-              "1-H-1,,SIG,,MSC"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,EL",
-            "sf49": "1-H-1,,SIG,,MSC",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MSC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Elastic cross section with charge-exchange (cos(ANGLEp)>0)"
-        },
-        "2": {
-          "x4_code": "(1-H-1(N,EL)1-H-1,,SIG,,MSC)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,EL"
-              ],
-              "1-H-1,,SIG,,MSC"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,EL",
-            "sf49": "1-H-1,,SIG,,MSC",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MSC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Elastic cross section without charge-exchange (cos(ANGLEp)<0)"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -224,8 +232,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -236,10 +244,8 @@
               " C.M. system."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": "(THEO)",
             "free_txt": [
@@ -250,20 +256,16 @@
               "np-scattering at the energy region 1-10 GeV."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "For loses of counts for slow protons ."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(BUBLC)",
             "free_txt": [
@@ -272,18 +274,14 @@
               "Registration of particles in 4PI geometry."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,4ZZZDUB)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -297,20 +295,16 @@
               "solid angle 10**-7 sr."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Quasi-monochromatic neutrons."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -318,10 +312,8 @@
               " accuracy of angle measurement 0.5 deg."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,A.V.Belogonov+,J,NIM,20,114,1963)",
             "free_txt": [
@@ -338,10 +330,8 @@
             "x4_code": "(M,,K.Beshliu+,J,YF,43,(4),888,1986)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -352,8 +342,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -364,38 +354,30 @@
               "both - after corrections."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not specified."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(41603001,A.Abdivaliev+,J,NP/B,99,(3),445,1975)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,TOT),,SIG,,MSC)",
             "free_txt": [
               "Topological cross section"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -406,8 +388,37 @@
       }
     },
     "003": {
-      "analysis": {
-        "2": [
+      "1": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Elastic cross section with charge-exchanged was",
+              "defined as :  SIGex=(Nex/Nel)*SIGel, where",
+              "Nel - number of elastic events",
+              "Nex - number of  elastic events, when secondary proton",
+              "was scattered in forward semi-sphere;",
+              "SIGel - elastic cross section - Subent 002."
+            ]
+          }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(41602002,Yu.A.Troyan+,J,FCY/L,11,(2/186),186,2014)",
+            "free_txt": [
+              " Subent 002 of this Entry."
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
+            "free_txt": []
+          }
+        ]
+      },
+      "2": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -417,36 +428,16 @@
           }
         ]
       },
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not specified."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "1": [
-          {
-            "x4_code": "(41602002,Yu.A.Troyan+,J,FCY/L,11,(2/186),186,2014)",
-            "free_txt": [
-              " Subent 002 of this Entry."
-            ]
-          }
-        ]
-      },
-      "monitor": {
-        "1": [
-          {
-            "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
-            "free_txt": []
-          }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

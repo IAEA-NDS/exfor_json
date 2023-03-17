@@ -84,38 +84,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,85,037601,2012)",
-          "free_txt": [],
-          "publication_year": "2012"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,1USAORL)",
-          "free_txt": [
-            " Experiment performed using HRIBF",
-            "facility at Oak Ridge National Laboratory"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,85,037601,2012)",
+        "free_txt": [],
+        "publication_year": "2012",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,1USAORL)",
+        "free_txt": [
+          " Experiment performed using HRIBF",
+          "facility at Oak Ridge National Laboratory"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(9-F-18,N)10-NE-19,PAR,DA,RSD)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-2(9-F-18,N)10-NE-19,PAR,DA,RSD)",
+        "children": [
+          {
             "code": [
               "1-H-2",
               [
@@ -133,11 +128,91 @@
             "sf7": "RSD",
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(9-F-18(P,EL),,WID)",
+        "children": [
+          {
+            "code": [
+              "9-F-18",
+              [
+                "P,EL"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "9-F-18",
+            "process": "P,EL",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "((9-F-18(P,EL),,WID)/(9-F-18(P,A),,WID))",
+        "children": [
+          {
+            "code": [
+              "9-F-18",
+              [
+                "P,EL"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "9-F-18",
+            "process": "P,EL",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "9-F-18",
+              [
+                "P,A"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "9-F-18",
+            "process": "P,A",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL",
@@ -358,75 +433,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(9-F-18(P,EL),,WID)",
-          "0": {
-            "code": [
-              "9-F-18",
-              [
-                "P,EL"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "9-F-18",
-            "process": "P,EL",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "((9-F-18(P,EL),,WID)/(9-F-18(P,A),,WID))",
-          "0": {
-            "code": [
-              "9-F-18",
-              [
-                "P,EL"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "9-F-18",
-            "process": "P,EL",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "9-F-18",
-              [
-                "P,A"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "9-F-18",
-            "process": "P,A",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -482,8 +488,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SISD,SISD)",
             "free_txt": [
@@ -502,10 +508,8 @@
               "detected."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,1USAORL)",
             "free_txt": [
@@ -513,30 +517,24 @@
               "facility at Oak Ridge National Laboratory"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Isotopically pure 18F beam"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               "Inverse kinematics was used"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -548,8 +546,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -560,20 +558,16 @@
               " is reconstructed from kinematics."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(A)",
             "free_txt": [
@@ -588,10 +582,8 @@
               "         at laboratory angles from 2.5 to 8.5 deg."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -603,8 +595,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -614,10 +606,8 @@
               "were free parameters determined from fit"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": [
@@ -632,10 +622,8 @@
               "         at laboratory angles from 2.5 to 8.5 deg."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

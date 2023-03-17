@@ -58,33 +58,90 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JP/G,11,853,198507)",
-          "free_txt": [],
-          "publication_year": "1985"
-        },
-        {
-          "x4_code": "(C,86HARROG,1,162,198608)",
-          "free_txt": [
-            " Only brief information given"
-          ],
-          "publication_year": "1986"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,JP/G,11,853,198507)",
+        "free_txt": [],
+        "publication_year": "1985",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,86HARROG,1,162,198608)",
+        "free_txt": [
+          " Only brief information given"
+        ],
+        "publication_year": "1986",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,3HUNKFI)",
+        "free_txt": [
+          " 5MW light-water-moderated reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(3HUNKFI)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(58-CE-140(N,INL)58-CE-140,,SPC,,SPA/REL)",
+        "children": [
+          {
+            "code": [
+              "58-CE-140",
+              [
+                "N,INL"
+              ],
+              "58-CE-140,,SPC,,SPA/REL"
+            ],
+            "type": null,
+            "target": "58-CE-140",
+            "process": "N,INL",
+            "sf49": "58-CE-140,,SPC,,SPA/REL",
+            "sf4": "58-CE-140",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": "SPA/REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Relative to the 1596 keV gamma as 1000(at 125 degrees)"
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,3HUNKFI)",
-          "free_txt": [
-            " 5MW light-water-moderated reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(3HUNKFI)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(58-CE-140(N,INL)58-CE-140,PAR,DA,G,LEG/RS)",
+        "children": [
+          {
+            "code": [
+              "58-CE-140",
+              [
+                "N,INL"
+              ],
+              "58-CE-140,PAR,DA,G,LEG/RS"
+            ],
+            "type": null,
+            "target": "58-CE-140",
+            "process": "N,INL",
+            "sf49": "58-CE-140,PAR,DA,G,LEG/RS",
+            "sf4": "58-CE-140",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "G",
+            "sf8": "LEG/RS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Angular distribution data obtained at 90,105,125,135and 147 degrees with respect to the neutron beam."
+      }
     }
   },
   "data_tables": {
@@ -104,32 +161,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(58-CE-140(N,INL)58-CE-140,,SPC,,SPA/REL)",
-          "0": {
-            "code": [
-              "58-CE-140",
-              [
-                "N,INL"
-              ],
-              "58-CE-140,,SPC,,SPA/REL"
-            ],
-            "type": null,
-            "target": "58-CE-140",
-            "process": "N,INL",
-            "sf49": "58-CE-140,,SPC,,SPA/REL",
-            "sf4": "58-CE-140",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": "SPA/REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Relative to the 1596 keV gamma as 1000(at 125 degrees)"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -381,32 +412,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(58-CE-140(N,INL)58-CE-140,PAR,DA,G,LEG/RS)",
-          "0": {
-            "code": [
-              "58-CE-140",
-              [
-                "N,INL"
-              ],
-              "58-CE-140,PAR,DA,G,LEG/RS"
-            ],
-            "type": null,
-            "target": "58-CE-140",
-            "process": "N,INL",
-            "sf49": "58-CE-140,PAR,DA,G,LEG/RS",
-            "sf4": "58-CE-140",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "G",
-            "sf8": "LEG/RS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Angular distribution data obtained at 90,105,125,135and 147 degrees with respect to the neutron beam."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -549,8 +554,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -559,10 +564,8 @@
               "       for angular distribution measurements"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -570,20 +573,16 @@
               "No further information."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,3HUNKFI)",
             "free_txt": [
               " 5MW light-water-moderated reactor"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -591,30 +590,24 @@
               "              of reactor"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
               " Prompt gamma spectroscopy"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "No information"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -622,10 +615,8 @@
               "to 99.4% in Ce-140."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -636,8 +627,8 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E,G)",
             "free_txt": [
@@ -645,10 +636,8 @@
               "      under the column-heading 'E'."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -659,8 +648,8 @@
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E,G)",
             "free_txt": [
@@ -668,10 +657,8 @@
               "      under the column-heading 'E'."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

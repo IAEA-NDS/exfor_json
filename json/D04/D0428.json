@@ -27,37 +27,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NIM/B,254,25,2007)",
-          "free_txt": [],
-          "publication_year": "2007"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM,2BLGNAM)",
-          "free_txt": [
-            " 2 MV Tandetron accelerator"
-          ],
-          "facility_type": "(DYNAM)",
-          "institute": "(2BLGNAM)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NIM/B,254,25,2007)",
+        "free_txt": [],
+        "publication_year": "2007",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM,2BLGNAM)",
+        "free_txt": [
+          " 2 MV Tandetron accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(DYNAM)",
+        "institute": "(2BLGNAM)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-13(D,P)6-C-14,PAR,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-13(D,P)6-C-14,PAR,DA)",
+        "children": [
+          {
             "code": [
               "6-C-13",
               [
@@ -75,11 +70,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " (fig.2)"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " (fig.2)"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-13(D,A)5-B-11,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "6-C-13",
+              [
+                "D,A"
+              ],
+              "5-B-11,PAR,DA"
+            ],
+            "type": null,
+            "target": "6-C-13",
+            "process": "D,A",
+            "sf49": "5-B-11,PAR,DA",
+            "sf4": "5-B-11",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " (fig.3,4)"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-13(D,T)6-C-12,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "6-C-13",
+              [
+                "D,T"
+              ],
+              "6-C-12,PAR,DA"
+            ],
+            "type": null,
+            "target": "6-C-13",
+            "process": "D,T",
+            "sf49": "6-C-12,PAR,DA",
+            "sf4": "6-C-12",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " (fig.5)"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL"
@@ -539,32 +597,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-13(D,A)5-B-11,PAR,DA)",
-          "0": {
-            "code": [
-              "6-C-13",
-              [
-                "D,A"
-              ],
-              "5-B-11,PAR,DA"
-            ],
-            "type": null,
-            "target": "6-C-13",
-            "process": "D,A",
-            "sf49": "5-B-11,PAR,DA",
-            "sf4": "5-B-11",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " (fig.3,4)"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1661,32 +1693,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-13(D,T)6-C-12,PAR,DA)",
-          "0": {
-            "code": [
-              "6-C-13",
-              [
-                "D,T"
-              ],
-              "6-C-12,PAR,DA"
-            ],
-            "type": null,
-            "target": "6-C-13",
-            "process": "D,T",
-            "sf49": "6-C-12,PAR,DA",
-            "sf4": "6-C-12",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " (fig.5)"
-        }
-      },
       "common": {
         "heads": [
           "E-LVL"
@@ -2148,8 +2154,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SI)",
             "free_txt": [
@@ -2161,10 +2167,8 @@
               "incident beam."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -2179,20 +2183,16 @@
               "  nuclei (<0.5%)."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM,2BLGNAM)",
             "free_txt": [
               " 2 MV Tandetron accelerator"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2201,10 +2201,8 @@
               " (82 +- 8 nm)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

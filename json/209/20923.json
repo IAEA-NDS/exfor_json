@@ -49,27 +49,102 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JPR/C,27,C1-88,196601)",
-          "free_txt": [
-            ".Proceedings of nuclear physics colloquium on light",
-            " nuclei held in Lyon, 26 to 28 January, 1966."
-          ],
-          "publication_year": "1966"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,JPR/C,27,C1-88,196601)",
+        "free_txt": [
+          ".Proceedings of nuclear physics colloquium on light",
+          " nuclei held in Lyon, 26 to 28 January, 1966."
+        ],
+        "publication_year": "1966",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG  )",
+        "free_txt": [
+          " Van der Graaff."
+        ],
+        "pointer": "0"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(6-C-12(N,A)4-BE-9,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "N,A"
+              ],
+              "4-BE-9,PAR,SIG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "N,A",
+            "sf49": "4-BE-9,PAR,SIG",
+            "sf4": "4-BE-9",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG  )",
-          "free_txt": [
-            " Van der Graaff."
-          ]
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "((6-C-12(N,A)4-BE-9,,DE)+(6-C-12(N,N+A)4-BE-8,,DE,A))",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "N,A"
+              ],
+              "4-BE-9,,DE"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "N,A",
+            "sf49": "4-BE-9,,DE",
+            "sf4": "4-BE-9",
+            "sf5": null,
+            "sf6": "DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "6-C-12",
+              [
+                "N,N+A"
+              ],
+              "4-BE-8,,DE,A"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "N,N+A",
+            "sf49": "4-BE-8,,DE,A",
+            "sf4": "4-BE-8",
+            "sf5": null,
+            "sf6": "DE",
+            "sf7": "A",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": "  TOTAL ALPHA EMISSION SPECTRA."
+      }
     }
   },
   "data_tables": {
@@ -104,32 +179,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,A)4-BE-9,PAR,SIG)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "N,A"
-              ],
-              "4-BE-9,PAR,SIG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "N,A",
-            "sf49": "4-BE-9,PAR,SIG",
-            "sf4": "4-BE-9",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL"
@@ -171,51 +220,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((6-C-12(N,A)4-BE-9,,DE)+(6-C-12(N,N+A)4-BE-8,,DE,A))",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "N,A"
-              ],
-              "4-BE-9,,DE"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "N,A",
-            "sf49": "4-BE-9,,DE",
-            "sf4": "4-BE-9",
-            "sf5": null,
-            "sf6": "DE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "6-C-12",
-              [
-                "N,N+A"
-              ],
-              "4-BE-8,,DE,A"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "N,N+A",
-            "sf49": "4-BE-8,,DE,A",
-            "sf4": "4-BE-8",
-            "sf5": null,
-            "sf6": "DE",
-            "sf7": "A",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "+",
-          "free_text": "  TOTAL ALPHA EMISSION SPECTRA."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -511,38 +515,32 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN )",
             "free_txt": [
               " Stilbene scintillator."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG  )",
             "free_txt": [
               " Van der Graaff."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T  )",
             "free_txt": [
               " Deuterium beam on tritium target."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -550,18 +548,14 @@
               " or alphas by pulse shape discrimination."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "((MONIT)31123002,M.L.Chatterjee+,J,NP,51,583,1964)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(6-C-12(N,A)4-BE-9,PAR,SIG)",
             "free_txt": [
@@ -570,20 +564,16 @@
               " used."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               ".Stilbene scintillator also used as sample."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -594,8 +584,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -606,8 +596,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(NDD  )",
             "free_txt": []

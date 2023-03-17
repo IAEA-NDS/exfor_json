@@ -65,42 +65,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,SJA,43,808,1977)",
-          "free_txt": [],
-          "publication_year": "1977"
-        },
-        {
-          "x4_code": "((C,77KIEV,3,144,1977)=(R,INDC(CCP)-118,(3),144,1977))",
-          "free_txt": [
-            "        Graphs only"
-          ],
-          "publication_year": "1977"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,4RUSFEI)",
-          "free_txt": [],
-          "facility_type": "(VDG)",
-          "institute": "(4RUSFEI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,SJA,43,808,1977)",
+        "free_txt": [],
+        "publication_year": "1977",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((C,77KIEV,3,144,1977)=(R,INDC(CCP)-118,(3),144,1977))",
+        "free_txt": [
+          "        Graphs only"
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,4RUSFEI)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(4RUSFEI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(N,F),,SIG)/(92-U-235(N,F),,SIG))",
-          "0": {
+      "0": {
+        "x4_code": "((92-U-238(N,F),,SIG)/(92-U-235(N,F),,SIG))",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -119,7 +115,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "92-U-235",
               [
@@ -137,11 +133,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((92-U-238(N,F),,SIG)/(92-U-235(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-2",
@@ -390,51 +440,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(N,F),,SIG)/(92-U-235(N,F),,SIG))",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -489,8 +494,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -507,10 +512,8 @@
               "   electrode and backing materials."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
@@ -518,18 +521,14 @@
               " by Ar (90%) and CO2 (10%) at 760 mmHg."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,4RUSFEI)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": "(EN-RSL)",
             "free_txt": [
@@ -537,10 +536,8 @@
               " thickness and angular spread"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -553,8 +550,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -563,10 +560,8 @@
               " 3.0 MeV)."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -608,20 +603,16 @@
               " Systematic part of total error       (0.55%)"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " Point normalized to the absolute shape"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
             "free_txt": [
@@ -634,28 +625,22 @@
               " En=3.6-7 MeV"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(40506003,B.I.Fursov+,J,SJA,43,808,1977)",
             "free_txt": [
               "This Entry, Subent 003."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((92-U-238(N,F),,SIG)/(92-U-235(N,F),,SIG))",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -672,8 +657,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -686,10 +671,8 @@
               "E/A .2300+-.0030 .4022+-.0040 .4277+-.0041 .4354+-.0043"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -703,10 +686,8 @@
               " - Neutron flux difference in U-235 and U-238  (1.61%)"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -735,18 +716,14 @@
               "Energy dependence of detection efficiency(0.30%)"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7,P-T)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -755,10 +732,8 @@
               " T(p,n) sources at each of four calibration energies."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -771,10 +746,8 @@
               " irradiation of slow neutrons from Li(p,n) and T(p,n)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

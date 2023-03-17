@@ -46,34 +46,31 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,BAS,35,163,1972)",
-          "free_txt": [
-            " Eng.trans.of IZV,35,(1),180,1971"
-          ],
-          "publication_year": "1972"
-        },
-        {
-          "x4_code": "(J,IZV,35,(1),180,1971)",
-          "free_txt": [
-            " Data given"
-          ],
-          "publication_year": "1971"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,BAS,35,163,1972)",
+        "free_txt": [
+          " Eng.trans.of IZV,35,(1),180,1971"
+        ],
+        "publication_year": "1972",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,IZV,35,(1),180,1971)",
+        "free_txt": [
+          " Data given"
+        ],
+        "publication_year": "1971",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-238(0,F),,AKE,LF+HF)",
-          "0": {
+      "0": {
+        "x4_code": "(94-PU-238(0,F),,AKE,LF+HF)",
+        "children": [
+          {
             "code": [
               "94-PU-238",
               [
@@ -91,11 +88,74 @@
             "sf7": "LF+HF",
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(94-PU-238(0,F),,AKE,HF)",
+        "children": [
+          {
+            "code": [
+              "94-PU-238",
+              [
+                "0,F"
+              ],
+              ",,AKE,HF"
+            ],
+            "type": null,
+            "target": "94-PU-238",
+            "process": "0,F",
+            "sf49": ",,AKE,HF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "AKE",
+            "sf7": "HF",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Average kinetic energy of                         heavy fragment"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(94-PU-238(0,F),,AKE,LF)",
+        "children": [
+          {
+            "code": [
+              "94-PU-238",
+              [
+                "0,F"
+              ],
+              ",,AKE,LF"
+            ],
+            "type": null,
+            "target": "94-PU-238",
+            "process": "0,F",
+            "sf49": ",,AKE,LF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "AKE",
+            "sf7": "LF",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Average kinetic energy of                         light fragment"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -117,32 +177,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-238(0,F),,AKE,HF)",
-          "0": {
-            "code": [
-              "94-PU-238",
-              [
-                "0,F"
-              ],
-              ",,AKE,HF"
-            ],
-            "type": null,
-            "target": "94-PU-238",
-            "process": "0,F",
-            "sf49": ",,AKE,HF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "AKE",
-            "sf7": "HF",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Average kinetic energy of                         heavy fragment"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -164,32 +198,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-238(0,F),,AKE,LF)",
-          "0": {
-            "code": [
-              "94-PU-238",
-              [
-                "0,F"
-              ],
-              ",,AKE,LF"
-            ],
-            "type": null,
-            "target": "94-PU-238",
-            "process": "0,F",
-            "sf49": ",,AKE,LF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "AKE",
-            "sf7": "LF",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Average kinetic energy of                         light fragment"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -213,18 +221,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "        Shape analysis of fis.fragment distribution"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
@@ -232,20 +238,16 @@
               " ~ 1.5-mg/cm2 Al absorbers were irradiated for ten days"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Errors are statistical"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -254,10 +256,8 @@
               "served as standard for normalization."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,J.C.D.Milton+,J,CJP,40,1626,1962)",
             "free_txt": []
@@ -268,10 +268,8 @@
               " Data used for calibration."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -279,10 +277,8 @@
               "disk was placed in the center of an evacuated chamber."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -294,8 +290,8 @@
     },
     "002": {},
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -306,8 +302,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [

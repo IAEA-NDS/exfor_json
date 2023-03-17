@@ -49,37 +49,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,AECL-2148,1964)",
-          "free_txt": [],
-          "publication_year": "1964"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,1CANCRC)",
-          "free_txt": [
-            " NRU reactor."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(1CANCRC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,AECL-2148,1964)",
+        "free_txt": [],
+        "publication_year": "1964",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,1CANCRC)",
+        "free_txt": [
+          " NRU reactor."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1CANCRC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-233(N,ABS),,ALF,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-233(N,ABS),,ALF,,SPA)",
+        "children": [
+          {
             "code": [
               "92-U-233",
               [
@@ -97,11 +92,46 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-233(N,ABS),,ALF)",
+        "children": [
+          {
+            "code": [
+              "92-U-233",
+              [
+                "N,ABS"
+              ],
+              ",,ALF"
+            ],
+            "type": null,
+            "target": "92-U-233",
+            "process": "N,ABS",
+            "sf49": ",,ALF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "ALF",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -133,32 +163,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-233(N,ABS),,ALF)",
-          "0": {
-            "code": [
-              "92-U-233",
-              [
-                "N,ABS"
-              ],
-              ",,ALF"
-            ],
-            "type": null,
-            "target": "92-U-233",
-            "process": "N,ABS",
-            "sf49": ",,ALF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "ALF",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -187,8 +191,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -198,30 +202,24 @@
               " * quoted uncertainties in the cross sections"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,1CANCRC)",
             "free_txt": [
               " NRU reactor."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Reactor spectrum.R=0.022+-0.004 and T=40 degr(C)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -231,10 +229,8 @@
               "sheathed in aluminum."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -245,8 +241,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -254,18 +250,14 @@
               " analyses. Assumed U-233 eff.absorption = 591 b."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM,92-U-233(N,ABS),,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(BURN,MASSP,CHSEP)",
             "free_txt": [
@@ -276,8 +268,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -285,10 +277,8 @@
               " g-factors and cross sections of Westcott, 1964."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,12350002)",
             "free_txt": [

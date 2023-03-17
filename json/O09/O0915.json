@@ -35,45 +35,41 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JAP,82,1983,1997)",
-          "free_txt": [],
-          "publication_year": "1997"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2SF HLS)",
-          "free_txt": [],
-          "facility_type": "(VDG)",
-          "institute": "(2SF HLS)"
-        },
-        {
-          "x4_code": "(VDGT,2SF HLS)",
-          "free_txt": [
-            " At energies above 2.7 MeV and for",
-            "obtaining the 10-MeV Si-28 beam the laboratory'S 5 MV",
-            " EGP-10-II tandem accelerator was used."
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(2SF HLS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JAP,82,1983,1997)",
+        "free_txt": [],
+        "publication_year": "1997",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2SF HLS)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2SF HLS)"
+      },
+      {
+        "x4_code": "(VDGT,2SF HLS)",
+        "free_txt": [
+          " At energies above 2.7 MeV and for",
+          "obtaining the 10-MeV Si-28 beam the laboratory'S 5 MV",
+          " EGP-10-II tandem accelerator was used."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2SF HLS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(P,EL)2-HE-4,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(2-HE-4(P,EL)2-HE-4,,DA)",
+        "children": [
+          {
             "code": [
               "2-HE-4",
               [
@@ -91,11 +87,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(A,P)2-HE-4,,DA,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "A,P"
+              ],
+              "2-HE-4,,DA,,,DERIV"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "A,P",
+            "sf49": "2-HE-4,,DA,,,DERIV",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -389,32 +420,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(A,P)2-HE-4,,DA,,,DERIV)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "A,P"
-              ],
-              "2-HE-4,,DA,,,DERIV"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "A,P",
-            "sf49": "2-HE-4,,DA,,,DERIV",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -710,8 +715,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -722,10 +727,8 @@
               "used."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -740,10 +743,8 @@
               "an estimated inaccuracy below 3%."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2SF HLS)",
             "free_txt": []
@@ -756,10 +757,8 @@
               " EGP-10-II tandem accelerator was used."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -767,18 +766,14 @@
               "was typically 12 KeV for protons."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(MOMIX)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(73-TA-181(P,EL)73-TA-181,,DA)",
             "free_txt": [
@@ -786,10 +781,8 @@
               "assumed as Rutherford cross section."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -803,8 +796,8 @@
       }
     },
     "002": {
-      "part-det": {
-        "0": [
+      "0": {
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": []
@@ -813,8 +806,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,O0915002)",
             "free_txt": []

@@ -65,39 +65,34 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,FIZ/B,9,97,2000)",
-          "free_txt": [
-            "  Main  Ref."
-          ],
-          "publication_year": "2000"
-        }
-      ]
-    },
-    "facilities": {
-      "3": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            " IBR-30 pulsed reactor in JINR, Dubna."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,FIZ/B,9,97,2000)",
+        "free_txt": [
+          "  Main  Ref."
+        ],
+        "publication_year": "2000",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          " IBR-30 pulsed reactor in JINR, Dubna."
+        ],
+        "pointer": "3",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(67-HO-165(N,2G)67-HO-166,,SPC,,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(67-HO-165(N,2G)67-HO-166,,SPC,,REL)",
+        "children": [
+          {
             "code": [
               "67-HO-165",
               [
@@ -115,11 +110,46 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Relative,in percent of total intensity of two-step cascades which have the same total energy."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Relative,in percent of total intensity of two-step cascades which have the same total energy."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(67-HO-165(N,G)67-HO-166,,SPC,,REL)",
+        "children": [
+          {
+            "code": [
+              "67-HO-165",
+              [
+                "N,G"
+              ],
+              "67-HO-166,,SPC,,REL"
+            ],
+            "type": null,
+            "target": "67-HO-165",
+            "process": "N,G",
+            "sf49": "67-HO-166,,SPC,,REL",
+            "sf4": "67-HO-166",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -926,32 +956,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(67-HO-165(N,G)67-HO-166,,SPC,,REL)",
-          "0": {
-            "code": [
-              "67-HO-165",
-              [
-                "N,G"
-              ],
-              "67-HO-166,,SPC,,REL"
-            ],
-            "type": null,
-            "target": "67-HO-165",
-            "process": "N,G",
-            "sf49": "67-HO-166,,SPC,,REL",
-            "sf4": "67-HO-166",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -1463,18 +1467,110 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
               "  Coincident gamma-transition in Ho-166 (Table 1)."
             ]
           }
+        ],
+        "method": [
+          {
+            "x4_code": "(COINC)",
+            "free_txt": [
+              " Gamma-gamma Coincidence"
+            ]
+          }
         ]
       },
-      "detector": {
-        "3": [
+      "1": {
+        "detector": [
+          {
+            "x4_code": "(GE )",
+            "free_txt": [
+              " X-ray Ge-detector of 10 cm**3 volume -for energy",
+              "      range 20 -465 keV.",
+              "     Another of 78 cm**3 -for energy range 59 -760 keV.",
+              " Detectors Resolution FWHM 1.39 keV and 2.2 keV at",
+              " 304.6 keV, respectively."
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(REAC,4LATULR)",
+            "free_txt": [
+              " IRT Reactor of Nuclear Reseach Center of",
+              "Latvian Academy of Science."
+            ]
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(REAC)",
+            "free_txt": [
+              " Thermal neutron beam from tangential exp.channel",
+              "  was transmitted through 52cm-thick Si filter."
+            ]
+          }
+        ],
+        "inc-spect": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Collimated neutron flux (1cm*1cm) at target -",
+              "  5.E+6 n/(sec*cm**2)."
+            ]
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " 0.9 g Ho metal of 99% purity, contained in thin",
+              " polyethylene bag."
+            ]
+          }
+        ]
+      },
+      "2": {
+        "detector": [
+          {
+            "x4_code": "(HPGE)",
+            "free_txt": [
+              " 22% HPGe detector,1.9keV resolution at 1332 keV."
+            ]
+          },
+          {
+            "x4_code": "(GELI)",
+            "free_txt": [
+              " 12% Ge(Li) detector, 2.1keV resolution at 1332",
+              "                            keV."
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(REAC,3CZRUJF)",
+            "free_txt": [
+              " Neutron guide facility at 15 MW",
+              " light-water LVR-15 Reactor."
+            ]
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " 0.464 g Ho2O3 oxide of 99.99% purity."
+            ]
+          }
+        ]
+      },
+      "3": {
+        "detector": [
           {
             "x4_code": "(SPEC,HPGE,GELI)",
             "free_txt": [
@@ -1486,42 +1582,16 @@
               "  scattered gamma quanta."
             ]
           }
-        ]
-      },
-      "facility": {
-        "3": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
               " IBR-30 pulsed reactor in JINR, Dubna."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "1": [
-          {
-            "x4_code": "(REAC)",
-            "free_txt": [
-              " Thermal neutron beam from tangential exp.channel",
-              "  was transmitted through 52cm-thick Si filter."
-            ]
-          }
-        ]
-      },
-      "inc-spect": {
-        "1": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              " Collimated neutron flux (1cm*1cm) at target -",
-              "  5.E+6 n/(sec*cm**2)."
-            ]
-          }
-        ]
-      },
-      "method": {
-        "3": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1529,10 +1599,8 @@
               "      time-of flight method."
             ]
           }
-        ]
-      },
-      "sample": {
-        "3": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1543,8 +1611,8 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E,G)",
             "free_txt": [
@@ -1575,10 +1643,8 @@
               " Energy of cascade final level."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1597,10 +1663,8 @@
               " Error of energy E2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1611,8 +1675,8 @@
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E,G)",
             "free_txt": [
@@ -1631,10 +1695,8 @@
               " Energy of final level."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1653,10 +1715,8 @@
               " Error of gamma-energy E  ."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -1669,10 +1729,8 @@
               "   Parity of the Final Level"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

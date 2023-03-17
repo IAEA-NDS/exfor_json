@@ -97,37 +97,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PS,T150,014011,2012)",
-          "free_txt": [],
-          "publication_year": "2012"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,3INDTRM)",
-          "free_txt": [
-            " 14 UD Pelletron Accelerator"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(3INDTRM)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PS,T150,014011,2012)",
+        "free_txt": [],
+        "publication_year": "2012",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,3INDTRM)",
+        "free_txt": [
+          " 14 UD Pelletron Accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(3INDTRM)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(6-C-12,EL)13-AL-27,,DA,,RTH)",
-          "0": {
+      "0": {
+        "x4_code": "(13-AL-27(6-C-12,EL)13-AL-27,,DA,,RTH)",
+        "children": [
+          {
             "code": [
               "13-AL-27",
               [
@@ -145,11 +140,74 @@
             "sf7": null,
             "sf8": "RTH",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(14-SI-28(5-B-11,EL)14-SI-28,,DA,,RTH)",
+        "children": [
+          {
+            "code": [
+              "14-SI-28",
+              [
+                "5-B-11,EL"
+              ],
+              "14-SI-28,,DA,,RTH"
+            ],
+            "type": null,
+            "target": "14-SI-28",
+            "process": "5-B-11,EL",
+            "sf49": "14-SI-28,,DA,,RTH",
+            "sf4": "14-SI-28",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "RTH",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(13-AL-27(6-C-12,5-B-11)14-SI-28,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "13-AL-27",
+              [
+                "6-C-12,5-B-11"
+              ],
+              "14-SI-28,PAR,DA"
+            ],
+            "type": null,
+            "target": "13-AL-27",
+            "process": "6-C-12,5-B-11",
+            "sf49": "14-SI-28,PAR,DA",
+            "sf4": "14-SI-28",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -357,32 +415,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(5-B-11,EL)14-SI-28,,DA,,RTH)",
-          "0": {
-            "code": [
-              "14-SI-28",
-              [
-                "5-B-11,EL"
-              ],
-              "14-SI-28,,DA,,RTH"
-            ],
-            "type": null,
-            "target": "14-SI-28",
-            "process": "5-B-11,EL",
-            "sf49": "14-SI-28,,DA,,RTH",
-            "sf4": "14-SI-28",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "RTH",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -457,32 +489,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(6-C-12,5-B-11)14-SI-28,PAR,DA)",
-          "0": {
-            "code": [
-              "13-AL-27",
-              [
-                "6-C-12,5-B-11"
-              ],
-              "14-SI-28,PAR,DA"
-            ],
-            "type": null,
-            "target": "13-AL-27",
-            "process": "6-C-12,5-B-11",
-            "sf49": "14-SI-28,PAR,DA",
-            "sf4": "14-SI-28",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL1"
@@ -1143,8 +1149,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SI,SI)",
             "free_txt": [
@@ -1159,30 +1165,24 @@
               " and ~450 um thick Si detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on the source of uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,3INDTRM)",
             "free_txt": [
               " 14 UD Pelletron Accelerator"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
@@ -1191,18 +1191,16 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "A self-supporting 27Al target (~550 ug/cm2 thick)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1213,18 +1211,16 @@
       }
     },
     "003": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "28Si (~420 ug/cm2 thick)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1235,8 +1231,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1244,10 +1240,8 @@
               " which was confirmed by the authors."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E-LVL1,5-B-11)",
             "free_txt": []
@@ -1256,10 +1250,8 @@
             "x4_code": "(E-LVL2,14-SI-28)",
             "free_txt": []
           }
-        ]
-      },
-      "level-prop": {
-        "0": [
+        ],
+        "level-prop": [
           {
             "x4_code": "(14-SI-28,E-LVL2=0.0,SPIN=0.,PARITY=+1.)",
             "free_txt": []
@@ -1272,20 +1264,16 @@
             "x4_code": "(14-SI-28,E-LVL2=4.62,SPIN=4.,PARITY=+1.)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "A self-supporting 27Al target (~550 ug/cm2 thick)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -55,41 +55,37 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AUJ,31,471,1978)",
-          "free_txt": [],
-          "publication_year": "1978"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(BETAT,3AULAML)",
-          "free_txt": [],
-          "facility_type": "(BETAT)",
-          "institute": "(3AULAML)"
-        },
-        {
-          "x4_code": "(LINAC,2JPNTOH)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(2JPNTOH)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AUJ,31,471,1978)",
+        "free_txt": [],
+        "publication_year": "1978",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(BETAT,3AULAML)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(BETAT)",
+        "institute": "(3AULAML)"
+      },
+      {
+        "x4_code": "(LINAC,2JPNTOH)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2JPNTOH)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-54(G,N)26-FE-53,,SIG,,BRS)",
-          "0": {
+      "0": {
+        "x4_code": "(26-FE-54(G,N)26-FE-53,,SIG,,BRS)",
+        "children": [
+          {
             "code": [
               "26-FE-54",
               [
@@ -107,11 +103,74 @@
             "sf7": null,
             "sf8": "BRS",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(26-FE-54(G,P)25-MN-53,,SIG,,BRS)",
+        "children": [
+          {
+            "code": [
+              "26-FE-54",
+              [
+                "G,P"
+              ],
+              "25-MN-53,,SIG,,BRS"
+            ],
+            "type": null,
+            "target": "26-FE-54",
+            "process": "G,P",
+            "sf49": "25-MN-53,,SIG,,BRS",
+            "sf4": "25-MN-53",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(26-FE-54(G,ABS),,SIG,,BRS)",
+        "children": [
+          {
+            "code": [
+              "26-FE-54",
+              [
+                "G,ABS"
+              ],
+              ",,SIG,,BRS"
+            ],
+            "type": null,
+            "target": "26-FE-54",
+            "process": "G,ABS",
+            "sf49": ",,SIG,,BRS",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -306,32 +365,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-54(G,P)25-MN-53,,SIG,,BRS)",
-          "0": {
-            "code": [
-              "26-FE-54",
-              [
-                "G,P"
-              ],
-              "25-MN-53,,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "26-FE-54",
-            "process": "G,P",
-            "sf49": "25-MN-53,,SIG,,BRS",
-            "sf4": "25-MN-53",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -406,32 +439,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-54(G,ABS),,SIG,,BRS)",
-          "0": {
-            "code": [
-              "26-FE-54",
-              [
-                "G,ABS"
-              ],
-              ",,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "26-FE-54",
-            "process": "G,ABS",
-            "sf49": ",,SIG,,BRS",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -508,8 +515,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(PLA)",
             "free_txt": [
@@ -517,10 +524,8 @@
               " section unfolding from the yield curve."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -531,30 +536,24 @@
               " resonance."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(BPAIR)",
             "free_txt": [
               "  Positron annihilation photons counting."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Mean-root-squared uncertainties."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(BETAT,3AULAML)",
             "free_txt": []
@@ -563,18 +562,14 @@
             "x4_code": "(LINAC,2JPNTOH)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,COINC)",
             "free_txt": [
@@ -585,10 +580,8 @@
               " % of the b+ decay."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "((MONIT),J.H.Carver+,J,AUJ,10,312,1957)",
             "free_txt": [
@@ -597,18 +590,14 @@
               " normalization."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(26-FE-54(G,N)26-FE-53,,INT,,BRS)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -619,8 +608,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -632,8 +621,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -645,18 +634,16 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "The sum of (g,n) and (g,p) cross sections obtained."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

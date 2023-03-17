@@ -54,36 +54,31 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NST,7,7,7001)",
-          "free_txt": [],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": [
-            "    LINAC AT JAERI, 50 METER FLIGHT PATH.",
-            " FURTHER CHARACTERISTICS IN TABLE 1 OF REF."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NST,7,7,7001)",
+        "free_txt": [],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC)",
+        "free_txt": [
+          "    LINAC AT JAERI, 50 METER FLIGHT PATH.",
+          " FURTHER CHARACTERISTICS IN TABLE 1 OF REF."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(27-CO-59(N,EL),,WID)",
-          "0": {
+      "1": {
+        "x4_code": "(27-CO-59(N,EL),,WID)",
+        "children": [
+          {
             "code": [
               "27-CO-59",
               [
@@ -101,13 +96,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " ELASTIC WIDTH."
-        },
-        "2": {
-          "x4_code": "(27-CO-59(N,TOT),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": " ELASTIC WIDTH."
+      },
+      "2": {
+        "x4_code": "(27-CO-59(N,TOT),,WID)",
+        "children": [
+          {
             "code": [
               "27-CO-59",
               [
@@ -125,11 +122,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " TOTAL WIDTH."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " TOTAL WIDTH."
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(27-CO-59(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "27-CO-59",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "27-CO-59",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " TOTAL CROSS SECTION."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -171,32 +203,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "(27-CO-59(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "27-CO-59",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "27-CO-59",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " TOTAL CROSS SECTION."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -606,8 +612,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(AREA )",
             "free_txt": [
@@ -616,10 +622,8 @@
               " HARVEY PROGRAM."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -628,10 +632,8 @@
               " DERIVED IN THIS REFERENCE = 9700 +- 1000 BARNS."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
@@ -639,10 +641,8 @@
               " DETECTORS."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -652,10 +652,8 @@
               " RESONANCE REGIONS."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC)",
             "free_txt": [
@@ -663,40 +661,32 @@
               " FURTHER CHARACTERISTICS IN TABLE 1 OF REF."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
               "    PHOTO-NEUTRONS FROM WATER-COOLED LEAD TARGET"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF  )",
             "free_txt": [
               "    TIME-OF-FLIGHT, TRANSMISSION."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N    )",
             "free_txt": [
               "    NEUTRONS."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -705,10 +695,8 @@
               " SEE TABLE 1 IN REFERENCE."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -720,8 +708,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -732,18 +720,16 @@
       }
     },
     "006": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " STATISTICAL ERROR ONLY."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

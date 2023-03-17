@@ -94,57 +94,57 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,85,014607,2012)",
-          "free_txt": [
-            " Main references.",
-            "#doi:10.1103/PhysRevC.85.014607"
-          ],
-          "publication_year": "2012"
-        },
-        {
-          "x4_code": "(J,NP/A,834,192C,2010)",
-          "free_txt": [
-            " Preliminary data.",
-            "#doi:10.1016/j.nuclphysa.2009.12.037"
-          ],
-          "publication_year": "2010"
-        },
-        {
-          "x4_code": "(J,JP/CS,381,012120,2012)",
-          "free_txt": [
-            " Conference proceedings.",
-            "#doi:10.1088/1742-6596/381/1/012120"
-          ],
-          "publication_year": "2012"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,1USANOT)",
-          "free_txt": [
-            " Experiment performed at the 10 MeV FN",
-            "tandem Van de Graaff at the university of Notre Dame"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(1USANOT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,85,014607,2012)",
+        "free_txt": [
+          " Main references.",
+          "#doi:10.1103/PhysRevC.85.014607"
+        ],
+        "publication_year": "2012",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.85.014607"
+      },
+      {
+        "x4_code": "(J,NP/A,834,192C,2010)",
+        "free_txt": [
+          " Preliminary data.",
+          "#doi:10.1016/j.nuclphysa.2009.12.037"
+        ],
+        "publication_year": "2010",
+        "pointer": "0",
+        "doi": "10.1016/j.nuclphysa.2009.12.037"
+      },
+      {
+        "x4_code": "(J,JP/CS,381,012120,2012)",
+        "free_txt": [
+          " Conference proceedings.",
+          "#doi:10.1088/1742-6596/381/1/012120"
+        ],
+        "publication_year": "2012",
+        "pointer": "0",
+        "doi": "10.1088/1742-6596/381/1/012120"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,1USANOT)",
+        "free_txt": [
+          " Experiment performed at the 10 MeV FN",
+          "tandem Van de Graaff at the university of Notre Dame"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(1USANOT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(6-C-13,FUS),,SIG,,,DERIV)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(6-C-13,FUS),,SIG,,,DERIV)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -162,11 +162,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-12(6-C-13,FUS),,SIG,,SFC,DERIV)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "6-C-13,FUS"
+              ],
+              ",,SIG,,SFC,DERIV"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "6-C-13,FUS",
+            "sf49": ",,SIG,,SFC,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SFC",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-SYS"
@@ -244,32 +279,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(6-C-13,FUS),,SIG,,SFC,DERIV)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "6-C-13,FUS"
-              ],
-              ",,SIG,,SFC,DERIV"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "6-C-13,FUS",
-            "sf49": ",,SIG,,SFC,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-SYS"
@@ -376,8 +385,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -397,10 +406,8 @@
               "7-cm-thick lead to reduce the cosmic ray background."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,1USANOT)",
             "free_txt": [
@@ -408,10 +415,8 @@
               "tandem Van de Graaff at the university of Notre Dame"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,BGCT)",
             "free_txt": [
@@ -419,10 +424,8 @@
               "coincidence technique"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -433,8 +436,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -444,18 +447,14 @@
               "channel"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(11-NA-24,14.9HR,DG,1369.,,DG,2754.)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS)",
             "free_txt": [
@@ -463,20 +462,16 @@
               "          experimental uncertainty."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,R.A.Dayras+,J,NP/A,265,153,1976)",
             "free_txt": [
               "theoretical branching ratio described"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -488,8 +483,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -497,10 +492,8 @@
               "model: S=sigma(E) E exp(87.21/sqrt(E)+0.46E)."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS)",
             "free_txt": [
@@ -514,10 +507,8 @@
               " Uncertainty shown in figure"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,C1785002)",
             "free_txt": []

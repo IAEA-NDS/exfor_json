@@ -67,45 +67,41 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ARI,50,535,1999)",
-          "free_txt": [],
-          "publication_year": "1999"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,3HUNDEB)",
-          "free_txt": [
-            "  MGC 20E Cyclotron in Debrecen"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(3HUNDEB)"
-        },
-        {
-          "x4_code": "(CYCLO,2BLGVUB)",
-          "free_txt": [
-            "  CGR 560 Cyclotron in Brussels"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2BLGVUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ARI,50,535,1999)",
+        "free_txt": [],
+        "publication_year": "1999",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,3HUNDEB)",
+        "free_txt": [
+          "  MGC 20E Cyclotron in Debrecen"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(3HUNDEB)"
+      },
+      {
+        "x4_code": "(CYCLO,2BLGVUB)",
+        "free_txt": [
+          "  CGR 560 Cyclotron in Brussels"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2BLGVUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(52-TE-122(D,N)53-I-123,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(52-TE-122(D,N)53-I-123,,SIG)",
+        "children": [
+          {
             "code": [
               "52-TE-122",
               [
@@ -123,11 +119,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(52-TE-122(D,N)53-I-123,,TTY,,PHY,DERIV)",
+        "children": [
+          {
+            "code": [
+              "52-TE-122",
+              [
+                "D,N"
+              ],
+              "53-I-123,,TTY,,PHY,DERIV"
+            ],
+            "type": null,
+            "target": "52-TE-122",
+            "process": "D,N",
+            "sf49": "53-I-123,,TTY,,PHY,DERIV",
+            "sf4": "53-I-123",
+            "sf5": null,
+            "sf6": "TTY",
+            "sf7": null,
+            "sf8": "PHY",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -272,32 +303,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(52-TE-122(D,N)53-I-123,,TTY,,PHY,DERIV)",
-          "0": {
-            "code": [
-              "52-TE-122",
-              [
-                "D,N"
-              ],
-              "53-I-123,,TTY,,PHY,DERIV"
-            ],
-            "type": null,
-            "target": "52-TE-122",
-            "process": "D,N",
-            "sf49": "53-I-123,,TTY,,PHY,DERIV",
-            "sf4": "53-I-123",
-            "sf5": null,
-            "sf6": "TTY",
-            "sf7": null,
-            "sf8": "PHY",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -329,16 +334,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,3HUNDEB)",
             "free_txt": [
@@ -351,10 +354,8 @@
               "  CGR 560 Cyclotron in Brussels"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,EXTB,STTA,GSPEC,BCINT,MOSEP)",
             "free_txt": [
@@ -367,26 +368,20 @@
               "collection in a Faraday-cup."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(D4046001,S.Takacs+,J,ARI,48,657,1997)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(22-TI-0(D,X)23-V-48,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,E.Browne+,B,BROWNE,,123-3,1986)",
             "free_txt": [
@@ -403,10 +398,8 @@
               "article."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(52-TE-122,ENR=0.884)",
             "free_txt": [
@@ -425,10 +418,8 @@
               "Te-130      2.01"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -439,8 +430,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -456,18 +447,14 @@
               "reaction as the shape of the 124Te(d,2n) reaction."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(53-I-123,13.2HR,DG,158.99,0.833)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -533,10 +520,8 @@
               " error in time measurement"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,D4019001,B.Scholten+,J,ARI,46,255,1995)",
             "free_txt": [
@@ -551,10 +536,8 @@
               "this article used for correction"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -565,18 +548,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTEF)",
             "free_txt": [
               " Derived from measured excitation function"
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -588,10 +569,8 @@
               "at EOB is 34. MBq/uA-h."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

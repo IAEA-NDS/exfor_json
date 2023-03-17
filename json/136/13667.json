@@ -33,36 +33,31 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,173,1170,6809)",
-          "free_txt": [],
-          "publication_year": "1968"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CHOPF)",
-          "free_txt": [
-            " Fast chopper facility at high-flux beam",
-            " reactor."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,173,1170,6809)",
+        "free_txt": [],
+        "publication_year": "1968",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CHOPF)",
+        "free_txt": [
+          " Fast chopper facility at high-flux beam",
+          " reactor."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,G)79-AU-198,,SPC,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(79-AU-197(N,G)79-AU-198,,SPC,,SPA)",
+        "children": [
+          {
             "code": [
               "79-AU-197",
               [
@@ -80,11 +75,74 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "Data given in units of photons/100 neutrons captured."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "Data given in units of photons/100 neutrons captured."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(79-AU-197(N,G)79-AU-198,,SPC)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,G"
+              ],
+              "79-AU-198,,SPC"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "N,G",
+            "sf49": "79-AU-198,,SPC",
+            "sf4": "79-AU-198",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Data given in units of photons/100 neutrons captured."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(79-AU-197(N,G)79-AU-198,,SPC,,SPA)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,G"
+              ],
+              "79-AU-198,,SPC,,SPA"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "N,G",
+            "sf49": "79-AU-198,,SPC,,SPA",
+            "sf4": "79-AU-198",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Data given in units of photons/100 neutrons captured."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-MAX"
@@ -613,32 +671,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,G)79-AU-198,,SPC)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "N,G"
-              ],
-              "79-AU-198,,SPC"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "N,G",
-            "sf49": "79-AU-198,,SPC",
-            "sf4": "79-AU-198",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Data given in units of photons/100 neutrons captured."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2768,32 +2800,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,G)79-AU-198,,SPC,,SPA)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "N,G"
-              ],
-              "79-AU-198,,SPC,,SPA"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "N,G",
-            "sf49": "79-AU-198,,SPC,,SPA",
-            "sf4": "79-AU-198",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Data given in units of photons/100 neutrons captured."
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -3329,26 +3335,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CHOPF)",
             "free_txt": [
@@ -3356,20 +3358,16 @@
               " reactor."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               ". 22-m flight path."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

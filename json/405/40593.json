@@ -74,35 +74,32 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,26,962,1977)",
-          "free_txt": [
-            " Issue 5. Graphs of fission",
-            "                anisotropy, kinetic energy distribution"
-          ],
-          "publication_year": "1977"
-        },
-        {
-          "x4_code": "(J,SNP,26,508,1977)",
-          "free_txt": [
-            " Eng.Trans.of YF,26,(5),962,1977"
-          ],
-          "publication_year": "1977"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,26,962,1977)",
+        "free_txt": [
+          " Issue 5. Graphs of fission",
+          "                anisotropy, kinetic energy distribution"
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SNP,26,508,1977)",
+        "free_txt": [
+          " Eng.Trans.of YF,26,(5),962,1977"
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,F)MASS,,DA,FF,RSD)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-232(N,F)MASS,,DA,FF,RSD)",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -120,11 +117,74 @@
             "sf7": "FF",
             "sf8": "RSD",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Anisotropy-coeff   sig(O)/sig(90deg) for heavy fragment mass (after prompt neutron emission)"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Anisotropy-coeff   sig(O)/sig(90deg) for heavy fragment mass (after prompt neutron emission)"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(N,F),SEC,AKE,FF)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,F"
+              ],
+              ",SEC,AKE,FF"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,F",
+            "sf49": ",SEC,AKE,FF",
+            "sf4": null,
+            "sf5": "SEC",
+            "sf6": "AKE",
+            "sf7": "FF",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "     Average kinetic        energy of fragments at the angle in question"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(90-TH-232(N,F),SEC,AP,FF)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,F"
+              ],
+              ",SEC,AP,FF"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,F",
+            "sf49": ",SEC,AP,FF",
+            "sf4": null,
+            "sf5": "SEC",
+            "sf6": "AP",
+            "sf7": "FF",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Average mass of fission                              fragments"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG"
@@ -384,32 +444,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,F),SEC,AKE,FF)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,F"
-              ],
-              ",SEC,AKE,FF"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,F",
-            "sf49": ",SEC,AKE,FF",
-            "sf4": null,
-            "sf5": "SEC",
-            "sf6": "AKE",
-            "sf7": "FF",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "     Average kinetic        energy of fragments at the angle in question"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -481,32 +515,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,F),SEC,AP,FF)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,F"
-              ],
-              ",SEC,AP,FF"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,F",
-            "sf49": ",SEC,AP,FF",
-            "sf4": null,
-            "sf5": "SEC",
-            "sf6": "AP",
-            "sf7": "FF",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Average mass of fission                              fragments"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -560,8 +568,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -571,10 +579,8 @@
               " - Correction for prompt neutron emission was not done."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SOLST)",
             "free_txt": [
@@ -585,40 +591,32 @@
               "detector)"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not specified"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,40240001,V.G.Vorob'eva+,J,YF,10,491,1969)",
             "free_txt": [
@@ -630,10 +628,8 @@
             "x4_code": "(M,40240001,V.G.Vorob'eva+,J,SNP,10,282,1970)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -645,8 +641,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -664,8 +660,8 @@
       }
     },
     "003": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(0.)",
             "free_txt": [
@@ -684,10 +680,8 @@
               " Data for symmetrical mass region."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -698,8 +692,8 @@
       }
     },
     "004": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(0.)",
             "free_txt": [
@@ -712,10 +706,8 @@
               "  Measurement angle 90. deg"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

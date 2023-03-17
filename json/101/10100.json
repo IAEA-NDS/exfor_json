@@ -58,39 +58,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,42,143,197011)",
-          "free_txt": [],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USARPI)",
-          "free_txt": [
-            ") Electron linac with polyethylene",
-            " moderator (thickness 2.54 cm) and gold neutron beam",
-            " filter (0.18 cm). Linac burst width 2 microsec."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USARPI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,42,143,197011)",
+        "free_txt": [],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USARPI)",
+        "free_txt": [
+          ") Electron linac with polyethylene",
+          " moderator (thickness 2.54 cm) and gold neutron beam",
+          " filter (0.18 cm). Linac burst width 2 microsec."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USARPI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-233(N,F),,SIG,,RTE)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-233(N,F),,SIG,,RTE)",
+        "children": [
+          {
             "code": [
               "92-U-233",
               [
@@ -108,11 +103,74 @@
             "sf7": null,
             "sf8": "RTE",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-233(N,G)92-U-234,,SIG,,RTE)",
+        "children": [
+          {
+            "code": [
+              "92-U-233",
+              [
+                "N,G"
+              ],
+              "92-U-234,,SIG,,RTE"
+            ],
+            "type": null,
+            "target": "92-U-233",
+            "process": "N,G",
+            "sf49": "92-U-234,,SIG,,RTE",
+            "sf4": "92-U-234",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "RTE",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-233(N,ABS),,ETA)",
+        "children": [
+          {
+            "code": [
+              "92-U-233",
+              [
+                "N,ABS"
+              ],
+              ",,ETA"
+            ],
+            "type": null,
+            "target": "92-U-233",
+            "process": "N,ABS",
+            "sf49": ",,ETA",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "ETA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-NRM",
@@ -249,32 +307,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-233(N,G)92-U-234,,SIG,,RTE)",
-          "0": {
-            "code": [
-              "92-U-233",
-              [
-                "N,G"
-              ],
-              "92-U-234,,SIG,,RTE"
-            ],
-            "type": null,
-            "target": "92-U-233",
-            "process": "N,G",
-            "sf49": "92-U-234,,SIG,,RTE",
-            "sf4": "92-U-234",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "RTE",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -394,32 +426,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-233(N,ABS),,ETA)",
-          "0": {
-            "code": [
-              "92-U-233",
-              [
-                "N,ABS"
-              ],
-              ",,ETA"
-            ],
-            "type": null,
-            "target": "92-U-233",
-            "process": "N,ABS",
-            "sf49": ",,ETA",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "ETA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -541,8 +547,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(FISCH,SCIN)",
             "free_txt": [
@@ -559,20 +565,16 @@
               " Flux monitored by parallel plate BF3 chamber."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USARPI)",
             "free_txt": [
@@ -581,30 +583,24 @@
               " filter (0.18 cm). Linac burst width 2 microsec."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(EVAP)",
             "free_txt": [
               " Electron-neutron reaction."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time-of flight. 25.57(+-0.05)-m flight path."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -612,10 +608,8 @@
               " 99.99(+-0.005)% 233U. Sample temperature 25+-5 deg(C)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -627,16 +621,14 @@
       }
     },
     "002": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": "(92-U-233(N,F),,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G,FF)",
             "free_txt": [
@@ -647,8 +639,8 @@
       }
     },
     "003": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": "(92-U-233(N,TOT),,SIG)",
             "free_txt": [
@@ -662,18 +654,16 @@
       }
     },
     "004": {
-      "part-det": {
-        "0": [
+      "0": {
+        "part-det": [
           {
             "x4_code": "(G,FF)",
             "free_txt": [
               " Gammas and fission fragments."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,10100002)",
             "free_txt": []

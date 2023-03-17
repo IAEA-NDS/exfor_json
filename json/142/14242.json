@@ -35,35 +35,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,162,253,2009)",
-          "free_txt": [],
-          "publication_year": "2009"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALAS)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,162,253,2009)",
+        "free_txt": [],
+        "publication_year": "2009",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALAS)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(1-H-MTH(N,TOT),,SIG)",
-          "0": {
+      "1": {
+        "x4_code": "(1-H-MTH(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-MTH",
               [
@@ -81,13 +76,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Lucite sample (C5O2H8)n"
-        },
-        "2": {
-          "x4_code": "(1-H-MTH(N,TOT),,SIG,,MSC)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": " Lucite sample (C5O2H8)n"
+      },
+      "2": {
+        "x4_code": "(1-H-MTH(N,TOT),,SIG,,MSC)",
+        "children": [
+          {
             "code": [
               "1-H-MTH",
               [
@@ -105,11 +102,46 @@
             "sf7": null,
             "sf8": "MSC",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Data defined asDATA2= -ln(Cin/Cout)  - transmission ratio R, whereCin - detector rate when sample in beamCout - detector rate with sample outAccording to this, the total cross section (DATA1) isSig(tot) = -1/(nl) * ln(Cin/Cout)wheren  - number density of the samplel  - thickness of the sample."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Data defined asDATA2= -ln(Cin/Cout)  - transmission ratio R, whereCin - detector rate when sample in beamCout - detector rate with sample outAccording to this, the total cross section (DATA1) isSig(tot) = -1/(nl) * ln(Cin/Cout)wheren  - number density of the samplel  - thickness of the sample."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-MTH(N,ABS),,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "1-H-MTH",
+              [
+                "N,ABS"
+              ],
+              ",,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "1-H-MTH",
+            "process": "N,ABS",
+            "sf49": ",,SIG,,MXW",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -6537,32 +6569,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-MTH(N,ABS),,SIG,,MXW)",
-          "0": {
-            "code": [
-              "1-H-MTH",
-              [
-                "N,ABS"
-              ],
-              ",,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "1-H-MTH",
-            "process": "N,ABS",
-            "sf49": ",,SIG,,MXW",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -6591,8 +6597,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(LINAC,1USALAS)",
             "free_txt": []
@@ -6601,26 +6607,22 @@
       }
     },
     "002": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Absolute statistical uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALAS)",
             "free_txt": [
@@ -6628,34 +6630,26 @@
               "performed at the Los Alamos Neutron Science Center."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-238(N,F),,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -6663,10 +6657,8 @@
               "No detailed information on sample dimensions given"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -6678,16 +6670,14 @@
       }
     },
     "003": {
-      "decay-mon": {
-        "0": [
+      "0": {
+        "decay-mon": [
           {
             "x4_code": "(45-RH-104,41.8SEC,B,,0.995)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GEMUC)",
             "free_txt": [
@@ -6695,30 +6685,24 @@
               "detector was used to measure activity of Rh foils"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(CF252)",
             "free_txt": [
               " Californium source with activity of 825 mu-Ci"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -6728,10 +6712,8 @@
               "lucite bulk sample."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -6753,18 +6735,14 @@
               "measured in this experiment at LANSCE."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(45-RH-103(N,G)45-RH-104,,SIG,,MXW)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -6775,10 +6753,8 @@
               "35.56 x 35.56 x 21.24 cm3."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -1,11 +1,18 @@
 {
   "entry": "M0751",
-  "last_updated": "2008-10-29",
-  "number_of_revisions": "1",
+  "last_updated": "2022-11-08",
+  "number_of_revisions": "2",
   "histories": [
     {
       "x4_code": "(20080811C)",
       "free_txt": []
+    },
+    {
+      "x4_code": "(20220816U)",
+      "free_txt": [
+        " Corrected by VV and SD: INSTITUTE codes",
+        " added, STATUS."
+      ]
     }
   ],
   "bib_record": {
@@ -24,7 +31,7 @@
         "name": "L.Casano"
       },
       {
-        "name": "A.D.D'Angelo"
+        "name": "A.D'Angelo"
       },
       {
         "name": "F.Ghio"
@@ -48,7 +55,7 @@
         "name": "L.Miceli"
       },
       {
-        "name": "D.Morricciani"
+        "name": "D.Moricciani"
       },
       {
         "name": "A.M.Sandorfi"
@@ -87,29 +94,65 @@
       {
         "x4_code": "(1USAVIP)",
         "free_txt": ""
+      },
+      {
+        "x4_code": "(2ITYUTV)",
+        "free_txt": ""
+      },
+      {
+        "x4_code": "(2ITYISR)",
+        "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,646,55,1999)",
-          "free_txt": [],
-          "publication_year": "1999"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ESTRG,1USABNL)",
-          "free_txt": [
-            " USA BNL  National  Synchrotron  Light",
-            " Source (NSLS) Laser Electron Gamma Source (LEGS)."
-          ],
-          "facility_type": "(ESTRG)",
-          "institute": "(1USABNL)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,NP/A,646,55,1999)",
+        "free_txt": [],
+        "publication_year": "1999",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ESTRG,1USABNL)",
+        "free_txt": [
+          " USA BNL National Synchrotron Light",
+          " Source (NSLS) Laser Electron Gamma Source (LEGS)."
+        ],
+        "pointer": "0",
+        "facility_type": "(ESTRG)",
+        "institute": "(1USABNL)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(2-HE-4(G,PI0)2-HE-4,,DA)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "G,PI0"
+              ],
+              "2-HE-4,,DA"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "G,PI0",
+            "sf49": "2-HE-4,,DA",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -129,32 +172,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(G,PI0)2-HE-4,,DA)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "G,PI0"
-              ],
-              "2-HE-4,,DA"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "G,PI0",
-            "sf49": "2-HE-4,,DA",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -400,49 +417,43 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
-              "Unpolarized reaction cross  section  measurements:  a",
-              " recorded  event contained the amplitudes and time of",
-              " flight  of  the   pulses   in   48   cm   NAI,   its",
-              " anticoincidence  shield,  the  bars of 8 NAI and the",
-              " TOF of all taffin counters."
+              "Unpolarized reaction cross section measurements: a",
+              " recorded event contained the amplitudes and time of",
+              " flight of the pulses in 48 cm NAI, its",
+              " anticoincidence shield, the bars of 8 NAI and the",
+              " TOF of all tagging counters."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
-              "The data   have   been   corrected   for   accidental",
+              "The data have been corrected for accidental",
               " coincidences (between the 48 cm NAI and the tagger),",
-              " empty target background and cosmic rays"
+              " empty target background and cosmic rays."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(COIN,SCIN,SCIN)",
             "free_txt": [
-              " The  high  resolution,   cylindrical",
-              " NaI(Tl)  scintillator  48  cm diameter by 48 cm deep",
-              " for  the  higher  energy  photon  from   PI0   decay",
-              " detection  and  8  NaI(Tl)  bars  10 x 10 x 35 cm**3",
-              " plased around the  detector  for  the  lower  energy",
+              " The high resolution, cylindrical",
+              " NaI(Tl) scintillator 48 cm diameter by 48 cm deep",
+              " for the higher energy photon from PI0 decay",
+              " detection and 8 NaI(Tl) bars 10 x 10 x 35 cm**3",
+              " placed around the detector for the lower energy",
               " photon from the PI0 decay detection."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -459,21 +470,17 @@
               " - flux normalization (2.0 %)."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ESTRG,1USABNL)",
             "free_txt": [
-              " USA BNL  National  Synchrotron  Light",
+              " USA BNL National Synchrotron Light",
               " Source (NSLS) Laser Electron Gamma Source (LEGS)."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(LCS)",
             "free_txt": [
@@ -481,50 +488,39 @@
               " polarized photons."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB,SITA,TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
-          {
-            "x4_code": "(G)",
-            "free_txt": []
-          }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "Nickel cylinder,  closed  on  both   sides   by   two",
-              " hemispheres, with  a  total  length  l = 10 cm and a",
-              " diameter of  5  cm  filled  with  liquid  4He  at  a",
-              " temperature of  3.9 K and a presure slightly above 1",
-              " atmpsphere."
-            ]
-          }
-        ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              " Data  from  the  Table 1 were compiled at the",
-              " RUSSIA MSU SINP CDFE by V.Varlamov."
+              "Nickel cylinder, closed on both sides by two",
+              " hemispheres, with a total length l = 10 cm and a",
+              " diameter of 5 cm filled with liquid 4He at a",
+              " temperature of 3.9 K and a pressure slightly above 1",
+              " atmosphere."
             ]
           }
         ]
       }
     },
-    "002": {}
+    "002": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Data from the Table 1 of",
+              " Nucl.Phys.,A646(1999)55."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

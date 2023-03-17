@@ -136,42 +136,100 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,EPJ/A,20,345,2004)",
-          "free_txt": [],
-          "publication_year": "2004"
-        },
-        {
-          "x4_code": "(J,NIM/A,376,397,1996)",
-          "free_txt": [
-            ". Internal beam",
-            "facility COSY-11."
-          ],
-          "publication_year": "1996"
-        },
-        {
-          "x4_code": "(J,NIM/A,386,228,1997)",
-          "free_txt": [
-            "   A cluster",
-            "hydrogen target"
-          ],
-          "publication_year": "1997"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,EPJ/A,20,345,2004)",
+        "free_txt": [],
+        "publication_year": "2004",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NIM/A,376,397,1996)",
+        "free_txt": [
+          ". Internal beam",
+          "facility COSY-11."
+        ],
+        "publication_year": "1996",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NIM/A,386,228,1997)",
+        "free_txt": [
+          "   A cluster",
+          "hydrogen target"
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCY,2GERJUL)",
+        "free_txt": [
+          " COSY and internal beam facility COSY-11"
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCY)",
+        "institute": "(2GERJUL)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(1-H-1(P,ETA+P)1-H-1,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "P,ETA+P"
+              ],
+              "1-H-1,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "P,ETA+P",
+            "sf49": "1-H-1,,SIG",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCY,2GERJUL)",
-          "free_txt": [
-            " COSY and internal beam facility COSY-11"
-          ],
-          "facility_type": "(SYNCY)",
-          "institute": "(2GERJUL)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(P,ETA+P)1-H-1,PAR,DA,ETA)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "P,ETA+P"
+              ],
+              "1-H-1,PAR,DA,ETA"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "P,ETA+P",
+            "sf49": "1-H-1,PAR,DA,ETA",
+            "sf4": "1-H-1",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "ETA",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -191,32 +249,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(P,ETA+P)1-H-1,,SIG)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "P,ETA+P"
-              ],
-              "1-H-1,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "P,ETA+P",
-            "sf49": "1-H-1,,SIG",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "MISC-ERR"
@@ -282,32 +314,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(P,ETA+P)1-H-1,PAR,DA,ETA)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "P,ETA+P"
-              ],
-              "1-H-1,PAR,DA,ETA"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "P,ETA+P",
-            "sf49": "1-H-1,PAR,DA,ETA",
-            "sf4": "1-H-1",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "ETA",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -393,8 +399,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -402,10 +408,8 @@
               "velocity, particles are identified via invariant mass."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SPEC)",
             "free_txt": [
@@ -420,48 +424,38 @@
               "stop detector."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E-LVL,ETA)",
             "free_txt": [
               "  MASS=958 MeV"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCY,2GERJUL)",
             "free_txt": [
               " COSY and internal beam facility COSY-11"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,MAGFR)",
             "free_txt": []
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               " Excess energy above reaction threshold."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -472,8 +466,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(+ERR-SYS)",
             "free_txt": [
@@ -499,8 +493,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -515,10 +509,8 @@
               ".Cosine error."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(ETA)",
             "free_txt": []

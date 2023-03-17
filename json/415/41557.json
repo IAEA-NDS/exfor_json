@@ -57,41 +57,39 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,FCY/L,2,(2),44,2005)",
-          "free_txt": [
-            " Main reference. Issue 2(125)"
-          ],
-          "publication_year": "2005"
-        },
-        {
-          "x4_code": "(J,PPN/L,2,92,2005)",
-          "free_txt": [
-            " Engl.translation of FCY/L."
-          ],
-          "publication_year": "2005"
-        },
-        {
-          "x4_code": "(C,2004BELGOR,,80,2004)",
-          "free_txt": [
-            " Prelim.data for Subent 002."
-          ],
-          "publication_year": "2004"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,FCY/L,2,(2),44,2005)",
+        "free_txt": [
+          " Main reference. Issue 2(125)"
+        ],
+        "publication_year": "2005",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PPN/L,2,92,2005)",
+        "free_txt": [
+          " Engl.translation of FCY/L."
+        ],
+        "publication_year": "2005",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,2004BELGOR,,80,2004)",
+        "free_txt": [
+          " Prelim.data for Subent 002."
+        ],
+        "publication_year": "2004",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((96-CM-248(0,F)ELEM/MASS,IND,FY)/(96-CM-248(0,F)54-XE-138,IND,FY))",
-          "0": {
+      "0": {
+        "x4_code": "((96-CM-248(0,F)ELEM/MASS,IND,FY)/(96-CM-248(0,F)54-XE-138,IND,FY))",
+        "children": [
+          {
             "code": [
               "96-CM-248",
               [
@@ -110,7 +108,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "96-CM-248",
               [
@@ -128,11 +126,121 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": "Xe isotopes yields relative to Xe-138 yield taken as100. Data were multiplied by 0.01 by compiler."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(96-CM-248(0,F)ELEM/MASS,IND,FY)",
+        "children": [
+          {
+            "code": [
+              "96-CM-248",
+              [
+                "0,F"
+              ],
+              "ELEM/MASS,IND,FY"
+            ],
+            "type": null,
+            "target": "96-CM-248",
+            "process": "0,F",
+            "sf49": "ELEM/MASS,IND,FY",
+            "sf4": "ELEM/MASS",
+            "sf5": "IND",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Xe isotopes absolute yields ."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((96-CM-248(G,F)ELEM/MASS,CUM,FY,,BRA)/(96-CM-248(0,F)ELEM/MASS,CUM,FY))",
+        "children": [
+          {
+            "code": [
+              "96-CM-248",
+              [
+                "G,F"
+              ],
+              "ELEM/MASS,CUM,FY,,BRA"
+            ],
+            "type": null,
+            "target": "96-CM-248",
+            "process": "G,F",
+            "sf49": "ELEM/MASS,CUM,FY,,BRA",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
           },
-          "type": "/",
-          "free_text": "Xe isotopes yields relative to Xe-138 yield taken as100. Data were multiplied by 0.01 by compiler."
-        }
-      },
+          {
+            "code": [
+              "96-CM-248",
+              [
+                "0,F"
+              ],
+              "ELEM/MASS,CUM,FY"
+            ],
+            "type": null,
+            "target": "96-CM-248",
+            "process": "0,F",
+            "sf49": "ELEM/MASS,CUM,FY",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": "Cumulative yields ratio of photo-fission to spontaneousfission of Cm-248."
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(96-CM-248(0,F)ELEM,,AP)",
+        "children": [
+          {
+            "code": [
+              "96-CM-248",
+              [
+                "0,F"
+              ],
+              "ELEM,,AP"
+            ],
+            "type": null,
+            "target": "96-CM-248",
+            "process": "0,F",
+            "sf49": "ELEM,,AP",
+            "sf4": "ELEM",
+            "sf5": null,
+            "sf6": "AP",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Average mass of Xe isotopes."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ELEMENT"
@@ -186,32 +294,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(96-CM-248(0,F)ELEM/MASS,IND,FY)",
-          "0": {
-            "code": [
-              "96-CM-248",
-              [
-                "0,F"
-              ],
-              "ELEM/MASS,IND,FY"
-            ],
-            "type": null,
-            "target": "96-CM-248",
-            "process": "0,F",
-            "sf49": "ELEM/MASS,IND,FY",
-            "sf4": "ELEM/MASS",
-            "sf5": "IND",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Xe isotopes absolute yields ."
-        }
-      },
       "common": {
         "heads": [
           "ELEMENT"
@@ -268,51 +350,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((96-CM-248(G,F)ELEM/MASS,CUM,FY,,BRA)/(96-CM-248(0,F)ELEM/MASS,CUM,FY))",
-          "0": {
-            "code": [
-              "96-CM-248",
-              [
-                "G,F"
-              ],
-              "ELEM/MASS,CUM,FY,,BRA"
-            ],
-            "type": null,
-            "target": "96-CM-248",
-            "process": "G,F",
-            "sf49": "ELEM/MASS,CUM,FY,,BRA",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "BRA",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "96-CM-248",
-              [
-                "0,F"
-              ],
-              "ELEM/MASS,CUM,FY"
-            ],
-            "type": null,
-            "target": "96-CM-248",
-            "process": "0,F",
-            "sf49": "ELEM/MASS,CUM,FY",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": "Cumulative yields ratio of photo-fission to spontaneousfission of Cm-248."
-        }
-      },
       "common": {
         "heads": [
           "EN-MAX"
@@ -400,32 +437,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(96-CM-248(0,F)ELEM,,AP)",
-          "0": {
-            "code": [
-              "96-CM-248",
-              [
-                "0,F"
-              ],
-              "ELEM,,AP"
-            ],
-            "type": null,
-            "target": "96-CM-248",
-            "process": "0,F",
-            "sf49": "ELEM,,AP",
-            "sf4": "ELEM",
-            "sf5": null,
-            "sf6": "AP",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Average mass of Xe isotopes."
-        }
-      },
       "common": {
         "heads": [
           "ELEMENT"
@@ -471,8 +482,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -480,20 +491,16 @@
               "resolution for 1133 keV gamma-line of Co-60."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(O,M0813001,Yu.P.Gangrskiy,J,FCY/L,2,(2),44,2005)",
             "free_txt": [
               "Other data of Table 2 for photo-fission."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -506,8 +513,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -515,10 +522,8 @@
               "yields."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": "(A-DIS)",
             "free_txt": [
@@ -527,30 +532,24 @@
               " average mass 137.99 +- 0.19 ; dispersion 1.94 +- 0.19."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not explained."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
               " Xe yields were defined from its gamma-spectra."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,,Yu.P.Gangrskiy+,J,PTE,,(3),67,2002)",
             "free_txt": [
@@ -564,10 +563,8 @@
               "total yield (only isomeric state was observed)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -579,8 +576,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -590,20 +587,16 @@
               "systematics of K.F.Flynn+, A.C.Wahl+ :"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not explained."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,K.F.Flynn+,J,JIN,39,759,1977)",
             "free_txt": []
@@ -612,10 +605,8 @@
             "x4_code": "(R,,A.C.Wahl+,J,AND,39,(1),1,1988)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -634,8 +625,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -643,20 +634,16 @@
               "yields."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not explained."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(MICRT,4ZZZDUB)",
             "free_txt": [
@@ -666,10 +653,8 @@
               " dependence of J.Caldwell+, see REL-REF )."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -689,10 +674,8 @@
               " Yields were defined from its gamma-spectra."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,L0050016,J.T.Caldwell+,J,PR/C,21,1215,1980)",
             "free_txt": []
@@ -704,10 +687,8 @@
               "produced by electrons."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -718,8 +699,8 @@
       }
     },
     "005": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -727,20 +708,16 @@
               " Gaussian fitting of Subent 002 data."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not explained."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

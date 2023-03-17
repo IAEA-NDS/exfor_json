@@ -64,35 +64,30 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,EPJ/A,27,(S1),221,2006)",
-          "free_txt": [],
-          "publication_year": "2006"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,2ITYLNS)",
-          "free_txt": [],
-          "facility_type": "(VDGT)",
-          "institute": "(2ITYLNS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,EPJ/A,27,(S1),221,2006)",
+        "free_txt": [],
+        "publication_year": "2006",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,2ITYLNS)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2ITYLNS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(P,A)3-LI-6,,DA,,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(4-BE-9(P,A)3-LI-6,,DA,,REL)",
+        "children": [
+          {
             "code": [
               "4-BE-9",
               [
@@ -110,11 +105,74 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(4-BE-9(P,A)3-LI-6,,SIG)",
+        "children": [
+          {
+            "code": [
+              "4-BE-9",
+              [
+                "P,A"
+              ],
+              "3-LI-6,,SIG"
+            ],
+            "type": null,
+            "target": "4-BE-9",
+            "process": "P,A",
+            "sf49": "3-LI-6,,SIG",
+            "sf4": "3-LI-6",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " The result represents the indirect p-Be-9 cross sect."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(4-BE-9(P,A)3-LI-6,,SIG,,SFC)",
+        "children": [
+          {
+            "code": [
+              "4-BE-9",
+              [
+                "P,A"
+              ],
+              "3-LI-6,,SIG,,SFC"
+            ],
+            "type": null,
+            "target": "4-BE-9",
+            "process": "P,A",
+            "sf49": "3-LI-6,,SIG,,SFC",
+            "sf4": "3-LI-6",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SFC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "the astrophysical factor from the indirect p-BE-9two-body cross section"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "COS-ERR-D"
@@ -266,32 +324,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(P,A)3-LI-6,,SIG)",
-          "0": {
-            "code": [
-              "4-BE-9",
-              [
-                "P,A"
-              ],
-              "3-LI-6,,SIG"
-            ],
-            "type": null,
-            "target": "4-BE-9",
-            "process": "P,A",
-            "sf49": "3-LI-6,,SIG",
-            "sf4": "3-LI-6",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " The result represents the indirect p-Be-9 cross sect."
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -350,32 +382,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(P,A)3-LI-6,,SIG,,SFC)",
-          "0": {
-            "code": [
-              "4-BE-9",
-              [
-                "P,A"
-              ],
-              "3-LI-6,,SIG,,SFC"
-            ],
-            "type": null,
-            "target": "4-BE-9",
-            "process": "P,A",
-            "sf49": "3-LI-6,,SIG,,SFC",
-            "sf4": "3-LI-6",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "the astrophysical factor from the indirect p-BE-9two-body cross section"
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG"
@@ -446,26 +452,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(TROJA)",
             "free_txt": [
               " Reaction H-2(Be-9,a+Li-6)n was used."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": "(THEO)",
             "free_txt": []
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -475,10 +477,8 @@
               " body H-2(Be-9,a+Li-6)n reaction were presented."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TELES)",
             "free_txt": [
@@ -495,26 +495,20 @@
               " reactions."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2ITYLNS)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -526,8 +520,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -538,10 +532,8 @@
               "The two-body cross section is in arbitrary units."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -549,10 +541,8 @@
               "normalization errors."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,A.J.Sierk+,J,NP/A,210,341,1973)",
             "free_txt": []
@@ -561,10 +551,8 @@
             "x4_code": "(R,,D.Zahnow+,J,ZP/A,359,211,1997)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -575,8 +563,8 @@
       }
     },
     "003": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -584,18 +572,14 @@
               "reaction. See REL-REF."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,A.J.Sierk+,J,NP/A,210,341,1973)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -606,8 +590,8 @@
       }
     },
     "004": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -615,28 +599,22 @@
               "reaction. See REL-REF."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information about source of uncertainty"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(D,,A.J.Sierk+,J,NP/A,210,341,1973)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

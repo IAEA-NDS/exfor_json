@@ -37,44 +37,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JPJ,26,576,1969)",
-          "free_txt": [
-            "  Data from reference."
-          ],
-          "publication_year": "1969"
-        },
-        {
-          "x4_code": "(P,EANDC(J)-10,43,1968)",
-          "free_txt": [],
-          "publication_year": "1968"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2JPNJAE)",
-          "free_txt": [
-            " JRR-2 reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2JPNJAE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JPJ,26,576,1969)",
+        "free_txt": [
+          "  Data from reference."
+        ],
+        "publication_year": "1969",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,EANDC(J)-10,43,1968)",
+        "free_txt": [],
+        "publication_year": "1968",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2JPNJAE)",
+        "free_txt": [
+          " JRR-2 reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2JPNJAE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(61-PM-148-M(N,G)61-PM-149,,SIG,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(61-PM-148-M(N,G)61-PM-149,,SIG,,SPA)",
+        "children": [
+          {
             "code": [
               "61-PM-148-M",
               [
@@ -92,11 +88,46 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(61-PM-148-M(N,INL)61-PM-148-G,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "61-PM-148-M",
+              [
+                "N,INL"
+              ],
+              "61-PM-148-G,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "61-PM-148-M",
+            "process": "N,INL",
+            "sf49": "61-PM-148-G,,SIG,,SPA",
+            "sf4": "61-PM-148-G",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -123,32 +154,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(61-PM-148-M(N,INL)61-PM-148-G,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "61-PM-148-M",
-              [
-                "N,INL"
-              ],
-              "61-PM-148-G,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "61-PM-148-M",
-            "process": "N,INL",
-            "sf49": "61-PM-148-G,,SIG,,SPA",
-            "sf4": "61-PM-148-G",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -172,36 +177,30 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(REAC,2JPNJAE)",
             "free_txt": [
               " JRR-2 reactor"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               " Reactor flux = 3.1e+13 neutrons/sec/cm**2"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(49-IN-0(N,G),,SIG)",
             "free_txt": []
@@ -214,10 +213,8 @@
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -227,10 +224,8 @@
               " Onderzoek, Amsterdam."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -247,16 +242,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(61-PM-148-M,43.D,DG,630.,,DG,1014.)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -269,10 +262,8 @@
               " earth elements is small compared to that from Pm."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,12100006,R.P.Schuman+,J,NSE,12,519,1962)",
             "free_txt": []
@@ -281,18 +272,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
               " Decomposition to 5.4 d and 43 d component"
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -302,10 +291,8 @@
               " time."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(61-PM-148-G,5.4D,DG,1465.)",
             "free_txt": []

@@ -42,40 +42,36 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,54,273,197407)",
-          "free_txt": [],
-          "publication_year": "1974"
-        },
-        {
-          "x4_code": "(R,ANL-NDM-1,197307)",
-          "free_txt": [],
-          "publication_year": "1973"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM)",
-          "free_txt": [
-            " Argonne National Laboratory dynamitron"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,54,273,197407)",
+        "free_txt": [],
+        "publication_year": "1974",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,ANL-NDM-1,197307)",
+        "free_txt": [],
+        "publication_year": "1973",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM)",
+        "free_txt": [
+          " Argonne National Laboratory dynamitron"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(27-CO-59(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(27-CO-59(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "27-CO-59",
               [
@@ -93,11 +89,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(27-CO-59(N,EL)27-CO-59,,DA)",
+        "children": [
+          {
+            "code": [
+              "27-CO-59",
+              [
+                "N,EL"
+              ],
+              "27-CO-59,,DA"
+            ],
+            "type": null,
+            "target": "27-CO-59",
+            "process": "N,EL",
+            "sf49": "27-CO-59,,DA",
+            "sf4": "27-CO-59",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(27-CO-59(N,INL)27-CO-59,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "27-CO-59",
+              [
+                "N,INL"
+              ],
+              "27-CO-59,PAR,SIG"
+            ],
+            "type": null,
+            "target": "27-CO-59",
+            "process": "N,INL",
+            "sf49": "27-CO-59,PAR,SIG",
+            "sf4": "27-CO-59",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -268,32 +327,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(27-CO-59(N,EL)27-CO-59,,DA)",
-          "0": {
-            "code": [
-              "27-CO-59",
-              [
-                "N,EL"
-              ],
-              "27-CO-59,,DA"
-            ],
-            "type": null,
-            "target": "27-CO-59",
-            "process": "N,EL",
-            "sf49": "27-CO-59,,DA",
-            "sf4": "27-CO-59",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2021,32 +2054,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(27-CO-59(N,INL)27-CO-59,PAR,SIG)",
-          "0": {
-            "code": [
-              "27-CO-59",
-              [
-                "N,INL"
-              ],
-              "27-CO-59,PAR,SIG"
-            ],
-            "type": null,
-            "target": "27-CO-59",
-            "process": "N,INL",
-            "sf49": "27-CO-59,PAR,SIG",
-            "sf4": "27-CO-59",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-NRM"
@@ -2966,8 +2973,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2975,40 +2982,32 @@
               " systematic errors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM)",
             "free_txt": [
               " Argonne National Laboratory dynamitron"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
               " Protons on lithium-7"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time-of-flight"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -3021,36 +3020,30 @@
     },
     "002": {},
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "Total error is 5.0 - 13.0 %."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " Second measurement at energy given."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,J.C.HOPKINS+,J,ND/A,9,137,1971)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
             "free_txt": []
@@ -3059,18 +3052,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "Excitation energies uncertain to approximately 10 keV."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(26-FE-56(N,INL)26-FE-56,PAR,SIG)",
             "free_txt": []

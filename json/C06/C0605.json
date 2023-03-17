@@ -32,37 +32,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,357,228,1981)",
-          "free_txt": [],
-          "publication_year": "1981"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,1USAWAU)",
-          "free_txt": [
-            " Tandem accelerator."
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(1USAWAU)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,357,228,1981)",
+        "free_txt": [],
+        "publication_year": "1981",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,1USAWAU)",
+        "free_txt": [
+          " Tandem accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(1USAWAU)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(12-MG-26(P,N)13-AL-26-G,PAR,DA,G,RSD/REL)",
-          "0": {
+      "0": {
+        "x4_code": "(12-MG-26(P,N)13-AL-26-G,PAR,DA,G,RSD/REL)",
+        "children": [
+          {
             "code": [
               "12-MG-26",
               [
@@ -80,11 +75,46 @@
             "sf7": "G",
             "sf8": "RSD/REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Yield relative to yield at 90 degrees."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Yield relative to yield at 90 degrees."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(12-MG-26(P,N)13-AL-26-G,PAR,SIG,G)",
+        "children": [
+          {
+            "code": [
+              "12-MG-26",
+              [
+                "P,N"
+              ],
+              "13-AL-26-G,PAR,SIG,G"
+            ],
+            "type": null,
+            "target": "12-MG-26",
+            "process": "P,N",
+            "sf49": "13-AL-26-G,PAR,SIG,G",
+            "sf4": "13-AL-26-G",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": "G",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Production of 26Al ground state via gamma decay. Does not include direct neutron emission to ground state."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E"
@@ -210,32 +240,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(12-MG-26(P,N)13-AL-26-G,PAR,SIG,G)",
-          "0": {
-            "code": [
-              "12-MG-26",
-              [
-                "P,N"
-              ],
-              "13-AL-26-G,PAR,SIG,G"
-            ],
-            "type": null,
-            "target": "12-MG-26",
-            "process": "P,N",
-            "sf49": "13-AL-26-G,PAR,SIG,G",
-            "sf4": "13-AL-26-G",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": "G",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Production of 26Al ground state via gamma decay. Does not include direct neutron emission to ground state."
-        }
-      },
       "common": {
         "heads": [
           "E"
@@ -372,26 +376,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,1USAWAU)",
             "free_txt": [
               " Tandem accelerator."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -400,10 +400,8 @@
               " keV for 1332-keV line of 60Co."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -412,10 +410,8 @@
               " used at several energies to check cross section."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -426,8 +422,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -438,8 +434,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -452,30 +448,24 @@
               " at higher energies."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "No information."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

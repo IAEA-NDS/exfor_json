@@ -65,44 +65,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "C": [
-        {
-          "x4_code": "(J,ZEP,10,276,1969)",
-          "free_txt": [],
-          "publication_year": "1969"
-        },
-        {
-          "x4_code": "(J,JEL,10,175,1969)",
-          "free_txt": [
-            " Engl.translation of ZEP,10,276,1969"
-          ],
-          "publication_year": "1969"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,4RUSFEI)",
-          "free_txt": [
-            "      2.5 MeV and 4.5 MeV van de Graaff"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(4RUSFEI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ZEP,10,276,1969)",
+        "free_txt": [],
+        "publication_year": "1969",
+        "pointer": "C"
+      },
+      {
+        "x4_code": "(J,JEL,10,175,1969)",
+        "free_txt": [
+          " Engl.translation of ZEP,10,276,1969"
+        ],
+        "publication_year": "1969",
+        "pointer": "C"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,4RUSFEI)",
+        "free_txt": [
+          "      2.5 MeV and 4.5 MeV van de Graaff"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(4RUSFEI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(95-AM-241(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "95-AM-241",
               [
@@ -120,11 +116,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(95-AM-241(N,F),,DA,FF,RSD)",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,F"
+              ],
+              ",,DA,FF,RSD"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,F",
+            "sf49": ",,DA,FF,RSD",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "FF",
+            "sf8": "RSD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " W(0.deg)/W(90.deg.)"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -324,32 +355,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,F),,DA,FF,RSD)",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,F"
-              ],
-              ",,DA,FF,RSD"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,F",
-            "sf49": ",,DA,FF,RSD",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "FF",
-            "sf8": "RSD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " W(0.deg)/W(90.deg.)"
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -532,18 +537,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
               " Glass detectors to register fission fragments."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -554,30 +557,24 @@
               "  * error from room background"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,4RUSFEI)",
             "free_txt": [
               "      2.5 MeV and 4.5 MeV van de Graaff"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
             "free_txt": [
               "      Proton-tritium reaction"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -585,10 +582,8 @@
               "           95-Am-239 and 94-Pu-239"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,40233001,D.L.Shpak+,J,YF,9,940,1969)",
             "free_txt": [
@@ -605,8 +600,8 @@
       }
     },
     "002": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -617,18 +612,32 @@
               "The same case in Table of INDC(CCP)-8,6"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "1": [
+        ],
+        "status": [
           {
-            "x4_code": "(,Hart,C,68DUBNA,,(UK-10),1968)",
-            "free_txt": []
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table of Rep.YFI-8,p.4,1969 ."
+            ]
           }
         ]
       },
-      "monitor": {
-        "2": [
+      "2": {
+        "monit-ref": [
+          {
+            "x4_code": "(40012001,E.F.Fomushkin+,J,SNP,10,529,1970)",
+            "free_txt": [
+              " Engl.translation of:"
+            ]
+          },
+          {
+            "x4_code": "(40012010,E.F.Fomushkin+,J,YF,10,917,1969)",
+            "free_txt": [
+              " Issue 5"
+            ]
+          }
+        ],
+        "monitor": [
           {
             "x4_code": "(95-AM-241(N,F),,SIG)",
             "free_txt": [
@@ -638,20 +647,29 @@
           }
         ]
       },
-      "status": {
-        "0": [
+      "1": {
+        "monit-ref": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(,Hart,C,68DUBNA,,(UK-10),1968)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(94-PU-239(N,F),,SIG)",
             "free_txt": [
-              " Table of Rep.YFI-8,p.4,1969 ."
+              " To obtain relative variation of Am-241 fission cross",
+              "section the authors used the data of Pu-239 fiss. cross",
+              "section of Hart from UK-USSR Seminar, Nucl.Data, Dubna,",
+              "Paper UK-10,1968."
             ]
           }
         ]
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -663,10 +681,8 @@
               "values of DATA."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
@@ -689,10 +705,8 @@
               " Statistical error."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

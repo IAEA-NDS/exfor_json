@@ -67,54 +67,52 @@
         "free_txt": " + Morehead State Univ., Morehead, KY"
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,63,014004,200101)",
-          "free_txt": [],
-          "publication_year": "2001"
-        },
-        {
-          "x4_code": "(J,PRL,83,2711,199910)",
-          "free_txt": [],
-          "publication_year": "1999"
-        },
-        {
-          "x4_code": "(T,RAICHLE,1997)",
-          "free_txt": [
-            " Transverse measurements."
-          ],
-          "publication_year": "1997"
-        },
-        {
-          "x4_code": "(T,WALSTON,1998)",
-          "free_txt": [
-            " Longitudinal measurements."
-          ],
-          "publication_year": "1998"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,1USATNL)",
-          "free_txt": [],
-          "facility_type": "(VDGT)",
-          "institute": "(1USATNL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,63,014004,200101)",
+        "free_txt": [],
+        "publication_year": "2001",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PRL,83,2711,199910)",
+        "free_txt": [],
+        "publication_year": "1999",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(T,RAICHLE,1997)",
+        "free_txt": [
+          " Transverse measurements."
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(T,WALSTON,1998)",
+        "free_txt": [
+          " Longitudinal measurements."
+        ],
+        "publication_year": "1998",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,1USATNL)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(1USATNL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,TOT),LON,SIG,,DSP)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-1(N,TOT),LON,SIG,,DSP)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -132,11 +130,46 @@
             "sf7": null,
             "sf8": "DSP",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(N,TOT),TRS,SIG,,DSP)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,TOT"
+              ],
+              ",TRS,SIG,,DSP"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,TOT",
+            "sf49": ",TRS,SIG,,DSP",
+            "sf4": null,
+            "sf5": "TRS",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "DSP",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -188,32 +221,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,TOT),TRS,SIG,,DSP)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,TOT"
-              ],
-              ",TRS,SIG,,DSP"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,TOT",
-            "sf49": ",TRS,SIG,,DSP",
-            "sf4": null,
-            "sf5": "TRS",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "DSP",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -254,18 +261,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Corrected for non-linear detector efficiencies."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -274,10 +279,8 @@
               " scintillator."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -285,18 +288,14 @@
               " and systematic uncertainties added in quadrature."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,1USATNL)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(ATOMI)",
             "free_txt": [
@@ -304,10 +303,8 @@
               " polarization transfer reactions."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(PSD)",
             "free_txt": [
@@ -316,10 +313,8 @@
               " polarization reversed every 4 hr."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -327,10 +322,8 @@
               " neutron transmission."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -339,10 +332,8 @@
               "Target polarization typically 65%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -359,8 +350,8 @@
       }
     },
     "002": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [

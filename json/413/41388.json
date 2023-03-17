@@ -129,50 +129,46 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "((S,ISINN-5,182,1997)=(S,JINR-E3-97-213,182,1997))",
-          "free_txt": [
-            "  Data for U-235 resonance parameters are given"
-          ],
-          "publication_year": "1997"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            "   IBR-30 reactor in booster mode, power",
-            "                 level 10 kW."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        },
-        {
-          "x4_code": "(LINAC,4ZZZDUB)",
-          "free_txt": [
-            "   Linear electron accelerator LUE-40",
-            "    With Electron Beam Frequency 100 Hz, Electron Beam",
-            "    Energy 40 MeV, electron current 0.4 Amperes ."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((S,ISINN-5,182,1997)=(S,JINR-E3-97-213,182,1997))",
+        "free_txt": [
+          "  Data for U-235 resonance parameters are given"
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          "   IBR-30 reactor in booster mode, power",
+          "                 level 10 kW."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      },
+      {
+        "x4_code": "(LINAC,4ZZZDUB)",
+        "free_txt": [
+          "   Linear electron accelerator LUE-40",
+          "    With Electron Beam Frequency 100 Hz, Electron Beam",
+          "    Energy 40 MeV, electron current 0.4 Amperes ."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(92-U-235(N,EL),,WID)",
-          "0": {
+      "1": {
+        "x4_code": "(92-U-235(N,EL),,WID)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -190,13 +186,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(92-U-235(N,F),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(92-U-235(N,F),,WID)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -214,13 +212,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "(92-U-235(N,0),,J)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "(92-U-235(N,0),,J)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -238,11 +238,18 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MOMENTUM L"
@@ -364,8 +371,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -422,10 +429,8 @@
               " 0.    95.     0.70E-4 0.21E-4"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
@@ -443,10 +448,8 @@
               "  with argon + 5% methane at pressure 2.4 Atm."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
@@ -462,10 +465,8 @@
               "    Energy 40 MeV, electron current 0.4 Amperes ."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
@@ -481,10 +482,8 @@
               "   tube to the experimental installation ."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -494,30 +493,24 @@
               "100 sec."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "  Flight path is 13 m ."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               " No information ."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,V.L.Aksenov+,R,JINR-E3-92-110,1992)",
             "free_txt": [
@@ -529,18 +522,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               " Errors are not given in the article"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

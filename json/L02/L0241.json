@@ -29,61 +29,60 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,81GRENOB,62,630,1981)",
-          "free_txt": [
-            " Original results."
-          ],
-          "publication_year": "1981"
-        },
-        {
-          "x4_code": "(J,PR/C,36,911,1987)",
-          "free_txt": [
-            " Refined Al cross sections.",
-            "#doi:10.1103/PhysRevC.36.911"
-          ],
-          "publication_year": "1987"
-        },
-        {
-          "x4_code": "(J,PC,38,(3),33EA6,1982)",
-          "free_txt": [
-            " 208Pb preliminary results."
-          ],
-          "publication_year": "1982"
-        },
-        {
-          "x4_code": "(J,PC,37,(3),24CE3,1981)",
-          "free_txt": [
-            " Al,Si,Pb preliminary results."
-          ],
-          "publication_year": "1981"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1CANOTC)",
-          "free_txt": [
-            " NRC linac."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1CANOTC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,81GRENOB,62,630,1981)",
+        "free_txt": [
+          " Original results."
+        ],
+        "publication_year": "1981",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PR/C,36,911,1987)",
+        "free_txt": [
+          " Refined Al cross sections.",
+          "#doi:10.1103/PhysRevC.36.911"
+        ],
+        "publication_year": "1987",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.36.911"
+      },
+      {
+        "x4_code": "(J,PC,38,(3),33EA6,1982)",
+        "free_txt": [
+          " 208Pb preliminary results."
+        ],
+        "publication_year": "1982",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PC,37,(3),24CE3,1981)",
+        "free_txt": [
+          " Al,Si,Pb preliminary results."
+        ],
+        "publication_year": "1981",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1CANOTC)",
+        "free_txt": [
+          " NRC linac."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1CANOTC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(G,TOT),,INT)",
-          "0": {
+      "0": {
+        "x4_code": "(13-AL-27(G,TOT),,INT)",
+        "children": [
+          {
             "code": [
               "13-AL-27",
               [
@@ -101,11 +100,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Integrated photonuclearcross section."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Integrated photonuclearcross section."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(13-AL-27(G,TOT),,SIG,,RAW)",
+        "children": [
+          {
+            "code": [
+              "13-AL-27",
+              [
+                "G,TOT"
+              ],
+              ",,SIG,,RAW"
+            ],
+            "type": null,
+            "target": "13-AL-27",
+            "process": "G,TOT",
+            "sf49": ",,SIG,,RAW",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "RAW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Total absorptioncross section  (atomic and nuclear)."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(82-PB-208(G,TOT),,SIG,,RAW)",
+        "children": [
+          {
+            "code": [
+              "82-PB-208",
+              [
+                "G,TOT"
+              ],
+              ",,SIG,,RAW"
+            ],
+            "type": null,
+            "target": "82-PB-208",
+            "process": "G,TOT",
+            "sf49": ",,SIG,,RAW",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "RAW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Total absorptioncross section (atomic and nuclear)."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-S",
@@ -174,32 +236,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(G,TOT),,SIG,,RAW)",
-          "0": {
-            "code": [
-              "13-AL-27",
-              [
-                "G,TOT"
-              ],
-              ",,SIG,,RAW"
-            ],
-            "type": null,
-            "target": "13-AL-27",
-            "process": "G,TOT",
-            "sf49": ",,SIG,,RAW",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "RAW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Total absorptioncross section  (atomic and nuclear)."
-        }
-      },
       "common": {
         "heads": [
           "ERR-S",
@@ -911,32 +947,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-208(G,TOT),,SIG,,RAW)",
-          "0": {
-            "code": [
-              "82-PB-208",
-              [
-                "G,TOT"
-              ],
-              ",,SIG,,RAW"
-            ],
-            "type": null,
-            "target": "82-PB-208",
-            "process": "G,TOT",
-            "sf49": ",,SIG,,RAW",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "RAW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Total absorptioncross section (atomic and nuclear)."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1550,18 +1560,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(LINAC,1CANOTC)",
             "free_txt": [
               " NRC linac."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": [
@@ -1569,10 +1577,8 @@
               "linac."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,TRN)",
             "free_txt": [
@@ -1584,10 +1590,8 @@
               "2H(gamma,n) reaction."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,M0420001,N.K.Sherman+,J,PR/C,21,(6),2328,1980)",
             "free_txt": [
@@ -1598,8 +1602,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1642,10 +1646,8 @@
               " Normalization."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,L0241003)",
             "free_txt": []
@@ -1660,18 +1662,16 @@
       }
     },
     "003": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Atomic cross section not subtracted"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1709,10 +1709,8 @@
               " Normalization."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1723,18 +1721,16 @@
       }
     },
     "004": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Atomic cross section not subtracted"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1742,10 +1738,8 @@
               "statistics."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

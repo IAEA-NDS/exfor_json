@@ -58,44 +58,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NST,13,(7),343,197607)",
-          "free_txt": [],
-          "publication_year": "1976"
-        },
-        {
-          "x4_code": "((P,NEANDC(J)-44L,57,1976)=(P,INDC(JAP)-30L,57,1976))",
-          "free_txt": [
-            " abstract."
-          ],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2JPNNAG)",
-          "free_txt": [
-            " 2-MeV Van de Graaff of Nagoya University."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2JPNNAG)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NST,13,(7),343,197607)",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((P,NEANDC(J)-44L,57,1976)=(P,INDC(JAP)-30L,57,1976))",
+        "free_txt": [
+          " abstract."
+        ],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2JPNNAG)",
+        "free_txt": [
+          " 2-MeV Van de Graaff of Nagoya University."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2JPNNAG)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(40-ZR-0(N,X)40-ZR-90-M,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(40-ZR-0(N,X)40-ZR-90-M,,SIG)",
+        "children": [
+          {
             "code": [
               "40-ZR-0",
               [
@@ -113,11 +109,96 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(82-PB-207(N,INL)82-PB-207-M,,SIG,,(A))",
+        "children": [
+          {
+            "code": [
+              "82-PB-207",
+              [
+                "N,INL"
+              ],
+              "82-PB-207-M,,SIG,,",
+              [
+                "A"
+              ]
+            ],
+            "type": null,
+            "target": "82-PB-207",
+            "process": "N,INL",
+            "sf49": "82-PB-207-M,,SIG,,,(A)",
+            "sf4": "82-PB-207-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "(A)"
+          }
+        ],
+        "type": null,
+        "free_text": " formation cross section of 1.63 MeV metastable                                    state of Pb-207."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((82-PB-0(N,X)82-PB-207-M,,SIG)/(40-ZR-0(N,X)40-ZR-90-M,,SIG))",
+        "children": [
+          {
+            "code": [
+              "82-PB-0",
+              [
+                "N,X"
+              ],
+              "82-PB-207-M,,SIG"
+            ],
+            "type": null,
+            "target": "82-PB-0",
+            "process": "N,X",
+            "sf49": "82-PB-207-M,,SIG",
+            "sf4": "82-PB-207-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "40-ZR-0",
+              [
+                "N,X"
+              ],
+              "40-ZR-90-M,,SIG"
+            ],
+            "type": null,
+            "target": "40-ZR-0",
+            "process": "N,X",
+            "sf49": "40-ZR-90-M,,SIG",
+            "sf4": "40-ZR-90-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MONIT",
@@ -161,35 +242,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-207(N,INL)82-PB-207-M,,SIG,,(A))",
-          "0": {
-            "code": [
-              "82-PB-207",
-              [
-                "N,INL"
-              ],
-              "82-PB-207-M,,SIG,,",
-              [
-                "A"
-              ]
-            ],
-            "type": null,
-            "target": "82-PB-207",
-            "process": "N,INL",
-            "sf49": "82-PB-207-M,,SIG,,",
-            "sf4": "82-PB-207-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " formation cross section of 1.63 MeV metastable                                    state of Pb-207."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -228,51 +280,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((82-PB-0(N,X)82-PB-207-M,,SIG)/(40-ZR-0(N,X)40-ZR-90-M,,SIG))",
-          "0": {
-            "code": [
-              "82-PB-0",
-              [
-                "N,X"
-              ],
-              "82-PB-207-M,,SIG"
-            ],
-            "type": null,
-            "target": "82-PB-0",
-            "process": "N,X",
-            "sf49": "82-PB-207-M,,SIG",
-            "sf4": "82-PB-207-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "40-ZR-0",
-              [
-                "N,X"
-              ],
-              "40-ZR-90-M,,SIG"
-            ],
-            "type": null,
-            "target": "40-ZR-0",
-            "process": "N,X",
-            "sf49": "40-ZR-90-M,,SIG",
-            "sf4": "40-ZR-90-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -298,8 +305,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -310,10 +317,8 @@
               "                         J.Nucl.Sci.Techn.,13(1976)343."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -325,10 +330,8 @@
               " due to short irradiation time."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -337,10 +340,8 @@
               " workers."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI )",
             "free_txt": [
@@ -351,10 +352,8 @@
               ".Resolution 1.90 keV at 1.33 MeV."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -362,20 +361,16 @@
               "                                  no more details."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2JPNNAG)",
             "free_txt": [
               " 2-MeV Van de Graaff of Nagoya University."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T  )",
             "free_txt": [
@@ -391,10 +386,8 @@
               " target to yield neutrons by the d-d reaction."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,STTA,MOMIX)",
             "free_txt": [
@@ -405,10 +398,8 @@
               " in pp. 2 and 3 of J.Nucl.Sci.Techn.,13(1976)343."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -422,10 +413,8 @@
               " 28 mm3 of the mixture."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -436,32 +425,26 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(40-ZR-90-M,0.80SEC,DG,2320.)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(82-PB-207-M,0.8SEC,DG,1060.)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(10361003,G.N.Salaita+,J,JIN,35,2139,1973)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(82-PB-0(N,X)82-PB-207-M,,SIG)",
             "free_txt": []
@@ -470,8 +453,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(82-PB-207-M,0.80SEC)",
             "free_txt": [
@@ -479,18 +462,14 @@
               " state of Pb-207."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(11873002,R.T.Wagner+,J,PR,130,1926,1963)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(40-ZR-90(N,INL)40-ZR-90-M,,SIG,,(A))",
             "free_txt": [
@@ -503,8 +482,8 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(40-ZR-90-M,0.80SEC)",
             "free_txt": []

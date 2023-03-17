@@ -44,44 +44,40 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,11,65,1961)",
-          "free_txt": [],
-          "publication_year": "1961"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,1USABNL)",
-          "free_txt": [],
-          "facility_type": "(REAC)",
-          "institute": "(1USABNL)"
-        },
-        {
-          "x4_code": "(SPECC,1USABNL)",
-          "free_txt": [
-            " Columbia Univ. neutron crystal",
-            " spectrometer at BNL"
-          ],
-          "facility_type": "(SPECC)",
-          "institute": "(1USABNL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,11,65,1961)",
+        "free_txt": [],
+        "publication_year": "1961",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USABNL)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USABNL)"
+      },
+      {
+        "x4_code": "(SPECC,1USABNL)",
+        "free_txt": [
+          " Columbia Univ. neutron crystal",
+          " spectrometer at BNL"
+        ],
+        "pointer": "0",
+        "facility_type": "(SPECC)",
+        "institute": "(1USABNL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(94-PU-239(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -99,11 +95,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(94-PU-239(N,ABS),,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,ABS"
+              ],
+              ",,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,ABS",
+            "sf49": ",,SIG,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -178,32 +209,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,ABS),,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,ABS"
-              ],
-              ",,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,ABS",
-            "sf49": ",,SIG,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -257,8 +262,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(REAC,1USABNL)",
             "free_txt": []
@@ -270,10 +275,8 @@
               " spectrometer at BNL"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TRN)",
             "free_txt": []
@@ -282,8 +285,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -291,10 +294,8 @@
               "systematic errors should be negligible."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -314,10 +315,8 @@
             "x4_code": "(94-PU-241,ENR=0.0003)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(SCSRS)",
             "free_txt": []
@@ -326,18 +325,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "From total, assuming scattering = 11b."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,12507002)",
             "free_txt": []

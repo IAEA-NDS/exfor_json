@@ -42,37 +42,35 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,MSU-INP-1993-8/300,1993)",
-          "free_txt": [],
-          "publication_year": "1993"
-        },
-        {
-          "x4_code": "((J,YK,,(1),52,1993)=(R,INDC(CCP)-371,52,1993))",
-          "free_txt": [],
-          "publication_year": "1993"
-        },
-        {
-          "x4_code": "(R,INDC(CCP)-393,1,1995)",
-          "free_txt": [
-            " English translation of YK,,(1),52,1993."
-          ],
-          "publication_year": "1995"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,MSU-INP-1993-8/300,1993)",
+        "free_txt": [],
+        "publication_year": "1993",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((J,YK,,(1),52,1993)=(R,INDC(CCP)-371,52,1993))",
+        "free_txt": [],
+        "publication_year": "1993",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(CCP)-393,1,1995)",
+        "free_txt": [
+          " English translation of YK,,(1),52,1993."
+        ],
+        "publication_year": "1995",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(G,N)14-SI-27,,SIG,,,EVAL)",
-          "0": {
+      "0": {
+        "x4_code": "(14-SI-28(G,N)14-SI-27,,SIG,,,EVAL)",
+        "children": [
+          {
             "code": [
               "14-SI-28",
               [
@@ -90,11 +88,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": "EVAL"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((59-PR-141(G,N)59-PR-140,,SIG,,,EVAL)+(59-PR-141(G,N+P)58-CE-139,,SIG,,,EVAL))",
+        "children": [
+          {
+            "code": [
+              "59-PR-141",
+              [
+                "G,N"
+              ],
+              "59-PR-140,,SIG,,,EVAL"
+            ],
+            "type": null,
+            "target": "59-PR-141",
+            "process": "G,N",
+            "sf49": "59-PR-140,,SIG,,,EVAL",
+            "sf4": "59-PR-140",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "EVAL"
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "59-PR-141",
+              [
+                "G,N+P"
+              ],
+              "58-CE-139,,SIG,,,EVAL"
+            ],
+            "type": null,
+            "target": "59-PR-141",
+            "process": "G,N+P",
+            "sf49": "58-CE-139,,SIG,,,EVAL",
+            "sf4": "58-CE-139",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "EVAL"
+          }
+        ],
+        "type": "+",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -682,51 +734,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((59-PR-141(G,N)59-PR-140,,SIG,,,EVAL)+(59-PR-141(G,N+P)58-CE-139,,SIG,,,EVAL))",
-          "0": {
-            "code": [
-              "59-PR-141",
-              [
-                "G,N"
-              ],
-              "59-PR-140,,SIG,,,EVAL"
-            ],
-            "type": null,
-            "target": "59-PR-141",
-            "process": "G,N",
-            "sf49": "59-PR-140,,SIG,,,EVAL",
-            "sf4": "59-PR-140",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EVAL"
-          },
-          "1": {
-            "code": [
-              "59-PR-141",
-              [
-                "G,N+P"
-              ],
-              "58-CE-139,,SIG,,,EVAL"
-            ],
-            "type": null,
-            "target": "59-PR-141",
-            "process": "G,N+P",
-            "sf49": "58-CE-139,,SIG,,,EVAL",
-            "sf4": "58-CE-139",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EVAL"
-          },
-          "type": "+",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1604,8 +1611,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(REDUC)",
             "free_txt": [
@@ -1637,10 +1644,8 @@
               " method."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1656,20 +1661,16 @@
               " normalization procedures."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Mean root-square errors are given."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
@@ -1678,10 +1679,8 @@
             "x4_code": "(QMPH,ARAD)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1692,8 +1691,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1704,10 +1703,8 @@
               "Data were published in MSU INP preprint-93-8/300,1993."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(E,L0039018,A.Veyssiere+,J,NP/A,227,513,1974)",
             "free_txt": []
@@ -1724,10 +1721,8 @@
             "x4_code": "(E,M0397002,B.I.Goryachev+,J,YF,2,1168,1968)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1738,8 +1733,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1750,10 +1745,8 @@
               "Data were published in MSU INP preprint-93-8/300,1993."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(E,L0009005,R.L.Bramblett+,J,PR,148,1198,1966)",
             "free_txt": []
@@ -1778,10 +1771,8 @@
             "x4_code": "(E,M0398002,T.K.Deague+,J,NP/A,191,305,1972)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

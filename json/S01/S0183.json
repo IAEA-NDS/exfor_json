@@ -1,12 +1,18 @@
 {
   "entry": "S0183",
-  "last_updated": "2019-12-16",
-  "number_of_revisions": "1",
+  "last_updated": "2023-01-18",
+  "number_of_revisions": "2",
   "histories": [
     {
       "x4_code": "(20190228C)",
       "free_txt": [
         " Jimin Wang (CNDC)"
+      ]
+    },
+    {
+      "x4_code": "(20220901U)",
+      "free_txt": [
+        " Jimin WANG: J,CNPR,34,403,2017 added"
       ]
     }
   ],
@@ -66,41 +72,47 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,93,055804,2016)",
-          "free_txt": [
-            "#doi:10.1103/PhysRevC.93.055804"
-          ],
-          "publication_year": "2016"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CCW,3CPRIMP)",
-          "free_txt": [
-            " 320 kV platform for multidisciplinary",
-            "research with highly charged ions. The current of",
-            "proton beam was about 3-16 uA."
-          ],
-          "facility_type": "(CCW)",
-          "institute": "(3CPRIMP)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,93,055804,2016)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.93.055804"
+        ],
+        "publication_year": "2016",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.93.055804"
+      },
+      {
+        "x4_code": "(J,CNPR,34,403,2017)",
+        "free_txt": [
+          " Same fig of total S-factor",
+          "#doi:10.11804/NuclPhysRev.34.03.403"
+        ],
+        "publication_year": "2017",
+        "pointer": "0",
+        "doi": "10.11804/NuclPhysRev.34.03.403"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CCW,3CPRIMP)",
+        "free_txt": [
+          " 320 kV platform for multidisciplinary",
+          "research with highly charged ions. The current of",
+          "proton beam was about 3-16 uA."
+        ],
+        "pointer": "0",
+        "facility_type": "(CCW)",
+        "institute": "(3CPRIMP)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-11(P,G)6-C-12,PAR,SIG,,SFC)",
-          "0": {
+      "0": {
+        "x4_code": "(5-B-11(P,G)6-C-12,PAR,SIG,,SFC)",
+        "children": [
+          {
             "code": [
               "5-B-11",
               [
@@ -118,11 +130,46 @@
             "sf7": null,
             "sf8": "SFC",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(5-B-11(P,G)6-C-12,,SIG,,SFC,DERIV)",
+        "children": [
+          {
+            "code": [
+              "5-B-11",
+              [
+                "P,G"
+              ],
+              "6-C-12,,SIG,,SFC,DERIV"
+            ],
+            "type": null,
+            "target": "5-B-11",
+            "process": "P,G",
+            "sf49": "6-C-12,,SIG,,SFC,DERIV",
+            "sf4": "6-C-12",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SFC",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL",
@@ -154,32 +201,6 @@
       "data": null
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-11(P,G)6-C-12,,SIG,,SFC,DERIV)",
-          "0": {
-            "code": [
-              "5-B-11",
-              [
-                "P,G"
-              ],
-              "6-C-12,,SIG,,SFC,DERIV"
-            ],
-            "type": null,
-            "target": "5-B-11",
-            "process": "P,G",
-            "sf49": "6-C-12,,SIG,,SFC,DERIV",
-            "sf4": "6-C-12",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -287,8 +308,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -313,10 +334,8 @@
               "cosmic-ray background."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CCW,3CPRIMP)",
             "free_txt": [
@@ -325,18 +344,14 @@
               "proton beam was about 3-16 uA."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(BCINT)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(5-B-11,NAT=0.80)",
             "free_txt": [
@@ -346,10 +361,8 @@
               "was directly water-cooled."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -360,8 +373,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -369,10 +382,8 @@
               " This data set should not be compiled."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S,0.5,4.)",
             "free_txt": [
@@ -397,10 +408,8 @@
               " Target thickness ~10%"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G)",
             "free_txt": [
@@ -411,8 +420,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -423,10 +432,8 @@
               " F.Ajzenberg-Selove (1990)."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -458,10 +465,8 @@
               " Target thickness ~10%"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,F.E.Cecil+,J,NP/A,539,75,1992)",
             "free_txt": []
@@ -470,10 +475,8 @@
             "x4_code": "(R,,F.Ajzenberg-Selove,J,NP/A,506,1,1990)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,S0183002)",
             "free_txt": [

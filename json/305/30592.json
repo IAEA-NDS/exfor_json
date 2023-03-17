@@ -42,46 +42,42 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AKE,39,55,1981)",
-          "free_txt": [
-            " Graph given"
-          ],
-          "publication_year": "1981"
-        },
-        {
-          "x4_code": "(W,KROPFF,19810728)",
-          "free_txt": [
-            " Numerical values"
-          ],
-          "publication_year": "1981"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,3ARGCAB)",
-          "free_txt": [
-            " 25 MeV Linear Electron Accelerator"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(3ARGCAB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AKE,39,55,1981)",
+        "free_txt": [
+          " Graph given"
+        ],
+        "publication_year": "1981",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,KROPFF,19810728)",
+        "free_txt": [
+          " Numerical values"
+        ],
+        "publication_year": "1981",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,3ARGCAB)",
+        "free_txt": [
+          " 25 MeV Linear Electron Accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(3ARGCAB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(50-SN-0(N,TOT),,SIG/TMP)",
-          "0": {
+      "0": {
+        "x4_code": "(50-SN-0(N,TOT),,SIG/TMP)",
+        "children": [
+          {
             "code": [
               "50-SN-0",
               [
@@ -99,11 +95,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(50-SN-0(N,G),,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "50-SN-0",
+              [
+                "N,G"
+              ],
+              ",,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "50-SN-0",
+            "process": "N,G",
+            "sf49": ",,SIG,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "TEMP",
@@ -1172,32 +1203,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(50-SN-0(N,G),,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "50-SN-0",
-              [
-                "N,G"
-              ],
-              ",,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "50-SN-0",
-            "process": "N,G",
-            "sf49": ",,SIG,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1226,8 +1231,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1236,58 +1241,46 @@
               "Scattering-in was estimated negligible."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
               " Bank of seven He-3 detectors"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,3ARGCAB)",
             "free_txt": [
               " 25 MeV Linear Electron Accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,TRN)",
             "free_txt": [
               ". Path = 17 m"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "Absolute, transmission experiment."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1295,10 +1288,8 @@
               "Thicknesses 29.5 and 27.1 g/cm2, respectively."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1315,8 +1306,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1334,18 +1325,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No further information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,30592002)",
             "free_txt": []

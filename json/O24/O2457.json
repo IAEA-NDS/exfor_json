@@ -254,39 +254,35 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PL/B,797,134900,2019)",
-          "free_txt": [
-            "#doi:10.1016/j.physletb.2019.134900"
-          ],
-          "publication_year": "2019"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CCW,2ITYLGS)",
-          "free_txt": [
-            " 400 kV LUNA accelerator."
-          ],
-          "facility_type": "(CCW)",
-          "institute": "(2ITYLGS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PL/B,797,134900,2019)",
+        "free_txt": [
+          "#doi:10.1016/j.physletb.2019.134900"
+        ],
+        "publication_year": "2019",
+        "pointer": "0",
+        "doi": "10.1016/j.physletb.2019.134900"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CCW,2ITYLGS)",
+        "free_txt": [
+          " 400 kV LUNA accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(CCW)",
+        "institute": "(2ITYLGS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-18(P,G)9-F-19,,PY,,TT/RAW)",
-          "0": {
+      "0": {
+        "x4_code": "(8-O-18(P,G)9-F-19,,PY,,TT/RAW)",
+        "children": [
+          {
             "code": [
               "8-O-18",
               [
@@ -304,11 +300,74 @@
             "sf7": null,
             "sf8": "TT/RAW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(8-O-18(P,G),,WID/STR)",
+        "children": [
+          {
+            "code": [
+              "8-O-18",
+              [
+                "P,G"
+              ],
+              ",,WID/STR"
+            ],
+            "type": null,
+            "target": "8-O-18",
+            "process": "P,G",
+            "sf49": ",,WID/STR",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID/STR",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(8-O-18(P,G)9-F-19,DI,SIG,,SFC)",
+        "children": [
+          {
+            "code": [
+              "8-O-18",
+              [
+                "P,G"
+              ],
+              "9-F-19,DI,SIG,,SFC"
+            ],
+            "type": null,
+            "target": "8-O-18",
+            "process": "P,G",
+            "sf49": "9-F-19,DI,SIG,,SFC",
+            "sf4": "9-F-19",
+            "sf5": "DI",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SFC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -410,32 +469,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-18(P,G),,WID/STR)",
-          "0": {
-            "code": [
-              "8-O-18",
-              [
-                "P,G"
-              ],
-              ",,WID/STR"
-            ],
-            "type": null,
-            "target": "8-O-18",
-            "process": "P,G",
-            "sf49": ",,WID/STR",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID/STR",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -488,32 +521,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-18(P,G)9-F-19,DI,SIG,,SFC)",
-          "0": {
-            "code": [
-              "8-O-18",
-              [
-                "P,G"
-              ],
-              "9-F-19,DI,SIG,,SFC"
-            ],
-            "type": null,
-            "target": "8-O-18",
-            "process": "P,G",
-            "sf49": "9-F-19,DI,SIG,,SFC",
-            "sf4": "9-F-19",
-            "sf5": "DI",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -562,8 +569,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BGO,D4PI)",
             "free_txt": [
@@ -575,28 +582,22 @@
               "resonant decay."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CCW,2ITYLGS)",
             "free_txt": [
               " 400 kV LUNA accelerator."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(BCINT)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(8-O-18,ENR=0.99)",
             "free_txt": [
@@ -612,8 +613,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -625,20 +626,16 @@
               "On average, the detector efficiency is around 55%."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainty."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -649,8 +646,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -659,10 +656,8 @@
               "constant direct component by least-squares fitting."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -700,10 +695,8 @@
               " literature stopping power                 - 5%"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -726,8 +719,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -736,10 +729,8 @@
               "constant direct component by least-squares fitting."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -778,10 +769,8 @@
               " literature stopping power                 - 5%"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -31,54 +31,51 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,EANDC(OR)-87,1,1967)",
-          "free_txt": [
-            " Short report. No data."
-          ],
-          "publication_year": "1967"
-        },
-        {
-          "x4_code": "(W,DRITSA,197106)",
-          "free_txt": [
-            "       Data via IAEA, Vienna."
-          ],
-          "publication_year": "1971"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2GRCATH)",
-          "free_txt": [
-            "    Democritus research reactor."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2GRCATH)"
-        },
-        {
-          "x4_code": "(CHOPF,2GRCATH)",
-          "free_txt": [
-            "    Fast chopper."
-          ],
-          "facility_type": "(CHOPF)",
-          "institute": "(2GRCATH)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,EANDC(OR)-87,1,1967)",
+        "free_txt": [
+          " Short report. No data."
+        ],
+        "publication_year": "1967",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,DRITSA,197106)",
+        "free_txt": [
+          "       Data via IAEA, Vienna."
+        ],
+        "publication_year": "1971",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2GRCATH)",
+        "free_txt": [
+          "    Democritus research reactor."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2GRCATH)"
+      },
+      {
+        "x4_code": "(CHOPF,2GRCATH)",
+        "free_txt": [
+          "    Fast chopper."
+        ],
+        "pointer": "0",
+        "facility_type": "(CHOPF)",
+        "institute": "(2GRCATH)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-D2O(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-D2O(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-D2O",
               [
@@ -96,11 +93,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-D2O(N,TOT),,SIG,,TMP)",
+        "children": [
+          {
+            "code": [
+              "1-H-D2O",
+              [
+                "N,TOT"
+              ],
+              ",,SIG,,TMP"
+            ],
+            "type": null,
+            "target": "1-H-D2O",
+            "process": "N,TOT",
+            "sf49": ",,SIG,,TMP",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "TMP",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -1600,32 +1632,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-D2O(N,TOT),,SIG,,TMP)",
-          "0": {
-            "code": [
-              "1-H-D2O",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,TMP"
-            ],
-            "type": null,
-            "target": "1-H-D2O",
-            "process": "N,TOT",
-            "sf49": ",,SIG,,TMP",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "TMP",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "TEMP"
@@ -3139,8 +3145,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3149,20 +3155,16 @@
               "been calculated."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Corrected on dead time"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(BF3)",
             "free_txt": [
@@ -3171,10 +3173,8 @@
               "horizontal neutron beam."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -3193,10 +3193,8 @@
               "error."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2GRCATH)",
             "free_txt": [
@@ -3209,30 +3207,24 @@
               "    Fast chopper."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               "    Reactor."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "    Time of flight."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,22613001,M.Dritsa+,R,EANDC(OR)-63,1967)",
             "free_txt": [
@@ -3247,10 +3239,8 @@
               "                 of experimental conditions."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3270,10 +3260,8 @@
               "error of about 0.02 mm."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -3285,8 +3273,8 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [

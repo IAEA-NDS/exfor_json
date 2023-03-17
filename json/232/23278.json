@@ -483,44 +483,40 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NDS,120,208,2014)",
-          "free_txt": [],
-          "publication_year": "2014"
-        },
-        {
-          "x4_code": "(T,WEISS,20140811)",
-          "free_txt": [
-            " PhD, TU Wien (CERN-THESIS-2014-101)"
-          ],
-          "publication_year": "2014"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,2ZZZCER)",
-          "free_txt": [
-            " n-TOF facility"
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(2ZZZCER)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NDS,120,208,2014)",
+        "free_txt": [],
+        "publication_year": "2014",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(T,WEISS,20140811)",
+        "free_txt": [
+          " PhD, TU Wien (CERN-THESIS-2014-101)"
+        ],
+        "publication_year": "2014",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,2ZZZCER)",
+        "free_txt": [
+          " n-TOF facility"
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(2ZZZCER)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(28-NI-59(N,A)26-FE-56,,RYL,,AV)",
-          "0": {
+      "1": {
+        "x4_code": "(28-NI-59(N,A)26-FE-56,,RYL,,AV)",
+        "children": [
+          {
             "code": [
               "28-NI-59",
               [
@@ -538,13 +534,15 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(28-NI-59(N,A)26-FE-56,,SIG,,AV)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(28-NI-59(N,A)26-FE-56,,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "28-NI-59",
               [
@@ -562,11 +560,46 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(28-NI-59(N,A)26-FE-56,,RI,,LIM)",
+        "children": [
+          {
+            "code": [
+              "28-NI-59",
+              [
+                "N,A"
+              ],
+              "26-FE-56,,RI,,LIM"
+            ],
+            "type": null,
+            "target": "28-NI-59",
+            "process": "N,A",
+            "sf49": "26-FE-56,,RI,,LIM",
+            "sf4": "26-FE-56",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": "LIM",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-2",
@@ -776,32 +809,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-59(N,A)26-FE-56,,RI,,LIM)",
-          "0": {
-            "code": [
-              "28-NI-59",
-              [
-                "N,A"
-              ],
-              "26-FE-56,,RI,,LIM"
-            ],
-            "type": null,
-            "target": "28-NI-59",
-            "process": "N,A",
-            "sf49": "26-FE-56,,RI,,LIM",
-            "sf4": "26-FE-56",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": "LIM",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -835,8 +842,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -848,10 +855,8 @@
               " and dead time (low count rate)."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SOLST)",
             "free_txt": [
@@ -861,20 +866,16 @@
               " and perpendicular to the beam direction."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,2ZZZCER)",
             "free_txt": [
               " n-TOF facility"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": [
@@ -884,20 +885,16 @@
               " Beam size at sample position is 20 mm (diam.)."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Flight path of 183 m (horizontal)"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,C.Guerrero+,J,EPJ/A,49,27,2013)",
             "free_txt": [
@@ -910,10 +907,8 @@
               " Description of the diamond mosaic detector"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(28-NI-59,ENR=0.95)",
             "free_txt": [
@@ -925,10 +920,8 @@
               " ORELA in 1975 (J.A.Harvery), and 1999 (P.Koehler)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -939,8 +932,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-1,,,U)",
             "free_txt": [
@@ -983,28 +976,22 @@
               " Total systematic uncertainty       (4.2%)"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,,3,ENDF/B-VII.0,,2006)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
             "free_txt": [
               " Both for shape and absolute normalization"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1017,18 +1004,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on the source of uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

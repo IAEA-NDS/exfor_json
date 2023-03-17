@@ -75,51 +75,48 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,160,200,2008)",
-          "free_txt": [
-            "  Main reference"
-          ],
-          "publication_year": "2008"
-        },
-        {
-          "x4_code": "(C,2007NICE,1,487,200704)",
-          "free_txt": [
-            " Rept #113",
-            "   Intern. Conf. on Nuclear Data for Science and",
-            "   Technology 2007. Preliminary results."
-          ],
-          "publication_year": "2007",
-          "doi": "10.1051/ndata:07113"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2ZZZGEL)",
-          "free_txt": [
-            " GELINA neutron facility of the IRMM",
-            "   in Geel, Belgium. Pulsed beam, repetition rate",
-            "   800 Hz, pulse temporal width 1 ns."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,160,200,2008)",
+        "free_txt": [
+          "  Main reference"
+        ],
+        "publication_year": "2008",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,2007NICE,1,487,200704)",
+        "free_txt": [
+          " Rept #113",
+          "#doi:10.1051/ndata:07113",
+          "   Intern. Conf. on Nuclear Data for Science and",
+          "   Technology 2007. Preliminary results."
+        ],
+        "publication_year": "2007",
+        "pointer": "0",
+        "doi": "10.1051/ndata:07113"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2ZZZGEL)",
+        "free_txt": [
+          " GELINA neutron facility of the IRMM",
+          "   in Geel, Belgium. Pulsed beam, repetition rate",
+          "   800 Hz, pulse temporal width 1 ns."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-236(N,F),,SIG,,,DERIV)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-236(N,F),,SIG,,,DERIV)",
+        "children": [
+          {
             "code": [
               "92-U-236",
               [
@@ -137,11 +134,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": " Thermal c/s derived                        from resonance parameter"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Thermal c/s derived                        from resonance parameter"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-236(N,F),,RI,,LIM,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-236",
+              [
+                "N,F"
+              ],
+              ",,RI,,LIM,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-236",
+            "process": "N,F",
+            "sf49": ",,RI,,LIM,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": "LIM",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": " Resonance integral derived from energy dependent cross section"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-236(N,F),,WID,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-236",
+              [
+                "N,F"
+              ],
+              ",,WID,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-236",
+            "process": "N,F",
+            "sf49": ",,WID,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": "  Fission width of the  5.45 eV resonance."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -168,32 +228,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-236(N,F),,RI,,LIM,DERIV)",
-          "0": {
-            "code": [
-              "92-U-236",
-              [
-                "N,F"
-              ],
-              ",,RI,,LIM,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-236",
-            "process": "N,F",
-            "sf49": ",,RI,,LIM,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": "LIM",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": " Resonance integral derived from energy dependent cross section"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -225,32 +259,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-236(N,F),,WID,,,DERIV)",
-          "0": {
-            "code": [
-              "92-U-236",
-              [
-                "N,F"
-              ],
-              ",,WID,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-236",
-            "process": "N,F",
-            "sf49": ",,WID,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": "  Fission width of the  5.45 eV resonance."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -279,8 +287,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
@@ -288,20 +296,16 @@
               "   was used with ultra-pure methane as detector gas"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Not specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
@@ -310,10 +314,8 @@
               "   800 Hz, pulse temporal width 1 ns."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -321,10 +323,8 @@
               " remove overlap neutrons"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -345,18 +345,14 @@
               "  Simultaneous irradiation of sample/monitor"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(5-B-10(N,A)3-LI-7,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -376,26 +372,22 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".Breit-Wigner extrapolation from 5.45 eV resonance"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,22682002,C.WAGEMANS+,J,NSE,136,415,2000)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -410,18 +402,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".Breit-Wigner extrapolation from 5.45 eV resonance"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -436,26 +426,22 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(RFN)",
             "free_txt": [
               "  R-matrix analysis"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,13642004,W.PARKER+,J,PR/C,49,672,1994)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

@@ -32,49 +32,46 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,ZFK-130,143,196712)",
-          "free_txt": [],
-          "publication_year": "1967"
-        },
-        {
-          "x4_code": "(J,NP/A,98,305,196705)",
-          "free_txt": [
-            "Partial results,Table3 superseded"
-          ],
-          "publication_year": "1967"
-        },
-        {
-          "x4_code": "(C,64PARIS,2,936,196407)",
-          "free_txt": [
-            "Partial results"
-          ],
-          "publication_year": "1964"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CCW)",
-          "free_txt": [
-            "    200 keV Cockcroft Walton"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,ZFK-130,143,196712)",
+        "free_txt": [],
+        "publication_year": "1967",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,98,305,196705)",
+        "free_txt": [
+          "Partial results,Table3 superseded"
+        ],
+        "publication_year": "1967",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,64PARIS,2,936,196407)",
+        "free_txt": [
+          "Partial results"
+        ],
+        "publication_year": "1964",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CCW)",
+        "free_txt": [
+          "    200 keV Cockcroft Walton"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-6(N,T)2-HE-4,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(3-LI-6(N,T)2-HE-4,,DA)",
+        "children": [
+          {
             "code": [
               "3-LI-6",
               [
@@ -92,11 +89,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(3-LI-6(N,T)2-HE-4,,DA)",
+        "children": [
+          {
+            "code": [
+              "3-LI-6",
+              [
+                "N,T"
+              ],
+              "2-HE-4,,DA"
+            ],
+            "type": null,
+            "target": "3-LI-6",
+            "process": "N,T",
+            "sf49": "2-HE-4,,DA",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
+        "children": [
+          {
+            "code": [
+              "3-LI-6",
+              [
+                "N,T"
+              ],
+              "2-HE-4,,SIG"
+            ],
+            "type": null,
+            "target": "3-LI-6",
+            "process": "N,T",
+            "sf49": "2-HE-4,,SIG",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -189,32 +249,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-6(N,T)2-HE-4,,DA)",
-          "0": {
-            "code": [
-              "3-LI-6",
-              [
-                "N,T"
-              ],
-              "2-HE-4,,DA"
-            ],
-            "type": null,
-            "target": "3-LI-6",
-            "process": "N,T",
-            "sf49": "2-HE-4,,DA",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -301,32 +335,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
-          "0": {
-            "code": [
-              "3-LI-6",
-              [
-                "N,T"
-              ],
-              "2-HE-4,,SIG"
-            ],
-            "type": null,
-            "target": "3-LI-6",
-            "process": "N,T",
-            "sf49": "2-HE-4,,SIG",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -358,8 +366,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,PROPC,SIBAR)",
             "free_txt": [
@@ -368,40 +376,32 @@
               "and a surface barrier silicon detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Quoted errors are statistical errors only."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CCW)",
             "free_txt": [
               "    200 keV Cockcroft Walton"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
               "    Deuteron-tritium"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": [
@@ -409,10 +409,8 @@
               "      two-dimensional analyzer"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
             "free_txt": [
@@ -421,10 +419,8 @@
               "by Nakamura in J.Phys.Soc.Japan 15, 1359 (1960)"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(T)",
             "free_txt": [
@@ -437,20 +433,16 @@
               "      Alpha particles"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "3.61 mg/cm2 thick  6LiF layer on a gold backing"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -463,8 +455,8 @@
     "002": {},
     "003": {},
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -473,10 +465,8 @@
               "Good agreement with  Stehn et al.,BNL-325,1964"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,30193002)",
             "free_txt": [

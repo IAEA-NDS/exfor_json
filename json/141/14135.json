@@ -45,37 +45,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,23,45,1965)",
-          "free_txt": [],
-          "publication_year": "1965"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USARPI)",
-          "free_txt": [
-            " Electron Linac at RPI University"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USARPI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,23,45,1965)",
+        "free_txt": [],
+        "publication_year": "1965",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USARPI)",
+        "free_txt": [
+          " Electron Linac at RPI University"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USARPI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,INT)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,INT)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -93,11 +88,95 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Integral of fission cross section"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(((92-U-235(N,G)92-U-236,,SIG,,AV)/(92-U-235(N,F),,SIG,,AV))=(92-U-235(N,ABS),,ALF,,AV))",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,G"
+              ],
+              "92-U-236,,SIG,,AV"
+            ],
+            "type": "/",
+            "target": "92-U-235",
+            "process": "N,G",
+            "sf49": "92-U-236,,SIG,,AV",
+            "sf4": "92-U-236",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
           },
-          "type": null,
-          "free_text": " Integral of fission cross section"
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG,,AV"
+            ],
+            "type": "/",
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          },
+          {
+            "code": "92-U-235",
+            "type": [
+              "N,ABS"
+            ],
+            "target": "9",
+            "process": "2",
+            "sf49": "-,U,-,2,3,5",
+            "sf4": "-",
+            "sf5": "U",
+            "sf6": "-",
+            "sf7": "2",
+            "sf8": "3",
+            "sf9": "5"
+          },
+          {
+            "code": ",,ALF,,AV",
+            "type": [
+              "N,ABS"
+            ],
+            "target": ",",
+            "process": ",",
+            "sf49": "A,L,F,,,,,A,V",
+            "sf4": "A",
+            "sf5": "L",
+            "sf6": "F",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -184,81 +263,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(((92-U-235(N,G)92-U-236,,SIG,,AV)/(92-U-235(N,F),,SIG,,AV))=(92-U-235(N,ABS),,ALF,,AV))",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,G"
-              ],
-              "92-U-236,,SIG,,AV"
-            ],
-            "type": "/",
-            "target": "92-U-235",
-            "process": "N,G",
-            "sf49": "92-U-236,,SIG,,AV",
-            "sf4": "92-U-236",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG,,AV"
-            ],
-            "type": "/",
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "2": {
-            "code": "92-U-235",
-            "type": [
-              "N,ABS"
-            ],
-            "target": "9",
-            "process": "2",
-            "sf49": "-",
-            "sf4": "-",
-            "sf5": null,
-            "sf6": null,
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "3": {
-            "code": ",,ALF,,AV",
-            "type": [
-              "N,ABS"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "A",
-            "sf4": "A",
-            "sf5": null,
-            "sf6": null,
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -364,8 +368,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": []
@@ -377,20 +381,16 @@
               " scintillator"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USARPI)",
             "free_txt": [
               " Electron Linac at RPI University"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -398,20 +398,16 @@
               " tungsten."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " 25 meter station"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -424,18 +420,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -446,18 +440,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

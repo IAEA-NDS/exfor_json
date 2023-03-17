@@ -63,44 +63,40 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(P,INR-1871/I/PL/A,13,1980)",
-          "free_txt": [],
-          "publication_year": "1980"
-        },
-        {
-          "x4_code": "(C,80KIEV,1,245,1980)",
-          "free_txt": [
-            " Graphs only. Summary"
-          ],
-          "publication_year": "1980"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,3POLIPJ)",
-          "free_txt": [
-            " 3 MeV Van de Graaff accelerator."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(3POLIPJ)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(P,INR-1871/I/PL/A,13,1980)",
+        "free_txt": [],
+        "publication_year": "1980",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,80KIEV,1,245,1980)",
+        "free_txt": [
+          " Graphs only. Summary"
+        ],
+        "publication_year": "1980",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,3POLIPJ)",
+        "free_txt": [
+          " 3 MeV Van de Graaff accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(3POLIPJ)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((14-SI-28(N,P)13-AL-28,,SIG)+(14-SI-29(N,X)13-AL-28,,SIG,,RAB))",
-          "0": {
+      "0": {
+        "x4_code": "((14-SI-28(N,P)13-AL-28,,SIG)+(14-SI-29(N,X)13-AL-28,,SIG,,RAB))",
+        "children": [
+          {
             "code": [
               "14-SI-28",
               [
@@ -119,7 +115,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "14-SI-29",
               [
@@ -137,11 +133,149 @@
             "sf7": null,
             "sf8": "RAB",
             "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": " Data given is sigma(Si-28) + C*sigma(Si-29) where  C=0.05 is relative isotopic abundance"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((14-SI-29(N,P)13-AL-29,,SIG)+(14-SI-30(N,X)13-AL-29,,SIG,,RAB))",
+        "children": [
+          {
+            "code": [
+              "14-SI-29",
+              [
+                "N,P"
+              ],
+              "13-AL-29,,SIG"
+            ],
+            "type": null,
+            "target": "14-SI-29",
+            "process": "N,P",
+            "sf49": "13-AL-29,,SIG",
+            "sf4": "13-AL-29",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "+",
-          "free_text": " Data given is sigma(Si-28) + C*sigma(Si-29) where  C=0.05 is relative isotopic abundance"
-        }
-      },
+          {
+            "code": [
+              "14-SI-30",
+              [
+                "N,X"
+              ],
+              "13-AL-29,,SIG,,RAB"
+            ],
+            "type": null,
+            "target": "14-SI-30",
+            "process": "N,X",
+            "sf49": "13-AL-29,,SIG,,RAB",
+            "sf4": "13-AL-29",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "RAB",
+            "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": " Data given is sigma(Si-29) + C*sigma(Si-30) where   C=0.67 is relative isotopic abundance."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(14-SI-30(N,A)12-MG-27,,SIG)",
+        "children": [
+          {
+            "code": [
+              "14-SI-30",
+              [
+                "N,A"
+              ],
+              "12-MG-27,,SIG"
+            ],
+            "type": null,
+            "target": "14-SI-30",
+            "process": "N,A",
+            "sf49": "12-MG-27,,SIG",
+            "sf4": "12-MG-27",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(30-ZN-68(N,A)28-NI-65,,SIG)",
+        "children": [
+          {
+            "code": [
+              "30-ZN-68",
+              [
+                "N,A"
+              ],
+              "28-NI-65,,SIG"
+            ],
+            "type": null,
+            "target": "30-ZN-68",
+            "process": "N,A",
+            "sf49": "28-NI-65,,SIG",
+            "sf4": "28-NI-65",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(30-ZN-70(N,2N)30-ZN-69-M,,SIG)",
+        "children": [
+          {
+            "code": [
+              "30-ZN-70",
+              [
+                "N,2N"
+              ],
+              "30-ZN-69-M,,SIG"
+            ],
+            "type": null,
+            "target": "30-ZN-70",
+            "process": "N,2N",
+            "sf49": "30-ZN-69-M,,SIG",
+            "sf4": "30-ZN-69-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -209,51 +343,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((14-SI-29(N,P)13-AL-29,,SIG)+(14-SI-30(N,X)13-AL-29,,SIG,,RAB))",
-          "0": {
-            "code": [
-              "14-SI-29",
-              [
-                "N,P"
-              ],
-              "13-AL-29,,SIG"
-            ],
-            "type": null,
-            "target": "14-SI-29",
-            "process": "N,P",
-            "sf49": "13-AL-29,,SIG",
-            "sf4": "13-AL-29",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "14-SI-30",
-              [
-                "N,X"
-              ],
-              "13-AL-29,,SIG,,RAB"
-            ],
-            "type": null,
-            "target": "14-SI-30",
-            "process": "N,X",
-            "sf49": "13-AL-29,,SIG,,RAB",
-            "sf4": "13-AL-29",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "RAB",
-            "sf9": null
-          },
-          "type": "+",
-          "free_text": " Data given is sigma(Si-29) + C*sigma(Si-30) where   C=0.67 is relative isotopic abundance."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -321,32 +410,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-30(N,A)12-MG-27,,SIG)",
-          "0": {
-            "code": [
-              "14-SI-30",
-              [
-                "N,A"
-              ],
-              "12-MG-27,,SIG"
-            ],
-            "type": null,
-            "target": "14-SI-30",
-            "process": "N,A",
-            "sf49": "12-MG-27,,SIG",
-            "sf4": "12-MG-27",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -414,32 +477,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(30-ZN-68(N,A)28-NI-65,,SIG)",
-          "0": {
-            "code": [
-              "30-ZN-68",
-              [
-                "N,A"
-              ],
-              "28-NI-65,,SIG"
-            ],
-            "type": null,
-            "target": "30-ZN-68",
-            "process": "N,A",
-            "sf49": "28-NI-65,,SIG",
-            "sf4": "28-NI-65",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -507,32 +544,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "(30-ZN-70(N,2N)30-ZN-69-M,,SIG)",
-          "0": {
-            "code": [
-              "30-ZN-70",
-              [
-                "N,2N"
-              ],
-              "30-ZN-69-M,,SIG"
-            ],
-            "type": null,
-            "target": "30-ZN-70",
-            "process": "N,2N",
-            "sf49": "30-ZN-69-M,,SIG",
-            "sf4": "30-ZN-69-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -602,36 +613,30 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " The errors include the statistical errors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,3POLIPJ)",
             "free_txt": [
               " 3 MeV Van de Graaff accelerator."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
@@ -641,52 +646,40 @@
               "the sample by means of the Monte Carlo code 'LOS'."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(11701001,D.C.Santry+,J,CJP,42,1030,1964)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(26-FE-56(N,P)25-MN-56,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(DG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Natural, high purity samples."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": []
@@ -703,8 +696,8 @@
     "002": {},
     "003": {},
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [

@@ -54,44 +54,93 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,734,295,2004)",
-          "free_txt": [],
-          "publication_year": "2004"
-        },
-        {
-          "x4_code": "(J,NP/A,701,29,2002)",
-          "free_txt": [
-            " Cross sectiions obtained for the",
-            "He-8+He-4 elastic scattering were reported in D0218002."
-          ],
-          "publication_year": "2002"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,4ZZZDUB)",
-          "free_txt": [
-            "the U-400M cyclotron of FLNR"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(4ZZZDUB)"
-        },
-        {
-          "x4_code": "(PRJFS,4ZZZDUB)",
-          "free_txt": [
-            " The selection of He-8 and He-6 ions was",
-            "realized by double achromatic magnetic separator",
-            "ACCULINNA"
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,NP/A,734,295,2004)",
+        "free_txt": [],
+        "publication_year": "2004",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,701,29,2002)",
+        "free_txt": [
+          " Cross sectiions obtained for the",
+          "He-8+He-4 elastic scattering were reported in D0218002."
+        ],
+        "publication_year": "2002",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,4ZZZDUB)",
+        "free_txt": [
+          "the U-400M cyclotron of FLNR"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(4ZZZDUB)"
+      },
+      {
+        "x4_code": "(PRJFS,4ZZZDUB)",
+        "free_txt": [
+          " The selection of He-8 and He-6 ions was",
+          "realized by double achromatic magnetic separator",
+          "ACCULINNA"
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "((1-H-1(2-HE-8,T)2-HE-6,PAR,DA)=(2-HE-8(P,T)2-HE-6,PAR,DA,RSD))",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "2-HE-8,T"
+              ],
+              "2-HE-6,PAR,DA"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "2-HE-8,T",
+            "sf49": "2-HE-6,PAR,DA",
+            "sf4": "2-HE-6",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "2-HE-8",
+              [
+                "P,T"
+              ],
+              "2-HE-6,PAR,DA,RSD"
+            ],
+            "type": null,
+            "target": "2-HE-8",
+            "process": "P,T",
+            "sf49": "2-HE-6,PAR,DA,RSD",
+            "sf4": "2-HE-6",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "RSD",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -111,51 +160,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(2-HE-8,T)2-HE-6,PAR,DA)=(2-HE-8(P,T)2-HE-6,PAR,DA,RSD))",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "2-HE-8,T"
-              ],
-              "2-HE-6,PAR,DA"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "2-HE-8,T",
-            "sf49": "2-HE-6,PAR,DA",
-            "sf4": "2-HE-6",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "2-HE-8",
-              [
-                "P,T"
-              ],
-              "2-HE-6,PAR,DA,RSD"
-            ],
-            "type": null,
-            "target": "2-HE-8",
-            "process": "P,T",
-            "sf49": "2-HE-6,PAR,DA,RSD",
-            "sf4": "2-HE-6",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "RSD",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG-ERR-D",
@@ -346,8 +350,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(MAGSP)",
             "free_txt": [
@@ -366,10 +370,8 @@
             "x4_code": "(MWPC)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,4ZZZDUB)",
             "free_txt": [
@@ -384,10 +386,8 @@
               "ACCULINNA"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -396,10 +396,8 @@
               "350 mg/cm**2 by a 35 MeV/A primary beam of B-11."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
@@ -408,10 +406,8 @@
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -419,10 +415,8 @@
               "25-30 K, were used."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -433,16 +427,14 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL,2-HE-6)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -461,10 +453,8 @@
               ".Digitizing error of DATA"
             ]
           }
-        ]
-      },
-      "level-prop": {
-        "0": [
+        ],
+        "level-prop": [
           {
             "x4_code": "(2-HE-6,E-LVL=0.000,SPIN=0.,PARITY=+1.)",
             "free_txt": []

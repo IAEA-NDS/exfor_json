@@ -86,41 +86,37 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,104,014310,2021)",
-          "free_txt": [
-            "#doi:10.1103/PhysRevC.104.014310"
-          ],
-          "publication_year": "2021"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,3CPRIMP)",
-          "free_txt": [
-            " The External Target Facility (ETF) of",
-            "the Heavy Ion Research Facility in Lanzhou-Cooler",
-            "Storage Ring(HIRFL-CSR)"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(3CPRIMP)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,104,014310,2021)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.104.014310"
+        ],
+        "publication_year": "2021",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.104.014310"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,3CPRIMP)",
+        "free_txt": [
+          " The External Target Facility (ETF) of",
+          "the Heavy Ion Research Facility in Lanzhou-Cooler",
+          "Storage Ring(HIRFL-CSR)"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(3CPRIMP)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-0(6-C-16,X)6-C-15,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-0(6-C-16,X)6-C-15,,SIG)",
+        "children": [
+          {
             "code": [
               "6-C-0",
               [
@@ -138,11 +134,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-0(6-C-15,X)6-C-14,,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-0",
+              [
+                "6-C-15,X"
+              ],
+              "6-C-14,,SIG"
+            ],
+            "type": null,
+            "target": "6-C-0",
+            "process": "6-C-15,X",
+            "sf49": "6-C-14,,SIG",
+            "sf4": "6-C-14",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-0(6-C-14,X)6-C-13,,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-0",
+              [
+                "6-C-14,X"
+              ],
+              "6-C-13,,SIG"
+            ],
+            "type": null,
+            "target": "6-C-0",
+            "process": "6-C-14,X",
+            "sf49": "6-C-13,,SIG",
+            "sf4": "6-C-13",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -169,32 +228,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-0(6-C-15,X)6-C-14,,SIG)",
-          "0": {
-            "code": [
-              "6-C-0",
-              [
-                "6-C-15,X"
-              ],
-              "6-C-14,,SIG"
-            ],
-            "type": null,
-            "target": "6-C-0",
-            "process": "6-C-15,X",
-            "sf49": "6-C-14,,SIG",
-            "sf4": "6-C-14",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -221,32 +254,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-0(6-C-14,X)6-C-13,,SIG)",
-          "0": {
-            "code": [
-              "6-C-0",
-              [
-                "6-C-14,X"
-              ],
-              "6-C-13,,SIG"
-            ],
-            "type": null,
-            "target": "6-C-0",
-            "process": "6-C-14,X",
-            "sf49": "6-C-13,,SIG",
-            "sf4": "6-C-13",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -275,8 +282,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(IOCH,SCIN)",
             "free_txt": [
@@ -295,20 +302,16 @@
               "constituting the multi-wire drift chamber (MWDC) Array."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " All the errors are statistical."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,3CPRIMP)",
             "free_txt": [
@@ -317,10 +320,8 @@
               "Storage Ring(HIRFL-CSR)"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -328,10 +329,8 @@
               "by HIRFL-CSR and fragmented on a 15-mm-thick Be target."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE,TOF)",
             "free_txt": [
@@ -344,20 +343,16 @@
               "target."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "900 mg/cm2 carbon target"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -369,8 +364,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -383,8 +378,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -397,8 +392,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [

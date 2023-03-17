@@ -26,45 +26,41 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,65SALZBURG,1,415,1965)",
-          "free_txt": [],
-          "publication_year": "1965"
-        },
-        {
-          "x4_code": "(J,RCA,3,118,1964)",
-          "free_txt": [
-            " First publication."
-          ],
-          "publication_year": "1964"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2SWTWUR)",
-          "free_txt": [
-            " \"Saphir\" swimming pool reactor.",
-            "Power was constant within +-5%."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2SWTWUR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,65SALZBURG,1,415,1965)",
+        "free_txt": [],
+        "publication_year": "1965",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,RCA,3,118,1964)",
+        "free_txt": [
+          " First publication."
+        ],
+        "publication_year": "1964",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2SWTWUR)",
+        "free_txt": [
+          " \"Saphir\" swimming pool reactor.",
+          "Power was constant within +-5%."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2SWTWUR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "((90-TH-232(N,F)ELEM/MASS,CUM,FY,,FIS)/(90-TH-232(N,F)42-MO-99,CUM,FY,,FIS))",
-          "0": {
+      "1": {
+        "x4_code": "((90-TH-232(N,F)ELEM/MASS,CUM,FY,,FIS)/(90-TH-232(N,F)42-MO-99,CUM,FY,,FIS))",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -83,7 +79,7 @@
             "sf8": "FIS",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "90-TH-232",
               [
@@ -101,13 +97,15 @@
             "sf7": null,
             "sf8": "FIS",
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(90-TH-232(N,F)ELEM/MASS,CUM,FY,,FIS)",
-          "0": {
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(90-TH-232(N,F)ELEM/MASS,CUM,FY,,FIS)",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -125,11 +123,18 @@
             "sf7": null,
             "sf8": "FIS",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-MIN",
@@ -244,18 +249,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "For coincidence loss."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -273,10 +276,8 @@
               "Ru-106, Ce-144. Calibrated by standards."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2SWTWUR)",
             "free_txt": [
@@ -284,18 +285,14 @@
               "Power was constant within +-5%."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -304,10 +301,8 @@
               " the sample and irradiation 6 - 20 hr."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP)",
             "free_txt": [
@@ -315,10 +310,8 @@
               "gravimetric methods."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -333,34 +326,52 @@
       }
     },
     "002": {
-      "err-analys": {
-        "2": [
+      "1": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " One standard deviation, including",
+              "weighting of the foils,",
+              "aliquoting,",
+              "determination of the chemical yields,",
+              "counting,",
+              "internal monitoring of neutron flux."
+            ]
+          },
+          {
+            "x4_code": "(ERR-1,,5.)",
+            "free_txt": [
+              " Includes counters calibration, decay",
+              "schemes and half-lives. Monitor error is not included."
+            ]
+          }
+        ]
+      },
+      "2": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not explained, given only in RCA,3,118,1964."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
-          {
-            "x4_code": "(30947001,R.H.Iyer+,J,JIN,25,465,1963)",
-            "free_txt": []
-          }
-        ]
-      },
-      "monitor": {
-        "2": [
+        ],
+        "monitor": [
           {
             "x4_code": "(90-TH-232(N,F)42-MO-99,CUM,FY,,FIS)",
             "free_txt": []
           }
         ]
       },
-      "rel-ref": {
-        "0": [
+      "0": {
+        "monit-ref": [
+          {
+            "x4_code": "(30947001,R.H.Iyer+,J,JIN,25,465,1963)",
+            "free_txt": []
+          }
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,30947003,R.H.Iyer+,J,JIN,25,465,1963)",
             "free_txt": [
@@ -386,10 +397,8 @@
               " and TID 18776"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

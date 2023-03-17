@@ -23,37 +23,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JIN,31,1873,1969)",
-          "free_txt": [],
-          "publication_year": "1969"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2GERMNZ)",
-          "free_txt": [
-            " TRIGA reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2GERMNZ)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JIN,31,1873,1969)",
+        "free_txt": [],
+        "publication_year": "1969",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2GERMNZ)",
+        "free_txt": [
+          " TRIGA reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2GERMNZ)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(92-U-235(N,F)53-I-135,CUM,FY,,FRC)",
-          "0": {
+      "1": {
+        "x4_code": "(92-U-235(N,F)53-I-135,CUM,FY,,FRC)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -71,13 +66,15 @@
             "sf7": null,
             "sf8": "FRC",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(92-U-235(N,F)53-I-135,IND,FY,,FRC)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(92-U-235(N,F)53-I-135,IND,FY,,FRC)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -95,11 +92,50 @@
             "sf7": null,
             "sf8": "FRC",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)MASS,(SEC),ZP,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "MASS,",
+              [
+                "SEC"
+              ],
+              ",ZP,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "MASS,,(SEC),,ZP,,,DERIV",
+            "sf4": "MASS",
+            "sf5": null,
+            "sf6": "(SEC)",
+            "sf7": null,
+            "sf8": "ZP",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -136,36 +172,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)MASS,(SEC),ZP,,,DERIV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "MASS,",
-              [
-                "SEC"
-              ],
-              ",ZP,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "MASS,",
-            "sf4": "MASS",
-            "sf5": null,
-            "sf6": null,
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "MASS"
@@ -206,8 +212,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -215,38 +221,30 @@
               "analyzer - to measure gamma-activity of iodine"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2GERMNZ)",
             "free_txt": [
               " TRIGA reactor"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Thermal neutrons. Integrated flux 10**14 n/cm2 ."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP)",
             "free_txt": [
@@ -255,10 +253,8 @@
               "Chemical yields > 80%."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -270,8 +266,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(52-TE-135,18.SEC)",
             "free_txt": [
@@ -282,10 +278,8 @@
             "x4_code": "(53-I-135,6.75HR)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -293,10 +287,20 @@
               "corresponds to confidence level 90%."
             ]
           }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table on page 1880 of",
+              "Journal of Inorganic and Nuclear Chemistry,",
+              "v.31,p.1873,1969"
+            ]
+          }
         ]
       },
-      "rel-ref": {
-        "2": [
+      "2": {
+        "rel-ref": [
           {
             "x4_code": "(D,,F.H.Froehner,J,ZP,170,62,1962)",
             "free_txt": [
@@ -313,23 +317,11 @@
             ]
           }
         ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              " Table on page 1880 of",
-              "Journal of Inorganic and Nuclear Chemistry,",
-              "v.31,p.1873,1969"
-            ]
-          }
-        ]
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -338,10 +330,8 @@
               "of chain yield, average of three measurements)."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -349,10 +339,8 @@
               "article"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,A.C.Wahl+,J,PR,126,1112,1962)",
             "free_txt": []
@@ -363,10 +351,8 @@
               "Prediction by Wahl's method - 52.38+-0.30"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

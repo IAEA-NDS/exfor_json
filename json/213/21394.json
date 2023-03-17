@@ -41,39 +41,34 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CJP,43,2156,196512)",
-          "free_txt": [
-            " Graph."
-          ],
-          "publication_year": "1965"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2UK HAR)",
-          "free_txt": [
-            "  40 MeV linear accelerator."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2UK HAR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CJP,43,2156,196512)",
+        "free_txt": [
+          " Graph."
+        ],
+        "publication_year": "1965",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2UK HAR)",
+        "free_txt": [
+          "  40 MeV linear accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2UK HAR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(50-SN-124(N,G)50-SN-125,PAR,DA,,RSD)",
-          "0": {
+      "0": {
+        "x4_code": "(50-SN-124(N,G)50-SN-125,PAR,DA,,RSD)",
+        "children": [
+          {
             "code": [
               "50-SN-124",
               [
@@ -91,11 +86,72 @@
             "sf7": null,
             "sf8": "RSD",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Prompt gamma angular distribution relative to intensity at 90 deg."
-        }
+          }
+        ],
+        "type": null,
+        "free_text": " Prompt gamma angular distribution relative to intensity at 90 deg."
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(50-SN-124(N,0),,L)",
+        "children": [
+          {
+            "code": [
+              "50-SN-124",
+              [
+                "N,0"
+              ],
+              ",,L"
+            ],
+            "type": null,
+            "target": "50-SN-124",
+            "process": "N,0",
+            "sf49": ",,L",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "L",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Angular momentum."
       },
+      "2": {
+        "x4_code": "(50-SN-124(N,0),,J)",
+        "children": [
+          {
+            "code": [
+              "50-SN-124",
+              [
+                "N,0"
+              ],
+              ",,J"
+            ],
+            "type": null,
+            "target": "50-SN-124",
+            "process": "N,0",
+            "sf49": ",,J",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "J",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Spin."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN",
@@ -150,56 +206,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(50-SN-124(N,0),,L)",
-          "0": {
-            "code": [
-              "50-SN-124",
-              [
-                "N,0"
-              ],
-              ",,L"
-            ],
-            "type": null,
-            "target": "50-SN-124",
-            "process": "N,0",
-            "sf49": ",,L",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "L",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Angular momentum."
-        },
-        "2": {
-          "x4_code": "(50-SN-124(N,0),,J)",
-          "0": {
-            "code": [
-              "50-SN-124",
-              [
-                "N,0"
-              ],
-              ",,J"
-            ],
-            "type": null,
-            "target": "50-SN-124",
-            "process": "N,0",
-            "sf49": ",,J",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "J",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Spin."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -228,48 +234,40 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
               " NaI(Tl) crystal, 5 by 5 inch."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2UK HAR)",
             "free_txt": [
               "  40 MeV linear accelerator."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
               " Electron beam on linac target."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time of flight for neutron energy selection."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -280,18 +278,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Nothing said about source of uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(NDD)",
             "free_txt": [
@@ -302,8 +298,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -311,10 +307,8 @@
               " capture gammas."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

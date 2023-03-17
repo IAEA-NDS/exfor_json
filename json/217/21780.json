@@ -47,37 +47,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,CEA-R-2775,196504)",
-          "free_txt": [],
-          "publication_year": "1965"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2FR SAC)",
-          "free_txt": [
-            " Saclay reactor EL-3"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2FR SAC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,CEA-R-2775,196504)",
+        "free_txt": [],
+        "publication_year": "1965",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2FR SAC)",
+        "free_txt": [
+          " Saclay reactor EL-3"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2FR SAC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -95,11 +90,72 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(94-PU-239(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(94-PU-239(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-HL"
@@ -227,56 +283,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(94-PU-239(N,F),,SIG)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(94-PU-239(N,F),,SIG)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-HL",
@@ -406,8 +412,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -424,10 +430,8 @@
               " Geometry corrections."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -436,27 +440,8 @@
               " 0.0253 eV and compared with data from other authors."
             ]
           }
-        ]
-      },
-      "detector": {
-        "2": [
-          {
-            "x4_code": "(SIBAR)",
-            "free_txt": [
-              " surface barrier detector used for fission",
-              " fragments and alphas from decay of fissile isotopes."
-            ]
-          },
-          {
-            "x4_code": "(SCIN)",
-            "free_txt": [
-              " Li-6 scintill. detector used for neutron flux."
-            ]
-          }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -516,20 +501,16 @@
               "           from the monitor error."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2FR SAC)",
             "free_txt": [
               " Saclay reactor EL-3"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -538,10 +519,8 @@
               "        lead or copper crystal."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(DIFFR)",
             "free_txt": [
@@ -556,28 +535,22 @@
               " account the corrections detailed below."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,A.Prosdocimi+,J,JNE/AB,17,83,1963)",
             "free_txt": [
               "  Author as it is mentioned in the JNE/AB."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(5-B-10(N,A)3-LI-7,,SIG,,A)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -588,10 +561,8 @@
               " electrodynamic balance."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -599,11 +570,45 @@
             ]
           }
         ]
+      },
+      "1": {
+        "detector": [
+          {
+            "x4_code": "(IOCH)",
+            "free_txt": [
+              " 95% argon, 5% carbon dioxide at 580 mmHg",
+              " pressure. Used for alphas from B-10(n,alpha) standard."
+            ]
+          },
+          {
+            "x4_code": "(SCIN)",
+            "free_txt": [
+              " Xenon gas scintillator and"
+            ]
+          }
+        ]
+      },
+      "2": {
+        "detector": [
+          {
+            "x4_code": "(SIBAR)",
+            "free_txt": [
+              " surface barrier detector used for fission",
+              " fragments and alphas from decay of fissile isotopes."
+            ]
+          },
+          {
+            "x4_code": "(SCIN)",
+            "free_txt": [
+              " Li-6 scintill. detector used for neutron flux."
+            ]
+          }
+        ]
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -611,10 +616,8 @@
               "                 with solid state detector."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(92-U-235,6.92E+08YR)",
             "free_txt": [
@@ -622,10 +625,8 @@
               "                  from A.Deruytter,JPR,24,939,196311"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -646,8 +647,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(94-PU-239,24413.YR)",
             "free_txt": [
@@ -655,10 +656,8 @@
               "               T.L.Markin,JIN,9,320,1959"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -671,10 +670,8 @@
               "4.  40.  0.128   vynil   239Pu(0.993); 240Pu(0.007)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(SPSDD,21520005)",
             "free_txt": []

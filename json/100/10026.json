@@ -58,54 +58,52 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JNE,23,443,1969)",
-          "free_txt": [
-            "#doi:10.1016/0022-3107(69)90014-8"
-          ],
-          "publication_year": "1969"
-        },
-        {
-          "x4_code": "(P,ANL-7575,170,1969)",
-          "free_txt": [
-            " Data for reactions 51V(n,g)52V,",
-            "50Ti(n,g)51Ti are the same as in the main ref."
-          ],
-          "publication_year": "1969"
-        },
-        {
-          "x4_code": "(P,ANL-7450,105,1968)",
-          "free_txt": [
-            " Preliminary results."
-          ],
-          "publication_year": "1968"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,1USAANL)",
-          "free_txt": [
-            " 4-MeV Van-de-Graaff."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(1USAANL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JNE,23,443,1969)",
+        "free_txt": [
+          "#doi:10.1016/0022-3107(69)90014-8"
+        ],
+        "publication_year": "1969",
+        "pointer": "0",
+        "doi": "10.1016/0022-3107(69)90014-8"
+      },
+      {
+        "x4_code": "(P,ANL-7575,170,1969)",
+        "free_txt": [
+          " Data for reactions 51V(n,g)52V,",
+          "50Ti(n,g)51Ti are the same as in the main ref."
+        ],
+        "publication_year": "1969",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,ANL-7450,105,1968)",
+        "free_txt": [
+          " Preliminary results."
+        ],
+        "publication_year": "1968",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,1USAANL)",
+        "free_txt": [
+          " 4-MeV Van-de-Graaff."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(1USAANL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(23-V-51(N,G)23-V-52,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(23-V-51(N,G)23-V-52,,SIG)",
+        "children": [
+          {
             "code": [
               "23-V-51",
               [
@@ -123,11 +121,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(22-TI-50(N,G)22-TI-51,,SIG)",
+        "children": [
+          {
+            "code": [
+              "22-TI-50",
+              [
+                "N,G"
+              ],
+              "22-TI-51,,SIG"
+            ],
+            "type": null,
+            "target": "22-TI-50",
+            "process": "N,G",
+            "sf49": "22-TI-51,,SIG",
+            "sf4": "22-TI-51",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-2",
@@ -297,32 +330,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(22-TI-50(N,G)22-TI-51,,SIG)",
-          "0": {
-            "code": [
-              "22-TI-50",
-              [
-                "N,G"
-              ],
-              "22-TI-51,,SIG"
-            ],
-            "type": null,
-            "target": "22-TI-50",
-            "process": "N,G",
-            "sf49": "22-TI-51,,SIG",
-            "sf4": "22-TI-51",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -487,8 +494,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -498,10 +505,8 @@
               "neutron scattering or self-absorption."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR,GELI)",
             "free_txt": [
@@ -513,30 +518,24 @@
               "calibrated standards of 57Co, 137Cs, 54Mn, 60Co."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,1USAANL)",
             "free_txt": [
               " 4-MeV Van-de-Graaff."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
               " 7Li(p,n)."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -544,10 +543,8 @@
               "spread."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -561,10 +558,8 @@
               "were coupled to a 4096-channel pulse-height analyzer."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,SIG)",
             "free_txt": [
@@ -578,10 +573,8 @@
               " targets used as secondary flux monitors"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -592,16 +585,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(23-V-52,,DG,1434.)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -652,10 +643,8 @@
               " Neutron energy."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -664,10 +653,8 @@
               "vanadium. Isotopic abundance of 51V was 99.76%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -678,16 +665,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(22-TI-51,,DG,320.)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -738,10 +723,8 @@
               " Neutron energy."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -750,10 +733,8 @@
               "titanium. Isotopic abundance of 50Ti was 5.34%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

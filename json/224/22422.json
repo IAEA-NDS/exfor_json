@@ -74,42 +74,40 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NST,36,20,1999)",
-          "free_txt": [
-            "  Main Reference, Data are",
-            "                          given partly"
-          ],
-          "publication_year": "1999"
-        },
-        {
-          "x4_code": "(C,96PRAHA,,640,1996)",
-          "free_txt": [
-            " Data for Am-241,243"
-          ],
-          "publication_year": "1996"
-        },
-        {
-          "x4_code": "((S,ISINN-5,316,1997)=(S,JINR-E3-97-213,316,1997))",
-          "free_txt": [
-            "  Graphs for 241Am(n,f) and 243Am(n,f) cross sections"
-          ],
-          "publication_year": "1997"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NST,36,20,1999)",
+        "free_txt": [
+          "  Main Reference, Data are",
+          "                          given partly"
+        ],
+        "publication_year": "1999",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,96PRAHA,,640,1996)",
+        "free_txt": [
+          " Data for Am-241,243"
+        ],
+        "publication_year": "1996",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((S,ISINN-5,316,1997)=(S,JINR-E3-97-213,316,1997))",
+        "free_txt": [
+          "  Graphs for 241Am(n,f) and 243Am(n,f) cross sections"
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-243(N,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(95-AM-243(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "95-AM-243",
               [
@@ -127,11 +125,102 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Data for V0 = 2200 m/sec"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Data for V0 = 2200 m/sec"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(95-AM-243(N,F),,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,F"
+              ],
+              ",,SIG,,AV"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,F",
+            "sf49": ",,SIG,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Averaged over energy                interval given in data section"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(95-AM-243(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Point data"
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(95-AM-243(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MONIT1-ERR",
@@ -220,32 +309,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-243(N,F),,SIG,,AV)",
-          "0": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,F"
-              ],
-              ",,SIG,,AV"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,F",
-            "sf49": ",,SIG,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Averaged over energy                interval given in data section"
-        }
-      },
       "common": {
         "heads": [
           "ERR-S",
@@ -388,32 +451,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-243(N,F),,SIG)",
-          "0": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Point data"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -770,32 +807,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-243(N,F),,SIG)",
-          "0": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1133,8 +1144,27 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "2": [
+      "1": {
+        "detector": [
+          {
+            "x4_code": "(FISCH)",
+            "free_txt": [
+              "  Back-to-back double fission chamber with",
+              "         U-235 and Am-243 layers"
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(92-U-235(N,F),,SIG)",
+            "free_txt": [
+              "     Above 1 keV"
+            ]
+          }
+        ]
+      },
+      "2": {
+        "detector": [
           {
             "x4_code": "(BF3)",
             "free_txt": [
@@ -1143,10 +1173,8 @@
               " pressure of 1 atm and high-voltage bias of 1100 V."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "2": [
+        ],
+        "monitor": [
           {
             "x4_code": "(5-B-10(N,A)3-LI-7,,SIG)",
             "free_txt": [
@@ -1155,18 +1183,16 @@
           }
         ]
       },
-      "rel-ref": {
-        "0": [
+      "0": {
+        "rel-ref": [
           {
             "x4_code": "(I,,K.Kobayashi+,J,NIM/A,385,145,1997)",
             "free_txt": [
               " Descript.of KULS"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1180,10 +1206,8 @@
               " atoms was ((2.81 - 2.83)+-0.03)E+16"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1194,8 +1218,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -1251,28 +1275,22 @@
               " Statistical error of 235U"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2JPNKTO)",
             "free_txt": [
               "  Kyoto University Reactor"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,22422004)",
             "free_txt": []
@@ -1281,8 +1299,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1385,10 +1403,8 @@
               " .Error of the 2-nd monitor"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2JPNKTO)",
             "free_txt": [
@@ -1399,56 +1415,46 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
               " Error is not specified. Supposed total"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2JPNKTO)",
             "free_txt": [
               " 46 MeV electron linear accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(THCOL)",
             "free_txt": [
               " Lead slowing-down spectrometer"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               ".energy resolution: about 40%"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(SLODT)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1463,36 +1469,30 @@
       }
     },
     "005": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
               "  Total Error"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2JPNKTO)",
             "free_txt": [
               "  46 MeV Electron Linear Accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1500,30 +1500,24 @@
               " Neutron Energy. T- Slowing-Down Time in Micro-Sec"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(SLODT)",
             "free_txt": [
               "   Slowing-Down Time"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               ".No Information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

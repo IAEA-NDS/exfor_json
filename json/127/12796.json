@@ -33,38 +33,34 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,415,1,8403)",
-          "free_txt": [],
-          "publication_year": "1984"
-        },
-        {
-          "x4_code": "(R,ANL-NDM-68,8207)",
-          "free_txt": [],
-          "publication_year": "1982"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM)",
-          "free_txt": []
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,415,1,8403)",
+        "free_txt": [],
+        "publication_year": "1984",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,ANL-NDM-68,8207)",
+        "free_txt": [],
+        "publication_year": "1982",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM)",
+        "free_txt": [],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(45-RH-103(N,TOT),,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(45-RH-103(N,TOT),,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "45-RH-103",
               [
@@ -82,11 +78,140 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((45-RH-103(N,EL)45-RH-103,,DA,,AV)+(45-RH-103(N,INL)45-RH-103,PAR,DA,,AV))",
+        "children": [
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "N,EL"
+              ],
+              "45-RH-103,,DA,,AV"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "N,EL",
+            "sf49": "45-RH-103,,DA,,AV",
+            "sf4": "45-RH-103",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "N,INL"
+              ],
+              "45-RH-103,PAR,DA,,AV"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "N,INL",
+            "sf49": "45-RH-103,PAR,DA,,AV",
+            "sf4": "45-RH-103",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((45-RH-103(N,EL)45-RH-103,,DA)+(45-RH-103(N,INL)45-RH-103,PAR,DA))",
+        "children": [
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "N,EL"
+              ],
+              "45-RH-103,,DA"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "N,EL",
+            "sf49": "45-RH-103,,DA",
+            "sf4": "45-RH-103",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "N,INL"
+              ],
+              "45-RH-103,PAR,DA"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "N,INL",
+            "sf49": "45-RH-103,PAR,DA",
+            "sf4": "45-RH-103",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(45-RH-103(N,INL)45-RH-103,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "N,INL"
+              ],
+              "45-RH-103,PAR,SIG"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "N,INL",
+            "sf49": "45-RH-103,PAR,SIG",
+            "sf4": "45-RH-103",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -227,51 +352,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((45-RH-103(N,EL)45-RH-103,,DA,,AV)+(45-RH-103(N,INL)45-RH-103,PAR,DA,,AV))",
-          "0": {
-            "code": [
-              "45-RH-103",
-              [
-                "N,EL"
-              ],
-              "45-RH-103,,DA,,AV"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "N,EL",
-            "sf49": "45-RH-103,,DA,,AV",
-            "sf4": "45-RH-103",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "45-RH-103",
-              [
-                "N,INL"
-              ],
-              "45-RH-103,PAR,DA,,AV"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "N,INL",
-            "sf49": "45-RH-103,PAR,DA,,AV",
-            "sf4": "45-RH-103",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": "+",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-EXC-MAX",
@@ -1552,51 +1632,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((45-RH-103(N,EL)45-RH-103,,DA)+(45-RH-103(N,INL)45-RH-103,PAR,DA))",
-          "0": {
-            "code": [
-              "45-RH-103",
-              [
-                "N,EL"
-              ],
-              "45-RH-103,,DA"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "N,EL",
-            "sf49": "45-RH-103,,DA",
-            "sf4": "45-RH-103",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "45-RH-103",
-              [
-                "N,INL"
-              ],
-              "45-RH-103,PAR,DA"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "N,INL",
-            "sf49": "45-RH-103,PAR,DA",
-            "sf4": "45-RH-103",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "+",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-EXC-MAX",
@@ -2281,32 +2316,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(45-RH-103(N,INL)45-RH-103,PAR,SIG)",
-          "0": {
-            "code": [
-              "45-RH-103",
-              [
-                "N,INL"
-              ],
-              "45-RH-103,PAR,SIG"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "N,INL",
-            "sf49": "45-RH-103,PAR,SIG",
-            "sf4": "45-RH-103",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2754,64 +2763,52 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " PROTON RECOIL SCINTILLATORS"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "  5.4 METER FLIGHT PATH"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(6-C-0(N,TOT),,SIG)",
             "free_txt": [
               "  MEASURED IN THE EXPERIMENT"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "METALLIC RHODIUM CYLINDER, 2 CM DIAMETER AND 2 CM LONG."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2828,28 +2825,24 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "DATA WERE AVERAGED OVER 100 KEV INTERVALS"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "DATA WERE CORRECTED FOR DEAD-TIME"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2857,10 +2850,8 @@
               " UNCERTAINTY IS LESS THAN 1 PERCENT."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2871,18 +2862,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "DATA WERE AVERAGED OVER 50 KEV INTERVALS"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2890,10 +2879,8 @@
               " ATTENUATION AND ANGULAR-RESOLUTION."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2903,10 +2890,8 @@
               "   CORRECTIONS                           1 PERCENT"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2917,8 +2902,8 @@
       }
     },
     "004": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2926,10 +2911,8 @@
               " ATTENUATION AND ANGULAR-RESOLUTION."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2939,10 +2922,8 @@
               "   CORRECTIONS                           1 PERCENT"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2953,8 +2934,8 @@
       }
     },
     "005": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTAD)",
             "free_txt": [
@@ -2962,10 +2943,8 @@
               " LEGENDRE FIT TO DIFFERENTIAL DATA."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2973,10 +2952,8 @@
               " ATTENUATION AND ANGULAR-RESOLUTION."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2985,10 +2962,8 @@
               "   CORRECTIONS                           1 PERCENT"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [

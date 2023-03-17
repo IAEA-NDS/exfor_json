@@ -57,38 +57,61 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,89,014611,2014)",
-          "free_txt": [],
-          "publication_year": "2014"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALAS)",
-          "free_txt": [
-            " Experiment performed at WNR facility",
-            "at the Los Alamos National Laboratory."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,89,014611,2014)",
+        "free_txt": [],
+        "publication_year": "2014",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALAS)",
+        "free_txt": [
+          " Experiment performed at WNR facility",
+          "at the Los Alamos National Laboratory."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,F),PR,NU/DE)",
-          "0": {
+      "0": {
+        "x4_code": "(94-PU-239(N,F),PR,NU/DE)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",PR,NU/DE"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",PR,NU/DE",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU/DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((94-PU-239(N,F),PR,NU/DE)//(94-PU-239(N,F),PR,NU/DE))",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -107,10 +130,64 @@
             "sf8": null,
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",PR,NU/DE"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",PR,NU/DE",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU/DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(94-PU-239(N,F)0-NN-1,PR,KE)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              "0-NN-1,PR,KE"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": "0-NN-1,PR,KE",
+            "sf4": "0-NN-1",
+            "sf5": "PR",
+            "sf6": "KE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -3922,51 +3999,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-239(N,F),PR,NU/DE)//(94-PU-239(N,F),PR,NU/DE))",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",PR,NU/DE"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",PR,NU/DE",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU/DE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",PR,NU/DE"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",PR,NU/DE",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU/DE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN-DN",
@@ -7655,32 +7687,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,F)0-NN-1,PR,KE)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "0-NN-1,PR,KE"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": "0-NN-1,PR,KE",
-            "sf4": "0-NN-1",
-            "sf5": "PR",
-            "sf6": "KE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -7870,8 +7876,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
@@ -7894,20 +7900,16 @@
               "set to 300-keV neutron energy for all detectors."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALAS)",
             "free_txt": [
@@ -7915,10 +7917,8 @@
               "at the Los Alamos National Laboratory."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": [
@@ -7933,10 +7933,8 @@
               "gamma rays from the source."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,COINC)",
             "free_txt": [
@@ -7962,10 +7960,8 @@
               "the pulses was used to discriminate the gamma rays."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -7979,8 +7975,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -7993,8 +7989,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -8007,8 +8003,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -8018,10 +8014,8 @@
               "parameter of Maxwellian distribution."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

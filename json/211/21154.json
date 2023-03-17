@@ -42,37 +42,60 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP,61,457,6501)",
-          "free_txt": [
-            " GRAPHS AND TABLE."
-          ],
-          "publication_year": "1965"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCY)",
-          "free_txt": [
-            " HARWELL SYNCHROCYCLOTRON."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP,61,457,6501)",
+        "free_txt": [
+          " GRAPHS AND TABLE."
+        ],
+        "publication_year": "1965",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCY)",
+        "free_txt": [
+          " HARWELL SYNCHROCYCLOTRON."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-2(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " TOTAL CROSS SECTION."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((1-H-2(N,TOT),,SIG)-(1-H-1(N,TOT),,SIG))",
+        "children": [
+          {
             "code": [
               "1-H-2",
               [
@@ -91,10 +114,36 @@
             "sf8": null,
             "sf9": null
           },
-          "type": null,
-          "free_text": " TOTAL CROSS SECTION."
-        }
-      },
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "-",
+        "free_text": " DIFFERENCE BETWEEN DEUTERIUM AND HYDROGEN TOTAL CROSS SECTIONS."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -234,51 +283,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-2(N,TOT),,SIG)-(1-H-1(N,TOT),,SIG))",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "1-H-1",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "-",
-          "free_text": " DIFFERENCE BETWEEN DEUTERIUM AND HYDROGEN TOTAL CROSS SECTIONS."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -424,8 +428,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -433,20 +437,16 @@
               " CONTENT IN HEAVY WATER, AND MULTIPLE SCATTERING."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN )",
             "free_txt": [
               " CYLINDRICAL BLOCK OF NE 102 SCINTILLATOR."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -457,20 +457,16 @@
               " AT HIGH ENERGIES AND RECTANGULAR AT LOW ENERGIES."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCY)",
             "free_txt": [
               " HARWELL SYNCHROCYCLOTRON."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -478,20 +474,16 @@
               " OPERATION."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF  )",
             "free_txt": [
               " TIME OF FLIGHT, 26 METER FLIGHT PATH."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -499,10 +491,8 @@
               " OF 98.93+-0.02 PER-CENT."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -513,8 +503,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -525,8 +515,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

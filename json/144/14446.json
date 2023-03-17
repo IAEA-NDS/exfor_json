@@ -98,40 +98,35 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,92,045810,2015)",
-          "free_txt": [],
-          "publication_year": "2015"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALAS)",
-          "free_txt": [
-            " Experiment was performed at the",
-            "flight path 14 at the Manuel Lujan, Jr., Neutron",
-            "Scattering Center at the Los Alamos Neutron Science",
-            "Center"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,92,045810,2015)",
+        "free_txt": [],
+        "publication_year": "2015",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALAS)",
+        "free_txt": [
+          " Experiment was performed at the",
+          "flight path 14 at the Manuel Lujan, Jr., Neutron",
+          "Scattering Center at the Los Alamos Neutron Science",
+          "Center"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-63(N,G)28-NI-64,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(28-NI-63(N,G)28-NI-64,,SIG)",
+        "children": [
+          {
             "code": [
               "28-NI-63",
               [
@@ -149,11 +144,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(28-NI-63(N,G)28-NI-64,,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "28-NI-63",
+              [
+                "N,G"
+              ],
+              "28-NI-64,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "28-NI-63",
+            "process": "N,G",
+            "sf49": "28-NI-64,,SIG,,MXW",
+            "sf4": "28-NI-64",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -1220,32 +1250,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-63(N,G)28-NI-64,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "28-NI-63",
-              [
-                "N,G"
-              ],
-              "28-NI-64,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "28-NI-63",
-            "process": "N,G",
-            "sf49": "28-NI-64,,SIG,,MXW",
-            "sf4": "28-NI-64",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1711,8 +1715,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BAF2)",
             "free_txt": [
@@ -1728,10 +1732,8 @@
               "in the crystals."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALAS)",
             "free_txt": [
@@ -1741,10 +1743,8 @@
               "Center"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": [
@@ -1753,10 +1753,8 @@
               "target"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1775,10 +1773,8 @@
               "acquisition system with 500 MHz sampling rate."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
@@ -1787,10 +1783,8 @@
             "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1808,8 +1802,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1828,10 +1822,8 @@
               "based on the cross section data from JEFF 3.0/A."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1850,10 +1842,8 @@
               " Total uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1865,8 +1855,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1874,10 +1864,8 @@
               "direct integration"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1890,10 +1878,8 @@
               " Systematic uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

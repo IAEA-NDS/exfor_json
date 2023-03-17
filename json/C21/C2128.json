@@ -84,40 +84,35 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,90,011305,2014)",
-          "free_txt": [],
-          "publication_year": "2014"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCTM,1USAMSU)",
-          "free_txt": [
-            " Experiment was performed at the",
-            "Coupled-Cyclotron Facility of the National",
-            "Superconducting Cyclotron Laboratory at Michigan State",
-            "University"
-          ],
-          "facility_type": "(CYCTM)",
-          "institute": "(1USAMSU)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,90,011305,2014)",
+        "free_txt": [],
+        "publication_year": "2014",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCTM,1USAMSU)",
+        "free_txt": [
+          " Experiment was performed at the",
+          "Coupled-Cyclotron Facility of the National",
+          "Superconducting Cyclotron Laboratory at Michigan State",
+          "University"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCTM)",
+        "institute": "(1USAMSU)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(20-CA-48,INL)1-H-1,PAR,SIG,G)=(20-CA-48(P,INL)20-CA-48,PAR,SIG,G))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-1(20-CA-48,INL)1-H-1,PAR,SIG,G)=(20-CA-48(P,INL)20-CA-48,PAR,SIG,G))",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -136,7 +131,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "20-CA-48",
               [
@@ -154,11 +149,65 @@
             "sf7": "G",
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((1-H-1(20-CA-50,INL)1-H-1,PAR,SIG,G)=(20-CA-50(P,INL)20-CA-50,PAR,SIG,G))",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "20-CA-50,INL"
+              ],
+              "1-H-1,PAR,SIG,G"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "20-CA-50,INL",
+            "sf49": "1-H-1,PAR,SIG,G",
+            "sf4": "1-H-1",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": "G",
+            "sf8": null,
+            "sf9": null
           },
-          "type": "=",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "20-CA-50",
+              [
+                "P,INL"
+              ],
+              "20-CA-50,PAR,SIG,G"
+            ],
+            "type": null,
+            "target": "20-CA-50",
+            "process": "P,INL",
+            "sf49": "20-CA-50,PAR,SIG,G",
+            "sf4": "20-CA-50",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": "G",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -227,51 +276,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(20-CA-50,INL)1-H-1,PAR,SIG,G)=(20-CA-50(P,INL)20-CA-50,PAR,SIG,G))",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "20-CA-50,INL"
-              ],
-              "1-H-1,PAR,SIG,G"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "20-CA-50,INL",
-            "sf49": "1-H-1,PAR,SIG,G",
-            "sf4": "1-H-1",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": "G",
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "20-CA-50",
-              [
-                "P,INL"
-              ],
-              "20-CA-50,PAR,SIG,G"
-            ],
-            "type": null,
-            "target": "20-CA-50",
-            "process": "P,INL",
-            "sf49": "20-CA-50,PAR,SIG,G",
-            "sf4": "20-CA-50",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": "G",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -337,8 +341,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -347,10 +351,8 @@
               "v/c = 0.41 were used for 48Ca and 50Ca, respectively."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -365,20 +367,16 @@
               "respect to the beam axis."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCTM,1USAMSU)",
             "free_txt": [
@@ -388,10 +386,8 @@
               "University"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -409,18 +405,14 @@
               "9.3 particles per second, respectively."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -440,8 +432,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -452,8 +444,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

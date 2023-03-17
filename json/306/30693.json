@@ -38,46 +38,42 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CNP,3,(1),47,198102)",
-          "free_txt": [
-            " in Chinese"
-          ],
-          "publication_year": "1981"
-        },
-        {
-          "x4_code": "(J,SCS,25,(5),502,198205)",
-          "free_txt": [
-            " in English"
-          ],
-          "publication_year": "1982"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,3CPRFUD)",
-          "free_txt": [
-            " At Fudan University in Shanghai"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(3CPRFUD)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CNP,3,(1),47,198102)",
+        "free_txt": [
+          " in Chinese"
+        ],
+        "publication_year": "1981",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SCS,25,(5),502,198205)",
+        "free_txt": [
+          " in English"
+        ],
+        "publication_year": "1982",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,3CPRFUD)",
+        "free_txt": [
+          " At Fudan University in Shanghai"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(3CPRFUD)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,F),,DA,FF,LEG/RSD)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(N,F),,DA,FF,LEG/RSD)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -95,11 +91,46 @@
             "sf7": "FF",
             "sf8": "LEG/RSD",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,F),,DA,FF,RSD)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              ",,DA,FF,RSD"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": ",,DA,FF,RSD",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "FF",
+            "sf8": "RSD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Angular anisotropy"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -267,32 +298,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,F),,DA,FF,RSD)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              ",,DA,FF,RSD"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": ",,DA,FF,RSD",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "FF",
-            "sf8": "RSD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Angular anisotropy"
-        }
-      },
       "common": {
         "heads": [
           "ANG"
@@ -362,8 +367,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -372,10 +377,8 @@
               "         W(theta)=sum(a(2l)*p(2l))"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -385,10 +388,8 @@
               "measured area."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": [
@@ -406,10 +407,8 @@
               "measurements."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -419,20 +418,16 @@
               "                     the fission sample."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,3CPRFUD)",
             "free_txt": [
               " At Fudan University in Shanghai"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
             "free_txt": [
@@ -440,28 +435,22 @@
               "tritide target."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               "Direct detection of fission fragments"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(FF)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -469,10 +458,8 @@
               "diameter=8 mm, electroplated on stainless steel backing"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -484,8 +471,8 @@
       }
     },
     "002": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -502,8 +489,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,30693002)",
             "free_txt": [

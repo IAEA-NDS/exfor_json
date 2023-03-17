@@ -113,44 +113,40 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,929,83,2014)",
-          "free_txt": [],
-          "publication_year": "2014"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(PRJFS,2JPNIPC)",
-          "free_txt": [
-            " RIKEN projectile fragment separator",
-            "                (RIPS) at"
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(2JPNIPC)"
-        },
-        {
-          "x4_code": "(CYCLO,2JPNIPC)",
-          "free_txt": [],
-          "facility_type": "(CYCLO)",
-          "institute": "(2JPNIPC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,929,83,2014)",
+        "free_txt": [],
+        "publication_year": "2014",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(PRJFS,2JPNIPC)",
+        "free_txt": [
+          " RIKEN projectile fragment separator",
+          "                (RIPS) at"
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2JPNIPC)"
+      },
+      {
+        "x4_code": "(CYCLO,2JPNIPC)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2JPNIPC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(4-BE-14,NON),,SIG)=(4-BE-14(P,NON),,SIG))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-1(4-BE-14,NON),,SIG)=(4-BE-14(P,NON),,SIG))",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -169,7 +165,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "4-BE-14",
               [
@@ -187,11 +183,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((6-C-12(4-BE-14,NON),,SIG)=(4-BE-14(6-C-12,NON),,SIG))",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "4-BE-14,NON"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "4-BE-14,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "=",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "4-BE-14",
+              [
+                "6-C-12,NON"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "4-BE-14",
+            "process": "6-C-12,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -221,51 +271,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((6-C-12(4-BE-14,NON),,SIG)=(4-BE-14(6-C-12,NON),,SIG))",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "4-BE-14,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "4-BE-14,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "4-BE-14",
-              [
-                "6-C-12,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "4-BE-14",
-            "process": "6-C-12,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -297,18 +302,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
               " Glauber approximation"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SI)",
             "free_txt": [
@@ -321,10 +324,8 @@
               " To measure total E"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -344,10 +345,8 @@
               " Statistical uncertainty (<1%)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(PRJFS,2JPNIPC)",
             "free_txt": [
@@ -359,26 +358,20 @@
             "x4_code": "(CYCLO,2JPNIPC)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(4-BE-14)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -390,18 +383,16 @@
       }
     },
     "002": {
-      "inc-source": {
-        "0": [
+      "0": {
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Beam intensity is 150 PPS."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -410,10 +401,8 @@
               "  the entrance and exit windows of the target"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -424,18 +413,16 @@
       }
     },
     "003": {
-      "inc-source": {
-        "0": [
+      "0": {
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Beam intensity is 300 PPS."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -443,10 +430,8 @@
               "- Target is self supported."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

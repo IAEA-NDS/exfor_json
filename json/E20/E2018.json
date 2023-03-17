@@ -166,47 +166,43 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PL/B,608,(3-4),206,200502)",
-          "free_txt": [],
-          "publication_year": "2005"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2JPNIPC)",
-          "free_txt": [
-            " To accelerate primary 22Ne beam to 110",
-            "                MeV/A at RIKEN Ring Cyclotron Facility"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2JPNIPC)"
-        },
-        {
-          "x4_code": "(PRJFS,2JPNIPC)",
-          "free_txt": [
-            " To separate secondary 17B beam from Be",
-            "                production target"
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(2JPNIPC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PL/B,608,(3-4),206,200502)",
+        "free_txt": [],
+        "publication_year": "2005",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2JPNIPC)",
+        "free_txt": [
+          " To accelerate primary 22Ne beam to 110",
+          "                MeV/A at RIKEN Ring Cyclotron Facility"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2JPNIPC)"
+      },
+      {
+        "x4_code": "(PRJFS,2JPNIPC)",
+        "free_txt": [
+          " To separate secondary 17B beam from Be",
+          "                production target"
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2JPNIPC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(5-B-17,X)5-B-15,PAR,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-1(5-B-17,X)5-B-15,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -224,11 +220,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(5-B-17,ABS),,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "5-B-17,ABS"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "5-B-17,ABS",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Interaction cross section"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-1(5-B-17,X)5-B-15,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "5-B-17,X"
+              ],
+              "5-B-15,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "5-B-17,X",
+            "sf49": "5-B-15,,SIG",
+            "sf4": "5-B-15",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL",
@@ -277,32 +336,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(5-B-17,ABS),,SIG)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "5-B-17,ABS"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "5-B-17,ABS",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Interaction cross section"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -329,32 +362,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(5-B-17,X)5-B-15,,SIG)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "5-B-17,X"
-              ],
-              "5-B-15,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "5-B-17,X",
-            "sf49": "5-B-15,,SIG",
-            "sf4": "5-B-15",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -383,8 +390,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -398,10 +405,8 @@
               "           products"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2JPNIPC)",
             "free_txt": [
@@ -416,18 +421,14 @@
               "                production target"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -440,36 +441,30 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL,5-B-15)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
               " Detect 15B and prompt gamma in coincidence."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G)",
             "free_txt": [
@@ -480,10 +475,8 @@
             "x4_code": "(5-B-15)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -494,18 +487,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -516,26 +507,22 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(5-B-15)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

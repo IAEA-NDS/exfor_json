@@ -35,46 +35,42 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,188,212,1972)",
-          "free_txt": [],
-          "publication_year": "1972"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            "  IBR pulse reactor operating as a",
-            "                booster together with"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        },
-        {
-          "x4_code": "(LINAC,4ZZZDUB)",
-          "free_txt": [
-            "  linear electron accelerator"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,188,212,1972)",
+        "free_txt": [],
+        "publication_year": "1972",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          "  IBR pulse reactor operating as a",
+          "                booster together with"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      },
+      {
+        "x4_code": "(LINAC,4ZZZDUB)",
+        "free_txt": [
+          "  linear electron accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(62-SM-147(N,A),,WID)",
-          "0": {
+      "1": {
+        "x4_code": "(62-SM-147(N,A),,WID)",
+        "children": [
+          {
             "code": [
               "62-SM-147",
               [
@@ -92,13 +88,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(62-SM-147(N,0),,J)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(62-SM-147(N,0),,J)",
+        "children": [
+          {
             "code": [
               "62-SM-147",
               [
@@ -116,11 +114,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(62-SM-147(N,A),PAR,WID)",
+        "children": [
+          {
+            "code": [
+              "62-SM-147",
+              [
+                "N,A"
+              ],
+              ",PAR,WID"
+            ],
+            "type": null,
+            "target": "62-SM-147",
+            "process": "N,A",
+            "sf49": ",PAR,WID",
+            "sf4": null,
+            "sf5": "PAR",
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RES-NRM",
@@ -311,32 +344,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(62-SM-147(N,A),PAR,WID)",
-          "0": {
-            "code": [
-              "62-SM-147",
-              [
-                "N,A"
-              ],
-              ",PAR,WID"
-            ],
-            "type": null,
-            "target": "62-SM-147",
-            "process": "N,A",
-            "sf49": ",PAR,WID",
-            "sf4": null,
-            "sf5": "PAR",
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -490,28 +497,24 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
               " Statistical model predictions"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Background was measured between resonances."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
@@ -519,10 +522,8 @@
               "       multisectional ionization chamber"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -531,10 +532,8 @@
               "calculation."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
@@ -548,10 +547,8 @@
               "  linear electron accelerator"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -569,10 +566,8 @@
             "x4_code": "(TRN)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,40071001,E.N.Karzhavina+,R,JINR-P3-5655,1971)",
             "free_txt": [
@@ -593,10 +588,8 @@
               " Three refs. - previous experiments."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -608,8 +601,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -626,10 +619,8 @@
               "<Ggamma>=53 meV."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -661,28 +652,22 @@
               "the article; estimation"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,J.Kvitek+,J,NP/A,154,177,1970)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)62-SM-147(N,A),,WID)",
             "free_txt": [
               " (Ga)0 at 3.4 eV resonance"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -694,8 +679,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -704,10 +689,8 @@
               "daughter nucleus determined from the measured spectra."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(2.)",
             "free_txt": [
@@ -726,10 +709,8 @@
               " + 225.3 eV resonance"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

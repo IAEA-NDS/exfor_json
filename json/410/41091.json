@@ -54,44 +54,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "((J,YK,,(4),6,1990)=(R,INDC(CCP)-334,6,1990))",
-          "free_txt": [],
-          "publication_year": "1990"
-        },
-        {
-          "x4_code": "(R,INDC(CCP)-365,19,1994)",
-          "free_txt": [
-            " Engl.transl.of YK,,(4),6,1990"
-          ],
-          "publication_year": "1994"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4RUSKUR)",
-          "free_txt": [
-            "  F-1 reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4RUSKUR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((J,YK,,(4),6,1990)=(R,INDC(CCP)-334,6,1990))",
+        "free_txt": [],
+        "publication_year": "1990",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(CCP)-365,19,1994)",
+        "free_txt": [
+          " Engl.transl.of YK,,(4),6,1990"
+        ],
+        "publication_year": "1994",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4RUSKUR)",
+        "free_txt": [
+          "  F-1 reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4RUSKUR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-238(N,F),,RI)",
-          "0": {
+      "0": {
+        "x4_code": "(94-PU-238(N,F),,RI)",
+        "children": [
+          {
             "code": [
               "94-PU-238",
               [
@@ -109,11 +105,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(94-PU-238(N,F),,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "94-PU-238",
+              [
+                "N,F"
+              ],
+              ",,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "94-PU-238",
+            "process": "N,F",
+            "sf49": ",,SIG,,MXW",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -145,32 +176,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-238(N,F),,SIG,,MXW)",
-          "0": {
-            "code": [
-              "94-PU-238",
-              [
-                "N,F"
-              ],
-              ",,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "94-PU-238",
-            "process": "N,F",
-            "sf49": ",,SIG,,MXW",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -209,8 +214,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SOLST)",
             "free_txt": [
@@ -218,30 +223,24 @@
               "  For fission fragments registration."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Errors are not specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4RUSKUR)",
             "free_txt": [
               "  F-1 reactor"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(THCOL)",
             "free_txt": [
@@ -249,10 +248,8 @@
               " Cd ratio 600 - by U-235(n,f)."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,RI)",
             "free_txt": []
@@ -261,10 +258,8 @@
             "x4_code": "(94-PU-239(N,F),,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -274,10 +269,8 @@
               "particle backscattering method."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -288,8 +281,8 @@
       }
     },
     "002": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -300,10 +293,8 @@
               "and Cu-63) and 30 by U-235(n,f)."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,RI)",
             "free_txt": []
@@ -312,8 +303,8 @@
       }
     },
     "003": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -321,10 +312,8 @@
               "with a cadmium to 235U(n,f) ratio of 600."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(94-PU-239(N,F),,SIG,,MXW)",
             "free_txt": []

@@ -71,37 +71,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NIM/B,267,462,2009)",
-          "free_txt": [],
-          "publication_year": "2009"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,3KORPUE)",
-          "free_txt": [
-            " Electron linear accelerator"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(3KORPUE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NIM/B,267,462,2009)",
+        "free_txt": [],
+        "publication_year": "2009",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,3KORPUE)",
+        "free_txt": [
+          " Electron linear accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(3KORPUE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(42-MO-98(N,G)42-MO-99,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(42-MO-98(N,G)42-MO-99,,SIG)",
+        "children": [
+          {
             "code": [
               "42-MO-98",
               [
@@ -119,11 +114,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " tbl.6"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " tbl.6"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(42-MO-98(N,G)42-MO-99,,RI)",
+        "children": [
+          {
+            "code": [
+              "42-MO-98",
+              [
+                "N,G"
+              ],
+              "42-MO-99,,RI"
+            ],
+            "type": null,
+            "target": "42-MO-98",
+            "process": "N,G",
+            "sf49": "42-MO-99,,RI",
+            "sf4": "42-MO-99",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " tbl.6"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -182,32 +212,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(42-MO-98(N,G)42-MO-99,,RI)",
-          "0": {
-            "code": [
-              "42-MO-98",
-              [
-                "N,G"
-              ],
-              "42-MO-99,,RI"
-            ],
-            "type": null,
-            "target": "42-MO-98",
-            "process": "N,G",
-            "sf49": "42-MO-99,,RI",
-            "sf4": "42-MO-99",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " tbl.6"
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -273,16 +277,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(42-MO-99,2.7489D,DG,140.511,0.0452,                  DG,158.782,0.00189,                  DG,181.068,0.0599,                  DG,580.51,0.0032,                  DG,739.500,0.1213,                  DG,777.921,0.0426)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(49-IN-116-M,54.41MIN,DG,416.86,0.277,                  DG,1097.3,0.562,                  DG,1293.54,0.844)",
             "free_txt": []
@@ -309,10 +311,8 @@
               "  <http://www.nndc.bnl.gov/nudat2/>."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -324,20 +324,16 @@
               " to determine the photopeak area of gamma-ray spectrum."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,3KORPUE)",
             "free_txt": [
               " Electron linear accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
@@ -349,10 +345,8 @@
               "titanium."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,PSD)",
             "free_txt": [
@@ -360,10 +354,8 @@
               "lower-level discriminator"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(49-IN-115(N,G)49-IN-116-M,,SIG)",
             "free_txt": []
@@ -375,10 +367,8 @@
               "also checked based on the well known reaction.)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -406,10 +396,8 @@
               " In 16 12.7       0.05    0.0471+-0.0004      99.99"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -420,16 +408,14 @@
       }
     },
     "002": {
-      "decay-mon": {
-        "0": [
+      "0": {
+        "decay-mon": [
           {
             "x4_code": "(79-AU-198,2.69517D,DG,411.80205,0.9558,                    DG,675.8836,0.0084)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -455,18 +441,14 @@
               " the gamma-ray intensity."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(22842002,M.Karadag,J,ANE,31,1285,2004)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,MXW)",
             "free_txt": []
@@ -475,8 +457,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -508,18 +490,14 @@
               " the epithermal neutron self-shielding factor."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(22842003,M.Karadag,J,ANE,31,1285,2004)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,RI)",
             "free_txt": []

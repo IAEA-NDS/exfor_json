@@ -58,44 +58,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AKE,31,42,1978)",
-          "free_txt": [],
-          "publication_year": "1978"
-        },
-        {
-          "x4_code": "(W,KROPFF,19770826)",
-          "free_txt": [
-            "Preprint, EXFOR entry made."
-          ],
-          "publication_year": "1977"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,3ARGCAB)",
-          "free_txt": [
-            " 25 MeV Linac."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(3ARGCAB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AKE,31,42,1978)",
+        "free_txt": [],
+        "publication_year": "1978",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,KROPFF,19770826)",
+        "free_txt": [
+          "Preprint, EXFOR entry made."
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,3ARGCAB)",
+        "free_txt": [
+          " 25 MeV Linac."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(3ARGCAB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(42-MO-0(N,TOT),,SIG/TMP)",
-          "0": {
+      "0": {
+        "x4_code": "(42-MO-0(N,TOT),,SIG/TMP)",
+        "children": [
+          {
             "code": [
               "42-MO-0",
               [
@@ -113,11 +109,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "for polycrystalline molybdenum."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "for polycrystalline molybdenum."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(42-MO-0(N,G),,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "42-MO-0",
+              [
+                "N,G"
+              ],
+              ",,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "42-MO-0",
+            "process": "N,G",
+            "sf49": ",,SIG,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "TEMP",
@@ -1398,32 +1429,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(42-MO-0(N,G),,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "42-MO-0",
-              [
-                "N,G"
-              ],
-              ",,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "42-MO-0",
-            "process": "N,G",
-            "sf49": ",,SIG,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1452,56 +1457,46 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HE3SP)",
             "free_txt": [
               " A bank of seven He-3 detectors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,3ARGCAB)",
             "free_txt": [
               " 25 MeV Linac."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,TRN)",
             "free_txt": [
               " Time of flight, flight path = 17 m."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "Absolute, transmission."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1513,10 +1508,8 @@
               "shaving to destroy the orientation."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1527,8 +1520,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1537,10 +1530,8 @@
               "first bragg cut-off and in the free atom region."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1553,10 +1544,8 @@
               " total error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1569,8 +1558,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1597,20 +1586,16 @@
               "  = (0.27 +- 0.12) barns."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No further information."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,30413002)",
             "free_txt": []

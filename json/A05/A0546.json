@@ -40,37 +40,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,95PETRBG,,283,1995)",
-          "free_txt": [],
-          "publication_year": "1995"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,4UKRIJD)",
-          "free_txt": [
-            ".U-240 cyclotron."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(4UKRIJD)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,95PETRBG,,283,1995)",
+        "free_txt": [],
+        "publication_year": "1995",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,4UKRIJD)",
+        "free_txt": [
+          ".U-240 cyclotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(4UKRIJD)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(47-AG-107(A,3N)49-IN-108-M/G,,SIG/RAT)",
-          "0": {
+      "0": {
+        "x4_code": "(47-AG-107(A,3N)49-IN-108-M/G,,SIG/RAT)",
+        "children": [
+          {
             "code": [
               "47-AG-107",
               [
@@ -88,11 +83,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((47-AG-107(A,X)47-AG-104-G,,SIG)/(47-AG-107(A,3N)49-IN-108,,SIG))",
+        "children": [
+          {
+            "code": [
+              "47-AG-107",
+              [
+                "A,X"
+              ],
+              "47-AG-104-G,,SIG"
+            ],
+            "type": null,
+            "target": "47-AG-107",
+            "process": "A,X",
+            "sf49": "47-AG-104-G,,SIG",
+            "sf4": "47-AG-104-G",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "47-AG-107",
+              [
+                "A,3N"
+              ],
+              "49-IN-108,,SIG"
+            ],
+            "type": null,
+            "target": "47-AG-107",
+            "process": "A,3N",
+            "sf49": "49-IN-108,,SIG",
+            "sf4": "49-IN-108",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -125,51 +174,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((47-AG-107(A,X)47-AG-104-G,,SIG)/(47-AG-107(A,3N)49-IN-108,,SIG))",
-          "0": {
-            "code": [
-              "47-AG-107",
-              [
-                "A,X"
-              ],
-              "47-AG-104-G,,SIG"
-            ],
-            "type": null,
-            "target": "47-AG-107",
-            "process": "A,X",
-            "sf49": "47-AG-104-G,,SIG",
-            "sf4": "47-AG-104-G",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "47-AG-107",
-              [
-                "A,3N"
-              ],
-              "49-IN-108,,SIG"
-            ],
-            "type": null,
-            "target": "47-AG-107",
-            "process": "A,3N",
-            "sf49": "49-IN-108,,SIG",
-            "sf4": "49-IN-108",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -207,8 +211,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SOLST)",
             "free_txt": [
@@ -216,50 +220,40 @@
               "with 2.1 keV resolution at Co-60 gamma-lines"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,4UKRIJD)",
             "free_txt": [
               ".U-240 cyclotron."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
               " Additional information is absent."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Any information is absent."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": []

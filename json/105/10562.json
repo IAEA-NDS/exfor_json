@@ -67,44 +67,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,66,205,1978)",
-          "free_txt": [],
-          "publication_year": "1978"
-        },
-        {
-          "x4_code": "(R,UCID-16981,1975)",
-          "free_txt": [
-            " Preliminary data"
-          ],
-          "publication_year": "1975"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALRL)",
-          "free_txt": [
-            " LLL 100 MeV electron linac"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALRL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,66,205,1978)",
+        "free_txt": [],
+        "publication_year": "1978",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,UCID-16981,1975)",
+        "free_txt": [
+          " Preliminary data"
+        ],
+        "publication_year": "1975",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALRL)",
+        "free_txt": [
+          " LLL 100 MeV electron linac"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALRL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-239(N,F),,SIG)/(92-U-235(N,F),,SIG))",
-          "0": {
+      "0": {
+        "x4_code": "((94-PU-239(N,F),,SIG)/(92-U-235(N,F),,SIG))",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -123,7 +119,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "92-U-235",
               [
@@ -141,11 +137,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((92-U-233(N,F),,SIG)/(92-U-235(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "92-U-233",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-233",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -850,51 +900,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-233(N,F),,SIG)/(92-U-235(N,F),,SIG))",
-          "0": {
-            "code": [
-              "92-U-233",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-233",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -1601,18 +1606,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
               " Ionization fission chambers"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1648,20 +1651,16 @@
               " thermal energy)."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALRL)",
             "free_txt": [
               " LLL 100 MeV electron linac"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1674,10 +1673,8 @@
               " flight path resolution was an uncertainty of +/-4 cm."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1695,10 +1692,8 @@
               " 238U (85.57%), 239Pu (14.43%)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1709,8 +1704,8 @@
       }
     },
     "002": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1721,10 +1716,8 @@
               " difference of +/-0.001 MeV."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((94-PU-239(N,F),,SIG,,AV)/(92-U-235(N,F),,SIG,,AV))",
             "free_txt": [
@@ -1732,10 +1725,8 @@
               " ratio, and (2) thermal ratio."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1746,8 +1737,8 @@
       }
     },
     "003": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1758,10 +1749,8 @@
               " difference of +/-0.001 MeV."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((92-U-233(N,F),,SIG,,AV)/(92-U-235(N,F),,SIG,,AV))",
             "free_txt": [
@@ -1769,10 +1758,8 @@
               " ratio, and (2) thermal ratio."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

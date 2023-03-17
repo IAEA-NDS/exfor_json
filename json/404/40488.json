@@ -1,21 +1,28 @@
 {
   "entry": "40488",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-01-18b",
+  "number_of_revisions": "6",
   "histories": [
     {
-      "x4_code": "(771124C)",
+      "x4_code": "(19771124C)",
       "free_txt": []
+    },
+    {
+      "x4_code": "(20220722A)",
+      "free_txt": [
+        " Update for current rules and dictionaries.",
+        " Subent 003 was added."
+      ]
     }
   ],
   "bib_record": {
-    "title": "U-235 FISSION CROSS-SECTION IN NEUTRON ENERGY RANGE 0.01-10 KEV",
+    "title": "U-235 fission cross-section in neutron energy range 0.01-10 keV",
     "authors": [
       {
-        "name": "T.A.Mostovaja"
+        "name": "T.A.Mostovaya"
       },
       {
-        "name": "V.I.Mostovoj"
+        "name": "V.I.Mostovoy"
       },
       {
         "name": "V.N.Peregudov"
@@ -23,41 +30,39 @@
     ],
     "institutes": [
       {
-        "x4_code": "(4CCPKUR)",
+        "x4_code": "(4RUSKUR)",
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,75KIEV,6,76,7607)",
-          "free_txt": [
-            "  DATA GIVEN"
-          ],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": [
-            " ELECTRON LINEAR ACCELERATOR WITH ENERGY 60 MEV."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((C,75KIEV,6,76,1976)=(R,INDC(CCP)-099,(6),76,1976))",
+        "free_txt": [
+          "Data are given."
+        ],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,4RUSKUR)",
+        "free_txt": [
+          " Electron linear accelerator with",
+          "electrons energy 60 MeV."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4RUSKUR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,RI)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,RI)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -75,11 +80,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,INT)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,INT"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,INT",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -125,81 +165,206 @@
           ]
         ]
       }
+    },
+    "003": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN-MIN",
+          "EN-MAX",
+          "DATA"
+        ],
+        "units": [
+          "KEV",
+          "EV",
+          "B*EV"
+        ],
+        "data": [
+          [
+            0.1,
+            0.2,
+            0.3,
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0,
+            8.0,
+            9.0
+          ],
+          [
+            0.2,
+            0.3,
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0
+          ],
+          [
+            2103.0,
+            2040.0,
+            8117.0,
+            7447.0,
+            5516.0,
+            4741.0,
+            4398.0,
+            3836.0,
+            3452.0,
+            3226.0,
+            2967.0,
+            3295.0
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
-              "BACKROUND OF SCATERING NEUTRONS,SELF-ABSOPTION",
-              "ON THE SURFACE OF BORON COUNTERS,DIFFERENCE OF FLIGHT",
-              "PATH FOR IONIZATION CHAMBER AND COUNTERS (EQUAL 3 SM),",
-              "DEVIATION OF REACTION CROSS-SECTION B(N,A) FROM",
-              "1/V LAW.LAST CORRECTION WAS CALCULATED ACCORDING TO",
-              "ARTICLE M.G.SOWERBAY ET AL.AERE-R6316,(1970)."
+              "background of scattering neutrons, self-absorption",
+              "on the surface of boron counters,difference of flight",
+              "path for ionization chamber and counters (equal 3 sm),",
+              "deviation of reaction cross-section B(N,A) from",
+              "1/V law.Last correction was calculated according to",
+              "article M.G.Sowerbay et al.AERE-R6316,(1970)."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
-            "x4_code": null,
+            "x4_code": "(IOCH)",
             "free_txt": [
-              "IONIZATION CHAMBER FOR REGISTRATION THE FISSION",
-              "FRAGMENTS."
+              " Ionization chamber for registration the fission",
+              "fragments."
             ]
           },
           {
             "x4_code": "(PROPC)",
             "free_txt": [
-              " PROPORTIONAL BORON COUNTER FOR MEASUREMENT",
-              "THE NEUTRON FLUX."
+              " Proportional boron counter for measurement of",
+              "the neutron flux."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
-            "x4_code": "(LINAC)",
+            "x4_code": "(LINAC,4RUSKUR)",
             "free_txt": [
-              " ELECTRON LINEAR ACCELERATOR WITH ENERGY 60 MEV."
+              " Electron linear accelerator with",
+              "electrons energy 60 MeV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
-              " COINCIDENCE METHOD BETWEEN THE FISSION",
-              "FRAGMENTS AND NEUTRONS INDUCED THE FISSION"
+              " Coincidence method between the fission",
+              "fragments and neutrons induced the fission"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
-            "x4_code": "(FF)",
-            "free_txt": [
-              " FISSION FRAGMENTS"
-            ]
-          },
-          {
-            "x4_code": "(N)",
-            "free_txt": [
-              " NEUTRONS INDUCED THE U-235 FISSION"
-            ]
+            "x4_code": "(FF,N)",
+            "free_txt": []
           }
         ]
       }
     },
-    "002": {}
+    "002": {
+      "0": {
+        "rel-ref": [
+          {
+            "x4_code": "(N,20131003,A.J.Deruytter+,J,JNE,25,263,1971)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(N,10270001,G.De Saussure+,C,66PARIS,2,233,1966)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(N,,F.Brooks+,C,66PARIS,2,241,1966)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(N,40070001,Van-Shi-Di+,C,65SALZBURG,1,287,1965)",
+            "free_txt": [
+              " 4 data sets used for comparison in Table 1"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table 1 of R,INDC(CCP)-099,(6),76,1976"
+            ]
+          },
+          {
+            "x4_code": "(PRELM)",
+            "free_txt": []
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "rel-ref": [
+          {
+            "x4_code": "(N,10270001,G.De Saussure+,C,66PARIS,2,241,1966)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(N,,J.Blons+,C,70HELSINKI,1,469,1970)",
+            "free_txt": [
+              " Proceedings published as STI/PUB/259 by IAEA, 1970"
+            ]
+          },
+          {
+            "x4_code": "(N,20483001,J.Blons,J,NSE,51,130,1973)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(N,20422001,D.B.Gayther+,C,72VIENNA,,201,1972)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(N,10120001,J.R.Lemley+,J,NSE,43,281,1971)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(N,10302001,R.B.Perez+,J,NSE,55,203,1974)",
+            "free_txt": [
+              " 5 data sets used for comparison in Table 2"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table 2 of R,INDC(CCP)-099,(6),76,1976"
+            ]
+          },
+          {
+            "x4_code": "(PRELM)",
+            "free_txt": []
+          }
+        ]
+      }
+    }
   }
 }

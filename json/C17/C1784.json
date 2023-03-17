@@ -1,12 +1,18 @@
 {
   "entry": "C1784",
-  "last_updated": "2010-12-01",
-  "number_of_revisions": "1",
+  "last_updated": "2023-01-04",
+  "number_of_revisions": "2",
   "histories": [
     {
       "x4_code": "(20100526C)",
       "free_txt": [
         " Compiled by S.H."
+      ]
+    },
+    {
+      "x4_code": "(20220724A)",
+      "free_txt": [
+        " OS. REACTION corrected in sub.3"
       ]
     }
   ],
@@ -143,39 +149,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,81,045808,2010)",
-          "free_txt": [],
-          "publication_year": "2010"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1CANTMF)",
-          "free_txt": [
-            " Experiment performed at ISAC",
-            "radiofrequency  quadrupole and drift tube linear",
-            "accelerators using DRAGON recoil  spectrometer."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1CANTMF)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,81,045808,2010)",
+        "free_txt": [],
+        "publication_year": "2010",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1CANTMF)",
+        "free_txt": [
+          " Experiment performed at ISAC",
+          "radiofrequency  quadrupole and drift tube linear",
+          "accelerators using DRAGON recoil  spectrometer."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1CANTMF)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(1-H-1(12-MG-23,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(1-H-1(12-MG-23,0),,EN)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -193,13 +194,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(1-H-1(12-MG-23,G),,WID/STR)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(1-H-1(12-MG-23,G),,WID/STR)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -217,11 +220,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(12-MG-23(P,G)13-AL-24,,SGV,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "12-MG-23",
+              [
+                "P,G"
+              ],
+              "13-AL-24,,SGV,,,DERIV"
+            ],
+            "type": null,
+            "target": "12-MG-23",
+            "process": "P,G",
+            "sf49": "13-AL-24,,SGV,,,DERIV",
+            "sf4": "13-AL-24",
+            "sf5": null,
+            "sf6": "SGV",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-2",
@@ -285,45 +323,7 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(12-MG-23(P,G)13-AL-24,PAR,SGV,,,DERIV)",
-          "0": {
-            "code": [
-              "12-MG-23",
-              [
-                "P,G"
-              ],
-              "13-AL-24,PAR,SGV,,,DERIV"
-            ],
-            "type": null,
-            "target": "12-MG-23",
-            "process": "P,G",
-            "sf49": "13-AL-24,PAR,SGV,,,DERIV",
-            "sf4": "13-AL-24",
-            "sf5": "PAR",
-            "sf6": "SGV",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
-      "common": {
-        "heads": [
-          "E-LVL"
-        ],
-        "units": [
-          "KEV"
-        ],
-        "data": [
-          [
-            473.0
-          ]
-        ]
-      },
+      "common": null,
       "data": {
         "heads": [
           "KT",
@@ -600,8 +600,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(MAGSP)",
             "free_txt": [
@@ -625,10 +625,8 @@
               "by an array of 30 BGO scintillation detectors"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1CANTMF)",
             "free_txt": [
@@ -637,10 +635,8 @@
               "accelerators using DRAGON recoil  spectrometer."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -650,10 +646,8 @@
               "by RFQ and DTL linac."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,EDE,COINC)",
             "free_txt": [
@@ -661,10 +655,8 @@
               "and capture gamma rays required."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -675,8 +667,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-1,0.2,1.1)",
             "free_txt": [
@@ -709,10 +701,8 @@
               " Total uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -723,8 +713,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -732,18 +722,8 @@
               "properties measured in this work."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
-          {
-            "x4_code": "(E-LVL,13-AL-24)",
-            "free_txt": []
-          }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -768,10 +748,8 @@
               " 95% confidence level upper bound"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

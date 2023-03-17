@@ -51,44 +51,40 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(P,INR-1172,1970)",
-          "free_txt": [
-            " Method,table,cfd theory"
-          ],
-          "publication_year": "1970"
-        },
-        {
-          "x4_code": "(P,INR-1197,10,197005)",
-          "free_txt": [
-            " Identical to INR-1172"
-          ],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG)",
-          "free_txt": [
-            " 3MeV Van de Graaff accelerator"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(P,INR-1172,1970)",
+        "free_txt": [
+          " Method,table,cfd theory"
+        ],
+        "publication_year": "1970",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,INR-1197,10,197005)",
+        "free_txt": [
+          " Identical to INR-1172"
+        ],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG)",
+        "free_txt": [
+          " 3MeV Van de Graaff accelerator"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(49-IN-115(N,2N)49-IN-114-G/M,,SIG/RAT)",
-          "0": {
+      "0": {
+        "x4_code": "(49-IN-115(N,2N)49-IN-114-G/M,,SIG/RAT)",
+        "children": [
+          {
             "code": [
               "49-IN-115",
               [
@@ -106,11 +102,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(49-IN-115(N,2N)49-IN-114,,SIG)",
+        "children": [
+          {
+            "code": [
+              "49-IN-115",
+              [
+                "N,2N"
+              ],
+              "49-IN-114,,SIG"
+            ],
+            "type": null,
+            "target": "49-IN-115",
+            "process": "N,2N",
+            "sf49": "49-IN-114,,SIG",
+            "sf4": "49-IN-114",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -178,32 +209,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(49-IN-115(N,2N)49-IN-114,,SIG)",
-          "0": {
-            "code": [
-              "49-IN-115",
-              [
-                "N,2N"
-              ],
-              "49-IN-114,,SIG"
-            ],
-            "type": null,
-            "target": "49-IN-115",
-            "process": "N,2N",
-            "sf49": "49-IN-114,,SIG",
-            "sf4": "49-IN-114",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -277,8 +282,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -289,10 +294,8 @@
               "account"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -308,40 +311,32 @@
               " The beta- were measured using a GM counter"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               "The experimen.errors are statistical errors only"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG)",
             "free_txt": [
               " 3MeV Van de Graaff accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
               " T(d,n)alpha reaction"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -352,10 +347,8 @@
               " .The deuteron energy loss in the tritium target"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -365,10 +358,8 @@
               "the decay of the metastable state."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(82-PB-204(N,2N)82-PB-203,,SIG)",
             "free_txt": [
@@ -376,10 +367,8 @@
               "of the cross section populating the metastable state"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G)",
             "free_txt": [
@@ -398,20 +387,16 @@
               "beta+"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Spectrally pure indium"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

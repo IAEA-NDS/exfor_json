@@ -64,39 +64,35 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,82,064609,2010)",
-          "free_txt": [
-            "#doi:10.1103/PhysRevC.82.064609"
-          ],
-          "publication_year": "2010"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,2ITYPAD)",
-          "free_txt": [
-            " XTU Tandem accelerator"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(2ITYPAD)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,82,064609,2010)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.82.064609"
+        ],
+        "publication_year": "2010",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.82.064609"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,2ITYPAD)",
+        "free_txt": [
+          " XTU Tandem accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2ITYPAD)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-64(16-S-36,FUS),,DA,ER,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(28-NI-64(16-S-36,FUS),,DA,ER,REL)",
+        "children": [
+          {
             "code": [
               "28-NI-64",
               [
@@ -114,11 +110,72 @@
             "sf7": "ER",
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(28-NI-64(16-S-36,FUS),,SIG,ER)",
+        "children": [
+          {
+            "code": [
+              "28-NI-64",
+              [
+                "16-S-36,FUS"
+              ],
+              ",,SIG,ER"
+            ],
+            "type": null,
+            "target": "28-NI-64",
+            "process": "16-S-36,FUS",
+            "sf49": ",,SIG,ER",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": "ER",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(28-NI-64(16-S-36,FUS),,SIG,ER,SFC)",
+        "children": [
+          {
+            "code": [
+              "28-NI-64",
+              [
+                "16-S-36,FUS"
+              ],
+              ",,SIG,ER,SFC"
+            ],
+            "type": null,
+            "target": "28-NI-64",
+            "process": "16-S-36,FUS",
+            "sf49": ",,SIG,ER,SFC",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": "ER",
+            "sf8": "SFC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -205,56 +262,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(28-NI-64(16-S-36,FUS),,SIG,ER)",
-          "0": {
-            "code": [
-              "28-NI-64",
-              [
-                "16-S-36,FUS"
-              ],
-              ",,SIG,ER"
-            ],
-            "type": null,
-            "target": "28-NI-64",
-            "process": "16-S-36,FUS",
-            "sf49": ",,SIG,ER",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": "ER",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(28-NI-64(16-S-36,FUS),,SIG,ER,SFC)",
-          "0": {
-            "code": [
-              "28-NI-64",
-              [
-                "16-S-36,FUS"
-              ],
-              ",,SIG,ER,SFC"
-            ],
-            "type": null,
-            "target": "28-NI-64",
-            "process": "16-S-36,FUS",
-            "sf49": ",,SIG,ER,SFC",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": "ER",
-            "sf8": "SFC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-SYS"
@@ -420,8 +427,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTAD)",
             "free_txt": [
@@ -433,10 +440,8 @@
               " -10 degree to +10 degree in steps of 1 degree."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -446,10 +451,8 @@
               " for similar systems."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(MCPLT,SIBAR,TELES)",
             "free_txt": [
@@ -458,58 +461,46 @@
               " electrostatic deflector setup."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainties."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2ITYPAD)",
             "free_txt": [
               " XTU Tandem accelerator"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(ER)",
             "free_txt": [
               "Evaporation residues."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,D0641001,A.M.Stefanini+,J,PR/C,78,044607,2008)",
             "free_txt": [
               " Detector description."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(28-NI-64,ENR=0.996)",
             "free_txt": [
@@ -522,8 +513,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -534,8 +525,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS)",
             "free_txt": [
@@ -543,10 +534,8 @@
               "estimated to be accurate within +/- 7 %."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

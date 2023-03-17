@@ -156,32 +156,80 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PL/B,718,441,2012)",
-          "free_txt": [],
-          "publication_year": "2012"
-        },
-        {
-          "x4_code": "(S,CERN-PROC-2010-001,(2),345,2010)",
-          "free_txt": [
-            " same data.",
-            " Other data from this ref. compiled in O2346."
-          ],
-          "publication_year": "2010"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2FR GAN)",
-          "free_txt": [],
-          "facility_type": "(CYCLO)",
-          "institute": "(2FR GAN)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,PL/B,718,441,2012)",
+        "free_txt": [],
+        "publication_year": "2012",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(S,CERN-PROC-2010-001,(2),345,2010)",
+        "free_txt": [
+          " same data.",
+          " Other data from this ref. compiled in O2346."
+        ],
+        "publication_year": "2010",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2FR GAN)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2FR GAN)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "((1-H-1(2-HE-8,T)2-HE-6,PAR,DA,RSD)=(2-HE-8(P,T)2-HE-6,PAR,DA))",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "2-HE-8,T"
+              ],
+              "2-HE-6,PAR,DA,RSD"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "2-HE-8,T",
+            "sf49": "2-HE-6,PAR,DA,RSD",
+            "sf4": "2-HE-6",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "RSD",
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "2-HE-8",
+              [
+                "P,T"
+              ],
+              "2-HE-6,PAR,DA"
+            ],
+            "type": null,
+            "target": "2-HE-8",
+            "process": "P,T",
+            "sf49": "2-HE-6,PAR,DA",
+            "sf4": "2-HE-6",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -206,51 +254,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(2-HE-8,T)2-HE-6,PAR,DA,RSD)=(2-HE-8(P,T)2-HE-6,PAR,DA))",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "2-HE-8,T"
-              ],
-              "2-HE-6,PAR,DA,RSD"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "2-HE-8,T",
-            "sf49": "2-HE-6,PAR,DA,RSD",
-            "sf4": "2-HE-6",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "RSD",
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "2-HE-8",
-              [
-                "P,T"
-              ],
-              "2-HE-6,PAR,DA"
-            ],
-            "type": null,
-            "target": "2-HE-8",
-            "process": "P,T",
-            "sf49": "2-HE-6,PAR,DA",
-            "sf4": "2-HE-6",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -544,8 +547,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SISD,CSICR)",
             "free_txt": [
@@ -556,10 +559,8 @@
               "by the second stage, a 4 cm-thick CsI-crystal detector."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS)",
             "free_txt": [
@@ -576,18 +577,14 @@
               " Statistical error"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2FR GAN)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -597,10 +594,8 @@
               "correlations."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE,TOF)",
             "free_txt": []
@@ -609,10 +604,8 @@
             "x4_code": "(COINC)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(O,D0359002,F.Skaza+,J,PL/B,619,82,2005)",
             "free_txt": [
@@ -631,10 +624,8 @@
             "x4_code": "(I,,E.Pollacco+,J,EPJ/AS,25,287,2012)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -642,10 +633,8 @@
               "polypropylene (CH2)n."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -662,8 +651,8 @@
       }
     },
     "002": {
-      "level-prop": {
-        "0": [
+      "0": {
+        "level-prop": [
           {
             "x4_code": "(2-HE-6,E-LVL=0.0,SPIN=0.,PARITY=+1.)",
             "free_txt": []

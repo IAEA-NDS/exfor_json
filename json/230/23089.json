@@ -49,50 +49,47 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(S,JAEA-C-2009-004,145,2009)",
-          "free_txt": [
-            " Main reference, table for",
-            "  cross section and graph for gamma spectrum are given"
-          ],
-          "publication_year": "2009"
-        },
-        {
-          "x4_code": "(J,KPS,59,(2),1844,2011)",
-          "free_txt": [
-            ".Graphs are given"
-          ],
-          "publication_year": "2011",
-          "doi": "10.3938/jkps.59.1844"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,2JPNTIT)",
-          "free_txt": [
-            " The 3-MV PELLETRON accelerator of the",
-            " Research Laboratory For Nuclear Reactors at the Tokyo",
-            " Institute of Technology."
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(2JPNTIT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(S,JAEA-C-2009-004,145,2009)",
+        "free_txt": [
+          " Main reference, table for",
+          "  cross section and graph for gamma spectrum are given"
+        ],
+        "publication_year": "2009",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,KPS,59,(2),1844,2011)",
+        "free_txt": [
+          "#doi:10.3938/jkps.59.1844",
+          ".Graphs are given"
+        ],
+        "publication_year": "2011",
+        "pointer": "0",
+        "doi": "10.3938/jkps.59.1844"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,2JPNTIT)",
+        "free_txt": [
+          " The 3-MV PELLETRON accelerator of the",
+          " Research Laboratory For Nuclear Reactors at the Tokyo",
+          " Institute of Technology."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2JPNTIT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(38-SR-88(N,G)38-SR-89,,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(38-SR-88(N,G)38-SR-89,,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "38-SR-88",
               [
@@ -110,11 +107,74 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Averaged over energy                              interval in data section"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Averaged over energy                              interval in data section"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(38-SR-88(N,G)38-SR-89,,MLT/DE,,AV)",
+        "children": [
+          {
+            "code": [
+              "38-SR-88",
+              [
+                "N,G"
+              ],
+              "38-SR-89,,MLT/DE,,AV"
+            ],
+            "type": null,
+            "target": "38-SR-88",
+            "process": "N,G",
+            "sf49": "38-SR-89,,MLT/DE,,AV",
+            "sf4": "38-SR-89",
+            "sf5": null,
+            "sf6": "MLT/DE",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Averaged over                  energy interval 10.0 - 86.8 keV"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(38-SR-88(N,G)38-SR-89,,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "38-SR-88",
+              [
+                "N,G"
+              ],
+              "38-SR-89,,SIG,,AV"
+            ],
+            "type": null,
+            "target": "38-SR-88",
+            "process": "N,G",
+            "sf49": "38-SR-89,,SIG,,AV",
+            "sf4": "38-SR-89",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Averaged over                               energy interval"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -186,32 +246,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(38-SR-88(N,G)38-SR-89,,MLT/DE,,AV)",
-          "0": {
-            "code": [
-              "38-SR-88",
-              [
-                "N,G"
-              ],
-              "38-SR-89,,MLT/DE,,AV"
-            ],
-            "type": null,
-            "target": "38-SR-88",
-            "process": "N,G",
-            "sf49": "38-SR-89,,MLT/DE,,AV",
-            "sf4": "38-SR-89",
-            "sf5": null,
-            "sf6": "MLT/DE",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Averaged over                  energy interval 10.0 - 86.8 keV"
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -233,32 +267,6 @@
       "data": null
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(38-SR-88(N,G)38-SR-89,,SIG,,AV)",
-          "0": {
-            "code": [
-              "38-SR-88",
-              [
-                "N,G"
-              ],
-              "38-SR-89,,SIG,,AV"
-            ],
-            "type": null,
-            "target": "38-SR-88",
-            "process": "N,G",
-            "sf49": "38-SR-89,,SIG,,AV",
-            "sf4": "38-SR-89",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Averaged over                               energy interval"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -297,8 +305,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -307,10 +315,8 @@
               " simulations and for sample impurities."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -328,10 +334,8 @@
               "         and 5 mm length for neutron flux monitoring"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2JPNTIT)",
             "free_txt": [
@@ -340,10 +344,8 @@
               " Institute of Technology."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -354,10 +356,8 @@
               " average proton current 9 micro-a."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -367,10 +367,8 @@
               " lation detector for the blank runs."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -389,10 +387,8 @@
               "   Intermittent sample-monitor-blank irradiation"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(11679023,R.L.Macklin+,J,PR,159,1007,1967)",
             "free_txt": [
@@ -403,26 +399,20 @@
             "x4_code": "(,P.G.Young+,3,ENDF/B-VII.0,7925,2006)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G,N)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,22482001,S.Mizuno+,J,NST,36,(6),493,199906)",
             "free_txt": [
@@ -430,10 +420,8 @@
               "    mental and analysis details"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -469,8 +457,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -481,10 +469,8 @@
               " capture cross sections"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -492,10 +478,8 @@
               "            in percent"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -508,18 +492,14 @@
               "     Average neutron energy from Table 3"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(D,30369005,J.W.Boldeman+,J,NP/A,269,397,197610)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -530,8 +510,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(UNOBT)",
             "free_txt": [
@@ -543,28 +523,24 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "   Error bar on the curve, not specified"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               "   Average energy of the energy interval, keV"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

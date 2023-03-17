@@ -55,39 +55,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,86,064605,2012)",
-          "free_txt": [],
-          "publication_year": "2012"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALAS)",
-          "free_txt": [
-            " Measurement performed using Weapons",
-            "Neutron Research (WNR) beam at 30. right at the Los",
-            "Alamos Neutron Science Center LANSCE."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,86,064605,2012)",
+        "free_txt": [],
+        "publication_year": "2012",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALAS)",
+        "free_txt": [
+          " Measurement performed using Weapons",
+          "Neutron Research (WNR) beam at 30. right at the Los",
+          "Alamos Neutron Science Center LANSCE."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,NU/DE,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,NU/DE,,AV)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -105,11 +100,74 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,NU/DE,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,NU/DE,,AV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,NU/DE,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "NU/DE",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)0-NN-1,,KE)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "0-NN-1,,KE"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "0-NN-1,,KE",
+            "sf4": "0-NN-1",
+            "sf5": null,
+            "sf6": "KE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -685,32 +743,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,NU/DE,,AV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,NU/DE,,AV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,NU/DE,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "NU/DE",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1874,32 +1906,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)0-NN-1,,KE)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "0-NN-1,,KE"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "0-NN-1,,KE",
-            "sf4": "0-NN-1",
-            "sf5": null,
-            "sf6": "KE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2008,8 +2014,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(PPAC)",
             "free_txt": [
@@ -2033,10 +2039,8 @@
               "discrimination."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALAS)",
             "free_txt": [
@@ -2045,10 +2049,8 @@
               "Alamos Neutron Science Center LANSCE."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": [
@@ -2057,10 +2059,8 @@
               "impinging on a tungsten target."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,PSD)",
             "free_txt": [
@@ -2072,10 +2072,8 @@
               "neutron detector."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2088,8 +2086,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -2100,10 +2098,8 @@
               " - systematic uncertainty in flight path"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2115,8 +2111,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -2127,10 +2123,8 @@
               " - systematic uncertainty in flight path"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2142,8 +2136,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -2156,10 +2150,8 @@
               " Total uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

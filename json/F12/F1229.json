@@ -88,42 +88,102 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NIM/A,737,248,2014)",
-          "free_txt": [
-            "#doi:10.1016/j.nima.2013.11.072"
-          ],
-          "publication_year": "2014"
-        },
-        {
-          "x4_code": "(J,FCY/L,10,(7),1174,2013)",
-          "free_txt": [],
-          "publication_year": "2013"
-        },
-        {
-          "x4_code": "(J,PPN/L,10,(7),717,2013)",
-          "free_txt": [
-            " English translation",
-            "#doi:10.1134/S1547477114010105"
-          ],
-          "publication_year": "2013"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,NIM/A,737,248,2014)",
+        "free_txt": [
+          "#doi:10.1016/j.nima.2013.11.072"
+        ],
+        "publication_year": "2014",
+        "pointer": "0",
+        "doi": "10.1016/j.nima.2013.11.072"
+      },
+      {
+        "x4_code": "(J,FCY/L,10,(7),1174,2013)",
+        "free_txt": [],
+        "publication_year": "2013",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PPN/L,10,(7),717,2013)",
+        "free_txt": [
+          " English translation",
+          "#doi:10.1134/S1547477114010105"
+        ],
+        "publication_year": "2013",
+        "pointer": "0",
+        "doi": "10.1134/S1547477114010105"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,4RUSTPI)",
+        "free_txt": [
+          " Pulsed plasma Hall accelerator was",
+          "used."
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(4RUSTPI)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(1-H-2(P,G)2-HE-3,,SIG,,SFC)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "P,G"
+              ],
+              "2-HE-3,,SIG,,SFC"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "P,G",
+            "sf49": "2-HE-3,,SIG,,SFC",
+            "sf4": "2-HE-3",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SFC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,4RUSTPI)",
-          "free_txt": [
-            " Pulsed plasma Hall accelerator was",
-            "used."
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(4RUSTPI)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(1-H-2(P,G)2-HE-3,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "P,G"
+              ],
+              "2-HE-3,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "P,G",
+            "sf49": "2-HE-3,,SIG",
+            "sf4": "2-HE-3",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -143,32 +203,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(P,G)2-HE-3,,SIG,,SFC)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "P,G"
-              ],
-              "2-HE-3,,SIG,,SFC"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "P,G",
-            "sf49": "2-HE-3,,SIG,,SFC",
-            "sf4": "2-HE-3",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -216,32 +250,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(P,G)2-HE-3,,SIG)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "P,G"
-              ],
-              "2-HE-3,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "P,G",
-            "sf49": "2-HE-3,,SIG",
-            "sf4": "2-HE-3",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -291,8 +299,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -301,10 +309,8 @@
               "detectors (10*100*400 mm3) placed around the target."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,4RUSTPI)",
             "free_txt": [
@@ -312,18 +318,14 @@
               "used."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(BCINT)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -333,10 +335,8 @@
               "thick. The target diameter was 97 mm."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -347,8 +347,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -356,10 +356,8 @@
               "average value of proton- deuteron collision energy."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -367,10 +365,8 @@
               "energy."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -381,8 +377,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -391,10 +387,8 @@
               "the distribution function of probability."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -402,10 +396,8 @@
               "of the distribution function of probability."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

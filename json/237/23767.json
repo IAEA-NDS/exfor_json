@@ -96,26 +96,102 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,EPJ/CS,239,18006,2020)",
-          "free_txt": [
-            "#doi:10.1051/epjconf/202023918006"
-          ],
-          "publication_year": "2020"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,EPJ/CS,239,18006,2020)",
+        "free_txt": [
+          "#doi:10.1051/epjconf/202023918006"
+        ],
+        "publication_year": "2020",
+        "pointer": "0",
+        "doi": "10.1051/epjconf/202023918006"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2FR GRE)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2FR GRE)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),DL,NU)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",DL,NU"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",DL,NU",
+            "sf4": null,
+            "sf5": "DL",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2FR GRE)",
-          "free_txt": [],
-          "facility_type": "(REAC)",
-          "institute": "(2FR GRE)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "((92-U-235(N,F),DL/GRP,NU)/(92-U-235(N,F),DL,NU))",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",DL/GRP,NU"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",DL/GRP,NU",
+            "sf4": null,
+            "sf5": "DL/GRP",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",DL,NU"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",DL,NU",
+            "sf4": null,
+            "sf5": "DL",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -135,32 +211,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),DL,NU)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",DL,NU"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",DL,NU",
-            "sf4": null,
-            "sf5": "DL",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -204,51 +254,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-235(N,F),DL/GRP,NU)/(92-U-235(N,F),DL,NU))",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",DL/GRP,NU"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",DL/GRP,NU",
-            "sf4": null,
-            "sf5": "DL/GRP",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",DL,NU"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",DL,NU",
-            "sf4": null,
-            "sf5": "DL",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1"
@@ -310,8 +315,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -325,10 +330,8 @@
               "performed with the CONRAD code."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(LONGC)",
             "free_txt": [
@@ -340,10 +343,8 @@
               "energy in the energy range 100keV - 1MeV."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -357,18 +358,14 @@
               " the detector efficiency - 1%"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2FR GRE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -378,10 +375,8 @@
               "diameter."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -392,8 +387,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-2)",
             "free_txt": [
@@ -411,8 +406,8 @@
       }
     },
     "003": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
@@ -421,10 +416,8 @@
               "  with correlations T1/2 (s) = 8.93(0.98%)"
             ]
           }
-        ]
-      },
-      "covariance": {
-        "0": [
+        ],
+        "covariance": [
           {
             "x4_code": null,
             "free_txt": [

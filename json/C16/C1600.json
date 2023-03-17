@@ -40,37 +40,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ARI,65,1115,2007)",
-          "free_txt": [],
-          "publication_year": "2007"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USAWIS)",
-          "free_txt": [
-            " Low energy proton only cyclotron"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USAWIS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ARI,65,1115,2007)",
+        "free_txt": [],
+        "publication_year": "2007",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USAWIS)",
+        "free_txt": [
+          " Low energy proton only cyclotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USAWIS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-64(P,N)29-CU-64,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(28-NI-64(P,N)29-CU-64,,SIG)",
+        "children": [
+          {
             "code": [
               "28-NI-64",
               [
@@ -88,11 +83,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(28-NI-64(P,N)29-CU-64,,TTY,,SAT,DERIV)",
+        "children": [
+          {
+            "code": [
+              "28-NI-64",
+              [
+                "P,N"
+              ],
+              "29-CU-64,,TTY,,SAT,DERIV"
+            ],
+            "type": null,
+            "target": "28-NI-64",
+            "process": "P,N",
+            "sf49": "29-CU-64,,TTY,,SAT,DERIV",
+            "sf4": "29-CU-64",
+            "sf5": null,
+            "sf6": "TTY",
+            "sf7": null,
+            "sf8": "SAT",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(28-NI-64(P,N)29-CU-64,,TTY,,SAT)",
+        "children": [
+          {
+            "code": [
+              "28-NI-64",
+              [
+                "P,N"
+              ],
+              "29-CU-64,,TTY,,SAT"
+            ],
+            "type": null,
+            "target": "28-NI-64",
+            "process": "P,N",
+            "sf49": "29-CU-64,,TTY,,SAT",
+            "sf4": "29-CU-64",
+            "sf5": null,
+            "sf6": "TTY",
+            "sf7": null,
+            "sf8": "SAT",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -212,32 +270,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-64(P,N)29-CU-64,,TTY,,SAT,DERIV)",
-          "0": {
-            "code": [
-              "28-NI-64",
-              [
-                "P,N"
-              ],
-              "29-CU-64,,TTY,,SAT,DERIV"
-            ],
-            "type": null,
-            "target": "28-NI-64",
-            "process": "P,N",
-            "sf49": "29-CU-64,,TTY,,SAT,DERIV",
-            "sf4": "29-CU-64",
-            "sf5": null,
-            "sf6": "TTY",
-            "sf7": null,
-            "sf8": "SAT",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -259,32 +291,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-64(P,N)29-CU-64,,TTY,,SAT)",
-          "0": {
-            "code": [
-              "28-NI-64",
-              [
-                "P,N"
-              ],
-              "29-CU-64,,TTY,,SAT"
-            ],
-            "type": null,
-            "target": "28-NI-64",
-            "process": "P,N",
-            "sf49": "29-CU-64,,TTY,,SAT",
-            "sf4": "29-CU-64",
-            "sf5": null,
-            "sf6": "TTY",
-            "sf7": null,
-            "sf8": "SAT",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -324,26 +330,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(CYCLO,1USAWIS)",
             "free_txt": [
               " Low energy proton only cyclotron"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,CHSEP)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(29-CU-63(P,N)30-ZN-63,,SIG)",
             "free_txt": []
@@ -356,18 +358,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Total error, no information given"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -375,10 +375,8 @@
               "separated by Al foils for energy degradation"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -389,18 +387,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Determined from the measured excitation function"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -408,10 +404,8 @@
               "separated by Al foils for energy degradation"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,C1600002)",
             "free_txt": []
@@ -426,8 +420,8 @@
       }
     },
     "004": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -464,10 +458,8 @@
               "   64Ni  - 94%"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

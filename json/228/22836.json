@@ -58,42 +58,37 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(S,JAERI-C-2003-006,133,2003)",
-          "free_txt": [
-            "   Main reference, data",
-            "                                are given"
-          ],
-          "publication_year": "2003"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,2JPNTIT)",
-          "free_txt": [
-            " The 3.2 MV Pelletron accelerator of the",
-            " Research Laboratory for Nuclear Reactors at the Tokyo",
-            " Institute of Technology."
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(2JPNTIT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(S,JAERI-C-2003-006,133,2003)",
+        "free_txt": [
+          "   Main reference, data",
+          "                                are given"
+        ],
+        "publication_year": "2003",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,2JPNTIT)",
+        "free_txt": [
+          " The 3.2 MV Pelletron accelerator of the",
+          " Research Laboratory for Nuclear Reactors at the Tokyo",
+          " Institute of Technology."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2JPNTIT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(N,G)83-BI-210-G,,SIG,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(83-BI-209(N,G)83-BI-210-G,,SIG,,SPA)",
+        "children": [
+          {
             "code": [
               "83-BI-209",
               [
@@ -111,11 +106,46 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Averaged over    neutron spectrum width"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Averaged over    neutron spectrum width"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(83-BI-209(N,G)83-BI-210-M,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "N,G"
+              ],
+              "83-BI-210-M,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "N,G",
+            "sf49": "83-BI-210-M,,SIG,,SPA",
+            "sf4": "83-BI-210-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -157,32 +187,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(N,G)83-BI-210-M,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "N,G"
-              ],
-              "83-BI-210-M,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "N,G",
-            "sf49": "83-BI-210-M,,SIG,,SPA",
-            "sf4": "83-BI-210-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -220,8 +224,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -240,10 +244,8 @@
               " Li-6 glass detector for neutron flux monitoring"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2JPNTIT)",
             "free_txt": [
@@ -252,20 +254,16 @@
               " Institute of Technology."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
               "  1.5-ns bunched proton beam"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
@@ -276,10 +274,8 @@
               "    For incident neutron spectrum measurement"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,P.G.Young,3,ENDF/B-VI.0,7925,1984)",
             "free_txt": [
@@ -287,18 +283,14 @@
               "                for 197Au(MAT=7925), Young P.G., 1984"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -306,10 +298,8 @@
               " gold backing 15 mm diam and 0.1 mm thick"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -320,26 +310,22 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(83-BI-210-G,5.013D,B-)",
             "free_txt": []
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               "  Data agrees with that of R.Booth at 24 keV"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,R.Booth+,J,PR,112,226,1958)",
             "free_txt": [
@@ -351,8 +337,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(83-BI-210-M,3.04E+6YR,B-)",
             "free_txt": []

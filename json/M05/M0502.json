@@ -1,7 +1,7 @@
 {
   "entry": "M0502",
-  "last_updated": "2016-05-03",
-  "number_of_revisions": "4",
+  "last_updated": "2022-11-08",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19971015C)",
@@ -16,10 +16,17 @@
         " Corrected by V.Varlamov: dates,",
         " ERR-ANALYS, STATUS, INC-SOUCE, SAMPLE, lowercase."
       ]
+    },
+    {
+      "x4_code": "(20220816U)",
+      "free_txt": [
+        " Corrected by VV and SD: INSTITUTE updated,",
+        " STATUS."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Fission yields of Bi-209 and Pb-nat nuclei induced by photon beams of 226 mev maximum energy from compton backscattered laser light.",
+    "title": "Fission yields of Bi-209 and Pb-nat nuclei induced by photon beams of 226 MeV maximum energy from Compton backscattered laser light.",
     "authors": [
       {
         "name": "M.L.Terranova"
@@ -42,7 +49,7 @@
     ],
     "institutes": [
       {
-        "x4_code": "(2ITYROM)",
+        "x4_code": "(2ITYUTV)",
         "free_txt": ""
       },
       {
@@ -54,37 +61,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NC/A,105,197,1992)",
-          "free_txt": [],
-          "publication_year": "1992"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USABNL)",
-          "free_txt": [
-            " Laser electron gamma source LEGS."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USABNL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NC/A,105,197,1992)",
+        "free_txt": [],
+        "publication_year": "1992",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USABNL)",
+        "free_txt": [
+          " Laser electron gamma source LEGS."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USABNL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-0(G,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(82-PB-0(G,F),,SIG)",
+        "children": [
+          {
             "code": [
               "82-PB-0",
               [
@@ -102,11 +104,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(83-BI-209(G,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "G,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "G,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -133,32 +170,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(G,F),,SIG)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "G,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "G,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -187,89 +198,74 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "The direct fission fragment track counting."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
-              "The overall attenuation effect of a typical  300  MeV",
-              " photon  beam  going through the stack has been found",
-              " out to be 1.3 %."
+              "The overall attenuation effect of a typical 300 MeV",
+              "photon beam going through the stack has been found",
+              "out to be 1.3%."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
-              "The yields   of  photofission  reactions  induced  in",
-              " Bi-209 and Pb-nat by quasimonochromatic photon  beam",
-              " of  226  MeV  maximum  energy  have been measured by",
-              " using Makrofol plates  as  solid-state  detector  of",
-              " fission tracks."
+              "The yields of photofission reactions induced in",
+              "Bi-209 and Pb-nat by quasimonochromatic photon beam",
+              "of 226 MeV maximum energy have been measured by using",
+              "Makrofol plates as solid-state detector of fission",
+              "tracks."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": [
-              " 100  Microns  thick MACROFOL fission-track-etch",
+              " 100 microns thick MACROFOL fission-track-etch",
               " detectors."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " The  total - statistical  plus systematic -",
-              " errors are given."
+              " The total - statistical plus systematic -",
+              "errors are given."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USABNL)",
             "free_txt": [
               " Laser electron gamma source LEGS."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(LCS)",
             "free_txt": [
-              "  The    quasimonochromatic     photon     beams",
-              " obtained  by  laser  light  backscattering   against",
-              " high-energy  2.5  GeV  electrons  on  USA  BNL  LEGS",
-              " facility."
+              " The quasimonochromatic photon beams obtained by",
+              "laser light backscattering against high-energy 2.5",
+              "GeV electrons on USA BNL LEGS facility."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB,SITA)",
             "free_txt": []
@@ -278,8 +274,8 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -289,22 +285,21 @@
               " The sample thickness resulted to be 1.92 microns."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Data from Table I."
+              " Data from Table I of",
+              " J.Nuov.Cim.,A105(1992)197."
             ]
           }
         ]
       }
     },
     "003": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -315,14 +310,13 @@
               " microns."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Data from Table I."
+              " Data from Table I of",
+              " J.Nuov.Cim.,A105(1992)197."
             ]
           }
         ]

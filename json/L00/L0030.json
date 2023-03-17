@@ -47,33 +47,28 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,73PACIFI,1,175,7303)",
-          "free_txt": [],
-          "publication_year": "1973"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": []
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,73PACIFI,1,175,7303)",
+        "free_txt": [],
+        "publication_year": "1973",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC)",
+        "free_txt": [],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-7(G,X)0-NN-1,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(3-LI-7(G,X)0-NN-1,,SIG)",
+        "children": [
+          {
             "code": [
               "3-LI-7",
               [
@@ -91,11 +86,140 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " The sum: (G,N)+(G,N+P)+2(G,2N)+2(G,2N+P)."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((3-LI-7(G,N)3-LI-6,,SIG)+(3-LI-7(G,N+P)2-HE-5,,SIG))",
+        "children": [
+          {
+            "code": [
+              "3-LI-7",
+              [
+                "G,N"
+              ],
+              "3-LI-6,,SIG"
+            ],
+            "type": null,
+            "target": "3-LI-7",
+            "process": "G,N",
+            "sf49": "3-LI-6,,SIG",
+            "sf4": "3-LI-6",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": " The sum: (G,N)+(G,N+P)+2(G,2N)+2(G,2N+P)."
-        }
-      },
+          {
+            "code": [
+              "3-LI-7",
+              [
+                "G,N+P"
+              ],
+              "2-HE-5,,SIG"
+            ],
+            "type": null,
+            "target": "3-LI-7",
+            "process": "G,N+P",
+            "sf49": "2-HE-5,,SIG",
+            "sf4": "2-HE-5",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": " Threshold of (gamma,n+p) reaction is 11.8 MeV."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((3-LI-7(G,2N)3-LI-5,,SIG)+(3-LI-7(G,2N+P)2-HE-4,,SIG))",
+        "children": [
+          {
+            "code": [
+              "3-LI-7",
+              [
+                "G,2N"
+              ],
+              "3-LI-5,,SIG"
+            ],
+            "type": null,
+            "target": "3-LI-7",
+            "process": "G,2N",
+            "sf49": "3-LI-5,,SIG",
+            "sf4": "3-LI-5",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "3-LI-7",
+              [
+                "G,2N+P"
+              ],
+              "2-HE-4,,SIG"
+            ],
+            "type": null,
+            "target": "3-LI-7",
+            "process": "G,2N+P",
+            "sf49": "2-HE-4,,SIG",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": " Threshold of (gamma,2n+p) reaction is 11.0 MeV."
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(3-LI-7(G,X)0-NN-1,UNW,SIG)",
+        "children": [
+          {
+            "code": [
+              "3-LI-7",
+              [
+                "G,X"
+              ],
+              "0-NN-1,UNW,SIG"
+            ],
+            "type": null,
+            "target": "3-LI-7",
+            "process": "G,X",
+            "sf49": "0-NN-1,UNW,SIG",
+            "sf4": "0-NN-1",
+            "sf5": "UNW",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " The sum: (G,N)+(G,N+P)+(G,2N)+(G,2N+P)."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -296,51 +420,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((3-LI-7(G,N)3-LI-6,,SIG)+(3-LI-7(G,N+P)2-HE-5,,SIG))",
-          "0": {
-            "code": [
-              "3-LI-7",
-              [
-                "G,N"
-              ],
-              "3-LI-6,,SIG"
-            ],
-            "type": null,
-            "target": "3-LI-7",
-            "process": "G,N",
-            "sf49": "3-LI-6,,SIG",
-            "sf4": "3-LI-6",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "3-LI-7",
-              [
-                "G,N+P"
-              ],
-              "2-HE-5,,SIG"
-            ],
-            "type": null,
-            "target": "3-LI-7",
-            "process": "G,N+P",
-            "sf49": "2-HE-5,,SIG",
-            "sf4": "2-HE-5",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "+",
-          "free_text": " Threshold of (gamma,n+p) reaction is 11.8 MeV."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -544,51 +623,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((3-LI-7(G,2N)3-LI-5,,SIG)+(3-LI-7(G,2N+P)2-HE-4,,SIG))",
-          "0": {
-            "code": [
-              "3-LI-7",
-              [
-                "G,2N"
-              ],
-              "3-LI-5,,SIG"
-            ],
-            "type": null,
-            "target": "3-LI-7",
-            "process": "G,2N",
-            "sf49": "3-LI-5,,SIG",
-            "sf4": "3-LI-5",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "3-LI-7",
-              [
-                "G,2N+P"
-              ],
-              "2-HE-4,,SIG"
-            ],
-            "type": null,
-            "target": "3-LI-7",
-            "process": "G,2N+P",
-            "sf49": "2-HE-4,,SIG",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "+",
-          "free_text": " Threshold of (gamma,2n+p) reaction is 11.0 MeV."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -714,32 +748,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-7(G,X)0-NN-1,UNW,SIG)",
-          "0": {
-            "code": [
-              "3-LI-7",
-              [
-                "G,X"
-              ],
-              "0-NN-1,UNW,SIG"
-            ],
-            "type": null,
-            "target": "3-LI-7",
-            "process": "G,X",
-            "sf49": "0-NN-1,UNW,SIG",
-            "sf4": "0-NN-1",
-            "sf5": "UNW",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " The sum: (G,N)+(G,N+P)+(G,2N)+(G,2N+P)."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -942,16 +950,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(LINAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [

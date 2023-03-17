@@ -86,49 +86,45 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "((S,ISINN-6,205,199805)=(S,JINR-E3-98-202,205,199805))",
-          "free_txt": [
-            "                               Main reference"
-          ],
-          "publication_year": "1998"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2GERKFK)",
-          "free_txt": [
-            "   3.75 MV Van De Graaff accelerator of",
-            "   Karlsruhe"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2GERKFK)"
-        },
-        {
-          "x4_code": "(VDG,2GERTUE)",
-          "free_txt": [
-            "   3.75 MV Van de Graaff accelerator of",
-            "    Tuebingen University Physical Inst."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2GERTUE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((S,ISINN-6,205,199805)=(S,JINR-E3-98-202,205,199805))",
+        "free_txt": [
+          "                               Main reference"
+        ],
+        "publication_year": "1998",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2GERKFK)",
+        "free_txt": [
+          "   3.75 MV Van De Graaff accelerator of",
+          "   Karlsruhe"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2GERKFK)"
+      },
+      {
+        "x4_code": "(VDG,2GERTUE)",
+        "free_txt": [
+          "   3.75 MV Van de Graaff accelerator of",
+          "    Tuebingen University Physical Inst."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2GERTUE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(20-CA-46(N,G)20-CA-47,,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(20-CA-46(N,G)20-CA-47,,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "20-CA-46",
               [
@@ -146,11 +142,46 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(20-CA-46(N,G)20-CA-47,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "20-CA-46",
+              [
+                "N,G"
+              ],
+              "20-CA-47,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "20-CA-46",
+            "process": "N,G",
+            "sf49": "20-CA-47,,SIG,,SPA",
+            "sf4": "20-CA-47",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Averaged over    spectrum interval"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -197,32 +228,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(20-CA-46(N,G)20-CA-47,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "20-CA-46",
-              [
-                "N,G"
-              ],
-              "20-CA-47,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "20-CA-46",
-            "process": "N,G",
-            "sf49": "20-CA-47,,SIG,,SPA",
-            "sf4": "20-CA-47",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Averaged over    spectrum interval"
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -277,16 +282,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-mon": {
-        "0": [
+      "0": {
+        "decay-mon": [
           {
             "x4_code": "(79-AU-198-G,2.69D,DG,411.8047,0.9550)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -299,10 +302,8 @@
               "   Standard error"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2GERKFK)",
             "free_txt": [
@@ -317,10 +318,8 @@
               "    Tuebingen University Physical Inst."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": []
@@ -329,10 +328,8 @@
             "x4_code": "(P-T)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -349,10 +346,8 @@
               "   Stack targets irradiated"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(22099002,W.Ratynski+,J,PR/C,37,595,1988)",
             "free_txt": []
@@ -361,18 +356,14 @@
             "x4_code": "(,R.L.Macklin,W,MACKLIN,1982)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,MXW)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,22145001,F.Kaeppeler+,J,PR/C,35,936,1987)",
             "free_txt": [
@@ -387,10 +378,8 @@
               "details on fast cyclic activation method"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -402,26 +391,22 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(20-CA-47,4.536D,DG,1297.09,0.74)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
               "  Efficiency 98.6%"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -446,10 +431,8 @@
               " Sample weight error"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -461,10 +444,8 @@
               "spectrum at temperatures of kT=25 and 52 keV"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(20-CA-46,ENR=0.04987)",
             "free_txt": [
@@ -477,10 +458,8 @@
               " Ca-46 Content is 4.987%, Ca-48 content is 1.607%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -491,26 +470,22 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(20-CA-47,4.536D,DG,1297.09,0.74)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
               "  Efficiency 98.6%"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -535,10 +510,8 @@
               " Sample weight error"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -546,10 +519,8 @@
               "using thin Li-targets (2.5 mu-m)."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(20-CA-46,ENR=0.04987)",
             "free_txt": [
@@ -562,10 +533,8 @@
               " Ca-46 content is 4.987%, Ca-48 content is 1.607%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

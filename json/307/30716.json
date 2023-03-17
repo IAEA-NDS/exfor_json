@@ -1,7 +1,7 @@
 {
   "entry": "30716",
-  "last_updated": "2009-11-27",
-  "number_of_revisions": "4",
+  "last_updated": "2023-01-20",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19860923C)",
@@ -19,14 +19,21 @@
     {
       "x4_code": "(20090725A)",
       "free_txt": [
-        " SD:Updated to new date formats,lower case.",
-        "COMMON section and codes for uncertainties were",
-        "added in Subent 001"
+        " SD: Updated to new date formats, lower case",
+        " COMMON section and codes for uncertainties were added",
+        "in Subent 001"
+      ]
+    },
+    {
+      "x4_code": "(20220818A)",
+      "free_txt": [
+        " VT. Revision in 002-003.",
+        "             DETECTOR: 105*50 cm -> 105*50 mm replaced"
       ]
     }
   ],
   "bib_record": {
-    "title": "Fast neutron elastic scattering differential cross sections from U-238",
+    "title": "Fast neutron elastic scattering differential cross sections from 238U",
     "authors": [
       {
         "name": "Shen Guanran"
@@ -62,27 +69,83 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CNP,6,193,198408)",
-          "free_txt": [
-            " in Chinese, English abstract.",
-            "Differential cross sections given in graphical form."
-          ],
-          "publication_year": "1984"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,CNP,6,193,198408)",
+        "free_txt": [
+          " in Chinese, English abstract.",
+          "Differential cross sections given in graphical form."
+        ],
+        "publication_year": "1984",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CCW,3CPRAEP)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CCW)",
+        "institute": "(3CPRAEP)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(92-U-238(N,SCT)92-U-238,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,SCT"
+              ],
+              "92-U-238,PAR,DA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,SCT",
+            "sf49": "92-U-238,PAR,DA",
+            "sf4": "92-U-238",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CCW,3CPRAEP)",
-          "free_txt": [],
-          "facility_type": "(CCW)",
-          "institute": "(3CPRAEP)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,SCT)92-U-238,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,SCT"
+              ],
+              "92-U-238,PAR,SIG"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,SCT",
+            "sf49": "92-U-238,PAR,SIG",
+            "sf4": "92-U-238",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -132,33 +195,19 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,EL)92-U-238,,DA)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,EL"
-              ],
-              "92-U-238,,DA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,EL",
-            "sf49": "92-U-238,,DA",
-            "sf4": "92-U-238",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+      "common": {
+        "heads": [
+          "E-EXC-MAX"
+        ],
+        "units": [
+          "MEV"
+        ],
+        "data": [
+          [
+            1.0
+          ]
+        ]
       },
-      "common": null,
       "data": {
         "heads": [
           "ANG",
@@ -325,33 +374,19 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,EL)92-U-238,,SIG)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,EL"
-              ],
-              "92-U-238,,SIG"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,EL",
-            "sf49": "92-U-238,,SIG",
-            "sf4": "92-U-238",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+      "common": {
+        "heads": [
+          "E-EXC-MAX"
+        ],
+        "units": [
+          "MEV"
+        ],
+        "data": [
+          [
+            1.0
+          ]
+        ]
       },
-      "common": null,
       "data": {
         "heads": [
           "DATA",
@@ -374,8 +409,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -385,20 +420,16 @@
               "scattering."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
-              " Liquid,105*50 cm,ST-451 type. China made."
+              " Liquid, 105*50 mm, ST-451 type. China made."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -443,75 +474,66 @@
               "    counting - 3%"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CCW,3CPRAEP)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ASSOP,TOF)",
             "free_txt": [
-              " Flight path 3m, time resolution at 14.2 MeV",
-              "neutron energy is about 1 nsec."
+              " Flight path 3 m, time resolution at 14.2",
+              "MeV neutron energy is about 1 nsec."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
             "free_txt": [
-              "  192.1mb/sr,at 25 degree,were",
-              "taken as reference.  Polythelene was used."
+              " 192.1 mb/sr, at 25 degree,",
+              "were taken as reference. Polyethylene was used."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "Depleted metallic uranium,hollow cylindric, out diam.",
-              "3cm, inner diameter 1cm, high 3cm.Total weight 328.5g"
+              "Depleted metallic uranium, hollow cylindric, out",
+              "diam. 3 cm, inner diameter 1 cm, high 3 cm. Total",
+              "weight 328.5 g"
             ]
           }
         ]
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
               " Numerical data taken from Tang Hongoing as",
-              "priv.comm. of 12-2-1988,corresponding to Fig.9 of",
-              "Chin.J.of Nucl.Phys.6,193,1984."
+              "priv.comm. of 12-2-1988, corresponding to Fig.9 of",
+              "Chin.J.of Nucl.Phys.6 (1984)193."
             ]
           }
         ]
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTAD)",
             "free_txt": [
@@ -519,10 +541,8 @@
               "angular distribution."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,30716002)",
             "free_txt": []
@@ -531,7 +551,7 @@
             "x4_code": "(TABLE)",
             "free_txt": [
               " Value taken from Chinese J.of Nuclear",
-              "                           Physics,6,193,8408."
+              "                           Physics,6(1984)193"
             ]
           }
         ]

@@ -181,39 +181,87 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,IMP/E,18,2056,2009)",
-          "free_txt": [
-            " Prelim.data"
-          ],
-          "publication_year": "2009"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2FR GAN)",
-          "free_txt": [
-            " The secondary beam of O-20 was produced",
-            "by the ISOL method using the SPIRAL facility at GANIL"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2FR GAN)"
-        },
-        {
-          "x4_code": "(PRJFS,2FR GAN)",
-          "free_txt": [
-            " A primary beam of Ne-22 was accelerated",
-            "using the two CSS cyclotrons up to an energy of",
-            "  77.5 A*MeV and stopped in a thick carbon target."
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(2FR GAN)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,IMP/E,18,2056,2009)",
+        "free_txt": [
+          " Prelim.data"
+        ],
+        "publication_year": "2009",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2FR GAN)",
+        "free_txt": [
+          " The secondary beam of O-20 was produced",
+          "by the ISOL method using the SPIRAL facility at GANIL"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2FR GAN)"
+      },
+      {
+        "x4_code": "(PRJFS,2FR GAN)",
+        "free_txt": [
+          " A primary beam of Ne-22 was accelerated",
+          "using the two CSS cyclotrons up to an energy of",
+          "  77.5 A*MeV and stopped in a thick carbon target."
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2FR GAN)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "((1-H-2(8-O-20,T)8-O-19,PAR,DA,RSD,REL)=(8-O-20(D,T)8-O-19,PAR,DA,,REL))",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "8-O-20,T"
+              ],
+              "8-O-19,PAR,DA,RSD,REL"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "8-O-20,T",
+            "sf49": "8-O-19,PAR,DA,RSD,REL",
+            "sf4": "8-O-19",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "RSD",
+            "sf8": "REL",
+            "sf9": null
+          },
+          {
+            "code": [
+              "8-O-20",
+              [
+                "D,T"
+              ],
+              "8-O-19,PAR,DA,,REL"
+            ],
+            "type": null,
+            "target": "8-O-20",
+            "process": "D,T",
+            "sf49": "8-O-19,PAR,DA,,REL",
+            "sf4": "8-O-19",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": "    fig 5"
+      }
     }
   },
   "data_tables": {
@@ -238,51 +286,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-2(8-O-20,T)8-O-19,PAR,DA,RSD,REL)=(8-O-20(D,T)8-O-19,PAR,DA,,REL))",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "8-O-20,T"
-              ],
-              "8-O-19,PAR,DA,RSD,REL"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "8-O-20,T",
-            "sf49": "8-O-19,PAR,DA,RSD,REL",
-            "sf4": "8-O-19",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "RSD",
-            "sf8": "REL",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "8-O-20",
-              [
-                "D,T"
-              ],
-              "8-O-19,PAR,DA,,REL"
-            ],
-            "type": null,
-            "target": "8-O-20",
-            "process": "D,T",
-            "sf49": "8-O-19,PAR,DA,,REL",
-            "sf4": "8-O-19",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": "    fig 5"
-        }
-      },
       "common": {
         "heads": [
           "E-LVL",
@@ -349,8 +352,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SPEC)",
             "free_txt": [
@@ -401,10 +404,8 @@
               " sixteen CsI crystals, 4 cm thick."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2FR GAN)",
             "free_txt": [
@@ -420,10 +421,8 @@
               "  77.5 A*MeV and stopped in a thick carbon target."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -431,10 +430,8 @@
               " (FWHM)"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -449,20 +446,16 @@
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "A thin 0.6 mg/cm**2 CD2 target was used."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -473,16 +466,14 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL,8-O-19)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [

@@ -1,18 +1,27 @@
 {
   "entry": "P0051",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-01-13",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19830620T)",
       "free_txt": [
-        " Converted to EXFOR format by IAEA-NDS"
+        " Converted to EXFOR format by IAEA-NDS."
       ]
     },
     {
       "x4_code": "(20000811A)",
       "free_txt": [
         " Converted to new date formats, BIB updated."
+      ]
+    },
+    {
+      "x4_code": "(20220421A)",
+      "free_txt": [
+        " BP: Added doi, ANALYSIS, ERR-ANALYS,",
+        "DETECTOR, total energy spread, digitized (unobtainable",
+        "data) per an NRDC decision for data sets that were",
+        "published before 2000 (C32 of WP2022-01)."
       ]
     }
   ],
@@ -32,35 +41,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CJP,36,1276,1958)",
-          "free_txt": [],
-          "publication_year": "1958"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCY,1CANMCG)",
-          "free_txt": [],
-          "facility_type": "(SYNCY)",
-          "institute": "(1CANMCG)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CJP,36,1276,1958)",
+        "free_txt": [
+          "#doi:10.1139/p58-132"
+        ],
+        "publication_year": "1958",
+        "pointer": "0",
+        "doi": "10.1139/p58-132"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCY,1CANMCG)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(SYNCY)",
+        "institute": "(1CANMCG)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(P,X)6-C-11,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(P,X)6-C-11,,SIG)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -78,12 +85,132 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-12(P,X)6-C-11,,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "P,X"
+              ],
+              "6-C-11,,SIG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "P,X",
+            "sf49": "6-C-11,,SIG",
+            "sf4": "6-C-11",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(8-O-16(P,A)7-N-13,,SIG)",
+        "children": [
+          {
+            "code": [
+              "8-O-16",
+              [
+                "P,A"
+              ],
+              "7-N-13,,SIG"
+            ],
+            "type": null,
+            "target": "8-O-16",
+            "process": "P,A",
+            "sf49": "7-N-13,,SIG",
+            "sf4": "7-N-13",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(9-F-19(P,X)9-F-18,,SIG)",
+        "children": [
+          {
+            "code": [
+              "9-F-19",
+              [
+                "P,X"
+              ],
+              "9-F-18,,SIG"
+            ],
+            "type": null,
+            "target": "9-F-19",
+            "process": "P,X",
+            "sf49": "9-F-18,,SIG",
+            "sf4": "9-F-18",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": {
+        "heads": [
+          "EN-ERR"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            3.0
+          ]
+        ]
+      }
+    },
+    "002": {
+      "common": {
+        "heads": [
+          "ERR-SYS",
+          "ERR-1"
+        ],
+        "units": [
+          "PER-CENT",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            3.0
+          ],
+          [
+            2.0
+          ]
+        ]
       },
-      "common": null,
       "data": {
         "heads": [
           "EN",
@@ -199,33 +326,24 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(P,X)6-C-11,,SIG)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "P,X"
-              ],
-              "6-C-11,,SIG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "P,X",
-            "sf49": "6-C-11,,SIG",
-            "sf4": "6-C-11",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+      "common": {
+        "heads": [
+          "ERR-SYS",
+          "ERR-1"
+        ],
+        "units": [
+          "PER-CENT",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            5.0
+          ],
+          [
+            2.0
+          ]
+        ]
       },
-      "common": null,
       "data": {
         "heads": [
           "EN",
@@ -316,33 +434,24 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(P,A)7-N-13,,SIG)",
-          "0": {
-            "code": [
-              "8-O-16",
-              [
-                "P,A"
-              ],
-              "7-N-13,,SIG"
-            ],
-            "type": null,
-            "target": "8-O-16",
-            "process": "P,A",
-            "sf49": "7-N-13,,SIG",
-            "sf4": "7-N-13",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+      "common": {
+        "heads": [
+          "ERR-SYS",
+          "ERR-1"
+        ],
+        "units": [
+          "PER-CENT",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            5.0
+          ],
+          [
+            2.0
+          ]
+        ]
       },
-      "common": null,
       "data": {
         "heads": [
           "EN",
@@ -545,56 +654,173 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(9-F-19(P,X)9-F-18,,SIG)",
-          "0": {
-            "code": [
-              "9-F-19",
-              [
-                "P,X"
-              ],
-              "9-F-18,,SIG"
-            ],
-            "type": null,
-            "target": "9-F-19",
-            "process": "P,X",
-            "sf49": "9-F-18,,SIG",
-            "sf4": "9-F-18",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+      "common": {
+        "heads": [
+          "DATA-ERR",
+          "ERR-SYS",
+          "ERR-1"
+        ],
+        "units": [
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            10.0
+          ],
+          [
+            5.0
+          ],
+          [
+            2.0
+          ]
+        ]
       },
-      "common": null,
-      "data": null
+      "data": {
+        "heads": [
+          "EN",
+          "DATA"
+        ],
+        "units": [
+          "MEV",
+          "MB"
+        ],
+        "data": [
+          [
+            9.772,
+            11.517,
+            12.54,
+            13.26,
+            14.13,
+            14.81,
+            15.301,
+            15.488,
+            16.093,
+            16.772,
+            17.075,
+            17.982,
+            18.4,
+            18.779,
+            19.539,
+            19.802,
+            20.029,
+            22.276,
+            22.695,
+            23.379,
+            23.874,
+            24.255,
+            24.818,
+            25.305,
+            25.664,
+            26.088,
+            26.969
+          ],
+          [
+            0.506,
+            9.965,
+            18.37,
+            26.435,
+            38.37,
+            50.336,
+            58.826,
+            65.418,
+            76.227,
+            89.361,
+            93.987,
+            108.254,
+            108.187,
+            112.8,
+            118.038,
+            122.374,
+            123.896,
+            114.969,
+            112.954,
+            111.676,
+            110.819,
+            109.2,
+            102.195,
+            105.117,
+            102.06,
+            99.325,
+            93.518
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "analysis": [
+          {
+            "x4_code": "(DECAY)",
+            "free_txt": []
+          }
+        ],
+        "detector": [
+          {
+            "x4_code": "(NAICR)",
+            "free_txt": [
+              " NaI scintillation crystal."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-SYS)",
+            "free_txt": [
+              " The relative accuracy of the points from one",
+              "stack."
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Decay rates accuracy."
+            ]
+          }
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCY,1CANMCG)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
-            "x4_code": "(STTA)",
-            "free_txt": []
+            "x4_code": "(STTA,ACTIV)",
+            "free_txt": [
+              " After irradiation, the foils were cut",
+              "from the stack and mounted individually between 1/4",
+              "in. aluminum disks; then the annihilation radiation",
+              "was counted with a NaI scintillation crystal. All the",
+              "active isotopes decayed by pure positron emission."
+            ]
           }
         ]
-      },
-      "status": {
-        "0": [
+      }
+    },
+    "002": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No details on sources of uncertainties."
+            ]
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Polyethylene targets alternating with aluminum foils.",
+              "Polyethylene areal density 10 mg/cm2."
+            ]
+          }
+        ],
+        "status": [
           {
             "x4_code": "(CPX)",
             "free_txt": [
@@ -605,103 +831,129 @@
         ]
       }
     },
-    "002": {
-      "sample": {
-        "0": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "Polyethylene targets alternating with aluminum foils.",
-              " Polyethylene areal density 10 mg/cm2."
-            ]
-          }
-        ]
-      }
-    },
     "003": {
-      "monit-ref": {
-        "0": [
+      "0": {
+        "monit-ref": [
           {
-            "x4_code": "(B0077001,AAMODT+,J,PR,88,739,1952)",
+            "x4_code": "(B0077001,R.Lee Aamodt+,J,PR,88,739,1952)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(6-C-12(P,X)6-C-11,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "Very thin polethylene targets alternating with",
-              "  aluminum foils."
+              "Very thin polyethylene targets alternating with",
+              "aluminum foils."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CPX)",
+            "free_txt": [
+              " Data from CPX file compiled in 1964/67 by",
+              "F.K. McGowan et al."
             ]
           }
         ]
       }
     },
     "004": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Corrected for 13C(p,n)13N background."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "err-analys": [
           {
-            "x4_code": "(6-C-12(P,N+P)6-C-11,,SIG)",
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No details on sources of uncertainties."
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(6-C-12(P,X)6-C-11,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "C4H6O2 samples alternating with aluminum foils."
             ]
           }
+        ],
+        "status": [
+          {
+            "x4_code": "(CPX)",
+            "free_txt": [
+              " Data from CPX file compiled in 1964/67 by",
+              "F.K. McGowan et al."
+            ]
+          }
         ]
       }
     },
     "005": {
-      "monitor": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
-            "x4_code": "(6-C-12(P,N+P)6-C-11,,SIG)",
-            "free_txt": []
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Owing to the poor matching, the absolute",
+              "magnitude of the fluorine cross section has a 10%",
+              "uncertainty, but the shape of the curve appears to be",
+              "consistent."
+            ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
-              "Teflon targets."
+              "The relative fluorine cross sections over each stack",
+              "were determined by assuming the same proton flux",
+              "passing through each foil. In order to normalize the",
+              "composite curve relative to the carbon cross section,",
+              "the carbon activity in each foil was plotted. The",
+              "complete fluorine excitation curve was normalized so",
+              "that the carbon points fit the known curve."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "monitor": [
           {
-            "x4_code": "(UNOBT)",
+            "x4_code": "(6-C-12(P,X)6-C-11,,SIG)",
+            "free_txt": []
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
             "free_txt": [
-              " Data given in Fig. 3 in reference."
+              "Teflon (CF2) targets."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig. 3, page 1284."
             ]
           }
         ]

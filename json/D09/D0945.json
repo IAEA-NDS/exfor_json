@@ -93,37 +93,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,99,014601,2019)",
-          "free_txt": [],
-          "publication_year": "2019"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,3BZLUSP)",
-          "free_txt": [
-            " RIBRAS facility"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(3BZLUSP)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,99,014601,2019)",
+        "free_txt": [],
+        "publication_year": "2019",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,3BZLUSP)",
+        "free_txt": [
+          " RIBRAS facility"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(3BZLUSP)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(50-SN-120(2-HE-6,X)2-HE-4,,DA/DE)",
-          "0": {
+      "0": {
+        "x4_code": "(50-SN-120(2-HE-6,X)2-HE-4,,DA/DE)",
+        "children": [
+          {
             "code": [
               "50-SN-120",
               [
@@ -141,11 +136,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(50-SN-120(2-HE-6,X)2-HE-4,,DA)",
+        "children": [
+          {
+            "code": [
+              "50-SN-120",
+              [
+                "2-HE-6,X"
+              ],
+              "2-HE-4,,DA"
+            ],
+            "type": null,
+            "target": "50-SN-120",
+            "process": "2-HE-6,X",
+            "sf49": "2-HE-4,,DA",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(50-SN-120(2-HE-6,EL)50-SN-120,,DA,,RTH)",
+        "children": [
+          {
+            "code": [
+              "50-SN-120",
+              [
+                "2-HE-6,EL"
+              ],
+              "50-SN-120,,DA,,RTH"
+            ],
+            "type": null,
+            "target": "50-SN-120",
+            "process": "2-HE-6,EL",
+            "sf49": "50-SN-120,,DA,,RTH",
+            "sf4": "50-SN-120",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "RTH",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -619,32 +677,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(50-SN-120(2-HE-6,X)2-HE-4,,DA)",
-          "0": {
-            "code": [
-              "50-SN-120",
-              [
-                "2-HE-6,X"
-              ],
-              "2-HE-4,,DA"
-            ],
-            "type": null,
-            "target": "50-SN-120",
-            "process": "2-HE-6,X",
-            "sf49": "2-HE-4,,DA",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -692,32 +724,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(50-SN-120(2-HE-6,EL)50-SN-120,,DA,,RTH)",
-          "0": {
-            "code": [
-              "50-SN-120",
-              [
-                "2-HE-6,EL"
-              ],
-              "50-SN-120,,DA,,RTH"
-            ],
-            "type": null,
-            "target": "50-SN-120",
-            "process": "2-HE-6,EL",
-            "sf49": "50-SN-120,,DA,,RTH",
-            "sf4": "50-SN-120",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "RTH",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -773,18 +779,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(NTRTH)",
             "free_txt": [
               " 6He elastic scattering by Au (4.0 mg/cm2 thick)"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TELES,SI,SI)",
             "free_txt": [
@@ -793,48 +797,38 @@
               "  incident energies)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,3BZLUSP)",
             "free_txt": [
               " RIBRAS facility"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "6He beam produced by 9Be(7Li,6He)10B reaction"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "120Sn target (3.8 mg/cm2 thick)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -845,8 +839,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -854,20 +848,16 @@
               " averaged for better statistics."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on the source of uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -878,16 +868,14 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTED)",
             "free_txt": []
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -896,20 +884,16 @@
               " But S.Appannababu agrees to use mb/sr in EXFOR."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on the source of uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -926,18 +910,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on the source of uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

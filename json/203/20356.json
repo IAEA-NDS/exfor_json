@@ -41,44 +41,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,KFK-1772,1973)",
-          "free_txt": [],
-          "publication_year": "1973"
-        },
-        {
-          "x4_code": "(C,72VIENNA,,213,1972)",
-          "free_txt": [
-            " Same cross section table given"
-          ],
-          "publication_year": "1972"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2GERKFK)",
-          "free_txt": [
-            " 3-MeV Van de Graaff"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2GERKFK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,KFK-1772,1973)",
+        "free_txt": [],
+        "publication_year": "1973",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,72VIENNA,,213,1972)",
+        "free_txt": [
+          " Same cross section table given"
+        ],
+        "publication_year": "1972",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2GERKFK)",
+        "free_txt": [
+          " 3-MeV Van de Graaff"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2GERKFK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -96,11 +92,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -183,32 +214,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,SIG)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1"
@@ -314,8 +319,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -336,20 +341,16 @@
               " for neutron spectrum measurement"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2GERKFK)",
             "free_txt": [
               " 3-MeV Van de Graaff"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -357,10 +358,8 @@
               " (0.3 mm thick)"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -371,10 +370,8 @@
               "  of 5 keV and 10%, respectively."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,F.Kaeppeler+,P,KFK-2223,9,1975)",
             "free_txt": [
@@ -387,10 +384,8 @@
               " Neutron flux determination"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -423,18 +418,16 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Absolute measurement"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -489,30 +482,24 @@
               "         U - detection efficiency         (0.8%)"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               "Back-to-back arrangement (Geometry B)"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": [
               " Data points in four experimental works interpolated"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -523,8 +510,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -537,10 +524,8 @@
               " Fit to the absolute measurement result"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -557,10 +542,8 @@
               "     author's letter to CCDN, 1974-07-04."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -569,20 +552,16 @@
               " arrangement used for absolute measurement"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,SIG)",
             "free_txt": [
               " Normalized to the absolute measurement (002)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

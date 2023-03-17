@@ -72,48 +72,44 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSTS,2,(1),280,200208)",
-          "free_txt": [
-            "   Main reference, data given",
-            " Conf.Proc. ND2011 in Tsukuba ."
-          ],
-          "publication_year": "2002"
-        },
-        {
-          "x4_code": "(C,97TRIEST,2,1356,199705)",
-          "free_txt": [
-            "  Experimental and analysis",
-            "                            details"
-          ],
-          "publication_year": "1997"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4RUSMIF)",
-          "free_txt": [
-            " Research thermal reactor RTR of 4RUSMIF"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4RUSMIF)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSTS,2,(1),280,200208)",
+        "free_txt": [
+          "   Main reference, data given",
+          " Conf.Proc. ND2011 in Tsukuba ."
+        ],
+        "publication_year": "2002",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,97TRIEST,2,1356,199705)",
+        "free_txt": [
+          "  Experimental and analysis",
+          "                            details"
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4RUSMIF)",
+        "free_txt": [
+          " Research thermal reactor RTR of 4RUSMIF"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4RUSMIF)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(91-PA-232(N,G)91-PA-233,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(91-PA-232(N,G)91-PA-233,,SIG)",
+        "children": [
+          {
             "code": [
               "91-PA-232",
               [
@@ -131,11 +127,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(91-PA-232(N,G)91-PA-233,,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "91-PA-232",
+              [
+                "N,G"
+              ],
+              "91-PA-233,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "91-PA-232",
+            "process": "N,G",
+            "sf49": "91-PA-233,,SIG,,MXW",
+            "sf4": "91-PA-233",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -162,32 +193,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(91-PA-232(N,G)91-PA-233,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "91-PA-232",
-              [
-                "N,G"
-              ],
-              "91-PA-233,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "91-PA-232",
-            "process": "N,G",
-            "sf49": "91-PA-233,,SIG,,MXW",
-            "sf4": "91-PA-233",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ASSUM1",
@@ -248,8 +253,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -257,44 +262,34 @@
               "ISTC Project #1145."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(91-PA-231,3.38E+4YR)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE,GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4RUSMIF)",
             "free_txt": [
               " Research thermal reactor RTR of 4RUSMIF"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -303,10 +298,8 @@
               "was 4.8 ."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -330,10 +323,8 @@
               "   Single-target irradiation"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,F.F.Fomushkin+,C,97TRIEST,2,1353,199705)",
             "free_txt": []
@@ -342,8 +333,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -352,20 +343,16 @@
               " extrapolation."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Not specified by authors."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -382,8 +369,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -394,10 +381,8 @@
               " (o.639=-0.068)*10**-3 : 653+-91 barn."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM1,91-PA-231(N,F),,SIG,,MXW)",
             "free_txt": []
@@ -423,10 +408,8 @@
               "Pa233."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(91-PA-232,31.44HR,B-,,,DG)",
             "free_txt": []
@@ -435,20 +418,16 @@
             "x4_code": "(91-PA-233,27.D,B-,,,DG,312.2,0.386)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Not specified by authors."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -456,10 +435,8 @@
               "Calculated spectrum is on Fig.2 of NSTS,2,(1),280,2002."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -478,10 +455,8 @@
               " N2(PA-233)=(0.117+-0.032)E+10"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

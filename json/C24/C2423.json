@@ -60,39 +60,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,100,054618,2019)",
-          "free_txt": [],
-          "publication_year": "2019"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USATAM)",
-          "free_txt": [
-            " Experiment performed using K150",
-            "cyclotron at the Cyclotron Institute at Texas A&M",
-            "University."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USATAM)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,100,054618,2019)",
+        "free_txt": [],
+        "publication_year": "2019",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USATAM)",
+        "free_txt": [
+          " Experiment performed using K150",
+          "cyclotron at the Cyclotron Institute at Texas A&M",
+          "University."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USATAM)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(5-B-8,EL)1-H-1,,DA)=(5-B-8(P,EL)5-B-8,,DA))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-1(5-B-8,EL)1-H-1,,DA)=(5-B-8(P,EL)5-B-8,,DA))",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -111,7 +106,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "5-B-8",
               [
@@ -129,11 +124,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((1-H-1(5-B-8,EL)1-H-1,,DA)=(5-B-8(P,EL)5-B-8,,DA))",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "5-B-8,EL"
+              ],
+              "1-H-1,,DA"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "5-B-8,EL",
+            "sf49": "1-H-1,,DA",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "=",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "5-B-8",
+              [
+                "P,EL"
+              ],
+              "5-B-8,,DA"
+            ],
+            "type": null,
+            "target": "5-B-8",
+            "process": "P,EL",
+            "sf49": "5-B-8,,DA",
+            "sf4": "5-B-8",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-CM-MIN",
@@ -279,51 +328,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(5-B-8,EL)1-H-1,,DA)=(5-B-8(P,EL)5-B-8,,DA))",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "5-B-8,EL"
-              ],
-              "1-H-1,,DA"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "5-B-8,EL",
-            "sf49": "1-H-1,,DA",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "5-B-8",
-              [
-                "P,EL"
-              ],
-              "5-B-8,,DA"
-            ],
-            "type": null,
-            "target": "5-B-8",
-            "process": "P,EL",
-            "sf49": "5-B-8,,DA",
-            "sf4": "5-B-8",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG-CM-MIN",
@@ -483,8 +487,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -516,20 +520,16 @@
               "5cm x 5cm x 4cm CsI(Tl) scintillation detector."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Origin of uncertainties not described"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USATAM)",
             "free_txt": [
@@ -538,10 +538,8 @@
               "University."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(KINDT)",
             "free_txt": [
@@ -555,18 +553,14 @@
               " (60.8+- 1.2) MeV and intensity about 10E+3 pps."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -580,8 +574,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -593,8 +587,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

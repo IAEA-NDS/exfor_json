@@ -49,47 +49,43 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,195,311,1972)",
-          "free_txt": [],
-          "publication_year": "1972"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCY,2FR PAR)",
-          "free_txt": [
-            ".135 MeV Proton Beam of the Orsay",
-            "Synchrocyclotron."
-          ],
-          "facility_type": "(SYNCY)",
-          "institute": "(2FR PAR)"
-        },
-        {
-          "x4_code": "(SYNCY,2ZZZCER)",
-          "free_txt": [
-            ".550 MeV Proton Beam of the Cern",
-            "Synchrocyclotron."
-          ],
-          "facility_type": "(SYNCY)",
-          "institute": "(2ZZZCER)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,195,311,1972)",
+        "free_txt": [],
+        "publication_year": "1972",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCY,2FR PAR)",
+        "free_txt": [
+          ".135 MeV Proton Beam of the Orsay",
+          "Synchrocyclotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCY)",
+        "institute": "(2FR PAR)"
+      },
+      {
+        "x4_code": "(SYNCY,2ZZZCER)",
+        "free_txt": [
+          ".550 MeV Proton Beam of the Cern",
+          "Synchrocyclotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCY)",
+        "institute": "(2ZZZCER)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((8-O-16(P,X)4-BE-10,,SIG)/(8-O-16(P,X)4-BE-7,,SIG))",
-          "0": {
+      "0": {
+        "x4_code": "((8-O-16(P,X)4-BE-10,,SIG)/(8-O-16(P,X)4-BE-7,,SIG))",
+        "children": [
+          {
             "code": [
               "8-O-16",
               [
@@ -108,7 +104,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "8-O-16",
               [
@@ -126,11 +122,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(8-O-16(P,X)4-BE-10,,SIG)",
+        "children": [
+          {
+            "code": [
+              "8-O-16",
+              [
+                "P,X"
+              ],
+              "4-BE-10,,SIG"
+            ],
+            "type": null,
+            "target": "8-O-16",
+            "process": "P,X",
+            "sf49": "4-BE-10,,SIG",
+            "sf4": "4-BE-10",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "        Independent."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -160,32 +191,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(P,X)4-BE-10,,SIG)",
-          "0": {
-            "code": [
-              "8-O-16",
-              [
-                "P,X"
-              ],
-              "4-BE-10,,SIG"
-            ],
-            "type": null,
-            "target": "8-O-16",
-            "process": "P,X",
-            "sf49": "4-BE-10,,SIG",
-            "sf4": "4-BE-10",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "        Independent."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -217,16 +222,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": []
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
@@ -236,10 +239,8 @@
               "Chemical Recyclings was Measured."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -259,10 +260,8 @@
               "Beta-Rays."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCY,2FR PAR)",
             "free_txt": [
@@ -277,10 +276,8 @@
               "Synchrocyclotron."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB)",
             "free_txt": []
@@ -293,10 +290,8 @@
             "x4_code": "(CHSEP)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,C0395001,F.YIOU+,J,PR,166,968,1968)",
             "free_txt": [
@@ -306,10 +301,8 @@
               "Mass-Spectrometric Analysis."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -322,10 +315,8 @@
               "Each Case, the A and B Samples were Combined."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": []
@@ -334,8 +325,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(4-BE-7,53.6D,DG,477.,0.103)",
             "free_txt": []
@@ -344,20 +335,16 @@
             "x4_code": "(4-BE-10,2.7E+06YR)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
               ".The Uncertainty is Reported by Authors."
             ]
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(4-BE-10,DG)",
             "free_txt": []
@@ -370,8 +357,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -389,10 +376,8 @@
               "B-Counter Employed For Detection of Be-10."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(4-BE-7,53.6D,DG,477.,0.103)",
             "free_txt": []
@@ -401,20 +386,16 @@
             "x4_code": "(4-BE-10,2.7E+06YR)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
               ".The Uncertainty is Reported by Authors."
             ]
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(4-BE-10,B-)",
             "free_txt": []
@@ -423,10 +404,8 @@
             "x4_code": "(4-BE-7,DG)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(D,,F.YIOU+,J,JGR,74,2447,1969)",
             "free_txt": []

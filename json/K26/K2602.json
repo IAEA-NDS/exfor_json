@@ -66,35 +66,30 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RCA,80,171,1998)",
-          "free_txt": [],
-          "publication_year": "1998"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2JPNTOH)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(2JPNTOH)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RCA,80,171,1998)",
+        "free_txt": [],
+        "publication_year": "1998",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2JPNTOH)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2JPNTOH)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(G,F)ELEM/MASS,,SIG,,BRA)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(G,F)ELEM/MASS,,SIG,,BRA)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -112,11 +107,74 @@
             "sf7": null,
             "sf8": "BRA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "Yield in mb per equivalent quanta"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "Yield in mb per equivalent quanta"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(G,F)ELEM/MASS,CUM,SIG,,BRA)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "G,F"
+              ],
+              "ELEM/MASS,CUM,SIG,,BRA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "G,F",
+            "sf49": "ELEM/MASS,CUM,SIG,,BRA",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Yield in mb per equivalent quanta"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-238(G,F)MASS,SEC,ZP,,BRA)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "G,F"
+              ],
+              "MASS,SEC,ZP,,BRA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "G,F",
+            "sf49": "MASS,SEC,ZP,,BRA",
+            "sf4": "MASS",
+            "sf5": "SEC",
+            "sf6": "ZP",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -590,32 +648,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(G,F)ELEM/MASS,CUM,SIG,,BRA)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "G,F"
-              ],
-              "ELEM/MASS,CUM,SIG,,BRA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "G,F",
-            "sf49": "ELEM/MASS,CUM,SIG,,BRA",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Yield in mb per equivalent quanta"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2267,32 +2299,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(G,F)MASS,SEC,ZP,,BRA)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "G,F"
-              ],
-              "MASS,SEC,ZP,,BRA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "G,F",
-            "sf49": "MASS,SEC,ZP,,BRA",
-            "sf4": "MASS",
-            "sf5": "SEC",
-            "sf6": "ZP",
-            "sf7": null,
-            "sf8": "BRA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2612,8 +2618,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2622,62 +2628,48 @@
               "determined by S.M.Seltzer et al."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GE)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2JPNTOH)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP)",
             "free_txt": [
               " For iodine and rare earth."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,S.M.Seltzer+,J,AND,35,345,1986)",
             "free_txt": [
               "Use of 197Au(g,n)196Au reaction cross section."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(G,N)79-AU-196,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2692,8 +2684,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "((3.)35-BR-82-G,35.30HR,DG)",
             "free_txt": []
@@ -2814,20 +2806,16 @@
             "x4_code": "((105.)65-TB-160,72.3D,DG)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2838,8 +2826,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "((1.)32-GE-77-G,11.30HR,DG)",
             "free_txt": []
@@ -3188,30 +3176,24 @@
             "x4_code": "((107.)67-HO-167,3.1HR,DG)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " Isomeric ratio (g/m) is assumed to be 14."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -3222,18 +3204,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

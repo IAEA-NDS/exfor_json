@@ -50,53 +50,50 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,131,679,196907)",
-          "free_txt": [
-            " Li expt description."
-          ],
-          "publication_year": "1969"
-        },
-        {
-          "x4_code": "(P,EANDC(E)-115U,196903)",
-          "free_txt": [
-            " Abstract."
-          ],
-          "publication_year": "1969"
-        },
-        {
-          "x4_code": "(P,EANDC(E)-57U,1,196502)",
-          "free_txt": [
-            " Curve on p.7"
-          ],
-          "publication_year": "1965"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2GERFRK)",
-          "free_txt": [
-            " Van de Graaff, 5.5 MV at Frankfurt."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2GERFRK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,131,679,196907)",
+        "free_txt": [
+          " Li expt description."
+        ],
+        "publication_year": "1969",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,EANDC(E)-115U,196903)",
+        "free_txt": [
+          " Abstract."
+        ],
+        "publication_year": "1969",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,EANDC(E)-57U,1,196502)",
+        "free_txt": [
+          " Curve on p.7"
+        ],
+        "publication_year": "1965",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2GERFRK)",
+        "free_txt": [
+          " Van de Graaff, 5.5 MV at Frankfurt."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2GERFRK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-6(N,P)2-HE-6,PAR,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(3-LI-6(N,P)2-HE-6,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "3-LI-6",
               [
@@ -114,11 +111,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Cross section."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Cross section."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(3-LI-6(N,INL)3-LI-6,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "3-LI-6",
+              [
+                "N,INL"
+              ],
+              "3-LI-6,PAR,SIG"
+            ],
+            "type": null,
+            "target": "3-LI-6",
+            "process": "N,INL",
+            "sf49": "3-LI-6,PAR,SIG",
+            "sf4": "3-LI-6",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Partial cross section."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL",
@@ -223,32 +255,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-6(N,INL)3-LI-6,PAR,SIG)",
-          "0": {
-            "code": [
-              "3-LI-6",
-              [
-                "N,INL"
-              ],
-              "3-LI-6,PAR,SIG"
-            ],
-            "type": null,
-            "target": "3-LI-6",
-            "process": "N,INL",
-            "sf49": "3-LI-6,PAR,SIG",
-            "sf4": "3-LI-6",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Partial cross section."
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -424,68 +430,56 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               ".Corrected for background."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN )",
             "free_txt": [
               " Li-6(Eu) crystal, Li-6 abundance 96%."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical error."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2GERFRK)",
             "free_txt": [
               " Van de Graaff, 5.5 MV at Frankfurt."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
               " Activation."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               ".Same as detector, 12.7 mm diameter, 12.7 mm long."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -497,16 +491,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(2-HE-6,0.8SEC,B-)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
             "free_txt": [
@@ -523,10 +515,8 @@
               "                     200 keV between 6.0 and 9.0 MeV"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(NDD)",
             "free_txt": [
@@ -539,28 +529,24 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               ".Ring geometry."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS)",
             "free_txt": [
               " Estimated systematic error."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": [
@@ -570,10 +556,8 @@
               "                  100 - 70 keV between 6. and 8.0 MeV"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

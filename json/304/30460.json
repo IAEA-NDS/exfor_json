@@ -33,50 +33,47 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,ZFK-341,197709)",
-          "free_txt": [
-            " in German"
-          ],
-          "publication_year": "1977"
-        },
-        {
-          "x4_code": "(C,75KIEV,3,200,197505)",
-          "free_txt": [
-            " Preliminary results, in Russian"
-          ],
-          "publication_year": "1975"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        },
-        {
-          "x4_code": "(MICRT)",
-          "free_txt": [
-            "'IBR-30' pulsed reactor with microtron injector"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,ZFK-341,197709)",
+        "free_txt": [
+          " in German"
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,75KIEV,3,200,197505)",
+        "free_txt": [
+          " Preliminary results, in Russian"
+        ],
+        "publication_year": "1975",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      },
+      {
+        "x4_code": "(MICRT)",
+        "free_txt": [
+          "'IBR-30' pulsed reactor with microtron injector"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,G)92-U-239,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(N,G)92-U-239,,SIG)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -94,11 +91,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,G)92-U-239,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,G"
+              ],
+              "92-U-239,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,G",
+            "sf49": "92-U-239,,SIG,,SPA",
+            "sf4": "92-U-239",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -140,32 +172,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,G)92-U-239,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,G"
-              ],
-              "92-U-239,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,G",
-            "sf49": "92-U-239,,SIG,,SPA",
-            "sf4": "92-U-239",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -227,8 +233,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -238,10 +244,8 @@
               "value, the cross section was determined graphically."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -256,10 +260,8 @@
               "-multiple scattering and resonance-selfshielding"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HE3SP)",
             "free_txt": [
@@ -268,20 +270,16 @@
               "              Injector-regime= battery of 91 counters"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Statistical and systematical errors included"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": []
@@ -292,10 +290,8 @@
               "'IBR-30' pulsed reactor with microtron injector"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -304,10 +300,8 @@
               "accelerator regime' was used for methodical checks only"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(SHELT)",
             "free_txt": [
@@ -318,28 +312,22 @@
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "Absolute measurement"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -347,10 +335,8 @@
               "of U-238 containing 0.35% U-235"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -363,8 +349,8 @@
     },
     "002": {},
     "003": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [

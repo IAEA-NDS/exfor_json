@@ -46,45 +46,41 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,56,(9),13,1993)",
-          "free_txt": [],
-          "publication_year": "1993"
-        },
-        {
-          "x4_code": "(J,PAN,56,1157,1993)",
-          "free_txt": [
-            " Engl.translation of YF,56,13,1993"
-          ],
-          "publication_year": "1993"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,4RUSKUR)",
-          "free_txt": [
-            " Pulse electrostatic accelerators ESU-2.5",
-            "in preliminary measurement,ESU-3.5 in main measurement."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(4RUSKUR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,56,(9),13,1993)",
+        "free_txt": [],
+        "publication_year": "1993",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PAN,56,1157,1993)",
+        "free_txt": [
+          " Engl.translation of YF,56,13,1993"
+        ],
+        "publication_year": "1993",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,4RUSKUR)",
+        "free_txt": [
+          " Pulse electrostatic accelerators ESU-2.5",
+          "in preliminary measurement,ESU-3.5 in main measurement."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(4RUSKUR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((95-AM-241(N,INL)95-AM-241-L,,SIG)/(95-AM-241(N,F),,SIG))",
-          "0": {
+      "0": {
+        "x4_code": "((95-AM-241(N,INL)95-AM-241-L,,SIG)/(95-AM-241(N,F),,SIG))",
+        "children": [
+          {
             "code": [
               "95-AM-241",
               [
@@ -103,7 +99,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "95-AM-241",
               [
@@ -121,11 +117,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((95-AM-241(N,G)95-AM-242-L,,SIG)/(95-AM-241(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,G"
+              ],
+              "95-AM-242-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,G",
+            "sf49": "95-AM-242-L,,SIG",
+            "sf4": "95-AM-242-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -152,51 +202,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((95-AM-241(N,G)95-AM-242-L,,SIG)/(95-AM-241(N,F),,SIG))",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,G"
-              ],
-              "95-AM-242-L,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,G",
-            "sf49": "95-AM-242-L,,SIG",
-            "sf4": "95-AM-242-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -225,36 +230,30 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "For backgrounds."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Error is not specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,4RUSKUR)",
             "free_txt": [
@@ -262,20 +261,16 @@
               "in preliminary measurement,ESU-3.5 in main measurement."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
               " Time spectrum was monitoring by Np-237 sample."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -286,18 +281,16 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(95-AM-241-L,1.5MICROSEC)",
             "free_txt": [
               " Measured HL=0.9+-0.3 microsec."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": [
@@ -308,10 +301,8 @@
               "Neutrons mean energy 4.5 MeV."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -323,16 +314,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(95-AM-242-L,14.E-3SEC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
             "free_txt": [
@@ -341,10 +330,8 @@
               "Neutrons mean energy 1. MeV. Prelim.measurement."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

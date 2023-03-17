@@ -75,52 +75,50 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,EPJ/A,48,87,2012)",
-          "free_txt": [
-            " Data in Tables.",
-            "#doi:10.1140/epja/i2012-12087-4"
-          ],
-          "publication_year": "2012"
-        },
-        {
-          "x4_code": "(C,2007NICE,1,437,200704)",
-          "free_txt": [
-            " ND2007 report #313.",
-            " Graph of only preliminary data.",
-            "<A,2007NICE,,(#313),200704>  Abstracts, analogous to",
-            "                             main reference"
-          ],
-          "publication_year": "2007",
-          "doi": "10.1051/ndata:07313"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,2FR BRC)",
-          "free_txt": [
-            " Tandem 7 MV accelerator, beam nominal",
-            "               frequency 2.5 MHz"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(2FR BRC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,EPJ/A,48,87,2012)",
+        "free_txt": [
+          " Data in Tables.",
+          "#doi:10.1140/epja/i2012-12087-4"
+        ],
+        "publication_year": "2012",
+        "pointer": "0",
+        "doi": "10.1140/epja/i2012-12087-4"
+      },
+      {
+        "x4_code": "(C,2007NICE,1,437,200704)",
+        "free_txt": [
+          " ND2007 report #313.",
+          "#doi:10.1051/ndata:07313",
+          " Graph of only preliminary data.",
+          "<A,2007NICE,,(#313),200704>  Abstracts, analogous to",
+          "                             main reference"
+        ],
+        "publication_year": "2007",
+        "pointer": "0",
+        "doi": "10.1051/ndata:07313"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,2FR BRC)",
+        "free_txt": [
+          " Tandem 7 MV accelerator, beam nominal",
+          "               frequency 2.5 MHz"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2FR BRC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(N,2N)1-H-1,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-2(N,2N)1-H-1,,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-2",
               [
@@ -138,11 +136,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-2(N,2N)1-H-1,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "N,2N"
+              ],
+              "1-H-1,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "N,2N",
+            "sf49": "1-H-1,,SIG",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -215,32 +248,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(N,2N)1-H-1,,SIG)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "N,2N"
-              ],
-              "1-H-1,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "N,2N",
-            "sf49": "1-H-1,,SIG",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -331,8 +338,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -363,10 +370,8 @@
               "to 16.2% for 5-8 MeV incident neutron energies ."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -396,10 +401,8 @@
               "point."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2FR BRC)",
             "free_txt": [
@@ -407,10 +410,8 @@
               "               frequency 2.5 MHz"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D,P-T)",
             "free_txt": [
@@ -423,10 +424,8 @@
               "     20 - 25 MeV neutrons"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -436,10 +435,8 @@
               "corresponding to the monoenergetic peak."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -448,10 +445,8 @@
               "Flight path 13m from the neutron production target."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,C.Varignon+,J,NIM/B,248,329,2006)",
             "free_txt": [
@@ -459,10 +454,8 @@
               "                       of 7 MV tandem accelerator"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -486,8 +479,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -497,10 +490,8 @@
               "measurements."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -565,20 +556,16 @@
               "because of low statistics."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "             Energy resolution is less 2.% ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -590,8 +577,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -653,20 +640,16 @@
               "           for given fluence."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "             Energy resolution is less 2.% ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -57,37 +57,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ANE,29,1157,2002)",
-          "free_txt": [],
-          "publication_year": "2002"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2JPNKTO)",
-          "free_txt": [
-            " KURRI 46-MeV electron linac"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2JPNKTO)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ANE,29,1157,2002)",
+        "free_txt": [],
+        "publication_year": "2002",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2JPNKTO)",
+        "free_txt": [
+          " KURRI 46-MeV electron linac"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2JPNKTO)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(49-IN-0(N,G),,SIG,,,DERIV)",
-          "0": {
+      "0": {
+        "x4_code": "(49-IN-0(N,G),,SIG,,,DERIV)",
+        "children": [
+          {
             "code": [
               "49-IN-0",
               [
@@ -105,11 +100,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(49-IN-0(N,G),,SIG)",
+        "children": [
+          {
+            "code": [
+              "49-IN-0",
+              [
+                "N,G"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "49-IN-0",
+            "process": "N,G",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -136,32 +166,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(49-IN-0(N,G),,SIG)",
-          "0": {
-            "code": [
-              "49-IN-0",
-              [
-                "N,G"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "49-IN-0",
-            "process": "N,G",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -1000,8 +1004,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1011,10 +1015,8 @@
               " not seen in the 2002 article, and deleted (004)."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1022,10 +1024,8 @@
               " samples by using MCNP."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(BGO)",
             "free_txt": [
@@ -1040,20 +1040,16 @@
               " Beam intensity monitor"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2JPNKTO)",
             "free_txt": [
               " KURRI 46-MeV electron linac"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
@@ -1065,10 +1061,8 @@
               " neutrons from the previous pulse"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1078,10 +1072,8 @@
               " and 2.37 keV of Mn."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(62-SM-0(N,G),,SIG)",
             "free_txt": [
@@ -1097,10 +1089,8 @@
               " the neutron energy investigated."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1121,28 +1111,24 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Derived from energy dependent cross sections"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1159,8 +1145,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1203,10 +1189,8 @@
               " Error in 10B(n,a) cross section    (2.4%)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

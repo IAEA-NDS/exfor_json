@@ -47,38 +47,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,79,064607,2009)",
-          "free_txt": [],
-          "publication_year": "2009"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,LINAC)",
-          "free_txt": [
-            " Experiments were carried out at",
-            "the BARC-TIFR PELLETRON-LINAC facility at Mumbai"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(LINAC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,79,064607,2009)",
+        "free_txt": [],
+        "publication_year": "2009",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,LINAC)",
+        "free_txt": [
+          " Experiments were carried out at",
+          "the BARC-TIFR PELLETRON-LINAC facility at Mumbai"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(LINAC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(76-OS-188(8-O-16,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(76-OS-188(8-O-16,F),,SIG)",
+        "children": [
+          {
             "code": [
               "76-OS-188",
               [
@@ -96,11 +91,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(76-OS-188(8-O-16,F),,DA,FF,RSD)",
+        "children": [
+          {
+            "code": [
+              "76-OS-188",
+              [
+                "8-O-16,F"
+              ],
+              ",,DA,FF,RSD"
+            ],
+            "type": null,
+            "target": "76-OS-188",
+            "process": "8-O-16,F",
+            "sf49": ",,DA,FF,RSD",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "FF",
+            "sf8": "RSD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(70-YB-176(14-SI-28,F),,DA,FF,RSD)",
+        "children": [
+          {
+            "code": [
+              "70-YB-176",
+              [
+                "14-SI-28,F"
+              ],
+              ",,DA,FF,RSD"
+            ],
+            "type": null,
+            "target": "70-YB-176",
+            "process": "14-SI-28,F",
+            "sf49": ",,DA,FF,RSD",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "FF",
+            "sf8": "RSD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -136,32 +194,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(76-OS-188(8-O-16,F),,DA,FF,RSD)",
-          "0": {
-            "code": [
-              "76-OS-188",
-              [
-                "8-O-16,F"
-              ],
-              ",,DA,FF,RSD"
-            ],
-            "type": null,
-            "target": "76-OS-188",
-            "process": "8-O-16,F",
-            "sf49": ",,DA,FF,RSD",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "FF",
-            "sf8": "RSD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -408,32 +440,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(70-YB-176(14-SI-28,F),,DA,FF,RSD)",
-          "0": {
-            "code": [
-              "70-YB-176",
-              [
-                "14-SI-28,F"
-              ],
-              ",,DA,FF,RSD"
-            ],
-            "type": null,
-            "target": "70-YB-176",
-            "process": "14-SI-28,F",
-            "sf49": ",,DA,FF,RSD",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "FF",
-            "sf8": "RSD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -692,8 +698,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SI,SI)",
             "free_txt": [
@@ -704,20 +710,16 @@
               "10 mu-m and that of E detectors was 300 mu-m."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,LINAC)",
             "free_txt": [
@@ -725,10 +727,8 @@
               "the BARC-TIFR PELLETRON-LINAC facility at Mumbai"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
@@ -737,8 +737,8 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -747,10 +747,8 @@
               "facing the beam"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -762,18 +760,16 @@
       }
     },
     "003": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " Values at 180 deg. are extrapolated by authors"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -782,10 +778,8 @@
               "facing the beam"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -798,18 +792,16 @@
       }
     },
     "004": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " Values at 180 deg. are extrapolated by authors"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -818,10 +810,8 @@
               "facing the beam"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

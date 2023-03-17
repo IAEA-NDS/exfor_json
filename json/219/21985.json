@@ -40,35 +40,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,32,(5),1767,8511)",
-          "free_txt": [],
-          "publication_year": "1985"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ISOCY)",
-          "free_txt": [
-            " ISOCHONOUS CYNCLOTRON."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,32,(5),1767,8511)",
+        "free_txt": [],
+        "publication_year": "1985",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ISOCY)",
+        "free_txt": [
+          " ISOCHONOUS CYNCLOTRON."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(N,EL)1-H-2,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-2(N,EL)1-H-2,,DA)",
+        "children": [
+          {
             "code": [
               "1-H-2",
               [
@@ -86,11 +81,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((1-H-2(N,2N)1-H-1,,DA)/(1-H-1(N,EL)1-H-1,,DA))",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "N,2N"
+              ],
+              "1-H-1,,DA"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "N,2N",
+            "sf49": "1-H-1,,DA",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,EL"
+              ],
+              "1-H-1,,DA"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,EL",
+            "sf49": "1-H-1,,DA",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -147,51 +196,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-2(N,2N)1-H-1,,DA)/(1-H-1(N,EL)1-H-1,,DA))",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "N,2N"
-              ],
-              "1-H-1,,DA"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "N,2N",
-            "sf49": "1-H-1,,DA",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "1-H-1",
-              [
-                "N,EL"
-              ],
-              "1-H-1,,DA"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,EL",
-            "sf49": "1-H-1,,DA",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG"
@@ -245,8 +249,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -254,10 +258,8 @@
               " OF FLIGHT SPECTRA ARE INTEGRATED."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -267,10 +269,8 @@
               " THE COPPER ABSORBER."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN )",
             "free_txt": [
@@ -299,40 +299,32 @@
               " THE FIRST PLASTIC SCINTILLATOR."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ISOCY)",
             "free_txt": [
               " ISOCHONOUS CYNCLOTRON."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
               " THE LI-7(P,N) REACTION."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF  )",
             "free_txt": [
               " TIME OF FLIGHT TECHNIQUES."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
             "free_txt": [
@@ -342,10 +334,8 @@
               " L.D.ROPER."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P    )",
             "free_txt": [
@@ -358,10 +348,8 @@
               " DEUTERONS"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -369,10 +357,8 @@
               " METER THICK ALUMINIZED MYLAR WINDOWS."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -383,8 +369,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -394,10 +380,8 @@
               " TO THE N-P CROSS SECTION ( LESS THAN 3 PERCENT )."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -408,18 +392,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               ".NO INFORMATION GIVEN."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

@@ -1,7 +1,7 @@
 {
   "entry": "D4152",
-  "last_updated": "2011-09-06",
-  "number_of_revisions": "4",
+  "last_updated": "2023-01-16",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(20050901C)",
@@ -12,13 +12,19 @@
       "free_txt": [
         " On. REL-REF added"
       ]
+    },
+    {
+      "x4_code": "(20220627A)",
+      "free_txt": [
+        " VT. AUTHOR: B.Sholten-> B.Scholten replaced"
+      ]
     }
   ],
   "bib_record": {
     "title": "Excitation functions of deuteron induced nuclear reactions on enriched 78Kr with particular relevance to the production of 76Br",
     "authors": [
       {
-        "name": "B.Sholten"
+        "name": "B.Scholten"
       },
       {
         "name": "S.Takacs"
@@ -43,45 +49,41 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RCA,92,203,2004)",
-          "free_txt": [],
-          "publication_year": "2004"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2GERJUL)",
-          "free_txt": [
-            " CV 28 cyclotron of Juelich"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2GERJUL)"
-        },
-        {
-          "x4_code": "(CYCLO,3HUNDEB)",
-          "free_txt": [
-            " MGC20E cyclotron of Debrecen"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(3HUNDEB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RCA,92,203,2004)",
+        "free_txt": [],
+        "publication_year": "2004",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2GERJUL)",
+        "free_txt": [
+          " CV 28 cyclotron of Juelich"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2GERJUL)"
+      },
+      {
+        "x4_code": "(CYCLO,3HUNDEB)",
+        "free_txt": [
+          " MGC20E cyclotron of Debrecen"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(3HUNDEB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(36-KR-78(D,N+A)35-BR-75,,SIG)",
-          "0": {
+      "1": {
+        "x4_code": "(36-KR-78(D,N+A)35-BR-75,,SIG)",
+        "children": [
+          {
             "code": [
               "36-KR-78",
               [
@@ -99,13 +101,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(36-KR-78(D,A)35-BR-76,,SIG)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(36-KR-78(D,A)35-BR-76,,SIG)",
+        "children": [
+          {
             "code": [
               "36-KR-78",
               [
@@ -123,11 +127,72 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(36-KR-78(D,X)36-KR-79,CUM,SIG)",
+        "children": [
+          {
+            "code": [
+              "36-KR-78",
+              [
+                "D,X"
+              ],
+              "36-KR-79,CUM,SIG"
+            ],
+            "type": null,
+            "target": "36-KR-78",
+            "process": "D,X",
+            "sf49": "36-KR-79,CUM,SIG",
+            "sf4": "36-KR-79",
+            "sf5": "CUM",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(36-KR-78(D,N)37-RB-79,,SIG)",
+        "children": [
+          {
+            "code": [
+              "36-KR-78",
+              [
+                "D,N"
+              ],
+              "37-RB-79,,SIG"
+            ],
+            "type": null,
+            "target": "36-KR-78",
+            "process": "D,N",
+            "sf49": "37-RB-79,,SIG",
+            "sf4": "37-RB-79",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -367,56 +432,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(36-KR-78(D,X)36-KR-79,CUM,SIG)",
-          "0": {
-            "code": [
-              "36-KR-78",
-              [
-                "D,X"
-              ],
-              "36-KR-79,CUM,SIG"
-            ],
-            "type": null,
-            "target": "36-KR-78",
-            "process": "D,X",
-            "sf49": "36-KR-79,CUM,SIG",
-            "sf4": "36-KR-79",
-            "sf5": "CUM",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(36-KR-78(D,N)37-RB-79,,SIG)",
-          "0": {
-            "code": [
-              "36-KR-78",
-              [
-                "D,N"
-              ],
-              "37-RB-79,,SIG"
-            ],
-            "type": null,
-            "target": "36-KR-78",
-            "process": "D,N",
-            "sf49": "37-RB-79,,SIG",
-            "sf4": "37-RB-79",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -580,16 +595,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -604,10 +617,8 @@
               " efficiency was 5%."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2GERJUL)",
             "free_txt": [
@@ -620,10 +631,8 @@
               " MGC20E cyclotron of Debrecen"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,EXTB,STTA,GSPEC)",
             "free_txt": [
@@ -635,7 +644,7 @@
               "- Gas pressure 0.42-0.92 bar.",
               "- Ti (12.5 and 20 microns) and Cu (10 micron) foils",
               "  were used as monitor foils.",
-              "- Beam intensity was 100-200nA and was measured in",
+              "- Beam intensity was 100-200 nA and was measured in",
               "  Faraday cup.",
               "- Maximum difference between the values measured by",
               "  Faraday cup and deduced from monitor reactions was",
@@ -650,26 +659,22 @@
               "- Energy degradation was calculated by using the",
               "  polynomial approximation of Andersen and Ziegler.",
               "- Energy scale and beam intensity along the stacks",
-              "  were  corrected according to the applied monitor",
+              "  were corrected according to the applied monitor",
               "  reactions.",
               "Decay data were taken from R.B. Firestone",
               "Table of Isotopes."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,F.Tarkanyi+,R,IAEA-NDS-1211,2001)",
             "free_txt": [
               " chapter 4"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(29-CU-0(D,X)30-ZN-65,,SIG)",
             "free_txt": []
@@ -678,18 +683,14 @@
             "x4_code": "(22-TI-0(D,X)23-V-48,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
-            "x4_code": "(R,,R.B.Firestone+,B,FIRESTONE,,1996)",
+            "x4_code": "(R,,R.B.Firestone+,B,FIRESTONE,,,1996)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -707,16 +708,24 @@
       }
     },
     "002": {
-      "decay-data": {
-        "2": [
+      "1": {
+        "decay-data": [
+          {
+            "x4_code": "(35-BR-75,1.62HR,DG,286.6,0.92)",
+            "free_txt": []
+          }
+        ]
+      },
+      "2": {
+        "decay-data": [
           {
             "x4_code": "(35-BR-76-G,16.2HR,DG,559.1,0.74,                   DG,657.1,0.156)",
             "free_txt": []
           }
         ]
       },
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -733,16 +742,24 @@
       }
     },
     "003": {
-      "decay-data": {
-        "2": [
+      "1": {
+        "decay-data": [
+          {
+            "x4_code": "(36-KR-79-G,1.46D,DG,261.3,0.127,DG,397.5,0.093)",
+            "free_txt": []
+          }
+        ]
+      },
+      "2": {
+        "decay-data": [
           {
             "x4_code": "(37-RB-79,22.9MIN,DG,182.8,0.192,DG,688.3,0.231)",
             "free_txt": []
           }
         ]
       },
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [

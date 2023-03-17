@@ -51,35 +51,92 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,39,56,1989)",
-          "free_txt": [],
-          "publication_year": "1989"
-        },
-        {
-          "x4_code": "(J,NIM/A,259,329,1987)",
-          "free_txt": [
-            " Technical details",
-            "of facility"
-          ],
-          "publication_year": "1987"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,PR/C,39,56,1989)",
+        "free_txt": [],
+        "publication_year": "1989",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NIM/A,259,329,1987)",
+        "free_txt": [
+          " Technical details",
+          "of facility"
+        ],
+        "publication_year": "1987",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2SWTPSI)",
+        "free_txt": [
+          " Polarized proton facility installed",
+          " at the SIN injector cyclotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2SWTPSI)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(2-HE-4(P,EL)2-HE-4,,DA)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "P,EL"
+              ],
+              "2-HE-4,,DA"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "P,EL",
+            "sf49": "2-HE-4,,DA",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2SWTPSI)",
-          "free_txt": [
-            " Polarized proton facility installed",
-            " at the SIN injector cyclotron."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2SWTPSI)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(2-HE-4(P,EL)2-HE-4,,POL/DA,,ANA)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "P,EL"
+              ],
+              "2-HE-4,,POL/DA,,ANA"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "P,EL",
+            "sf49": "2-HE-4,,POL/DA,,ANA",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "POL/DA",
+            "sf7": null,
+            "sf8": "ANA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -99,32 +156,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(P,EL)2-HE-4,,DA)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "P,EL"
-              ],
-              "2-HE-4,,DA"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "P,EL",
-            "sf49": "2-HE-4,,DA",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -280,32 +311,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(P,EL)2-HE-4,,POL/DA,,ANA)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "P,EL"
-              ],
-              "2-HE-4,,POL/DA,,ANA"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "P,EL",
-            "sf49": "2-HE-4,,POL/DA,,ANA",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "POL/DA",
-            "sf7": null,
-            "sf8": "ANA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -463,8 +468,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -472,10 +477,8 @@
               "analysis with a quadratic energy dependence."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TELES)",
             "free_txt": [
@@ -488,10 +491,8 @@
               " experiment."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2SWTPSI)",
             "free_txt": [
@@ -499,18 +500,14 @@
               " at the SIN injector cyclotron."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -518,10 +515,8 @@
               " with-10 mum havar windows."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -532,8 +527,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -549,10 +544,8 @@
               " uncertainty to be +-0.02."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -563,8 +556,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -580,10 +573,8 @@
               " uncertainty to be +-0.02."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [

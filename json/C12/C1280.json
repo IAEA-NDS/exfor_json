@@ -26,38 +26,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CJC,39,697,1961)",
-          "free_txt": [],
-          "publication_year": "1961"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USABNL)",
-          "free_txt": [
-            " 60 in. cyclotron at Brookhaven",
-            " National Laboratory"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USABNL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CJC,39,697,1961)",
+        "free_txt": [],
+        "publication_year": "1961",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USABNL)",
+        "free_txt": [
+          " 60 in. cyclotron at Brookhaven",
+          " National Laboratory"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USABNL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(19-K-41(A,N)21-SC-44,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(19-K-41(A,N)21-SC-44,,SIG)",
+        "children": [
+          {
             "code": [
               "19-K-41",
               [
@@ -75,11 +70,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(19-K-41(A,2N)21-SC-43,,SIG)",
+        "children": [
+          {
+            "code": [
+              "19-K-41",
+              [
+                "A,2N"
+              ],
+              "21-SC-43,,SIG"
+            ],
+            "type": null,
+            "target": "19-K-41",
+            "process": "A,2N",
+            "sf49": "21-SC-43,,SIG",
+            "sf4": "21-SC-43",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(19-K-41(A,N)21-SC-44-M/G,,SIG/RAT)",
+        "children": [
+          {
+            "code": [
+              "19-K-41",
+              [
+                "A,N"
+              ],
+              "21-SC-44-M/G,,SIG/RAT"
+            ],
+            "type": null,
+            "target": "19-K-41",
+            "process": "A,N",
+            "sf49": "21-SC-44-M/G,,SIG/RAT",
+            "sf4": "21-SC-44-M/G",
+            "sf5": null,
+            "sf6": "SIG/RAT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Isomeric ratio"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -154,32 +212,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(19-K-41(A,2N)21-SC-43,,SIG)",
-          "0": {
-            "code": [
-              "19-K-41",
-              [
-                "A,2N"
-              ],
-              "21-SC-43,,SIG"
-            ],
-            "type": null,
-            "target": "19-K-41",
-            "process": "A,2N",
-            "sf49": "21-SC-43,,SIG",
-            "sf4": "21-SC-43",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -224,32 +256,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(19-K-41(A,N)21-SC-44-M/G,,SIG/RAT)",
-          "0": {
-            "code": [
-              "19-K-41",
-              [
-                "A,N"
-              ],
-              "21-SC-44-M/G,,SIG/RAT"
-            ],
-            "type": null,
-            "target": "19-K-41",
-            "process": "A,N",
-            "sf49": "21-SC-44-M/G,,SIG/RAT",
-            "sf4": "21-SC-44-M/G",
-            "sf5": null,
-            "sf6": "SIG/RAT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Isomeric ratio"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -326,18 +332,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
               " 3 in x 3 in sodium iodide crystal"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USABNL)",
             "free_txt": [
@@ -345,20 +349,16 @@
               " National Laboratory"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Beam of 4He+."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -366,10 +366,8 @@
               " acid"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -380,8 +378,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(21-SC-44)",
             "free_txt": [
@@ -389,20 +387,16 @@
               " life given"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -413,8 +407,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(21-SC-43)",
             "free_txt": [
@@ -422,20 +416,16 @@
               " life given"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -446,8 +436,8 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(21-SC-44)",
             "free_txt": [
@@ -455,20 +445,16 @@
               " life given"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

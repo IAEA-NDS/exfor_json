@@ -70,52 +70,49 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,32,1491,1980)",
-          "free_txt": [
-            " Issue 6."
-          ],
-          "publication_year": "1980"
-        },
-        {
-          "x4_code": "((C,80KIEV,2,194,1980)=(R,INDC(CCP)-169,(2),194,1980))",
-          "free_txt": [],
-          "publication_year": "1980"
-        },
-        {
-          "x4_code": "(R,JINR-P3-12667,1979)",
-          "free_txt": [
-            "Preliminary results of 1st series"
-          ],
-          "publication_year": "1979"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            " Pulsed reactor IBR-30, 20 kWt power,",
-            "neutron burst frequency 4 /sec."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,32,1491,1980)",
+        "free_txt": [
+          " Issue 6."
+        ],
+        "publication_year": "1980",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((C,80KIEV,2,194,1980)=(R,INDC(CCP)-169,(2),194,1980))",
+        "free_txt": [],
+        "publication_year": "1980",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,JINR-P3-12667,1979)",
+        "free_txt": [
+          "Preliminary results of 1st series"
+        ],
+        "publication_year": "1979",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          " Pulsed reactor IBR-30, 20 kWt power,",
+          "neutron burst frequency 4 /sec."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "((1-H-2(N,G)1-H-3,,SIG)/(17-CL-0(N,G),PAR,SIG))",
-          "0": {
+      "1": {
+        "x4_code": "((1-H-2(N,G)1-H-3,,SIG)/(17-CL-0(N,G),PAR,SIG))",
+        "children": [
+          {
             "code": [
               "1-H-2",
               [
@@ -134,7 +131,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "17-CL-0",
               [
@@ -152,13 +149,43 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(1-H-2(N,G)1-H-3,,SIG)",
-          "0": {
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(1-H-2(N,G)1-H-3,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "N,G"
+              ],
+              "1-H-3,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "N,G",
+            "sf49": "1-H-3,,SIG",
+            "sf4": "1-H-3",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((1-H-2(N,G)1-H-3,,SIG)/(17-CL-0(N,G),PAR,SIG))",
+        "children": [
+          {
             "code": [
               "1-H-2",
               [
@@ -177,10 +204,64 @@
             "sf8": null,
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "17-CL-0",
+              [
+                "N,G"
+              ],
+              ",PAR,SIG"
+            ],
+            "type": null,
+            "target": "17-CL-0",
+            "process": "N,G",
+            "sf49": ",PAR,SIG",
+            "sf4": null,
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-2(N,G)1-H-3,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "N,G"
+              ],
+              "1-H-3,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "N,G",
+            "sf49": "1-H-3,,SIG",
+            "sf4": "1-H-3",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-NRM     2",
@@ -254,51 +335,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-2(N,G)1-H-3,,SIG)/(17-CL-0(N,G),PAR,SIG))",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "N,G"
-              ],
-              "1-H-3,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "N,G",
-            "sf49": "1-H-3,,SIG",
-            "sf4": "1-H-3",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "17-CL-0",
-              [
-                "N,G"
-              ],
-              ",PAR,SIG"
-            ],
-            "type": null,
-            "target": "17-CL-0",
-            "process": "N,G",
-            "sf49": ",PAR,SIG",
-            "sf4": null,
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY",
@@ -345,32 +381,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(N,G)1-H-3,,SIG)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "N,G"
-              ],
-              "1-H-3,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "N,G",
-            "sf49": "1-H-3,,SIG",
-            "sf4": "1-H-3",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY",
@@ -416,18 +426,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               " Energy resolution 9 keV at 5 MeV."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
@@ -435,58 +443,46 @@
               "neutron burst frequency 4 /sec."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               " IBR-30 reactor"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Thermal neutrons"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Flight path 33.m ."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,M.L.Stelts+,J,NIM,155,253,1978)",
             "free_txt": [
               " Gamma lines intensities."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -499,8 +495,34 @@
       }
     },
     "002": {
-      "analysis": {
-        "2": [
+      "1": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Average value of two measurements"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Not explained in the article."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(DEP,40586003)",
+            "free_txt": [
+              " Directly measured ratios."
+            ]
+          }
+        ]
+      },
+      "2": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -508,28 +530,17 @@
               " assuming 1/v law for both CS."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
-          {
-            "x4_code": "(ASSUM,17-CL-0(N,G),,SIG)",
-            "free_txt": []
-          }
-        ]
-      },
-      "err-analys": {
-        "1": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Not explained in the article."
+              " Includes monitor error (MONIT-ERR) and ratio",
+              "error ( DATA-ERR 1)."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "2": [
+        ],
+        "monitor": [
           {
             "x4_code": "(17-CL-0(N,G),PAR,SIG)",
             "free_txt": [
@@ -539,20 +550,29 @@
           }
         ]
       },
-      "status": {
-        "1": [
+      "0": {
+        "assumed": [
           {
-            "x4_code": "(DEP,40586003)",
+            "x4_code": "(ASSUM,17-CL-0(N,G),,SIG)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
             "free_txt": [
-              " Directly measured ratios."
+              " Text, page 1493 and table 3 of",
+              "Yad.Fiz,v.32,is.6,p.1492,1980;",
+              "  Text, page 196 and table 2 of",
+              "Conf.Proc. 80KIEV,v.2,p.194,1980"
             ]
           }
         ]
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -560,10 +580,8 @@
               "article."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -576,10 +594,8 @@
               " Second series of measurement"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
@@ -587,10 +603,8 @@
               " 6.11 MeV ( Cl ), 6.26 MeV ( H-3) ."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -601,10 +615,8 @@
               "NaCl, g                     1.000           4.000"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -616,8 +628,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -625,10 +637,8 @@
               "article."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
@@ -638,18 +648,14 @@
               "strong gamma lines."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,G)1-H-2,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -658,10 +664,8 @@
               "NaCl, g                     1.000           4.000"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

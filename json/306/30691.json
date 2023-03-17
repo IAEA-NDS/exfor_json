@@ -1,7 +1,7 @@
 {
   "entry": "30691",
-  "last_updated": "2016-09-05",
-  "number_of_revisions": "5",
+  "last_updated": "2023-01-20",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19850125C)",
@@ -23,10 +23,16 @@
       "free_txt": [
         " VS. DECAY-DATA corrected in 002."
       ]
+    },
+    {
+      "x4_code": "(20220818A)",
+      "free_txt": [
+        " VT. Revision in 002-003"
+      ]
     }
   ],
   "bib_record": {
-    "title": "The measurement of absolute fission product yield for spontaneous fission of Cf-252",
+    "title": "The measurement of absolute fission product yield for spontaneous fission of 252Cf",
     "authors": [
       {
         "name": "Li Ze"
@@ -50,27 +56,23 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CNP,5,(3),226,198308)",
-          "free_txt": [
-            "In Chinese, English abstract"
-          ],
-          "publication_year": "1983"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CNP,5,226,1983)",
+        "free_txt": [
+          " In Chinese, English abstract"
+        ],
+        "publication_year": "1983",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F)MASS,CHN,FY)",
-          "0": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F)MASS,CHN,FY)",
+        "children": [
+          {
             "code": [
               "98-CF-252",
               [
@@ -88,11 +90,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F)ELEM/MASS,IND,FY,,FRC)",
+        "children": [
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              "ELEM/MASS,IND,FY,,FRC"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": "ELEM/MASS,IND,FY,,FRC",
+            "sf4": "ELEM/MASS",
+            "sf5": "IND",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "FRC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -361,51 +398,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((98-CF-252(0,F)ELEM/MASS,IND,FY)/(98-CF-252(0,F)MASS,CHN,FY))",
-          "0": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              "ELEM/MASS,IND,FY"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": "ELEM/MASS,IND,FY",
-            "sf4": "ELEM/MASS",
-            "sf5": "IND",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              "MASS,CHN,FY"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": "MASS,CHN,FY",
-            "sf4": "MASS",
-            "sf5": "CHN",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": " Fractional independentyields"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -443,8 +435,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -453,105 +445,78 @@
               "activities."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
-              "Correction applied for-",
-              "Decay during collection time",
+              "Correction applied for:",
+              "-Decay during collection time",
               "             cooling time",
               "             measurement time",
-              "Gamma pile-up",
-              "Gamma-cascade coincidence.",
+              "-Gamma pile-up",
+              "-Gamma-cascade coincidence.",
               "The fission product samples were measured in the same",
               "geometry as the calibration sources, so no correction",
               "was necessary."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
-              " 130 cm3 Co-axial Ge(Li) detector(FWHM 1.85keV at",
+              " 130 cm3 Co-axial detector(FWHM 1.85 keV at",
               "1332.5keV) together with a Scorpio-3000 multichannel",
-              "analysis computer system for gamma ray measurements.",
-              "Gamma-ray standard sources used for detector energy and",
-              "efficiency calibration were Am-241, Nd-147, Ce-144,",
-              "Ce-141, Mo-99, Ag-111, Na-22, Cs-137, Zr-95, Sc-46,",
-              "Co-60, Ta-182, Eu-152.",
-              "2 different geometries with different efficiency(source",
-              " detector distances 2 cm and 6 cm respectively) were",
-              "used."
+              "analysis computer system for gamma ray measurements."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
-              "Fission products collected on aluminium catcher foil",
+              "Fission products collected on aluminum catcher foil",
               "in 0.374 pi geometry. The collection efficiency",
               "was determined experimentally. Measurement of fission",
               "product activity by gamma counting."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "Absolute measurements."
-            ]
-          }
-        ]
-      },
-      "sample": {
-        "0": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "Cf-252 source,diameter 8mm,weight about 0.3 micro-gram,",
-              "electroplated on a 0.1 mm thick platinum foil, coated",
-              "with a 15 micro-gram/cm2 vyns layer."
+              "252Cf source (8 mm dia., 0.3 ug) electroplated on a",
+              "0.1 mm thick platinum foil, coated with a 15 ug/cm2",
+              "vyns layer."
             ]
           }
         ]
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
-              "Cumulative yields (not published) were calculated after",
-              "decay correction (see decay data).",
+              "Cumulative yields (not published) were calculated",
+              "after decay correction (see decay data).",
               "The chain yields given in the data table were",
               "calculated from the cumulative yields and the charge",
-              "distribution formula using ZP from R. Vandeplosch",
-              "et al.,(Nuclear fission, Academic Press, 1973, p.325),",
-              "and a constant width of 0.8 charge units."
+              "distribution formula using ZP from R.",
+              "Vandeplosch et al.,(Nuclear fission, Academic Press,",
+              "1973, p.325), and a constant width of 0.8 charge units."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": null,
             "free_txt": [
               "The decay data given below were used for decay",
-              "correction in calculating  the cumulative yields. This",
+              "correction in calculating the cumulative yields. This",
               "list includes the fission products measured and their",
               "precursors."
             ]
@@ -579,7 +544,8 @@
           {
             "x4_code": "((3.)37-RB-91,14.MIN)",
             "free_txt": [
-              " precursor"
+              " precursor",
+              "        Now its half-life is known to be ~1 min"
             ]
           },
           {
@@ -613,13 +579,7 @@
             "free_txt": []
           },
           {
-            "x4_code": "((6.)39-Y-95,10.31MIN)",
-            "free_txt": [
-              " precursor"
-            ]
-          },
-          {
-            "x4_code": "((6.)40-ZR-95,64.0D,DG,724.18,0.442,DG,756.72,0.544)",
+            "x4_code": "((6.)40-ZR-95,64.0D,DG,724.18,0.442,                    DG,756.72,0.544)",
             "free_txt": []
           },
           {
@@ -627,7 +587,7 @@
             "free_txt": []
           },
           {
-            "x4_code": "((8.)42-MO-99,66.02HR,DG,140.508,0.899,DG,181.07,0.061,                      DG,739.5,0.124)",
+            "x4_code": "((8.)42-MO-99,66.02HR,DG,140.508,0.899,                      DG,181.07,0.061,                      DG,739.5,0.124)",
             "free_txt": []
           },
           {
@@ -661,11 +621,11 @@
             "free_txt": []
           },
           {
-            "x4_code": "((12.)44-RU-105,4.44HR,DG,469.37,0.176,DG,676.36,0.157,                  DG,724.21,0.475)",
+            "x4_code": "((12.)44-RU-105,4.44HR,DG,469.37,0.176,                       DG,676.36,0.157,                       DG,724.21,0.475)",
             "free_txt": []
           },
           {
-            "x4_code": "((13.)45-RH-106-G,30.0SEC,DG,511.80,0.2047,                        DG,622.2,0.0995)",
+            "x4_code": "((13.)45-RH-106-G,30.0SEC,DG,511.80,0.2047,                          DG,622.2,0.0995)",
             "free_txt": []
           },
           {
@@ -777,7 +737,7 @@
             "free_txt": []
           },
           {
-            "x4_code": "((25.)51-SB-132,4.21MIN)",
+            "x4_code": "((25.)51-SB-132-M,4.21MIN)",
             "free_txt": [
               " precursor"
             ]
@@ -833,7 +793,7 @@
             ]
           },
           {
-            "x4_code": "((30.)55-CS-138-G,32.2MIN,DG,1435.86,0.763,                        DG,462.79,0.307)",
+            "x4_code": "((30.)55-CS-138-G,32.2MIN,DG,1435.86,0.763,                          DG,462.79,0.307)",
             "free_txt": []
           },
           {
@@ -958,10 +918,8 @@
             "x4_code": "((44.)63-EU-157,15.15HR,DG,413.,0.1765)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1005,26 +963,25 @@
               "decay correction are not included in the total error."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
               "The data were taken from Table 3, the errors",
               "from Table 4, the decay data from Table 2 of the",
-              "publication. Note: The ERR-S given in data table",
-              "were calculated by the compiler from the relative(%)",
-              "errors given in Table 4 of the publication."
+              "publication.",
+              "Note: The ERR-S given in data table were calculated by",
+              "the compiler from the relative (%)errors given in",
+              "Table 4 of the publication."
             ]
           }
         ]
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
@@ -1036,10 +993,8 @@
               "calculating the fractional yields is not given."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(52-TE-134,41.8MIN)",
             "free_txt": [
@@ -1047,7 +1002,7 @@
             ]
           },
           {
-            "x4_code": "(53-I-134,52.6MIN,DG,847.025,0.954)",
+            "x4_code": "(53-I-134-G,52.6MIN,DG,847.025,0.954)",
             "free_txt": []
           },
           {
@@ -1057,31 +1012,19 @@
             ]
           },
           {
-            "x4_code": "(54-XE-135,9.09HR,DG,249.794,0.903)",
+            "x4_code": "(54-XE-135-G,9.09HR,DG,249.794,0.903)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " No information"
+              " No information on source of uncertainties."
             ]
           }
-        ]
-      },
-      "result": {
-        "0": [
-          {
-            "x4_code": "(FRIND)",
-            "free_txt": []
-          }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

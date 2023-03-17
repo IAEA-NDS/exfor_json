@@ -56,66 +56,65 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,75WASH,2,620,1975)",
-          "free_txt": [],
-          "publication_year": "1975"
-        },
-        {
-          "x4_code": "((P,NEANDC(E)-163,191,1975)=(P,INDC(FR)-5,191,1975))",
-          "free_txt": [
-            " Proceedings of Saclay meeting preliminary data",
-            " relative to U-235."
-          ],
-          "publication_year": "1975"
-        },
-        {
-          "x4_code": "(P,KFK-1274,(2),121,1974)",
-          "free_txt": [
-            " graph."
-          ],
-          "publication_year": "1974"
-        },
-        {
-          "x4_code": "(P,NEANDC(E)-162,(5),2,1975)",
-          "free_txt": [
-            " Curve."
-          ],
-          "publication_year": "1975"
-        },
-        {
-          "x4_code": "(P,ORNL-5101,7,1975)",
-          "free_txt": [
-            " Superseded."
-          ],
-          "publication_year": "1975"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2GERKFK)",
-          "free_txt": [
-            " 3 MV pulsed Van der Graaff."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2GERKFK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,75WASH,2,620,1975)",
+        "free_txt": [],
+        "publication_year": "1975",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((P,NEANDC(E)-163,191,1975)=(P,INDC(FR)-5,191,1975))",
+        "free_txt": [
+          " Proceedings of Saclay meeting preliminary data",
+          " relative to U-235."
+        ],
+        "publication_year": "1975",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,KFK-1274,(2),121,1974)",
+        "free_txt": [
+          " graph."
+        ],
+        "publication_year": "1974",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,NEANDC(E)-162,(5),2,1975)",
+        "free_txt": [
+          " Curve."
+        ],
+        "publication_year": "1975",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,ORNL-5101,7,1975)",
+        "free_txt": [
+          " Superseded."
+        ],
+        "publication_year": "1975",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2GERKFK)",
+        "free_txt": [
+          " 3 MV pulsed Van der Graaff."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2GERKFK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(N,G)92-U-239,,SIG,,AV)/(79-AU-197(N,G)79-AU-198,,SIG,,AV))",
-          "0": {
+      "0": {
+        "x4_code": "((92-U-238(N,G)92-U-239,,SIG,,AV)/(79-AU-197(N,G)79-AU-198,,SIG,,AV))",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -134,7 +133,7 @@
             "sf8": "AV",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "79-AU-197",
               [
@@ -152,11 +151,121 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": " Ratio to a gold monitor."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,G)92-U-239,,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,G"
+              ],
+              "92-U-239,,SIG,,AV"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,G",
+            "sf49": "92-U-239,,SIG,,AV",
+            "sf4": "92-U-239",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Average capture cross section."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((92-U-238(N,G)92-U-239,,SIG,,AV)/(92-U-235(N,F),,SIG,,AV))",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,G"
+              ],
+              "92-U-239,,SIG,,AV"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,G",
+            "sf49": "92-U-239,,SIG,,AV",
+            "sf4": "92-U-239",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
           },
-          "type": "/",
-          "free_text": " Ratio to a gold monitor."
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG,,AV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": " Ratio to U-235 fission cross section."
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(92-U-238(N,G)92-U-239,,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,G"
+              ],
+              "92-U-239,,SIG,,AV"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,G",
+            "sf49": "92-U-239,,SIG,,AV",
+            "sf4": "92-U-239",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Average capture cross section."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -294,32 +403,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,G)92-U-239,,SIG,,AV)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,G"
-              ],
-              "92-U-239,,SIG,,AV"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,G",
-            "sf49": "92-U-239,,SIG,,AV",
-            "sf4": "92-U-239",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Average capture cross section."
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -514,51 +597,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(N,G)92-U-239,,SIG,,AV)/(92-U-235(N,F),,SIG,,AV))",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,G"
-              ],
-              "92-U-239,,SIG,,AV"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,G",
-            "sf49": "92-U-239,,SIG,,AV",
-            "sf4": "92-U-239",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG,,AV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": " Ratio to U-235 fission cross section."
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -712,32 +750,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,G)92-U-239,,SIG,,AV)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,G"
-              ],
-              "92-U-239,,SIG,,AV"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,G",
-            "sf49": "92-U-239,,SIG,,AV",
-            "sf4": "92-U-239",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Average capture cross section."
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -970,8 +982,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -980,10 +992,8 @@
               " the 0.25% U-235 impurity."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN )",
             "free_txt": [
@@ -999,30 +1009,24 @@
               " nitrogen was used for the U-235 monitor."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty given in table."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2GERKFK)",
             "free_txt": [
               " 3 MV pulsed Van der Graaff."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -1032,10 +1036,8 @@
               " higher energies."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1043,10 +1045,8 @@
               " Flight paths for all samples were 203.3.cm."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1054,10 +1054,8 @@
               " Correction is made for the 0.24% U-235 content."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1068,8 +1066,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -1106,10 +1104,8 @@
               " Uncertainty in counting loss correction"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1120,18 +1116,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".Derived from ratio data, subentry 002."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -1184,10 +1178,8 @@
               " Uncertainty in counting loss correction"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "((MONIT1),M.G.Sowerby+,R,AERE-R-7273,1973)",
             "free_txt": []
@@ -1205,10 +1197,8 @@
               "                                         200 keV"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)92-U-238(N,G)92-U-239,,SIG,,,EVAL)",
             "free_txt": []
@@ -1220,10 +1210,8 @@
               " values given in table I of 75WASH,2,620,1975"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1238,8 +1226,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -1274,10 +1262,8 @@
               " Uncertainty in counting loss correction"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1288,18 +1274,16 @@
       }
     },
     "005": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".Derived from ratio measurement in subentry 004."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(MONIT2-ERR,4.5,6.5)",
             "free_txt": [
@@ -1350,20 +1334,16 @@
               " a nominal value of 4.5%."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,M.G.Sowerby+,R,AERE-R-7273,1973)",
             "free_txt": [
               " for both monitors"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)92-U-238(N,G)92-U-239,,SIG,,,EVAL)",
             "free_txt": []
@@ -1374,10 +1354,8 @@
               " Value given in table."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

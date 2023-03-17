@@ -35,44 +35,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,INDC(CCP)-434,53,2003)",
-          "free_txt": [
-            " Revision 1"
-          ],
-          "publication_year": "2003"
-        },
-        {
-          "x4_code": "(R,ISTC-839B-99,52,2001)",
-          "free_txt": [],
-          "publication_year": "2001"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,4RUSITE)",
-          "free_txt": [
-            " ITEP U-10 synchrotron was used."
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(4RUSITE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,INDC(CCP)-434,53,2003)",
+        "free_txt": [
+          " Revision 1"
+        ],
+        "publication_year": "2003",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,ISTC-839B-99,52,2001)",
+        "free_txt": [],
+        "publication_year": "2001",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,4RUSITE)",
+        "free_txt": [
+          " ITEP U-10 synchrotron was used."
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(4RUSITE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(74-W-182(P,X)ELEM/MASS,IND,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(74-W-182(P,X)ELEM/MASS,IND,SIG)",
+        "children": [
+          {
             "code": [
               "74-W-182",
               [
@@ -90,11 +86,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(74-W-182(P,X)ELEM/MASS,CUM,SIG)",
+        "children": [
+          {
+            "code": [
+              "74-W-182",
+              [
+                "P,X"
+              ],
+              "ELEM/MASS,CUM,SIG"
+            ],
+            "type": null,
+            "target": "74-W-182",
+            "process": "P,X",
+            "sf49": "ELEM/MASS,CUM,SIG",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(74-W-182(P,X)73-TA-178-M1,IND,SIG)",
+        "children": [
+          {
+            "code": [
+              "74-W-182",
+              [
+                "P,X"
+              ],
+              "73-TA-178-M1,IND,SIG"
+            ],
+            "type": null,
+            "target": "74-W-182",
+            "process": "P,X",
+            "sf49": "73-TA-178-M1,IND,SIG",
+            "sf4": "73-TA-178-M1",
+            "sf5": "IND",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -358,32 +417,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(74-W-182(P,X)ELEM/MASS,CUM,SIG)",
-          "0": {
-            "code": [
-              "74-W-182",
-              [
-                "P,X"
-              ],
-              "ELEM/MASS,CUM,SIG"
-            ],
-            "type": null,
-            "target": "74-W-182",
-            "process": "P,X",
-            "sf49": "ELEM/MASS,CUM,SIG",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1439,32 +1472,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(74-W-182(P,X)73-TA-178-M1,IND,SIG)",
-          "0": {
-            "code": [
-              "74-W-182",
-              [
-                "P,X"
-              ],
-              "73-TA-178-M1,IND,SIG"
-            ],
-            "type": null,
-            "target": "74-W-182",
-            "process": "P,X",
-            "sf49": "73-TA-178-M1,IND,SIG",
-            "sf4": "73-TA-178-M1",
-            "sf5": "IND",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1499,8 +1506,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -1508,10 +1515,8 @@
               "codes-simulated yields."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1523,10 +1528,8 @@
               "In the experiment also."
             ]
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(11-NA-24-G,14.959HR,DG,1369.,1.)",
             "free_txt": []
@@ -1539,18 +1542,14 @@
             "x4_code": "(4-BE-7,53.29D,DG,477.6,0.105)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1565,20 +1564,16 @@
               "contribution to the total error."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,4RUSITE)",
             "free_txt": [
               " ITEP U-10 synchrotron was used."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB)",
             "free_txt": []
@@ -1587,18 +1582,14 @@
             "x4_code": "(GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(O0985002,YU.TITARENKO+,R,ISTC-839B-99,86,2001)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(13-AL-27(P,X)11-NA-22,,SIG)",
             "free_txt": []
@@ -1614,10 +1605,8 @@
               "All data are given in ISTC-839B-99."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1629,10 +1618,8 @@
               "             at 1.6-GeV protons- 170.4 mg,"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1645,8 +1632,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1659,8 +1646,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1677,8 +1664,8 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(73-TA-178-M1,2.36HR)",
             "free_txt": []

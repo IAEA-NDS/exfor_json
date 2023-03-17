@@ -50,24 +50,99 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ZP/A,323,101,1986)",
-          "free_txt": [],
-          "publication_year": "1986"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,ZP/A,323,101,1986)",
+        "free_txt": [],
+        "publication_year": "1986",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,3BZLUFR)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(3BZLUFR)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(92-U-238(A,2N)94-PU-240-L,,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "A,2N"
+              ],
+              "94-PU-240-L,,SIG"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "A,2N",
+            "sf49": "94-PU-240-L,,SIG",
+            "sf4": "94-PU-240-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,3BZLUFR)",
-          "free_txt": [],
-          "facility_type": "(CYCLO)",
-          "institute": "(3BZLUFR)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "((92-U-238(A,2N)94-PU-240-L,,SIG)/(92-U-238(A,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "A,2N"
+              ],
+              "94-PU-240-L,,SIG"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "A,2N",
+            "sf49": "94-PU-240-L,,SIG",
+            "sf4": "94-PU-240-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "92-U-238",
+              [
+                "A,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "A,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -87,32 +162,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(A,2N)94-PU-240-L,,SIG)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "A,2N"
-              ],
-              "94-PU-240-L,,SIG"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "A,2N",
-            "sf49": "94-PU-240-L,,SIG",
-            "sf4": "94-PU-240-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -157,51 +206,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(A,2N)94-PU-240-L,,SIG)/(92-U-238(A,F),,SIG))",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "A,2N"
-              ],
-              "94-PU-240-L,,SIG"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "A,2N",
-            "sf49": "94-PU-240-L,,SIG",
-            "sf4": "94-PU-240-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-238",
-              [
-                "A,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "A,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -245,26 +249,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(STRUC)",
             "free_txt": [
               " T(1/2)=3.8+0.6-0.4 nsec for 240mPu"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(94-PU-240-L,3.8NSEC)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -280,28 +280,22 @@
               " 24.3 mm radius cylinder."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,3BZLUFR)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -310,10 +304,8 @@
               "Target thicknesses ranged from 24-130 ug/cm2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

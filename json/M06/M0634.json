@@ -46,40 +46,36 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,61,1427,1998)",
-          "free_txt": [],
-          "publication_year": "1998"
-        },
-        {
-          "x4_code": "(J,PAN,61,1325,1998)",
-          "free_txt": [],
-          "publication_year": "1998"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(MICRT,4RUSFEI)",
-          "free_txt": [],
-          "facility_type": "(MICRT)",
-          "institute": "(4RUSFEI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,61,1427,1998)",
+        "free_txt": [],
+        "publication_year": "1998",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PAN,61,1325,1998)",
+        "free_txt": [],
+        "publication_year": "1998",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(MICRT,4RUSFEI)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(MICRT)",
+        "institute": "(4RUSFEI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-234(G,F),,SIG,,BRA)/(92-U-238(G,F),,SIG,,BRA))",
-          "0": {
+      "0": {
+        "x4_code": "((92-U-234(G,F),,SIG,,BRA)/(92-U-238(G,F),,SIG,,BRA))",
+        "children": [
+          {
             "code": [
               "92-U-234",
               [
@@ -98,7 +94,7 @@
             "sf8": "BRA",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "92-U-238",
               [
@@ -116,11 +112,46 @@
             "sf7": null,
             "sf8": "BRA",
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(94-PU-238(G,F),,SIG,,BRS)",
+        "children": [
+          {
+            "code": [
+              "94-PU-238",
+              [
+                "G,F"
+              ],
+              ",,SIG,,BRS"
+            ],
+            "type": null,
+            "target": "94-PU-238",
+            "process": "G,F",
+            "sf49": ",,SIG,,BRS",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -327,32 +358,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-238(G,F),,SIG,,BRS)",
-          "0": {
-            "code": [
-              "94-PU-238",
-              [
-                "G,F"
-              ],
-              ",,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "94-PU-238",
-            "process": "G,F",
-            "sf49": ",,SIG,,BRS",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -558,8 +563,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(UNFLD)",
             "free_txt": [
@@ -569,10 +574,8 @@
               " fragment counting."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -596,74 +599,58 @@
               " measurements."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": [
               " Mica-foils."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Mean-square errors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(MICRT,4RUSFEI)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB,STTA)",
             "free_txt": [
               " stack of Th and U targets."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,A.S.Soldatov+,J,YF,55,3153,1992)",
             "free_txt": [
               " The U-238(g,f) reaction cross section data."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-238(G,F),,SIG,,BRA)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -674,10 +661,8 @@
               " uranium."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE,APRVD)",
             "free_txt": [

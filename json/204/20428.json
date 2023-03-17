@@ -31,46 +31,98 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,75WASH,2,564,1975)",
-          "free_txt": [
-            " Average cross sections in table"
-          ],
-          "publication_year": "1975"
-        },
-        {
-          "x4_code": "(W,GAYTHER,197507)",
-          "free_txt": [
-            " Tabulated 239Pu fission data"
-          ],
-          "publication_year": "1975"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2UK HAR)",
-          "free_txt": [
-            " Harwell 45 MeV linac"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2UK HAR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,75WASH,2,564,1975)",
+        "free_txt": [
+          " Average cross sections in table"
+        ],
+        "publication_year": "1975",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,GAYTHER,197507)",
+        "free_txt": [
+          " Tabulated 239Pu fission data"
+        ],
+        "publication_year": "1975",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2UK HAR)",
+        "free_txt": [
+          " Harwell 45 MeV linac"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2UK HAR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(94-PU-239(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(94-PU-239(N,F),,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,SIG,,AV"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,SIG,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((94-PU-239(N,F),,SIG)/(92-U-235(N,F),,SIG))",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -89,10 +141,36 @@
             "sf8": null,
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -737,32 +815,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,F),,SIG,,AV)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,SIG,,AV"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,SIG,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -954,51 +1006,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-239(N,F),,SIG)/(92-U-235(N,F),,SIG))",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -1207,8 +1214,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1220,10 +1227,8 @@
               " - energy dependence of prompt neutron multiplicities."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -1237,20 +1242,16 @@
               " Detection of 478 keV gammas from 10B(n,a1)7Li"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2UK HAR)",
             "free_txt": [
               " Harwell 45 MeV linac"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1265,10 +1266,8 @@
               " by pulse-shape discrimination."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": [
@@ -1281,20 +1280,16 @@
               " 10B(n,a1)7Li 478 keV gammas"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(O,20422001,D.B.Gayther,C,75WASH,2,564,1975)",
             "free_txt": [
               " Similar experiment for 235U(n,f) cross section"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1308,8 +1303,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS,3.5,4.)",
             "free_txt": [
@@ -1358,10 +1353,8 @@
               "     Normalization at 10-30 keV         (4%)"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)94-PU-239(N,F),,SIG,,AV)",
             "free_txt": [
@@ -1374,10 +1367,8 @@
               "      Shape normalization"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1388,8 +1379,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1439,10 +1430,8 @@
               "         nu-p values                        (1%)"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)94-PU-239(N,F),,SIG,,AV)",
             "free_txt": [
@@ -1453,10 +1442,8 @@
             "x4_code": "(5-B-10(N,A)3-LI-7,PAR,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1467,8 +1454,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1531,10 +1518,8 @@
               "         235U nu-p values                   (1%)"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)94-PU-239(N,F),,SIG,,AV)",
             "free_txt": [
@@ -1547,10 +1532,8 @@
               "  2.349  b+/- 3.9%"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

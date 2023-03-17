@@ -51,44 +51,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,76ANL,,183,1976)",
-          "free_txt": [],
-          "publication_year": "1976"
-        },
-        {
-          "x4_code": "(J,NSE,81,196,1982)",
-          "free_txt": [
-            " Revised data in table"
-          ],
-          "publication_year": "1982"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USANBS)",
-          "free_txt": [
-            " NBS linear accelerator"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USANBS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,76ANL,,183,1976)",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NSE,81,196,1982)",
+        "free_txt": [
+          " Revised data in table"
+        ],
+        "publication_year": "1982",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USANBS)",
+        "free_txt": [
+          " NBS linear accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USANBS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -106,11 +102,74 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG,,AV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG,,AV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -635,32 +694,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,SIG,,AV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG,,AV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -835,32 +868,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,SIG,,AV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG,,AV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -1033,8 +1040,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1049,40 +1056,32 @@
               " - timing shift in proportional counter."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
               " 10-plate fission chamber with Cd shield"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USANBS)",
             "free_txt": [
               " NBS linear accelerator"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(O,10950001,O.A.Wasson+,J,NSE,81,196,1982)",
             "free_txt": [
               " 235U(n,f) cross sections from the same fission chamber"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1090,10 +1089,8 @@
               " placed at 69 m along the flight path"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1111,18 +1108,16 @@
       }
     },
     "002": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
               " Hydrogen proportional counter flux monitor"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1147,20 +1142,16 @@
               " Normalization uncertainty"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " 200 m flight path"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,W.P.Poenitz,R,ANL-NDM-45,1979)",
             "free_txt": [
@@ -1173,10 +1164,8 @@
               " n-p data in ENDF/B-V"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)92-U-235(N,F),,SIG)",
             "free_txt": [
@@ -1191,10 +1180,8 @@
               " Shape normalization from ENDF/B-V"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1217,18 +1204,16 @@
       }
     },
     "003": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
               " 6Li glass scintillator flux monitor"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1266,20 +1251,16 @@
               " Normalization of 235U in 7.8-11 eV interval"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " 23 m flight path"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,W.P.Poenitz,R,ANL-NDM-45,1979)",
             "free_txt": [
@@ -1292,10 +1273,8 @@
               " 6Li(n,t) in ENDF/B-V"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)92-U-235(N,F),,INT)",
             "free_txt": [
@@ -1308,10 +1287,8 @@
               " Shape normalization from ENDF/B-V"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1329,18 +1306,16 @@
       }
     },
     "005": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
               " Hydrogen proportional counter flux monitor"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1365,20 +1340,16 @@
               " Normalization uncertainty"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " 200 m flight path"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)92-U-235(N,F),,SIG)",
             "free_txt": [
@@ -1393,10 +1364,8 @@
               " Shape normalization from ENDF/B-V"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

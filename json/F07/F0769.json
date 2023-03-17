@@ -104,42 +104,38 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,65,1609,2002)",
-          "free_txt": [],
-          "publication_year": "2002"
-        },
-        {
-          "x4_code": "(J,PAN,65,1569,2002)",
-          "free_txt": [
-            " English translation"
-          ],
-          "publication_year": "2002"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,4ZZZDUB)",
-          "free_txt": [],
-          "facility_type": "(CYCLO)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,65,1609,2002)",
+        "free_txt": [],
+        "publication_year": "2002",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PAN,65,1569,2002)",
+        "free_txt": [
+          " English translation"
+        ],
+        "publication_year": "2002",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,4ZZZDUB)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(2-HE-6,X)2-HE-4,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(14-SI-28(2-HE-6,X)2-HE-4,,SIG)",
+        "children": [
+          {
             "code": [
               "14-SI-28",
               [
@@ -157,11 +153,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(14-SI-28(A,NON),,SIG)",
+        "children": [
+          {
+            "code": [
+              "14-SI-28",
+              [
+                "A,NON"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "14-SI-28",
+            "process": "A,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(14-SI-28(2-HE-6,NON),,SIG)",
+        "children": [
+          {
+            "code": [
+              "14-SI-28",
+              [
+                "2-HE-6,NON"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "14-SI-28",
+            "process": "2-HE-6,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "DATA-ERR",
@@ -235,32 +294,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(A,NON),,SIG)",
-          "0": {
-            "code": [
-              "14-SI-28",
-              [
-                "A,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "14-SI-28",
-            "process": "A,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -296,32 +329,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(2-HE-6,NON),,SIG)",
-          "0": {
-            "code": [
-              "14-SI-28",
-              [
-                "2-HE-6,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "14-SI-28",
-            "process": "2-HE-6,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "DATA-ERR",
@@ -390,8 +397,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SI)",
             "free_txt": [
@@ -402,10 +409,8 @@
               "measured with the accuracy of 3 mu-m."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -422,18 +427,14 @@
               "in the couple of detectors under study."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,4ZZZDUB)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -447,18 +448,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR1)",
             "free_txt": [
               "Error from the graphic bars"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -469,8 +468,8 @@
       }
     },
     "003": {
-      "method": {
-        "0": [
+      "0": {
+        "method": [
           {
             "x4_code": "(TRN)",
             "free_txt": [
@@ -494,10 +493,8 @@
               "results of the energy losses in delta E counters."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -508,8 +505,8 @@
       }
     },
     "004": {
-      "method": {
-        "0": [
+      "0": {
+        "method": [
           {
             "x4_code": "(TRN)",
             "free_txt": [
@@ -533,10 +530,8 @@
               "results of the energy losses in delta E counters."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

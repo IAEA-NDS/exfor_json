@@ -44,38 +44,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,197,163,1972)",
-          "free_txt": [],
-          "publication_year": "1972"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,2GERBON)",
-          "free_txt": [
-            " gamma-beam no. 5 of the Bonn 2.5 GeV",
-            " electron synchrotron"
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(2GERBON)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,197,163,1972)",
+        "free_txt": [],
+        "publication_year": "1972",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,2GERBON)",
+        "free_txt": [
+          " gamma-beam no. 5 of the Bonn 2.5 GeV",
+          " electron synchrotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(2GERBON)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(G,F)MASS,CHN,FY,,REL/BRA)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(G,F)MASS,CHN,FY,,REL/BRA)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -93,11 +88,65 @@
             "sf7": null,
             "sf8": "REL/BRA",
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Mass yields as a function of bremsstrahlung energy."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((92-U-238(G,F)MASS,CHN,FY,,BRA)/(92-U-238(G,F)47-AG-112,CHN,FY,,BRA))",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "G,F"
+              ],
+              "MASS,CHN,FY,,BRA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "G,F",
+            "sf49": "MASS,CHN,FY,,BRA",
+            "sf4": "MASS",
+            "sf5": "CHN",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
           },
-          "type": null,
-          "free_text": " Mass yields as a function of bremsstrahlung energy."
-        }
-      },
+          {
+            "code": [
+              "92-U-238",
+              [
+                "G,F"
+              ],
+              "47-AG-112,CHN,FY,,BRA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "G,F",
+            "sf49": "47-AG-112,CHN,FY,,BRA",
+            "sf4": "47-AG-112",
+            "sf5": "CHN",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": "Ratio Peak to valley"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -241,51 +290,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(G,F)MASS,CHN,FY,,BRA)/(92-U-238(G,F)47-AG-112,CHN,FY,,BRA))",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "G,F"
-              ],
-              "MASS,CHN,FY,,BRA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "G,F",
-            "sf49": "MASS,CHN,FY,,BRA",
-            "sf4": "MASS",
-            "sf5": "CHN",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "BRA",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-238",
-              [
-                "G,F"
-              ],
-              "47-AG-112,CHN,FY,,BRA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "G,F",
-            "sf49": "47-AG-112,CHN,FY,,BRA",
-            "sf4": "47-AG-112",
-            "sf5": "CHN",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "BRA",
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": "Ratio Peak to valley"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -339,8 +343,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": [
@@ -351,10 +355,8 @@
             "x4_code": "(GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,2GERBON)",
             "free_txt": [
@@ -362,20 +364,16 @@
               " electron synchrotron"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": [
               " Beam produced in a tungsten target."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -387,18 +385,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -409,18 +405,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

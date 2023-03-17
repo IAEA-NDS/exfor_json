@@ -47,51 +47,48 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,10,1299,1974)",
-          "free_txt": [
-            " DA, SIG, Legendre coeff.in figs"
-          ],
-          "publication_year": "1974"
-        },
-        {
-          "x4_code": "(J,AUJ,22,669,196912)",
-          "free_txt": [
-            " TTY at Ep=2.52,3.45 MeV in figs"
-          ],
-          "publication_year": "1969"
-        },
-        {
-          "x4_code": "(W,BURKE,1972)",
-          "free_txt": [
-            " PhD.thesis, Univ. Oregon. Table given."
-          ],
-          "publication_year": "1972"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,1USAORE)",
-          "free_txt": [],
-          "facility_type": "(VDG)",
-          "institute": "(1USAORE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,10,1299,1974)",
+        "free_txt": [
+          " DA, SIG, Legendre coeff.in figs"
+        ],
+        "publication_year": "1974",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,AUJ,22,669,196912)",
+        "free_txt": [
+          " TTY at Ep=2.52,3.45 MeV in figs"
+        ],
+        "publication_year": "1969",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,BURKE,1972)",
+        "free_txt": [
+          " PhD.thesis, Univ. Oregon. Table given."
+        ],
+        "publication_year": "1972",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,1USAORE)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(1USAORE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-7(P,N)4-BE-7,PAR,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(3-LI-7(P,N)4-BE-7,PAR,DA)",
+        "children": [
+          {
             "code": [
               "3-LI-7",
               [
@@ -109,11 +106,102 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(3-LI-7(P,N)4-BE-7,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "3-LI-7",
+              [
+                "P,N"
+              ],
+              "4-BE-7,PAR,SIG"
+            ],
+            "type": null,
+            "target": "3-LI-7",
+            "process": "P,N",
+            "sf49": "4-BE-7,PAR,SIG",
+            "sf4": "4-BE-7",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(3-LI-7(P,N)4-BE-7,PAR,DA,,LEG/FCT)",
+        "children": [
+          {
+            "code": [
+              "3-LI-7",
+              [
+                "P,N"
+              ],
+              "4-BE-7,PAR,DA,,LEG/FCT"
+            ],
+            "type": null,
+            "target": "3-LI-7",
+            "process": "P,N",
+            "sf49": "4-BE-7,PAR,DA,,LEG/FCT",
+            "sf4": "4-BE-7",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG/FCT",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " dsig/dOmega=(1/4pi)(a0*P0+a1*P1+a2*P2), i.e.,a0=sig"
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(3-LI-7(P,N)4-BE-7,,MLT/DA/DE,,TT)",
+        "children": [
+          {
+            "code": [
+              "3-LI-7",
+              [
+                "P,N"
+              ],
+              "4-BE-7,,MLT/DA/DE,,TT"
+            ],
+            "type": null,
+            "target": "3-LI-7",
+            "process": "P,N",
+            "sf49": "4-BE-7,,MLT/DA/DE,,TT",
+            "sf4": "4-BE-7",
+            "sf5": null,
+            "sf6": "MLT/DA/DE",
+            "sf7": null,
+            "sf8": "TT",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG",
@@ -730,32 +818,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-7(P,N)4-BE-7,PAR,SIG)",
-          "0": {
-            "code": [
-              "3-LI-7",
-              [
-                "P,N"
-              ],
-              "4-BE-7,PAR,SIG"
-            ],
-            "type": null,
-            "target": "3-LI-7",
-            "process": "P,N",
-            "sf49": "4-BE-7,PAR,SIG",
-            "sf4": "4-BE-7",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL"
@@ -1307,32 +1369,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-7(P,N)4-BE-7,PAR,DA,,LEG/FCT)",
-          "0": {
-            "code": [
-              "3-LI-7",
-              [
-                "P,N"
-              ],
-              "4-BE-7,PAR,DA,,LEG/FCT"
-            ],
-            "type": null,
-            "target": "3-LI-7",
-            "process": "P,N",
-            "sf49": "4-BE-7,PAR,DA,,LEG/FCT",
-            "sf4": "4-BE-7",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG/FCT",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " dsig/dOmega=(1/4pi)(a0*P0+a1*P1+a2*P2), i.e.,a0=sig"
-        }
-      },
       "common": {
         "heads": [
           "E-LVL"
@@ -3436,32 +3472,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-7(P,N)4-BE-7,,MLT/DA/DE,,TT)",
-          "0": {
-            "code": [
-              "3-LI-7",
-              [
-                "P,N"
-              ],
-              "4-BE-7,,MLT/DA/DE,,TT"
-            ],
-            "type": null,
-            "target": "3-LI-7",
-            "process": "P,N",
-            "sf49": "4-BE-7,,MLT/DA/DE,,TT",
-            "sf4": "4-BE-7",
-            "sf5": null,
-            "sf6": "MLT/DA/DE",
-            "sf7": null,
-            "sf8": "TT",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG"
@@ -4801,54 +4811,44 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " Plastic scintillator (1.3 cm thick, 6.3 cm diam)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,1USAORE)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " flight path of up to 3 m"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Li metal ribbon (99.9%pure, ~1 mm thick, 1 cm diam)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -4859,18 +4859,16 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Derived from thick target neutron yields"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -4882,10 +4880,8 @@
               "    * lithium resonance scattering."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -4903,8 +4899,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -4916,10 +4912,8 @@
               "    * lithium resonance scattering."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -4937,8 +4931,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -4947,10 +4941,8 @@
               " poor quality of the original document kept at NDS."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -4962,10 +4954,8 @@
               "    * lithium resonance scattering."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -4983,8 +4973,8 @@
       }
     },
     "005": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

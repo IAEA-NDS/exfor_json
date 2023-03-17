@@ -69,44 +69,40 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ARI,66,1898,2008)",
-          "free_txt": [],
-          "publication_year": "2008"
-        },
-        {
-          "x4_code": "(J,CNPR,23,127,2006)",
-          "free_txt": [
-            " Lower cross section for 89Y given"
-          ],
-          "publication_year": "2006"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(NGEN,3CPRLNZ)",
-          "free_txt": [
-            " ZF-300-II Intense Neutron Generator"
-          ],
-          "facility_type": "(NGEN)",
-          "institute": "(3CPRLNZ)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ARI,66,1898,2008)",
+        "free_txt": [],
+        "publication_year": "2008",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,CNPR,23,127,2006)",
+        "free_txt": [
+          " Lower cross section for 89Y given"
+        ],
+        "publication_year": "2006",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(NGEN,3CPRLNZ)",
+        "free_txt": [
+          " ZF-300-II Intense Neutron Generator"
+        ],
+        "pointer": "0",
+        "facility_type": "(NGEN)",
+        "institute": "(3CPRLNZ)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(39-Y-89(N,2N)39-Y-88,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(39-Y-89(N,2N)39-Y-88,,SIG)",
+        "children": [
+          {
             "code": [
               "39-Y-89",
               [
@@ -124,11 +120,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(39-Y-89(N,A)37-RB-86,,SIG)",
+        "children": [
+          {
+            "code": [
+              "39-Y-89",
+              [
+                "N,A"
+              ],
+              "37-RB-86,,SIG"
+            ],
+            "type": null,
+            "target": "39-Y-89",
+            "process": "N,A",
+            "sf49": "37-RB-86,,SIG",
+            "sf4": "37-RB-86",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(39-Y-89(N,2N)39-Y-88,,SIG)",
+        "children": [
+          {
+            "code": [
+              "39-Y-89",
+              [
+                "N,2N"
+              ],
+              "39-Y-88,,SIG"
+            ],
+            "type": null,
+            "target": "39-Y-89",
+            "process": "N,2N",
+            "sf49": "39-Y-88,,SIG",
+            "sf4": "39-Y-88",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -182,32 +241,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(39-Y-89(N,A)37-RB-86,,SIG)",
-          "0": {
-            "code": [
-              "39-Y-89",
-              [
-                "N,A"
-              ],
-              "37-RB-86,,SIG"
-            ],
-            "type": null,
-            "target": "39-Y-89",
-            "process": "N,A",
-            "sf49": "37-RB-86,,SIG",
-            "sf4": "37-RB-86",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -261,32 +294,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(39-Y-89(N,2N)39-Y-88,,SIG)",
-          "0": {
-            "code": [
-              "39-Y-89",
-              [
-                "N,2N"
-              ],
-              "39-Y-88,,SIG"
-            ],
-            "type": null,
-            "target": "39-Y-89",
-            "process": "N,2N",
-            "sf49": "39-Y-88,,SIG",
-            "sf4": "39-Y-88",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -328,8 +335,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -340,10 +347,8 @@
               " - sample geometry"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -352,20 +357,16 @@
               " 3 keV at 1.332 MeV."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(NGEN,3CPRLNZ)",
             "free_txt": [
               " ZF-300-II Intense Neutron Generator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
@@ -377,18 +378,14 @@
               "  ratio."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -401,24 +398,20 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(39-Y-88,106.65D,DG,898.042,0.9368)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(41-NB-92-M,10.15D,DG,934.44,0.9907)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -438,26 +431,20 @@
               " - monitor reaction cross section"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,M.Wagner+,B,PH-DAT,13,(5),183,1990)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(41-NB-93(N,2N)41-NB-92-M,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -468,24 +455,20 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(37-RB-86-G,18.631D,DG,1077.0,0.0864)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(41-NB-92-M,10.15D,DG,934.44,0.9907)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -505,26 +488,20 @@
               " - monitor reaction cross section"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,M.Wagner+,B,PH-DAT,13,(5),183,1990)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(41-NB-93(N,2N)41-NB-92-M,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -535,24 +512,20 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(39-Y-88,106.065D,DG,898.042,0.9368)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(41-NB-92-M,10.15D,DG,934.44,0.99074)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -566,26 +539,20 @@
               "            - neutron energy"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,A.A.Filatenkov+,R,RI-252,1999)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(41-NB-93(N,2N)41-NB-92-M,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -64,38 +64,95 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,69,(1),015802,200401)",
-          "free_txt": [
-            " Main reference",
-            "Main reference. See also TITLE and AUTHOR."
-          ],
-          "publication_year": "2004"
-        },
-        {
-          "x4_code": "(J,NP/A,718,(1-4),466,200305)",
-          "free_txt": [
-            "T.Itahashi+, Proc. of the Seventh International",
-            "Symposium on Nuclei in the Cosmos (NIC7)"
-          ],
-          "publication_year": "2003"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,PR/C,69,(1),015802,200401)",
+        "free_txt": [
+          " Main reference",
+          "Main reference. See also TITLE and AUTHOR."
+        ],
+        "publication_year": "2004",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,718,(1-4),466,200305)",
+        "free_txt": [
+          "T.Itahashi+, Proc. of the Seventh International",
+          "Symposium on Nuclei in the Cosmos (NIC7)"
+        ],
+        "publication_year": "2003",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,2JPNOSA)",
+        "free_txt": [
+          " NANOGUN ECR ion source with specially",
+          "                designed ceramic insulator"
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(2JPNOSA)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(2-HE-3(HE3,2P)2-HE-4,,SIG)",
+        "children": [
+          {
+            "code": [
+              "2-HE-3",
+              [
+                "HE3,2P"
+              ],
+              "2-HE-4,,SIG"
+            ],
+            "type": null,
+            "target": "2-HE-3",
+            "process": "HE3,2P",
+            "sf49": "2-HE-4,,SIG",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,2JPNOSA)",
-          "free_txt": [
-            " NANOGUN ECR ion source with specially",
-            "                designed ceramic insulator"
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(2JPNOSA)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(2-HE-3(HE3,2P)2-HE-4,,SIG,,SFC)",
+        "children": [
+          {
+            "code": [
+              "2-HE-3",
+              [
+                "HE3,2P"
+              ],
+              "2-HE-4,,SIG,,SFC"
+            ],
+            "type": null,
+            "target": "2-HE-3",
+            "process": "HE3,2P",
+            "sf49": "2-HE-4,,SIG,,SFC",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SFC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -130,32 +187,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-3(HE3,2P)2-HE-4,,SIG)",
-          "0": {
-            "code": [
-              "2-HE-3",
-              [
-                "HE3,2P"
-              ],
-              "2-HE-4,,SIG"
-            ],
-            "type": null,
-            "target": "2-HE-3",
-            "process": "HE3,2P",
-            "sf49": "2-HE-4,,SIG",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -191,32 +222,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-3(HE3,2P)2-HE-4,,SIG,,SFC)",
-          "0": {
-            "code": [
-              "2-HE-3",
-              [
-                "HE3,2P"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
-            "target": "2-HE-3",
-            "process": "HE3,2P",
-            "sf49": "2-HE-4,,SIG,,SFC",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-SYS"
@@ -278,8 +283,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SOLST)",
             "free_txt": [
@@ -294,10 +299,8 @@
               "        MeV alpha particle"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -322,10 +325,8 @@
               " Uncertainty in detection efficiency"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,2JPNOSA)",
             "free_txt": [
@@ -333,10 +334,8 @@
               "                designed ceramic insulator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -344,10 +343,8 @@
               "- Charge of incident ion is 2+."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -357,10 +354,8 @@
               "spread in target"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -374,18 +369,14 @@
               " 4 delta E-E counter telescopes"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P,A)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,T.Itahashi+,J,RSI,69,(2),1032,199802)",
             "free_txt": [
@@ -398,10 +389,8 @@
               "Performance and design of ion source"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -416,8 +405,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -428,18 +417,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,A.Krauss+,J,NP/A,467,(2),273,198706)",
             "free_txt": [
@@ -448,10 +435,8 @@
               "than that in this work."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

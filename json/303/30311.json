@@ -50,38 +50,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ANE,3,(1),55,1976)",
-          "free_txt": [],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": [
-            " Pulsed 25 MeV electron linear accelerator at",
-            "the Centro Atomico Bariloche.",
-            "The Linac was run at 25 pps, 2.5 Micro-A average",
-            "current for 17 m path and 12.5 pps, 1 micro-A for 3.6m"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ANE,3,(1),55,1976)",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC)",
+        "free_txt": [
+          " Pulsed 25 MeV electron linear accelerator at",
+          "the Centro Atomico Bariloche.",
+          "The Linac was run at 25 pps, 2.5 Micro-A average",
+          "current for 17 m path and 12.5 pps, 1 micro-A for 3.6m"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(24-CR-0(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(24-CR-0(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "24-CR-0",
               [
@@ -99,11 +94,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(24-CR-0(N,G),,SIG)",
+        "children": [
+          {
+            "code": [
+              "24-CR-0",
+              [
+                "N,G"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "24-CR-0",
+            "process": "N,G",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "TEMP",
@@ -1268,32 +1298,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(24-CR-0(N,G),,SIG)",
-          "0": {
-            "code": [
-              "24-CR-0",
-              [
-                "N,G"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "24-CR-0",
-            "process": "N,G",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1322,8 +1326,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1333,10 +1337,8 @@
               "was also small being of order of magnitude of 0.3%."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HE3SP)",
             "free_txt": [
@@ -1344,18 +1346,14 @@
               "15 cm active length, with 10 atm filling gas pressure."
             ]
           }
-        ]
-      },
-      "exp-year": {
-        "0": [
+        ],
+        "exp-year": [
           {
             "x4_code": "(1974)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC)",
             "free_txt": [
@@ -1365,10 +1363,8 @@
               "current for 17 m path and 12.5 pps, 1 micro-A for 3.6m"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1376,10 +1372,8 @@
               "paraffin-moderator for increase of low energy neutrons."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1392,20 +1386,16 @@
               "sample-in-sample-out method to normalize the spectra."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "Absolute, transmission measurement."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1416,10 +1406,8 @@
               "Sample was kept at the temperature of 20 +- 0.5 Deg C."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1437,8 +1425,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1460,8 +1448,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1473,20 +1461,16 @@
               " sig(coherent)  =sig(elastic coh.)+sig(inelastic coh.)."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No further information."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,30311002)",
             "free_txt": [

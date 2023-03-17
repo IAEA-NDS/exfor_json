@@ -43,37 +43,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,ORNL-TM-5612,197610)",
-          "free_txt": [],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USAORL)",
-          "free_txt": [
-            " ORELA"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,ORNL-TM-5612,197610)",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USAORL)",
+        "free_txt": [
+          " ORELA"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(9-F-19(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(9-F-19(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "9-F-19",
               [
@@ -91,11 +86,72 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(9-F-19(N,0),,EN)",
+        "children": [
+          {
+            "code": [
+              "9-F-19",
+              [
+                "N,0"
+              ],
+              ",,EN"
+            ],
+            "type": null,
+            "target": "9-F-19",
+            "process": "N,0",
+            "sf49": ",,EN",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "EN",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(9-F-19(N,TOT),,WID)",
+        "children": [
+          {
+            "code": [
+              "9-F-19",
+              [
+                "N,TOT"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "9-F-19",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-SYS"
@@ -7298,56 +7354,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(9-F-19(N,0),,EN)",
-          "0": {
-            "code": [
-              "9-F-19",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
-            "target": "9-F-19",
-            "process": "N,0",
-            "sf49": ",,EN",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "EN",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(9-F-19(N,TOT),,WID)",
-          "0": {
-            "code": [
-              "9-F-19",
-              [
-                "N,TOT"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "9-F-19",
-            "process": "N,TOT",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -7389,18 +7395,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Data corrected for deadtime and background effects."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
@@ -7413,40 +7417,32 @@
               "  Ne-110 detector for 200-m flight path."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USAORL)",
             "free_txt": [
               " ORELA"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(EVAP)",
             "free_txt": [
               " Electrons on tantalum target."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time-of-flight. 80-m and 200-m flight paths."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -7465,10 +7461,8 @@
               "  1291.9 keV    21.8 MeV 200.     0.1309      Be"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -7479,8 +7473,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -7493,10 +7487,8 @@
               " Estimated systematic uncertainty."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -7508,18 +7500,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainty."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

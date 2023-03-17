@@ -56,56 +56,54 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,IZV,65,647,2001)",
-          "free_txt": [],
-          "publication_year": "2001"
-        },
-        {
-          "x4_code": "(J,BAS,65,695,2001)",
-          "free_txt": [],
-          "publication_year": "2001"
-        },
-        {
-          "x4_code": "(J,PR/C,57,1797,1998)",
-          "free_txt": [
-            " Target: C-12, beam: O-16,",
-            "incident energy: 132 MeV."
-          ],
-          "publication_year": "1998"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,4RUSKUR)",
-          "free_txt": [
-            "   Incident energy of 132 MeV."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(4RUSKUR)"
-        },
-        {
-          "x4_code": "(CYCLO,2SF JYV)",
-          "free_txt": [],
-          "facility_type": "(CYCLO)",
-          "institute": "(2SF JYV)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,IZV,65,647,2001)",
+        "free_txt": [],
+        "publication_year": "2001",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,BAS,65,695,2001)",
+        "free_txt": [],
+        "publication_year": "2001",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PR/C,57,1797,1998)",
+        "free_txt": [
+          " Target: C-12, beam: O-16,",
+          "incident energy: 132 MeV."
+        ],
+        "publication_year": "1998",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,4RUSKUR)",
+        "free_txt": [
+          "   Incident energy of 132 MeV."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(4RUSKUR)"
+      },
+      {
+        "x4_code": "(CYCLO,2SF JYV)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2SF JYV)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(8-O-16,EL)6-C-12,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(8-O-16,EL)6-C-12,,DA)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -123,11 +121,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(20-CA-40(8-O-16,EL)20-CA-40,,DA,,RTH)",
+        "children": [
+          {
+            "code": [
+              "20-CA-40",
+              [
+                "8-O-16,EL"
+              ],
+              "20-CA-40,,DA,,RTH"
+            ],
+            "type": null,
+            "target": "20-CA-40",
+            "process": "8-O-16,EL",
+            "sf49": "20-CA-40,,DA,,RTH",
+            "sf4": "20-CA-40",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "RTH",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -1639,32 +1672,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(20-CA-40(8-O-16,EL)20-CA-40,,DA,,RTH)",
-          "0": {
-            "code": [
-              "20-CA-40",
-              [
-                "8-O-16,EL"
-              ],
-              "20-CA-40,,DA,,RTH"
-            ],
-            "type": null,
-            "target": "20-CA-40",
-            "process": "8-O-16,EL",
-            "sf49": "20-CA-40,,DA,,RTH",
-            "sf4": "20-CA-40",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "RTH",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -1838,8 +1845,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1849,10 +1856,8 @@
               "and a detector of 1*1 cm as E-detector."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,4RUSKUR)",
             "free_txt": [
@@ -1863,10 +1868,8 @@
             "x4_code": "(CYCLO,2SF JYV)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": [
@@ -1879,18 +1882,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical errors"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1898,10 +1899,8 @@
               "0.24 mg/cm2 was used."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1912,18 +1911,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Error from the graphic bars"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

@@ -101,51 +101,47 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,758,158,200507)",
-          "free_txt": [],
-          "publication_year": "2005"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ISOCY,2JPNIPC)",
-          "free_txt": [
-            " Secondary 25Al and 26Si beams produced",
-            "                by the reactions of",
-            "                3He(24Mg,n)26Si*(p)25Al and",
-            "                3He(24Mg,n)26Si with a 24Mg beam of",
-            "                7.434A MeV, and 3He gas target of 0.32",
-            "                mg/cm**2."
-          ],
-          "facility_type": "(ISOCY)",
-          "institute": "(2JPNIPC)"
-        },
-        {
-          "x4_code": "(PRJFS,2JPNTOK)",
-          "free_txt": [
-            " CNS radioactive ion beam separator",
-            "                (CRIB) at Center for Nuclear Study"
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(2JPNTOK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,758,158,200507)",
+        "free_txt": [],
+        "publication_year": "2005",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ISOCY,2JPNIPC)",
+        "free_txt": [
+          " Secondary 25Al and 26Si beams produced",
+          "                by the reactions of",
+          "                3He(24Mg,n)26Si*(p)25Al and",
+          "                3He(24Mg,n)26Si with a 24Mg beam of",
+          "                7.434A MeV, and 3He gas target of 0.32",
+          "                mg/cm**2."
+        ],
+        "pointer": "0",
+        "facility_type": "(ISOCY)",
+        "institute": "(2JPNIPC)"
+      },
+      {
+        "x4_code": "(PRJFS,2JPNTOK)",
+        "free_txt": [
+          " CNS radioactive ion beam separator",
+          "                (CRIB) at Center for Nuclear Study"
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2JPNTOK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(13-AL-25,EL)1-H-1,,DA,P)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-1(13-AL-25,EL)1-H-1,,DA,P)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -163,11 +159,46 @@
             "sf7": "P",
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(14-SI-26,EL)1-H-1,,DA,P)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "14-SI-26,EL"
+              ],
+              "1-H-1,,DA,P"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "14-SI-26,EL",
+            "sf49": "1-H-1,,DA,P",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "P",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-CM"
@@ -449,32 +480,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(14-SI-26,EL)1-H-1,,DA,P)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "14-SI-26,EL"
-              ],
-              "1-H-1,,DA,P"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "14-SI-26,EL",
-            "sf49": "1-H-1,,DA,P",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "P",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG-CM"
@@ -770,8 +775,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -791,20 +796,16 @@
               "           as DeltaE-E telescope."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ISOCY,2JPNIPC)",
             "free_txt": [
@@ -823,10 +824,8 @@
               "                (CRIB) at Center for Nuclear Study"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": [
@@ -834,18 +833,14 @@
               "      particles"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -857,8 +852,8 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": null,
             "free_txt": [
@@ -866,10 +861,8 @@
               "center of mass system"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -877,10 +870,8 @@
               "- Ion source: Purity is 4.72%."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -888,10 +879,8 @@
               "the target."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -903,8 +892,8 @@
       }
     },
     "003": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(STRUC)",
             "free_txt": [
@@ -912,10 +901,8 @@
               "        MeV found as elastic resonance peaks"
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": null,
             "free_txt": [
@@ -923,10 +910,8 @@
               "center of mass system"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -934,10 +919,8 @@
               "- Ion source: Purity is 0.70%."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -945,10 +928,8 @@
               "the target."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

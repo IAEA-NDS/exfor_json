@@ -44,40 +44,36 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,19,(3),601,1979)",
-          "free_txt": [
-            "#doi:10.1103/PhysRevC.19.601"
-          ],
-          "publication_year": "1979"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,1USATNL)",
-          "free_txt": [
-            " The capture gamma-ray facility at the",
-            "Triangle Universities Nuclear Laboratory"
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(1USATNL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,19,(3),601,1979)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.19.601"
+        ],
+        "publication_year": "1979",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.19.601"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,1USATNL)",
+        "free_txt": [
+          " The capture gamma-ray facility at the",
+          "Triangle Universities Nuclear Laboratory"
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(1USATNL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-3(G,P)1-H-2,,DA,,,DERIV)",
-          "0": {
+      "0": {
+        "x4_code": "(2-HE-3(G,P)1-H-2,,DA,,,DERIV)",
+        "children": [
+          {
             "code": [
               "2-HE-3",
               [
@@ -95,11 +91,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(2-HE-3(G,P)1-H-2,,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "2-HE-3",
+              [
+                "G,P"
+              ],
+              "1-H-2,,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "2-HE-3",
+            "process": "G,P",
+            "sf49": "1-H-2,,SIG,,,DERIV",
+            "sf4": "1-H-2",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(2-HE-3(G,P)1-H-2,,DA,,LEG/RS,DERIV)",
+        "children": [
+          {
+            "code": [
+              "2-HE-3",
+              [
+                "G,P"
+              ],
+              "1-H-2,,DA,,LEG/RS,DERIV"
+            ],
+            "type": null,
+            "target": "2-HE-3",
+            "process": "G,P",
+            "sf49": "1-H-2,,DA,,LEG/RS,DERIV",
+            "sf4": "1-H-2",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG/RS",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG"
@@ -174,32 +233,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-3(G,P)1-H-2,,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "2-HE-3",
-              [
-                "G,P"
-              ],
-              "1-H-2,,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "2-HE-3",
-            "process": "G,P",
-            "sf49": "1-H-2,,SIG,,,DERIV",
-            "sf4": "1-H-2",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -271,32 +304,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-3(G,P)1-H-2,,DA,,LEG/RS,DERIV)",
-          "0": {
-            "code": [
-              "2-HE-3",
-              [
-                "G,P"
-              ],
-              "1-H-2,,DA,,LEG/RS,DERIV"
-            ],
-            "type": null,
-            "target": "2-HE-3",
-            "process": "G,P",
-            "sf49": "1-H-2,,DA,,LEG/RS,DERIV",
-            "sf4": "1-H-2",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG/RS",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -450,8 +457,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DTBAL)",
             "free_txt": [
@@ -459,10 +466,8 @@
               "that for photo disintegration using detailed balance."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -470,10 +475,8 @@
               "anticoincidence shield."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,1USATNL)",
             "free_txt": [
@@ -481,10 +484,8 @@
               "Triangle Universities Nuclear Laboratory"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -508,10 +509,8 @@
               "target was also taken into account."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(1-H-2,ENR=0.92)",
             "free_txt": [
@@ -523,18 +522,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on sources of uncertainties."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -545,8 +542,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -554,10 +551,8 @@
               "sigma(total)=4*pi*a0 calculated by compiler"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -565,10 +560,8 @@
               "consistent with the data plotted in Fig.9"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(0.)",
             "free_txt": [
@@ -585,20 +578,16 @@
               "the present experiment."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               " a0 coefficient"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -609,8 +598,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -618,10 +607,8 @@
               " of fitting procedure"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(0.)",
             "free_txt": [
@@ -638,10 +625,8 @@
               "the present experiment."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

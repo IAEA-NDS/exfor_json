@@ -67,39 +67,34 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "((S,ISINN-2,136,199404)=(S,JINR-E3-94-419,136,199404))",
-          "free_txt": [
-            "                           Main reference"
-          ],
-          "publication_year": "1994"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2FR SAC)",
-          "free_txt": [
-            "  Reactor \"OSIRIS\" of saclay"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2FR SAC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((S,ISINN-2,136,199404)=(S,JINR-E3-94-419,136,199404))",
+        "free_txt": [
+          "                           Main reference"
+        ],
+        "publication_year": "1994",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2FR SAC)",
+        "free_txt": [
+          "  Reactor \"OSIRIS\" of saclay"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2FR SAC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(72-HF-178-M2(N,G)72-HF-179-M2,,SPC,,SPA/REL)",
-          "0": {
+      "0": {
+        "x4_code": "(72-HF-178-M2(N,G)72-HF-179-M2,,SPC,,SPA/REL)",
+        "children": [
+          {
             "code": [
               "72-HF-178-M2",
               [
@@ -117,11 +112,74 @@
             "sf7": null,
             "sf8": "SPA/REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Number    Of Counts. Averaged Over Reactor Neutron Energy    Spectrum"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Number    Of Counts. Averaged Over Reactor Neutron Energy    Spectrum"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(72-HF-178-M2(N,G)72-HF-179-M2,,RI)",
+        "children": [
+          {
+            "code": [
+              "72-HF-178-M2",
+              [
+                "N,G"
+              ],
+              "72-HF-179-M2,,RI"
+            ],
+            "type": null,
+            "target": "72-HF-178-M2",
+            "process": "N,G",
+            "sf49": "72-HF-179-M2,,RI",
+            "sf4": "72-HF-179-M2",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(72-HF-178-M2(N,0),,EN)",
+        "children": [
+          {
+            "code": [
+              "72-HF-178-M2",
+              [
+                "N,0"
+              ],
+              ",,EN"
+            ],
+            "type": null,
+            "target": "72-HF-178-M2",
+            "process": "N,0",
+            "sf49": ",,EN",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "EN",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Approximate Resonance Energy"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-MIN"
@@ -225,32 +283,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(72-HF-178-M2(N,G)72-HF-179-M2,,RI)",
-          "0": {
-            "code": [
-              "72-HF-178-M2",
-              [
-                "N,G"
-              ],
-              "72-HF-179-M2,,RI"
-            ],
-            "type": null,
-            "target": "72-HF-178-M2",
-            "process": "N,G",
-            "sf49": "72-HF-179-M2,,RI",
-            "sf4": "72-HF-179-M2",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN"
@@ -294,32 +326,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(72-HF-178-M2(N,0),,EN)",
-          "0": {
-            "code": [
-              "72-HF-178-M2",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
-            "target": "72-HF-178-M2",
-            "process": "N,0",
-            "sf49": ",,EN",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "EN",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Approximate Resonance Energy"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -338,8 +344,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(72-HF-178-M2,31.YR,DG,88.9,0.620,                    DG,93.2,0.173,                    DG,213.4,0.809,                    DG,216.7,0.637,                    DG,237.4,0.088,                    DG,257.6,0.166,                    DG,277.4,0.015,                    DG,325.6,0.939,                    DG,426.4,0.969,                    DG,454.0,0.163,                    DG,495.0,0.687,                    DG,535.0,0.089,                    DG,574.2,0.836)",
             "free_txt": []
@@ -348,48 +354,38 @@
             "x4_code": "(72-HF-179-M2,25.D,DG,122.7,0.280,                   DG,146.1,0.273,                   DG,169.8,0.196,                   DG,192.8,0.218,                   DG,217.0,0.091,                   DG,236.6,0.190,                   DG,268.9,0.114,                   DG,316.0,0.205,                   DG,362.6,0.401,                   DG,409.8,0.217,                   DG,453.7,0.686)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               "  No details given"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               ".Errors are given in proper subentries if relevant"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2FR SAC)",
             "free_txt": [
               "  Reactor \"OSIRIS\" of saclay"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -401,10 +397,8 @@
               " 10-boron was used as filter material"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -415,10 +409,8 @@
             "x4_code": "(STTA)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(40-ZR-94(N,G)40-ZR-95,,RI)",
             "free_txt": []
@@ -427,10 +419,8 @@
             "x4_code": "(40-ZR-96(N,G)40-ZR-97,,RI)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -449,8 +439,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -462,16 +452,14 @@
       }
     },
     "003": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": "((MONIT1)79-AU-197(N,G)79-AU-198,,RI)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -486,8 +474,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -495,10 +483,8 @@
               " Between Res.Integrals For Different Neutron Filters"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

@@ -56,33 +56,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YK,,(3),117,1989)",
-          "free_txt": [],
-          "publication_year": "1989"
-        },
-        {
-          "x4_code": "(R,INDC(CCP)-329,63,1991)",
-          "free_txt": [
-            "English translation of YK,,(3),117,1989",
-            "  Data are given"
-          ],
-          "publication_year": "1991"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YK,,(3),117,1989)",
+        "free_txt": [],
+        "publication_year": "1989",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(CCP)-329,63,1991)",
+        "free_txt": [
+          "English translation of YK,,(3),117,1989",
+          "  Data are given"
+        ],
+        "publication_year": "1991",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(30-ZN-64(N,P)29-CU-64,,SIG,,FIS)",
-          "0": {
+      "0": {
+        "x4_code": "(30-ZN-64(N,P)29-CU-64,,SIG,,FIS)",
+        "children": [
+          {
             "code": [
               "30-ZN-64",
               [
@@ -100,11 +97,74 @@
             "sf7": null,
             "sf8": "FIS",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(40-ZR-90(N,2N)40-ZR-89-G,M+,SIG,,FIS)",
+        "children": [
+          {
+            "code": [
+              "40-ZR-90",
+              [
+                "N,2N"
+              ],
+              "40-ZR-89-G,M+,SIG,,FIS"
+            ],
+            "type": null,
+            "target": "40-ZR-90",
+            "process": "N,2N",
+            "sf49": "40-ZR-89-G,M+,SIG,,FIS",
+            "sf4": "40-ZR-89-G",
+            "sf5": "M+",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "FIS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(48-CD-111(N,INL)48-CD-111-M,,SIG,,FIS)",
+        "children": [
+          {
+            "code": [
+              "48-CD-111",
+              [
+                "N,INL"
+              ],
+              "48-CD-111-M,,SIG,,FIS"
+            ],
+            "type": null,
+            "target": "48-CD-111",
+            "process": "N,INL",
+            "sf49": "48-CD-111-M,,SIG,,FIS",
+            "sf4": "48-CD-111-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "FIS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -131,32 +191,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(40-ZR-90(N,2N)40-ZR-89-G,M+,SIG,,FIS)",
-          "0": {
-            "code": [
-              "40-ZR-90",
-              [
-                "N,2N"
-              ],
-              "40-ZR-89-G,M+,SIG,,FIS"
-            ],
-            "type": null,
-            "target": "40-ZR-90",
-            "process": "N,2N",
-            "sf49": "40-ZR-89-G,M+,SIG,,FIS",
-            "sf4": "40-ZR-89-G",
-            "sf5": "M+",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "FIS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -183,32 +217,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(48-CD-111(N,INL)48-CD-111-M,,SIG,,FIS)",
-          "0": {
-            "code": [
-              "48-CD-111",
-              [
-                "N,INL"
-              ],
-              "48-CD-111-M,,SIG,,FIS"
-            ],
-            "type": null,
-            "target": "48-CD-111",
-            "process": "N,INL",
-            "sf49": "48-CD-111-M,,SIG,,FIS",
-            "sf4": "48-CD-111-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "FIS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -237,8 +245,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": [
@@ -257,38 +265,30 @@
               "  For neutron flux detection"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Total error"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " U-235 fission neutron spectrum"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -296,10 +296,8 @@
               "INDC(CCP)-329,63,199"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,E.I.Grigor'eva+,C,83KIEV,3,187,1983)",
             "free_txt": [
@@ -317,16 +315,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(29-CU-64,12.701HR,DG,511.,0.343,                   DG,1340.,0.0047)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -337,16 +333,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(40-ZR-89-G,3.268D,DG,910.,0.99)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -357,16 +351,14 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(48-CD-111-M,48.7MIN,DG,151.,0.303,                     DG,245.,0.942)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

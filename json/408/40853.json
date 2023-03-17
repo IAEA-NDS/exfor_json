@@ -61,52 +61,49 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AE,56,212,1984)",
-          "free_txt": [
-            " Issue 4"
-          ],
-          "publication_year": "1984"
-        },
-        {
-          "x4_code": "(J,SJA,56,230,1984)",
-          "free_txt": [
-            " Engl.transl.of J,AE,56,212,1984"
-          ],
-          "publication_year": "1984"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4RUSRI)",
-          "free_txt": [],
-          "facility_type": "(REAC)",
-          "institute": "(4RUSRI)"
-        },
-        {
-          "x4_code": "(CYCLO,4RUSSUL)",
-          "free_txt": [
-            " Deuteron energy 12.6 MeV."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(4RUSSUL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AE,56,212,1984)",
+        "free_txt": [
+          " Issue 4"
+        ],
+        "publication_year": "1984",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SJA,56,230,1984)",
+        "free_txt": [
+          " Engl.transl.of J,AE,56,212,1984"
+        ],
+        "publication_year": "1984",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4RUSRI)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4RUSRI)"
+      },
+      {
+        "x4_code": "(CYCLO,4RUSSUL)",
+        "free_txt": [
+          " Deuteron energy 12.6 MeV."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(4RUSSUL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(93-NP-236-M(N,F),,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(93-NP-236-M(N,F),,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "93-NP-236-M",
               [
@@ -124,11 +121,46 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(93-NP-236-M(N,F),,RI)",
+        "children": [
+          {
+            "code": [
+              "93-NP-236-M",
+              [
+                "N,F"
+              ],
+              ",,RI"
+            ],
+            "type": null,
+            "target": "93-NP-236-M",
+            "process": "N,F",
+            "sf49": ",,RI",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -197,32 +229,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(93-NP-236-M(N,F),,RI)",
-          "0": {
-            "code": [
-              "93-NP-236-M",
-              [
-                "N,F"
-              ],
-              ",,RI"
-            ],
-            "type": null,
-            "target": "93-NP-236-M",
-            "process": "N,F",
-            "sf49": ",,RI",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -266,18 +272,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": [
               " Mica track detectors. Efficiency 96+-1 %."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4RUSRI)",
             "free_txt": []
@@ -288,10 +292,8 @@
               " Deuteron energy 12.6 MeV."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -305,18 +307,16 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(93-NP-236-M,22.5HR,B-,,0.48)",
             "free_txt": [
               " 22.5+-0.4 HR , 0.48+-0.01"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -336,10 +336,8 @@
               "formula (2) in SJA,56,230,1984 )"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -347,10 +345,8 @@
               "for U-235 and Cd thickness 2mm."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)92-U-235(N,F),,SIG)",
             "free_txt": []
@@ -361,10 +357,8 @@
               " See formula (2) for CS calculation by monitors."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -375,18 +369,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Total error"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)92-U-235(N,F),,RI)",
             "free_txt": []
@@ -397,10 +389,8 @@
               " See formulas (3,4) for RI calculation by monitors."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

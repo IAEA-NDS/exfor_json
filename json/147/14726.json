@@ -32,38 +32,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,104,064614,2021)",
-          "free_txt": [],
-          "publication_year": "2021"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALAS)",
-          "free_txt": [
-            " Experiment performed at the Weapons",
-            "Neutron Research facility at LANSCE, Los Alamos"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,104,064614,2021)",
+        "free_txt": [],
+        "publication_year": "2021",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALAS)",
+        "free_txt": [
+          " Experiment performed at the Weapons",
+          "Neutron Research facility at LANSCE, Los Alamos"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA/DA,G/N,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA/DA,G/N,REL)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -81,11 +76,74 @@
             "sf7": "G/N",
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA,,REL)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "N,INL"
+              ],
+              "6-C-12,PAR,DA,,REL"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "N,INL",
+            "sf49": "6-C-12,PAR,DA,,REL",
+            "sf4": "6-C-12",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA,G,REL)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "N,INL"
+              ],
+              "6-C-12,PAR,DA,G,REL"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "N,INL",
+            "sf49": "6-C-12,PAR,DA,G,REL",
+            "sf4": "6-C-12",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "G",
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL",
@@ -20069,32 +20127,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA,,REL)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "N,INL"
-              ],
-              "6-C-12,PAR,DA,,REL"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "N,INL",
-            "sf49": "6-C-12,PAR,DA,,REL",
-            "sf4": "6-C-12",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL",
@@ -21988,32 +22020,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA,G,REL)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "N,INL"
-              ],
-              "6-C-12,PAR,DA,G,REL"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "N,INL",
-            "sf49": "6-C-12,PAR,DA,G,REL",
-            "sf4": "6-C-12",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "G",
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL",
@@ -23909,8 +23915,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -23918,10 +23924,8 @@
               "Carlo methods"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -23929,10 +23933,8 @@
               "were applied"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -23945,10 +23947,8 @@
               "90 deg with respect to vertical."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -23956,10 +23956,8 @@
               "origin is not described"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALAS)",
             "free_txt": [
@@ -23967,18 +23965,14 @@
               "Neutron Research facility at LANSCE, Los Alamos"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,PSD,COINC)",
             "free_txt": [
@@ -23998,10 +23992,8 @@
               "Coincidences were assembled offline"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -24013,8 +24005,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -24025,8 +24017,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -24037,8 +24029,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

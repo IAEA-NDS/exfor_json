@@ -49,42 +49,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,31,1400,1980)",
-          "free_txt": [],
-          "publication_year": "1980"
-        },
-        {
-          "x4_code": "(J,SNP,31,726,1980)",
-          "free_txt": [
-            " - Eng.trans.of YF,31,1400,1980"
-          ],
-          "publication_year": "1980"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,4UKRKFT)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(4UKRKFT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,31,1400,1980)",
+        "free_txt": [],
+        "publication_year": "1980",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SNP,31,726,1980)",
+        "free_txt": [
+          " - Eng.trans.of YF,31,1400,1980"
+        ],
+        "publication_year": "1980",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,4UKRKFT)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4UKRKFT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(G,ABS),,SIG,,BRS)",
-          "0": {
+      "0": {
+        "x4_code": "(2-HE-4(G,ABS),,SIG,,BRS)",
+        "children": [
+          {
             "code": [
               "2-HE-4",
               [
@@ -102,11 +98,74 @@
             "sf7": null,
             "sf8": "BRS",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Total photoabsorption cross section."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Total photoabsorption cross section."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(2-HE-4(G,ABS),EP,SIG,,BRS)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "G,ABS"
+              ],
+              ",EP,SIG,,BRS"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "G,ABS",
+            "sf49": ",EP,SIG,,BRS",
+            "sf4": null,
+            "sf5": "EP",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Electric-dipole cross section."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(2-HE-4(G,ABS),EP,SIG,,BRS)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "G,ABS"
+              ],
+              ",EP,SIG,,BRS"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "G,ABS",
+            "sf49": ",EP,SIG,,BRS",
+            "sf4": null,
+            "sf5": "EP",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Electric-quadrupole cross section."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -265,32 +324,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(G,ABS),EP,SIG,,BRS)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "G,ABS"
-              ],
-              ",EP,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "G,ABS",
-            "sf49": ",EP,SIG,,BRS",
-            "sf4": null,
-            "sf5": "EP",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Electric-dipole cross section."
-        }
-      },
       "common": {
         "heads": [
           "POLAR"
@@ -392,32 +425,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(G,ABS),EP,SIG,,BRS)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "G,ABS"
-              ],
-              ",EP,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "G,ABS",
-            "sf49": ",EP,SIG,,BRS",
-            "sf4": null,
-            "sf5": "EP",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Electric-quadrupole cross section."
-        }
-      },
       "common": {
         "heads": [
           "POLAR"
@@ -491,44 +498,36 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               "Various modes of He-4 photoabsorption cross section."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical errors only"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,4UKRKFT)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
@@ -537,8 +536,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -549,8 +548,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -561,8 +560,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

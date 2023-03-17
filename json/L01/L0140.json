@@ -88,38 +88,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,79,014303,2009)",
-          "free_txt": [],
-          "publication_year": "2009"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2GERZFK)",
-          "free_txt": [
-            " Superconducting electron accelerator",
-            "ELBE of the research center Dresden-Rossendorf"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2GERZFK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,79,014303,2009)",
+        "free_txt": [],
+        "publication_year": "2009",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2GERZFK)",
+        "free_txt": [
+          " Superconducting electron accelerator",
+          "ELBE of the research center Dresden-Rossendorf"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2GERZFK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(39-Y-89(G,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(39-Y-89(G,0),,EN)",
+        "children": [
+          {
             "code": [
               "39-Y-89",
               [
@@ -137,13 +132,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(39-Y-89(G,EL),,ARE)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(39-Y-89(G,EL),,ARE)",
+        "children": [
+          {
             "code": [
               "39-Y-89",
               [
@@ -161,13 +158,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "(39-Y-89(G,EL),,WID/STR)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "(39-Y-89(G,EL),,WID/STR)",
+        "children": [
+          {
             "code": [
               "39-Y-89",
               [
@@ -185,11 +184,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(39-Y-89(G,SCT)39-Y-89,,SIG)",
+        "children": [
+          {
+            "code": [
+              "39-Y-89",
+              [
+                "G,SCT"
+              ],
+              "39-Y-89,,SIG"
+            ],
+            "type": null,
+            "target": "39-Y-89",
+            "process": "G,SCT",
+            "sf49": "39-Y-89,,SIG",
+            "sf4": "39-Y-89",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -1731,32 +1765,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(39-Y-89(G,SCT)39-Y-89,,SIG)",
-          "0": {
-            "code": [
-              "39-Y-89",
-              [
-                "G,SCT"
-              ],
-              "39-Y-89,,SIG"
-            ],
-            "type": null,
-            "target": "39-Y-89",
-            "process": "G,SCT",
-            "sf49": "39-Y-89,,SIG",
-            "sf4": "39-Y-89",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1980,8 +1988,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -1999,20 +2007,16 @@
               "scintillation detectors."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2GERZFK)",
             "free_txt": [
@@ -2020,10 +2024,8 @@
               "ELBE of the research center Dresden-Rossendorf"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": [
@@ -2033,18 +2035,14 @@
               "average currents of 520 and 600 muA"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(5-B-11(G,INL)5-B-11,,SIG,,BRS)",
             "free_txt": [
@@ -2054,10 +2052,8 @@
               "determination of the photon flux."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2071,8 +2067,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2083,8 +2079,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

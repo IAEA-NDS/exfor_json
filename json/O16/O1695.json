@@ -129,52 +129,48 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,78,034307,2008)",
-          "free_txt": [],
-          "publication_year": "2008"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2FR GAN)",
-          "free_txt": [
-            " GANIL/SPIRAL facility"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2FR GAN)"
-        },
-        {
-          "x4_code": "(PRJFS,2FR GAN)",
-          "free_txt": [
-            " The Ar-44 nuclei were produced by means",
-            "of the fragmentation of a 66-MeV/A primary beam into a",
-            "thick carbon target. The Ar nuclei were extracted from",
-            "the target heated and were purified and accelerated to",
-            "an energy of 10 MeV/A by the CIME cyclotron.",
-            "For checking and calibration purposes, a stable beam",
-            "of Ar-40 was accelerated to an energy of 11 MeV/A in",
-            "a dedicated setting."
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(2FR GAN)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,78,034307,2008)",
+        "free_txt": [],
+        "publication_year": "2008",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2FR GAN)",
+        "free_txt": [
+          " GANIL/SPIRAL facility"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2FR GAN)"
+      },
+      {
+        "x4_code": "(PRJFS,2FR GAN)",
+        "free_txt": [
+          " The Ar-44 nuclei were produced by means",
+          "of the fragmentation of a 66-MeV/A primary beam into a",
+          "thick carbon target. The Ar nuclei were extracted from",
+          "the target heated and were purified and accelerated to",
+          "an energy of 10 MeV/A by the CIME cyclotron.",
+          "For checking and calibration purposes, a stable beam",
+          "of Ar-40 was accelerated to an energy of 11 MeV/A in",
+          "a dedicated setting."
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2FR GAN)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(18-AR-40,P)18-AR-41,PAR,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-2(18-AR-40,P)18-AR-41,PAR,DA)",
+        "children": [
+          {
             "code": [
               "1-H-2",
               [
@@ -192,11 +188,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Figure 3."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Figure 3."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-2(18-AR-44,P)18-AR-45,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "18-AR-44,P"
+              ],
+              "18-AR-45,PAR,DA"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "18-AR-44,P",
+            "sf49": "18-AR-45,PAR,DA",
+            "sf4": "18-AR-45",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Figure 4."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -395,32 +426,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(18-AR-44,P)18-AR-45,PAR,DA)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "18-AR-44,P"
-              ],
-              "18-AR-45,PAR,DA"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "18-AR-44,P",
-            "sf49": "18-AR-45,PAR,DA",
-            "sf4": "18-AR-45",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Figure 4."
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -666,8 +671,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -679,10 +684,8 @@
               "Ar-45 spectrum and Ar-41 spectrum was presented."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(MWPC)",
             "free_txt": [
@@ -714,10 +717,8 @@
               "scintillator."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -745,10 +746,8 @@
               ".The error is reported by authors on fig."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2FR GAN)",
             "free_txt": [
@@ -768,10 +767,8 @@
               "a dedicated setting."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB)",
             "free_txt": []
@@ -780,28 +777,22 @@
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "A 0.38+-6 mg/cm**2 thick CD(2) target was used."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -812,8 +803,8 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL,18-AR-41)",
             "free_txt": []
@@ -822,8 +813,8 @@
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL,18-AR-45)",
             "free_txt": []

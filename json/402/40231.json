@@ -45,36 +45,31 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,FEI-678,197604)",
-          "free_txt": [],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": [
-            " Linear electron accelerator",
-            " Pulse width 1.5 microsec, current 5 microA."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,FEI-678,197604)",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC)",
+        "free_txt": [
+          " Linear electron accelerator",
+          " Pulse width 1.5 microsec, current 5 microA."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(26-FE-58(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(26-FE-58(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "26-FE-58",
               [
@@ -92,13 +87,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Resonance energy"
-        },
-        "2": {
-          "x4_code": "(26-FE-58(N,TOT),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": " Resonance energy"
+      },
+      "2": {
+        "x4_code": "(26-FE-58(N,TOT),,WID)",
+        "children": [
+          {
             "code": [
               "26-FE-58",
               [
@@ -116,13 +113,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Total width of resonance"
-        },
-        "3": {
-          "x4_code": "(26-FE-58(N,TOT),,SIG,,RES)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": "  Total width of resonance"
+      },
+      "3": {
+        "x4_code": "(26-FE-58(N,TOT),,SIG,,RES)",
+        "children": [
+          {
             "code": [
               "26-FE-58",
               [
@@ -140,11 +139,46 @@
             "sf7": null,
             "sf8": "RES",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Total sigma                      taken from the curve"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Total sigma                      taken from the curve"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(26-FE-58(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "26-FE-58",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "26-FE-58",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -196,32 +230,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-58(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "26-FE-58",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "26-FE-58",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -552,8 +560,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(AREA)",
             "free_txt": [
@@ -561,10 +569,8 @@
               "low-lying resonances"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -575,10 +581,8 @@
               "filters."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -595,10 +599,8 @@
               "flux monitoring"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC)",
             "free_txt": [
@@ -606,10 +608,8 @@
               " Pulse width 1.5 microsec, current 5 microA."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(TAGD)",
             "free_txt": [
@@ -617,10 +617,8 @@
               "diameter, 50 mm high in Al case - as target."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -633,30 +631,24 @@
               " Transmission - total c-s."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "Absolute measurement"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N,G)",
             "free_txt": [
               " Neutron and gamma"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -669,10 +661,8 @@
               "Fe-58 thickness is 0.0394 nuclei/barn for both discs."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(PRELM)",
             "free_txt": [
@@ -683,8 +673,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -695,8 +685,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
@@ -709,10 +699,8 @@
               "    Digitizing error of data for left figure."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

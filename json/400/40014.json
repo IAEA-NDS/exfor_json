@@ -53,62 +53,60 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,11,(6),1164,1970)",
-          "free_txt": [
-            " Main reference, data given"
-          ],
-          "publication_year": "1970"
-        },
-        {
-          "x4_code": "(J,SNP,11,(6),646,1970)",
-          "free_txt": [
-            " English of YF,11,1164"
-          ],
-          "publication_year": "1970"
-        },
-        {
-          "x4_code": "(J,JEL,5,30,1967)",
-          "free_txt": [
-            " Eng.translation of:"
-          ],
-          "publication_year": "1967"
-        },
-        {
-          "x4_code": "(J,ZEP,5,39,1967)",
-          "free_txt": [
-            " W(angle)/W(0deg) at 1.6 MeV En on Fig.2 .",
-            "Authors: S.B.Ermagambetov,L.D.Smirenkina,G.N.Smirenkin,",
-            "A.S.Tishin"
-          ],
-          "publication_year": "1967"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,4RUSFEI)",
-          "free_txt": [
-            "     Van de Graaff"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(4RUSFEI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,11,(6),1164,1970)",
+        "free_txt": [
+          " Main reference, data given"
+        ],
+        "publication_year": "1970",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SNP,11,(6),646,1970)",
+        "free_txt": [
+          " English of YF,11,1164"
+        ],
+        "publication_year": "1970",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JEL,5,30,1967)",
+        "free_txt": [
+          " Eng.translation of:"
+        ],
+        "publication_year": "1967",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,ZEP,5,39,1967)",
+        "free_txt": [
+          " W(angle)/W(0deg) at 1.6 MeV En on Fig.2 .",
+          "Authors: S.B.Ermagambetov,L.D.Smirenkina,G.N.Smirenkin,",
+          "A.S.Tishin"
+        ],
+        "publication_year": "1967",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,4RUSFEI)",
+        "free_txt": [
+          "     Van de Graaff"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(4RUSFEI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,F),,DA,FF,RSD)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-232(N,F),,DA,FF,RSD)",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -126,11 +124,46 @@
             "sf7": "FF",
             "sf8": "RSD",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Relative to 90 deg"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Relative to 90 deg"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(N,F),,DA,FF,LEG/RSD)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,F"
+              ],
+              ",,DA,FF,LEG/RSD"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,F",
+            "sf49": ",,DA,FF,LEG/RSD",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "FF",
+            "sf8": "LEG/RSD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Relative to 90 deg"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG"
@@ -242,32 +275,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,F),,DA,FF,LEG/RSD)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,F"
-              ],
-              ",,DA,FF,LEG/RSD"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,F",
-            "sf49": ",,DA,FF,LEG/RSD",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "FF",
-            "sf8": "LEG/RSD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Relative to 90 deg"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -661,58 +668,48 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
               "    Cylindrical glass detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,4RUSFEI)",
             "free_txt": [
               "     Van de Graaff"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
             "free_txt": [
               "      Proton-tritium reaction"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               " Direct detection - tracks counting."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -723,8 +720,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -735,8 +732,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

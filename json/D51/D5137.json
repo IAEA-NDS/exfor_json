@@ -1,7 +1,7 @@
 {
   "entry": "D5137",
-  "last_updated": "2018-12-04",
-  "number_of_revisions": "3",
+  "last_updated": "2023-01-16",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20170927C)",
@@ -20,6 +20,12 @@
       "free_txt": [
         " OG: REFERENCE:(J,BAS,81,(10),1165,2017),",
         "#doi and #nsr were added."
+      ]
+    },
+    {
+      "x4_code": "(20220627U)",
+      "free_txt": [
+        " VT. REFERENCE: J,IZV,81,1303,2017  added"
       ]
     }
   ],
@@ -45,45 +51,51 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,VAT/I,,(3/109),16,2017)",
-          "free_txt": [],
-          "publication_year": "2017"
-        },
-        {
-          "x4_code": "(J,BAS,81,(10),1165,2017)",
-          "free_txt": [
-            "#nsr:2017KA60"
-          ],
-          "publication_year": "2017",
-          "doi": "10.3103/S106287381710015X"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,4UKRKFT)",
-          "free_txt": [
-            " Electrostatic accelerator ESA-5"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(4UKRKFT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,VAT/I,,(3/109),16,2017)",
+        "free_txt": [],
+        "publication_year": "2017",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,BAS,81,1165,2017)",
+        "free_txt": [
+          "#doi:10.3103/S106287381710015X",
+          "#nsr:2017KA60"
+        ],
+        "publication_year": "2017",
+        "pointer": "0",
+        "doi": "10.3103/S106287381710015X"
+      },
+      {
+        "x4_code": "(J,IZV,81,1303,2017)",
+        "free_txt": [
+          " Russian original of J,BAS,81,1165,",
+          "2017"
+        ],
+        "publication_year": "2017",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,4UKRKFT)",
+        "free_txt": [
+          " Electrostatic accelerator ESA-5"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(4UKRKFT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(12-MG-25(P,G),,WID/STR,,RG)",
-          "0": {
+      "0": {
+        "x4_code": "(12-MG-25(P,G),,WID/STR,,RG)",
+        "children": [
+          {
             "code": [
               "12-MG-25",
               [
@@ -101,11 +113,46 @@
             "sf7": null,
             "sf8": "RG",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(12-MG-25(P,G)13-AL-26,PAR,DA,,LEG/RS)",
+        "children": [
+          {
+            "code": [
+              "12-MG-25",
+              [
+                "P,G"
+              ],
+              "13-AL-26,PAR,DA,,LEG/RS"
+            ],
+            "type": null,
+            "target": "12-MG-25",
+            "process": "P,G",
+            "sf49": "13-AL-26,PAR,DA,,LEG/RS",
+            "sf4": "13-AL-26",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG/RS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RES-NRM"
@@ -186,32 +233,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(12-MG-25(P,G)13-AL-26,PAR,DA,,LEG/RS)",
-          "0": {
-            "code": [
-              "12-MG-25",
-              [
-                "P,G"
-              ],
-              "13-AL-26,PAR,DA,,LEG/RS"
-            ],
-            "type": null,
-            "target": "12-MG-25",
-            "process": "P,G",
-            "sf49": "13-AL-26,PAR,DA,,LEG/RS",
-            "sf4": "13-AL-26",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG/RS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -357,8 +378,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -382,38 +403,30 @@
               "of 0, 30, 45, 60 and 90 degrees."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              "No information"
+              " No information on the source of uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,4UKRKFT)",
             "free_txt": [
               " Electrostatic accelerator ESA-5"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -425,8 +438,8 @@
       }
     },
     "002": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(STRUC)",
             "free_txt": [
@@ -435,28 +448,22 @@
               "total strength of the MDR were found."
             ]
           }
-        ]
-      },
-      "critique": {
-        "0": [
+        ],
+        "critique": [
           {
             "x4_code": null,
             "free_txt": [
               "OG. Information about MONIT-REF is absent in the text."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(12-MG-25(P,G),,WID/STR,,RG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -467,8 +474,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -99,52 +99,49 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YK,,(1-2),45,2002)",
-          "free_txt": [],
-          "publication_year": "2002"
-        },
-        {
-          "x4_code": "(R,INDC(CCP)-436,63,2003)",
-          "free_txt": [
-            "Main Reference. Both in English."
-          ],
-          "publication_year": "2003"
-        },
-        {
-          "x4_code": "(T,GRIGORIEV,2005)",
-          "free_txt": [
-            " Dissertation of Yu.Grigoriev."
-          ],
-          "publication_year": "2005"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            " Pulsed Neutron Booster Reactor IBR-30",
-            "             at mean power of 10 kW"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YK,,(1-2),45,2002)",
+        "free_txt": [],
+        "publication_year": "2002",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(CCP)-436,63,2003)",
+        "free_txt": [
+          "Main Reference. Both in English."
+        ],
+        "publication_year": "2003",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(T,GRIGORIEV,2005)",
+        "free_txt": [
+          " Dissertation of Yu.Grigoriev."
+        ],
+        "publication_year": "2005",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          " Pulsed Neutron Booster Reactor IBR-30",
+          "             at mean power of 10 kW"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,G)92-U-236,,SIF,,TMP/AV)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,G)92-U-236,,SIF,,TMP/AV)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -162,11 +159,74 @@
             "sf7": null,
             "sf8": "TMP/AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,SIF,,TMP/AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIF,,TMP/AV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIF,,TMP/AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIF",
+            "sf7": null,
+            "sf8": "TMP/AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-235(N,ABS),,ALF)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,ABS"
+              ],
+              ",,ALF"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,ABS",
+            "sf49": ",,ALF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "ALF",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -288,32 +348,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,SIF,,TMP/AV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIF,,TMP/AV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIF,,TMP/AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIF",
-            "sf7": null,
-            "sf8": "TMP/AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -435,32 +469,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,ABS),,ALF)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,ABS"
-              ],
-              ",,ALF"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,ABS",
-            "sf49": ",,ALF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "ALF",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -559,8 +567,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BF3)",
             "free_txt": [
@@ -574,10 +582,8 @@
               "  (n,gamma)-detector of total volume 80 liters."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
@@ -585,20 +591,16 @@
               "             at mean power of 10 kW"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " 122 m flight path"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -614,18 +616,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not specified, probably total."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -637,18 +637,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not specified, probably total."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -660,8 +658,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -669,10 +667,8 @@
               "article."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -685,10 +681,8 @@
               " Thickness 0.25 mm"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -1,7 +1,7 @@
 {
   "entry": "32605",
-  "last_updated": "2011-06-21",
-  "number_of_revisions": "5",
+  "last_updated": "2023-01-20",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19930601C)",
@@ -27,6 +27,12 @@
       "x4_code": "(20110214U)",
       "free_txt": [
         " On. DETECTOR: PS -> SCIN"
+      ]
+    },
+    {
+      "x4_code": "(20220831A)",
+      "free_txt": [
+        " VT. Revision in 002"
       ]
     }
   ],
@@ -58,38 +64,68 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,INDC(CPR)-030,1,199304)",
-          "free_txt": [],
-          "publication_year": "1993"
-        },
-        {
-          "x4_code": "(C,91BEIJIN,,13,199109)",
-          "free_txt": [
-            " graphs only"
-          ],
-          "publication_year": "1991"
-        },
-        {
-          "x4_code": "(C,88MITO,,799,198805)",
-          "free_txt": [
-            " graphs only"
-          ],
-          "publication_year": "1988"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CCW,3CPRTSI)",
-          "free_txt": [],
-          "facility_type": "(CCW)",
-          "institute": "(3CPRTSI)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(R,INDC(CPR)-030,1,199304)",
+        "free_txt": [],
+        "publication_year": "1993",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,91BEIJIN,,13,199109)",
+        "free_txt": [
+          " graphs only"
+        ],
+        "publication_year": "1991",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,88MITO,,799,198805)",
+        "free_txt": [
+          " graphs only"
+        ],
+        "publication_year": "1988",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CCW,3CPRTSI)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CCW)",
+        "institute": "(3CPRTSI)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(92-U-238(N,SCT)92-U-238,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,SCT"
+              ],
+              "92-U-238,PAR,DA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,SCT",
+            "sf49": "92-U-238,PAR,DA",
+            "sf4": "92-U-238",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -114,42 +150,21 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,EL)92-U-238,,DA)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,EL"
-              ],
-              "92-U-238,,DA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,EL",
-            "sf49": "92-U-238,,DA",
-            "sf4": "92-U-238",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
-          "EN"
+          "EN",
+          "E-EXC-MX-A"
         ],
         "units": [
+          "MEV",
           "MEV"
         ],
         "data": [
           [
             14.7
+          ],
+          [
+            1.0
           ]
         ]
       },
@@ -197,42 +212,12 @@
           ]
         ]
       }
-    },
-    "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-0(N,EL)82-PB-0,,DA)",
-          "0": {
-            "code": [
-              "82-PB-0",
-              [
-                "N,EL"
-              ],
-              "82-PB-0,,DA"
-            ],
-            "type": null,
-            "target": "82-PB-0",
-            "process": "N,EL",
-            "sf49": "82-PB-0,,DA",
-            "sf4": "82-PB-0",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
-      "common": null,
-      "data": null
     }
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -242,10 +227,8 @@
               " - finite geometry"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -255,15 +238,13 @@
               " photomultiplier at each end of scintillator."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T,7.,10.)",
             "free_txt": [
-              " The total errors are 7 to 10% in",
-              "                various angles"
+              " The total errors are 7 to 10% in various",
+              "  angles"
             ]
           },
           {
@@ -297,28 +278,22 @@
               "             sample."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CCW,3CPRTSI)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
               " Tritium-titanium target was used."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,ASSOP)",
             "free_txt": [
@@ -326,18 +301,16 @@
               " the associated alpha particle method."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "rel-ref": [
           {
-            "x4_code": "(N)",
-            "free_txt": []
+            "x4_code": "(O,30902003,Qi Huei-Quan+,R,INDC(CPR)-006,1985)",
+            "free_txt": [
+              " Pb(n,n0) data compiled separately."
+            ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -348,8 +321,8 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -358,7 +331,6 @@
           }
         ]
       }
-    },
-    "003": {}
+    }
   }
 }

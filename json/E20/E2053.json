@@ -196,53 +196,50 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,75,(5),054606,200705)",
-          "free_txt": [
-            "Main reference. See also TITLE and AUTHOR."
-          ],
-          "publication_year": "2007"
-        },
-        {
-          "x4_code": "(W,TOSHITO,20070515)",
-          "free_txt": [
-            " T.Toshito, Source of uncertainty"
-          ],
-          "publication_year": "2007"
-        },
-        {
-          "x4_code": "(C,2007TOKYO,2,600,200706)",
-          "free_txt": [
-            "T.Toshito+, Same data given for water 12C -> Li, Be, B"
-          ],
-          "publication_year": "2007"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,2JPNIRS)",
-          "free_txt": [
-            " HIMAC"
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(2JPNIRS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,75,(5),054606,200705)",
+        "free_txt": [
+          "Main reference. See also TITLE and AUTHOR."
+        ],
+        "publication_year": "2007",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,TOSHITO,20070515)",
+        "free_txt": [
+          " T.Toshito, Source of uncertainty"
+        ],
+        "publication_year": "2007",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,2007TOKYO,2,600,200706)",
+        "free_txt": [
+          "T.Toshito+, Same data given for water 12C -> Li, Be, B"
+        ],
+        "publication_year": "2007",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,2JPNIRS)",
+        "free_txt": [
+          " HIMAC"
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(2JPNIRS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-WTR(6-C-12,TCC),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-WTR(6-C-12,TCC),,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-WTR",
               [
@@ -260,11 +257,102 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "Cross section for water"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "Cross section for water"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-CXX(6-C-12,TCC),,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-CXX",
+              [
+                "6-C-12,TCC"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "1-H-CXX",
+            "process": "6-C-12,TCC",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Cross section for polycarbonate (C16H14O3)"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-WTR(6-C-12,X)ELEM,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-WTR",
+              [
+                "6-C-12,X"
+              ],
+              "ELEM,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-WTR",
+            "process": "6-C-12,X",
+            "sf49": "ELEM,,SIG",
+            "sf4": "ELEM",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Cross section for water"
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(1-H-CXX(6-C-12,X)ELEM,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-CXX",
+              [
+                "6-C-12,X"
+              ],
+              "ELEM,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-CXX",
+            "process": "6-C-12,X",
+            "sf49": "ELEM,,SIG",
+            "sf4": "ELEM",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Cross section for polycarbonate (C16H14O3)"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -320,32 +408,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-CXX(6-C-12,TCC),,SIG)",
-          "0": {
-            "code": [
-              "1-H-CXX",
-              [
-                "6-C-12,TCC"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "1-H-CXX",
-            "process": "6-C-12,TCC",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Cross section for polycarbonate (C16H14O3)"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -385,32 +447,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-WTR(6-C-12,X)ELEM,,SIG)",
-          "0": {
-            "code": [
-              "1-H-WTR",
-              [
-                "6-C-12,X"
-              ],
-              "ELEM,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-WTR",
-            "process": "6-C-12,X",
-            "sf49": "ELEM,,SIG",
-            "sf4": "ELEM",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Cross section for water"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -487,32 +523,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-CXX(6-C-12,X)ELEM,,SIG)",
-          "0": {
-            "code": [
-              "1-H-CXX",
-              [
-                "6-C-12,X"
-              ],
-              "ELEM,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-CXX",
-            "process": "6-C-12,X",
-            "sf49": "ELEM,,SIG",
-            "sf4": "ELEM",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Cross section for polycarbonate (C16H14O3)"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -591,28 +601,24 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(PLATE)",
             "free_txt": [
               " Emulsion Cloud Chamber (ECC)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,2JPNIRS)",
             "free_txt": [
               " HIMAC"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -623,18 +629,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -642,10 +646,8 @@
               "- Physical-form of target is liquid."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -656,18 +658,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -675,10 +675,8 @@
               "- Physical-form of target is solid."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -689,18 +687,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -708,10 +704,8 @@
               "- Physical-form of target is liquid."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -722,18 +716,16 @@
       }
     },
     "005": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -741,10 +733,8 @@
               "- Physical-form of target is solid."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

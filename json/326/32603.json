@@ -1,7 +1,7 @@
 {
   "entry": "32603",
-  "last_updated": "2011-06-21",
-  "number_of_revisions": "5",
+  "last_updated": "2023-01-20",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19930110C)",
@@ -21,10 +21,16 @@
       "free_txt": [
         " On. DETECTOR: PS -> SCIN"
       ]
+    },
+    {
+      "x4_code": "(20220826A)",
+      "free_txt": [
+        " VT. Revision in 002."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Small angle scattering cross section of 12 MeV neutron from U-238 and Fe",
+    "title": "Small angle scattering cross section of 12 MeV neutron from 238U and Fe",
     "authors": [
       {
         "name": "Qi Huiquan"
@@ -64,33 +70,90 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CNP,13,(4),343,199111)",
-          "free_txt": [],
-          "publication_year": "1991"
-        },
-        {
-          "x4_code": "(C,91BEIJIN,,13,199109)",
-          "free_txt": [
-            " only exp. details"
-          ],
-          "publication_year": "1991"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,CNP,13,(4),343,199111)",
+        "free_txt": [],
+        "publication_year": "1991",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,91BEIJIN,,13,199109)",
+        "free_txt": [
+          " only exp. details"
+        ],
+        "publication_year": "1991",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,3CPRAEP)",
+        "free_txt": [
+          " HI-13 tandem accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(3CPRAEP)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(92-U-238(N,EL)92-U-238,EXL,DA)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,EL"
+              ],
+              "92-U-238,EXL,DA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,EL",
+            "sf49": "92-U-238,EXL,DA",
+            "sf4": "92-U-238",
+            "sf5": "EXL",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " tbl.1,2"
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,3CPRAEP)",
-          "free_txt": [
-            " HI-13 tandem accelerator"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(3CPRAEP)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(26-FE-0(N,EL)26-FE-0,,DA)",
+        "children": [
+          {
+            "code": [
+              "26-FE-0",
+              [
+                "N,EL"
+              ],
+              "26-FE-0,,DA"
+            ],
+            "type": null,
+            "target": "26-FE-0",
+            "process": "N,EL",
+            "sf49": "26-FE-0,,DA",
+            "sf4": "26-FE-0",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " tbl.2"
+      }
     }
   },
   "data_tables": {
@@ -98,32 +161,6 @@
       "common": null
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,EL)92-U-238,,DA)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,EL"
-              ],
-              "92-U-238,,DA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,EL",
-            "sf49": "92-U-238,,DA",
-            "sf4": "92-U-238",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " tbl.1,2"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -203,32 +240,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-0(N,EL)26-FE-0,,DA)",
-          "0": {
-            "code": [
-              "26-FE-0",
-              [
-                "N,EL"
-              ],
-              "26-FE-0,,DA"
-            ],
-            "type": null,
-            "target": "26-FE-0",
-            "process": "N,EL",
-            "sf49": "26-FE-0,,DA",
-            "sf4": "26-FE-0",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " tbl.2"
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -284,21 +295,19 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
-              "Corrections were calculated by Monte-Carlo method  for:",
+              "Corrections were calculated by Monte-Carlo method for:",
               " - neutron fluence attenuation;",
               " - multiple scattering;",
               " - finite geometry"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -308,10 +317,8 @@
               "plier at both ends of the scintillator."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -332,20 +339,16 @@
               " etc."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,3CPRAEP)",
             "free_txt": [
               " HI-13 tandem accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": [
@@ -355,36 +358,22 @@
               " repeating frequency."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "Absolute"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
-          {
-            "x4_code": "(N)",
-            "free_txt": []
-          }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -395,8 +384,23 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "critique": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Comment by S.Simakov: possible inclusion of inelastic",
+              "scattering below Ex ~> 0.1 MeV."
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(C,,S.Simakov+,S,INDC(NDS)-0857,91,2022)",
+            "free_txt": []
+          }
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -408,8 +412,8 @@
       }
     },
     "003": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [

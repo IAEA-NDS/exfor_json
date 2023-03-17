@@ -68,37 +68,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NIM/A,404,373,1998)",
-          "free_txt": [],
-          "publication_year": "1998"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,3HUNDEB)",
-          "free_txt": [
-            " MGC-20E cyclotron"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(3HUNDEB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NIM/A,404,373,1998)",
+        "free_txt": [],
+        "publication_year": "1998",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,3HUNDEB)",
+        "free_txt": [
+          " MGC-20E cyclotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(3HUNDEB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(D,X)0-NN-1,,PY/DA/DE,,TT/MSC)",
-          "0": {
+      "0": {
+        "x4_code": "(4-BE-9(D,X)0-NN-1,,PY/DA/DE,,TT/MSC)",
+        "children": [
+          {
             "code": [
               "4-BE-9",
               [
@@ -116,11 +111,65 @@
             "sf7": null,
             "sf8": "TT/MSC",
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Flux density in neutrons/cm2/sec/MeV"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((4-BE-9(D,X)0-NN-1,PAR,PY/DA,,TT)//(4-BE-9(D,X)0-NN-1,PAR,PY/DA,,TT))",
+        "children": [
+          {
+            "code": [
+              "4-BE-9",
+              [
+                "D,X"
+              ],
+              "0-NN-1,PAR,PY/DA,,TT"
+            ],
+            "type": null,
+            "target": "4-BE-9",
+            "process": "D,X",
+            "sf49": "0-NN-1,PAR,PY/DA,,TT",
+            "sf4": "0-NN-1",
+            "sf5": "PAR",
+            "sf6": "PY/DA",
+            "sf7": null,
+            "sf8": "TT",
+            "sf9": null
           },
-          "type": null,
-          "free_text": " Flux density in neutrons/cm2/sec/MeV"
-        }
-      },
+          {
+            "code": [
+              "4-BE-9",
+              [
+                "D,X"
+              ],
+              "0-NN-1,PAR,PY/DA,,TT"
+            ],
+            "type": null,
+            "target": "4-BE-9",
+            "process": "D,X",
+            "sf49": "0-NN-1,PAR,PY/DA,,TT",
+            "sf4": "0-NN-1",
+            "sf5": "PAR",
+            "sf6": "PY/DA",
+            "sf7": null,
+            "sf8": "TT",
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN",
@@ -337,51 +386,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((4-BE-9(D,X)0-NN-1,PAR,PY/DA,,TT)//(4-BE-9(D,X)0-NN-1,PAR,PY/DA,,TT))",
-          "0": {
-            "code": [
-              "4-BE-9",
-              [
-                "D,X"
-              ],
-              "0-NN-1,PAR,PY/DA,,TT"
-            ],
-            "type": null,
-            "target": "4-BE-9",
-            "process": "D,X",
-            "sf49": "0-NN-1,PAR,PY/DA,,TT",
-            "sf4": "0-NN-1",
-            "sf5": "PAR",
-            "sf6": "PY/DA",
-            "sf7": null,
-            "sf8": "TT",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "4-BE-9",
-              [
-                "D,X"
-              ],
-              "0-NN-1,PAR,PY/DA,,TT"
-            ],
-            "type": null,
-            "target": "4-BE-9",
-            "process": "D,X",
-            "sf49": "0-NN-1,PAR,PY/DA,,TT",
-            "sf4": "0-NN-1",
-            "sf5": "PAR",
-            "sf6": "PY/DA",
-            "sf7": null,
-            "sf8": "TT",
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -446,18 +450,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(CYCLO,3HUNDEB)",
             "free_txt": [
               " MGC-20E cyclotron"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -465,10 +467,8 @@
               " a Cu ring (39 mm diam.) was used as target."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -479,38 +479,32 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(UNFLD)",
             "free_txt": [
               " Unfolding by the code SULSA"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
               " Multiple foil activation"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -521,48 +515,40 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(UNFLD)",
             "free_txt": [
               " Unfolding by the code UnfSpec"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " 5 cm x 5 cm diam. NE-213 liquid scintillator"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information on uncertainty"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(PSD)",
             "free_txt": [
               " To reject gamma-ray induced pulses"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

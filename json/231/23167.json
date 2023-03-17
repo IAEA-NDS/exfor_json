@@ -545,39 +545,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,85,064601,2012)",
-          "free_txt": [],
-          "publication_year": "2012"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCY,2ZZZCER)",
-          "free_txt": [
-            " CERN nTOF facility.",
-            " Protons (7E+12 protons/pulse, pulse width of 6 nsec)",
-            "  were accelerated to 20 GeV"
-          ],
-          "facility_type": "(SYNCY)",
-          "institute": "(2ZZZCER)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,85,064601,2012)",
+        "free_txt": [],
+        "publication_year": "2012",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCY,2ZZZCER)",
+        "free_txt": [
+          " CERN nTOF facility.",
+          " Protons (7E+12 protons/pulse, pulse width of 6 nsec)",
+          "  were accelerated to 20 GeV"
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCY)",
+        "institute": "(2ZZZCER)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,G)90-TH-233,,RYL)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-232(N,G)90-TH-233,,RYL)",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -595,11 +590,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(N,0),,D)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,0"
+              ],
+              ",,D"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,0",
+            "sf49": ",,D",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "D",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(90-TH-232(N,EL),,STF)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,EL"
+              ],
+              ",,STF"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,EL",
+            "sf49": ",,STF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "STF",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "THICKNESS",
@@ -108759,32 +108817,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,0),,D)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,0"
-              ],
-              ",,D"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,0",
-            "sf49": ",,D",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "D",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -108816,32 +108848,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,EL),,STF)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,EL"
-              ],
-              ",,STF"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,EL",
-            "sf49": ",,STF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "STF",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -108870,8 +108876,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -108883,10 +108889,8 @@
               " - sample-scattered neutrons."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -108894,10 +108898,8 @@
               " from the centre of  the sample."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCY,2ZZZCER)",
             "free_txt": [
@@ -108906,10 +108908,8 @@
               "  were accelerated to 20 GeV"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": [
@@ -108923,10 +108923,8 @@
               " reaction to measure the relative neutron flux."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -108937,10 +108935,8 @@
             "x4_code": "(PHWT)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(90-TH-232(N,G)90-TH-233,,SIG)",
             "free_txt": [
@@ -108948,10 +108944,8 @@
               "  23.5 eV resonances of 232Th."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,22931001,G.Aerts+,J,PR/C,73,054610,2006)",
             "free_txt": [
@@ -108964,10 +108958,8 @@
               " Description of detector"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -108975,10 +108967,8 @@
               " 15 mm diam.)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -108989,8 +108979,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -109001,10 +108991,8 @@
               "   log-equidistant bins per energy decade."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -109023,10 +109011,8 @@
               " Neutron flux shape                     (2%)"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -109040,10 +109026,8 @@
               " Measured timE-of-flight"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -109054,8 +109038,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -109064,10 +109048,8 @@
               " the limit in the vicinity of 1.5E-4 eV."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -109078,8 +109060,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

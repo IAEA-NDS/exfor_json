@@ -36,42 +36,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSF,23,(5),327,198610)",
-          "free_txt": [],
-          "publication_year": "1986"
-        },
-        {
-          "x4_code": "(J,ADP,44,(8),630,1987)",
-          "free_txt": [
-            " Same data as NSF,23,327,8610"
-          ],
-          "publication_year": "1987"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,3EGYCAI)",
-          "free_txt": [],
-          "facility_type": "(REAC)",
-          "institute": "(3EGYCAI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSF,23,(5),327,198610)",
+        "free_txt": [],
+        "publication_year": "1986",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,ADP,44,(8),630,1987)",
+        "free_txt": [
+          " Same data as NSF,23,327,8610"
+        ],
+        "publication_year": "1987",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,3EGYCAI)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(3EGYCAI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(15-P-31(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(15-P-31(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "15-P-31",
               [
@@ -89,11 +85,102 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(15-P-31(N,TOT),,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "15-P-31",
+              [
+                "N,TOT"
+              ],
+              ",,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "15-P-31",
+            "process": "N,TOT",
+            "sf49": ",,SIG,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(15-P-31(N,G)15-P-32,,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "15-P-31",
+              [
+                "N,G"
+              ],
+              "15-P-32,,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "15-P-31",
+            "process": "N,G",
+            "sf49": "15-P-32,,SIG,,,DERIV",
+            "sf4": "15-P-32",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": "Derived from total cross section"
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(15-P-31(N,THS)15-P-31,FA,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "15-P-31",
+              [
+                "N,THS"
+              ],
+              "15-P-31,FA,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "15-P-31",
+            "process": "N,THS",
+            "sf49": "15-P-31,FA,SIG,,,DERIV",
+            "sf4": "15-P-31",
+            "sf5": "FA",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": "Derived from total cross section measured at roomtemperature"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-MIN",
@@ -355,32 +442,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(15-P-31(N,TOT),,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "15-P-31",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "15-P-31",
-            "process": "N,TOT",
-            "sf49": ",,SIG,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -407,32 +468,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(15-P-31(N,G)15-P-32,,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "15-P-31",
-              [
-                "N,G"
-              ],
-              "15-P-32,,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "15-P-31",
-            "process": "N,G",
-            "sf49": "15-P-32,,SIG,,,DERIV",
-            "sf4": "15-P-32",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": "Derived from total cross section"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -459,32 +494,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(15-P-31(N,THS)15-P-31,FA,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "15-P-31",
-              [
-                "N,THS"
-              ],
-              "15-P-31,FA,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "15-P-31",
-            "process": "N,THS",
-            "sf49": "15-P-31,FA,SIG,,,DERIV",
-            "sf4": "15-P-31",
-            "sf5": "FA",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": "Derived from total cross section measured at roomtemperature"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -518,46 +527,38 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "For counting losses and background subtraction"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HE3SP)",
             "free_txt": [
               " He-3 gas  filled neutron detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,3EGYCAI)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,TRN)",
             "free_txt": [
@@ -566,20 +567,16 @@
               "time of flight spectrometer and a mechanical chopper."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "Absolute measurements"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -590,18 +587,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-DIG)",
             "free_txt": [
               "    Digitizing error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -613,8 +608,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -622,10 +617,8 @@
               "2.2 eV using a least square fit program."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,30746002)",
             "free_txt": []
@@ -640,8 +633,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,30746002)",
             "free_txt": []
@@ -656,8 +649,8 @@
       }
     },
     "005": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,30746002)",
             "free_txt": []

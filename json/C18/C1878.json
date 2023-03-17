@@ -121,39 +121,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PRL,107,202501,2011)",
-          "free_txt": [],
-          "publication_year": "2011"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCTM,1USAMSU)",
-          "free_txt": [
-            " Experiment performed at the coupled",
-            "cyclotron facility of the National Superconducting",
-            "Cyclotron Laboratory, East Lansing"
-          ],
-          "facility_type": "(CYCTM)",
-          "institute": "(1USAMSU)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PRL,107,202501,2011)",
+        "free_txt": [],
+        "publication_year": "2011",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCTM,1USAMSU)",
+        "free_txt": [
+          " Experiment performed at the coupled",
+          "cyclotron facility of the National Superconducting",
+          "Cyclotron Laboratory, East Lansing"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCTM)",
+        "institute": "(1USAMSU)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(27-CO-55,N)28-NI-55,PAR,DA,RSD)=(27-CO-55(P,N)28-NI-55,PAR,DA))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-1(27-CO-55,N)28-NI-55,PAR,DA,RSD)=(27-CO-55(P,N)28-NI-55,PAR,DA))",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -172,7 +167,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "27-CO-55",
               [
@@ -190,11 +185,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((1-H-1(28-NI-56,N)29-CU-56,PAR,DA,RSD)=(28-NI-56(P,N)29-CU-56,PAR,DA))",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "28-NI-56,N"
+              ],
+              "29-CU-56,PAR,DA,RSD"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "28-NI-56,N",
+            "sf49": "29-CU-56,PAR,DA,RSD",
+            "sf4": "29-CU-56",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "RSD",
+            "sf8": null,
+            "sf9": null
           },
-          "type": "=",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "28-NI-56",
+              [
+                "P,N"
+              ],
+              "29-CU-56,PAR,DA"
+            ],
+            "type": null,
+            "target": "28-NI-56",
+            "process": "P,N",
+            "sf49": "29-CU-56,PAR,DA",
+            "sf4": "29-CU-56",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-CM",
@@ -252,51 +301,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(28-NI-56,N)29-CU-56,PAR,DA,RSD)=(28-NI-56(P,N)29-CU-56,PAR,DA))",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "28-NI-56,N"
-              ],
-              "29-CU-56,PAR,DA,RSD"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "28-NI-56,N",
-            "sf49": "29-CU-56,PAR,DA,RSD",
-            "sf4": "29-CU-56",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "RSD",
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "28-NI-56",
-              [
-                "P,N"
-              ],
-              "29-CU-56,PAR,DA"
-            ],
-            "type": null,
-            "target": "28-NI-56",
-            "process": "P,N",
-            "sf49": "29-CU-56,PAR,DA",
-            "sf4": "29-CU-56",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-CM",
@@ -376,8 +380,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -391,10 +395,8 @@
               "covered, with gaps of 1.7deg between bars."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -405,10 +407,8 @@
               "dead time of the data acquisition system"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCTM,1USAMSU)",
             "free_txt": [
@@ -417,10 +417,8 @@
               "Cyclotron Laboratory, East Lansing"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -443,10 +441,8 @@
               "the isotopes in the cocktail beam."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -455,10 +451,8 @@
               "Inverse kinematics was used"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -472,8 +466,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -485,8 +479,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

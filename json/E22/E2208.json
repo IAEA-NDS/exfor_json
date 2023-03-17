@@ -35,37 +35,32 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JPJ,13,541,1958)",
-          "free_txt": [],
-          "publication_year": "1958"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2JPNOSA)",
-          "free_txt": [
-            " 44 inch cyclotron"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2JPNOSA)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JPJ,13,541,1958)",
+        "free_txt": [],
+        "publication_year": "1958",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2JPNOSA)",
+        "free_txt": [
+          " 44 inch cyclotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2JPNOSA)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(P,INL)14-SI-28,PAR,DA,G,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(14-SI-28(P,INL)14-SI-28,PAR,DA,G,REL)",
+        "children": [
+          {
             "code": [
               "14-SI-28",
               [
@@ -83,11 +78,74 @@
             "sf7": "G",
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(14-SI-28(P,INL)14-SI-28,PAR,DA,G)",
+        "children": [
+          {
+            "code": [
+              "14-SI-28",
+              [
+                "P,INL"
+              ],
+              "14-SI-28,PAR,DA,G"
+            ],
+            "type": null,
+            "target": "14-SI-28",
+            "process": "P,INL",
+            "sf49": "14-SI-28,PAR,DA,G",
+            "sf4": "14-SI-28",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "G",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(14-SI-28(P,INL)14-SI-28,PAR,SIG,G)",
+        "children": [
+          {
+            "code": [
+              "14-SI-28",
+              [
+                "P,INL"
+              ],
+              "14-SI-28,PAR,SIG,G"
+            ],
+            "type": null,
+            "target": "14-SI-28",
+            "process": "P,INL",
+            "sf49": "14-SI-28,PAR,SIG,G",
+            "sf4": "14-SI-28",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": "G",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E",
@@ -180,32 +238,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(P,INL)14-SI-28,PAR,DA,G)",
-          "0": {
-            "code": [
-              "14-SI-28",
-              [
-                "P,INL"
-              ],
-              "14-SI-28,PAR,DA,G"
-            ],
-            "type": null,
-            "target": "14-SI-28",
-            "process": "P,INL",
-            "sf49": "14-SI-28,PAR,DA,G",
-            "sf4": "14-SI-28",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "G",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -237,32 +269,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(P,INL)14-SI-28,PAR,SIG,G)",
-          "0": {
-            "code": [
-              "14-SI-28",
-              [
-                "P,INL"
-              ],
-              "14-SI-28,PAR,SIG,G"
-            ],
-            "type": null,
-            "target": "14-SI-28",
-            "process": "P,INL",
-            "sf49": "14-SI-28,PAR,SIG,G",
-            "sf4": "14-SI-28",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": "G",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -291,8 +297,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(ANGD)",
             "free_txt": [
@@ -300,48 +306,38 @@
               "       Ep=5.4 and 5.7 MeV"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
               " 3 inch in diameter and in length"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2JPNOSA)",
             "free_txt": [
               " 44 inch cyclotron"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDEG)",
             "free_txt": [
               " Degraded by Al absorbers"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -352,8 +348,8 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": null,
             "free_txt": [
@@ -365,10 +361,8 @@
             "x4_code": "(E,G)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -379,8 +373,8 @@
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": null,
             "free_txt": [
@@ -392,10 +386,8 @@
             "x4_code": "(E,G)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -406,26 +398,22 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Measured relative angular distribution considered"
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E,G)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

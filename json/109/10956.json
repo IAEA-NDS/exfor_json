@@ -55,44 +55,40 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,79,175,1981)",
-          "free_txt": [],
-          "publication_year": "1981"
-        },
-        {
-          "x4_code": "(J,ANS,32,748,1979)",
-          "free_txt": [
-            " Preliminary results."
-          ],
-          "publication_year": "1979"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USARPI)",
-          "free_txt": [
-            " Rensselaer Gaerttner Laboratory"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USARPI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,79,175,1981)",
+        "free_txt": [],
+        "publication_year": "1981",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,ANS,32,748,1979)",
+        "free_txt": [
+          " Preliminary results."
+        ],
+        "publication_year": "1979",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USARPI)",
+        "free_txt": [
+          " Rensselaer Gaerttner Laboratory"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USARPI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,TOT),,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-232(N,TOT),,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -110,11 +106,74 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(N,TOT),,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,TOT"
+              ],
+              ",,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,TOT",
+            "sf49": ",,SIG,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(90-TH-232(N,G)90-TH-233,,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,G"
+              ],
+              "90-TH-233,,SIG,,AV"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,G",
+            "sf49": "90-TH-233,,SIG,,AV",
+            "sf4": "90-TH-233",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -614,32 +673,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,TOT),,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,TOT",
-            "sf49": ",,SIG,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -666,32 +699,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,G)90-TH-233,,SIG,,AV)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,G"
-              ],
-              "90-TH-233,,SIG,,AV"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,G",
-            "sf49": "90-TH-233,,SIG,,AV",
-            "sf4": "90-TH-233",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -1186,18 +1193,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(LINAC,1USARPI)",
             "free_txt": [
               " Rensselaer Gaerttner Laboratory"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1214,28 +1219,24 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Corrected for background and deadtime."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
               " Li-6 glass detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1250,10 +1251,8 @@
               "estimated to be no more than 1%."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1262,10 +1261,8 @@
               "with sample package containing Cd,In,Au, and W."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1277,38 +1274,32 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(MLA)",
             "free_txt": [
               " Computer code MLEVL used to fit data."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Corrected for background and deadtime."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
               " Li-6 glass detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1319,10 +1310,8 @@
               "thickness-density methods."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1331,10 +1320,8 @@
               "with sample package containing Cd,In,Au, and W."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1342,10 +1329,8 @@
               "taken from ENDF/B-V)."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1353,10 +1338,8 @@
               "metallic samples."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,10956002)",
             "free_txt": [
@@ -1367,8 +1350,8 @@
       }
     },
     "004": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1376,10 +1359,8 @@
               "sample and background."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -1393,20 +1374,16 @@
               " detector placed at 28.32-meters."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statisitical error"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1416,20 +1393,16 @@
               "after separation."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "Capture cross sections normalized to ENDF/B-V."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [

@@ -43,42 +43,37 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,97TRIEST,2,1289,199705)",
-          "free_txt": [
-            " MAIN REF., DATA ARE GIVEN"
-          ],
-          "publication_year": "1997"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2ZZZGEL)",
-          "free_txt": [
-            " PULSED GEEL LINEAR ACCELERATOR - GELINA",
-            "     ELECTRON BEAM ENERGY IS 100 MEV, AVERAGED CURRENT",
-            "     20 MICROAMP. THE PULSE LENGTH IS 15 NS, REPETI-",
-            "     TION RATE 200 HZ"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,97TRIEST,2,1289,199705)",
+        "free_txt": [
+          " MAIN REF., DATA ARE GIVEN"
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2ZZZGEL)",
+        "free_txt": [
+          " PULSED GEEL LINEAR ACCELERATOR - GELINA",
+          "     ELECTRON BEAM ENERGY IS 100 MEV, AVERAGED CURRENT",
+          "     20 MICROAMP. THE PULSE LENGTH IS 15 NS, REPETI-",
+          "     TION RATE 200 HZ"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(43-TC-99(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(43-TC-99(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "43-TC-99",
               [
@@ -96,13 +91,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "    RESONANCE ENERGY"
-        },
-        "2": {
-          "x4_code": "(43-TC-99(N,G),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": "    RESONANCE ENERGY"
+      },
+      "2": {
+        "x4_code": "(43-TC-99(N,G),,WID)",
+        "children": [
+          {
             "code": [
               "43-TC-99",
               [
@@ -120,13 +117,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "   GAMMA-WIDTH"
-        },
-        "3": {
-          "x4_code": "(43-TC-99(N,EL),,WID,,G)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": "   GAMMA-WIDTH"
+      },
+      "3": {
+        "x4_code": "(43-TC-99(N,EL),,WID,,G)",
+        "children": [
+          {
             "code": [
               "43-TC-99",
               [
@@ -144,13 +143,15 @@
             "sf7": null,
             "sf8": "G",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " ELASTIC WIDTH TIMES G"
-        },
-        "4": {
-          "x4_code": "(43-TC-99(N,0),,ARE,,FCT)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": " ELASTIC WIDTH TIMES G"
+      },
+      "4": {
+        "x4_code": "(43-TC-99(N,0),,ARE,,FCT)",
+        "children": [
+          {
             "code": [
               "43-TC-99",
               [
@@ -168,11 +169,18 @@
             "sf7": null,
             "sf8": "FCT",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " AS RESONANCE AREA VALUE  GIVEN IN DATA SECTION IS -  G*(EL-WID)*(G-WID)/((EL-WID)+(G-WID))"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " AS RESONANCE AREA VALUE  GIVEN IN DATA SECTION IS -  G*(EL-WID)*(G-WID)/((EL-WID)+(G-WID))"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -482,8 +490,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -491,10 +499,8 @@
               " FOR NEUTRON BACKGROUND"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -502,10 +508,8 @@
               " OF THE SAMPLE"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
@@ -515,26 +519,20 @@
               "     TION RATE 200 HZ"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(47-AG-0(N,0),,EN)",
             "free_txt": [
@@ -543,10 +541,8 @@
               "    BY L.Y.LOWIE ET.AL., PHYS.REV/C (TO BE PUBLISHED)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -558,26 +554,22 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(SHAPE)",
             "free_txt": [
               "  PROGRAM 'REFIT'"
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM,92-U-238(N,0),,J)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(PRELM)",
             "free_txt": [

@@ -43,37 +43,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(P,ORNL-4581,43,197009)",
-          "free_txt": [],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,1USAORL)",
-          "free_txt": [
-            " ORR."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(P,ORNL-4581,43,197009)",
+        "free_txt": [],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USAORL)",
+        "free_txt": [
+          " ORR."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(100-FM-257(N,ABS),,SIG,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(100-FM-257(N,ABS),,SIG,,SPA)",
+        "children": [
+          {
             "code": [
               "100-FM-257",
               [
@@ -91,11 +86,74 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(100-FM-257(N,ABS),,RI)",
+        "children": [
+          {
+            "code": [
+              "100-FM-257",
+              [
+                "N,ABS"
+              ],
+              ",,RI"
+            ],
+            "type": null,
+            "target": "100-FM-257",
+            "process": "N,ABS",
+            "sf49": ",,RI",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(100-FM-257(N,ABS),,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "100-FM-257",
+              [
+                "N,ABS"
+              ],
+              ",,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "100-FM-257",
+            "process": "N,ABS",
+            "sf49": ",,SIG,,MXW",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -122,32 +180,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(100-FM-257(N,ABS),,RI)",
-          "0": {
-            "code": [
-              "100-FM-257",
-              [
-                "N,ABS"
-              ],
-              ",,RI"
-            ],
-            "type": null,
-            "target": "100-FM-257",
-            "process": "N,ABS",
-            "sf49": ",,RI",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -169,32 +201,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(100-FM-257(N,ABS),,SIG,,MXW)",
-          "0": {
-            "code": [
-              "100-FM-257",
-              [
-                "N,ABS"
-              ],
-              ",,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "100-FM-257",
-            "process": "N,ABS",
-            "sf49": ",,SIG,,MXW",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -228,62 +234,50 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Corrected for sample decay."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(100-FM-257,97.D,A,6519.,0.94)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(96-CM-244,,A,5806.,0.764)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SI)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,1USAORL)",
             "free_txt": [
               " ORR."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               " Thermal neutrons from reactor"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP)",
             "free_txt": [
@@ -291,20 +285,16 @@
               " irradiated and unirradiated samples."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(96-CM-244(N,ABS),,SIG)",
             "free_txt": [
               " Flux measured with colbalt monitor."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(A)",
             "free_txt": [
@@ -312,10 +302,8 @@
               " unirradiated samples."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -327,18 +315,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainty."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -350,18 +336,16 @@
     },
     "003": {},
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainty."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,10650002)",
             "free_txt": [

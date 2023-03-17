@@ -594,44 +594,41 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,83,034608,2011)",
-          "free_txt": [
-            "#doi:10.1103/PhysRevC.83.034608"
-          ],
-          "publication_year": "2011"
-        },
-        {
-          "x4_code": "(J,JP/CS,337,012045,2012)",
-          "free_txt": [
-            " - same data, new analysis"
-          ],
-          "publication_year": "2012"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCY,2ZZZCER)",
-          "free_txt": [],
-          "facility_type": "(SYNCY)",
-          "institute": "(2ZZZCER)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,83,034608,2011)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.83.034608"
+        ],
+        "publication_year": "2011",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.83.034608"
+      },
+      {
+        "x4_code": "(J,JP/CS,337,012045,2012)",
+        "free_txt": [
+          " - same data, new analysis"
+        ],
+        "publication_year": "2012",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCY,2ZZZCER)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(SYNCY)",
+        "institute": "(2ZZZCER)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "79-AU-197",
               [
@@ -649,11 +646,74 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,MXW,DERIV)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,G"
+              ],
+              "79-AU-198,,SIG,,MXW,DERIV"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "N,G",
+            "sf49": "79-AU-198,,SIG,,MXW,DERIV",
+            "sf4": "79-AU-198",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": " Maxwell average cross section (MACS)"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,G"
+              ],
+              "79-AU-198,,SIG"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "N,G",
+            "sf49": "79-AU-198,,SIG",
+            "sf4": "79-AU-198",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -944,32 +1004,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,MXW,DERIV)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "N,G"
-              ],
-              "79-AU-198,,SIG,,MXW,DERIV"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "N,G",
-            "sf49": "79-AU-198,,SIG,,MXW,DERIV",
-            "sf4": "79-AU-198",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": " Maxwell average cross section (MACS)"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1101,32 +1135,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "N,G"
-              ],
-              "79-AU-198,,SIG"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "N,G",
-            "sf49": "79-AU-198,,SIG",
-            "sf4": "79-AU-198",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -4041,18 +4049,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Pulse-height-weighting technique (PHWT)"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -4063,10 +4069,8 @@
               " - neutron self-shielding"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -4081,18 +4085,14 @@
               " 6Li(n,a)3H reaction"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCY,2ZZZCER)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": [
@@ -4102,20 +4102,16 @@
               " neutron spectrum from thermal to several GeV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " flight path of ~185 m"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -4134,10 +4130,8 @@
               "     neutron flux shape"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,F.Gunsing+,J,NIM/B,261,925,2007)",
             "free_txt": [
@@ -4150,10 +4144,8 @@
               " TOF-energy relation"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -4167,10 +4159,8 @@
               " of the capture sample for flux measurement"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -4181,8 +4171,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -4233,10 +4223,8 @@
               "     - sample geometry                  (0.5%)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -4253,18 +4241,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS,3.0,3.5)",
             "free_txt": [
               " Systematic uncertainty (3.0-3.5%)"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -4277,10 +4263,8 @@
               "  Contribution to MACS from En > 400 keV"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,23067001,C.Massimi+,J,PR/C,81,044616,2010)",
             "free_txt": [
@@ -4299,10 +4283,8 @@
               " 582 +/- 9 mb at kT=30 keV"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -4319,8 +4301,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -4371,10 +4353,8 @@
               "     - sample geometry                  (0.5%)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

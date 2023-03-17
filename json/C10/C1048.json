@@ -92,38 +92,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,62,042802,200010)",
-          "free_txt": [],
-          "publication_year": "2000"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,1USAORL)",
-          "free_txt": [
-            " Holifield Radioactive Ion Beam Facility",
-            " tandem accelerator."
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,62,042802,200010)",
+        "free_txt": [],
+        "publication_year": "2000",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,1USAORL)",
+        "free_txt": [
+          " Holifield Radioactive Ion Beam Facility",
+          " tandem accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(9-F-18,EL)1-H-1,,IPA,,REL)=(9-F-18(P,EL)9-F-18,,IPA,,REL))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-1(9-F-18,EL)1-H-1,,IPA,,REL)=(9-F-18(P,EL)9-F-18,,IPA,,REL))",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -142,7 +137,7 @@
             "sf8": "REL",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "9-F-18",
               [
@@ -160,11 +155,117 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": "=",
-          "free_text": " The yield at each energy was determined by summing thecoincident proton yields, in the inner 12 strips of theSIDAR and normalizing to the incident beam current."
-        }
+          }
+        ],
+        "type": "=",
+        "free_text": " The yield at each energy was determined by summing thecoincident proton yields, in the inner 12 strips of theSIDAR and normalizing to the incident beam current."
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(9-F-18(P,0),,EN)",
+        "children": [
+          {
+            "code": [
+              "9-F-18",
+              [
+                "P,0"
+              ],
+              ",,EN"
+            ],
+            "type": null,
+            "target": "9-F-18",
+            "process": "P,0",
+            "sf49": ",,EN",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "EN",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(9-F-18(P,TOT),,WID)",
+        "children": [
+          {
+            "code": [
+              "9-F-18",
+              [
+                "P,TOT"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "9-F-18",
+            "process": "P,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "((9-F-18(P,EL),,WID)/(9-F-18(P,TOT),,WID))",
+        "children": [
+          {
+            "code": [
+              "9-F-18",
+              [
+                "P,EL"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "9-F-18",
+            "process": "P,EL",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "9-F-18",
+              [
+                "P,TOT"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "9-F-18",
+            "process": "P,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-MIN",
@@ -253,99 +354,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(9-F-18(P,0),,EN)",
-          "0": {
-            "code": [
-              "9-F-18",
-              [
-                "P,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
-            "target": "9-F-18",
-            "process": "P,0",
-            "sf49": ",,EN",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "EN",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(9-F-18(P,TOT),,WID)",
-          "0": {
-            "code": [
-              "9-F-18",
-              [
-                "P,TOT"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "9-F-18",
-            "process": "P,TOT",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "((9-F-18(P,EL),,WID)/(9-F-18(P,TOT),,WID))",
-          "0": {
-            "code": [
-              "9-F-18",
-              [
-                "P,EL"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "9-F-18",
-            "process": "P,EL",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "9-F-18",
-              [
-                "P,TOT"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "9-F-18",
-            "process": "P,TOT",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -399,8 +407,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -415,10 +423,8 @@
               " filled ionization chamber."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,1USAORL)",
             "free_txt": [
@@ -426,10 +432,8 @@
               " tandem accelerator."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -438,10 +442,8 @@
               " of F18/18O about 0.1."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -449,20 +451,16 @@
               " 18F ions."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,D.W.Bardayan+,J,PRL,83,45,1999)",
             "free_txt": [
               "                             - description of SIDAR"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -472,10 +470,8 @@
               " carbon in target."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -486,8 +482,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -498,8 +494,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -507,20 +503,16 @@
               " analyses."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

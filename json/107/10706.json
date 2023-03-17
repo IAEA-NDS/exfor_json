@@ -60,42 +60,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,16,939,1977)",
-          "free_txt": [],
-          "publication_year": "1977"
-        },
-        {
-          "x4_code": "(T,DONATI,197306)",
-          "free_txt": [],
-          "publication_year": "1973"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,1USALTI)",
-          "free_txt": [
-            " 5.5MeV HVEC model CN Van de Graaff."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(1USALTI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,16,939,1977)",
+        "free_txt": [],
+        "publication_year": "1977",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(T,DONATI,197306)",
+        "free_txt": [],
+        "publication_year": "1973",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,1USALTI)",
+        "free_txt": [
+          " 5.5MeV HVEC model CN Van de Graaff."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(1USALTI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(11-NA-23(N,INL)11-NA-23,PAR,DA,G)",
-          "0": {
+      "0": {
+        "x4_code": "(11-NA-23(N,INL)11-NA-23,PAR,DA,G)",
+        "children": [
+          {
             "code": [
               "11-NA-23",
               [
@@ -113,11 +109,74 @@
             "sf7": "G",
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(11-NA-23(N,INL)11-NA-23,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "11-NA-23",
+              [
+                "N,INL"
+              ],
+              "11-NA-23,PAR,SIG"
+            ],
+            "type": null,
+            "target": "11-NA-23",
+            "process": "N,INL",
+            "sf49": "11-NA-23,PAR,SIG",
+            "sf4": "11-NA-23",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(11-NA-23(N,INL)11-NA-23,PAR,DA,G)",
+        "children": [
+          {
+            "code": [
+              "11-NA-23",
+              [
+                "N,INL"
+              ],
+              "11-NA-23,PAR,DA,G"
+            ],
+            "type": null,
+            "target": "11-NA-23",
+            "process": "N,INL",
+            "sf49": "11-NA-23,PAR,DA,G",
+            "sf4": "11-NA-23",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "G",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG"
@@ -1005,32 +1064,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(11-NA-23(N,INL)11-NA-23,PAR,SIG)",
-          "0": {
-            "code": [
-              "11-NA-23",
-              [
-                "N,INL"
-              ],
-              "11-NA-23,PAR,SIG"
-            ],
-            "type": null,
-            "target": "11-NA-23",
-            "process": "N,INL",
-            "sf49": "11-NA-23,PAR,SIG",
-            "sf4": "11-NA-23",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1622,32 +1655,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(11-NA-23(N,INL)11-NA-23,PAR,DA,G)",
-          "0": {
-            "code": [
-              "11-NA-23",
-              [
-                "N,INL"
-              ],
-              "11-NA-23,PAR,DA,G"
-            ],
-            "type": null,
-            "target": "11-NA-23",
-            "process": "N,INL",
-            "sf49": "11-NA-23,PAR,DA,G",
-            "sf4": "11-NA-23",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "G",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2166,8 +2173,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -2188,20 +2195,16 @@
               " flux monitor."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,1USALTI)",
             "free_txt": [
               " 5.5MeV HVEC model CN Van de Graaff."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
             "free_txt": [
@@ -2214,10 +2217,8 @@
               " For 0.52-0.94 MeV neutrons."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2225,18 +2226,14 @@
               " 130 keV at  1 MeV, and 40 keV at 40 MeV."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2245,10 +2242,8 @@
               " Sample positioned 11.4 cm from source."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -2265,8 +2260,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2280,18 +2275,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainty."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,10706002)",
             "free_txt": []
@@ -2300,8 +2293,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [

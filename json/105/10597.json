@@ -58,50 +58,47 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,66,433,197806)",
-          "free_txt": [],
-          "publication_year": "1978"
-        },
-        {
-          "x4_code": "(C,76LOWELL,2,1413,197607)",
-          "free_txt": [],
-          "publication_year": "1976"
-        },
-        {
-          "x4_code": "(R,UCID-17047,197603)",
-          "free_txt": [
-            " PRELIMINARY DATA."
-          ],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALRL)",
-          "free_txt": [
-            " Lawrence Livermore 100-MeV electron",
-            "  linear Accelerator"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALRL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,66,433,197806)",
+        "free_txt": [],
+        "publication_year": "1978",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,76LOWELL,2,1413,197607)",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,UCID-17047,197603)",
+        "free_txt": [
+          " PRELIMINARY DATA."
+        ],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALRL)",
+        "free_txt": [
+          " Lawrence Livermore 100-MeV electron",
+          "  linear Accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALRL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-240(N,F),,SIG)/(92-U-235(N,F),,SIG))",
-          "0": {
+      "0": {
+        "x4_code": "((94-PU-240(N,F),,SIG)/(92-U-235(N,F),,SIG))",
+        "children": [
+          {
             "code": [
               "94-PU-240",
               [
@@ -120,7 +117,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "92-U-235",
               [
@@ -138,11 +135,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((94-PU-242(N,F),,SIG)/(92-U-235(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "94-PU-242",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-242",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -677,51 +728,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-242(N,F),,SIG)/(92-U-235(N,F),,SIG))",
-          "0": {
-            "code": [
-              "94-PU-242",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-242",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -1338,18 +1344,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
               " Ionization fission chambers"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1362,10 +1366,8 @@
               "     Total error"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALRL)",
             "free_txt": [
@@ -1373,30 +1375,24 @@
               "  linear Accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(EVAP)",
             "free_txt": [
               " Electrons on water-cooled tantalum target."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time-of-flight. 15.7-m flight path."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1408,18 +1404,16 @@
       }
     },
     "002": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": "((94-PU-240(N,F),,SIG,,AV)/(92-U-235(N,F),,SIG,,AV))",
             "free_txt": [
               " Derived from fission ratio of 238U/240Pu and 238U/235U"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1428,10 +1422,8 @@
               "95-mg uranium sample contained 99.91% 235U."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(COREL,12047002)",
             "free_txt": []
@@ -1440,8 +1432,8 @@
       }
     },
     "003": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": "((94-PU-242(N,F),,SIG)/(92-U-235(N,F),,SIG))",
             "free_txt": [

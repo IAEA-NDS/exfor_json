@@ -64,40 +64,35 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PRL,107,202701,2011)",
-          "free_txt": [],
-          "publication_year": "2011"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,1USAORL)",
-          "free_txt": [
-            "The 25 MV electrostatic tandem",
-            "accelerator at the Holifield Radioactive Ion Beam",
-            "Facility (HRIBF) was used to accelerate beams of",
-            "radioactive 132Sn and stable 130Te"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PRL,107,202701,2011)",
+        "free_txt": [],
+        "publication_year": "2011",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,1USAORL)",
+        "free_txt": [
+          "The 25 MV electrostatic tandem",
+          "accelerator at the Holifield Radioactive Ion Beam",
+          "Facility (HRIBF) was used to accelerate beams of",
+          "radioactive 132Sn and stable 130Te"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-58(50-SN-132,FUS),,SIG,ER)",
-          "0": {
+      "0": {
+        "x4_code": "(28-NI-58(50-SN-132,FUS),,SIG,ER)",
+        "children": [
+          {
             "code": [
               "28-NI-58",
               [
@@ -115,11 +110,74 @@
             "sf7": "ER",
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(28-NI-58(50-SN-132,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "28-NI-58",
+              [
+                "50-SN-132,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "28-NI-58",
+            "process": "50-SN-132,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(28-NI-58(50-SN-132,FUS),,SIG)",
+        "children": [
+          {
+            "code": [
+              "28-NI-58",
+              [
+                "50-SN-132,FUS"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "28-NI-58",
+            "process": "50-SN-132,FUS",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -159,32 +217,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-58(50-SN-132,F),,SIG)",
-          "0": {
-            "code": [
-              "28-NI-58",
-              [
-                "50-SN-132,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "28-NI-58",
-            "process": "50-SN-132,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -229,32 +261,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-58(50-SN-132,FUS),,SIG)",
-          "0": {
-            "code": [
-              "28-NI-58",
-              [
-                "50-SN-132,FUS"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "28-NI-58",
-            "process": "50-SN-132,FUS",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -324,8 +330,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SISD,MCPLT,IOCH)",
             "free_txt": [
@@ -335,10 +341,8 @@
               "chamber was placed behind the final MCP at 0deg"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,1USAORL)",
             "free_txt": [
@@ -348,10 +352,8 @@
               "radioactive 132Sn and stable 130Te"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -364,18 +366,16 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "58Ni targets with thicknesses of 0.34 and 1.0 mg/cm2"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -387,18 +387,16 @@
       }
     },
     "003": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "58Ni targets with thicknesses of 0.34 and 1.0 mg/cm2"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -410,18 +408,16 @@
       }
     },
     "004": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "58Ni targets with thicknesses of 0.34 and 1.0 mg/cm2"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

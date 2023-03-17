@@ -45,42 +45,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,YFI-8,12,1969)",
-          "free_txt": [],
-          "publication_year": "1969"
-        },
-        {
-          "x4_code": "(R,INDC(CCP)-8,16,1970)",
-          "free_txt": [
-            " Engl.translation of YFI-8,p.12,1969"
-          ],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,4RUSKUR)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(4RUSKUR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,YFI-8,12,1969)",
+        "free_txt": [],
+        "publication_year": "1969",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(CCP)-8,16,1970)",
+        "free_txt": [
+          " Engl.translation of YFI-8,p.12,1969"
+        ],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,4RUSKUR)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4RUSKUR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-239(N,F),,SIG)/(92-U-235(N,F),,SIG))",
-          "0": {
+      "0": {
+        "x4_code": "((94-PU-239(N,F),,SIG)/(92-U-235(N,F),,SIG))",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -99,7 +95,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "92-U-235",
               [
@@ -117,11 +113,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((94-PU-240(N,F),,SIG)/(92-U-235(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "94-PU-240",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-240",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -250,51 +300,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-240(N,F),,SIG)/(92-U-235(N,F),,SIG))",
-          "0": {
-            "code": [
-              "94-PU-240",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-240",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -398,8 +403,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -414,10 +419,8 @@
               "           flux monitoring"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -425,38 +428,30 @@
               "           article."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,4RUSKUR)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "      Resolution = 1 nsec/m."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               " No information."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G)",
             "free_txt": [
@@ -467,8 +462,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -479,8 +474,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

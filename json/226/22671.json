@@ -57,28 +57,82 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RCA,73,111,1996)",
-          "free_txt": [
-            "  Main reference, data are given"
-          ],
-          "publication_year": "1996"
-        }
-      ]
-    },
-    "facilities": {
-      "B": [
-        {
-          "x4_code": "(VDG,3HUNDEB)",
-          "free_txt": [
-            "   D-T Neutron generator in Debrecen"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(3HUNDEB)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,RCA,73,111,1996)",
+        "free_txt": [
+          "  Main reference, data are given"
+        ],
+        "publication_year": "1996",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,3HUNDEB)",
+        "free_txt": [
+          "   D-T Neutron generator in Debrecen"
+        ],
+        "pointer": "B",
+        "facility_type": "(VDG)",
+        "institute": "(3HUNDEB)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "A": {
+        "x4_code": "(29-CU-63(N,P)28-NI-63,,SIG)",
+        "children": [
+          {
+            "code": [
+              "29-CU-63",
+              [
+                "N,P"
+              ],
+              "28-NI-63,,SIG"
+            ],
+            "type": null,
+            "target": "29-CU-63",
+            "process": "N,P",
+            "sf49": "28-NI-63,,SIG",
+            "sf4": "28-NI-63",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " D-D neutron experiment"
+      },
+      "B": {
+        "x4_code": "(29-CU-63(N,P)28-NI-63,,SIG)",
+        "children": [
+          {
+            "code": [
+              "29-CU-63",
+              [
+                "N,P"
+              ],
+              "28-NI-63,,SIG"
+            ],
+            "type": null,
+            "target": "29-CU-63",
+            "process": "N,P",
+            "sf49": "28-NI-63,,SIG",
+            "sf4": "28-NI-63",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " D-T neutron experiment"
+      }
     }
   },
   "data_tables": {
@@ -86,56 +140,6 @@
       "common": null
     },
     "002": {
-      "reaction": {
-        "A": {
-          "x4_code": "(29-CU-63(N,P)28-NI-63,,SIG)",
-          "0": {
-            "code": [
-              "29-CU-63",
-              [
-                "N,P"
-              ],
-              "28-NI-63,,SIG"
-            ],
-            "type": null,
-            "target": "29-CU-63",
-            "process": "N,P",
-            "sf49": "28-NI-63,,SIG",
-            "sf4": "28-NI-63",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " D-D neutron experiment"
-        },
-        "B": {
-          "x4_code": "(29-CU-63(N,P)28-NI-63,,SIG)",
-          "0": {
-            "code": [
-              "29-CU-63",
-              [
-                "N,P"
-              ],
-              "28-NI-63,,SIG"
-            ],
-            "type": null,
-            "target": "29-CU-63",
-            "process": "N,P",
-            "sf49": "28-NI-63,,SIG",
-            "sf4": "28-NI-63",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " D-T neutron experiment"
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -235,8 +239,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-mon": {
-        "0": [
+      "0": {
+        "decay-mon": [
           {
             "x4_code": "(11-NA-24,15.0HR,DG,1368.,1.00)",
             "free_txt": []
@@ -249,10 +253,8 @@
             "x4_code": "(27-CO-60,5.27YR,DG,1173.,0.999)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TELES,PROPC,PROPC)",
             "free_txt": [
@@ -271,30 +273,8 @@
               " MULTI-LOGGER LB 5310)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "B": [
-          {
-            "x4_code": "(VDG,3HUNDEB)",
-            "free_txt": [
-              "   D-T Neutron generator in Debrecen"
-            ]
-          }
-        ]
-      },
-      "inc-source": {
-        "B": [
-          {
-            "x4_code": "(D-T)",
-            "free_txt": [
-              "  For 14.6 MeV neutron production"
-            ]
-          }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -303,18 +283,14 @@
               " between 4.6 and 6.5 MeV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,CHSEP,STTA)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,,3,IRDF-90,,1990)",
             "free_txt": [
@@ -322,10 +298,8 @@
               " as a computer file"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(13-AL-27(N,A)11-NA-24,,SIG)",
             "free_txt": []
@@ -338,18 +312,14 @@
             "x4_code": "(29-CU-63(N,A)27-CO-60,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(DG,B-)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,,S.M.Qaim+,J,NSE,88,143,1984)",
             "free_txt": [
@@ -358,8 +328,54 @@
           }
         ]
       },
-      "sample": {
-        "B": [
+      "A": {
+        "facility": [
+          {
+            "x4_code": "(CYCLO,2GERJUL)",
+            "free_txt": [
+              " Compact CV-28 cyclotron in Juelich"
+            ]
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(D-D)",
+            "free_txt": [
+              "  For Neutron Production in the Range 7.2 - 9.2",
+              "       MeV"
+            ]
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ".High purity copper 99.9999%, 1.8 cm diameter, 2.8 cm",
+              " height, weight between 64 and 74 gram. two aluminium",
+              " foils attached in front and at the back of the copper",
+              " block"
+            ]
+          }
+        ]
+      },
+      "B": {
+        "facility": [
+          {
+            "x4_code": "(VDG,3HUNDEB)",
+            "free_txt": [
+              "   D-T Neutron generator in Debrecen"
+            ]
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(D-T)",
+            "free_txt": [
+              "  For 14.6 MeV neutron production"
+            ]
+          }
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -373,8 +389,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -384,18 +400,14 @@
               " (n,gamma) process, for the neutron background"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(28-NI-63,,B-,67.)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -426,10 +438,8 @@
               " Error in the beta-minus detection"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,S.M.QAIM+,J,PR/C,46,1398,1992)",
             "free_txt": [
@@ -437,10 +447,8 @@
               "      Errors Determination"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

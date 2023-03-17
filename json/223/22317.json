@@ -33,35 +33,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,94GATLIN,,221,9405)",
-          "free_txt": [
-            " MAIN REF."
-          ],
-          "publication_year": "1994"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": []
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,94GATLIN,,221,9405)",
+        "free_txt": [
+          " MAIN REF."
+        ],
+        "publication_year": "1994",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC)",
+        "free_txt": [],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-58(N,EL),,WID)",
-          "0": {
+      "0": {
+        "x4_code": "(28-NI-58(N,EL),,WID)",
+        "children": [
+          {
             "code": [
               "28-NI-58",
               [
@@ -79,11 +74,123 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(28-NI-58(N,G),,WID)",
+        "children": [
+          {
+            "code": [
+              "28-NI-58",
+              [
+                "N,G"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "28-NI-58",
+            "process": "N,G",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(((28-NI-58(N,EL),,WID,,G)*(28-NI-58(N,G),,WID))/(28-NI-58(N,TOT),,WID))",
+        "children": [
+          {
+            "code": [
+              "28-NI-58",
+              [
+                "N,EL"
+              ],
+              ",,WID,,G"
+            ],
+            "type": "*",
+            "target": "28-NI-58",
+            "process": "N,EL",
+            "sf49": ",,WID,,G",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "G",
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "28-NI-58",
+              [
+                "N,G"
+              ],
+              ",,WID"
+            ],
+            "type": "*",
+            "target": "28-NI-58",
+            "process": "N,G",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": "28-NI-58",
+            "type": [
+              "N,TOT"
+            ],
+            "target": "2",
+            "process": "8",
+            "sf49": "-,N,I,-,5,8",
+            "sf4": "-",
+            "sf5": "N",
+            "sf6": "I",
+            "sf7": "-",
+            "sf8": "5",
+            "sf9": "8"
+          },
+          {
+            "code": ",,WID",
+            "type": [
+              "N,TOT"
+            ],
+            "target": ",",
+            "process": ",",
+            "sf49": "W,I,D",
+            "sf4": "W",
+            "sf5": "I",
+            "sf6": "D",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -820,32 +927,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-58(N,G),,WID)",
-          "0": {
-            "code": [
-              "28-NI-58",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "28-NI-58",
-            "process": "N,G",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1582,81 +1663,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(((28-NI-58(N,EL),,WID,,G)*(28-NI-58(N,G),,WID))/(28-NI-58(N,TOT),,WID))",
-          "0": {
-            "code": [
-              "28-NI-58",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
-            "target": "28-NI-58",
-            "process": "N,EL",
-            "sf49": ",,WID,,G",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "G",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "28-NI-58",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
-            "target": "28-NI-58",
-            "process": "N,G",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "2": {
-            "code": "28-NI-58",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "2",
-            "process": "8",
-            "sf49": "-",
-            "sf4": "-",
-            "sf5": null,
-            "sf6": null,
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "3": {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W",
-            "sf4": "W",
-            "sf5": null,
-            "sf6": null,
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2395,18 +2401,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".R-MATRIX ANALYSIS."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -2422,36 +2426,28 @@
               " UPSTREAM IN THE BEAM."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " NO DETAILS GIVEN."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2461,26 +2457,20 @@
               " MEV AVERAGE ENERGY."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2488,10 +2478,8 @@
               " DIAMETER, ENRICHED TO 99.927 PERCENT IN NI-58."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2502,8 +2490,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2511,10 +2499,8 @@
               " OMITTED AS IT IS PROBABLY A MISPRINT."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2525,8 +2511,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2534,10 +2520,8 @@
               " OMITTED AS IT IS PROBABLY A MISPRINT."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2548,8 +2532,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2557,18 +2541,14 @@
               " OMITTED AS IT IS PROBABLY A MISPRINT."
             ]
           }
-        ]
-      },
-      "result": {
-        "0": [
+        ],
+        "result": [
           {
             "x4_code": "(CAPTA)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

@@ -44,49 +44,46 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(B,NEJTRONFIZ,,235,1961)",
-          "free_txt": [],
-          "publication_year": "1961"
-        },
-        {
-          "x4_code": "(B,SPN,,172,1963)",
-          "free_txt": [
-            " Engl.translation of NEUTRONFIZ,p.235"
-          ],
-          "publication_year": "1963"
-        },
-        {
-          "x4_code": "(R,AEC-TR-4665,1960)",
-          "free_txt": [
-            " Engl.translation."
-          ],
-          "publication_year": "1960"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,4RUSKUR)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(4RUSKUR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(B,NEJTRONFIZ,,235,1961)",
+        "free_txt": [],
+        "publication_year": "1961",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(B,SPN,,172,1963)",
+        "free_txt": [
+          " Engl.translation of NEUTRONFIZ,p.235"
+        ],
+        "publication_year": "1963",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,AEC-TR-4665,1960)",
+        "free_txt": [
+          " Engl.translation."
+        ],
+        "publication_year": "1960",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,4RUSKUR)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4RUSKUR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((90-TH-232(N,F)ELEM/MASS,CUM,FY)/(90-TH-232(N,F)42-MO-99,CUM,FY))",
-          "0": {
+      "0": {
+        "x4_code": "((90-TH-232(N,F)ELEM/MASS,CUM,FY)/(90-TH-232(N,F)42-MO-99,CUM,FY))",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -105,7 +102,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "90-TH-232",
               [
@@ -123,11 +120,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(N,F)ELEM/MASS,CUM,FY)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,CUM,FY"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,CUM,FY",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -241,32 +273,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,F)ELEM/MASS,CUM,FY)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,CUM,FY",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -382,16 +388,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": []
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -403,10 +407,8 @@
               "For neutron flux fluctuations."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
@@ -415,10 +417,8 @@
               "Detection efficiency was determined by 4PI-counters."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -434,28 +434,22 @@
               "5 - 15 %."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,4RUSKUR)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
               " Deuterons energy ~150 keV."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -463,10 +457,8 @@
               " (0.7-2.)*10**8 n/(cm2*sec), irradiation time 5-22 hr."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP)",
             "free_txt": [
@@ -477,10 +469,8 @@
               "1) Ba, Sr, Ag,Cd, 2)Mo,Te,Ru, 3) Ce,Zr, 4) Br, Ga."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -491,8 +481,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -503,8 +493,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -516,10 +506,8 @@
               "interpolation."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

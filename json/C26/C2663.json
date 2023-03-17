@@ -45,40 +45,36 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/BS,143,508,2005)",
-          "free_txt": [
-            "#doi:10.1016/j.nuclphysbps.2005.01.173"
-          ],
-          "publication_year": "2005"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,1USABRK)",
-          "free_txt": [
-            " Experiment performed at the Lawrence",
-            "Berkeley National Laboratory's Bevatron accelerator"
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(1USABRK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/BS,143,508,2005)",
+        "free_txt": [
+          "#doi:10.1016/j.nuclphysbps.2005.01.173"
+        ],
+        "publication_year": "2005",
+        "pointer": "0",
+        "doi": "10.1016/j.nuclphysbps.2005.01.173"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,1USABRK)",
+        "free_txt": [
+          " Experiment performed at the Lawrence",
+          "Berkeley National Laboratory's Bevatron accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(1USABRK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(42-MO-0(P,X)27-CO-60,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(42-MO-0(P,X)27-CO-60,,SIG)",
+        "children": [
+          {
             "code": [
               "42-MO-0",
               [
@@ -96,11 +92,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(52-TE-0(P,X)27-CO-60,,SIG)",
+        "children": [
+          {
+            "code": [
+              "52-TE-0",
+              [
+                "P,X"
+              ],
+              "27-CO-60,,SIG"
+            ],
+            "type": null,
+            "target": "52-TE-0",
+            "process": "P,X",
+            "sf49": "27-CO-60,,SIG",
+            "sf4": "27-CO-60",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(32-GE-0(P,X)27-CO-60,,SIG)",
+        "children": [
+          {
+            "code": [
+              "32-GE-0",
+              [
+                "P,X"
+              ],
+              "27-CO-60,,SIG"
+            ],
+            "type": null,
+            "target": "32-GE-0",
+            "process": "P,X",
+            "sf49": "27-CO-60,,SIG",
+            "sf4": "27-CO-60",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -130,32 +189,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(52-TE-0(P,X)27-CO-60,,SIG)",
-          "0": {
-            "code": [
-              "52-TE-0",
-              [
-                "P,X"
-              ],
-              "27-CO-60,,SIG"
-            ],
-            "type": null,
-            "target": "52-TE-0",
-            "process": "P,X",
-            "sf49": "27-CO-60,,SIG",
-            "sf4": "27-CO-60",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -191,32 +224,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(32-GE-0(P,X)27-CO-60,,SIG)",
-          "0": {
-            "code": [
-              "32-GE-0",
-              [
-                "P,X"
-              ],
-              "27-CO-60,,SIG"
-            ],
-            "type": null,
-            "target": "32-GE-0",
-            "process": "P,X",
-            "sf49": "27-CO-60,,SIG",
-            "sf4": "27-CO-60",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -245,18 +252,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on sources of uncertainties."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,1USABRK)",
             "free_txt": [
@@ -264,18 +269,14 @@
               "Berkeley National Laboratory's Bevatron accelerator"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,STTA,GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(6-C-0(P,X)4-BE-7,,SIG)",
             "free_txt": []
@@ -284,10 +285,8 @@
             "x4_code": "(13-AL-27(P,X)11-NA-22,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -296,10 +295,8 @@
               "was bombarded separately in air."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

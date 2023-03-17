@@ -70,63 +70,62 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "((S,ISINN-7,287,1999)=(S,JINR-E3-99-212,287,1999))",
-          "free_txt": [
-            "  Main Reference"
-          ],
-          "publication_year": "1999"
-        },
-        {
-          "x4_code": "((S,ISINN-7,292,1999)=(S,JINR-E3-99-212,292,1999))",
-          "free_txt": [
-            "  Data For U-234 ."
-          ],
-          "publication_year": "1999"
-        },
-        {
-          "x4_code": "(J,AE,110,(2),100,2011)",
-          "free_txt": [
-            " Data for U-236 confirmed."
-          ],
-          "publication_year": "2011"
-        },
-        {
-          "x4_code": "(J,AE/T,110,(2),115,2011)",
-          "free_txt": [
-            " Engl.translation of J,AE .",
-            "#doi:10.1007/s10512-011-9399-z"
-          ],
-          "publication_year": "2011"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,4RUSKUR)",
-          "free_txt": [
-            " Pulsed Linear Electron Accelerator",
-            " 'FAKEL', electron pulse duration 60 ns, repetition",
-            " frequency 400 Hz"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(4RUSKUR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((S,ISINN-7,287,1999)=(S,JINR-E3-99-212,287,1999))",
+        "free_txt": [
+          "  Main Reference"
+        ],
+        "publication_year": "1999",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((S,ISINN-7,292,1999)=(S,JINR-E3-99-212,292,1999))",
+        "free_txt": [
+          "  Data For U-234 ."
+        ],
+        "publication_year": "1999",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,AE,110,(2),100,2011)",
+        "free_txt": [
+          " Data for U-236 confirmed."
+        ],
+        "publication_year": "2011",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,AE/T,110,(2),115,2011)",
+        "free_txt": [
+          " Engl.translation of J,AE .",
+          "#doi:10.1007/s10512-011-9399-z"
+        ],
+        "publication_year": "2011",
+        "pointer": "0",
+        "doi": "10.1007/s10512-011-9399-z"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,4RUSKUR)",
+        "free_txt": [
+          " Pulsed Linear Electron Accelerator",
+          " 'FAKEL', electron pulse duration 60 ns, repetition",
+          " frequency 400 Hz"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4RUSKUR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-236(N,G)92-U-237,,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-236(N,G)92-U-237,,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "92-U-236",
               [
@@ -144,11 +143,102 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Averaged over energy      interval given in data section"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Averaged over energy      interval given in data section"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-236(N,G)92-U-237,,SIG,,EPI)",
+        "children": [
+          {
+            "code": [
+              "92-U-236",
+              [
+                "N,G"
+              ],
+              "92-U-237,,SIG,,EPI"
+            ],
+            "type": null,
+            "target": "92-U-236",
+            "process": "N,G",
+            "sf49": "92-U-237,,SIG,,EPI",
+            "sf4": "92-U-237",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "EPI",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Weighted over 1/En spectrum capture cross-section within energy interval given in data section"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-236(N,F),,SIG,,EPI)",
+        "children": [
+          {
+            "code": [
+              "92-U-236",
+              [
+                "N,F"
+              ],
+              ",,SIG,,EPI"
+            ],
+            "type": null,
+            "target": "92-U-236",
+            "process": "N,F",
+            "sf49": ",,SIG,,EPI",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "EPI",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Weighted fission cs over energy interval given in data section"
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(92-U-234(N,G)92-U-235,,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-234",
+              [
+                "N,G"
+              ],
+              "92-U-235,,SIG,,AV"
+            ],
+            "type": null,
+            "target": "92-U-234",
+            "process": "N,G",
+            "sf49": "92-U-235,,SIG,,AV",
+            "sf4": "92-U-235",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Weighted over 1/Enspectrun capture cross-section within energy interval given in data section"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -202,32 +292,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-236(N,G)92-U-237,,SIG,,EPI)",
-          "0": {
-            "code": [
-              "92-U-236",
-              [
-                "N,G"
-              ],
-              "92-U-237,,SIG,,EPI"
-            ],
-            "type": null,
-            "target": "92-U-236",
-            "process": "N,G",
-            "sf49": "92-U-237,,SIG,,EPI",
-            "sf4": "92-U-237",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "EPI",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Weighted over 1/En spectrum capture cross-section within energy interval given in data section"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -275,32 +339,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-236(N,F),,SIG,,EPI)",
-          "0": {
-            "code": [
-              "92-U-236",
-              [
-                "N,F"
-              ],
-              ",,SIG,,EPI"
-            ],
-            "type": null,
-            "target": "92-U-236",
-            "process": "N,F",
-            "sf49": ",,SIG,,EPI",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "EPI",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Weighted fission cs over energy interval given in data section"
-        }
-      },
       "common": {
         "heads": [
           "DATA-ERR",
@@ -378,32 +416,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-234(N,G)92-U-235,,SIG,,AV)",
-          "0": {
-            "code": [
-              "92-U-234",
-              [
-                "N,G"
-              ],
-              "92-U-235,,SIG,,AV"
-            ],
-            "type": null,
-            "target": "92-U-234",
-            "process": "N,G",
-            "sf49": "92-U-235,,SIG,,AV",
-            "sf4": "92-U-235",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Weighted over 1/Enspectrun capture cross-section within energy interval given in data section"
-        }
-      },
       "common": {
         "heads": [
           "ERR-SYS"
@@ -465,8 +477,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -480,10 +492,8 @@
               "-Time-of-flight spectra were corrected for miscounts."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -492,20 +502,16 @@
               "       mm size of each section."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               " Errors are not given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,4RUSKUR)",
             "free_txt": [
@@ -514,10 +520,8 @@
               " frequency 400 Hz"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
@@ -525,20 +529,16 @@
               "         diameter was used as neutron source"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "  Time-of-flight, flight distance 5.2 m"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(5-B-10(N,A)3-LI-7,,SIG)",
             "free_txt": [
@@ -555,10 +555,8 @@
             "x4_code": "(92-U-235(N,F),PR,NU)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,G.V.Muradyan+,J,NSE,90,60,1990)",
             "free_txt": [
@@ -570,8 +568,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -585,10 +583,8 @@
               " Systematic error < 4.% ."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,Yu.A.Adamchuk+,J,AE,65,356,1988)",
             "free_txt": []
@@ -597,10 +593,8 @@
             "x4_code": "(D,,A.A.Bergman+,J,YK,1988,(1),396,1988)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -608,10 +602,8 @@
               " on 236-U to 99.845%. Thickness 9.443E-4 atoms/barn"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -629,8 +621,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -644,10 +636,8 @@
               " Systematic error < 4.% ."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -655,10 +645,8 @@
               " on 236-U to 99.845%. Thickness 9.443E-4 atoms/barn"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -676,8 +664,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -685,10 +673,8 @@
               "  normalization error."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)92-U-236(N,F),,WID)",
             "free_txt": [
@@ -696,10 +682,8 @@
               " fission width 0.29 milli-eV."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -707,10 +691,8 @@
               " on 236-U to 99.845%. Thickness 9.443E-4 atoms/barn"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -722,8 +704,8 @@
       }
     },
     "005": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -737,10 +719,8 @@
               " Systematic error about 4.% ."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -749,10 +729,8 @@
               " Thickness 88. microgram/cm**2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -61,53 +61,78 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,134,541,196909)",
-          "free_txt": [
-            "Description, graphs and data"
-          ],
-          "publication_year": "1969"
-        },
-        {
-          "x4_code": "(J,NP/A,102,443,196710)",
-          "free_txt": [
-            "Prelim result, graph"
-          ],
-          "publication_year": "1967"
-        },
-        {
-          "x4_code": "(R,IFA-CRD-34,196705)",
-          "free_txt": [
-            "  Prelim result, graph"
-          ],
-          "publication_year": "1967"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,3RUMBUC)",
-          "free_txt": [
-            " Cyclotron"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(3RUMBUC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,134,541,196909)",
+        "free_txt": [
+          "Description, graphs and data"
+        ],
+        "publication_year": "1969",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,102,443,196710)",
+        "free_txt": [
+          "Prelim result, graph"
+        ],
+        "publication_year": "1967",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,IFA-CRD-34,196705)",
+        "free_txt": [
+          "  Prelim result, graph"
+        ],
+        "publication_year": "1967",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,3RUMBUC)",
+        "free_txt": [
+          " Cyclotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(3RUMBUC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-243(N,G)95-AM-244-L,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(95-AM-243(N,G)95-AM-244-L,,SIG)",
+        "children": [
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,G"
+              ],
+              "95-AM-244-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,G",
+            "sf49": "95-AM-244-L,,SIG",
+            "sf4": "95-AM-244-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((95-AM-243(N,G)95-AM-244-L,,SIG)/(95-AM-243(N,F),,SIG))",
+        "children": [
+          {
             "code": [
               "95-AM-243",
               [
@@ -126,10 +151,36 @@
             "sf8": null,
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RSL-HW"
@@ -204,51 +255,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((95-AM-243(N,G)95-AM-244-L,,SIG)/(95-AM-243(N,F),,SIG))",
-          "0": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,G"
-              ],
-              "95-AM-244-L,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,G",
-            "sf49": "95-AM-244-L,,SIG",
-            "sf4": "95-AM-244-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -330,8 +336,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -339,30 +345,24 @@
               "on disc rotating at 7000 rpm in front of sample"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,3RUMBUC)",
             "free_txt": [
               " Cyclotron"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -371,20 +371,16 @@
               "insertion of Ta absorbers in beam"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(FISCT)",
             "free_txt": [
               " Fission fragment counting"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(FF)",
             "free_txt": [
@@ -395,8 +391,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -407,10 +403,8 @@
               " unknown level energies."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(95-AM-244-L,0.6MSEC,SF)",
             "free_txt": [
@@ -418,10 +412,8 @@
               " measured by authors as 0.60 +- 0.15 milli-sec."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -432,8 +424,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -444,10 +436,8 @@
               " unknown level energies."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(95-AM-244-L,0.6MSEC,SF)",
             "free_txt": [
@@ -455,10 +445,8 @@
               " measured by authors as 0.60 +- 0.15 milli-sec."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -106,39 +106,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,80,042801,2009)",
-          "free_txt": [],
-          "publication_year": "2009"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(OLMS,2ZZZCER)",
-          "free_txt": [
-            " Experiment was performed at the CERN",
-            "Radioactive Beam Experiment On-Line Isotope Mass",
-            "Separator (REX-ISOLDE) facility"
-          ],
-          "facility_type": "(OLMS)",
-          "institute": "(2ZZZCER)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,80,042801,2009)",
+        "free_txt": [],
+        "publication_year": "2009",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(OLMS,2ZZZCER)",
+        "free_txt": [
+          " Experiment was performed at the CERN",
+          "Radioactive Beam Experiment On-Line Isotope Mass",
+          "Separator (REX-ISOLDE) facility"
+        ],
+        "pointer": "0",
+        "facility_type": "(OLMS)",
+        "institute": "(2ZZZCER)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(9-F-17,EL)1-H-1,,DA,P)=(9-F-17(P,EL)9-F-17,,DA,RSD))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-1(9-F-17,EL)1-H-1,,DA,P)=(9-F-17(P,EL)9-F-17,,DA,RSD))",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -157,7 +152,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "9-F-17",
               [
@@ -175,11 +170,46 @@
             "sf7": "RSD",
             "sf8": null,
             "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(8-O-14(A,P)9-F-17,,SGV,,MXW/MSC)",
+        "children": [
+          {
+            "code": [
+              "8-O-14",
+              [
+                "A,P"
+              ],
+              "9-F-17,,SGV,,MXW/MSC"
+            ],
+            "type": null,
+            "target": "8-O-14",
+            "process": "A,P",
+            "sf49": "9-F-17,,SGV,,MXW/MSC",
+            "sf4": "9-F-17",
+            "sf5": null,
+            "sf6": "SGV",
+            "sf7": null,
+            "sf8": "MXW/MSC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  6.15 MeV 18Ne compound resonance contribution  to the total reaction rate"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-CM-MIN",
@@ -526,32 +556,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-14(A,P)9-F-17,,SGV,,MXW/MSC)",
-          "0": {
-            "code": [
-              "8-O-14",
-              [
-                "A,P"
-              ],
-              "9-F-17,,SGV,,MXW/MSC"
-            ],
-            "type": null,
-            "target": "8-O-14",
-            "process": "A,P",
-            "sf49": "9-F-17,,SGV,,MXW/MSC",
-            "sf4": "9-F-17",
-            "sf5": null,
-            "sf6": "SGV",
-            "sf7": null,
-            "sf8": "MXW/MSC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  6.15 MeV 18Ne compound resonance contribution  to the total reaction rate"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -629,8 +633,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SISD,SISD)",
             "free_txt": [
@@ -642,10 +646,8 @@
               "thick E detectors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(OLMS,2ZZZCER)",
             "free_txt": [
@@ -654,10 +656,8 @@
               "Separator (REX-ISOLDE) facility"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(KINDT)",
             "free_txt": [
@@ -665,18 +665,14 @@
               "to avoid intense isobaric contamination from 17-O ions"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE,TTM)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -687,18 +683,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -710,8 +704,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -719,10 +713,8 @@
               "measured in this work"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

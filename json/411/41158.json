@@ -1,7 +1,7 @@
 {
   "entry": "41158",
-  "last_updated": "2012-10-29",
-  "number_of_revisions": "5",
+  "last_updated": "2023-01-18b",
+  "number_of_revisions": "8",
   "histories": [
     {
       "x4_code": "(19940928C)",
@@ -22,6 +22,13 @@
       "free_txt": [
         " DOI code was corrected in Subent 001",
         " according to WP2012-26 ."
+      ]
+    },
+    {
+      "x4_code": "(20220928A)",
+      "free_txt": [
+        " Refs. C,88MITO,,737,1988 and",
+        " R,INDC(NDS)-220,175,1989 were added."
       ]
     }
   ],
@@ -55,28 +62,43 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NIM/A,293,555,1990)",
-          "free_txt": [
-            "   Data table is given",
-            "#doi:10.1016/0168-9002(90)90323-X"
-          ],
-          "publication_year": "1990"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NIM/A,293,555,1990)",
+        "free_txt": [
+          "   Data table is given",
+          "#doi:10.1016/0168-9002(90)90323-X"
+        ],
+        "publication_year": "1990",
+        "pointer": "0",
+        "doi": "10.1016/0168-9002(90)90323-X"
+      },
+      {
+        "x4_code": "(C,88MITO,,737,1988)",
+        "free_txt": [
+          " First author A.Lajtai.",
+          " Preliminary publication."
+        ],
+        "publication_year": "1988",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(NDS)-220,175,1989)",
+        "free_txt": [
+          " The same data Table as in 88MITO.",
+          " Preliminary publication."
+        ],
+        "publication_year": "1989",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F),PR,NU/DE,,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F),PR,NU/DE,,REL)",
+        "children": [
+          {
             "code": [
               "98-CF-252",
               [
@@ -94,11 +116,46 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " See ANALYSIS."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Spectrum in arbitrary units. Units are not given in Tables of articles."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F),PR,NU/DE,,MXD)",
+        "children": [
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              ",PR,NU/DE,,MXD"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": ",PR,NU/DE,,MXD",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU/DE",
+            "sf7": null,
+            "sf8": "MXD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -724,32 +781,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F),PR,NU/DE,,MXD)",
-          "0": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              ",PR,NU/DE,,MXD"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": ",PR,NU/DE,,MXD",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU/DE",
-            "sf7": null,
-            "sf8": "MXD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "      Ratio of the measured spectrum to the Maxwellian        one with temperature 1.42 MeV"
-        }
-      },
       "common": {
         "heads": [
           "KT-NRM"
@@ -923,8 +954,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -938,10 +969,8 @@
               "For time resolution of TOF spectrometer."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
@@ -959,10 +988,8 @@
               " Filled with 90% Ar + 10% CO2 at 3 Torr."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -973,10 +1000,8 @@
               " four runs."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
             "free_txt": [
@@ -984,18 +1009,14 @@
               " efficiency. See MISC-COL in Subent 002."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(FF,N)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1006,8 +1027,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1018,10 +1039,8 @@
               " ( t -> E ) in energy spectrum."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(MISC2-ERR)",
             "free_txt": [
@@ -1041,7 +1060,7 @@
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
-              " Total error  includes:"
+              " Total error includes:"
             ]
           },
           {
@@ -1063,10 +1082,8 @@
               "        neutron solid angle"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -1088,22 +1105,23 @@
               "detector mounted on 56AVP multiplier."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 of J,NIM/A,293,555,1990 ."
+              " Table 2 of J,NIM/A,293,555,1990 .",
+              " Tables of C,88MITO,,737,1988 and",
+              " R,INDC(NDS)-220,175,1989 - preliminary publications.",
+              ".This Subent superseds Subent 40875.002"
             ]
           }
         ]
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1113,7 +1131,10 @@
           {
             "x4_code": "(DEP,41158002)",
             "free_txt": [
-              " In Subent 002 - measured spectrum."
+              " In Subent 002 - measured spectrum.",
+              " Tables of C,88MITO,,737,1988 and",
+              " R,INDC(NDS)-220,175,1989 - preliminary publications.",
+              ".This Subent superseded Subent 40875.003"
             ]
           }
         ]

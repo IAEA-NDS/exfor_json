@@ -43,43 +43,39 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,719,127C,2003)",
-          "free_txt": [
-            " Main reference, graphs are given",
-            "#doi:10.1016/S0375-9474(03)00981-3"
-          ],
-          "publication_year": "2003"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,2ZZZGEL)",
-          "free_txt": [
-            "  The high resolution time-of-flight",
-            "  neutron spectrometer GELINA of the IRMM, Geel, being",
-            "  operated in the high resolution regime (burst width",
-            "  1 ns, repetition frequency 800 Hz)"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,719,127C,2003)",
+        "free_txt": [
+          " Main reference, graphs are given",
+          "#doi:10.1016/S0375-9474(03)00981-3"
+        ],
+        "publication_year": "2003",
+        "pointer": "0",
+        "doi": "10.1016/S0375-9474(03)00981-3"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,2ZZZGEL)",
+        "free_txt": [
+          "  The high resolution time-of-flight",
+          "  neutron spectrometer GELINA of the IRMM, Geel, being",
+          "  operated in the high resolution regime (burst width",
+          "  1 ns, repetition frequency 800 Hz)"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((17-CL-36(N,P)16-S-36,,SIG)+(17-CL-36(N,A)15-P-33,,SIG))",
-          "0": {
+      "0": {
+        "x4_code": "((17-CL-36(N,P)16-S-36,,SIG)+(17-CL-36(N,A)15-P-33,,SIG))",
+        "children": [
+          {
             "code": [
               "17-CL-36",
               [
@@ -98,7 +94,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "17-CL-36",
               [
@@ -116,11 +112,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "+",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "+",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(17-CL-36(N,P)16-S-36,,SIG)",
+        "children": [
+          {
+            "code": [
+              "17-CL-36",
+              [
+                "N,P"
+              ],
+              "16-S-36,,SIG"
+            ],
+            "type": null,
+            "target": "17-CL-36",
+            "process": "N,P",
+            "sf49": "16-S-36,,SIG",
+            "sf4": "16-S-36",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Resonance doublet at                            about 8 keV"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-MIN",
@@ -142,32 +173,6 @@
       "data": null
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(17-CL-36(N,P)16-S-36,,SIG)",
-          "0": {
-            "code": [
-              "17-CL-36",
-              [
-                "N,P"
-              ],
-              "16-S-36,,SIG"
-            ],
-            "type": null,
-            "target": "17-CL-36",
-            "process": "N,P",
-            "sf49": "16-S-36,,SIG",
-            "sf4": "16-S-36",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Resonance doublet at                            about 8 keV"
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -372,8 +377,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -381,20 +386,16 @@
               " and the 2.19 MeV alphas (from the 36Cl(n,a)-reaction)"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               ".For background"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
@@ -402,10 +403,8 @@
               "        very pure methane flow."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2ZZZGEL)",
             "free_txt": [
@@ -415,10 +414,8 @@
               "  1 ns, repetition frequency 800 Hz)"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -433,10 +430,8 @@
               "  (black resonance filters) in the beam."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(5-B-10(N,A)3-LI-7,,SIG)",
             "free_txt": [
@@ -444,10 +439,8 @@
               " mined by detecting the 10B(n,a)7Li reaction products"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -459,16 +452,14 @@
       }
     },
     "002": {
-      "rel-ref": {
-        "0": [
+      "0": {
+        "rel-ref": [
           {
             "x4_code": "(D,,P.E.Koehler+,J,PR/C,47,2107,1993)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(UNOBT)",
             "free_txt": [
@@ -480,8 +471,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
@@ -494,18 +485,14 @@
               "    Data digitizing error"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(D,,P.E.Koehler+,J,PR/C,47,2107,1993)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

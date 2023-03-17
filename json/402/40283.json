@@ -47,44 +47,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,SNP,14,629,1972)",
-          "free_txt": [
-            " Eng.transl.of YF,14,(6),1129,1971"
-          ],
-          "publication_year": "1972"
-        },
-        {
-          "x4_code": "(J,YF,14,(6),1129,1971)",
-          "free_txt": [],
-          "publication_year": "1971"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,4RUSFEI)",
-          "free_txt": [
-            " Van-de-Graaff"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(4RUSFEI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,SNP,14,629,1972)",
+        "free_txt": [
+          " Eng.transl.of YF,14,(6),1129,1971"
+        ],
+        "publication_year": "1972",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,YF,14,(6),1129,1971)",
+        "free_txt": [],
+        "publication_year": "1971",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,4RUSFEI)",
+        "free_txt": [
+          " Van-de-Graaff"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(4RUSFEI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,AKE,LF+HF,MSC)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,AKE,LF+HF,MSC)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -102,11 +98,46 @@
             "sf7": "LF+HF",
             "sf8": "MSC",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)MASS,PRE,KE,LF+HF,MSC)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "MASS,PRE,KE,LF+HF,MSC"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "MASS,PRE,KE,LF+HF,MSC",
+            "sf4": "MASS",
+            "sf5": "PRE",
+            "sf6": "KE",
+            "sf7": "LF+HF",
+            "sf8": "MSC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " average kinetic energy of fission fragments pares with given masses - MASS -heavy, MASS2 - light; MASS2 = 236-MASS ."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -190,32 +221,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)MASS,PRE,KE,LF+HF,MSC)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "MASS,PRE,KE,LF+HF,MSC"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "MASS,PRE,KE,LF+HF,MSC",
-            "sf4": "MASS",
-            "sf5": "PRE",
-            "sf6": "KE",
-            "sf7": "LF+HF",
-            "sf8": "MSC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " average kinetic energy of fission fragments pares with given masses - MASS -heavy, MASS2 - light; MASS2 = 236-MASS ."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -610,18 +615,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SI)",
             "free_txt": [
               " Silicon detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -631,30 +634,24 @@
               "by measurements on thermal neutrons"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,4RUSFEI)",
             "free_txt": [
               " Van-de-Graaff"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
               " Coincidence between the fission fragments"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F)MASS,PRE,FY)",
             "free_txt": []
@@ -667,18 +664,14 @@
               " graduation of energy scale of the analyzer."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,40235001,P.P.D'yachenko+,J,YF,8,286,1968)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -689,8 +682,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -704,10 +697,8 @@
               "                 thermal neutrons"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -724,8 +715,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -738,10 +729,8 @@
               "              neutrons."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

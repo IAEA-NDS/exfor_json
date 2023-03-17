@@ -35,40 +35,36 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,156,74,1970)",
-          "free_txt": [
-            "#doi:10.1016/0375-9474(70)91115-2"
-          ],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,1USASUI)",
-          "free_txt": [
-            " Iowa State University 70-MeV",
-            "synchrotron."
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(1USASUI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,156,74,1970)",
+        "free_txt": [
+          "#doi:10.1016/0375-9474(70)91115-2"
+        ],
+        "publication_year": "1970",
+        "pointer": "0",
+        "doi": "10.1016/0375-9474(70)91115-2"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,1USASUI)",
+        "free_txt": [
+          " Iowa State University 70-MeV",
+          "synchrotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(1USASUI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((16-S-32(G,N)16-S-31,,SIG,,BRS)+(16-S-32(G,2N)16-S-30,,SIG,,BRS/FCT))",
-          "0": {
+      "0": {
+        "x4_code": "((16-S-32(G,N)16-S-31,,SIG,,BRS)+(16-S-32(G,2N)16-S-30,,SIG,,BRS/FCT))",
+        "children": [
+          {
             "code": [
               "16-S-32",
               [
@@ -87,7 +83,7 @@
             "sf8": "BRS",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "16-S-32",
               [
@@ -105,11 +101,121 @@
             "sf7": null,
             "sf8": "BRS/FCT",
             "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": " Factor of 0.8was introduced during the data analysis."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(16-S-32(G,X)15-P-30,CUM,SIG,,BRS)",
+        "children": [
+          {
+            "code": [
+              "16-S-32",
+              [
+                "G,X"
+              ],
+              "15-P-30,CUM,SIG,,BRS"
+            ],
+            "type": null,
+            "target": "16-S-32",
+            "process": "G,X",
+            "sf49": "15-P-30,CUM,SIG,,BRS",
+            "sf4": "15-P-30",
+            "sf5": "CUM",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((16-S-32(G,N)16-S-31,,INT)+(16-S-32(G,2N)16-S-30,,INT,,FCT))",
+        "children": [
+          {
+            "code": [
+              "16-S-32",
+              [
+                "G,N"
+              ],
+              "16-S-31,,INT"
+            ],
+            "type": null,
+            "target": "16-S-32",
+            "process": "G,N",
+            "sf49": "16-S-31,,INT",
+            "sf4": "16-S-31",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "+",
-          "free_text": " Factor of 0.8was introduced during the data analysis."
-        }
-      },
+          {
+            "code": [
+              "16-S-32",
+              [
+                "G,2N"
+              ],
+              "16-S-30,,INT,,FCT"
+            ],
+            "type": null,
+            "target": "16-S-32",
+            "process": "G,2N",
+            "sf49": "16-S-30,,INT,,FCT",
+            "sf4": "16-S-30",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": "FCT",
+            "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": " Factor of 0.8 wasintroduced during the data analysis."
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(16-S-32(G,X)15-P-30,CUM,INT)",
+        "children": [
+          {
+            "code": [
+              "16-S-32",
+              [
+                "G,X"
+              ],
+              "15-P-30,CUM,INT"
+            ],
+            "type": null,
+            "target": "16-S-32",
+            "process": "G,X",
+            "sf49": "15-P-30,CUM,INT",
+            "sf4": "15-P-30",
+            "sf5": "CUM",
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -513,32 +619,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-32(G,X)15-P-30,CUM,SIG,,BRS)",
-          "0": {
-            "code": [
-              "16-S-32",
-              [
-                "G,X"
-              ],
-              "15-P-30,CUM,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "16-S-32",
-            "process": "G,X",
-            "sf49": "15-P-30,CUM,SIG,,BRS",
-            "sf4": "15-P-30",
-            "sf5": "CUM",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -890,51 +970,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((16-S-32(G,N)16-S-31,,INT)+(16-S-32(G,2N)16-S-30,,INT,,FCT))",
-          "0": {
-            "code": [
-              "16-S-32",
-              [
-                "G,N"
-              ],
-              "16-S-31,,INT"
-            ],
-            "type": null,
-            "target": "16-S-32",
-            "process": "G,N",
-            "sf49": "16-S-31,,INT",
-            "sf4": "16-S-31",
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "16-S-32",
-              [
-                "G,2N"
-              ],
-              "16-S-30,,INT,,FCT"
-            ],
-            "type": null,
-            "target": "16-S-32",
-            "process": "G,2N",
-            "sf49": "16-S-30,,INT,,FCT",
-            "sf4": "16-S-30",
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": "FCT",
-            "sf9": null
-          },
-          "type": "+",
-          "free_text": " Factor of 0.8 wasintroduced during the data analysis."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -966,32 +1001,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-32(G,X)15-P-30,CUM,INT)",
-          "0": {
-            "code": [
-              "16-S-32",
-              [
-                "G,X"
-              ],
-              "15-P-30,CUM,INT"
-            ],
-            "type": null,
-            "target": "16-S-32",
-            "process": "G,X",
-            "sf49": "15-P-30,CUM,INT",
-            "sf4": "15-P-30",
-            "sf5": "CUM",
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1025,16 +1034,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,1USASUI)",
             "free_txt": [
@@ -1042,20 +1049,16 @@
               "synchrotron."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": [
               " The collimated bremsstrahlung beam."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -1070,10 +1073,8 @@
               "devices."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1086,18 +1087,16 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(LEAST)",
             "free_txt": [
               " Least Structure analysis."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1108,18 +1107,14 @@
               "and 36."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(16-S-31,2.57SEC,B+)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1127,18 +1122,14 @@
               "standard deviations for the cross section points."
             ]
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(16-S-31,AR)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1149,26 +1140,22 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(LEAST)",
             "free_txt": [
               " Least Structure analysis."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(15-P-30,2.55MIN,B+)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1176,18 +1163,14 @@
               "standard deviations for the cross section points."
             ]
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(15-P-30,AR)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1198,8 +1181,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1208,20 +1191,16 @@
               "values given in REL-REF."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No details on sources of uncertainties."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,M.N.Thompson+,J,PL,14,223,1965)",
             "free_txt": []
@@ -1250,10 +1229,8 @@
             "x4_code": "(R,,U.Farinelli+,J,NC,12,89,1959)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1268,8 +1245,8 @@
       }
     },
     "005": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1278,28 +1255,22 @@
               "absolute oxygen cross section in REL-REF."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No details on sources of uncertainties."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,L0110001,B.C.Cook+,J,PR,143,712,1966)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

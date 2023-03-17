@@ -38,47 +38,44 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,24,2600,1981)",
-          "free_txt": [
-            "#NSR: 1981GL04"
-          ],
-          "publication_year": "1981",
-          "doi": "10.1103/PhysRevC.24.2600"
-        },
-        {
-          "x4_code": "(J,ANS,39,877,1981)",
-          "free_txt": [
-            " Same data as in the main ref."
-          ],
-          "publication_year": "1981"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(NGEN,1USAANL)",
-          "free_txt": [
-            " ANL fast neutron generator."
-          ],
-          "facility_type": "(NGEN)",
-          "institute": "(1USAANL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,24,2600,1981)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.24.2600",
+          "#NSR: 1981GL04"
+        ],
+        "publication_year": "1981",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.24.2600"
+      },
+      {
+        "x4_code": "(J,ANS,39,877,1981)",
+        "free_txt": [
+          " Same data as in the main ref."
+        ],
+        "publication_year": "1981",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(NGEN,1USAANL)",
+        "free_txt": [
+          " ANL fast neutron generator."
+        ],
+        "pointer": "0",
+        "facility_type": "(NGEN)",
+        "institute": "(1USAANL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -96,11 +93,126 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)ELEM/MASS,IND,FY)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,IND,FY"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,IND,FY",
+            "sf4": "ELEM/MASS",
+            "sf5": "IND",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "1": {
+        "x4_code": "(92-U-235(N,F),,AP,LF)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,AP,LF"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,AP,LF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "AP",
+            "sf7": "LF",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Average mass of light fragment"
       },
+      "2": {
+        "x4_code": "(92-U-235(N,F),,AP,HF)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,AP,HF"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,AP,HF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "AP",
+            "sf7": "HF",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Average mass of heavy fragment"
+      },
+      "3": {
+        "x4_code": "(92-U-235(N,F),,NU)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,NU"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,NU",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Calculated from conservation of                                               mass"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -2268,32 +2380,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)ELEM/MASS,IND,FY)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,IND,FY"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,IND,FY",
-            "sf4": "ELEM/MASS",
-            "sf5": "IND",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2400,80 +2486,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "1": {
-          "x4_code": "(92-U-235(N,F),,AP,LF)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,AP,LF"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,AP,LF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "AP",
-            "sf7": "LF",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Average mass of light fragment"
-        },
-        "2": {
-          "x4_code": "(92-U-235(N,F),,AP,HF)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,AP,HF"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,AP,HF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "AP",
-            "sf7": "HF",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Average mass of heavy fragment"
-        },
-        "3": {
-          "x4_code": "(92-U-235(N,F),,NU)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,NU"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,NU",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Calculated from conservation of                                               mass"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2539,8 +2551,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2550,20 +2562,16 @@
               " fission."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": null,
             "free_txt": [
               "Decay information given in Phys.Rev.C,22,152,1980."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
@@ -2578,20 +2586,16 @@
               "gamma of Co-60"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(NGEN,1USAANL)",
             "free_txt": [
               " ANL fast neutron generator."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -2604,20 +2608,16 @@
               ". Above 5 MeV."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Spread 2-3 % for En>2 MeV, 6-10% for En<2MeV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP,GSPEC,BSPEC)",
             "free_txt": [
@@ -2628,28 +2628,22 @@
               "counting."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,10921001,L.E.Glendenin+,J,PR/C,22,152,1980)",
             "free_txt": [
               " Decay information"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2673,10 +2667,8 @@
             "x4_code": "(92-U-236,ENR=0.0026)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -2687,8 +2679,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2698,10 +2690,8 @@
               "propagation."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -2734,10 +2724,8 @@
               "      followed by gamma-ray spectrometry."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2748,8 +2736,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2759,20 +2747,16 @@
               "propagation."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
               " Gamma-ray spectroscopy"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2783,18 +2767,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information on uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

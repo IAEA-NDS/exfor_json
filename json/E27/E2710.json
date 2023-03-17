@@ -142,44 +142,40 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,834,C470,2010)",
-          "free_txt": [
-            "Main reference. See also TITLE and AUTHOR."
-          ],
-          "publication_year": "2010"
-        },
-        {
-          "x4_code": "(J,MPL/A,25,2014,2010)",
-          "free_txt": [],
-          "publication_year": "2010"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,2JPNIRS)",
-          "free_txt": [
-            " HIMAC"
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(2JPNIRS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,834,C470,2010)",
+        "free_txt": [
+          "Main reference. See also TITLE and AUTHOR."
+        ],
+        "publication_year": "2010",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,MPL/A,25,2014,2010)",
+        "free_txt": [],
+        "publication_year": "2010",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,2JPNIRS)",
+        "free_txt": [
+          " HIMAC"
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(2JPNIRS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(4-BE-11,NON),,SIG)=(4-BE-11(P,NON),,SIG))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-1(4-BE-11,NON),,SIG)=(4-BE-11(P,NON),,SIG))",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -198,7 +194,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "4-BE-11",
               [
@@ -216,11 +212,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((1-H-1(5-B-8,NON),,SIG)=(5-B-8(P,NON),,SIG))",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "5-B-8,NON"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "5-B-8,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "=",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "5-B-8",
+              [
+                "P,NON"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "5-B-8",
+            "process": "P,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -262,51 +312,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(5-B-8,NON),,SIG)=(5-B-8(P,NON),,SIG))",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "5-B-8,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "5-B-8,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "5-B-8",
-              [
-                "P,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "5-B-8",
-            "process": "P,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -347,8 +352,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(MAGSP)",
             "free_txt": [
@@ -365,30 +370,24 @@
             "x4_code": "(NAICR)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,2JPNIRS)",
             "free_txt": [
               " HIMAC"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(FRAGM)",
             "free_txt": [
@@ -396,18 +395,14 @@
               "        targets."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -422,16 +417,14 @@
       }
     },
     "002": {
-      "part-det": {
-        "0": [
+      "0": {
+        "part-det": [
           {
             "x4_code": "(4-BE-11)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -449,16 +442,14 @@
       }
     },
     "003": {
-      "part-det": {
-        "0": [
+      "0": {
+        "part-det": [
           {
             "x4_code": "(5-B-8)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

@@ -68,39 +68,34 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,KPS,43,(5),704,2003)",
-          "free_txt": [
-            "    Main Reference"
-          ],
-          "publication_year": "2003"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            "  Reactor IBR-30"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,KPS,43,(5),704,2003)",
+        "free_txt": [
+          "    Main Reference"
+        ],
+        "publication_year": "2003",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          "  Reactor IBR-30"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,G)90-TH-233,,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-232(N,G)90-TH-233,,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -118,11 +113,46 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "Group average capture   cross-section"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "Group average capture   cross-section"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(N,TOT),,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,TOT"
+              ],
+              ",,SIG,,AV"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,TOT",
+            "sf49": ",,SIG,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Group average total cross-section"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -206,32 +236,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,TOT),,SIG,,AV)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,AV"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,TOT",
-            "sf49": ",,SIG,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Group average total cross-section"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -310,8 +314,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BF3)",
             "free_txt": [
@@ -347,30 +351,24 @@
               " samples."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
               " Total uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
               "  Reactor IBR-30"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -381,10 +379,8 @@
               " Water moderator to modify neutron spectrum."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -406,20 +402,16 @@
               "     the coincidence multiplicities from 1 to 16."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
               " Total uncertainty in per-cents."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(COREL,41489001)",
             "free_txt": []
@@ -428,8 +420,8 @@
       }
     },
     "002": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": "((MONIT)92-U-238(N,G)92-U-239,,SIG)",
             "free_txt": [
@@ -437,10 +429,8 @@
               " ENDF/B-VI evaluated library by GRUCON code."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -453,10 +443,8 @@
               "and 2mm (0.000498 atoms/barn) thickness."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -467,18 +455,16 @@
       }
     },
     "003": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               " For multiple scattering."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -489,10 +475,8 @@
               " thickness and without sample was measured."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

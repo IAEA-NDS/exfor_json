@@ -48,37 +48,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,286,322,1977)",
-          "free_txt": [],
-          "publication_year": "1977"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,1USALTI)",
-          "free_txt": [
-            " 5.5 MeV Van-de-Graaff."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(1USALTI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,286,322,1977)",
+        "free_txt": [],
+        "publication_year": "1977",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,1USALTI)",
+        "free_txt": [
+          " 5.5 MeV Van-de-Graaff."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(1USALTI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(25-MN-55(N,INL)25-MN-55,PAR,DA,G)",
-          "0": {
+      "0": {
+        "x4_code": "(25-MN-55(N,INL)25-MN-55,PAR,DA,G)",
+        "children": [
+          {
             "code": [
               "25-MN-55",
               [
@@ -96,11 +91,74 @@
             "sf7": "G",
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(25-MN-55(N,INL)25-MN-55,PAR,DA,G,REL)",
+        "children": [
+          {
+            "code": [
+              "25-MN-55",
+              [
+                "N,INL"
+              ],
+              "25-MN-55,PAR,DA,G,REL"
+            ],
+            "type": null,
+            "target": "25-MN-55",
+            "process": "N,INL",
+            "sf49": "25-MN-55,PAR,DA,G,REL",
+            "sf4": "25-MN-55",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "G",
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(25-MN-55(N,INL)25-MN-55,PAR,DA,,4PI)",
+        "children": [
+          {
+            "code": [
+              "25-MN-55",
+              [
+                "N,INL"
+              ],
+              "25-MN-55,PAR,DA,,4PI"
+            ],
+            "type": null,
+            "target": "25-MN-55",
+            "process": "N,INL",
+            "sf49": "25-MN-55,PAR,DA,,4PI",
+            "sf4": "25-MN-55",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "4PI",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG"
@@ -736,32 +794,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(25-MN-55(N,INL)25-MN-55,PAR,DA,G,REL)",
-          "0": {
-            "code": [
-              "25-MN-55",
-              [
-                "N,INL"
-              ],
-              "25-MN-55,PAR,DA,G,REL"
-            ],
-            "type": null,
-            "target": "25-MN-55",
-            "process": "N,INL",
-            "sf49": "25-MN-55,PAR,DA,G,REL",
-            "sf4": "25-MN-55",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "G",
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1083,32 +1115,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(25-MN-55(N,INL)25-MN-55,PAR,DA,,4PI)",
-          "0": {
-            "code": [
-              "25-MN-55",
-              [
-                "N,INL"
-              ],
-              "25-MN-55,PAR,DA,,4PI"
-            ],
-            "type": null,
-            "target": "25-MN-55",
-            "process": "N,INL",
-            "sf49": "25-MN-55,PAR,DA,,4PI",
-            "sf4": "25-MN-55",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "4PI",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG"
@@ -1578,8 +1584,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1590,10 +1596,8 @@
               " corrections were negligibly small."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI,NAICR)",
             "free_txt": [
@@ -1608,40 +1612,32 @@
               " Flux monitored by long counter."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainty."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,1USALTI)",
             "free_txt": [
               " 5.5 MeV Van-de-Graaff."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
             "free_txt": [
               " Protons on tritium target."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1654,18 +1650,14 @@
               " 30 keV less than these values."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1685,8 +1677,8 @@
     "002": {},
     "003": {},
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1694,10 +1686,8 @@
               " 125 degrees multiplied by 4 pi."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,10713002)",
             "free_txt": []

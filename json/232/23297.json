@@ -82,44 +82,40 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,102,044616,2020)",
-          "free_txt": [],
-          "publication_year": "2020"
-        },
-        {
-          "x4_code": "(T,KINOSHITA,19990214)",
-          "free_txt": [
-            " Master thesis submitted to Tokyo Inst. of Technology"
-          ],
-          "publication_year": "1999"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2JPNTIT)",
-          "free_txt": [
-            " 3.2 MV Pelletron Accelerator"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2JPNTIT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,102,044616,2020)",
+        "free_txt": [],
+        "publication_year": "2020",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(T,KINOSHITA,19990214)",
+        "free_txt": [
+          " Master thesis submitted to Tokyo Inst. of Technology"
+        ],
+        "publication_year": "1999",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2JPNTIT)",
+        "free_txt": [
+          " 3.2 MV Pelletron Accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2JPNTIT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(N,G)8-O-17,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(8-O-16(N,G)8-O-17,,SIG)",
+        "children": [
+          {
             "code": [
               "8-O-16",
               [
@@ -137,11 +133,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(8-O-16(N,G)8-O-17,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "8-O-16",
+              [
+                "N,G"
+              ],
+              "8-O-17,PAR,SIG"
+            ],
+            "type": null,
+            "target": "8-O-16",
+            "process": "N,G",
+            "sf49": "8-O-17,PAR,SIG",
+            "sf4": "8-O-17",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(8-O-16(N,G)8-O-17,,SIG)",
+        "children": [
+          {
+            "code": [
+              "8-O-16",
+              [
+                "N,G"
+              ],
+              "8-O-17,,SIG"
+            ],
+            "type": null,
+            "target": "8-O-16",
+            "process": "N,G",
+            "sf49": "8-O-17,,SIG",
+            "sf4": "8-O-17",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "004": {
       "common": {
         "heads": [
           "ERR-1",
@@ -235,32 +294,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(N,G)8-O-17,PAR,SIG)",
-          "0": {
-            "code": [
-              "8-O-16",
-              [
-                "N,G"
-              ],
-              "8-O-17,PAR,SIG"
-            ],
-            "type": null,
-            "target": "8-O-16",
-            "process": "N,G",
-            "sf49": "8-O-17,PAR,SIG",
-            "sf4": "8-O-17",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -384,32 +417,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(N,G)8-O-17,,SIG)",
-          "0": {
-            "code": [
-              "8-O-16",
-              [
-                "N,G"
-              ],
-              "8-O-17,,SIG"
-            ],
-            "type": null,
-            "target": "8-O-16",
-            "process": "N,G",
-            "sf49": "8-O-17,,SIG",
-            "sf4": "8-O-17",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -489,8 +496,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -501,10 +508,8 @@
               " - finite size of sample"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
@@ -519,20 +524,16 @@
               " gamma detection"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2JPNTIT)",
             "free_txt": [
               " 3.2 MV Pelletron Accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -553,10 +554,8 @@
               "-------------------------------------------------------"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -564,10 +563,8 @@
               " 4 MHz."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -585,8 +582,8 @@
       }
     },
     "004": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -595,10 +592,8 @@
               "- self-shielding of incident neutrons (ns)"
             ]
           }
-        ]
-      },
-      "critique": {
-        "0": [
+        ],
+        "critique": [
           {
             "x4_code": null,
             "free_txt": [
@@ -613,10 +608,8 @@
               " which are more consistent with our data."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -649,10 +642,8 @@
               " Au capture cross section      (3%)"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,P.G.Young,3,ENDF/B-VI,7925,1984)",
             "free_txt": []
@@ -661,26 +652,20 @@
             "x4_code": "(11679023,R.L.Macklin+,J,PR,159,1007,1967)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(C,29992001,T.Matsushima,T,MATSUSHIMA,2003)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -697,8 +682,8 @@
       }
     },
     "005": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -730,10 +715,8 @@
               " Au capture cross section      (3%)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -744,8 +727,8 @@
       }
     },
     "006": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -777,10 +760,8 @@
               " Au capture cross section      (3%)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

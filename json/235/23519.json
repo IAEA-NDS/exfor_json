@@ -26,37 +26,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PPS/A,65,958,1952)",
-          "free_txt": [],
-          "publication_year": "1952"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2UK HAR)",
-          "free_txt": [
-            " Harwell Nuclear Pile"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2UK HAR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PPS/A,65,958,1952)",
+        "free_txt": [],
+        "publication_year": "1952",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2UK HAR)",
+        "free_txt": [
+          " Harwell Nuclear Pile"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2UK HAR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(38-SR-84(N,G)38-SR-85,,SIG,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(38-SR-84(N,G)38-SR-85,,SIG,,SPA)",
+        "children": [
+          {
             "code": [
               "38-SR-84",
               [
@@ -74,11 +69,46 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "Isotopic capture cross-section."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "Isotopic capture cross-section."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(38-SR-87(N,G)38-SR-88,,SIG,,SPA,DERIV)",
+        "children": [
+          {
+            "code": [
+              "38-SR-87",
+              [
+                "N,G"
+              ],
+              "38-SR-88,,SIG,,SPA,DERIV"
+            ],
+            "type": null,
+            "target": "38-SR-87",
+            "process": "N,G",
+            "sf49": "38-SR-88,,SIG,,SPA,DERIV",
+            "sf4": "38-SR-88",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": "Isotopic capture cross-section."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -110,32 +140,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(38-SR-87(N,G)38-SR-88,,SIG,,SPA,DERIV)",
-          "0": {
-            "code": [
-              "38-SR-87",
-              [
-                "N,G"
-              ],
-              "38-SR-88,,SIG,,SPA,DERIV"
-            ],
-            "type": null,
-            "target": "38-SR-87",
-            "process": "N,G",
-            "sf49": "38-SR-88,,SIG,,SPA,DERIV",
-            "sf4": "38-SR-88",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": "Isotopic capture cross-section."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -169,8 +173,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -178,10 +182,8 @@
               "in the article, assumed by compiler as EN-DUMMY=0.0253e"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -195,20 +197,16 @@
               "gammas counting."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2UK HAR)",
             "free_txt": [
               " Harwell Nuclear Pile"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -222,10 +220,8 @@
               "                Cs-137 (Egamma 0.663 MeV)."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -236,8 +232,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(38-SR-85-G,65.D)",
             "free_txt": [
@@ -252,20 +248,16 @@
             "x4_code": "(38-SR-87-M,2.8HR)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(38-SR-89,52.5D)",
             "free_txt": [
               "   Measured 52.5 days"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -273,34 +265,26 @@
               "article."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,L.Seren+,J,PR,72,888,1947)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)38-SR-88(N,G)38-SR-89,,SIG,,SPA)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(38-SR-84,NAT=0.0055)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -312,8 +296,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -321,10 +305,8 @@
               " ASSUM2 data and measured CS for Sr-84."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM1,38-SR-0(N,G),,SIG,,SPA)",
             "free_txt": [
@@ -335,10 +317,8 @@
             "x4_code": "(ASSUM2,38-SR-86(N,G)38-SR-87-M,,SIG,,SPA)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,F.C.W.Colmer+,J,PPS/A,63,1175,1950)",
             "free_txt": [
@@ -351,18 +331,14 @@
               "             ASSUM2"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(38-SR-84,NAT=0.0055)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -44,42 +44,37 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(S,INDC(EUR)-030,28,199606)",
-          "free_txt": [
-            "  Annual progress report",
-            "  on Nuclear Data, 1995. Inst. for Reference Materials",
-            "  and Measurements edition, Geel (Belgium). June 1995,",
-            "  EUR 16417 EN"
-          ],
-          "publication_year": "1996"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2ZZZGEL)",
-          "free_txt": [
-            " GELINA facility"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(S,INDC(EUR)-030,28,199606)",
+        "free_txt": [
+          "  Annual progress report",
+          "  on Nuclear Data, 1995. Inst. for Reference Materials",
+          "  and Measurements edition, Geel (Belgium). June 1995,",
+          "  EUR 16417 EN"
+        ],
+        "publication_year": "1996",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2ZZZGEL)",
+        "free_txt": [
+          " GELINA facility"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(82-PB-208(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(82-PB-208(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "82-PB-208",
               [
@@ -97,13 +92,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "   Resonance energy"
-        },
-        "2": {
-          "x4_code": "(82-PB-208(N,0),,L)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": "   Resonance energy"
+      },
+      "2": {
+        "x4_code": "(82-PB-208(N,0),,L)",
+        "children": [
+          {
             "code": [
               "82-PB-208",
               [
@@ -121,13 +118,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "    angular momentum of resonance"
-        },
-        "3": {
-          "x4_code": "(82-PB-208(N,0),,J)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": "    angular momentum of resonance"
+      },
+      "3": {
+        "x4_code": "(82-PB-208(N,0),,J)",
+        "children": [
+          {
             "code": [
               "82-PB-208",
               [
@@ -145,13 +144,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "    spin of resonance"
-        },
-        "4": {
-          "x4_code": "(82-PB-208(N,G),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": "    spin of resonance"
+      },
+      "4": {
+        "x4_code": "(82-PB-208(N,G),,WID)",
+        "children": [
+          {
             "code": [
               "82-PB-208",
               [
@@ -169,13 +170,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  gamma-width of resonance"
-        },
-        "5": {
-          "x4_code": "(82-PB-208(N,G),,WID/STR)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": "  gamma-width of resonance"
+      },
+      "5": {
+        "x4_code": "(82-PB-208(N,G),,WID/STR)",
+        "children": [
+          {
             "code": [
               "82-PB-208",
               [
@@ -193,11 +196,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(82-PB-208(N,EL),,WID)",
+        "children": [
+          {
+            "code": [
+              "82-PB-208",
+              [
+                "N,EL"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "82-PB-208",
+            "process": "N,EL",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Values derived from a fit the present capture data:"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -342,32 +380,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-208(N,EL),,WID)",
-          "0": {
-            "code": [
-              "82-PB-208",
-              [
-                "N,EL"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "82-PB-208",
-            "process": "N,EL",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Values derived from a fit the present capture data:"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -399,58 +411,48 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".No information, probably area analysis"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
               "  235-U fission chamber"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Errors are not specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
               " GELINA facility"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               ".No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -462,8 +464,8 @@
     },
     "002": {},
     "003": {
-      "rel-ref": {
-        "0": [
+      "0": {
+        "rel-ref": [
           {
             "x4_code": "(R,10693002,R.L.Maclin+,J,AJ,217,222,1977)",
             "free_txt": []
@@ -472,10 +474,8 @@
             "x4_code": "(R,13738002,D.J.Horen+,J,PR/C,34,429,1986)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,22341002)",
             "free_txt": [

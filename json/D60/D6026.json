@@ -32,38 +32,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,43,1867,1991)",
-          "free_txt": [],
-          "publication_year": "1991"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,3INDVEC)",
-          "free_txt": [
-            " Alpha-particle beam at the Variable",
-            "Energy Cyclotron Centre, Calcutta"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(3INDVEC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,43,1867,1991)",
+        "free_txt": [],
+        "publication_year": "1991",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,3INDVEC)",
+        "free_txt": [
+          " Alpha-particle beam at the Variable",
+          "Energy Cyclotron Centre, Calcutta"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(3INDVEC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(A,EL)83-BI-209,,DA,,RTH)",
-          "0": {
+      "0": {
+        "x4_code": "(83-BI-209(A,EL)83-BI-209,,DA,,RTH)",
+        "children": [
+          {
             "code": [
               "83-BI-209",
               [
@@ -81,11 +76,74 @@
             "sf7": null,
             "sf8": "RTH",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(83-BI-209(A,INL)83-BI-209,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "A,INL"
+              ],
+              "83-BI-209,PAR,DA"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "A,INL",
+            "sf49": "83-BI-209,PAR,DA",
+            "sf4": "83-BI-209",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(83-BI-209(A,NON),,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "A,NON"
+              ],
+              ",,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "A,NON",
+            "sf49": ",,SIG,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-ERR-D",
@@ -1389,32 +1447,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(A,INL)83-BI-209,PAR,DA)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "A,INL"
-              ],
-              "83-BI-209,PAR,DA"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "A,INL",
-            "sf49": "83-BI-209,PAR,DA",
-            "sf4": "83-BI-209",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -1684,32 +1716,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(A,NON),,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "A,NON"
-              ],
-              ",,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "A,NON",
-            "sf49": ",,SIG,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1741,8 +1747,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -1753,10 +1759,8 @@
               "of the detectors in order to stop fission fragments."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1765,10 +1769,8 @@
               "uncertainties"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,3INDVEC)",
             "free_txt": [
@@ -1776,10 +1778,8 @@
               "Energy Cyclotron Centre, Calcutta"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1791,10 +1791,8 @@
               "used were determined to be 0.65 and 2.97 mg/cm2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1805,8 +1803,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1823,8 +1821,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1841,8 +1839,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

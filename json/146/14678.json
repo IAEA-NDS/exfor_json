@@ -45,38 +45,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ARI,148,191,2019)",
-          "free_txt": [],
-          "publication_year": "2019"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,1USAORL)",
-          "free_txt": [
-            " Irradiations were made in the core of",
-            "ORNL High Flux Isotope Reactor (HFIR)"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ARI,148,191,2019)",
+        "free_txt": [],
+        "publication_year": "2019",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USAORL)",
+        "free_txt": [
+          " Irradiations were made in the core of",
+          "ORNL High Flux Isotope Reactor (HFIR)"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(74-W-186(N,G)74-W-187,,SIG,,MXW,DERIV)",
-          "0": {
+      "0": {
+        "x4_code": "(74-W-186(N,G)74-W-187,,SIG,,MXW,DERIV)",
+        "children": [
+          {
             "code": [
               "74-W-186",
               [
@@ -94,11 +89,74 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": "Average value from two measurements"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "Average value from two measurements"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(74-W-186(N,G)74-W-187,,RI,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "74-W-186",
+              [
+                "N,G"
+              ],
+              "74-W-187,,RI,,,DERIV"
+            ],
+            "type": null,
+            "target": "74-W-186",
+            "process": "N,G",
+            "sf49": "74-W-187,,RI,,,DERIV",
+            "sf4": "74-W-187",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(74-W-187(N,G)74-W-188,,SIG,,MXW,DERIV)",
+        "children": [
+          {
+            "code": [
+              "74-W-187",
+              [
+                "N,G"
+              ],
+              "74-W-188,,SIG,,MXW,DERIV"
+            ],
+            "type": null,
+            "target": "74-W-187",
+            "process": "N,G",
+            "sf49": "74-W-188,,SIG,,MXW,DERIV",
+            "sf4": "74-W-188",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -125,32 +183,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(74-W-186(N,G)74-W-187,,RI,,,DERIV)",
-          "0": {
-            "code": [
-              "74-W-186",
-              [
-                "N,G"
-              ],
-              "74-W-187,,RI,,,DERIV"
-            ],
-            "type": null,
-            "target": "74-W-186",
-            "process": "N,G",
-            "sf49": "74-W-187,,RI,,,DERIV",
-            "sf4": "74-W-187",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -186,32 +218,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(74-W-187(N,G)74-W-188,,SIG,,MXW,DERIV)",
-          "0": {
-            "code": [
-              "74-W-187",
-              [
-                "N,G"
-              ],
-              "74-W-188,,SIG,,MXW,DERIV"
-            ],
-            "type": null,
-            "target": "74-W-187",
-            "process": "N,G",
-            "sf49": "74-W-188,,SIG,,MXW,DERIV",
-            "sf4": "74-W-188",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -240,8 +246,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -250,20 +256,16 @@
               "detector. Detector resolution was 1.9 keV at 1332 keV."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Origin of uncertainties not described"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,1USAORL)",
             "free_txt": [
@@ -271,18 +273,14 @@
               "ORNL High Flux Isotope Reactor (HFIR)"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -324,8 +322,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -334,18 +332,14 @@
               "Average value of target 1 and target 2"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(74-W-187,23.9HR,DG,134.25,0.0885,                DG,479.55,0.218,                DG,551.52,0.0508,                DG,685.74,0.273,                DG,772.89,0.0412)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -353,10 +347,8 @@
               "        activities at the end of bombardment"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -367,8 +359,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -376,18 +368,14 @@
               "assuming RI/sigma0=12.6+/-0.4"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(74-W-187,23.9HR,DG,134.25,0.0885,                DG,479.55,0.218,                DG,551.52,0.0508,                DG,685.74,0.273,                DG,772.89,0.0412)",
             "free_txt": []
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -400,10 +388,8 @@
               " Measured with target 2"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -411,10 +397,8 @@
               "        activities at the end of bombardment"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -425,8 +409,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -439,26 +423,20 @@
               "measured cross section."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(74-W-188,69.4D,DG,227.09,0.00221,                DG,290.67,0.00402)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

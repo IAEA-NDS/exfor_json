@@ -66,54 +66,52 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,67,(7),1270,200407)",
-          "free_txt": [],
-          "publication_year": "2004"
-        },
-        {
-          "x4_code": "(J,PAN,67,(7),1246,2004)",
-          "free_txt": [
-            " Engl. translation of J,YF.",
-            "#doi:10.1134/1.1777281"
-          ],
-          "publication_year": "2004"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,4RUSFEI)",
-          "free_txt": [
-            " EGP-10M Electrostatic Accelerator"
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(4RUSFEI)"
-        },
-        {
-          "x4_code": "(SPECC,4RUSFEI)",
-          "free_txt": [
-            " Fast neutron spectrometer for energy",
-            "     range 0.14 - 15. MeV."
-          ],
-          "facility_type": "(SPECC)",
-          "institute": "(4RUSFEI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,67,(7),1270,200407)",
+        "free_txt": [],
+        "publication_year": "2004",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PAN,67,(7),1246,2004)",
+        "free_txt": [
+          " Engl. translation of J,YF.",
+          "#doi:10.1134/1.1777281"
+        ],
+        "publication_year": "2004",
+        "pointer": "0",
+        "doi": "10.1134/1.1777281"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,4RUSFEI)",
+        "free_txt": [
+          " EGP-10M Electrostatic Accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(4RUSFEI)"
+      },
+      {
+        "x4_code": "(SPECC,4RUSFEI)",
+        "free_txt": [
+          " Fast neutron spectrometer for energy",
+          "     range 0.14 - 15. MeV."
+        ],
+        "pointer": "0",
+        "facility_type": "(SPECC)",
+        "institute": "(4RUSFEI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,F)0-NN-1,PR,KE)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(N,F)0-NN-1,PR,KE)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -131,11 +129,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((92-U-238(N,F),PR,NU/DE,,NPD)/(98-CF-252(0,F),PR,NU/DE,,NPD))",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              ",PR,NU/DE,,NPD"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": ",PR,NU/DE,,NPD",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU/DE",
+            "sf7": null,
+            "sf8": "NPD",
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              ",PR,NU/DE,,NPD"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": ",PR,NU/DE,,NPD",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU/DE",
+            "sf7": null,
+            "sf8": "NPD",
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": " Experimental ratio of normalized to 1.0 neutron spectra"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -165,51 +217,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(N,F),PR,NU/DE,,NPD)/(98-CF-252(0,F),PR,NU/DE,,NPD))",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              ",PR,NU/DE,,NPD"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": ",PR,NU/DE,,NPD",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU/DE",
-            "sf7": null,
-            "sf8": "NPD",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              ",PR,NU/DE,,NPD"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": ",PR,NU/DE,,NPD",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU/DE",
-            "sf7": null,
-            "sf8": "NPD",
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": " Experimental ratio of normalized to 1.0 neutron spectra"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -567,18 +574,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               " E-Mail: Svirin@ippe.Obninsk.Ru  - M.I.Svirin"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(MWDC)",
             "free_txt": [
@@ -605,10 +610,8 @@
               "    3m from target and under 90 degrees angle."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -622,10 +625,8 @@
               "                 ( 1.5% to 25%)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,4RUSFEI)",
             "free_txt": [
@@ -639,10 +640,8 @@
               "     range 0.14 - 15. MeV."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
             "free_txt": [
@@ -652,26 +651,20 @@
               " Proton energy 7.7 MeV and 8.5 MeV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(98-CF-252(0,F),PR,NU/DE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -684,8 +677,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -696,18 +689,16 @@
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E,N)",
             "free_txt": [
               " Energy of fission neutrons"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [

@@ -55,33 +55,28 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,129,2723,1963)",
-          "free_txt": [],
-          "publication_year": "1963"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": []
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,129,2723,1963)",
+        "free_txt": [],
+        "publication_year": "1963",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC)",
+        "free_txt": [],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(73-TA-181(G,X)0-NN-1,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(73-TA-181(G,X)0-NN-1,,SIG)",
+        "children": [
+          {
             "code": [
               "73-TA-181",
               [
@@ -99,11 +94,140 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " THE SUM: (G,N)+(G,N+P)+2(G,2N)+2(G,2N+P)."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((73-TA-181(G,N)73-TA-180,,SIG)+(73-TA-181(G,N+P)72-HF-179,,SIG))",
+        "children": [
+          {
+            "code": [
+              "73-TA-181",
+              [
+                "G,N"
+              ],
+              "73-TA-180,,SIG"
+            ],
+            "type": null,
+            "target": "73-TA-181",
+            "process": "G,N",
+            "sf49": "73-TA-180,,SIG",
+            "sf4": "73-TA-180",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": " THE SUM: (G,N)+(G,N+P)+2(G,2N)+2(G,2N+P)."
-        }
-      },
+          {
+            "code": [
+              "73-TA-181",
+              [
+                "G,N+P"
+              ],
+              "72-HF-179,,SIG"
+            ],
+            "type": null,
+            "target": "73-TA-181",
+            "process": "G,N+P",
+            "sf49": "72-HF-179,,SIG",
+            "sf4": "72-HF-179",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": " THRESHOLD OF (GAMMA,N+P) REACTION IS 13.3 MEV."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((73-TA-181(G,2N)73-TA-179,,SIG)+(73-TA-181(G,2N+P)72-HF-178,,SIG))",
+        "children": [
+          {
+            "code": [
+              "73-TA-181",
+              [
+                "G,2N"
+              ],
+              "73-TA-179,,SIG"
+            ],
+            "type": null,
+            "target": "73-TA-181",
+            "process": "G,2N",
+            "sf49": "73-TA-179,,SIG",
+            "sf4": "73-TA-179",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "73-TA-181",
+              [
+                "G,2N+P"
+              ],
+              "72-HF-178,,SIG"
+            ],
+            "type": null,
+            "target": "73-TA-181",
+            "process": "G,2N+P",
+            "sf49": "72-HF-178,,SIG",
+            "sf4": "72-HF-178",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": " THRESHOLD OF (GAMMA,2N+P) REACTION IS 19.4 MEV."
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(73-TA-181(G,X)0-NN-1,UNW,SIG)",
+        "children": [
+          {
+            "code": [
+              "73-TA-181",
+              [
+                "G,X"
+              ],
+              "0-NN-1,UNW,SIG"
+            ],
+            "type": null,
+            "target": "73-TA-181",
+            "process": "G,X",
+            "sf49": "0-NN-1,UNW,SIG",
+            "sf4": "0-NN-1",
+            "sf5": "UNW",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " THE SUM: (G,N)+(G,N+P)+(G,2N)+(G,2N+P)."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -298,51 +422,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((73-TA-181(G,N)73-TA-180,,SIG)+(73-TA-181(G,N+P)72-HF-179,,SIG))",
-          "0": {
-            "code": [
-              "73-TA-181",
-              [
-                "G,N"
-              ],
-              "73-TA-180,,SIG"
-            ],
-            "type": null,
-            "target": "73-TA-181",
-            "process": "G,N",
-            "sf49": "73-TA-180,,SIG",
-            "sf4": "73-TA-180",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "73-TA-181",
-              [
-                "G,N+P"
-              ],
-              "72-HF-179,,SIG"
-            ],
-            "type": null,
-            "target": "73-TA-181",
-            "process": "G,N+P",
-            "sf49": "72-HF-179,,SIG",
-            "sf4": "72-HF-179",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "+",
-          "free_text": " THRESHOLD OF (GAMMA,N+P) REACTION IS 13.3 MEV."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -480,51 +559,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((73-TA-181(G,2N)73-TA-179,,SIG)+(73-TA-181(G,2N+P)72-HF-178,,SIG))",
-          "0": {
-            "code": [
-              "73-TA-181",
-              [
-                "G,2N"
-              ],
-              "73-TA-179,,SIG"
-            ],
-            "type": null,
-            "target": "73-TA-181",
-            "process": "G,2N",
-            "sf49": "73-TA-179,,SIG",
-            "sf4": "73-TA-179",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "73-TA-181",
-              [
-                "G,2N+P"
-              ],
-              "72-HF-178,,SIG"
-            ],
-            "type": null,
-            "target": "73-TA-181",
-            "process": "G,2N+P",
-            "sf49": "72-HF-178,,SIG",
-            "sf4": "72-HF-178",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "+",
-          "free_text": " THRESHOLD OF (GAMMA,2N+P) REACTION IS 19.4 MEV."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -668,32 +702,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(73-TA-181(G,X)0-NN-1,UNW,SIG)",
-          "0": {
-            "code": [
-              "73-TA-181",
-              [
-                "G,X"
-              ],
-              "0-NN-1,UNW,SIG"
-            ],
-            "type": null,
-            "target": "73-TA-181",
-            "process": "G,X",
-            "sf49": "0-NN-1,UNW,SIG",
-            "sf4": "0-NN-1",
-            "sf5": "UNW",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " THE SUM: (G,N)+(G,N+P)+(G,2N)+(G,2N+P)."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -884,36 +892,30 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
               " PARAFFIN MODERATOR WITH BF3 COUNTERS"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "POSITRON ANNIHILATION"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -927,8 +929,8 @@
     "003": {},
     "004": {},
     "005": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,L0003002)",
             "free_txt": [

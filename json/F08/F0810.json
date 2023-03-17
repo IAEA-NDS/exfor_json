@@ -37,35 +37,30 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,719,94,2003)",
-          "free_txt": [],
-          "publication_year": "2003"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,2ITYLGS)",
-          "free_txt": [],
-          "facility_type": "(ACCEL)",
-          "institute": "(2ITYLGS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,719,94,2003)",
+        "free_txt": [],
+        "publication_year": "2003",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,2ITYLGS)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(2ITYLGS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(7-N-14(P,G)8-O-15,PAR,SIG,,SFC)",
-          "0": {
+      "0": {
+        "x4_code": "(7-N-14(P,G)8-O-15,PAR,SIG,,SFC)",
+        "children": [
+          {
             "code": [
               "7-N-14",
               [
@@ -83,11 +78,74 @@
             "sf7": null,
             "sf8": "SFC",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(7-N-14(P,G)8-O-15,,PY,,REL)",
+        "children": [
+          {
+            "code": [
+              "7-N-14",
+              [
+                "P,G"
+              ],
+              "8-O-15,,PY,,REL"
+            ],
+            "type": null,
+            "target": "7-N-14",
+            "process": "P,G",
+            "sf49": "8-O-15,,PY,,REL",
+            "sf4": "8-O-15",
+            "sf5": null,
+            "sf6": "PY",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(7-N-14(P,G)8-O-15,,SPC,,REL)",
+        "children": [
+          {
+            "code": [
+              "7-N-14",
+              [
+                "P,G"
+              ],
+              "8-O-15,,SPC,,REL"
+            ],
+            "type": null,
+            "target": "7-N-14",
+            "process": "P,G",
+            "sf49": "8-O-15,,SPC,,REL",
+            "sf4": "8-O-15",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL",
@@ -340,32 +398,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(7-N-14(P,G)8-O-15,,PY,,REL)",
-          "0": {
-            "code": [
-              "7-N-14",
-              [
-                "P,G"
-              ],
-              "8-O-15,,PY,,REL"
-            ],
-            "type": null,
-            "target": "7-N-14",
-            "process": "P,G",
-            "sf49": "8-O-15,,PY,,REL",
-            "sf4": "8-O-15",
-            "sf5": null,
-            "sf6": "PY",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -458,32 +490,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(7-N-14(P,G)8-O-15,,SPC,,REL)",
-          "0": {
-            "code": [
-              "7-N-14",
-              [
-                "P,G"
-              ],
-              "8-O-15,,SPC,,REL"
-            ],
-            "type": null,
-            "target": "7-N-14",
-            "process": "P,G",
-            "sf49": "8-O-15,,SPC,,REL",
-            "sf4": "8-O-15",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -1057,8 +1063,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GE)",
             "free_txt": [
@@ -1066,28 +1072,22 @@
               "geometry at 55 degr. with respect to the beam direction"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-DIG)",
             "free_txt": [
               "Digitizing error"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,2ITYLGS)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1097,18 +1097,14 @@
               "be 5 eV per hour."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1120,8 +1116,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
@@ -1134,10 +1130,8 @@
               "Error from the graphic bars"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1148,18 +1142,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
               "Digitizing error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1170,8 +1162,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(E-ERR-DIG)",
             "free_txt": [
@@ -1184,10 +1176,8 @@
               "Error from the graphic bars"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

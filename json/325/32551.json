@@ -1,17 +1,30 @@
 {
   "entry": "32551",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-01-20",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20010413C)",
       "free_txt": [
         " by Chen Guochang"
       ]
+    },
+    {
+      "x4_code": "(20220830A)",
+      "free_txt": [
+        " Jimin WANG: J,CST,33,415,1999 added.",
+        "            Correction in 32551002."
+      ]
+    },
+    {
+      "x4_code": "(20220831A)",
+      "free_txt": [
+        " On. Major correction in 002."
+      ]
     }
   ],
   "bib_record": {
-    "title": " Measurement of cross section for Mo-92(n,p)Nb-92-m reaction and deduction of low energy neutron",
+    "title": "Measurement of cross section for 92Mo(n,p)92mNb reaction and deduction of low energy neutron",
     "authors": [
       {
         "name": "Zhao Wenrong"
@@ -35,51 +48,54 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,INDC(CPR)-047/L,1,1998)",
-          "free_txt": [
-            " in English."
-          ],
-          "publication_year": "1998"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT)",
-          "free_txt": [
-            " HI-13 tandem accelerator."
-          ]
-        },
-        {
-          "x4_code": "(VDG)",
-          "free_txt": [
-            " Van de Graaff accelerator.",
-            "The neutron energy below 12 MeV."
-          ]
-        },
-        {
-          "x4_code": "(CCW)",
-          "free_txt": [
-            " Cockroft Walton accelerator.",
-            "The neutron energy above 14 MeV."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,INDC(CPR)-047,1,1998)",
+        "free_txt": [
+          " Data in table"
+        ],
+        "publication_year": "1998",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,CST,33,415,1999)",
+        "free_txt": [
+          " Data in fig"
+        ],
+        "publication_year": "1999",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT)",
+        "free_txt": [
+          " for En<12 MeV, HI-13 tandem accelerator"
+        ],
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(VDG)",
+        "free_txt": [
+          "  for En<12 MeV"
+        ],
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(CCW)",
+        "free_txt": [
+          "  for En>14 MeV"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(42-MO-92(N,P)41-NB-92-M,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(42-MO-92(N,P)41-NB-92-M,,SIG)",
+        "children": [
+          {
             "code": [
               "42-MO-92",
               [
@@ -97,18 +113,25 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
           "EN",
           "EN-ERR",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
@@ -124,7 +147,7 @@
             7.07,
             8.37,
             9.37,
-            10.04,
+            10.4,
             11.4,
             14.0,
             14.7,
@@ -183,33 +206,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
-              "In all the measurements, the corrections were made for",
-              "the fluctuation of the neutron flux during the",
-              "irradiation. The count rates of Ge(Li) gamma-ray",
-              "spectroscopy were corrected for the gamma-ray self-",
-              "absorption in sample and the cascade effect. The",
-              "correction is 10% at 19 Mev neutron energy."
+              "Corrected for",
+              " - fluctuation of neutron flux during irradiation",
+              " - gamma-ray self-absorption and cascade effect",
+              " - low energy neutrons for D-D neutrons by \"gas out\"",
+              "   irradiation"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-mon": [
           {
-            "x4_code": "(41-NB-92-M,10.15D,DG,934.5,0.99)",
-            "free_txt": []
-          }
-        ]
-      },
-      "decay-mon": {
-        "0": [
-          {
-            "x4_code": "(11-NA-24-G,15.0HR,DG,1368.6,1.00)",
+            "x4_code": "(11-NA-24,15.HR,DG,1368.6,1.00)",
             "free_txt": []
           },
           {
@@ -218,153 +230,132 @@
           },
           {
             "x4_code": "(27-CO-58-G,70.916HR,DG,810.8,0.995)",
-            "free_txt": []
+            "free_txt": [
+              " The half-life unit h printed in the article could be",
+              "  a typo"
+            ]
           },
           {
-            "x4_code": "(79-AU-196-G,6.18D,DG,356.0,0.876)",
+            "x4_code": "(79-AU-196-G,6.18D,DG,356.,0.876)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
-            "free_txt": [
-              " Ge(Li) gamma-ray spectroscopy."
-            ]
+            "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              "The principal sources of error are as follows:",
-              "- the efficiency of gamma-ray detector",
-              "- the cross section of monitors",
-              "- counting statistics",
-              "- correction for the gamma-ray self-absorption in",
-              "  sample",
-              "- correction for the effect of low energy neutron"
+              " The principal sources of error are as",
+              "      follows:",
+              " - gamma-ray detector efficiency",
+              " - monitor cross section",
+              " - counting statistics",
+              " - gamma-ray self-absorption correction",
+              " - low energy neutron correction"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT)",
             "free_txt": [
-              " HI-13 tandem accelerator."
+              " for En<12 MeV, HI-13 tandem accelerator"
             ]
           },
           {
             "x4_code": "(VDG)",
             "free_txt": [
-              " Van de Graaff accelerator.",
-              "The neutron energy below 12 MeV."
+              "  for En<12 MeV"
             ]
           },
           {
             "x4_code": "(CCW)",
             "free_txt": [
-              " Cockroft Walton accelerator.",
-              "The neutron energy above 14 MeV."
+              "  for En>14 MeV"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": [
-              " D2 gas target at HI-13 tandem accelerator.",
-              "Solid D-Ti target at Van de Graaff accelerator."
+              " D2 gas target at HI-13 tandem accelerator,",
+              " solid D-Ti target at Van de Graaff accelerator"
             ]
           },
           {
             "x4_code": "(D-T)",
             "free_txt": [
-              " tritium-titanium target at Cockroft Walton",
-              "accelerator."
+              " T-Ti target at Cockroft Walton accelerator"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
-            "free_txt": [
-              " Activation"
-            ]
+            "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(28-NI-58(N,P)27-CO-58,,SIG)",
             "free_txt": [
-              "    Monit1"
+              "    5 MeV<En<12 MeV"
             ]
           },
           {
             "x4_code": "(26-FE-56(N,P)25-MN-56,,SIG)",
             "free_txt": [
-              "    Monit2"
+              "    5 MeV<En<14 MeV"
             ]
           },
           {
             "x4_code": "(79-AU-197(N,2N)79-AU-196,,SIG)",
             "free_txt": [
-              " Monit3"
+              " 8 MeV<En<12 MeV"
             ]
           },
           {
             "x4_code": "(13-AL-27(N,A)11-NA-24,,SIG)",
             "free_txt": [
-              "    Monit4",
-              "Monit1 and Monit2 were corrected for the contribution",
-              "from D-d low energy neutron by gas in and gas out runs",
-              "in the energy range of 5 to 7 Mev. In 8 to 12 MeV",
-              "range, a group monitors was selected with different",
-              "threshold, such as Monit1 to Monit4, and irradiated",
-              "with Mo sample together. The neutron energy above",
-              "14 MeV, Monit2 and Monit4 were used to reduce the",
-              "effect of D-d low energy neutron. In high energy range",
-              "of 17.30 and 19.09 MeV the Monit4 was used to determine",
-              "the neutron flux."
+              "    8 MeV<En<19 MeV"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "Natural metal molybdenum plate is 20mm in diameter and",
-              "1mm in thickness. The samples were irradiated in the 0",
-              "degree direction relative to incident particles.",
+              "Natural metal molybdenum plate (20 mm in diam.,",
+              " 1 mm thick.).",
+              "The samples were irradiated in the 0 deg direction",
+              " relative to incident particles.",
               "The irradiation time was 4 to 9 hours and the distance",
-              "between the samples and the neutron source was 2 to",
-              "4 cm."
+              " between the samples and the neutron source was 2 to",
+              " 4 cm."
             ]
           }
         ]
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
-            "x4_code": null,
+            "x4_code": "(41-NB-92-M,10.15D,DG,934.5,0.99)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
             "free_txt": [
-              "Data taken from table 2 of R,INDC(CPR)-047/L,1,1998."
+              " Table 2 of R,INDC(CPR)-047/L,1,1998"
             ]
           }
         ]

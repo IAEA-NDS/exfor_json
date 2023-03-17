@@ -32,37 +32,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,367,145,1981)",
-          "free_txt": [],
-          "publication_year": "1981"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM,2GERBOC)",
-          "free_txt": [
-            "  Dynamitron Tandem accelerator."
-          ],
-          "facility_type": "(DYNAM)",
-          "institute": "(2GERBOC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,367,145,1981)",
+        "free_txt": [],
+        "publication_year": "1981",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM,2GERBOC)",
+        "free_txt": [
+          "  Dynamitron Tandem accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(DYNAM)",
+        "institute": "(2GERBOC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(3-LI-6,A)7-N-14,PAR,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(3-LI-6,A)7-N-14,PAR,DA)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -80,11 +75,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Fig.3"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Fig.3"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-12(3-LI-6,A)7-N-14,PAR,DA,,REL)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "3-LI-6,A"
+              ],
+              "7-N-14,PAR,DA,,REL"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "3-LI-6,A",
+            "sf49": "7-N-14,PAR,DA,,REL",
+            "sf4": "7-N-14",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Fig.4"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-12(3-LI-6,A)7-N-14,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "3-LI-6,A"
+              ],
+              "7-N-14,PAR,SIG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "3-LI-6,A",
+            "sf49": "7-N-14,PAR,SIG",
+            "sf4": "7-N-14",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " fig.6"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -385,32 +443,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(3-LI-6,A)7-N-14,PAR,DA,,REL)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "3-LI-6,A"
-              ],
-              "7-N-14,PAR,DA,,REL"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "3-LI-6,A",
-            "sf49": "7-N-14,PAR,DA,,REL",
-            "sf4": "7-N-14",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Fig.4"
-        }
-      },
       "common": {
         "heads": [
           "E-LVL",
@@ -647,32 +679,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(3-LI-6,A)7-N-14,PAR,SIG)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "3-LI-6,A"
-              ],
-              "7-N-14,PAR,SIG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "3-LI-6,A",
-            "sf49": "7-N-14,PAR,SIG",
-            "sf4": "7-N-14",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " fig.6"
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -851,18 +857,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
               ".Hauser-Feshbach calculations."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -875,10 +879,8 @@
               "sections."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -891,10 +893,8 @@
               "elastically scattered Li-6 ions."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -904,28 +904,22 @@
               "transitions."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM,2GERBOC)",
             "free_txt": [
               "  Dynamitron Tandem accelerator."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(SITA)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -933,10 +927,8 @@
               " 60 mug/cm**2, was used."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -947,16 +939,14 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL,7-N-14)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
@@ -969,10 +959,8 @@
               ".Digitizing error of data."
             ]
           }
-        ]
-      },
-      "level-prop": {
-        "0": [
+        ],
+        "level-prop": [
           {
             "x4_code": "(7-N-14,E-LVL=0.00,SPIN=1.0,PARITY=+1.)",
             "free_txt": []
@@ -989,26 +977,22 @@
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL,7-N-14)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ANG-ERR-D)",
             "free_txt": [
               ".Digitizing error of angle."
             ]
           }
-        ]
-      },
-      "level-prop": {
-        "0": [
+        ],
+        "level-prop": [
           {
             "x4_code": "(7-N-14,E-LVL=2.31,SPIN=0.0,PARITY=+1.)",
             "free_txt": []
@@ -1017,8 +1001,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTAD)",
             "free_txt": [
@@ -1028,18 +1012,14 @@
               "Legendre polynomial expansion."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E-LVL,7-N-14)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
@@ -1058,10 +1038,8 @@
               ".Error from the graphic bars"
             ]
           }
-        ]
-      },
-      "level-prop": {
-        "0": [
+        ],
+        "level-prop": [
           {
             "x4_code": "(7-N-14,E-LVL=0.00,SPIN=1.0,PARITY=+1.)",
             "free_txt": []

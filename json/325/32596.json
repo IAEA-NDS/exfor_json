@@ -51,58 +51,56 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CST,27,174,1993)",
-          "free_txt": [],
-          "publication_year": "1993"
-        },
-        {
-          "x4_code": "(J,JRN,227,15,1998)",
-          "free_txt": [
-            " Same data given for both reactions"
-          ],
-          "publication_year": "1998"
-        },
-        {
-          "x4_code": "((R,INDC(CPR)-036,5,1995)=(J,CNDP,14,5,1995))",
-          "free_txt": [
-            "Same data given for both reactions"
-          ],
-          "publication_year": "1995"
-        },
-        {
-          "x4_code": "(J,CNP,19,(1),35,1997)",
-          "free_txt": [
-            "Different data for 179Hf(n,2n)178Hfm2 given"
-          ],
-          "publication_year": "1997"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(NGEN,3CPRLNZ)",
-          "free_txt": [
-            " ZF-300-II intense neutron generator"
-          ],
-          "facility_type": "(NGEN)",
-          "institute": "(3CPRLNZ)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CST,27,174,1993)",
+        "free_txt": [],
+        "publication_year": "1993",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JRN,227,15,1998)",
+        "free_txt": [
+          " Same data given for both reactions"
+        ],
+        "publication_year": "1998",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((R,INDC(CPR)-036,5,1995)=(J,CNDP,14,5,1995))",
+        "free_txt": [
+          "Same data given for both reactions"
+        ],
+        "publication_year": "1995",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,CNP,19,(1),35,1997)",
+        "free_txt": [
+          "Different data for 179Hf(n,2n)178Hfm2 given"
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(NGEN,3CPRLNZ)",
+        "free_txt": [
+          " ZF-300-II intense neutron generator"
+        ],
+        "pointer": "0",
+        "facility_type": "(NGEN)",
+        "institute": "(3CPRLNZ)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(72-HF-179(N,2N)72-HF-178-M2,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(72-HF-179(N,2N)72-HF-178-M2,,SIG)",
+        "children": [
+          {
             "code": [
               "72-HF-179",
               [
@@ -120,11 +118,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(83-BI-209(N,2N)83-BI-208,,SIG)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "N,2N"
+              ],
+              "83-BI-208,,SIG"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "N,2N",
+            "sf49": "83-BI-208,,SIG",
+            "sf4": "83-BI-208",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MONIT-ERR",
@@ -203,32 +236,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(N,2N)83-BI-208,,SIG)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "N,2N"
-              ],
-              "83-BI-208,,SIG"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "N,2N",
-            "sf49": "83-BI-208,,SIG",
-            "sf4": "83-BI-208",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "MONIT-ERR",
@@ -309,8 +316,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -324,18 +331,14 @@
               "    gamma line.)"
             ]
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(41-NB-92-M,10.15D,DG,934.,0.99)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -344,20 +347,16 @@
               "  3 keV at 1.33 MeV)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(NGEN,3CPRLNZ)",
             "free_txt": [
               " ZF-300-II intense neutron generator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
@@ -367,28 +366,22 @@
               " section ratio method."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
               " Irradiated for 12 hr"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,Zhao Wenrong+,R,INDC(CPR)-16,1989)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(41-NB-93(N,2N)41-NB-92-M,,SIG)",
             "free_txt": [
@@ -400,8 +393,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -409,20 +402,16 @@
               " The CNP article reports 6.04 +/- 0.32 mb at 14.60 MeV."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(72-HF-178-M2,31.YR,DG,574.,0.837)",
             "free_txt": [
               " 494.988 keV gamma line (68.9%) also in the CST article"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -477,10 +466,8 @@
               " Neutron scattering                       (4.0%)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(72-HF-179,NAT=0.13629)",
             "free_txt": [
@@ -489,10 +476,8 @@
               " monitor foils."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -503,16 +488,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(83-BI-208,3.68E+5YR,DG,2614.,0.9979)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -567,10 +550,8 @@
               " Neutron scattering                       (0.5%)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -578,10 +559,8 @@
               " diam. sandwiched between two monitor foils."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

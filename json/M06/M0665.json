@@ -1,15 +1,22 @@
 {
   "entry": "M0665",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2022-11-08",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20050218C)",
       "free_txt": []
+    },
+    {
+      "x4_code": "(20220816A)",
+      "free_txt": [
+        " Corrected by VV and SD: INSTITUTE updated,",
+        " INC-SOURCE, DATA, STATUS."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Fission of 27Al nucleus by 69 MEV monochromatic pho- tons.",
+    "title": "Fission of 27Al nucleus by 69 MeV monochromatic photons.",
     "authors": [
       {
         "name": "O.A.P.Tavares"
@@ -39,7 +46,7 @@
         "name": "C.Schaerf"
       },
       {
-        "name": "J.B.Girolami"
+        "name": "B.Girolami"
       },
       {
         "name": "F.Ghio"
@@ -54,7 +61,11 @@
         "free_txt": ""
       },
       {
-        "x4_code": "(2ITYROM)",
+        "x4_code": "(2ITYUTV)",
+        "free_txt": ""
+      },
+      {
+        "x4_code": "(2ITYISR)",
         "free_txt": ""
       },
       {
@@ -62,37 +73,88 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JP/G,19,2145,1993)",
-          "free_txt": [],
-          "publication_year": "1993"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ESTRG,2ITYFRA)",
-          "free_txt": [
-            " Electron storage ring ADONE."
-          ],
-          "facility_type": "(ESTRG)",
-          "institute": "(2ITYFRA)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JP/G,19,2145,1993)",
+        "free_txt": [],
+        "publication_year": "1993",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ESTRG,2ITYFRA)",
+        "free_txt": [
+          " Electron storage ring ADONE."
+        ],
+        "pointer": "0",
+        "facility_type": "(ESTRG)",
+        "institute": "(2ITYFRA)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(G,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(13-AL-27(G,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "13-AL-27",
+              [
+                "G,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "13-AL-27",
+            "process": "G,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(13-AL-27(G,ABS),,SIG)",
+        "children": [
+          {
+            "code": [
+              "13-AL-27",
+              [
+                "G,ABS"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "13-AL-27",
+            "process": "G,ABS",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((13-AL-27(G,F),,SIG)/(13-AL-27(G,ABS),,SIG))",
+        "children": [
+          {
             "code": [
               "13-AL-27",
               [
@@ -111,10 +173,36 @@
             "sf8": null,
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "13-AL-27",
+              [
+                "G,ABS"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "13-AL-27",
+            "process": "G,ABS",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -141,32 +229,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(G,ABS),,SIG)",
-          "0": {
-            "code": [
-              "13-AL-27",
-              [
-                "G,ABS"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "13-AL-27",
-            "process": "G,ABS",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -176,8 +238,8 @@
         ],
         "units": [
           "MEV",
-          "MICRO-B",
-          "MICRO-B"
+          "MB",
+          "MB"
         ],
         "data": [
           [
@@ -193,51 +255,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((13-AL-27(G,F),,SIG)/(13-AL-27(G,ABS),,SIG))",
-          "0": {
-            "code": [
-              "13-AL-27",
-              [
-                "G,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "13-AL-27",
-            "process": "G,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "13-AL-27",
-              [
-                "G,ABS"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "13-AL-27",
-            "process": "G,ABS",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -266,133 +283,139 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
-              "The measured  photofission  yield  was converted into",
-              " absolutr photofission cross section by  summing  the",
-              " contributions  to  fission events due to all photons",
-              " of energy between  the  photofission  threshold  and",
-              " end-point  energy in energy spectrum of the incident",
+              "The measured photofission yield was converted into",
+              " absolute photofission cross section by summing the",
+              " contributions to fission events due to all photons of",
+              " energy between the photofission threshold and",
+              " end-point energy in energy spectrum of the incident",
               " photons."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
-              "Monochromatic photon  beams   have   been   used   to",
-              " investigate  the photofission of 27Al at 69 MeV with",
-              " plastic  nuclear-track   detectors.   The   measured",
-              " fissility  was found to be 5.7 (1.6) x 10**-2.  This",
-              " result,  along with the available data for 154Sm and",
-              " 174Yb  nuclei  taken  at  the same energy,  has been",
+              "Monochromatic photon beams have been used to",
+              " investigate the photofission of 27Al at 69 MeV with",
+              " plastic nuclear-track detectors. The measured",
+              " fissility was found to be 5.7 (1.6) x 10**(-2). This",
+              " result, along with the available data for 154Sm and",
+              " 174Yb nuclei taken at the same energy, has been",
               " interpreted within the framework of a two-step model",
-              " for  the  photofission  reaction.  According to this",
-              " model  the  incoming  photon  is  concidered  to  be",
+              " for the photofission reaction. According to this",
+              " model the incoming photon is considered to be",
               " absorbed by a neutron-proton pair, and then followed",
-              " by  an  evaporation-fission  competition   for   the",
-              " excited  residual  nucleus.  The  measured fissility",
-              " values are seen to be in satisfactory agreement with",
-              " the  calculated  ones,  and the predictions from the",
-              " model are confirmed,  specially  in  the  region  of",
-              " light fissioning systems."
+              " by an evaporation-fission competition for the excited",
+              " residual nucleus. The measured fissility values are",
+              " seen to be in satisfactory agreement with the",
+              " calculated ones, and the predictions from the model",
+              " are confirmed, specially in the region of light",
+              " fissioning systems."
             ]
           }
-        ]
-      },
-      "critique": {
-        "0": [
+        ],
+        "critique": [
           {
             "x4_code": null,
             "free_txt": [
-              "There  is  the discrepancy between  fissility data in",
-              " article text - 5.7 (1.6) and abstract - 5.7 (1.1))"
+              "There is the discrepancy between fissility data in",
+              " article text - 5.7 (1.6) and abstract - 5.7 (1.1))."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": [
               " Makrofol."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              "Sum of statistical ans sistematic errors."
+              " Sum of statistical and systematic errors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ESTRG,2ITYFRA)",
             "free_txt": [
               " Electron storage ring ADONE."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
-            "x4_code": "(MPH,COMPT)",
+            "x4_code": "(LCS)",
             "free_txt": [
-              " Scattering of laser  light  by  the  high",
-              " energy  electrons  circulating  in the ADONE storage",
-              " ring."
+              " Scattering of laser light by the high energy",
+              "electrons circulating in the ADONE storage ring."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(FISCT)",
             "free_txt": [
               " Optical microscopy."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "Stacks of  aluminium  foils  in  close  contact  with",
-              " makrofol plastic track detectors."
-            ]
-          }
-        ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              " The data were published in digital form."
+              "Stacks of aluminium foils in close contact with",
+              "Makrofol plastic track detectors."
             ]
           }
         ]
       }
     },
-    "002": {},
-    "003": {},
-    "004": {}
+    "002": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Data from Table 3 of Phys.,G19(1993)2145."
+            ]
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Data from Table 3 of Phys.,G19(1993)2145."
+            ]
+          }
+        ]
+      }
+    },
+    "004": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Data from Table 3 of Phys.,G19(1993)2145."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

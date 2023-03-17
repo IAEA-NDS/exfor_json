@@ -92,60 +92,57 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,709,(1-4),103,200210)",
-          "free_txt": [
-            " Main reference",
-            "Title and authors are coded under TITLE and AUTHOR."
-          ],
-          "publication_year": "2002"
-        },
-        {
-          "x4_code": "(J,NP/A,738,(1-4),38,200406)",
-          "free_txt": [
-            "A.Ozawa+, Proc. of the 8th International Conference on",
-            "Clustering Aspects of Nuclear Structure and Dynamics",
-            " (CLUSTER'03)"
-          ],
-          "publication_year": "2004"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2JPNIPC)",
-          "free_txt": [
-            " 22Ne primary beam that was accelerated",
-            "                to about 110 AMeV by the RIKEN Ring",
-            "                Cyclotron (RRC)."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2JPNIPC)"
-        },
-        {
-          "x4_code": "(PRJFS,2JPNIPC)",
-          "free_txt": [
-            " Secondary 12,16C beams were produced",
-            "                via the projectile fragmentation."
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(2JPNIPC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,709,(1-4),103,200210)",
+        "free_txt": [
+          " Main reference",
+          "Title and authors are coded under TITLE and AUTHOR."
+        ],
+        "publication_year": "2002",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,738,(1-4),38,200406)",
+        "free_txt": [
+          "A.Ozawa+, Proc. of the 8th International Conference on",
+          "Clustering Aspects of Nuclear Structure and Dynamics",
+          " (CLUSTER'03)"
+        ],
+        "publication_year": "2004",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2JPNIPC)",
+        "free_txt": [
+          " 22Ne primary beam that was accelerated",
+          "                to about 110 AMeV by the RIKEN Ring",
+          "                Cyclotron (RRC)."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2JPNIPC)"
+      },
+      {
+        "x4_code": "(PRJFS,2JPNIPC)",
+        "free_txt": [
+          " Secondary 12,16C beams were produced",
+          "                via the projectile fragmentation."
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2JPNIPC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-0(6-C-16,NON),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-0(6-C-16,NON),,SIG)",
+        "children": [
+          {
             "code": [
               "6-C-0",
               [
@@ -163,11 +160,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-0(6-C-12,NON),,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-0",
+              [
+                "6-C-12,NON"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "6-C-0",
+            "process": "6-C-12,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -201,32 +233,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-0(6-C-12,NON),,SIG)",
-          "0": {
-            "code": [
-              "6-C-0",
-              [
-                "6-C-12,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "6-C-0",
-            "process": "6-C-12,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -262,8 +268,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -272,10 +278,8 @@
               "subtracted from the total number of 16C."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -305,20 +309,16 @@
               " Used to monitor beam size and transmission"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2JPNIPC)",
             "free_txt": [
@@ -334,10 +334,8 @@
               "                via the projectile fragmentation."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": [
@@ -350,10 +348,8 @@
               " to particle identification"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -368,8 +364,8 @@
       }
     },
     "002": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -379,10 +375,8 @@
               "       2. Glauber approximation"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -391,18 +385,14 @@
               "and the outgoing energy was 80 AMeV"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(6-C-16)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -413,16 +403,14 @@
       }
     },
     "003": {
-      "part-det": {
-        "0": [
+      "0": {
+        "part-det": [
           {
             "x4_code": "(6-C-12)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

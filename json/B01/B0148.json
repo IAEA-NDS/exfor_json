@@ -60,37 +60,32 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ARI,29,29,1978)",
-          "free_txt": [],
-          "publication_year": "1978"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCY,2UK HAR)",
-          "free_txt": [
-            ".Incident Proton Energy 159.5+-0.5 MeV"
-          ],
-          "facility_type": "(SYNCY)",
-          "institute": "(2UK HAR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ARI,29,29,1978)",
+        "free_txt": [],
+        "publication_year": "1978",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCY,2UK HAR)",
+        "free_txt": [
+          ".Incident Proton Energy 159.5+-0.5 MeV"
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCY)",
+        "institute": "(2UK HAR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(53-I-127(P,5N)54-XE-123,,SIG,,,EXP)",
-          "0": {
+      "0": {
+        "x4_code": "(53-I-127(P,5N)54-XE-123,,SIG,,,EXP)",
+        "children": [
+          {
             "code": [
               "53-I-127",
               [
@@ -108,11 +103,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": "EXP"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(53-I-127(P,3N)54-XE-125-G,M+,SIG,,,EXP)",
+        "children": [
+          {
+            "code": [
+              "53-I-127",
+              [
+                "P,3N"
+              ],
+              "54-XE-125-G,M+,SIG,,,EXP"
+            ],
+            "type": null,
+            "target": "53-I-127",
+            "process": "P,3N",
+            "sf49": "54-XE-125-G,M+,SIG,,,EXP",
+            "sf4": "54-XE-125-G",
+            "sf5": "M+",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "EXP"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(53-I-127(P,7N)54-XE-121,,SIG,,,EXP)",
+        "children": [
+          {
+            "code": [
+              "53-I-127",
+              [
+                "P,7N"
+              ],
+              "54-XE-121,,SIG,,,EXP"
+            ],
+            "type": null,
+            "target": "53-I-127",
+            "process": "P,7N",
+            "sf49": "54-XE-121,,SIG,,,EXP",
+            "sf4": "54-XE-121",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "EXP"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -216,32 +274,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(53-I-127(P,3N)54-XE-125-G,M+,SIG,,,EXP)",
-          "0": {
-            "code": [
-              "53-I-127",
-              [
-                "P,3N"
-              ],
-              "54-XE-125-G,M+,SIG,,,EXP"
-            ],
-            "type": null,
-            "target": "53-I-127",
-            "process": "P,3N",
-            "sf49": "54-XE-125-G,M+,SIG,,,EXP",
-            "sf4": "54-XE-125-G",
-            "sf5": "M+",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EXP"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -313,32 +345,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(53-I-127(P,7N)54-XE-121,,SIG,,,EXP)",
-          "0": {
-            "code": [
-              "53-I-127",
-              [
-                "P,7N"
-              ],
-              "54-XE-121,,SIG,,,EXP"
-            ],
-            "type": null,
-            "target": "53-I-127",
-            "process": "P,7N",
-            "sf49": "54-XE-121,,SIG,,,EXP",
-            "sf4": "54-XE-121",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EXP"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -409,8 +415,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -422,10 +428,8 @@
               "I-127(P,5N) Reaction."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -436,10 +440,8 @@
               "Target was Calculated to be Negligible."
             ]
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(6-C-11,20.29MIN,AR,511.)",
             "free_txt": [
@@ -447,30 +449,24 @@
               "Monitor Foils were Very Small."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               ".Resolution 3 KeV at 149 KeV."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCY,2UK HAR)",
             "free_txt": [
               ".Incident Proton Energy 159.5+-0.5 MeV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB,STTA,EDEG,MOSEP)",
             "free_txt": [
@@ -480,10 +476,8 @@
               "Publ.1133,Nat.Acad.Sci.Washington D.C.,P.103(1964)."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(B0095002,J.B.CUMMING,J,NP,49,417,1963)",
             "free_txt": []
@@ -492,18 +486,14 @@
             "x4_code": "(B0149002,D.F.MEASDAY,J,NP,78,476,1966)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(6-C-12(P,X)6-C-11,,SIG,,,EXP)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -513,10 +503,8 @@
               "G/Cm**2 Thickness."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -527,8 +515,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(54-XE-123,1.99HR,DG,149.,0.50)",
             "free_txt": [
@@ -536,10 +524,8 @@
               "From Present Measurements and from the Literature."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -561,10 +547,8 @@
               "MeV at 60 MeV and +-0.5 at 160 MeV."
             ]
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(54-XE-123,DG)",
             "free_txt": []
@@ -573,8 +557,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(54-XE-125-G,16.8HR,DG,188.,0.55)",
             "free_txt": [
@@ -582,10 +566,8 @@
               "From Present Measurements and from the Literature."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -606,10 +588,8 @@
               "MeV at 60 MeV and +-0.5 at 160 MeV."
             ]
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(54-XE-125-G,DG)",
             "free_txt": []
@@ -618,8 +598,8 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(54-XE-121,30.0MIN,DG,133.,0.114)",
             "free_txt": [
@@ -631,10 +611,8 @@
               "0.843."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -650,10 +628,8 @@
               "60 MeV and +-0.5 at 160 MeV."
             ]
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(54-XE-121,DG)",
             "free_txt": []

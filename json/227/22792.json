@@ -41,39 +41,34 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,EN,20,691,1973)",
-          "free_txt": [
-            " Main ref., data tables are given"
-          ],
-          "publication_year": "1973"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2ITYMIP)",
-          "free_txt": [
-            "  L54 reactor at CESNEF"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2ITYMIP)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,EN,20,691,1973)",
+        "free_txt": [
+          " Main ref., data tables are given"
+        ],
+        "publication_year": "1973",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2ITYMIP)",
+        "free_txt": [
+          "  L54 reactor at CESNEF"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2ITYMIP)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -91,11 +86,93 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((90-TH-232(N,F)ELEM/MASS,CUM,FY,,FST)/(92-U-235(N,F)56-BA-140,CUM,FY,,FST))",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,CUM,FY,,FST"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,CUM,FY,,FST",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "FST",
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "56-BA-140,CUM,FY,,FST"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "56-BA-140,CUM,FY,,FST",
+            "sf4": "56-BA-140",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "FST",
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(90-TH-232(N,F)ELEM/MASS,CUM,FY,,FST)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,CUM,FY,,FST"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,CUM,FY,,FST",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "FST",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -199,51 +276,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((90-TH-232(N,F)ELEM/MASS,CUM,FY,,FST)/(92-U-235(N,F)56-BA-140,CUM,FY,,FST))",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,FST"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,CUM,FY,,FST",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "FST",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "56-BA-140,CUM,FY,,FST"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "56-BA-140,CUM,FY,,FST",
-            "sf4": "56-BA-140",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "FST",
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -375,32 +407,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,F)ELEM/MASS,CUM,FY,,FST)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,FST"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,CUM,FY,,FST",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "FST",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY",
@@ -533,8 +539,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
@@ -542,20 +548,16 @@
               "  of gamma rays and half-lives of the fission products"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               ".Correction was made for self-absorption of gammas"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -563,30 +565,24 @@
               "        2.5 keV at 1330 keV gamma energy"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Standard uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2ITYMIP)",
             "free_txt": [
               "  L54 reactor at CESNEF"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
@@ -597,28 +593,24 @@
       }
     },
     "002": {
-      "inc-source": {
-        "0": [
+      "0": {
+        "inc-source": [
           {
             "x4_code": "(THCOL)",
             "free_txt": [
               "  Thermal column of the L54 reactor"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               ".Thermal Maxwellian"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -631,10 +623,8 @@
             "x4_code": "(92-U-235,ENR=0.93)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -645,8 +635,8 @@
       }
     },
     "003": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -666,30 +656,24 @@
               " Obtained with the help of gamma energy 1260.45 keV"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               "  Reactor core spectrum of L54 reactor"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               ".Neutron spectrum similar to that of fission"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(FNB)",
             "free_txt": [
@@ -699,10 +683,8 @@
               "  232Th neutron capture"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -710,10 +692,8 @@
               " wrapped in a 5 mg/cm2 thick aluminum foil"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -724,8 +704,8 @@
       }
     },
     "004": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -745,30 +725,24 @@
               " Obtained with the help of gamma energy 1260.45 keV"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               "  Reactor core spectrum of L54 reactor"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               ".Neutron spectrum similar to that of fission"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(FNB)",
             "free_txt": [
@@ -778,26 +752,20 @@
               "  232Th neutron capture"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,M.E.Meek+,R,NEDO-12154,1972)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(90-TH-232(N,F)56-BA-140,SEC,FY,,FST)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -805,10 +773,8 @@
               " wrapped in a 5 mg/cm2 thick aluminum foil"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

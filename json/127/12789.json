@@ -30,35 +30,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,388,37,8208)",
-          "free_txt": [],
-          "publication_year": "1982"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM)",
-          "free_txt": [
-            " ARGONNE FNG ACCELERATOR"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,388,37,8208)",
+        "free_txt": [],
+        "publication_year": "1982",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM)",
+        "free_txt": [
+          " ARGONNE FNG ACCELERATOR"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((48-CD-111(N,INL)48-CD-111-M,,SIG)/(48-CD-110(N,G)48-CD-111-M,,SIG))",
-          "0": {
+      "0": {
+        "x4_code": "((48-CD-111(N,INL)48-CD-111-M,,SIG)/(48-CD-110(N,G)48-CD-111-M,,SIG))",
+        "children": [
+          {
             "code": [
               "48-CD-111",
               [
@@ -77,7 +72,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "48-CD-110",
               [
@@ -95,11 +90,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(48-CD-110(N,G)48-CD-111-M,,SIG)",
+        "children": [
+          {
+            "code": [
+              "48-CD-110",
+              [
+                "N,G"
+              ],
+              "48-CD-111-M,,SIG"
+            ],
+            "type": null,
+            "target": "48-CD-110",
+            "process": "N,G",
+            "sf49": "48-CD-111-M,,SIG",
+            "sf4": "48-CD-111-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(48-CD-111(N,INL)48-CD-111-M,,SIG)",
+        "children": [
+          {
+            "code": [
+              "48-CD-111",
+              [
+                "N,INL"
+              ],
+              "48-CD-111-M,,SIG"
+            ],
+            "type": null,
+            "target": "48-CD-111",
+            "process": "N,INL",
+            "sf49": "48-CD-111-M,,SIG",
+            "sf4": "48-CD-111-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -183,32 +241,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(48-CD-110(N,G)48-CD-111-M,,SIG)",
-          "0": {
-            "code": [
-              "48-CD-110",
-              [
-                "N,G"
-              ],
-              "48-CD-111-M,,SIG"
-            ],
-            "type": null,
-            "target": "48-CD-110",
-            "process": "N,G",
-            "sf49": "48-CD-111-M,,SIG",
-            "sf4": "48-CD-111-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -292,32 +324,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(48-CD-111(N,INL)48-CD-111-M,,SIG)",
-          "0": {
-            "code": [
-              "48-CD-111",
-              [
-                "N,INL"
-              ],
-              "48-CD-111-M,,SIG"
-            ],
-            "type": null,
-            "target": "48-CD-111",
-            "process": "N,INL",
-            "sf49": "48-CD-111-M,,SIG",
-            "sf4": "48-CD-111-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -403,16 +409,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -444,46 +448,36 @@
               "SECTIONS."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM)",
             "free_txt": [
               " ARGONNE FNG ACCELERATOR"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "97.15 PCT ENRICHED 110-CD AND 95.96 PCT ENRICHED 111-CD"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [

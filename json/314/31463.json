@@ -1,7 +1,7 @@
 {
   "entry": "31463",
-  "last_updated": "2009-07-24",
-  "number_of_revisions": "4",
+  "last_updated": "2023-01-20",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19960819C)",
@@ -13,6 +13,12 @@
       "x4_code": "(20090515A)",
       "free_txt": [
         " On. REFERENCE: 97TRIEST added, COMMON moved"
+      ]
+    },
+    {
+      "x4_code": "(20220811U)",
+      "free_txt": [
+        " Jimin WANG: J,CNPR,16,31,1999 was added"
       ]
     }
   ],
@@ -50,61 +56,59 @@
     "institutes": [
       {
         "x4_code": "(3CPRTSI)",
-        "free_txt": [
-          " First four authors"
-        ]
+        "free_txt": ""
       },
       {
         "x4_code": "(3CPRBJG)",
-        "free_txt": [
-          " Next three authors"
-        ]
+        "free_txt": ""
       },
       {
         "x4_code": "(4ZZZDUB)",
-        "free_txt": [
-          " Last two authors"
-        ]
+        "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CNP,17,(2),167,1995)",
-          "free_txt": [],
-          "publication_year": "1995"
-        },
-        {
-          "x4_code": "(C,97TRIEST,1,514,199705)",
-          "free_txt": [
-            "Yu.M.Gledenov+, Same cross section given"
-          ],
-          "publication_year": "1997"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,3CPRBJG)",
-          "free_txt": [
-            " 4.5 MV Van de Graaff accelerator"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(3CPRBJG)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CNP,17,167,1995)",
+        "free_txt": [],
+        "publication_year": "1995",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,97TRIEST,1,514,1997)",
+        "free_txt": [
+          " Same cross section given"
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,CNPR,16,31,1999)",
+        "free_txt": [
+          " Same cross section given"
+        ],
+        "publication_year": "1999",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,3CPRBJG)",
+        "free_txt": [
+          " 4.5 MV Van de Graaff accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(3CPRBJG)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(30-ZN-64(N,A)28-NI-61,PAR,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(30-ZN-64(N,A)28-NI-61,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "30-ZN-64",
               [
@@ -122,11 +126,18 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -165,88 +176,70 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(ANGD)",
             "free_txt": [
               " Angular distribution (relative)"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
-              " Twin gridded ionization chamber, made at",
-              "       NLJINR, Dubna."
+              " Twin gridded ionization chamber made at JINR"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No error analysis given."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,3CPRBJG)",
             "free_txt": [
               " 4.5 MV Van de Graaff accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(PHD)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "BF3 long counter."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "Zn-64 isotope target with a diameter of 10 cm and a",
-              "thickness of 250 microgram/cm**2 mounted on one side",
-              "of the cathode in one of the two ionization chambers",
-              "of the detector."
+              "64Zn target (1cm diam, 250 ug/cm2) mounted on one",
+              " side of the cathode in one of the two ionization",
+              " chambers of the detector."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -1,7 +1,7 @@
 {
   "entry": "40504",
-  "last_updated": "2013-08-12",
-  "number_of_revisions": "5",
+  "last_updated": "2023-02-27",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19800102C)",
@@ -23,6 +23,14 @@
         " Corrections 95-AM-242-M2 -> 95-AM-242-L in",
         "Subents 002,009 according to the comment of N.Otsuka,",
         " NDS, IAEA."
+      ]
+    },
+    {
+      "x4_code": "(20221017A)",
+      "free_txt": [
+        " Subent 003 was corrected.",
+        " Minor correction of free text.",
+        " Ref. INDC(CCP)-099,5,245,1975 was added."
       ]
     }
   ],
@@ -51,37 +59,58 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,75KIEV,5,245,197506)",
-          "free_txt": [],
-          "publication_year": "1975"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,4ZZZDUB)",
-          "free_txt": [
-            " Neutron generator NG-200 of  4ZZZDUB"
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((C,75KIEV,5,245,1975)=(S,INDC(CCP)-099,(5),245,1975))",
+        "free_txt": [],
+        "publication_year": "1975",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,4ZZZDUB)",
+        "free_txt": [
+          " Neutron generator NG-200"
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(95-AM-241(N,G)95-AM-242-L,,SIG)",
-          "0": {
+      "1": {
+        "x4_code": "(95-AM-241(N,G)95-AM-242-L,,SIG)",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,G"
+              ],
+              "95-AM-242-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,G",
+            "sf49": "95-AM-242-L,,SIG",
+            "sf4": "95-AM-242-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Cross-section for                     fissionable isomer production"
+      },
+      "2": {
+        "x4_code": "((95-AM-241(N,G)95-AM-242-L,,SIG)/(95-AM-241(N,F),,SIG))",
+        "children": [
+          {
             "code": [
               "95-AM-241",
               [
@@ -100,31 +129,7 @@
             "sf8": null,
             "sf9": null
           },
-          "type": null,
-          "free_text": " Cross-section for                     fissionable isomer production"
-        },
-        "2": {
-          "x4_code": "((95-AM-241(N,G)95-AM-242-L,,SIG)/(95-AM-241(N,F),,SIG))",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,G"
-              ],
-              "95-AM-242-L,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,G",
-            "sf49": "95-AM-242-L,,SIG",
-            "sf4": "95-AM-242-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
+          {
             "code": [
               "95-AM-241",
               [
@@ -142,11 +147,748 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(95-AM-243(N,G)95-AM-244-L,,SIG)",
+        "children": [
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,G"
+              ],
+              "95-AM-244-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,G",
+            "sf49": "95-AM-244-L,,SIG",
+            "sf4": "95-AM-244-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Cross-section for                      fissionable isomer production"
       },
+      "2": {
+        "x4_code": "((95-AM-243(N,G)95-AM-244-L,,SIG)/(95-AM-243(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,G"
+              ],
+              "95-AM-244-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,G",
+            "sf49": "95-AM-244-L,,SIG",
+            "sf4": "95-AM-244-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "004": {
+      "1": {
+        "x4_code": "(92-U-238(N,INL)92-U-238-L,,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,INL"
+              ],
+              "92-U-238-L,,SIG"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,INL",
+            "sf49": "92-U-238-L,,SIG",
+            "sf4": "92-U-238-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Cross-section for                      fissionable isomer production"
+      },
+      "2": {
+        "x4_code": "((92-U-238(N,INL)92-U-238-L,,SIG)/(92-U-238(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,INL"
+              ],
+              "92-U-238-L,,SIG"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,INL",
+            "sf49": "92-U-238-L,,SIG",
+            "sf4": "92-U-238-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "005": {
+      "1": {
+        "x4_code": "(95-AM-243(N,INL)95-AM-243-L,,SIG)",
+        "children": [
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,INL"
+              ],
+              "95-AM-243-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,INL",
+            "sf49": "95-AM-243-L,,SIG",
+            "sf4": "95-AM-243-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Cross-section for                      fissionable isomer production"
+      },
+      "2": {
+        "x4_code": "((95-AM-243(N,INL)95-AM-243-L,,SIG)/(95-AM-243(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,INL"
+              ],
+              "95-AM-243-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,INL",
+            "sf49": "95-AM-243-L,,SIG",
+            "sf4": "95-AM-243-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "006": {
+      "1": {
+        "x4_code": "(94-PU-240(N,2N)94-PU-239-L,,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-240",
+              [
+                "N,2N"
+              ],
+              "94-PU-239-L,,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-240",
+            "process": "N,2N",
+            "sf49": "94-PU-239-L,,SIG",
+            "sf4": "94-PU-239-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Cross-section for                      fissionable isomer production"
+      },
+      "2": {
+        "x4_code": "((94-PU-240(N,2N)94-PU-239-L,,SIG)/(94-PU-240(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "94-PU-240",
+              [
+                "N,2N"
+              ],
+              "94-PU-239-L,,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-240",
+            "process": "N,2N",
+            "sf49": "94-PU-239-L,,SIG",
+            "sf4": "94-PU-239-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "94-PU-240",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-240",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "007": {
+      "1": {
+        "x4_code": "(94-PU-242(N,2N)94-PU-241-L,,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-242",
+              [
+                "N,2N"
+              ],
+              "94-PU-241-L,,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-242",
+            "process": "N,2N",
+            "sf49": "94-PU-241-L,,SIG",
+            "sf4": "94-PU-241-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Cross-section for                      fissionable isomer production"
+      },
+      "2": {
+        "x4_code": "((94-PU-242(N,2N)94-PU-241-L,,SIG)/(94-PU-242(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "94-PU-242",
+              [
+                "N,2N"
+              ],
+              "94-PU-241-L,,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-242",
+            "process": "N,2N",
+            "sf49": "94-PU-241-L,,SIG",
+            "sf4": "94-PU-241-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "94-PU-242",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-242",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "008": {
+      "1": {
+        "x4_code": "(95-AM-241(N,2N)95-AM-240-L,,SIG)",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,2N"
+              ],
+              "95-AM-240-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,2N",
+            "sf49": "95-AM-240-L,,SIG",
+            "sf4": "95-AM-240-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Cross-section for                      fissionable isomer production"
+      },
+      "2": {
+        "x4_code": "((95-AM-241(N,2N)95-AM-240-L,,SIG)/(95-AM-241(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,2N"
+              ],
+              "95-AM-240-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,2N",
+            "sf49": "95-AM-240-L,,SIG",
+            "sf4": "95-AM-240-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "009": {
+      "1": {
+        "x4_code": "(95-AM-243(N,2N)95-AM-242-L,,SIG)",
+        "children": [
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,2N"
+              ],
+              "95-AM-242-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,2N",
+            "sf49": "95-AM-242-L,,SIG",
+            "sf4": "95-AM-242-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Cross-section for                      fissionable isomer production"
+      },
+      "2": {
+        "x4_code": "((95-AM-243(N,2N)95-AM-242-L,,SIG)/(95-AM-243(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,2N"
+              ],
+              "95-AM-242-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,2N",
+            "sf49": "95-AM-242-L,,SIG",
+            "sf4": "95-AM-242-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "010": {
+      "1": {
+        "x4_code": "(94-PU-239(N,INL)94-PU-239-L,,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,INL"
+              ],
+              "94-PU-239-L,,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,INL",
+            "sf49": "94-PU-239-L,,SIG",
+            "sf4": "94-PU-239-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Cross-section for                      fissionable isomer production"
+      },
+      "2": {
+        "x4_code": "((94-PU-239(N,INL)94-PU-239-L,,SIG)/(94-PU-239(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,INL"
+              ],
+              "94-PU-239-L,,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,INL",
+            "sf49": "94-PU-239-L,,SIG",
+            "sf4": "94-PU-239-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "011": {
+      "1": {
+        "x4_code": "(95-AM-243(N,INL)95-AM-243-L,,SIG)",
+        "children": [
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,INL"
+              ],
+              "95-AM-243-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,INL",
+            "sf49": "95-AM-243-L,,SIG",
+            "sf4": "95-AM-243-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Cross-section for                      fissionable isomer production"
+      },
+      "2": {
+        "x4_code": "((95-AM-243(N,INL)95-AM-243-L,,SIG)/(95-AM-243(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,INL"
+              ],
+              "95-AM-243-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,INL",
+            "sf49": "95-AM-243-L,,SIG",
+            "sf4": "95-AM-243-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "012": {
+      "1": {
+        "x4_code": "(95-AM-241(N,INL)95-AM-241-L,,SIG)",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,INL"
+              ],
+              "95-AM-241-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,INL",
+            "sf49": "95-AM-241-L,,SIG",
+            "sf4": "95-AM-241-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Cross-section for                      fissionable isomer production"
+      },
+      "2": {
+        "x4_code": "((95-AM-241(N,INL)95-AM-241-L,,SIG)/(95-AM-241(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,INL"
+              ],
+              "95-AM-241-L,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,INL",
+            "sf49": "95-AM-241-L,,SIG",
+            "sf4": "95-AM-241-L",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -185,75 +927,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(95-AM-243(N,G)95-AM-244-M1,,SIG)",
-          "0": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,G"
-              ],
-              "95-AM-244-M1,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,G",
-            "sf49": "95-AM-244-M1,,SIG",
-            "sf4": "95-AM-244-M1",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Cross-section for                      fissionable isomer production"
-        },
-        "2": {
-          "x4_code": "((95-AM-243(N,G)95-AM-244-M1,,SIG)/(95-AM-243(N,F),,SIG))",
-          "0": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,G"
-              ],
-              "95-AM-244-M1,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,G",
-            "sf49": "95-AM-244-M1,,SIG",
-            "sf4": "95-AM-244-M1",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -292,75 +965,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "1": {
-          "x4_code": "(92-U-238(N,INL)92-U-238-L,,SIG)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,INL"
-              ],
-              "92-U-238-L,,SIG"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,INL",
-            "sf49": "92-U-238-L,,SIG",
-            "sf4": "92-U-238-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Cross-section for                      fissionable isomer production"
-        },
-        "2": {
-          "x4_code": "((92-U-238(N,INL)92-U-238-L,,SIG)/(92-U-238(N,F),,SIG))",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,INL"
-              ],
-              "92-U-238-L,,SIG"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,INL",
-            "sf49": "92-U-238-L,,SIG",
-            "sf4": "92-U-238-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -399,75 +1003,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "1": {
-          "x4_code": "(95-AM-243(N,INL)95-AM-243-L,,SIG)",
-          "0": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,INL"
-              ],
-              "95-AM-243-L,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,INL",
-            "sf49": "95-AM-243-L,,SIG",
-            "sf4": "95-AM-243-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Cross-section for                      fissionable isomer production"
-        },
-        "2": {
-          "x4_code": "((95-AM-243(N,INL)95-AM-243-L,,SIG)/(95-AM-243(N,F),,SIG))",
-          "0": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,INL"
-              ],
-              "95-AM-243-L,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,INL",
-            "sf49": "95-AM-243-L,,SIG",
-            "sf4": "95-AM-243-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -506,75 +1041,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "1": {
-          "x4_code": "(94-PU-240(N,2N)94-PU-239-L,,SIG)",
-          "0": {
-            "code": [
-              "94-PU-240",
-              [
-                "N,2N"
-              ],
-              "94-PU-239-L,,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-240",
-            "process": "N,2N",
-            "sf49": "94-PU-239-L,,SIG",
-            "sf4": "94-PU-239-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Cross-section for                      fissionable isomer production"
-        },
-        "2": {
-          "x4_code": "((94-PU-240(N,2N)94-PU-239-L,,SIG)/(94-PU-240(N,F),,SIG))",
-          "0": {
-            "code": [
-              "94-PU-240",
-              [
-                "N,2N"
-              ],
-              "94-PU-239-L,,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-240",
-            "process": "N,2N",
-            "sf49": "94-PU-239-L,,SIG",
-            "sf4": "94-PU-239-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "94-PU-240",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-240",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -613,75 +1079,6 @@
       }
     },
     "007": {
-      "reaction": {
-        "1": {
-          "x4_code": "(94-PU-242(N,2N)94-PU-241-L,,SIG)",
-          "0": {
-            "code": [
-              "94-PU-242",
-              [
-                "N,2N"
-              ],
-              "94-PU-241-L,,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-242",
-            "process": "N,2N",
-            "sf49": "94-PU-241-L,,SIG",
-            "sf4": "94-PU-241-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Cross-section for                      fissionable isomer production"
-        },
-        "2": {
-          "x4_code": "((94-PU-242(N,2N)94-PU-241-L,,SIG)/(94-PU-242(N,F),,SIG))",
-          "0": {
-            "code": [
-              "94-PU-242",
-              [
-                "N,2N"
-              ],
-              "94-PU-241-L,,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-242",
-            "process": "N,2N",
-            "sf49": "94-PU-241-L,,SIG",
-            "sf4": "94-PU-241-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "94-PU-242",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-242",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -720,75 +1117,6 @@
       }
     },
     "008": {
-      "reaction": {
-        "1": {
-          "x4_code": "(95-AM-241(N,2N)95-AM-240-L,,SIG)",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,2N"
-              ],
-              "95-AM-240-L,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,2N",
-            "sf49": "95-AM-240-L,,SIG",
-            "sf4": "95-AM-240-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Cross-section for                      fissionable isomer production"
-        },
-        "2": {
-          "x4_code": "((95-AM-241(N,2N)95-AM-240-L,,SIG)/(95-AM-241(N,F),,SIG))",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,2N"
-              ],
-              "95-AM-240-L,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,2N",
-            "sf49": "95-AM-240-L,,SIG",
-            "sf4": "95-AM-240-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -827,75 +1155,6 @@
       }
     },
     "009": {
-      "reaction": {
-        "1": {
-          "x4_code": "(95-AM-243(N,2N)95-AM-242-L,,SIG)",
-          "0": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,2N"
-              ],
-              "95-AM-242-L,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,2N",
-            "sf49": "95-AM-242-L,,SIG",
-            "sf4": "95-AM-242-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Cross-section for                      fissionable isomer production"
-        },
-        "2": {
-          "x4_code": "((95-AM-243(N,2N)95-AM-242-L,,SIG)/(95-AM-243(N,F),,SIG))",
-          "0": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,2N"
-              ],
-              "95-AM-242-L,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,2N",
-            "sf49": "95-AM-242-L,,SIG",
-            "sf4": "95-AM-242-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -934,75 +1193,6 @@
       }
     },
     "010": {
-      "reaction": {
-        "1": {
-          "x4_code": "(94-PU-239(N,INL)94-PU-239-L,,SIG)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,INL"
-              ],
-              "94-PU-239-L,,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,INL",
-            "sf49": "94-PU-239-L,,SIG",
-            "sf4": "94-PU-239-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Cross-section for                      fissionable isomer production"
-        },
-        "2": {
-          "x4_code": "((94-PU-239(N,INL)94-PU-239-L,,SIG)/(94-PU-239(N,F),,SIG))",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,INL"
-              ],
-              "94-PU-239-L,,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,INL",
-            "sf49": "94-PU-239-L,,SIG",
-            "sf4": "94-PU-239-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1034,75 +1224,6 @@
       }
     },
     "011": {
-      "reaction": {
-        "1": {
-          "x4_code": "(95-AM-243(N,INL)95-AM-243-L,,SIG)",
-          "0": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,INL"
-              ],
-              "95-AM-243-L,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,INL",
-            "sf49": "95-AM-243-L,,SIG",
-            "sf4": "95-AM-243-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Cross-section for                      fissionable isomer production"
-        },
-        "2": {
-          "x4_code": "((95-AM-243(N,INL)95-AM-243-L,,SIG)/(95-AM-243(N,F),,SIG))",
-          "0": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,INL"
-              ],
-              "95-AM-243-L,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,INL",
-            "sf49": "95-AM-243-L,,SIG",
-            "sf4": "95-AM-243-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1134,75 +1255,6 @@
       }
     },
     "012": {
-      "reaction": {
-        "1": {
-          "x4_code": "(95-AM-241(N,INL)95-AM-241-L,,SIG)",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,INL"
-              ],
-              "95-AM-241-L,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,INL",
-            "sf49": "95-AM-241-L,,SIG",
-            "sf4": "95-AM-241-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Cross-section for                      fissionable isomer production"
-        },
-        "2": {
-          "x4_code": "((95-AM-241(N,INL)95-AM-241-L,,SIG)/(95-AM-241(N,F),,SIG))",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,INL"
-              ],
-              "95-AM-241-L,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,INL",
-            "sf49": "95-AM-241-L,,SIG",
-            "sf4": "95-AM-241-L",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1236,8 +1288,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1247,10 +1299,8 @@
               "and references are not given."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(MWSC)",
             "free_txt": [
@@ -1260,10 +1310,8 @@
               " as Am-241, Pu-240 and so on."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1272,20 +1320,16 @@
               " for other reactions -50 percents"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,4ZZZDUB)",
             "free_txt": [
-              " Neutron generator NG-200 of  4ZZZDUB"
+              " Neutron generator NG-200"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": []
@@ -1294,58 +1338,51 @@
             "x4_code": "(D-D)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(FISCT)",
             "free_txt": [
               " Fission events counting at beam on and beam off"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(FF)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               " No information."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table of C,75KIEV,5,245,1975"
+              " Table of C,75KIEV,5,245,1975;",
+              " data uncertainties - text page 247."
             ]
           }
         ]
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(95-AM-242-L,1.4E-2SEC)",
             "free_txt": []
           }
         ]
       },
-      "monitor": {
-        "1": [
+      "1": {
+        "monitor": [
           {
             "x4_code": "(95-AM-241(N,F),,SIG)",
             "free_txt": []
@@ -1354,16 +1391,16 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
-            "x4_code": "(95-AM-244-M1,1.1E-3SEC)",
+            "x4_code": "(95-AM-244-L,1.1E-3SEC)",
             "free_txt": []
           }
         ]
       },
-      "monitor": {
-        "1": [
+      "1": {
+        "monitor": [
           {
             "x4_code": "(95-AM-243(N,F),,SIG)",
             "free_txt": []
@@ -1372,16 +1409,16 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(92-U-238-L,3.0E-7SEC)",
             "free_txt": []
           }
         ]
       },
-      "monitor": {
-        "1": [
+      "1": {
+        "monitor": [
           {
             "x4_code": "(92-U-238(N,F),,SIG)",
             "free_txt": []
@@ -1390,16 +1427,16 @@
       }
     },
     "005": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(95-AM-243-L,6.5E-6SEC)",
             "free_txt": []
           }
         ]
       },
-      "monitor": {
-        "1": [
+      "1": {
+        "monitor": [
           {
             "x4_code": "(95-AM-243(N,F),,SIG)",
             "free_txt": []
@@ -1408,16 +1445,16 @@
       }
     },
     "006": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(94-PU-239-L,8.5E-6SEC)",
             "free_txt": []
           }
         ]
       },
-      "monitor": {
-        "1": [
+      "1": {
+        "monitor": [
           {
             "x4_code": "(94-PU-240(N,F),,SIG)",
             "free_txt": []
@@ -1426,16 +1463,16 @@
       }
     },
     "007": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(94-PU-241-L,2.7E-5SEC)",
             "free_txt": []
           }
         ]
       },
-      "monitor": {
-        "1": [
+      "1": {
+        "monitor": [
           {
             "x4_code": "(94-PU-242(N,F),,SIG)",
             "free_txt": []
@@ -1444,16 +1481,16 @@
       }
     },
     "008": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(95-AM-240-L,0.9E-3SEC)",
             "free_txt": []
           }
         ]
       },
-      "monitor": {
-        "1": [
+      "1": {
+        "monitor": [
           {
             "x4_code": "(95-AM-241(N,F),,SIG)",
             "free_txt": []
@@ -1462,16 +1499,16 @@
       }
     },
     "009": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(95-AM-242-L,1.4E-2SEC)",
             "free_txt": []
           }
         ]
       },
-      "monitor": {
-        "1": [
+      "1": {
+        "monitor": [
           {
             "x4_code": "(95-AM-243(N,F),,SIG)",
             "free_txt": []
@@ -1480,16 +1517,16 @@
       }
     },
     "010": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(94-PU-239-L,8.5E-6SEC)",
             "free_txt": []
           }
         ]
       },
-      "monitor": {
-        "1": [
+      "1": {
+        "monitor": [
           {
             "x4_code": "(94-PU-239(N,F),,SIG)",
             "free_txt": []
@@ -1498,16 +1535,16 @@
       }
     },
     "011": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(95-AM-243-L,6.5E-6SEC)",
             "free_txt": []
           }
         ]
       },
-      "monitor": {
-        "1": [
+      "1": {
+        "monitor": [
           {
             "x4_code": "(95-AM-243(N,F),,SIG)",
             "free_txt": []
@@ -1516,16 +1553,16 @@
       }
     },
     "012": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(95-AM-241-L,1.5E-6SEC)",
             "free_txt": []
           }
         ]
       },
-      "monitor": {
-        "1": [
+      "1": {
+        "monitor": [
           {
             "x4_code": "(95-AM-241(N,F),,SIG)",
             "free_txt": []

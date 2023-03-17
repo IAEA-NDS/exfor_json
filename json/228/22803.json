@@ -83,46 +83,76 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,705,(3-4),265,2002)",
-          "free_txt": [
-            "  Main reference, data given"
-          ],
-          "publication_year": "2002"
-        },
-        {
-          "x4_code": "((T,REIMER,20011013)=(R,JUEL-3986,20011013))",
-          "free_txt": [
-            "  The",
-            "  Manuscript of the Thesis. Full description of the",
-            "  experiment and data Table."
-          ],
-          "publication_year": "2001"
-        },
-        {
-          "x4_code": "(J,NSTS,2,(1),192,200208)",
-          "free_txt": [],
-          "publication_year": "2002"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2ZZZGEL)",
-          "free_txt": [
-            " 7-MV Van de Graaff Accelerator,",
-            " Neutron Physics Unit, Institute For Reference",
-            " Materials and Measurements, Geel, Belgium.",
-            " Deuterium beam current is aprx 15 micro-A,",
-            " beam energy is 4 MeV ."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,NP/A,705,(3-4),265,2002)",
+        "free_txt": [
+          "  Main reference, data given"
+        ],
+        "publication_year": "2002",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((T,REIMER,20011013)=(R,JUEL-3986,20011013))",
+        "free_txt": [
+          "  The",
+          "  Manuscript of the Thesis. Full description of the",
+          "  experiment and data Table."
+        ],
+        "publication_year": "2001",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NSTS,2,(1),192,200208)",
+        "free_txt": [],
+        "publication_year": "2002",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2ZZZGEL)",
+        "free_txt": [
+          " 7-MV Van de Graaff Accelerator,",
+          " Neutron Physics Unit, Institute For Reference",
+          " Materials and Measurements, Geel, Belgium.",
+          " Deuterium beam current is aprx 15 micro-A,",
+          " beam energy is 4 MeV ."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(42-MO-0(N,X)41-NB-94,,SIG)",
+        "children": [
+          {
+            "code": [
+              "42-MO-0",
+              [
+                "N,X"
+              ],
+              "41-NB-94,,SIG"
+            ],
+            "type": null,
+            "target": "42-MO-0",
+            "process": "N,X",
+            "sf49": "41-NB-94,,SIG",
+            "sf4": "41-NB-94",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Sum of the Mo-94(N,P) and                             Mo-95(N,N+P) reactions"
+      }
     }
   },
   "data_tables": {
@@ -152,32 +182,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(42-MO-0(N,X)41-NB-94,,SIG)",
-          "0": {
-            "code": [
-              "42-MO-0",
-              [
-                "N,X"
-              ],
-              "41-NB-94,,SIG"
-            ],
-            "type": null,
-            "target": "42-MO-0",
-            "process": "N,X",
-            "sf49": "41-NB-94,,SIG",
-            "sf4": "41-NB-94",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Sum of the Mo-94(N,P) and                             Mo-95(N,N+P) reactions"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -219,8 +223,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -231,10 +235,8 @@
               " reactions."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": "(THEO)",
             "free_txt": [
@@ -244,10 +246,8 @@
               "        STAPRE-H) ."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -271,20 +271,8 @@
               "     . Multiple scattering of the neutrons in samples ."
             ]
           }
-        ]
-      },
-      "decay-mon": {
-        "4": [
-          {
-            "x4_code": "(41-NB-92-M,10.15D,DG,934.44,0.9907)",
-            "free_txt": [
-              "       Monit4"
-            ]
-          }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -307,10 +295,8 @@
               "        mode - for neutron flux monitoring ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -425,10 +411,8 @@
               "  Error in the Center of Neutron Energy Line ."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2ZZZGEL)",
             "free_txt": [
@@ -439,10 +423,8 @@
               " beam energy is 4 MeV ."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
@@ -453,10 +435,8 @@
               " 13.4 to 20.6 MeV. Energy scale uncertainty is 5 keV."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -465,10 +445,8 @@
               " in the samples."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -488,36 +466,8 @@
               "  Stack target irradiation ."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "4": [
-          {
-            "x4_code": "(,H.Conde,R,INDC(SEC)-101,1992)",
-            "free_txt": [
-              " (MONIT4) See  also",
-              "   H,Conde,R,NEANDC-311/U,1992 ,",
-              "   M.Wagner+,R,INDC(AUS)-D14,199110 ."
-            ]
-          }
-        ]
-      },
-      "monitor": {
-        "4": [
-          {
-            "x4_code": "(41-NB-93(N,2N)41-NB-92-M,,SIG)",
-            "free_txt": [
-              " Monit4 Secondary Stand.",
-              " All Measurements Involving Secondary Standards were",
-              " Eventually Referenced to the Primary Standards.",
-              " All Relative Measurements were Eventually Normalized",
-              " To the Primary Standards."
-            ]
-          }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,A.Fessler+,J,NSE,134,171,2000)",
             "free_txt": [
@@ -533,19 +483,131 @@
             ]
           }
         ]
+      },
+      "1": {
+        "decay-mon": [
+          {
+            "x4_code": "(11-NA-24,14.9590HR,DG,1369.,1.0)",
+            "free_txt": [
+              "          Monit1"
+            ]
+          }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(,H.Conde,R,INDC(SEC)-101,1992)",
+            "free_txt": [
+              " (M0NIT1) Also H.Conde,",
+              "  R,NEANDC-311\"U\",M.Wagner+,J.Physics Data,13-5,1990"
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(13-AL-27(N,A)11-NA-24,,SIG)",
+            "free_txt": [
+              " Primary Standard Monit1",
+              "  Used For Measurements with Neutron Energy Above 6 MeV"
+            ]
+          }
+        ]
+      },
+      "2": {
+        "decay-mon": [
+          {
+            "x4_code": "(12-MG-27,9.458MIN,DG,843.76,0.718)",
+            "free_txt": [
+              "        Monit2"
+            ]
+          }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(,P.F.Rose+,R,ENDF-201,1991)",
+            "free_txt": [
+              " (MONIT2) Evaluated",
+              "     Nuclear Data File, ENDF/B-VI.6"
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(13-AL-27(N,P)12-MG-27,,SIG)",
+            "free_txt": [
+              " Secondary Standard. Monit2"
+            ]
+          }
+        ]
+      },
+      "3": {
+        "decay-mon": [
+          {
+            "x4_code": "(27-CO-58-G,70.86D,DG,810.78,0.9945)",
+            "free_txt": [
+              "       Monit3"
+            ]
+          }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(,P.F.Rose+,R,ENDF-201,1991)",
+            "free_txt": [
+              "  (MONIT3) Evaluated",
+              "                 Nuclear Data File, ENDF/B-VI.1 ."
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(27-CO-59(N,2N)27-CO-58,,SIG)",
+            "free_txt": [
+              "  Monit3"
+            ]
+          }
+        ]
+      },
+      "4": {
+        "decay-mon": [
+          {
+            "x4_code": "(41-NB-92-M,10.15D,DG,934.44,0.9907)",
+            "free_txt": [
+              "       Monit4"
+            ]
+          }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(,H.Conde,R,INDC(SEC)-101,1992)",
+            "free_txt": [
+              " (MONIT4) See  also",
+              "   H,Conde,R,NEANDC-311/U,1992 ,",
+              "   M.Wagner+,R,INDC(AUS)-D14,199110 ."
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(41-NB-93(N,2N)41-NB-92-M,,SIG)",
+            "free_txt": [
+              " Monit4 Secondary Stand.",
+              " All Measurements Involving Secondary Standards were",
+              " Eventually Referenced to the Primary Standards.",
+              " All Relative Measurements were Eventually Normalized",
+              " To the Primary Standards."
+            ]
+          }
+        ]
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(41-NB-94,20300.YR,DG,871.1,0.999)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -563,10 +625,8 @@
               " Mo-95 content is 15.92%"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

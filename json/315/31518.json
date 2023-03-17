@@ -29,36 +29,31 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RCA,89,419,2001)",
-          "free_txt": [],
-          "publication_year": "2001"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC)",
-          "free_txt": [
-            " IEA-R1 pool-type IPEN research reactor operating",
-            "at 2 MW power"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RCA,89,419,2001)",
+        "free_txt": [],
+        "publication_year": "2001",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC)",
+        "free_txt": [
+          " IEA-R1 pool-type IPEN research reactor operating",
+          "at 2 MW power"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,G)95-AM-242-G,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(95-AM-241(N,G)95-AM-242-G,,SIG)",
+        "children": [
+          {
             "code": [
               "95-AM-241",
               [
@@ -76,11 +71,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " 2200 m/s cross sect."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " 2200 m/s cross sect."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(95-AM-241(N,G)95-AM-242-G,,RI)",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,G"
+              ],
+              "95-AM-242-G,,RI"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,G",
+            "sf49": "95-AM-242-G,,RI",
+            "sf4": "95-AM-242-G",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " EN-MIN is lower limitof integration. Upper limit is 1 MeV"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -127,32 +157,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,G)95-AM-242-G,,RI)",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,G"
-              ],
-              "95-AM-242-G,,RI"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,G",
-            "sf49": "95-AM-242-G,,RI",
-            "sf4": "95-AM-242-G",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " EN-MIN is lower limitof integration. Upper limit is 1 MeV"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -206,8 +210,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -224,10 +228,8 @@
               "self-shielding"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(95-AM-241,1.5785E+5D,DG,59.537,.360)",
             "free_txt": []
@@ -251,18 +253,14 @@
               "estimate for emission probability (upper boundary)"
             ]
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(27-CO-60,1925.5D,DG,1173.238,.99857,DG,1332.502,.99983)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(COIN,PROPC,NAICR)",
             "free_txt": [
@@ -274,10 +272,8 @@
               "covered both 1173 and 1332 keV peaks of Co-60"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -285,10 +281,8 @@
               "and cross section values"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -296,20 +290,16 @@
               "at 2 MW power"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               " Core of the reactor"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -320,10 +310,8 @@
               "1/E form was observed"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -340,10 +328,8 @@
               "Details are given in the paper"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -351,10 +337,8 @@
               "polyethylene and placed inside polyethylene rabbit"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -365,8 +349,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -378,18 +362,14 @@
               "1/E dependence are introduced"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,J.H.BAARD+,B,BAARD,,1989)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": [
@@ -411,16 +391,14 @@
       }
     },
     "003": {
-      "monit-ref": {
-        "0": [
+      "0": {
+        "monit-ref": [
           {
             "x4_code": "(,J.H.BAARD+,B,BAARD,,1989)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)79-AU-197(N,G)79-AU-198,,RI)",
             "free_txt": [

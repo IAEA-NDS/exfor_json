@@ -54,39 +54,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,64,014603,2001)",
-          "free_txt": [],
-          "publication_year": "2001"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1CANSAS)",
-          "free_txt": [
-            " Experiment was conducted at the",
-            "    Saskatchewan Accelerator Laboratory (SAL) using",
-            "    62-channel SAL tagger"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1CANSAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,64,014603,2001)",
+        "free_txt": [],
+        "publication_year": "2001",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1CANSAS)",
+        "free_txt": [
+          " Experiment was conducted at the",
+          "    Saskatchewan Accelerator Laboratory (SAL) using",
+          "    62-channel SAL tagger"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1CANSAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(G,EL)6-C-12,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(G,EL)6-C-12,,DA)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -104,11 +99,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-12(G,EL)6-C-12,,DA,,AV)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "G,EL"
+              ],
+              "6-C-12,,DA,,AV"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "G,EL",
+            "sf49": "6-C-12,,DA,,AV",
+            "sf4": "6-C-12",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-12(G,INL)6-C-12,PAR,DA,,AV)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "G,INL"
+              ],
+              "6-C-12,PAR,DA,,AV"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "G,INL",
+            "sf49": "6-C-12,PAR,DA,,AV",
+            "sf4": "6-C-12",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -240,32 +298,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(G,EL)6-C-12,,DA,,AV)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "G,EL"
-              ],
-              "6-C-12,,DA,,AV"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "G,EL",
-            "sf49": "6-C-12,,DA,,AV",
-            "sf4": "6-C-12",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -330,32 +362,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(G,INL)6-C-12,PAR,DA,,AV)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "G,INL"
-              ],
-              "6-C-12,PAR,DA,,AV"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "G,INL",
-            "sf49": "6-C-12,PAR,DA,,AV",
-            "sf4": "6-C-12",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -423,8 +429,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -445,10 +451,8 @@
               "of a scattered photon event."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -461,10 +465,8 @@
               " Systematic uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1CANSAS)",
             "free_txt": [
@@ -473,10 +475,8 @@
               "    62-channel SAL tagger"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(TAGD)",
             "free_txt": [
@@ -488,10 +488,8 @@
               "The SAL tagger covered photon energy range 60-108 MeV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -499,10 +497,8 @@
               "        tagger was required"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -513,8 +509,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -525,8 +521,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -537,8 +533,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

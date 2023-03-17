@@ -25,35 +25,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PL,13,234,6412)",
-          "free_txt": [],
-          "publication_year": "1964"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": [
-            " 30 MEV ELECTRON LINEAR ACCELERATOR."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PL,13,234,6412)",
+        "free_txt": [],
+        "publication_year": "1964",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC)",
+        "free_txt": [
+          " 30 MEV ELECTRON LINEAR ACCELERATOR."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-0(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(26-FE-0(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "26-FE-0",
               [
@@ -71,11 +66,98 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(26-FE-56(N,TOT),,WID)",
+        "children": [
+          {
+            "code": [
+              "26-FE-56",
+              [
+                "N,TOT"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "26-FE-56",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(26-FE-56(N,G),,WID)",
+        "children": [
+          {
+            "code": [
+              "26-FE-56",
+              [
+                "N,G"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "26-FE-56",
+            "process": "N,G",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "(26-FE-56(N,EL),,WID,,G)",
+        "children": [
+          {
+            "code": [
+              "26-FE-56",
+              [
+                "N,EL"
+              ],
+              ",,WID,,G"
+            ],
+            "type": null,
+            "target": "26-FE-56",
+            "process": "N,EL",
+            "sf49": ",,WID,,G",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "G",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RSL"
@@ -582,80 +664,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(26-FE-56(N,TOT),,WID)",
-          "0": {
-            "code": [
-              "26-FE-56",
-              [
-                "N,TOT"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "26-FE-56",
-            "process": "N,TOT",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(26-FE-56(N,G),,WID)",
-          "0": {
-            "code": [
-              "26-FE-56",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "26-FE-56",
-            "process": "N,G",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "(26-FE-56(N,EL),,WID,,G)",
-          "0": {
-            "code": [
-              "26-FE-56",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": null,
-            "target": "26-FE-56",
-            "process": "N,EL",
-            "sf49": ",,WID,,G",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "G",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -709,48 +717,40 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
               " B-10 SLAB WITH NAI(TL) DETECTORS FOR GAMMAS"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               ".NO ERROR GIVEN ON TOTAL CROSS SECTION."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC)",
             "free_txt": [
               " 30 MEV ELECTRON LINEAR ACCELERATOR."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
               " BOOSTER TARGET."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF  )",
             "free_txt": [
@@ -758,20 +758,16 @@
               " MICRO-SEC CHANNEL WIDTH."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               ".FE METAL, 3.8 CM THICK."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(NDD  )",
             "free_txt": [
@@ -786,18 +782,16 @@
       }
     },
     "002": {
-      "misc-col": {
-        "0": [
+      "0": {
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               " NEUTRON TRANSMISSION."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(NDD  )",
             "free_txt": []
@@ -806,18 +800,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(AREA )",
             "free_txt": [
               " ATTA-HARVEY AREA ANALYSIS."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

@@ -53,49 +53,45 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,INDC(EGY)-3,1982)",
-          "free_txt": [],
-          "publication_year": "1982"
-        },
-        {
-          "x4_code": "(C,82ANTWER,,965,1982)",
-          "free_txt": [
-            " Abstract, graphs"
-          ],
-          "publication_year": "1982"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,3EGYCAI)",
-          "free_txt": [
-            " Thermal reactor ET-RR-1.",
-            "Two types of spectrometers were used:",
-            " - rotor of pertinax 160 mm in diam. with a straight",
-            "   slit of 1.25 mm.",
-            " - rotor of the same dimensions but with a cigar-shaped",
-            "   slit."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(3EGYCAI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,INDC(EGY)-3,1982)",
+        "free_txt": [],
+        "publication_year": "1982",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,82ANTWER,,965,1982)",
+        "free_txt": [
+          " Abstract, graphs"
+        ],
+        "publication_year": "1982",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,3EGYCAI)",
+        "free_txt": [
+          " Thermal reactor ET-RR-1.",
+          "Two types of spectrometers were used:",
+          " - rotor of pertinax 160 mm in diam. with a straight",
+          "   slit of 1.25 mm.",
+          " - rotor of the same dimensions but with a cigar-shaped",
+          "   slit."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(3EGYCAI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-0(N,TOT),,SIG/TMP)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-0(N,TOT),,SIG/TMP)",
+        "children": [
+          {
             "code": [
               "92-U-0",
               [
@@ -113,11 +109,130 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-OXI(N,TOT),,SIG/TMP)",
+        "children": [
+          {
+            "code": [
+              "92-U-OXI",
+              [
+                "N,TOT"
+              ],
+              ",,SIG/TMP"
+            ],
+            "type": null,
+            "target": "92-U-OXI",
+            "process": "N,TOT",
+            "sf49": ",,SIG/TMP",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG/TMP",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Uranium-dioxide UO2"
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(92-U-0(N,THS)92-U-0,COH,AMP,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-0",
+              [
+                "N,THS"
+              ],
+              "92-U-0,COH,AMP,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-0",
+            "process": "N,THS",
+            "sf49": "92-U-0,COH,AMP,,,DERIV",
+            "sf4": "92-U-0",
+            "sf5": "COH",
+            "sf6": "AMP",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(92-U-0(N,THS)92-U-0,COH,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-0",
+              [
+                "N,THS"
+              ],
+              "92-U-0,COH,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-0",
+            "process": "N,THS",
+            "sf49": "92-U-0,COH,SIG,,,DERIV",
+            "sf4": "92-U-0",
+            "sf5": "COH",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -937,32 +1052,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "TEMP"
@@ -1324,32 +1413,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-OXI(N,TOT),,SIG/TMP)",
-          "0": {
-            "code": [
-              "92-U-OXI",
-              [
-                "N,TOT"
-              ],
-              ",,SIG/TMP"
-            ],
-            "type": null,
-            "target": "92-U-OXI",
-            "process": "N,TOT",
-            "sf49": ",,SIG/TMP",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG/TMP",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Uranium-dioxide UO2"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1997,32 +2060,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-0(N,THS)92-U-0,COH,AMP,,,DERIV)",
-          "0": {
-            "code": [
-              "92-U-0",
-              [
-                "N,THS"
-              ],
-              "92-U-0,COH,AMP,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-0",
-            "process": "N,THS",
-            "sf49": "92-U-0,COH,AMP,,,DERIV",
-            "sf4": "92-U-0",
-            "sf5": "COH",
-            "sf6": "AMP",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2049,32 +2086,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-0(N,THS)92-U-0,COH,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "92-U-0",
-              [
-                "N,THS"
-              ],
-              "92-U-0,COH,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-0",
-            "process": "N,THS",
-            "sf49": "92-U-0,COH,SIG,,,DERIV",
-            "sf4": "92-U-0",
-            "sf5": "COH",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2103,16 +2114,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HE3SP)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2120,10 +2129,8 @@
               " losses"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,3EGYCAI)",
             "free_txt": [
@@ -2135,18 +2142,14 @@
               "   slit."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,TRN)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2157,8 +2160,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2166,10 +2169,8 @@
               "483 degrees Kelvin."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2180,18 +2181,16 @@
       }
     },
     "003": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Natural U. 0.05 at.% Ru alloy, thickness 15.8 g/cm2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,30363002)",
             "free_txt": []
@@ -2200,8 +2199,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2209,10 +2208,8 @@
               "483 degrees Kelvin."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2223,8 +2220,8 @@
       }
     },
     "005": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,30636002)",
             "free_txt": []
@@ -2233,8 +2230,8 @@
       }
     },
     "006": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,30636002)",
             "free_txt": []

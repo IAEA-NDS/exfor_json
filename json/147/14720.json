@@ -36,50 +36,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ARI,173,109711,2021)",
-          "free_txt": [],
-          "publication_year": "2021"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(FNS,1USALRL)",
-          "free_txt": [
-            " Experiment performed at National",
-            "Ignition Facility at Livermore National Lab"
-          ],
-          "facility_type": "(FNS)",
-          "institute": "(1USALRL)"
-        }
-      ]
-    }
-  },
-  "data_tables": {
-    "001": {
-      "common": {
-        "heads": [
-          "EN-DUMMY"
-        ],
-        "units": [
-          "MEV"
-        ],
-        "data": [
-          [
-            8.5
-          ]
-        ]
+    "references": [
+      {
+        "x4_code": "(J,ARI,173,109711,2021)",
+        "free_txt": [],
+        "publication_year": "2021",
+        "pointer": "0"
       }
-    },
+    ],
+    "facilities": [
+      {
+        "x4_code": "(FNS,1USALRL)",
+        "free_txt": [
+          " Experiment performed at National",
+          "Ignition Facility at Livermore National Lab"
+        ],
+        "pointer": "0",
+        "facility_type": "(FNS)",
+        "institute": "(1USALRL)"
+      }
+    ]
+  },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(N,F)ELEM/MASS,CUM,FY,,SPA)//(92-U-238(N,F)MASS,CHN,FY,,SPA))",
-          "0": {
+      "0": {
+        "x4_code": "((92-U-238(N,F)ELEM/MASS,CUM,FY,,SPA)//(92-U-238(N,F)MASS,CHN,FY,,SPA))",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -98,7 +81,7 @@
             "sf8": "SPA",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "92-U-238",
               [
@@ -116,11 +99,78 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((92-U-238(N,F)ELEM/MASS,IND,FY,,SPA)//(92-U-238(N,F)MASS,CHN,FY,,SPA))",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,IND,FY,,SPA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,IND,FY,,SPA",
+            "sf4": "ELEM/MASS",
+            "sf5": "IND",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
           },
-          "type": "//",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              "MASS,CHN,FY,,SPA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": "MASS,CHN,FY,,SPA",
+            "sf4": "MASS",
+            "sf5": "CHN",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": ""
+      }
+    },
+    "004": null
+  },
+  "data_tables": {
+    "001": {
+      "common": {
+        "heads": [
+          "EN-DUMMY"
+        ],
+        "units": [
+          "MEV"
+        ],
+        "data": [
+          [
+            8.5
+          ]
+        ]
+      }
+    },
+    "002": {
       "common": {
         "heads": [
           "MASS-DN"
@@ -374,51 +424,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(N,F)ELEM/MASS,IND,FY,,SPA)//(92-U-238(N,F)MASS,CHN,FY,,SPA))",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,IND,FY,,SPA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,IND,FY,,SPA",
-            "sf4": "ELEM/MASS",
-            "sf5": "IND",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "MASS,CHN,FY,,SPA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": "MASS,CHN,FY,,SPA",
-            "sf4": "MASS",
-            "sf5": "CHN",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "MASS-DN"
@@ -474,15 +479,14 @@
       }
     },
     "004": {
-      "reaction": null,
       "common": null,
       "data": null
     }
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -490,10 +494,8 @@
               "technique, which was used for neutron transport."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -501,20 +503,16 @@
               "high purity germanium detectors"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Origin of uncertainties not described"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(FNS,1USALRL)",
             "free_txt": [
@@ -522,18 +520,14 @@
               "Ignition Facility at Livermore National Lab"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,2N)79-AU-196,,SIG)",
             "free_txt": []
@@ -586,10 +580,8 @@
             "x4_code": "(13-AL-27(N,A)11-NA-24,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -607,8 +599,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -623,8 +615,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

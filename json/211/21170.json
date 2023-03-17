@@ -36,37 +36,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,HPA,28,33,1955)",
-          "free_txt": [],
-          "publication_year": "1955"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CCW,2SWTBAS)",
-          "free_txt": [
-            " Cockcroft-Walton accelerator."
-          ],
-          "facility_type": "(CCW)",
-          "institute": "(2SWTBAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,HPA,28,33,1955)",
+        "free_txt": [],
+        "publication_year": "1955",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CCW,2SWTBAS)",
+        "free_txt": [
+          " Cockcroft-Walton accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(CCW)",
+        "institute": "(2SWTBAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-32(N,A)14-SI-29,PAR,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(16-S-32(N,A)14-SI-29,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "16-S-32",
               [
@@ -84,11 +79,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Partial cross section."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Partial cross section."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(16-S-32(N,A)14-SI-29,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "16-S-32",
+              [
+                "N,A"
+              ],
+              "14-SI-29,PAR,SIG"
+            ],
+            "type": null,
+            "target": "16-S-32",
+            "process": "N,A",
+            "sf49": "14-SI-29,PAR,SIG",
+            "sf4": "14-SI-29",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Partial cross section."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(16-S-32(N,P)15-P-32,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "16-S-32",
+              [
+                "N,P"
+              ],
+              "15-P-32,PAR,SIG"
+            ],
+            "type": null,
+            "target": "16-S-32",
+            "process": "N,P",
+            "sf49": "15-P-32,PAR,SIG",
+            "sf4": "15-P-32",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Partial cross section to ground state."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL",
@@ -219,32 +277,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-32(N,A)14-SI-29,PAR,SIG)",
-          "0": {
-            "code": [
-              "16-S-32",
-              [
-                "N,A"
-              ],
-              "14-SI-29,PAR,SIG"
-            ],
-            "type": null,
-            "target": "16-S-32",
-            "process": "N,A",
-            "sf49": "14-SI-29,PAR,SIG",
-            "sf4": "14-SI-29",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Partial cross section."
-        }
-      },
       "common": {
         "heads": [
           "E-LVL",
@@ -408,32 +440,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-32(N,P)15-P-32,PAR,SIG)",
-          "0": {
-            "code": [
-              "16-S-32",
-              [
-                "N,P"
-              ],
-              "15-P-32,PAR,SIG"
-            ],
-            "type": null,
-            "target": "16-S-32",
-            "process": "N,P",
-            "sf49": "15-P-32,PAR,SIG",
-            "sf4": "15-P-32",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Partial cross section to ground state."
-        }
-      },
       "common": {
         "heads": [
           "E-LVL",
@@ -590,8 +596,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -601,10 +607,8 @@
               " dead-time and variations in filling pressure."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(IOCH )",
             "free_txt": [
@@ -619,30 +623,24 @@
               " determination."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " .Mean total errors are given."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CCW,2SWTBAS)",
             "free_txt": [
               " Cockcroft-Walton accelerator."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": [
@@ -650,28 +648,22 @@
               " Energy spread from 20 to 80 keV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ASSOP)",
             "free_txt": [
               " Detection of alphas and protons."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,D.J.Hughes+,R,AECU-2040,1952)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": [
@@ -679,10 +671,8 @@
               " taken from AECU-2040,Suppl.1,1952."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(16-S-32,ENR=0.9500)",
             "free_txt": [
@@ -696,8 +686,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(NDD)",
             "free_txt": [
@@ -708,8 +698,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(NDD)",
             "free_txt": [
@@ -720,8 +710,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(NDD)",
             "free_txt": [

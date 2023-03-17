@@ -57,62 +57,60 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(W,WEIGMANN,800925)",
-          "free_txt": [
-            " PRIVATE COMMUNICATION OF",
-            " H.WEIGMANN WITH MEASURED CROSS SECTION DATA ON",
-            " TAPE.",
-            ".J.BLONS ET AL, PROCEEDINGS OF THE 18TH INTERNATIONAL",
-            " WINTER MEETING ON NUCLEAR PHYSICS, BORMIO, 1980.",
-            " CEA-CONF-5122."
-          ],
-          "publication_year": "1980"
-        },
-        {
-          "x4_code": "((P,INDC(EUR)-12,6,7905)=(P,NEANDC(E)-202U,(3),6,7905))",
-          "free_txt": [],
-          "publication_year": "1979"
-        },
-        {
-          "x4_code": "(P,NEANDC(E)-192,4,78)",
-          "free_txt": [],
-          "publication_year": "1978"
-        },
-        {
-          "x4_code": "(J,NP/A,414,1,8402)",
-          "free_txt": [
-            " REVIEW ARTICLE"
-          ],
-          "publication_year": "1984"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2ZZZGEL)",
-          "free_txt": [
-            "  ELECTRON LINEAR ACCELERATOR OF",
-            " THE C.B.N.M. 4.2 NSEC PULSE WIDTH, 800 HZ."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(W,WEIGMANN,800925)",
+        "free_txt": [
+          " PRIVATE COMMUNICATION OF",
+          " H.WEIGMANN WITH MEASURED CROSS SECTION DATA ON",
+          " TAPE.",
+          ".J.BLONS ET AL, PROCEEDINGS OF THE 18TH INTERNATIONAL",
+          " WINTER MEETING ON NUCLEAR PHYSICS, BORMIO, 1980.",
+          " CEA-CONF-5122."
+        ],
+        "publication_year": "1980",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((P,INDC(EUR)-12,6,7905)=(P,NEANDC(E)-202U,(3),6,7905))",
+        "free_txt": [],
+        "publication_year": "1979",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,NEANDC(E)-192,4,78)",
+        "free_txt": [],
+        "publication_year": "1978",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,414,1,8402)",
+        "free_txt": [
+          " REVIEW ARTICLE"
+        ],
+        "publication_year": "1984",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2ZZZGEL)",
+        "free_txt": [
+          "  ELECTRON LINEAR ACCELERATOR OF",
+          " THE C.B.N.M. 4.2 NSEC PULSE WIDTH, 800 HZ."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-230(N,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-230(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "90-TH-230",
               [
@@ -130,11 +128,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " FISSION CROSS SECTION."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " FISSION CROSS SECTION."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " FISSION CROSS SECTION."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -5450,32 +5483,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,F),,SIG)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " FISSION CROSS SECTION."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -10682,8 +10689,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -10692,10 +10699,8 @@
               " OPPOSITE PARITIES."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN )",
             "free_txt": [
@@ -10703,20 +10708,16 @@
               " XENON AT NORMAL TEMPERATURE AND PRESSURE."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " ONLY STATISTICAL ERRORS GIVEN."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
@@ -10724,20 +10725,16 @@
               " THE C.B.N.M. 4.2 NSEC PULSE WIDTH, 800 HZ."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
               " (G,N) AND (G,F) IN U, WHITE SPECTRUM."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF  )",
             "free_txt": [
@@ -10750,30 +10747,24 @@
               " (TH-232)."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(93-NP-237(N,F),,SIG)",
             "free_txt": [
               " TAKEN FROM ENDF/B-4."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(FF   )",
             "free_txt": [
               " FISSION FRAGMENTS."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -10781,10 +10772,8 @@
               ".432.4 MG OF NP-237 FOR THE MONITOR REACTION."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -10796,8 +10785,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -10808,8 +10797,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

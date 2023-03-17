@@ -45,38 +45,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,99,055809,2019)",
-          "free_txt": [],
-          "publication_year": "2019"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALAS)",
-          "free_txt": [
-            " Experiment performed at the Lujan",
-            "Neutron Scattering Center at LANSCE"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,99,055809,2019)",
+        "free_txt": [],
+        "publication_year": "2019",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALAS)",
+        "free_txt": [
+          " Experiment performed at the Lujan",
+          "Neutron Scattering Center at LANSCE"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(29-CU-65(N,G)29-CU-66,,SIG,,TTA)",
-          "0": {
+      "0": {
+        "x4_code": "(29-CU-65(N,G)29-CU-66,,SIG,,TTA)",
+        "children": [
+          {
             "code": [
               "29-CU-65",
               [
@@ -94,11 +89,46 @@
             "sf7": null,
             "sf8": "TTA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(29-CU-65(N,G)29-CU-66,,SIG,,MXW,DERIV)",
+        "children": [
+          {
+            "code": [
+              "29-CU-65",
+              [
+                "N,G"
+              ],
+              "29-CU-66,,SIG,,MXW,DERIV"
+            ],
+            "type": null,
+            "target": "29-CU-65",
+            "process": "N,G",
+            "sf49": "29-CU-66,,SIG,,MXW,DERIV",
+            "sf4": "29-CU-66",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -1224,32 +1254,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(29-CU-65(N,G)29-CU-66,,SIG,,MXW,DERIV)",
-          "0": {
-            "code": [
-              "29-CU-65",
-              [
-                "N,G"
-              ],
-              "29-CU-66,,SIG,,MXW,DERIV"
-            ],
-            "type": null,
-            "target": "29-CU-65",
-            "process": "N,G",
-            "sf49": "29-CU-66,,SIG,,MXW,DERIV",
-            "sf4": "29-CU-66",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1323,8 +1327,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BAF2)",
             "free_txt": [
@@ -1333,10 +1337,8 @@
               "with solid angle coverage of almost 4 Pi."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALAS)",
             "free_txt": [
@@ -1344,10 +1346,8 @@
               "Neutron Scattering Center at LANSCE"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": [
@@ -1357,10 +1357,8 @@
               "backscatter water moderators."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1370,18 +1368,14 @@
               "path length of 20.28 m."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,,3,ENDF/B-VIII.0,,2018)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,RES)",
             "free_txt": [
@@ -1400,10 +1394,8 @@
               " - above 3 keV"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(29-CU-65,ENR=0.997)",
             "free_txt": [
@@ -1415,8 +1407,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1473,10 +1465,8 @@
               " Errors shown in Fig.8"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1488,8 +1478,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1502,10 +1492,8 @@
               " Systematic uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

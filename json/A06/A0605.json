@@ -60,43 +60,39 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,IMP/E,5,345,1996)",
-          "free_txt": [],
-          "publication_year": "1996"
-        },
-        {
-          "x4_code": "(C,92BOMBAY,,224,1992)",
-          "free_txt": [],
-          "publication_year": "1992"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ISOCY,3INDVEC)",
-          "free_txt": [
-            " Variable Energy Cyclotron at VECC,",
-            "Calcutta,India."
-          ],
-          "facility_type": "(ISOCY)",
-          "institute": "(3INDVEC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,IMP/E,5,345,1996)",
+        "free_txt": [],
+        "publication_year": "1996",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,92BOMBAY,,224,1992)",
+        "free_txt": [],
+        "publication_year": "1992",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ISOCY,3INDVEC)",
+        "free_txt": [
+          " Variable Energy Cyclotron at VECC,",
+          "Calcutta,India."
+        ],
+        "pointer": "0",
+        "facility_type": "(ISOCY)",
+        "institute": "(3INDVEC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(45-RH-103(A,N)47-AG-106-M,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(45-RH-103(A,N)47-AG-106-M,,SIG)",
+        "children": [
+          {
             "code": [
               "45-RH-103",
               [
@@ -114,11 +110,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(45-RH-103(A,2N)47-AG-105,,SIG)",
+        "children": [
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "A,2N"
+              ],
+              "47-AG-105,,SIG"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "A,2N",
+            "sf49": "47-AG-105,,SIG",
+            "sf4": "47-AG-105",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(45-RH-103(A,3N)47-AG-104,,SIG)",
+        "children": [
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "A,3N"
+              ],
+              "47-AG-104,,SIG"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "A,3N",
+            "sf49": "47-AG-104,,SIG",
+            "sf4": "47-AG-104",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -170,32 +229,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(45-RH-103(A,2N)47-AG-105,,SIG)",
-          "0": {
-            "code": [
-              "45-RH-103",
-              [
-                "A,2N"
-              ],
-              "47-AG-105,,SIG"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "A,2N",
-            "sf49": "47-AG-105,,SIG",
-            "sf4": "47-AG-105",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -243,32 +276,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(45-RH-103(A,3N)47-AG-104,,SIG)",
-          "0": {
-            "code": [
-              "45-RH-103",
-              [
-                "A,3N"
-              ],
-              "47-AG-104,,SIG"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "A,3N",
-            "sf49": "47-AG-104,,SIG",
-            "sf4": "47-AG-104",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -310,8 +317,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -319,10 +326,8 @@
               "Hibrid Model."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -334,10 +339,8 @@
               "because of their low detection efficiencies."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -349,10 +352,8 @@
               "calibration, by keeping it at target position."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -367,10 +368,8 @@
               "alpha-particle beam"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ISOCY,3INDVEC)",
             "free_txt": [
@@ -378,10 +377,8 @@
               "Calcutta,India."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(STTA)",
             "free_txt": [
@@ -405,10 +402,8 @@
               "unknown."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,L.C.Northcliffe+,J,ND/A,7,233,1970)",
             "free_txt": [
@@ -420,10 +415,8 @@
             "x4_code": "(R,,C.M.Lederer+,B,LEDERER-7,,1970)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -434,10 +427,8 @@
               "on individual foils."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -448,8 +439,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(47-AG-106-M,8.4D,DG,430.,,                  DG,451.,,                  DG,616.,,                  DG,717.,,                  DG,748.,,                  DG,804.,,                  DG,825.,,                  DG,1046.,,                  DG,1128.)",
             "free_txt": []
@@ -458,8 +449,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(47-AG-105-G,41.3D,DG,281.,,                   DG,345.,,                   DG,443.,,                   DG,645.,,                   DG,1088.)",
             "free_txt": []
@@ -468,8 +459,8 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(47-AG-104-G,1.15HR,DG,444.,,                    DG,624.,,                    DG,941.,,                    DG,768.,,                    DG,858.,,                    DG,942.)",
             "free_txt": []

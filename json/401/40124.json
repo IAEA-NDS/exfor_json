@@ -48,37 +48,35 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,SNP,13,547,1971)",
-          "free_txt": [
-            " Engl.Transl.of YF,13,(5),950"
-          ],
-          "publication_year": "1971"
-        },
-        {
-          "x4_code": "(J,YF,13,(5),950,1971)",
-          "free_txt": [],
-          "publication_year": "1971"
-        },
-        {
-          "x4_code": "(R,FEI-233,197012)",
-          "free_txt": [],
-          "publication_year": "1970"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,SNP,13,547,1971)",
+        "free_txt": [
+          " Engl.Transl.of YF,13,(5),950"
+        ],
+        "publication_year": "1971",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,YF,13,(5),950,1971)",
+        "free_txt": [],
+        "publication_year": "1971",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,FEI-233,197012)",
+        "free_txt": [],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,F),,DA,FF,COS/RSD)",
-          "0": {
+      "0": {
+        "x4_code": "(94-PU-239(N,F),,DA,FF,COS/RSD)",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -96,11 +94,74 @@
             "sf7": "FF",
             "sf8": "COS/RSD",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(94-PU-239(N,F),,DA,FF,COS/RSD)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,DA,FF,COS/RSD"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,DA,FF,COS/RSD",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "FF",
+            "sf8": "COS/RSD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(94-PU-239(N,F),,DA,FF,RSD/REL)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,DA,FF,RSD/REL"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,DA,FF,RSD/REL",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "FF",
+            "sf8": "RSD/REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " W(ANG)/W(90deg) ."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "NUMBER"
@@ -224,32 +285,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,F),,DA,FF,COS/RSD)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,DA,FF,COS/RSD"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,DA,FF,COS/RSD",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "FF",
-            "sf8": "COS/RSD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "NUMBER"
@@ -473,32 +508,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,F),,DA,FF,RSD/REL)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,DA,FF,RSD/REL"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,DA,FF,RSD/REL",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "FF",
-            "sf8": "RSD/REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " W(ANG)/W(90deg) ."
-        }
-      },
       "common": {
         "heads": [
           "ANG-ERR-D",
@@ -865,8 +874,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -877,50 +886,40 @@
               "neutrons ( at 150 deg measurement, at lowest En) ."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
               " Glass detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " All errors are statistical"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T,D-T)",
             "free_txt": [
               "  Proton-tritium and deuteron-tritium reaction"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(FISCT)",
             "free_txt": [
               " Direct-detection"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(94-PU-239,ENR=0.981)",
             "free_txt": [
@@ -932,8 +931,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -945,10 +944,8 @@
               "  and the fragment direction"
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -956,10 +953,8 @@
               "direction is equal 150. deg."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -971,8 +966,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -980,10 +975,8 @@
               "direction is equal 12.5 deg."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -995,8 +988,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1006,10 +999,8 @@
               "are lower or higher 1. ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ANG-ERR-D)",
             "free_txt": [
@@ -1024,10 +1015,8 @@
               "scale X - 0.849 deg, scale Y - 0.0017 (arb.un.) ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

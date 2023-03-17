@@ -60,49 +60,74 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,35,(3),532,1982)",
-          "free_txt": [
-            "  Data are given"
-          ],
-          "publication_year": "1982"
-        },
-        {
-          "x4_code": "(J,SNP,35,307,1982)",
-          "free_txt": [
-            " Engl.translation of YF,35,(3),532"
-          ],
-          "publication_year": "1982"
-        },
-        {
-          "x4_code": "(P,JINR-P3-81-305,198105)",
-          "free_txt": [],
-          "publication_year": "1981"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC)",
-          "free_txt": [
-            " Fast pulse reactor IBR-30"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,35,(3),532,1982)",
+        "free_txt": [
+          "  Data are given"
+        ],
+        "publication_year": "1982",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SNP,35,307,1982)",
+        "free_txt": [
+          " Engl.translation of YF,35,(3),532"
+        ],
+        "publication_year": "1982",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,JINR-P3-81-305,198105)",
+        "free_txt": [],
+        "publication_year": "1981",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC)",
+        "free_txt": [
+          " Fast pulse reactor IBR-30"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-3(N,P)1-H-3,,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(2-HE-3(N,P)1-H-3,,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "2-HE-3",
+              [
+                "N,P"
+              ],
+              "1-H-3,,SIG,,AV"
+            ],
+            "type": null,
+            "target": "2-HE-3",
+            "process": "N,P",
+            "sf49": "1-H-3,,SIG,,AV",
+            "sf4": "1-H-3",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Averaged over energy                             interval"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((2-HE-3(N,P)1-H-3,,SIG,,AV)/(3-LI-6(N,T)2-HE-4,,SIG,,AV))",
+        "children": [
+          {
             "code": [
               "2-HE-3",
               [
@@ -121,10 +146,36 @@
             "sf8": "AV",
             "sf9": null
           },
-          "type": null,
-          "free_text": "  Averaged over energy                             interval"
-        }
-      },
+          {
+            "code": [
+              "3-LI-6",
+              [
+                "N,T"
+              ],
+              "2-HE-4,,SIG,,AV"
+            ],
+            "type": null,
+            "target": "3-LI-6",
+            "process": "N,T",
+            "sf49": "2-HE-4,,SIG,,AV",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": "Averaged over energy interval"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MONIT-ERR"
@@ -388,51 +439,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((2-HE-3(N,P)1-H-3,,SIG,,AV)/(3-LI-6(N,T)2-HE-4,,SIG,,AV))",
-          "0": {
-            "code": [
-              "2-HE-3",
-              [
-                "N,P"
-              ],
-              "1-H-3,,SIG,,AV"
-            ],
-            "type": null,
-            "target": "2-HE-3",
-            "process": "N,P",
-            "sf49": "1-H-3,,SIG,,AV",
-            "sf4": "1-H-3",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "3-LI-6",
-              [
-                "N,T"
-              ],
-              "2-HE-4,,SIG,,AV"
-            ],
-            "type": null,
-            "target": "3-LI-6",
-            "process": "N,T",
-            "sf49": "2-HE-4,,SIG,,AV",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": "Averaged over energy interval"
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -708,18 +714,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(STRUC)",
             "free_txt": [
               " Level structure for He-4"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
@@ -736,38 +740,30 @@
               " reaction."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               " Fast pulse reactor IBR-30"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Flight base is 500 m, resolution  9 nsec/m"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -784,8 +780,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -793,10 +789,8 @@
               "using Li6 data of D.Gayther and G.Lamaze."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -804,10 +798,8 @@
               "        and  monitor error ."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,D.B.Gayther,J,ANE,4,515,1977)",
             "free_txt": [
@@ -820,18 +812,14 @@
               " For EN > 10.keV"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -848,8 +836,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -869,10 +857,8 @@
               "respectively."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,J.H.Gibbons+,J,PR,114,571,1959)",
             "free_txt": []
@@ -881,18 +867,14 @@
             "x4_code": "(,R.L.Macklin+,C,65ANTWERP,,498,1965)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

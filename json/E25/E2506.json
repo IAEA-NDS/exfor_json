@@ -161,47 +161,43 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,92,015805,2015)",
-          "free_txt": [],
-          "publication_year": "2015"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2JPNIPC)",
-          "free_txt": [
-            " 18F beam was produced via 18O(p,n)18F",
-            "                reaction"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2JPNIPC)"
-        },
-        {
-          "x4_code": "(PRJFS,2JPNTOK)",
-          "free_txt": [
-            " produced 18F at Center for Nuclear",
-            "                Study (CRIB)"
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(2JPNTOK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,92,015805,2015)",
+        "free_txt": [],
+        "publication_year": "2015",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2JPNIPC)",
+        "free_txt": [
+          " 18F beam was produced via 18O(p,n)18F",
+          "                reaction"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2JPNIPC)"
+      },
+      {
+        "x4_code": "(PRJFS,2JPNTOK)",
+        "free_txt": [
+          " produced 18F at Center for Nuclear",
+          "                Study (CRIB)"
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2JPNTOK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(9-F-18,A)8-O-15,,SIG,,SFC,DERIV)=(9-F-18(P,A)8-O-15,,SIG,,SFC,DERIV))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-1(9-F-18,A)8-O-15,,SIG,,SFC,DERIV)=(9-F-18(P,A)8-O-15,,SIG,,SFC,DERIV))",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -220,7 +216,7 @@
             "sf8": "SFC",
             "sf9": "DERIV"
           },
-          "1": {
+          {
             "code": [
               "9-F-18",
               [
@@ -238,11 +234,65 @@
             "sf7": null,
             "sf8": "SFC",
             "sf9": "DERIV"
+          }
+        ],
+        "type": "=",
+        "free_text": "assumption of 3/2+ for the resonance at 6460 keV"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((1-H-1(9-F-18,A)8-O-15,,SIG,,SFC,DERIV)=(9-F-18(P,A)8-O-15,,SIG,,SFC,DERIV))",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "9-F-18,A"
+              ],
+              "8-O-15,,SIG,,SFC,DERIV"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "9-F-18,A",
+            "sf49": "8-O-15,,SIG,,SFC,DERIV",
+            "sf4": "8-O-15",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SFC",
+            "sf9": "DERIV"
           },
-          "type": "=",
-          "free_text": "assumption of 3/2+ for the resonance at 6460 keV"
-        }
-      },
+          {
+            "code": [
+              "9-F-18",
+              [
+                "P,A"
+              ],
+              "8-O-15,,SIG,,SFC,DERIV"
+            ],
+            "type": null,
+            "target": "9-F-18",
+            "process": "P,A",
+            "sf49": "8-O-15,,SIG,,SFC,DERIV",
+            "sf4": "8-O-15",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SFC",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": "=",
+        "free_text": "assumption of 5/2- for the resonance at 6460 keV"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -342,51 +392,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(9-F-18,A)8-O-15,,SIG,,SFC,DERIV)=(9-F-18(P,A)8-O-15,,SIG,,SFC,DERIV))",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "9-F-18,A"
-              ],
-              "8-O-15,,SIG,,SFC,DERIV"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "9-F-18,A",
-            "sf49": "8-O-15,,SIG,,SFC,DERIV",
-            "sf4": "8-O-15",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": "DERIV"
-          },
-          "1": {
-            "code": [
-              "9-F-18",
-              [
-                "P,A"
-              ],
-              "8-O-15,,SIG,,SFC,DERIV"
-            ],
-            "type": null,
-            "target": "9-F-18",
-            "process": "P,A",
-            "sf49": "8-O-15,,SIG,,SFC,DERIV",
-            "sf4": "8-O-15",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": "DERIV"
-          },
-          "type": "=",
-          "free_text": "assumption of 5/2- for the resonance at 6460 keV"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -488,16 +493,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(TROJA)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SI)",
             "free_txt": [
@@ -506,10 +509,8 @@
               "     (ASTRHO) for lighter ejecta"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2JPNIPC)",
             "free_txt": [
@@ -524,36 +525,28 @@
               "                Study (CRIB)"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Beam intensity is 5E+05 to 2E+06 PPS."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(A,8-O-15)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -566,18 +559,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -588,18 +579,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

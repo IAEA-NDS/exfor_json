@@ -39,37 +39,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,130,513,1969)",
-          "free_txt": [],
-          "publication_year": "1969"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2UK KCL)",
-          "free_txt": [
-            " The proton linear accelerator was used."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2UK KCL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,130,513,1969)",
+        "free_txt": [],
+        "publication_year": "1969",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2UK KCL)",
+        "free_txt": [
+          " The proton linear accelerator was used."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2UK KCL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-3(P,2P)1-H-2,,DA,D)",
-          "0": {
+      "0": {
+        "x4_code": "(2-HE-3(P,2P)1-H-2,,DA,D)",
+        "children": [
+          {
             "code": [
               "2-HE-3",
               [
@@ -87,11 +82,74 @@
             "sf7": "D",
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(2-HE-4(P,2P)1-H-3,,DA,T)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "P,2P"
+              ],
+              "1-H-3,,DA,T"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "P,2P",
+            "sf49": "1-H-3,,DA,T",
+            "sf4": "1-H-3",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "T",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(2-HE-4(P,X)2-HE-3,,DA)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "P,X"
+              ],
+              "2-HE-3,,DA"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "P,X",
+            "sf49": "2-HE-3,,DA",
+            "sf4": "2-HE-3",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-ERR-D",
@@ -236,32 +294,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(P,2P)1-H-3,,DA,T)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "P,2P"
-              ],
-              "1-H-3,,DA,T"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "P,2P",
-            "sf49": "1-H-3,,DA,T",
-            "sf4": "1-H-3",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "T",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -349,32 +381,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(P,X)2-HE-3,,DA)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "P,X"
-              ],
-              "2-HE-3,,DA"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "P,X",
-            "sf49": "2-HE-3,,DA",
-            "sf4": "2-HE-3",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -464,8 +470,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SIBAR,SI)",
             "free_txt": [
@@ -481,30 +487,24 @@
               "barrier counters."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information about source of uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2UK KCL)",
             "free_txt": [
               " The proton linear accelerator was used."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -520,18 +520,16 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "99.9% pure 3He was used"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -542,18 +540,16 @@
       }
     },
     "003": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Natural helium containing ~ 100% 4He was used"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -564,18 +560,16 @@
       }
     },
     "004": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Natural helium containing ~ 100% 4He was used"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

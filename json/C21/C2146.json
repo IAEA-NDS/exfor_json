@@ -101,38 +101,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,90,054324,2014)",
-          "free_txt": [],
-          "publication_year": "2014"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,1USAORL)",
-          "free_txt": [
-            " Experiment performed at the HRIBF",
-            " tandem accelerator at Oak Ridge National Laboratory"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,90,054324,2014)",
+        "free_txt": [],
+        "publication_year": "2014",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,1USAORL)",
+        "free_txt": [
+          " Experiment performed at the HRIBF",
+          " tandem accelerator at Oak Ridge National Laboratory"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(4-BE-10,EL)2-HE-4,,IPA,A,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(2-HE-4(4-BE-10,EL)2-HE-4,,IPA,A,REL)",
+        "children": [
+          {
             "code": [
               "2-HE-4",
               [
@@ -150,11 +145,74 @@
             "sf7": "A",
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(2-HE-4(4-BE-10,EL)2-HE-4,,DA,A,REL)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "4-BE-10,EL"
+              ],
+              "2-HE-4,,DA,A,REL"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "4-BE-10,EL",
+            "sf49": "2-HE-4,,DA,A,REL",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "A",
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(2-HE-4(4-BE-10,EL)2-HE-4,,IPA,A)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "4-BE-10,EL"
+              ],
+              "2-HE-4,,IPA,A"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "4-BE-10,EL",
+            "sf49": "2-HE-4,,IPA,A",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "IPA",
+            "sf7": "A",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-MIN",
@@ -1857,32 +1915,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(4-BE-10,EL)2-HE-4,,DA,A,REL)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "4-BE-10,EL"
-              ],
-              "2-HE-4,,DA,A,REL"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "4-BE-10,EL",
-            "sf49": "2-HE-4,,DA,A,REL",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "A",
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2359,32 +2391,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(4-BE-10,EL)2-HE-4,,IPA,A)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "4-BE-10,EL"
-              ],
-              "2-HE-4,,IPA,A"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "4-BE-10,EL",
-            "sf49": "2-HE-4,,IPA,A",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "IPA",
-            "sf7": "A",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG-MIN",
@@ -4089,8 +4095,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SI,SI,SI)",
             "free_txt": [
@@ -4116,10 +4122,8 @@
               "respectively."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -4127,10 +4131,8 @@
               "        information from author (M.F.)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,1USAORL)",
             "free_txt": [
@@ -4138,10 +4140,8 @@
               " tandem accelerator at Oak Ridge National Laboratory"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -4155,10 +4155,8 @@
               "10B being removed from the beam."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TTM)",
             "free_txt": [
@@ -4171,10 +4169,8 @@
               "a resonant component to the scattering process occurs."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -4190,8 +4186,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -4203,8 +4199,8 @@
       }
     },
     "003": {
-      "misc-col": {
-        "0": [
+      "0": {
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -4212,10 +4208,8 @@
               " accelerator"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -4227,8 +4221,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -29,37 +29,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NT,12,226,1971)",
-          "free_txt": [],
-          "publication_year": "1971"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2GERKFK)",
-          "free_txt": [
-            " STARK zero power reactor."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2GERKFK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NT,12,226,1971)",
+        "free_txt": [],
+        "publication_year": "1971",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2GERKFK)",
+        "free_txt": [
+          " STARK zero power reactor."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2GERKFK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)56-BA-140,CUM,FY,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)56-BA-140,CUM,FY,,MXW)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -77,11 +72,75 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)56-BA-140,CUM,FY,,SPA)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "56-BA-140,CUM,FY,,SPA"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "56-BA-140,CUM,FY,,SPA",
+            "sf4": "56-BA-140",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-238(N,F)56-BA-140,CUM,FY,,SPA)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              "56-BA-140,CUM,FY,,SPA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": "56-BA-140,CUM,FY,,SPA",
+            "sf4": "56-BA-140",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": null
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -120,32 +179,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)56-BA-140,CUM,FY,,SPA)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "56-BA-140,CUM,FY,,SPA"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "56-BA-140,CUM,FY,,SPA",
-            "sf4": "56-BA-140",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -184,32 +217,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,F)56-BA-140,CUM,FY,,SPA)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "56-BA-140,CUM,FY,,SPA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": "56-BA-140,CUM,FY,,SPA",
-            "sf4": "56-BA-140",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -248,15 +255,14 @@
       }
     },
     "005": {
-      "reaction": null,
       "common": null,
       "data": null
     }
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -271,20 +277,16 @@
               " Parallel plate chamber to measure fission rate."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2GERKFK)",
             "free_txt": [
               " STARK zero power reactor."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -296,10 +298,8 @@
             "x4_code": "(GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -311,16 +311,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(56-BA-140,12.8D,DG,1596.5)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -329,38 +327,30 @@
               "determination."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(THCOL)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Cd ratio 10000."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               " 19.86% enriched in U-235 sample of 0.2 g/cm2 for ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -372,16 +362,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(56-BA-140,12.8D,DG,1596.5)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -389,20 +377,16 @@
               "rates, response probability of gamma detector."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               "  Center of core, charge 5."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -410,20 +394,16 @@
               "by H2 and CH(4) counters and calculated ."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "19.86 % and 0.4% enrichment in U-235. Three U foils."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -441,16 +421,14 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(56-BA-140,12.8D,DG,1596.5)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -458,20 +436,16 @@
               "rates, response probability of gamma detector."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               "  Center of core, charge 5."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -479,20 +453,16 @@
               "by H2 and CH(4) counters and calculated ."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "19.86 % and 0.4% enrichment in U-235. Three U foils."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -510,8 +480,8 @@
       }
     },
     "005": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

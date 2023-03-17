@@ -44,44 +44,41 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AE,16,(2),145,1964)",
-          "free_txt": [],
-          "publication_year": "1964"
-        },
-        {
-          "x4_code": "(J,SJA,16,167,1964)",
-          "free_txt": [
-            "#doi:10.1007/BF01116153"
-          ],
-          "publication_year": "1964"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4RUSITE)",
-          "free_txt": [
-            " HWR reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4RUSITE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AE,16,(2),145,1964)",
+        "free_txt": [],
+        "publication_year": "1964",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SJA,16,167,1964)",
+        "free_txt": [
+          "#doi:10.1007/BF01116153"
+        ],
+        "publication_year": "1964",
+        "pointer": "0",
+        "doi": "10.1007/BF01116153"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4RUSITE)",
+        "free_txt": [
+          " HWR reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4RUSITE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((48-CD-108(N,G)48-CD-109,,SIG,,MXW)/(48-CD-114(N,G)48-CD-115,,SIG,,MXW))",
-          "0": {
+      "0": {
+        "x4_code": "((48-CD-108(N,G)48-CD-109,,SIG,,MXW)/(48-CD-114(N,G)48-CD-115,,SIG,,MXW))",
+        "children": [
+          {
             "code": [
               "48-CD-108",
               [
@@ -100,7 +97,7 @@
             "sf8": "MXW",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "48-CD-114",
               [
@@ -118,11 +115,46 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": "/",
-          "free_text": " Ratio of Cd-109 and Cd-115 activations."
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": " Ratio of Cd-109 and Cd-115 activations."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(48-CD-108(N,G)48-CD-109,,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "48-CD-108",
+              [
+                "N,G"
+              ],
+              "48-CD-109,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "48-CD-108",
+            "process": "N,G",
+            "sf49": "48-CD-109,,SIG,,MXW",
+            "sf4": "48-CD-109",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -144,32 +176,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(48-CD-108(N,G)48-CD-109,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "48-CD-108",
-              [
-                "N,G"
-              ],
-              "48-CD-109,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "48-CD-108",
-            "process": "N,G",
-            "sf49": "48-CD-109,,SIG,,MXW",
-            "sf4": "48-CD-109",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -208,28 +214,24 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
               " Beta-spectrometer."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4RUSITE)",
             "free_txt": [
               " HWR reactor"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -237,10 +239,8 @@
               " Activation time 100 hr. Cooling time 207 hr."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(48-CD-108,ENR=0.498)",
             "free_txt": []
@@ -277,18 +277,16 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               " Conversion coefficients were taken into account."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(48-CD-109,470.D,B)",
             "free_txt": []
@@ -300,20 +298,16 @@
               "Atlas of effective c-s, 1955, Moscow, page XI."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Thermal spectrum"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -324,26 +318,22 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               " Average value of 3 measurements."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(48-CD-109,470.D)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(48-CD-115-G,53.8HR,B)",
             "free_txt": [
@@ -351,28 +341,22 @@
               "Atlas of effective c-s, 1955, Moscow, page XI."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Thermal spectrum"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(48-CD-114(N,G)48-CD-115-G,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

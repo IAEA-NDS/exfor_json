@@ -46,35 +46,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JLCR,32,(S1),478,1993)",
-          "free_txt": [],
-          "publication_year": "1993"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2GERJUL)",
-          "free_txt": [],
-          "facility_type": "(CYCLO)",
-          "institute": "(2GERJUL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JLCR,32,(S1),478,1993)",
+        "free_txt": [],
+        "publication_year": "1993",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2GERJUL)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2GERJUL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(18-AR-38(P,N)19-K-38,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(18-AR-38(P,N)19-K-38,,SIG)",
+        "children": [
+          {
             "code": [
               "18-AR-38",
               [
@@ -92,11 +87,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(18-AR-38(P,N)19-K-38,,TTY,,SAT,DERIV)",
+        "children": [
+          {
+            "code": [
+              "18-AR-38",
+              [
+                "P,N"
+              ],
+              "19-K-38,,TTY,,SAT,DERIV"
+            ],
+            "type": null,
+            "target": "18-AR-38",
+            "process": "P,N",
+            "sf49": "19-K-38,,TTY,,SAT,DERIV",
+            "sf4": "19-K-38",
+            "sf5": null,
+            "sf6": "TTY",
+            "sf7": null,
+            "sf8": "SAT",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -177,32 +207,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(18-AR-38(P,N)19-K-38,,TTY,,SAT,DERIV)",
-          "0": {
-            "code": [
-              "18-AR-38",
-              [
-                "P,N"
-              ],
-              "19-K-38,,TTY,,SAT,DERIV"
-            ],
-            "type": null,
-            "target": "18-AR-38",
-            "process": "P,N",
-            "sf49": "19-K-38,,TTY,,SAT,DERIV",
-            "sf4": "19-K-38",
-            "sf5": null,
-            "sf6": "TTY",
-            "sf7": null,
-            "sf8": "SAT",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -231,32 +235,48 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-mon": {
-        "2": [
+      "1": {
+        "decay-mon": [
+          {
+            "x4_code": "(30-ZN-62,9.1HR,DG,548.,0.141)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(29-CU-0(P,X)30-ZN-63,,SIG)",
+            "free_txt": []
+          }
+        ]
+      },
+      "2": {
+        "decay-mon": [
           {
             "x4_code": "(30-ZN-63,38.1MIN,DG,669.,0.084)",
             "free_txt": []
           }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(29-CU-0(P,X)30-ZN-62,,SIG)",
+            "free_txt": []
+          }
         ]
       },
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2GERJUL)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,EXTB)",
             "free_txt": [
@@ -270,10 +290,8 @@
               " Each irradiated gas cell was counted directly."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,A.Gruetter,J,NP/A,383,98,1982)",
             "free_txt": []
@@ -282,18 +300,8 @@
             "x4_code": "(,P.Kopecky,J,ARI,36,657,1985)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "2": [
-          {
-            "x4_code": "(29-CU-0(P,X)30-ZN-62,,SIG)",
-            "free_txt": []
-          }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,E.Browne+,B,BROWNE,,1986)",
             "free_txt": [
@@ -306,10 +314,8 @@
               " Stopping power and range"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(18-AR-38,ENR=0.957)",
             "free_txt": [
@@ -319,19 +325,28 @@
             ]
           }
         ]
+      },
+      "C": {
+        "monitor": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "u monitor foils placed in front and at the back of",
+              "each cell."
+            ]
+          }
+        ]
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(19-K-38-G,7.6MIN,B+)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -339,18 +354,14 @@
               "was estimated to Be between 12 and 18%."
             ]
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(19-K-38,AR)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -361,18 +372,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Integration of measured excitation function"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

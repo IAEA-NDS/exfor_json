@@ -86,29 +86,85 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,541,137,1992)",
-          "free_txt": [
-            " Main reference"
-          ],
-          "publication_year": "1992"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,NP/A,541,137,1992)",
+        "free_txt": [
+          " Main reference"
+        ],
+        "publication_year": "1992",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2SWTPSI)",
+        "free_txt": [
+          " Polarized Neutron facility installed",
+          " at the PSI Injector Cyclotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2SWTPSI)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(1-H-1(N,EL)1-H-1,,POL/DA,P,ANA)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,EL"
+              ],
+              "1-H-1,,POL/DA,P,ANA"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,EL",
+            "sf49": "1-H-1,,POL/DA,P,ANA",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "POL/DA",
+            "sf7": "P",
+            "sf8": "ANA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Measurements on                         protons recoil detection"
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2SWTPSI)",
-          "free_txt": [
-            " Polarized Neutron facility installed",
-            " at the PSI Injector Cyclotron."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2SWTPSI)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(N,EL)1-H-1,,POL/DA,,ANA)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,EL"
+              ],
+              "1-H-1,,POL/DA,,ANA"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,EL",
+            "sf49": "1-H-1,,POL/DA,,ANA",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "POL/DA",
+            "sf7": null,
+            "sf8": "ANA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Measurements on        experiment of scattered neutron detection"
+      }
     }
   },
   "data_tables": {
@@ -133,32 +189,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,EL)1-H-1,,POL/DA,P,ANA)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,EL"
-              ],
-              "1-H-1,,POL/DA,P,ANA"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,EL",
-            "sf49": "1-H-1,,POL/DA,P,ANA",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "POL/DA",
-            "sf7": "P",
-            "sf8": "ANA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Measurements on                         protons recoil detection"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -239,32 +269,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,EL)1-H-1,,POL/DA,,ANA)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,EL"
-              ],
-              "1-H-1,,POL/DA,,ANA"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,EL",
-            "sf49": "1-H-1,,POL/DA,,ANA",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "POL/DA",
-            "sf7": null,
-            "sf8": "ANA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Measurements on        experiment of scattered neutron detection"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -326,8 +330,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -336,10 +340,8 @@
               " REL-REF, for data analysis"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -352,10 +354,8 @@
               " Multiple Scattering - for protons only"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -381,20 +381,16 @@
               " repeat measurements in region 107deg < ANG-CM <130deg."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Statistical and systematical errors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2SWTPSI)",
             "free_txt": [
@@ -402,10 +398,8 @@
               " at the PSI Injector Cyclotron."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(POLNS,P-D)",
             "free_txt": [
@@ -415,10 +409,8 @@
               " of proton polarization- 0.85 and transfer coefficient."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -430,10 +422,8 @@
               " target."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -466,10 +456,8 @@
               "provided by the Faraday cup."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,R.Henneck+,J,NIM/A,259,329,1987)",
             "free_txt": [
@@ -490,10 +478,8 @@
               " Data of ASSUM"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -509,8 +495,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -521,8 +507,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

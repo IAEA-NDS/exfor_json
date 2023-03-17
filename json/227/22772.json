@@ -93,43 +93,39 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,71,055803,2005)",
-          "free_txt": [
-            " Main reference, data are given",
-            "#doi:10.1103/PhysRevC.71.055803"
-          ],
-          "publication_year": "2005"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,2JPNTIT)",
-          "free_txt": [
-            "   3.2 MV Pelletron Accelerator of the",
-            "  Research Laboratory for Nuclear Reactors at the",
-            "  Tokyo Institute of Technology. Pulsed proton beam",
-            "  with 1.5 nanosec pulse width."
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(2JPNTIT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,71,055803,2005)",
+        "free_txt": [
+          " Main reference, data are given",
+          "#doi:10.1103/PhysRevC.71.055803"
+        ],
+        "publication_year": "2005",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.71.055803"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,2JPNTIT)",
+        "free_txt": [
+          "   3.2 MV Pelletron Accelerator of the",
+          "  Research Laboratory for Nuclear Reactors at the",
+          "  Tokyo Institute of Technology. Pulsed proton beam",
+          "  with 1.5 nanosec pulse width."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2JPNTIT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-7(N,G)3-LI-8,PAR,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(3-LI-7(N,G)3-LI-8,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "3-LI-7",
               [
@@ -147,11 +143,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(3-LI-7(N,G)3-LI-8,,SIG)",
+        "children": [
+          {
+            "code": [
+              "3-LI-7",
+              [
+                "N,G"
+              ],
+              "3-LI-8,,SIG"
+            ],
+            "type": null,
+            "target": "3-LI-7",
+            "process": "N,G",
+            "sf49": "3-LI-8,,SIG",
+            "sf4": "3-LI-8",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL"
@@ -224,32 +255,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-7(N,G)3-LI-8,,SIG)",
-          "0": {
-            "code": [
-              "3-LI-7",
-              [
-                "N,G"
-              ],
-              "3-LI-8,,SIG"
-            ],
-            "type": null,
-            "target": "3-LI-7",
-            "process": "N,G",
-            "sf49": "3-LI-8,,SIG",
-            "sf4": "3-LI-8",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -312,8 +317,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -321,10 +326,8 @@
               " shielding of neutrons in sample and in Au monitor"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GLASD,SCIN)",
             "free_txt": [
@@ -332,10 +335,8 @@
               "              neutron flux monitoring"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -347,10 +348,8 @@
               "  low-energy side."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2JPNTIT)",
             "free_txt": [
@@ -360,20 +359,16 @@
               "  with 1.5 nanosec pulse width."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               ".Broad neutron spectrum in 8-100 keV energy range"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,GSPEC)",
             "free_txt": []
@@ -385,10 +380,8 @@
               "         irradiations"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -417,20 +410,16 @@
               "         in Au monitor sample."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": null,
             "free_txt": [
               " (,,3,ENDF-B/VI.8,7925,2001)"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": [
@@ -438,10 +427,8 @@
               " for 197Au (Mat=7925), evaluated by S.F.Mughabghab"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,T.Ohsaki+,J,NIM/A,425,302,1999)",
             "free_txt": [
@@ -460,10 +447,8 @@
               "  TIME-MULTI for correction calculations"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -474,8 +459,8 @@
       }
     },
     "002": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -490,10 +475,8 @@
               "  was 637 mm."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -501,10 +484,8 @@
               "   5 micro-A, pulse repetition rate 2 MHz"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -515,8 +496,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -524,10 +505,8 @@
               " and from the first excited to ground state transition"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -543,10 +522,8 @@
               "  sample and the HPGe detector was 746 mm."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -554,10 +531,8 @@
               "   5 micro-A, pulse repetition rate 2 MHz"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -26,40 +26,36 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,115,1247,1959)",
-          "free_txt": [
-            "#doi:10.1103/PhysRev.115.1247"
-          ],
-          "publication_year": "1959"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USAANL)",
-          "free_txt": [
-            " The Argonne National Laboratory",
-            "Cyclotron."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USAANL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,115,1247,1959)",
+        "free_txt": [
+          "#doi:10.1103/PhysRev.115.1247"
+        ],
+        "publication_year": "1959",
+        "pointer": "0",
+        "doi": "10.1103/PhysRev.115.1247"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USAANL)",
+        "free_txt": [
+          " The Argonne National Laboratory",
+          "Cyclotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USAANL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(A,F)ELEM/MASS,(CUM),SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(A,F)ELEM/MASS,(CUM),SIG)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -74,18 +70,109 @@
             "type": null,
             "target": "92-U-235",
             "process": "A,F",
-            "sf49": "ELEM/MASS,",
+            "sf49": "ELEM/MASS,,(CUM),,SIG",
             "sf4": "ELEM/MASS",
             "sf5": null,
-            "sf6": null,
+            "sf6": "(CUM)",
+            "sf7": null,
+            "sf8": "SIG",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(A,F)MASS,CHN,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "A,F"
+              ],
+              "MASS,CHN,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "A,F",
+            "sf49": "MASS,CHN,SIG",
+            "sf4": "MASS",
+            "sf5": "CHN",
+            "sf6": "SIG",
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-235(A,F),PR,NU,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "A,F"
+              ],
+              ",PR,NU,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "A,F",
+            "sf49": ",PR,NU,,,DERIV",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(92-U-235(A,F),,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "A,F"
+              ],
+              ",,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "A,F",
+            "sf49": ",,SIG,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": " Total fission cross sections."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -763,32 +850,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(A,F)MASS,CHN,SIG)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "A,F"
-              ],
-              "MASS,CHN,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "A,F",
-            "sf49": "MASS,CHN,SIG",
-            "sf4": "MASS",
-            "sf5": "CHN",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1124,32 +1185,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(A,F),PR,NU,,,DERIV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "A,F"
-              ],
-              ",PR,NU,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "A,F",
-            "sf49": ",PR,NU,,,DERIV",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1179,32 +1214,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(A,F),,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "A,F"
-              ],
-              ",,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "A,F",
-            "sf49": ",,SIG,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": " Total fission cross sections."
-        }
-      },
       "common": {
         "heads": [
           "DATA-ERR"
@@ -1250,8 +1259,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1260,10 +1269,8 @@
               "for counting in a 2pi window proportional flow counter."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PROPC,NAICR)",
             "free_txt": [
@@ -1271,10 +1278,8 @@
               "in. well-type NaI(Tl) crystal."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USAANL)",
             "free_txt": [
@@ -1282,10 +1287,8 @@
               "Cyclotron."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP,ACTIV,BSPEC)",
             "free_txt": [
@@ -1297,10 +1300,8 @@
               "target was dissolved."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(92-U-235,ENR=0.9341)",
             "free_txt": [
@@ -1314,8 +1315,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1332,10 +1333,8 @@
               "ranging from 20 to 40 MeV."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1346,8 +1345,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR,5.,15.)",
             "free_txt": [
@@ -1364,10 +1363,8 @@
               "energies ranging from 20 to 40 MeV."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1382,8 +1379,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1391,10 +1388,8 @@
               "symmetry of the FY curve as explained on page 1253."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1402,10 +1397,8 @@
               "variation is 0.5 to 1.0 neutrons."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1416,8 +1409,8 @@
       }
     },
     "005": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1425,10 +1418,8 @@
               "explained on p.1251."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1444,10 +1435,8 @@
               "accurate within 10%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

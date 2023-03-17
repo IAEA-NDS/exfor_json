@@ -81,57 +81,54 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YK,,(3-4),89,1995)",
-          "free_txt": [
-            "  Data table is given ."
-          ],
-          "publication_year": "1995"
-        },
-        {
-          "x4_code": "(R,INDC(CCP)-403,43,1997)",
-          "free_txt": [
-            " Engl.translation of",
-            "                          J,YK,,(4),89,1995 ."
-          ],
-          "publication_year": "1997"
-        },
-        {
-          "x4_code": "(T,GRIGORIEV,2005)",
-          "free_txt": [
-            " Dissertation of Yu.Grigoriev."
-          ],
-          "publication_year": "2005"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            "  Fast pulse reactor IBR-30.",
-            " Boron carbide (of 10 mm thickness) filter or Cd filter",
-            " of 1 mm thickness.",
-            " Resonance filters of Mn and Co."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YK,,(3-4),89,1995)",
+        "free_txt": [
+          "  Data table is given ."
+        ],
+        "publication_year": "1995",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(CCP)-403,43,1997)",
+        "free_txt": [
+          " Engl.translation of",
+          "                          J,YK,,(4),89,1995 ."
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(T,GRIGORIEV,2005)",
+        "free_txt": [
+          " Dissertation of Yu.Grigoriev."
+        ],
+        "publication_year": "2005",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          "  Fast pulse reactor IBR-30.",
+          " Boron carbide (of 10 mm thickness) filter or Cd filter",
+          " of 1 mm thickness.",
+          " Resonance filters of Mn and Co."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(92-U-235(N,ABS),,ALF,,RES)",
-          "0": {
+      "1": {
+        "x4_code": "(92-U-235(N,ABS),,ALF,,RES)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -149,13 +146,15 @@
             "sf7": null,
             "sf8": "RES",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(92-U-235(N,G)92-U-236,,MLT,,RES)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(92-U-235(N,G)92-U-236,,MLT,,RES)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -173,11 +172,74 @@
             "sf7": null,
             "sf8": "RES",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,ABS),,ALF,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,ABS"
+              ],
+              ",,ALF,,AV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,ABS",
+            "sf49": ",,ALF,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "ALF",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Alpha-value average in wide energy groups"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-235(N,ABS),,ALF,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,ABS"
+              ],
+              ",,ALF,,AV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,ABS",
+            "sf49": ",,ALF,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "ALF",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Alpha-value average in narrow energy groups"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -857,32 +919,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,ABS),,ALF,,AV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,ABS"
-              ],
-              ",,ALF,,AV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,ABS",
-            "sf49": ",,ALF,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "ALF",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Alpha-value average in wide energy groups"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -969,32 +1005,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,ABS),,ALF,,AV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,ABS"
-              ],
-              ",,ALF,,AV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,ABS",
-            "sf49": ",,ALF,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "ALF",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Alpha-value average in narrow energy groups"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1103,8 +1113,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1119,20 +1129,16 @@
               " defined."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               " For background."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -1140,10 +1146,8 @@
               " of total volume 32 litre."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
@@ -1153,10 +1157,8 @@
               " Resonance filters of Mn and Co."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1170,10 +1172,8 @@
               " measured for resolved resonances in region 1- 150 eV."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1184,8 +1184,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR,3.,10.)",
             "free_txt": [
@@ -1195,10 +1195,8 @@
               "          from 3 to 7 % ."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,40840002,Yu.V.Adamchuk+,C,83KIEV,2,137,1983)",
             "free_txt": [
@@ -1212,10 +1210,8 @@
               " systematically lower than data of R.Gwin+ ."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1225,10 +1221,29 @@
               " U-235 content is 90 % , U-238 content is 10 % ."
             ]
           }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table 45 of disser.of Grigoriev.",
+              " Also almost the same data in Yad.Konst.,is.4,p.89,1995"
+            ]
+          }
         ]
       },
-      "status": {
-        "2": [
+      "1": {
+        "status": [
+          {
+            "x4_code": "(COREL,41511006)",
+            "free_txt": [
+              " Data from TOF base 120 m."
+            ]
+          }
+        ]
+      },
+      "2": {
+        "status": [
           {
             "x4_code": "(COREL,41511005)",
             "free_txt": [
@@ -1240,18 +1255,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not specified, probably total."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1259,10 +1272,8 @@
               "thickness."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1301,28 +1312,24 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not specified, probably total."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " Data are the same as in 41511.003."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -77,46 +77,42 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,124,271,199610)",
-          "free_txt": [
-            "  Main reference"
-          ],
-          "publication_year": "1996"
-        },
-        {
-          "x4_code": "(R,LA-UR-95-3329,1995)",
-          "free_txt": [
-            "  Preliminary data"
-          ],
-          "publication_year": "1995"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(MESON,1USALAS)",
-          "free_txt": [
-            " WNR at LAMPF"
-          ],
-          "facility_type": "(MESON)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,124,271,199610)",
+        "free_txt": [
+          "  Main reference"
+        ],
+        "publication_year": "1996",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,LA-UR-95-3329,1995)",
+        "free_txt": [
+          "  Preliminary data"
+        ],
+        "publication_year": "1995",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(MESON,1USALAS)",
+        "free_txt": [
+          " WNR at LAMPF"
+        ],
+        "pointer": "0",
+        "facility_type": "(MESON)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(27-CO-59(N,X)ELEM,,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(27-CO-59(N,X)ELEM,,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "27-CO-59",
               [
@@ -134,11 +130,74 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(27-CO-59(N,X)ELEM,,DE,,AV)",
+        "children": [
+          {
+            "code": [
+              "27-CO-59",
+              [
+                "N,X"
+              ],
+              "ELEM,,DE,,AV"
+            ],
+            "type": null,
+            "target": "27-CO-59",
+            "process": "N,X",
+            "sf49": "ELEM,,DE,,AV",
+            "sf4": "ELEM",
+            "sf5": null,
+            "sf6": "DE",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(27-CO-59(N,X)ELEM,,DA/DE,,AV)",
+        "children": [
+          {
+            "code": [
+              "27-CO-59",
+              [
+                "N,X"
+              ],
+              "ELEM,,DA/DE,,AV"
+            ],
+            "type": null,
+            "target": "27-CO-59",
+            "process": "N,X",
+            "sf49": "ELEM,,DA/DE,,AV",
+            "sf4": "ELEM",
+            "sf5": null,
+            "sf6": "DA/DE",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ELEMENT"
@@ -346,32 +405,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(27-CO-59(N,X)ELEM,,DE,,AV)",
-          "0": {
-            "code": [
-              "27-CO-59",
-              [
-                "N,X"
-              ],
-              "ELEM,,DE,,AV"
-            ],
-            "type": null,
-            "target": "27-CO-59",
-            "process": "N,X",
-            "sf49": "ELEM,,DE,,AV",
-            "sf4": "ELEM",
-            "sf5": null,
-            "sf6": "DE",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ELEMENT"
@@ -10520,32 +10553,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(27-CO-59(N,X)ELEM,,DA/DE,,AV)",
-          "0": {
-            "code": [
-              "27-CO-59",
-              [
-                "N,X"
-              ],
-              "ELEM,,DA/DE,,AV"
-            ],
-            "type": null,
-            "target": "27-CO-59",
-            "process": "N,X",
-            "sf49": "ELEM,,DA/DE,,AV",
-            "sf4": "ELEM",
-            "sf5": null,
-            "sf6": "DA/DE",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ELEMENT"
@@ -61037,8 +61044,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -61046,10 +61053,8 @@
               " gas of delta E counter."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -61058,10 +61063,8 @@
               " 3He from alpha particles. (R.C.Haight, 2012-05-30)"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TELES,PROPC,SIBAR)",
             "free_txt": [
@@ -61080,10 +61083,8 @@
               "   monitoring via FF - for U-238 monitor"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -61093,28 +61094,22 @@
               " 235U fission deposit used for flux normalization."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(MESON,1USALAS)",
             "free_txt": [
               " WNR at LAMPF"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -61129,28 +61124,22 @@
               " source."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Thin cobalt target (3.79mg/cm2)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

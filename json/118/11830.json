@@ -1,7 +1,7 @@
 {
   "entry": "11830",
-  "last_updated": "2008-01-31",
-  "number_of_revisions": "4",
+  "last_updated": "2023-01-13",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19770706C)",
@@ -17,6 +17,13 @@
       "x4_code": "(20071128A)",
       "free_txt": [
         " SD: BIB section corrected."
+      ]
+    },
+    {
+      "x4_code": "(20220814A)",
+      "free_txt": [
+        " OS. REACTION corrected in sub.2, added",
+        " FACILITY, STATUS"
       ]
     }
   ],
@@ -39,14 +46,82 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ANS,5,375,1962)",
-          "free_txt": [],
-          "publication_year": "1962"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,ANS,5,375,1962)",
+        "free_txt": [],
+        "publication_year": "1962",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USASTF)",
+        "free_txt": [
+          " Stanford pool reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USASTF)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(49-IN-115(N,G)49-IN-116-M1+M2,,RI)",
+        "children": [
+          {
+            "code": [
+              "49-IN-115",
+              [
+                "N,G"
+              ],
+              "49-IN-116-M1+M2,,RI"
+            ],
+            "type": null,
+            "target": "49-IN-115",
+            "process": "N,G",
+            "sf49": "49-IN-116-M1+M2,,RI",
+            "sf4": "49-IN-116-M1+M2",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(75-RE-185(N,G)75-RE-186,,RI)",
+        "children": [
+          {
+            "code": [
+              "75-RE-185",
+              [
+                "N,G"
+              ],
+              "75-RE-186,,RI"
+            ],
+            "type": null,
+            "target": "75-RE-185",
+            "process": "N,G",
+            "sf49": "75-RE-186,,RI",
+            "sf4": "75-RE-186",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -66,32 +141,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(49-IN-115(N,G)49-IN-116-M,,RI)",
-          "0": {
-            "code": [
-              "49-IN-115",
-              [
-                "N,G"
-              ],
-              "49-IN-116-M,,RI"
-            ],
-            "type": null,
-            "target": "49-IN-115",
-            "process": "N,G",
-            "sf49": "49-IN-116-M,,RI",
-            "sf4": "49-IN-116-M",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -113,32 +162,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(75-RE-185(N,G)75-RE-186,,RI)",
-          "0": {
-            "code": [
-              "75-RE-185",
-              [
-                "N,G"
-              ],
-              "75-RE-186,,RI"
-            ],
-            "type": null,
-            "target": "75-RE-185",
-            "process": "N,G",
-            "sf49": "75-RE-186,,RI",
-            "sf4": "75-RE-186",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -162,38 +185,50 @@
   },
   "experimental_conditions": {
     "001": {
-      "method": {
-        "0": [
+      "0": {
+        "facility": [
           {
-            "x4_code": "(ACTIV)",
+            "x4_code": "(REAC,1USASTF)",
             "free_txt": [
-              " ACTIVATION"
+              " Stanford pool reactor"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "method": [
+          {
+            "x4_code": "(ACTIV)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,RI)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Text on p.376,J,ANS,5,375,1962"
+            ]
           }
         ]
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
-            "x4_code": "(49-IN-116-M,54.MIN)",
+            "x4_code": "(49-IN-116-M1,54.MIN)",
             "free_txt": []
           }
         ]
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(75-RE-186,90.HR)",
             "free_txt": []

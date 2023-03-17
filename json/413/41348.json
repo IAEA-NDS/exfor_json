@@ -77,38 +77,33 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "((S,ISINN-3,238,1995)=(S,JINR-E3-95-307,238,1995))",
-          "free_txt": [],
-          "publication_year": "1995"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            "  IBR-30 fast pulse reactor in booster",
-            "  mode"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((S,ISINN-3,238,1995)=(S,JINR-E3-95-307,238,1995))",
+        "free_txt": [],
+        "publication_year": "1995",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          "  IBR-30 fast pulse reactor in booster",
+          "  mode"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-208(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(82-PB-208(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "82-PB-208",
               [
@@ -126,11 +121,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(82-PB-208(N,SCT)82-PB-208,,SIG)",
+        "children": [
+          {
+            "code": [
+              "82-PB-208",
+              [
+                "N,SCT"
+              ],
+              "82-PB-208,,SIG"
+            ],
+            "type": null,
+            "target": "82-PB-208",
+            "process": "N,SCT",
+            "sf49": "82-PB-208,,SIG",
+            "sf4": "82-PB-208",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(82-PB-208(N,EL)82-PB-208,POT,SIG)",
+        "children": [
+          {
+            "code": [
+              "82-PB-208",
+              [
+                "N,EL"
+              ],
+              "82-PB-208,POT,SIG"
+            ],
+            "type": null,
+            "target": "82-PB-208",
+            "process": "N,EL",
+            "sf49": "82-PB-208,POT,SIG",
+            "sf4": "82-PB-208",
+            "sf5": "POT",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -193,32 +251,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-208(N,SCT)82-PB-208,,SIG)",
-          "0": {
-            "code": [
-              "82-PB-208",
-              [
-                "N,SCT"
-              ],
-              "82-PB-208,,SIG"
-            ],
-            "type": null,
-            "target": "82-PB-208",
-            "process": "N,SCT",
-            "sf49": "82-PB-208,,SIG",
-            "sf4": "82-PB-208",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -264,32 +296,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-208(N,EL)82-PB-208,POT,SIG)",
-          "0": {
-            "code": [
-              "82-PB-208",
-              [
-                "N,EL"
-              ],
-              "82-PB-208,POT,SIG"
-            ],
-            "type": null,
-            "target": "82-PB-208",
-            "process": "N,EL",
-            "sf49": "82-PB-208,POT,SIG",
-            "sf4": "82-PB-208",
-            "sf5": "POT",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -354,8 +360,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -365,20 +371,16 @@
               " normalization to monitor readings."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
               " 20 cm long He-3 counter at 10 atm pressure"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
@@ -386,10 +388,8 @@
               "  mode"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -402,10 +402,8 @@
               " Transmission measurements in 21-23 hour."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,S.F.Mughabghab+,B,NEUT.CS 1B,,1984)",
             "free_txt": []
@@ -423,10 +421,8 @@
               "                                        analysis."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -439,8 +435,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -449,20 +445,16 @@
               " For known impurities ( -(1-3)mb) ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Errors are statistical"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(PRELM)",
             "free_txt": [
@@ -479,8 +471,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -488,10 +480,8 @@
               " absorption, Schwinger and solid state scattering cs."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(PRELM)",
             "free_txt": [
@@ -512,8 +502,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -522,20 +512,16 @@
               " isotopes and 208Pb s-wave resonance effect ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Errors are statistical"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(PRELM)",
             "free_txt": [

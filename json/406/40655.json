@@ -85,55 +85,52 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,33,891,1981)",
-          "free_txt": [
-            " Issue 4"
-          ],
-          "publication_year": "1981"
-        },
-        {
-          "x4_code": "(J,SNP,33,467,1981)",
-          "free_txt": [
-            " Engl.transl.of J,YF,33,891,1981"
-          ],
-          "publication_year": "1981"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            " Fast pulse reactor IBR-30 in booster",
-            "              mode."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        },
-        {
-          "x4_code": "(LINAC,4ZZZDUB)",
-          "free_txt": [
-            "  LUE-40."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,33,891,1981)",
+        "free_txt": [
+          " Issue 4"
+        ],
+        "publication_year": "1981",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SNP,33,467,1981)",
+        "free_txt": [
+          " Engl.transl.of J,YF,33,891,1981"
+        ],
+        "publication_year": "1981",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          " Fast pulse reactor IBR-30 in booster",
+          "              mode."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      },
+      {
+        "x4_code": "(LINAC,4ZZZDUB)",
+        "free_txt": [
+          "  LUE-40."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-3(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(2-HE-3(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "2-HE-3",
               [
@@ -151,11 +148,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(2-HE-3(N,EL)2-HE-3,,SIG)",
+        "children": [
+          {
+            "code": [
+              "2-HE-3",
+              [
+                "N,EL"
+              ],
+              "2-HE-3,,SIG"
+            ],
+            "type": null,
+            "target": "2-HE-3",
+            "process": "N,EL",
+            "sf49": "2-HE-3,,SIG",
+            "sf4": "2-HE-3",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-S"
@@ -283,32 +315,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-3(N,EL)2-HE-3,,SIG)",
-          "0": {
-            "code": [
-              "2-HE-3",
-              [
-                "N,EL"
-              ],
-              "2-HE-3,,SIG"
-            ],
-            "type": null,
-            "target": "2-HE-3",
-            "process": "N,EL",
-            "sf49": "2-HE-3,,SIG",
-            "sf4": "2-HE-3",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1"
@@ -438,8 +444,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
@@ -453,18 +459,14 @@
               "  LUE-40."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -475,28 +477,24 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               " Background subtraction."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(STANK)",
             "free_txt": [
               " Liquid scintillation counter, volume 200 liters"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -509,10 +507,8 @@
               " Error not explained."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -528,20 +524,16 @@
               " at 337eV, 2.4keV, 36.keV."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -550,10 +542,8 @@
               "   Pressure 8.42+-0.05 at ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -564,8 +554,8 @@
       }
     },
     "003": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -577,10 +567,8 @@
               " For beam attenuation in sample and monitors - less 3%."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -588,10 +576,8 @@
               "authors or digitization."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -600,10 +586,8 @@
               "  from 3% at 10 keV to 1.5% at 100 keV."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -617,10 +601,8 @@
               " Error not explained."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -628,10 +610,8 @@
               "       Resolution in the least case 10 nsec/m"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(2-HE-4(N,EL)2-HE-4,,SIG)",
             "free_txt": []
@@ -648,10 +628,8 @@
               " Gaseous C-O2"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -662,10 +640,8 @@
               " 0.1067+-0.0007 at ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

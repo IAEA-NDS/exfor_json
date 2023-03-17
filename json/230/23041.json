@@ -89,40 +89,35 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,2006CERN,,(089),200606)",
-          "free_txt": [
-            " Main reference, data given."
-          ],
-          "publication_year": "2006"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2GERKFK)",
-          "free_txt": [
-            "  Karlsruhe 3.7 MV Van de Graaff.",
-            "               For samples irradiation"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2GERKFK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,2006CERN,,(089),200606)",
+        "free_txt": [
+          " Main reference, data given."
+        ],
+        "publication_year": "2006",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2GERKFK)",
+        "free_txt": [
+          "  Karlsruhe 3.7 MV Van de Graaff.",
+          "               For samples irradiation"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2GERKFK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(34-SE-78(N,G)34-SE-79-M,,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(34-SE-78(N,G)34-SE-79-M,,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "34-SE-78",
               [
@@ -140,11 +135,74 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " At kT-30 keV"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " At kT-30 keV"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(34-SE-78(N,G)34-SE-79,,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "34-SE-78",
+              [
+                "N,G"
+              ],
+              "34-SE-79,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "34-SE-78",
+            "process": "N,G",
+            "sf49": "34-SE-79,,SIG,,MXW",
+            "sf4": "34-SE-79",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(34-SE-78(N,G)34-SE-79-M/T,,SIG/RAT,,MXW,DERIV)",
+        "children": [
+          {
+            "code": [
+              "34-SE-78",
+              [
+                "N,G"
+              ],
+              "34-SE-79-M/T,,SIG/RAT,,MXW,DERIV"
+            ],
+            "type": null,
+            "target": "34-SE-78",
+            "process": "N,G",
+            "sf49": "34-SE-79-M/T,,SIG/RAT,,MXW,DERIV",
+            "sf4": "34-SE-79-M/T",
+            "sf5": null,
+            "sf6": "SIG/RAT",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -181,32 +239,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(34-SE-78(N,G)34-SE-79,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "34-SE-78",
-              [
-                "N,G"
-              ],
-              "34-SE-79,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "34-SE-78",
-            "process": "N,G",
-            "sf49": "34-SE-79,,SIG,,MXW",
-            "sf4": "34-SE-79",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -233,32 +265,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(34-SE-78(N,G)34-SE-79-M/T,,SIG/RAT,,MXW,DERIV)",
-          "0": {
-            "code": [
-              "34-SE-78",
-              [
-                "N,G"
-              ],
-              "34-SE-79-M/T,,SIG/RAT,,MXW,DERIV"
-            ],
-            "type": null,
-            "target": "34-SE-78",
-            "process": "N,G",
-            "sf49": "34-SE-79-M/T,,SIG/RAT,,MXW,DERIV",
-            "sf4": "34-SE-79-M/T",
-            "sf5": null,
-            "sf6": "SIG/RAT",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -290,18 +296,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               ".Correction was made for the number of Se-79 nuclei"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
@@ -309,20 +313,16 @@
               "         time-dependence monitoring"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Error is not specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2GERKFK)",
             "free_txt": [
@@ -330,10 +330,8 @@
               "               For samples irradiation"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -343,10 +341,8 @@
               "  100 micro-A."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -357,28 +353,22 @@
               " neutron/sec at the position of sample"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(STTA)",
             "free_txt": [
               "   Stack target irradiation"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,W.RATYNSKI+,J,PR/C,37,595,1988)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
@@ -387,18 +377,16 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".Extrapolated from Z.Bao data AT 25 keV, see REL-REF"
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
@@ -406,26 +394,20 @@
               "         3.90 +- 0.14 min"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(34-SE-79-M,3.72MIN,DG,95.7,0.0962)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-HL)",
             "free_txt": [
@@ -438,20 +420,16 @@
               " Error of Se-79-m decay intensity"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
               "   Gamma spectroscopy"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,Z.BAO+,J,AND,76,70,2000)",
             "free_txt": [
@@ -464,10 +442,8 @@
               "  Half-life of Se-79-m"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -477,10 +453,8 @@
               " 10-30 micro-m thick gold foils"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -497,68 +471,56 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".Extrapolated from Z.Bao data AT 25 keV, see REL-REF"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               ".Correction was made for contaminating Br-79 nucleus"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
               "  Multu-deltaE ionization chamber"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2GERMUN)",
             "free_txt": [
               "  For AMS measurements"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(MASSP)",
             "free_txt": [
               "  Accelerator mass spectroscopy - AMS"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,Z.BAO+,J,AND,76,70,2000)",
             "free_txt": [
               "   Cs at 25 keV"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -568,10 +530,8 @@
               " 10-30 micro-m thick gold foils"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -588,18 +548,16 @@
       }
     },
     "004": {
-      "rel-ref": {
-        "0": [
+      "0": {
+        "rel-ref": [
           {
             "x4_code": "(R,,Z.BAO+,J,AND,76,70,2000)",
             "free_txt": [
               "   Cs at 25 keV"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

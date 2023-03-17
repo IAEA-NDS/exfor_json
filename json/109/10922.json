@@ -39,35 +39,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,78,359,8108)",
-          "free_txt": [],
-          "publication_year": "1981"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM)",
-          "free_txt": [
-            " ARGONNE FAST NEUTRON GENERATOR FACILITY"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,78,359,8108)",
+        "free_txt": [],
+        "publication_year": "1981",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM)",
+        "free_txt": [
+          " ARGONNE FAST NEUTRON GENERATOR FACILITY"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "((3-LI-7(N,N+T)2-HE-4,,SIG)/(92-U-238(N,F),,SIG))",
-          "0": {
+      "1": {
+        "x4_code": "((3-LI-7(N,N+T)2-HE-4,,SIG)/(92-U-238(N,F),,SIG))",
+        "children": [
+          {
             "code": [
               "3-LI-7",
               [
@@ -86,7 +81,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "92-U-238",
               [
@@ -104,13 +99,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(3-LI-7(N,N+T)2-HE-4,,SIG)",
-          "0": {
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(3-LI-7(N,N+T)2-HE-4,,SIG)",
+        "children": [
+          {
             "code": [
               "3-LI-7",
               [
@@ -128,11 +125,18 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1     1",
@@ -289,8 +293,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -305,18 +309,14 @@
               " -TRITIATED WATER STANDARD, 10-PERCENT"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(1-H-3,12.346YR)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -331,10 +331,80 @@
               " WITH U-238 DEPOSIT."
             ]
           }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " TOTAL ERROR. ACCIDENTALLY SAME FOR RATIOS AND",
+              " CROSS SECTION (SEE ERR-6)."
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(DYNAM)",
+            "free_txt": [
+              " ARGONNE FAST NEUTRON GENERATOR FACILITY"
+            ]
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(D-D)",
+            "free_txt": [
+              " DEUTERONS ON DEUTERIUM GAS"
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "SAMPLES ATTACHED TO LOW MASS FISSION DETECTOR. TRITIUM",
+              " ACTIVITY DETERMINED USING STANDARD LIQUID",
+              " SCINTILLATION COUNTING TECHNIQUES. SEPERATE",
+              " EXPERIMENTS USED TO CHECK FOR TRITIUM ACTIVITY",
+              " DETERMINATION REPRODUCABILITY AND SERIOUS SYSTEMATIC",
+              " ERRORS OF MEASUREMENT TECHNIQUES. CONVERSION OF DATA",
+              " TO CROSS SECTIONS UTILIZED MONTE CARLO AND ANYLYTICAL",
+              " TECHNIQUES TAKING INTO ACCOUNT EFFECTS OF GEOMETRY,",
+              " NEUTRON SOURCE CHARACTERISTICS, ABSORPTION AND",
+              " MULTIPLE SCATTERING OF NEUTRONS, TARGET THICKNESS,",
+              " TRITIUM HALF-LIFE, AND KINEMATICS."
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(92-U-235(N,F),,SIG)",
+            "free_txt": [
+              " FROM ENDF/B-IV."
+            ]
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "THREE BATCHES OF DIFFERENT LI7/LI6 RATIOS USED. LITHIUM",
+              " PREPARED AS DISKS AND PRESS-FITTED INTO ALUMINIUM",
+              " CANS. NO EXPERIMENTAL DIFFERENCES ENCOUNTED WITH",
+              " DIFFERING SAMPLE RATIOS."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(APRVD)",
+            "free_txt": [
+              " APPROVED BY J.W.MEADOWS 81/1/23."
+            ]
+          }
         ]
       },
-      "err-analys": {
-        "1": [
+      "1": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -401,48 +471,8 @@
           }
         ]
       },
-      "facility": {
-        "0": [
-          {
-            "x4_code": "(DYNAM)",
-            "free_txt": [
-              " ARGONNE FAST NEUTRON GENERATOR FACILITY"
-            ]
-          }
-        ]
-      },
-      "inc-source": {
-        "0": [
-          {
-            "x4_code": "(D-D)",
-            "free_txt": [
-              " DEUTERONS ON DEUTERIUM GAS"
-            ]
-          }
-        ]
-      },
-      "method": {
-        "0": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "SAMPLES ATTACHED TO LOW MASS FISSION DETECTOR. TRITIUM",
-              " ACTIVITY DETERMINED USING STANDARD LIQUID",
-              " SCINTILLATION COUNTING TECHNIQUES. SEPERATE",
-              " EXPERIMENTS USED TO CHECK FOR TRITIUM ACTIVITY",
-              " DETERMINATION REPRODUCABILITY AND SERIOUS SYSTEMATIC",
-              " ERRORS OF MEASUREMENT TECHNIQUES. CONVERSION OF DATA",
-              " TO CROSS SECTIONS UTILIZED MONTE CARLO AND ANYLYTICAL",
-              " TECHNIQUES TAKING INTO ACCOUNT EFFECTS OF GEOMETRY,",
-              " NEUTRON SOURCE CHARACTERISTICS, ABSORPTION AND",
-              " MULTIPLE SCATTERING OF NEUTRONS, TARGET THICKNESS,",
-              " TRITIUM HALF-LIFE, AND KINEMATICS."
-            ]
-          }
-        ]
-      },
-      "monitor": {
-        "2": [
+      "2": {
+        "monitor": [
           {
             "x4_code": "(92-U-238(N,F),,SIG)",
             "free_txt": [
@@ -454,29 +484,6 @@
               " REACTIONS.",
               "STANDARD TRITIUM SOURCES USED TO CALIBRATE LIQUID",
               " SCINTILLATORS."
-            ]
-          }
-        ]
-      },
-      "sample": {
-        "0": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "THREE BATCHES OF DIFFERENT LI7/LI6 RATIOS USED. LITHIUM",
-              " PREPARED AS DISKS AND PRESS-FITTED INTO ALUMINIUM",
-              " CANS. NO EXPERIMENTAL DIFFERENCES ENCOUNTED WITH",
-              " DIFFERING SAMPLE RATIOS."
-            ]
-          }
-        ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": "(APRVD)",
-            "free_txt": [
-              " APPROVED BY J.W.MEADOWS 81/1/23."
             ]
           }
         ]

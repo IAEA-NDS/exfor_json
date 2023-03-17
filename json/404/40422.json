@@ -1,23 +1,30 @@
 {
   "entry": "40422",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-01-18b",
+  "number_of_revisions": "6",
   "histories": [
     {
-      "x4_code": "(920518C)",
+      "x4_code": "(19920518C)",
       "free_txt": [
-        "  + +  COMPILED AT THE CENTRE - CJD   + +"
+        "  + +  Compiled at the centre - CJD   + +"
       ]
     },
     {
-      "x4_code": "(930217U)",
+      "x4_code": "(19930217U)",
       "free_txt": [
-        "  DATA UNITS CORRECTED IN SAN 002, 003"
+        "  Data units corrected in SAN 002, 003"
+      ]
+    },
+    {
+      "x4_code": "(20220722A)",
+      "free_txt": [
+        " Update for current rules and dictionaries.",
+        " Subent 004 was added (directly measured data)"
       ]
     }
   ],
   "bib_record": {
-    "title": " MASS-SPECTROMETRIC DETERMINATION OF XE-ISOTOPE RELATIVE YIELDS FROM NATURAL URANIUM FISSION BY 14.7 MEV NEUTRONS",
+    "title": " Mass-spectrometric determination of relative yields of Xe isotopes in fission of natural uranium by 14.7-MeV neutrons",
     "authors": [
       {
         "name": "K.A.Petrzhak"
@@ -31,44 +38,72 @@
     ],
     "institutes": [
       {
-        "x4_code": "(4CCPRI )",
+        "x4_code": "(4RUSTIL)",
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,11,(6),1178,7006)",
-          "free_txt": [],
-          "publication_year": "1970"
-        },
-        {
-          "x4_code": "(J,SNP,11,654,7012)",
-          "free_txt": [
-            " ENGLISH TRANSLATION"
-          ],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG)",
-          "free_txt": []
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,SNP,11,654,1970)",
+        "free_txt": [
+          " English translation of:"
+        ],
+        "publication_year": "1970",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,YF,11,1178,1970)",
+        "free_txt": [
+          " Issue 6."
+        ],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,4RUSTIL)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(4RUSTIL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(N,F)ELEM/MASS,CUM,FY)/(92-U-238(N,F)ELEM,CUM,FY))",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY,,FRC)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,CUM,FY,,FRC"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,CUM,FY,,FRC",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "FRC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -86,30 +121,153 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "1": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY,,FRC)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
                 "N,F"
               ],
-              "ELEM,CUM,FY"
+              "ELEM/MASS,CUM,FY,,FRC"
             ],
             "type": null,
             "target": "92-U-238",
             "process": "N,F",
-            "sf49": "ELEM,CUM,FY",
-            "sf4": "ELEM",
+            "sf49": "ELEM/MASS,CUM,FY,,FRC",
+            "sf4": "ELEM/MASS",
             "sf5": "CUM",
             "sf6": "FY",
             "sf7": null,
-            "sf8": null,
+            "sf8": "FRC",
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
+      "common": {
+        "heads": [
+          "EN"
+        ],
+        "units": [
+          "MEV"
+        ],
+        "data": [
+          [
+            14.7
+          ]
+        ]
       },
+      "data": {
+        "heads": [
+          "ELEMENT",
+          "MASS",
+          "DATA"
+        ],
+        "units": [
+          "NO-DIM",
+          "NO-DIM",
+          "NO-DIM"
+        ],
+        "data": [
+          [
+            54.0,
+            54.0,
+            54.0,
+            54.0
+          ],
+          [
+            131.0,
+            132.0,
+            134.0,
+            136.0
+          ],
+          [
+            0.1864,
+            0.2306,
+            0.3162,
+            0.2662
+          ]
+        ]
+      }
+    },
+    "003": {
+      "common": {
+        "heads": [
+          "EN",
+          "MONIT"
+        ],
+        "units": [
+          "MEV",
+          "PC/FIS"
+        ],
+        "data": [
+          [
+            14.7
+          ],
+          [
+            4.7
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "ELEMENT",
+          "MASS",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "NO-DIM",
+          "NO-DIM",
+          "PC/FIS",
+          "PC/FIS"
+        ],
+        "data": [
+          [
+            54.0,
+            54.0,
+            54.0,
+            54.0
+          ],
+          [
+            131.0,
+            132.0,
+            134.0,
+            136.0
+          ],
+          [
+            3.81,
+            4.7,
+            6.46,
+            5.43
+          ],
+          [
+            0.1,
+            0.1,
+            0.1,
+            0.11
+          ]
+        ]
+      }
+    },
+    "004": {
       "common": {
         "heads": [
           "EN"
@@ -128,9 +286,11 @@
           "ELEMENT",
           "MASS",
           "DATA",
-          "DATA-ERR"
+          "DATA-ERR",
+          "FLAG"
         ],
         "units": [
+          "NO-DIM",
           "NO-DIM",
           "NO-DIM",
           "NO-DIM",
@@ -141,153 +301,51 @@
             54.0,
             54.0,
             54.0,
+            54.0,
+            54.0,
+            54.0,
+            54.0,
             54.0
           ],
           [
             131.0,
+            131.0,
+            132.0,
             132.0,
             134.0,
-            136.0
-          ],
-          [
-            18.64,
-            23.06,
-            31.62,
-            26.62
-          ],
-          [
-            0.77,
-            0.71,
-            0.68,
-            0.81
-          ]
-        ]
-      }
-    },
-    "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(N,F)ELEM/MASS,CUM,FY)/(92-U-238(N,F)ELEM,CUM,FY))",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,CUM,FY",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "ELEM,CUM,FY"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": "ELEM,CUM,FY",
-            "sf4": "ELEM",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
-      "common": {
-        "heads": [
-          "MONIT"
-        ],
-        "units": [
-          "PC/FIS"
-        ],
-        "data": [
-          [
-            4.7
-          ]
-        ]
-      },
-      "data": {
-        "heads": [
-          "EN",
-          "ELEMENT",
-          "MASS",
-          "DATA",
-          "DATA-ERR"
-        ],
-        "units": [
-          "MEV",
-          "NO-DIM",
-          "NO-DIM",
-          "NO-DIM",
-          "NO-DIM"
-        ],
-        "data": [
-          [
-            7.7,
-            7.7,
-            7.7,
-            7.7,
-            18.9,
-            18.9,
-            18.9,
-            18.9
-          ],
-          [
-            54.0,
-            54.0,
-            54.0,
-            54.0,
-            54.0,
-            54.0,
-            54.0,
-            54.0
-          ],
-          [
-            131.0,
-            132.0,
             134.0,
             136.0,
-            131.0,
-            132.0,
-            134.0,
             136.0
           ],
           [
-            3.21,
-            4.7,
-            6.62,
-            5.85,
-            3.81,
-            4.7,
-            6.46,
-            5.43
+            0.1863,
+            0.1865,
+            0.23,
+            0.2312,
+            0.3195,
+            0.314,
+            0.2642,
+            0.2683
           ],
           [
-            null,
-            null,
-            null,
-            null,
-            0.1,
-            0.1,
-            0.1,
-            0.11
+            0.0055,
+            0.0055,
+            0.0063,
+            0.0033,
+            0.0052,
+            0.0044,
+            0.007,
+            0.004
+          ],
+          [
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
           ]
         ]
       }
@@ -295,101 +353,162 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
-          {
-            "x4_code": "(VDG)",
-            "free_txt": []
-          }
-        ]
-      },
-      "inc-source": {
-        "0": [
-          {
-            "x4_code": "(D-T)",
-            "free_txt": []
-          }
-        ]
-      },
-      "method": {
-        "0": [
-          {
-            "x4_code": "(ASEP)",
-            "free_txt": []
-          }
-        ]
-      },
-      "sample": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
-              " DISK MADE OF EUTECTICAL ALLOY OF NATURAL URANIUM",
-              " WITH NICKEL. DIAMETER 10 MM, MASS 4.2 GRAM,",
-              " WRAPPED UP IN CADMIUM FOIL 0.5 MM THICKNESS"
+              " For background of natural xenon - 2-3% for mass 134",
+              " at beginning of measurements and 8-10% at the end.",
+              " Background of hydrocarbon radicals < 0.5 %."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "facility": [
+          {
+            "x4_code": "(VDG,4RUSTIL)",
+            "free_txt": []
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(D-T)",
+            "free_txt": [
+              " Integrated during 120 hr flux was 2.6E+14 neutrons ."
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(ASEP)",
+            "free_txt": [
+              " Irradiation time 120 hr, cooling time 2 months.",
+              " Mass spectrometer MI-1305 was used for separation."
+            ]
+          }
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "  DATA ARE TAKEN FROM THE REFERENCE-ONE"
+              " Disks made of eutectical alloy of natural uranium",
+              " with nickel. Diameter 10 mm, mass 4.2 gram.",
+              " Placed in a chamber surrounded by Cd foil of 0.5 mm",
+              " thickness."
             ]
           }
         ]
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "status": [
           {
-            "x4_code": "(DATA-ERR)",
+            "x4_code": "(TABLE)",
             "free_txt": [
-              "  ERRORS ARE NOT SPECIFIED. CALCULATED",
-              "            BY COMPILER ACCORDIND TO EXPRESSION",
-              "            SQRT((ERR1)**2 + (ERR2)**2)"
+              " Table I of J,SNP,11,654,1970."
             ]
-          }
-        ]
-      },
-      "monitor": {
-        "0": [
+          },
           {
-            "x4_code": null,
+            "x4_code": "(DEP,40422004)",
             "free_txt": [
-              " ABSOLUTE MEASUREMENTS"
+              " Directly measured data for 2 samples."
             ]
           }
         ]
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              "  ERRORS ARE NOT SPECIFIED."
+              "  Errors are not specified."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
-            "x4_code": "(,K.M.BROOM,J,PR,126,672,62)",
+            "x4_code": "(13061001,K.M.Broom,J,PR,126,627,1962)",
             "free_txt": []
+          },
+          {
+            "x4_code": "(,S.Katfoff,J,NUC,18,201,1960)",
+            "free_txt": [
+              " Two refs. for Te-132 yield used for normalization."
+            ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-238(N,F)52-TE-132,CUM,FY)",
             "free_txt": []
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(N,13389005,R.K.Wanless+,J,CJP,33,541,1955)",
+            "free_txt": [
+              " Data used for comparison on fig. and in Table 2:",
+              " Xe-131 - 3.21%, Xe-132 - 4.7 %",
+              " Xe-134 - 6.62%, Xe-136 - 5.85%"
+            ]
+          },
+          {
+            "x4_code": "(D,13061003,K.M.Broom,J,PR,126,627,1962)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table II of J,SNP,11,654,1970."
+            ]
+          }
+        ]
+      }
+    },
+    "004": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              "article."
+            ]
+          }
+        ],
+        "flag": [
+          {
+            "x4_code": "(1.)",
+            "free_txt": [
+              " Sample 1."
+            ]
+          },
+          {
+            "x4_code": "(2.)",
+            "free_txt": [
+              " Sample 2."
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " No information."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table I of J,SNP,11,654,1970."
+            ]
           }
         ]
       }

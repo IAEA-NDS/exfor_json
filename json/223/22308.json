@@ -50,39 +50,34 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,587,1,1995)",
-          "free_txt": [
-            "  Data table is given"
-          ],
-          "publication_year": "1995"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2ZZZGEL)",
-          "free_txt": [
-            " GELINA facility"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,587,1,1995)",
+        "free_txt": [
+          "  Data table is given"
+        ],
+        "publication_year": "1995",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2ZZZGEL)",
+        "free_txt": [
+          " GELINA facility"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)2-HE-4,TER,FY,,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)2-HE-4,TER,FY,,REL)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -100,11 +95,65 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "       Ratio of     long-range alpha  ternary-to-binary fission were     normalized to 1 for the average of a few of the     strongest resonances (1.14, 9.28, 12.4, 13.2-14.8,     19.3, 34.7-35.9 eV and 1-2.5 keV)"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((92-U-235(N,F)1-H-3,TER,FY,,REL)/(92-U-235(N,F)2-HE-4,TER,FY,,REL))",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "1-H-3,TER,FY,,REL"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "1-H-3,TER,FY,,REL",
+            "sf4": "1-H-3",
+            "sf5": "TER",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
           },
-          "type": null,
-          "free_text": "       Ratio of     long-range alpha  ternary-to-binary fission were     normalized to 1 for the average of a few of the     strongest resonances (1.14, 9.28, 12.4, 13.2-14.8,     19.3, 34.7-35.9 eV and 1-2.5 keV)"
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "2-HE-4,TER,FY,,REL"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "2-HE-4,TER,FY,,REL",
+            "sf4": "2-HE-4",
+            "sf5": "TER",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": "  the ratio  triton to LRA - accompanied ternary  fission is given for a selected number of resonances  normalized to 1 for the average of a few of the  strongest resonances (1.14, 9.28, 12.4, 13.2-14.8,     19.3, 34.7-35.9 eV and 1-2.5 keV)"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -372,51 +421,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-235(N,F)1-H-3,TER,FY,,REL)/(92-U-235(N,F)2-HE-4,TER,FY,,REL))",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "1-H-3,TER,FY,,REL"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "1-H-3,TER,FY,,REL",
-            "sf4": "1-H-3",
-            "sf5": "TER",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "2-HE-4,TER,FY,,REL"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "2-HE-4,TER,FY,,REL",
-            "sf4": "2-HE-4",
-            "sf5": "TER",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": "  the ratio  triton to LRA - accompanied ternary  fission is given for a selected number of resonances  normalized to 1 for the average of a few of the  strongest resonances (1.14, 9.28, 12.4, 13.2-14.8,     19.3, 34.7-35.9 eV and 1-2.5 keV)"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -554,8 +558,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(IOCH,SIBAR)",
             "free_txt": [
@@ -575,30 +579,24 @@
               "of 3 +- 0.05 bar,  with a low gas flow."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Errors not specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
               " GELINA facility"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -608,10 +606,8 @@
               "Al backing."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

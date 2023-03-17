@@ -54,51 +54,48 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,KPS,50,(5),1592,200705)",
-          "free_txt": [
-            "  Main reference, data tables",
-            "   for sigma and graphs for gamma-spectra are given"
-          ],
-          "publication_year": "2007"
-        },
-        {
-          "x4_code": "(C,2007NICE,1,615,200704)",
-          "free_txt": [
-            " Experimental details and graphs for Gd-156,-158",
-            " neutron capture cross sections"
-          ],
-          "publication_year": "2007",
-          "doi": "10.1051/ndata:07746"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,2JPNTIT)",
-          "free_txt": [
-            "  3-MV Pelletron accelerator of the",
-            "  Research Laboratory for Nuclear Reactors at the Tokyo",
-            "  Institute of Technology"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(2JPNTIT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,KPS,50,(5),1592,200705)",
+        "free_txt": [
+          "  Main reference, data tables",
+          "   for sigma and graphs for gamma-spectra are given"
+        ],
+        "publication_year": "2007",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,2007NICE,1,615,200704)",
+        "free_txt": [
+          "#doi:10.1051/ndata:07746",
+          " Experimental details and graphs for Gd-156,-158",
+          " neutron capture cross sections"
+        ],
+        "publication_year": "2007",
+        "pointer": "0",
+        "doi": "10.1051/ndata:07746"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,2JPNTIT)",
+        "free_txt": [
+          "  3-MV Pelletron accelerator of the",
+          "  Research Laboratory for Nuclear Reactors at the Tokyo",
+          "  Institute of Technology"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2JPNTIT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(64-GD-156(N,G)64-GD-157,,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(64-GD-156(N,G)64-GD-157,,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "64-GD-156",
               [
@@ -116,11 +113,102 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Averaged over         energy interval in DATA section"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Averaged over         energy interval in DATA section"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(64-GD-158(N,G)64-GD-159,,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "64-GD-158",
+              [
+                "N,G"
+              ],
+              "64-GD-159,,SIG,,AV"
+            ],
+            "type": null,
+            "target": "64-GD-158",
+            "process": "N,G",
+            "sf49": "64-GD-159,,SIG,,AV",
+            "sf4": "64-GD-159",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Averaged over         energy interval in DATA section"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(64-GD-156(N,G)64-GD-157,,MLT/DE,,SPA)",
+        "children": [
+          {
+            "code": [
+              "64-GD-156",
+              [
+                "N,G"
+              ],
+              "64-GD-157,,MLT/DE,,SPA"
+            ],
+            "type": null,
+            "target": "64-GD-156",
+            "process": "N,G",
+            "sf49": "64-GD-157,,MLT/DE,,SPA",
+            "sf4": "64-GD-157",
+            "sf5": null,
+            "sf6": "MLT/DE",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Fig.6 of main     reference, left panel"
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(64-GD-158(N,G)64-GD-159,,MLT/DE,,SPA)",
+        "children": [
+          {
+            "code": [
+              "64-GD-158",
+              [
+                "N,G"
+              ],
+              "64-GD-159,,MLT/DE,,SPA"
+            ],
+            "type": null,
+            "target": "64-GD-158",
+            "process": "N,G",
+            "sf49": "64-GD-159,,MLT/DE,,SPA",
+            "sf4": "64-GD-159",
+            "sf5": null,
+            "sf6": "MLT/DE",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Fig.6 of main     reference, right panel"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -212,32 +300,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(64-GD-158(N,G)64-GD-159,,SIG,,AV)",
-          "0": {
-            "code": [
-              "64-GD-158",
-              [
-                "N,G"
-              ],
-              "64-GD-159,,SIG,,AV"
-            ],
-            "type": null,
-            "target": "64-GD-158",
-            "process": "N,G",
-            "sf49": "64-GD-159,,SIG,,AV",
-            "sf4": "64-GD-159",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Averaged over         energy interval in DATA section"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -329,32 +391,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(64-GD-156(N,G)64-GD-157,,MLT/DE,,SPA)",
-          "0": {
-            "code": [
-              "64-GD-156",
-              [
-                "N,G"
-              ],
-              "64-GD-157,,MLT/DE,,SPA"
-            ],
-            "type": null,
-            "target": "64-GD-156",
-            "process": "N,G",
-            "sf49": "64-GD-157,,MLT/DE,,SPA",
-            "sf4": "64-GD-157",
-            "sf5": null,
-            "sf6": "MLT/DE",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Fig.6 of main     reference, left panel"
-        }
-      },
       "common": {
         "heads": [
           "EN-MEAN",
@@ -1076,32 +1112,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(64-GD-158(N,G)64-GD-159,,MLT/DE,,SPA)",
-          "0": {
-            "code": [
-              "64-GD-158",
-              [
-                "N,G"
-              ],
-              "64-GD-159,,MLT/DE,,SPA"
-            ],
-            "type": null,
-            "target": "64-GD-158",
-            "process": "N,G",
-            "sf49": "64-GD-159,,MLT/DE,,SPA",
-            "sf4": "64-GD-159",
-            "sf5": null,
-            "sf6": "MLT/DE",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Fig.6 of main     reference, right panel"
-        }
-      },
       "common": {
         "heads": [
           "EN-MEAN",
@@ -1732,8 +1742,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1749,10 +1759,8 @@
               " simulation code TIME-MULTI."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -1778,20 +1786,16 @@
               " with respect to the proton beam's direction"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               ".Given in proper Sub-Entries"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2JPNTIT)",
             "free_txt": [
@@ -1800,10 +1804,8 @@
               "  Institute of Technology"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -1813,10 +1815,8 @@
               "  current was about 7.3 micro-A."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1825,10 +1825,8 @@
               " reaction threshold"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1847,36 +1845,28 @@
               "  Intermittent sample-monitor-blank irradiation"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,P.G.Young+,3,ENDF/B-VII.0,7925,2006)",
             "free_txt": [
               " ENDF/B-VII.0 data file for 197Au (MAT = 7925) (1984)."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N,G)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(E,,T.Ohsako+,J,NIM/A,425,302,1999)",
             "free_txt": [
@@ -1898,10 +1888,8 @@
               "                    Experimental details"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1913,18 +1901,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
               "    Total error in percent"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -1947,10 +1933,8 @@
               "    Total error in barn"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1988,10 +1972,8 @@
               ".From Table 1 of main reference"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2002,18 +1984,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
               "    Total error in percent"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -2036,10 +2016,8 @@
               "    Total error in barn"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2077,10 +2055,8 @@
               ".From Table 1 of main reference"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2091,28 +2067,24 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               "   Statistical error"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               ".See SUBENT 23080002"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2123,28 +2095,24 @@
       }
     },
     "005": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               "   Statistical error"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               ".See SUBENT 23080003"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

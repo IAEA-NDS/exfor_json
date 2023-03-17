@@ -83,37 +83,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,102,014317,2020)",
-          "free_txt": [],
-          "publication_year": "2020"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2GERZFK)",
-          "free_txt": [
-            " gammaELBE facility"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2GERZFK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,102,014317,2020)",
+        "free_txt": [],
+        "publication_year": "2020",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2GERZFK)",
+        "free_txt": [
+          " gammaELBE facility"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2GERZFK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(50-SN-120(G,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(50-SN-120(G,0),,EN)",
+        "children": [
+          {
             "code": [
               "50-SN-120",
               [
@@ -131,13 +126,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(50-SN-120(G,0),,J)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(50-SN-120(G,0),,J)",
+        "children": [
+          {
             "code": [
               "50-SN-120",
               [
@@ -155,13 +152,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "((50-SN-120(G,EL),,WID,,SQ)/(50-SN-120(G,TOT),,WID))",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "((50-SN-120(G,EL),,WID,,SQ)/(50-SN-120(G,TOT),,WID))",
+        "children": [
+          {
             "code": [
               "50-SN-120",
               [
@@ -180,7 +179,7 @@
             "sf8": "SQ",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "50-SN-120",
               [
@@ -198,11 +197,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(50-SN-120(G,SCT)50-SN-120,,SIG)",
+        "children": [
+          {
+            "code": [
+              "50-SN-120",
+              [
+                "G,SCT"
+              ],
+              "50-SN-120,,SIG"
+            ],
+            "type": null,
+            "target": "50-SN-120",
+            "process": "G,SCT",
+            "sf49": "50-SN-120,,SIG",
+            "sf4": "50-SN-120",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-SYS   1",
@@ -1496,32 +1530,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(50-SN-120(G,SCT)50-SN-120,,SIG)",
-          "0": {
-            "code": [
-              "50-SN-120",
-              [
-                "G,SCT"
-              ],
-              "50-SN-120,,SIG"
-            ],
-            "type": null,
-            "target": "50-SN-120",
-            "process": "G,SCT",
-            "sf49": "50-SN-120,,SIG",
-            "sf4": "50-SN-120",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1673,8 +1681,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GE,BGO)",
             "free_txt": [
@@ -1685,30 +1693,24 @@
               " scintillation detectors (BGO)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2GERZFK)",
             "free_txt": [
               " gammaELBE facility"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": [
               " Emax=9.5 MeV"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1716,10 +1718,8 @@
               "- Enriched 11B (400 mg) for flux determination"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1730,8 +1730,18 @@
       }
     },
     "002": {
-      "err-analys": {
-        "3": [
+      "1": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-SYS)",
+            "free_txt": [
+              " a systematic uncertainty"
+            ]
+          }
+        ]
+      },
+      "3": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1750,8 +1760,8 @@
           }
         ]
       },
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1794,20 +1804,16 @@
               " Possible contamination from single-escape events"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,K.Kitao+,J,NDS,96,241,2002)",
             "free_txt": [
               " Jpi assignments of low levels given"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1818,8 +1824,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1836,10 +1842,8 @@
               " extract photoabsorption cross sections."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1854,10 +1858,8 @@
               " not included in table)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

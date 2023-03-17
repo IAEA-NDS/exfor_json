@@ -76,48 +76,45 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "((S,ISINN-7,332,1999)=(S,JINR-E3-99-212,332,1999))",
-          "free_txt": [
-            " Data of Subent 002."
-          ],
-          "publication_year": "1999"
-        },
-        {
-          "x4_code": "(J,NP/A,561,(1),1,19930816)",
-          "free_txt": [
-            " First author J.Klora.",
-            "Experimental details and data of Subent 003."
-          ],
-          "publication_year": "1993",
-          "doi": "10.1016/0375-9474(93)90165-T"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4UKRIJI)",
-          "free_txt": [
-            "  Reactor WWR-M"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4UKRIJI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((S,ISINN-7,332,1999)=(S,JINR-E3-99-212,332,1999))",
+        "free_txt": [
+          " Data of Subent 002."
+        ],
+        "publication_year": "1999",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,561,(1),1,19930816)",
+        "free_txt": [
+          " First author J.Klora.",
+          "#doi:10.1016/0375-9474(93)90165-T",
+          "Experimental details and data of Subent 003."
+        ],
+        "publication_year": "1993",
+        "pointer": "0",
+        "doi": "10.1016/0375-9474(93)90165-T"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4UKRIJI)",
+        "free_txt": [
+          "  Reactor WWR-M"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4UKRIJI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(64-GD-155(N,G)64-GD-156,,SPC,,SPA/REL)",
-          "0": {
+      "0": {
+        "x4_code": "(64-GD-155(N,G)64-GD-156,,SPC,,SPA/REL)",
+        "children": [
+          {
             "code": [
               "64-GD-155",
               [
@@ -135,11 +132,46 @@
             "sf7": null,
             "sf8": "SPA/REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Averaged   over neutron spectrum width.Intensity of primary gamma transitions, relative units."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Averaged   over neutron spectrum width.Intensity of primary gamma transitions, relative units."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(64-GD-155(N,G)64-GD-156,,SPC,,SPA/REL)",
+        "children": [
+          {
+            "code": [
+              "64-GD-155",
+              [
+                "N,G"
+              ],
+              "64-GD-156,,SPC,,SPA/REL"
+            ],
+            "type": null,
+            "target": "64-GD-155",
+            "process": "N,G",
+            "sf49": "64-GD-156,,SPC,,SPA/REL",
+            "sf4": "64-GD-156",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": "SPA/REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Averaged   over neutron spectrum width . Intensities of the primary gamma rays feeding these levels are reduced with Igamma*(Egamma)**-4 and given in arbitrary units."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -1267,32 +1299,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(64-GD-155(N,G)64-GD-156,,SPC,,SPA/REL)",
-          "0": {
-            "code": [
-              "64-GD-155",
-              [
-                "N,G"
-              ],
-              "64-GD-156,,SPC,,SPA/REL"
-            ],
-            "type": null,
-            "target": "64-GD-155",
-            "process": "N,G",
-            "sf49": "64-GD-156,,SPC,,SPA/REL",
-            "sf4": "64-GD-156",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": "SPA/REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Averaged   over neutron spectrum width . Intensities of the primary gamma rays feeding these levels are reduced with Igamma*(Egamma)**-4 and given in arbitrary units."
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -1908,8 +1914,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1917,38 +1923,30 @@
               " at 8 MeV were used"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Errors are not specified, supposed statistical"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4UKRIJI)",
             "free_txt": [
               "  Reactor WWR-M"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1957,10 +1955,8 @@
               " 1.9 and 57 keV"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,A.V.Murzin+,C,80KIEV,2,244,198009)",
             "free_txt": [
@@ -1968,20 +1964,16 @@
               " details"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               ".Oxide of 155-Gd enriched to 91.9%, weight 60 g"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(COREL,22297001)",
             "free_txt": [
@@ -1993,28 +1985,24 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL-FIN,64-GD-156)",
             "free_txt": [
               " Final level energy"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               "     Spin and Parity Determined with Uncertainty"
             ]
           }
-        ]
-      },
-      "level-prop": {
-        "0": [
+        ],
+        "level-prop": [
           {
             "x4_code": "((1.)64-GD-156,E-LVL=0.,SPIN=0.,PARITY=+1.)",
             "free_txt": []
@@ -2651,10 +2639,8 @@
             "x4_code": "((159.)64-GD-156,E-LVL=2.9467,SPIN=3.,PARITY=+1.)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2665,8 +2651,8 @@
       }
     },
     "003": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -2679,10 +2665,8 @@
               "on Fig.3 - about 5.75 ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(PRELM)",
             "free_txt": [

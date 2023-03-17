@@ -26,38 +26,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,33,2183,1986)",
-          "free_txt": [],
-          "publication_year": "1986"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,1USANAL)",
-          "free_txt": [
-            " Experiment performed using external",
-            "beam line at the Tevatron at Fermilab"
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(1USANAL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,33,2183,1986)",
+        "free_txt": [],
+        "publication_year": "1986",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,1USANAL)",
+        "free_txt": [
+          " Experiment performed using external",
+          "beam line at the Tevatron at Fermilab"
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(1USANAL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(47-AG-0(P,X)ELEM/MASS,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(47-AG-0(P,X)ELEM/MASS,,SIG)",
+        "children": [
+          {
             "code": [
               "47-AG-0",
               [
@@ -75,11 +70,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((47-AG-0(P,X)MASS,,SIG)//(47-AG-0(P,X)MASS,,SIG))",
+        "children": [
+          {
+            "code": [
+              "47-AG-0",
+              [
+                "P,X"
+              ],
+              "MASS,,SIG"
+            ],
+            "type": null,
+            "target": "47-AG-0",
+            "process": "P,X",
+            "sf49": "MASS,,SIG",
+            "sf4": "MASS",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "47-AG-0",
+              [
+                "P,X"
+              ],
+              "MASS,,SIG"
+            ],
+            "type": null,
+            "target": "47-AG-0",
+            "process": "P,X",
+            "sf49": "MASS,,SIG",
+            "sf4": "MASS",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -179,51 +228,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((47-AG-0(P,X)MASS,,SIG)//(47-AG-0(P,X)MASS,,SIG))",
-          "0": {
-            "code": [
-              "47-AG-0",
-              [
-                "P,X"
-              ],
-              "MASS,,SIG"
-            ],
-            "type": null,
-            "target": "47-AG-0",
-            "process": "P,X",
-            "sf49": "MASS,,SIG",
-            "sf4": "MASS",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "47-AG-0",
-              [
-                "P,X"
-              ],
-              "MASS,,SIG"
-            ],
-            "type": null,
-            "target": "47-AG-0",
-            "process": "P,X",
-            "sf49": "MASS,,SIG",
-            "sf4": "MASS",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NM",
@@ -308,8 +312,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
@@ -318,10 +322,8 @@
               "CLSQ code."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -329,20 +331,16 @@
               "with calibrated Ge(Li) gamma-ray spectrometers."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,1USANAL)",
             "free_txt": [
@@ -350,10 +348,8 @@
               "beam line at the Tevatron at Fermilab"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,GSPEC)",
             "free_txt": [
@@ -361,10 +357,8 @@
               "intervals over a six month period."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(13-AL-27(P,X)4-BE-7,,SIG)",
             "free_txt": []
@@ -373,10 +367,8 @@
             "x4_code": "(13-AL-27(P,X)11-NA-22,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -388,8 +380,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -400,8 +392,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

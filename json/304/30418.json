@@ -53,46 +53,45 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,246,505,1975)",
-          "free_txt": [],
-          "publication_year": "1975"
-        },
-        {
-          "x4_code": "(P,BARC-768,63,1974)",
-          "free_txt": [
-            " Data superseded"
-          ],
-          "publication_year": "1974"
-        },
-        {
-          "x4_code": "(P,BARC-694,63,1973)",
-          "free_txt": [
-            " Data superseded"
-          ],
-          "publication_year": "1973"
-        },
-        {
-          "x4_code": "(C,73ROCH,2,477,1973)",
-          "free_txt": [
-            " Abstract only"
-          ],
-          "publication_year": "1973"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,246,505,1975)",
+        "free_txt": [],
+        "publication_year": "1975",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,BARC-768,63,1974)",
+        "free_txt": [
+          " Data superseded"
+        ],
+        "publication_year": "1974",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,BARC-694,63,1973)",
+        "free_txt": [
+          " Data superseded"
+        ],
+        "publication_year": "1973",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,73ROCH,2,477,1973)",
+        "free_txt": [
+          " Abstract only"
+        ],
+        "publication_year": "1973",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F)ELEM/MASS,PR,SPC)",
-          "0": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F)ELEM/MASS,PR,SPC)",
+        "children": [
+          {
             "code": [
               "98-CF-252",
               [
@@ -110,11 +109,72 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "Total transition intensities per fission."
-        }
+          }
+        ],
+        "type": null,
+        "free_text": "Total transition intensities per fission."
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(98-CF-252(0,F)ELEM,TER,AP)",
+        "children": [
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              "ELEM,TER,AP"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": "ELEM,TER,AP",
+            "sf4": "ELEM",
+            "sf5": "TER",
+            "sf6": "AP",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(98-CF-252(0,F)ELEM,CHG/TER,FY,,MSC)",
+        "children": [
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              "ELEM,CHG/TER,FY,,MSC"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": "ELEM,CHG/TER,FY,,MSC",
+            "sf4": "ELEM",
+            "sf5": "CHG/TER",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "MSC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "total element yield both for post-neutron emissionderived from fits to isotopic independent yielddistributions"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -441,56 +501,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(98-CF-252(0,F)ELEM,TER,AP)",
-          "0": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              "ELEM,TER,AP"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": "ELEM,TER,AP",
-            "sf4": "ELEM",
-            "sf5": "TER",
-            "sf6": "AP",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(98-CF-252(0,F)ELEM,CHG/TER,FY,,MSC)",
-          "0": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              "ELEM,CHG/TER,FY,,MSC"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": "ELEM,CHG/TER,FY,,MSC",
-            "sf4": "ELEM",
-            "sf5": "CHG/TER",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "MSC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "total element yield both for post-neutron emissionderived from fits to isotopic independent yielddistributions"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -612,8 +622,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -628,10 +638,8 @@
               "with the Ge(Li) detector."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -647,10 +655,8 @@
               "alphas,so that only lcp reach the detectors."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -664,8 +670,8 @@
       }
     },
     "002": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -714,26 +720,20 @@
               " intensity of 146Ba."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(12691002,E.CHEIFETZ+,J,PR/C,4,1913,1971)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(98-CF-252(0,F)ELEM/MASS,PR,SPC)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -744,8 +744,74 @@
       }
     },
     "003": {
-      "analysis": {
-        "2": [
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Ternary fission independent yields were calculated from",
+              "the corresponding known binary fission yields (taken",
+              "from 'monit-ref') and the measured ternary/binary",
+              "ratios of gamma-rays (subentry 2).",
+              "The isotopic ternary yield distributions (i.e. with",
+              "z=const) obtained were fitted using gaussians. The",
+              "parameters derived from the fit are (for each element)",
+              " - the width of the distribution"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No information on source of uncertainties."
+            ]
+          }
+        ],
+        "misc-col": [
+          {
+            "x4_code": "(MISC1)",
+            "free_txt": [
+              " Width of the gaussian isotopic distribution"
+            ]
+          }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(12691002,E.Cheifetz+,J,PR/C,4,1913,1971)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(98-CF-252(0,F)ELEM,CHG,FY)",
+            "free_txt": [
+              "elemental yield, given as fraction per binary fission"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table 2 of Nucl. Phys. A 246 (1975) 505"
+            ]
+          }
+        ]
+      },
+      "1": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " - the position of the maximum, which is the most",
+              "   probable mass"
+            ]
+          }
+        ]
+      },
+      "2": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -753,62 +819,12 @@
               "   total yield of a given fission product element"
             ]
           }
-        ]
-      },
-      "comment": {
-        "2": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               " The yield is given as fraction per ternary fission"
-            ]
-          }
-        ]
-      },
-      "err-analys": {
-        "0": [
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " No information on source of uncertainties."
-            ]
-          }
-        ]
-      },
-      "misc-col": {
-        "0": [
-          {
-            "x4_code": "(MISC1)",
-            "free_txt": [
-              " Width of the gaussian isotopic distribution"
-            ]
-          }
-        ]
-      },
-      "monit-ref": {
-        "0": [
-          {
-            "x4_code": "(12691002,E.Cheifetz+,J,PR/C,4,1913,1971)",
-            "free_txt": []
-          }
-        ]
-      },
-      "monitor": {
-        "0": [
-          {
-            "x4_code": "(98-CF-252(0,F)ELEM,CHG,FY)",
-            "free_txt": [
-              "elemental yield, given as fraction per binary fission"
-            ]
-          }
-        ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              " Table 2 of Nucl. Phys. A 246 (1975) 505"
             ]
           }
         ]

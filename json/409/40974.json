@@ -76,53 +76,50 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AE,61,206,1986)",
-          "free_txt": [
-            " Curves are given. Issue 3."
-          ],
-          "publication_year": "1986"
-        },
-        {
-          "x4_code": "(J,SJA,61,738,1986)",
-          "free_txt": [
-            " Engl.transl.of J,AE,61,206,1986"
-          ],
-          "publication_year": "1986"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4RUSMIF)",
-          "free_txt": [
-            "  IRT reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4RUSMIF)"
-        },
-        {
-          "x4_code": "(CHOPS)",
-          "free_txt": [
-            " Chopper produces intermittent neutron flux of",
-            "burst duration 30msec, interval 1 sec between bursts."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AE,61,206,1986)",
+        "free_txt": [
+          " Curves are given. Issue 3."
+        ],
+        "publication_year": "1986",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SJA,61,738,1986)",
+        "free_txt": [
+          " Engl.transl.of J,AE,61,206,1986"
+        ],
+        "publication_year": "1986",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4RUSMIF)",
+        "free_txt": [
+          "  IRT reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4RUSMIF)"
+      },
+      {
+        "x4_code": "(CHOPS)",
+        "free_txt": [
+          " Chopper produces intermittent neutron flux of",
+          "burst duration 30msec, interval 1 sec between bursts."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -140,11 +137,100 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-235(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "1": {
+        "x4_code": "(92-U-0(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-0",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-0",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Data for annealed sample"
       },
+      "2": {
+        "x4_code": "(92-U-0(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-0",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-0",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Data for non-annealed sample"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RSL"
@@ -255,32 +341,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -307,56 +367,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "1": {
-          "x4_code": "(92-U-0(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "92-U-0",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-0",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Data for annealed sample"
-        },
-        "2": {
-          "x4_code": "(92-U-0(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "92-U-0",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-0",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Data for non-annealed sample"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -395,8 +405,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -406,10 +416,8 @@
               " Contribution of impurities ~ 0.03 %."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -418,10 +426,8 @@
               "Subents. It did not contained any data."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
@@ -429,10 +435,8 @@
               " Spectrometer energy resolution ~16%."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4RUSMIF)",
             "free_txt": [
@@ -446,10 +450,8 @@
               "burst duration 30msec, interval 1 sec between bursts."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -460,20 +462,16 @@
             "x4_code": "(TRN)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -484,18 +482,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Total error"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -506,10 +502,8 @@
               " 2.E-3 %"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -520,28 +514,24 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "1/v extrapolation of measured data to the thermal point"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Error is not specified"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -552,10 +542,8 @@
               " is 2.E-3 % ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -566,43 +554,49 @@
       }
     },
     "005": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "1/v extrapolation of measured data to the thermal point"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " ERror is not specified"
             ]
           }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Text, page 740 of SJA,61,738,1986"
+            ]
+          }
         ]
       },
-      "sample": {
-        "2": [
+      "1": {
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Annealed sample"
+            ]
+          }
+        ]
+      },
+      "2": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               " Non-annealed samples",
               " Sample purity 99.79+-0.09 % ."
-            ]
-          }
-        ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              " Text, page 740 of SJA,61,738,1986"
             ]
           }
         ]

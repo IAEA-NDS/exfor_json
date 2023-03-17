@@ -30,42 +30,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JP/G,7,4,529,8104)",
-          "free_txt": [
-            " MAIN REFERENCE."
-          ],
-          "publication_year": "1981"
-        },
-        {
-          "x4_code": "(P,NEANDC(E)-212,8,87,8003)",
-          "free_txt": [],
-          "publication_year": "1980"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": null,
-          "free_txt": [
-            ".ACCELERATOR 'SAMES'."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JP/G,7,4,529,8104)",
+        "free_txt": [
+          " MAIN REFERENCE."
+        ],
+        "publication_year": "1981",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,NEANDC(E)-212,8,87,8003)",
+        "free_txt": [],
+        "publication_year": "1980",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": null,
+        "free_txt": [
+          ".ACCELERATOR 'SAMES'."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(41-NB-93(N,2N)41-NB-92-M,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(41-NB-93(N,2N)41-NB-92-M,,SIG)",
+        "children": [
+          {
             "code": [
               "41-NB-93",
               [
@@ -83,11 +79,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(41-NB-93(N,A)39-Y-90-M,,SIG)",
+        "children": [
+          {
+            "code": [
+              "41-NB-93",
+              [
+                "N,A"
+              ],
+              "39-Y-90-M,,SIG"
+            ],
+            "type": null,
+            "target": "41-NB-93",
+            "process": "N,A",
+            "sf49": "39-Y-90-M,,SIG",
+            "sf4": "39-Y-90-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(41-NB-93(N,INL)41-NB-93-M,,SIG)",
+        "children": [
+          {
+            "code": [
+              "41-NB-93",
+              [
+                "N,INL"
+              ],
+              "41-NB-93-M,,SIG"
+            ],
+            "type": null,
+            "target": "41-NB-93",
+            "process": "N,INL",
+            "sf49": "41-NB-93-M,,SIG",
+            "sf4": "41-NB-93-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -176,32 +235,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(41-NB-93(N,A)39-Y-90-M,,SIG)",
-          "0": {
-            "code": [
-              "41-NB-93",
-              [
-                "N,A"
-              ],
-              "39-Y-90-M,,SIG"
-            ],
-            "type": null,
-            "target": "41-NB-93",
-            "process": "N,A",
-            "sf49": "39-Y-90-M,,SIG",
-            "sf4": "39-Y-90-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -290,32 +323,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(41-NB-93(N,INL)41-NB-93-M,,SIG)",
-          "0": {
-            "code": [
-              "41-NB-93",
-              [
-                "N,INL"
-              ],
-              "41-NB-93-M,,SIG"
-            ],
-            "type": null,
-            "target": "41-NB-93",
-            "process": "N,INL",
-            "sf49": "41-NB-93-M,,SIG",
-            "sf4": "41-NB-93-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -401,8 +408,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -410,10 +417,8 @@
               " WAS COMPILED AS EXFOR SUBWORKS 21627003 AND 21627004."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI )",
             "free_txt": []
@@ -424,40 +429,32 @@
               " NEUTRON FLUX MONITOR."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": null,
             "free_txt": [
               ".ACCELERATOR 'SAMES'."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T  )",
             "free_txt": [
               " 140 KEV NEUTRONS ON A SOLID TI-T TARGET."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
               " ACTIVATION TECHNIQUES."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -468,8 +465,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -484,10 +481,8 @@
               " ACCURATELY DISTANCES BETWEEN FOILS AND NEUTRON SOURCE"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(41-NB-92-M,10.15D,DG)",
             "free_txt": [
@@ -495,10 +490,8 @@
               " VOL. 7 PAGE 299 (1972)"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -556,10 +549,8 @@
               "        OF THE NB/FE COUNT RATIO"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(26-FE-56(N,P)25-MN-56,,SIG)",
             "free_txt": [
@@ -568,10 +559,8 @@
               " (1979)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -580,10 +569,8 @@
               " WEIGHT 380 MILLI-G."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -594,8 +581,8 @@
       }
     },
     "003": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -610,10 +597,8 @@
               " ACCURATELY DISTANCES BETWEEN FOILS AND NEUTRON SOURCE"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(39-Y-90-M,3.19HR,DG)",
             "free_txt": [
@@ -621,10 +606,8 @@
               " VOL. 7 PAGE 299 (1972)"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -682,10 +665,8 @@
               "        OF THE NB/FE COUNT RATIO"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(26-FE-56(N,P)25-MN-56,,SIG)",
             "free_txt": [
@@ -694,10 +675,8 @@
               " (1979)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -706,10 +685,8 @@
               " WEIGHT 380 MILLI-G."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -720,8 +697,8 @@
       }
     },
     "004": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -732,20 +709,16 @@
               " AND THE FOIL ITSELF."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(41-NB-93-M,16.0YR,DG)",
             "free_txt": [
               " DATA TAKEN FROM PRIVATE COMMUNICATIONS."
             ]
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(41-NB-92-M,10.15D,DG)",
             "free_txt": [
@@ -753,10 +726,8 @@
               " VOL. 7 PAGE 299 (1972)"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -810,20 +781,16 @@
               "        MEASUREMENTS OF THE NB/NB COUNT RATIO"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(41-NB-93(N,2N)41-NB-92-M,,SIG)",
             "free_txt": [
               " DATA TAKEN FROM THIS WORK, SUBWORK 2."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -832,10 +799,8 @@
               " TI-T TARGET."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

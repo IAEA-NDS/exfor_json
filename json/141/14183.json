@@ -87,38 +87,61 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(S,AIP-1005,101,2008)",
-          "free_txt": [],
-          "publication_year": "2008"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USABRK)",
-          "free_txt": [
-            " 88-Inch Cyclotron at Lawrence",
-            "Berkeley National Laboratory"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USABRK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(S,AIP-1005,101,2008)",
+        "free_txt": [],
+        "publication_year": "2008",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USABRK)",
+        "free_txt": [
+          " 88-Inch Cyclotron at Lawrence",
+          "Berkeley National Laboratory"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USABRK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(93-NP-237(N,F),,SIG,,,DERIV)",
-          "0": {
+      "0": {
+        "x4_code": "(93-NP-237(N,F),,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "93-NP-237",
+              [
+                "N,F"
+              ],
+              ",,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "93-NP-237",
+            "process": "N,F",
+            "sf49": ",,SIG,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((93-NP-237(N,F),,SIG,,,DERIV)/(92-U-235(N,F),,SIG,,,EVAL))",
+        "children": [
+          {
             "code": [
               "93-NP-237",
               [
@@ -137,10 +160,36 @@
             "sf8": null,
             "sf9": "DERIV"
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG,,,EVAL"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG,,,EVAL",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "EVAL"
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -410,51 +459,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((93-NP-237(N,F),,SIG,,,DERIV)/(92-U-235(N,F),,SIG,,,EVAL))",
-          "0": {
-            "code": [
-              "93-NP-237",
-              [
-                "N,F"
-              ],
-              ",,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "93-NP-237",
-            "process": "N,F",
-            "sf49": ",,SIG,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG,,,EVAL"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG,,,EVAL",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EVAL"
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -726,8 +730,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -739,10 +743,8 @@
               "cross section."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TELES,SI,SI)",
             "free_txt": [
@@ -753,10 +755,8 @@
               "respect to the beam axis."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USABRK)",
             "free_txt": [
@@ -764,10 +764,8 @@
               "Berkeley National Laboratory"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": [
@@ -784,10 +782,8 @@
               "channel"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -795,10 +791,8 @@
               "thickness 4709 +- 235 A"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(COREL,C1647001)",
             "free_txt": [
@@ -811,18 +805,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -837,28 +829,24 @@
       }
     },
     "003": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": null,
             "free_txt": [
               " U-235 cross section taken from ENDF/B-VII.0"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

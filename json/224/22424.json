@@ -53,71 +53,124 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AJ,528,573,2000)",
-          "free_txt": [],
-          "publication_year": "2000"
-        },
-        {
-          "x4_code": "(C,97TRIEST,2,1621,199705)",
-          "free_txt": [
-            " Prelim. publication."
-          ],
-          "publication_year": "1997"
-        },
-        {
-          "x4_code": "(R,INDC(GER)-0053,2021)",
-          "free_txt": [
-            " Revised values of Karlsruhe",
-            "cross sections."
-          ],
-          "publication_year": "2021"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2GERKFK)",
-          "free_txt": [
-            " 3.75 Karlsruhe Van de Graaff accelerator"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2GERKFK)"
-        },
-        {
-          "x4_code": "(REAC,2GERMUN)",
-          "free_txt": [
-            " FRM-I reactor in Munich"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2GERMUN)"
-        },
-        {
-          "x4_code": "(REAC,2GERMNZ)",
-          "free_txt": [
-            "  TRIGA-Reactor of the University Mainz",
-            "  for obtaining a number of sample atoms and detector",
-            "  efficiency using well-known thermal cross section",
-            "  of 34-S"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2GERMNZ)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AJ,528,573,2000)",
+        "free_txt": [],
+        "publication_year": "2000",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,97TRIEST,2,1621,199705)",
+        "free_txt": [
+          " Prelim. publication."
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(GER)-0053,2021)",
+        "free_txt": [
+          " Revised values of Karlsruhe",
+          "cross sections."
+        ],
+        "publication_year": "2021",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2GERKFK)",
+        "free_txt": [
+          " 3.75 Karlsruhe Van de Graaff accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2GERKFK)"
+      },
+      {
+        "x4_code": "(REAC,2GERMUN)",
+        "free_txt": [
+          " FRM-I reactor in Munich"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2GERMUN)"
+      },
+      {
+        "x4_code": "(REAC,2GERMNZ)",
+        "free_txt": [
+          "  TRIGA-Reactor of the University Mainz",
+          "  for obtaining a number of sample atoms and detector",
+          "  efficiency using well-known thermal cross section",
+          "  of 34-S"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2GERMNZ)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,MXW)",
-          "0": {
+      "1": {
+        "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "16-S-34",
+              [
+                "N,G"
+              ],
+              "16-S-35,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "16-S-34",
+            "process": "N,G",
+            "sf49": "16-S-35,,SIG,,MXW",
+            "sf4": "16-S-35",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,MXW/AV)",
+        "children": [
+          {
+            "code": [
+              "16-S-34",
+              [
+                "N,G"
+              ],
+              "16-S-35,,SIG,,MXW/AV"
+            ],
+            "type": null,
+            "target": "16-S-34",
+            "process": "N,G",
+            "sf49": "16-S-35,,SIG,,MXW/AV",
+            "sf4": "16-S-35",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW/AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((16-S-34(N,G)16-S-35,,SIG,,MXW)//(16-S-34(N,G)16-S-35,,SIG,,MXW))",
+        "children": [
+          {
             "code": [
               "16-S-34",
               [
@@ -136,34 +189,296 @@
             "sf8": "MXW",
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,MXW/AV)",
-          "0": {
+          {
             "code": [
               "16-S-34",
               [
                 "N,G"
               ],
-              "16-S-35,,SIG,,MXW/AV"
+              "16-S-35,,SIG,,MXW"
             ],
             "type": null,
             "target": "16-S-34",
             "process": "N,G",
-            "sf49": "16-S-35,,SIG,,MXW/AV",
+            "sf49": "16-S-35,,SIG,,MXW",
             "sf4": "16-S-35",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
-            "sf8": "MXW/AV",
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "16-S-34",
+              [
+                "N,G"
+              ],
+              "16-S-35,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "16-S-34",
+            "process": "N,G",
+            "sf49": "16-S-35,,SIG,,SPA",
+            "sf4": "16-S-35",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "((16-S-34(N,G)16-S-35,,SIG,,MXW)//(16-S-34(N,G)16-S-35,,SIG,,SPA))",
+        "children": [
+          {
+            "code": [
+              "16-S-34",
+              [
+                "N,G"
+              ],
+              "16-S-35,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "16-S-34",
+            "process": "N,G",
+            "sf49": "16-S-35,,SIG,,MXW",
+            "sf4": "16-S-35",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
+          {
+            "code": [
+              "16-S-34",
+              [
+                "N,G"
+              ],
+              "16-S-35,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "16-S-34",
+            "process": "N,G",
+            "sf49": "16-S-35,,SIG,,SPA",
+            "sf4": "16-S-35",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": ""
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "16-S-34",
+              [
+                "N,G"
+              ],
+              "16-S-35,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "16-S-34",
+            "process": "N,G",
+            "sf49": "16-S-35,,SIG,,MXW",
+            "sf4": "16-S-35",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "007": {
+      "0": {
+        "x4_code": "((16-S-34(N,G)16-S-35,,SIG,,MXW)//(16-S-34(N,G)16-S-35,,SIG,,MXW))",
+        "children": [
+          {
+            "code": [
+              "16-S-34",
+              [
+                "N,G"
+              ],
+              "16-S-35,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "16-S-34",
+            "process": "N,G",
+            "sf49": "16-S-35,,SIG,,MXW",
+            "sf4": "16-S-35",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          },
+          {
+            "code": [
+              "16-S-34",
+              [
+                "N,G"
+              ],
+              "16-S-35,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "16-S-34",
+            "process": "N,G",
+            "sf49": "16-S-35,,SIG,,MXW",
+            "sf4": "16-S-35",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": ""
+      }
+    },
+    "008": {
+      "0": {
+        "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,MXW,DERIV)",
+        "children": [
+          {
+            "code": [
+              "16-S-34",
+              [
+                "N,G"
+              ],
+              "16-S-35,,SIG,,MXW,DERIV"
+            ],
+            "type": null,
+            "target": "16-S-34",
+            "process": "N,G",
+            "sf49": "16-S-35,,SIG,,MXW,DERIV",
+            "sf4": "16-S-35",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": " MACS"
+      }
+    },
+    "009": {
+      "1": {
+        "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "16-S-34",
+              [
+                "N,G"
+              ],
+              "16-S-35,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "16-S-34",
+            "process": "N,G",
+            "sf49": "16-S-35,,SIG,,SPA",
+            "sf4": "16-S-35",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,SPA/AV)",
+        "children": [
+          {
+            "code": [
+              "16-S-34",
+              [
+                "N,G"
+              ],
+              "16-S-35,,SIG,,SPA/AV"
+            ],
+            "type": null,
+            "target": "16-S-34",
+            "process": "N,G",
+            "sf49": "16-S-35,,SIG,,SPA/AV",
+            "sf4": "16-S-35",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA/AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "010": {
+      "0": {
+        "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,MXW,DERIV)",
+        "children": [
+          {
+            "code": [
+              "16-S-34",
+              [
+                "N,G"
+              ],
+              "16-S-35,,SIG,,MXW,DERIV"
+            ],
+            "type": null,
+            "target": "16-S-34",
+            "process": "N,G",
+            "sf49": "16-S-35,,SIG,,MXW,DERIV",
+            "sf4": "16-S-35",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": " MACS"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "KT",
@@ -252,51 +567,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((16-S-34(N,G)16-S-35,,SIG,,MXW)//(16-S-34(N,G)16-S-35,,SIG,,MXW))",
-          "0": {
-            "code": [
-              "16-S-34",
-              [
-                "N,G"
-              ],
-              "16-S-35,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "16-S-34",
-            "process": "N,G",
-            "sf49": "16-S-35,,SIG,,MXW",
-            "sf4": "16-S-35",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "16-S-34",
-              [
-                "N,G"
-              ],
-              "16-S-35,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "16-S-34",
-            "process": "N,G",
-            "sf49": "16-S-35,,SIG,,MXW",
-            "sf4": "16-S-35",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "KT-DN",
@@ -353,32 +623,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "16-S-34",
-              [
-                "N,G"
-              ],
-              "16-S-35,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "16-S-34",
-            "process": "N,G",
-            "sf49": "16-S-35,,SIG,,SPA",
-            "sf4": "16-S-35",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MEAN",
@@ -427,51 +671,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "((16-S-34(N,G)16-S-35,,SIG,,MXW)//(16-S-34(N,G)16-S-35,,SIG,,SPA))",
-          "0": {
-            "code": [
-              "16-S-34",
-              [
-                "N,G"
-              ],
-              "16-S-35,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "16-S-34",
-            "process": "N,G",
-            "sf49": "16-S-35,,SIG,,MXW",
-            "sf4": "16-S-35",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "16-S-34",
-              [
-                "N,G"
-              ],
-              "16-S-35,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "16-S-34",
-            "process": "N,G",
-            "sf49": "16-S-35,,SIG,,SPA",
-            "sf4": "16-S-35",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "KT-NM",
@@ -525,32 +724,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "16-S-34",
-              [
-                "N,G"
-              ],
-              "16-S-35,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "16-S-34",
-            "process": "N,G",
-            "sf49": "16-S-35,,SIG,,MXW",
-            "sf4": "16-S-35",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "KT",
@@ -607,51 +780,6 @@
       }
     },
     "007": {
-      "reaction": {
-        "0": {
-          "x4_code": "((16-S-34(N,G)16-S-35,,SIG,,MXW)//(16-S-34(N,G)16-S-35,,SIG,,MXW))",
-          "0": {
-            "code": [
-              "16-S-34",
-              [
-                "N,G"
-              ],
-              "16-S-35,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "16-S-34",
-            "process": "N,G",
-            "sf49": "16-S-35,,SIG,,MXW",
-            "sf4": "16-S-35",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "16-S-34",
-              [
-                "N,G"
-              ],
-              "16-S-35,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "16-S-34",
-            "process": "N,G",
-            "sf49": "16-S-35,,SIG,,MXW",
-            "sf4": "16-S-35",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "KT-NM",
@@ -704,32 +832,6 @@
       }
     },
     "008": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,MXW,DERIV)",
-          "0": {
-            "code": [
-              "16-S-34",
-              [
-                "N,G"
-              ],
-              "16-S-35,,SIG,,MXW,DERIV"
-            ],
-            "type": null,
-            "target": "16-S-34",
-            "process": "N,G",
-            "sf49": "16-S-35,,SIG,,MXW,DERIV",
-            "sf4": "16-S-35",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": " MACS"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -837,56 +939,6 @@
       }
     },
     "009": {
-      "reaction": {
-        "1": {
-          "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "16-S-34",
-              [
-                "N,G"
-              ],
-              "16-S-35,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "16-S-34",
-            "process": "N,G",
-            "sf49": "16-S-35,,SIG,,SPA",
-            "sf4": "16-S-35",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,SPA/AV)",
-          "0": {
-            "code": [
-              "16-S-34",
-              [
-                "N,G"
-              ],
-              "16-S-35,,SIG,,SPA/AV"
-            ],
-            "type": null,
-            "target": "16-S-34",
-            "process": "N,G",
-            "sf49": "16-S-35,,SIG,,SPA/AV",
-            "sf4": "16-S-35",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA/AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "KT-DUMMY",
@@ -975,32 +1027,6 @@
       }
     },
     "010": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,MXW,DERIV)",
-          "0": {
-            "code": [
-              "16-S-34",
-              [
-                "N,G"
-              ],
-              "16-S-35,,SIG,,MXW,DERIV"
-            ],
-            "type": null,
-            "target": "16-S-34",
-            "process": "N,G",
-            "sf49": "16-S-35,,SIG,,MXW,DERIV",
-            "sf4": "16-S-35",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": " MACS"
-        }
-      },
       "common": {
         "heads": [
           "MONIT1",
@@ -1137,8 +1163,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1146,18 +1172,14 @@
               " For pile-up and cascade summing at flux determination."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(16-S-35,87.5D,B-)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SILI)",
             "free_txt": [
@@ -1185,10 +1207,8 @@
               "target."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2GERKFK)",
             "free_txt": [
@@ -1210,10 +1230,8 @@
               "  of 34-S"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -1227,10 +1245,8 @@
               "         and for kT=25.3 meV"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1258,10 +1274,8 @@
               "Fb - correction factor for decay during irradiation."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -1276,10 +1290,8 @@
               "neutron spectrum ( kT=25.3 meV);."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1309,8 +1321,8 @@
       }
     },
     "002": {
-      "decay-mon": {
-        "0": [
+      "0": {
+        "decay-mon": [
           {
             "x4_code": "(21-SC-46-G,83.83D,DG,889.25,0.99984,                   DG,1120.51,0.99987)",
             "free_txt": [
@@ -1329,20 +1341,16 @@
               " 99.90+-0.02 % , 99.9824+-0.0005 % ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Statistical and systematical are included"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1361,18 +1369,14 @@
               " Sample S3"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "((MONIT1),J.F.Mughabghab,B,NEUT.CS 1B,,,1984)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)16-S-34(N,G)16-S-35,,SIG,,SPA)",
             "free_txt": []
@@ -1389,10 +1393,8 @@
             "x4_code": "(27-CO-59(N,G)27-CO-60,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,E.Browne,B,BROWNE,,,1986)",
             "free_txt": [
@@ -1412,10 +1414,8 @@
               " Au-197      98.65+-0.09       1550.0+-1.8"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1440,8 +1440,8 @@
       }
     },
     "003": {
-      "decay-mon": {
-        "0": [
+      "0": {
+        "decay-mon": [
           {
             "x4_code": "(21-SC-46-G,83.83D,DG,889.25,0.99984,                   DG,1120.51,0.99987)",
             "free_txt": [
@@ -1460,10 +1460,8 @@
               " 99.90+-0.02 % , 99.9824+-0.0005 % ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1476,10 +1474,8 @@
               " Systematical uncertainty"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1498,10 +1494,8 @@
               " Sample S3"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
@@ -1516,10 +1510,8 @@
               "  Three reactions for neutron flux"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,E.Browne,B,BROWNE,,,1986)",
             "free_txt": [
@@ -1539,10 +1531,8 @@
               " Au-197      98.65+-0.09       1550.0+-1.8"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1553,8 +1543,8 @@
       }
     },
     "004": {
-      "decay-mon": {
-        "0": [
+      "0": {
+        "decay-mon": [
           {
             "x4_code": "(21-SC-46-G,83.83D,DG,889.25,0.99984,                   DG,1120.51,0.99987)",
             "free_txt": [
@@ -1573,28 +1563,22 @@
               " 99.90+-0.02 % , 99.9824+-0.0005 % ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Statistical and systematical are included"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "((MONIT),J.F.Mughabghab,B,NEUT.CS 1B,,,1984)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)16-S-34(N,G)16-S-35,,SIG,,SPA)",
             "free_txt": []
@@ -1613,10 +1597,8 @@
               "  Three reactions for neutron flux"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,E.Browne,B,BROWNE,,,1986)",
             "free_txt": [
@@ -1636,20 +1618,16 @@
               " Au-197      98.65+-0.09       1550.0+-1.8"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               " Sample S4"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1666,8 +1644,8 @@
       }
     },
     "005": {
-      "decay-mon": {
-        "0": [
+      "0": {
+        "decay-mon": [
           {
             "x4_code": "(21-SC-46-G,83.83D,DG,889.25,0.99984,                   DG,1120.51,0.99987)",
             "free_txt": [
@@ -1686,10 +1664,8 @@
               " 99.90+-0.02 % , 99.9824+-0.0005 % ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1702,10 +1678,8 @@
               " Systematical uncertainty"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
@@ -1720,10 +1694,8 @@
               "  Three reactions for neutron flux"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,E.Browne,B,BROWNE,,,1986)",
             "free_txt": [
@@ -1743,20 +1715,16 @@
               " Au-197      98.65+-0.09       1550.0+-1.8"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               " Sample S4"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1767,8 +1735,8 @@
       }
     },
     "006": {
-      "decay-mon": {
-        "0": [
+      "0": {
+        "decay-mon": [
           {
             "x4_code": "(21-SC-46-G,83.83D,DG,889.25,0.99984,                   DG,1120.51,0.99987)",
             "free_txt": [
@@ -1787,20 +1755,16 @@
               " 99.90+-0.02 % , 99.9824+-0.0005 % ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Statistical and systematical are included"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1813,18 +1777,14 @@
               " Sample S5"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "((MONIT),J.F.Mughabghab,B,NEUT.CS 1B,,,1984)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)16-S-34(N,G)16-S-35,,SIG,,SPA)",
             "free_txt": []
@@ -1843,10 +1803,8 @@
               "  Three reactions for neutron flux"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,E.Browne,B,BROWNE,,,1986)",
             "free_txt": [
@@ -1866,10 +1824,8 @@
               " Au-197      98.65+-0.09       1550.0+-1.8"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1886,8 +1842,8 @@
       }
     },
     "007": {
-      "decay-mon": {
-        "0": [
+      "0": {
+        "decay-mon": [
           {
             "x4_code": "(21-SC-46-G,83.83D,DG,889.25,0.99984,                   DG,1120.51,0.99987)",
             "free_txt": [
@@ -1906,10 +1862,8 @@
               " 99.90+-0.02 % , 99.9824+-0.0005 % ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1922,10 +1876,8 @@
               " Systematical uncertainty"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1938,10 +1890,8 @@
               " Sample S5"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
@@ -1956,10 +1906,8 @@
               "  Three reactions for neutron flux"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,E.Browne,B,BROWNE,,,1986)",
             "free_txt": [
@@ -1979,10 +1927,8 @@
               " Au-197      98.65+-0.09       1550.0+-1.8"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1993,8 +1939,8 @@
       }
     },
     "008": {
-      "decay-mon": {
-        "0": [
+      "0": {
+        "decay-mon": [
           {
             "x4_code": "(21-SC-46-G,83.83D,DG,889.25,0.99984,                   DG,1120.51,0.99987)",
             "free_txt": [
@@ -2013,10 +1959,8 @@
               " 99.90+-0.02 % , 99.9824+-0.0005 % ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2024,18 +1968,14 @@
               " the adopted resonance parameters."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "((MONIT),J.F.Mughabghab,B,NEUT.CS 1B,,,1984)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(16-S-34(N,G)16-S-35,,SIG,,SPA)",
             "free_txt": []
@@ -2054,10 +1994,8 @@
               "  Three reactions for neutron flux"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,E.Browne,B,BROWNE,,,1986)",
             "free_txt": [
@@ -2083,10 +2021,8 @@
               " Res.parameters."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2117,8 +2053,8 @@
       }
     },
     "009": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2127,10 +2063,8 @@
               "for revised thermal capture cross section of 34-S"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2138,10 +2072,8 @@
               "and for new cross section of 34-S: 256/227=1.128."
             ]
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(21-SC-46-G,83.83D,DG,889.25,0.99984,                   DG,1120.51,0.99987)",
             "free_txt": [
@@ -2160,20 +2092,16 @@
               " 99.90+-0.02 % , 99.9824+-0.0005 % ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Statistical and systematical are included"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -2192,10 +2120,8 @@
               " Sample S3"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "((MONIT1),S.F.Mughabghab,B,NEUT.RES,,,2018)",
             "free_txt": [
@@ -2206,10 +2132,8 @@
             "x4_code": "((MONIT2),R.Reifarth+,J,EPJ/P,133,424,2018)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)16-S-34(N,G)16-S-35,,SIG,,SPA)",
             "free_txt": []
@@ -2226,10 +2150,8 @@
             "x4_code": "(27-CO-59(N,G)27-CO-60,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,E.Browne,B,BROWNE,,,1986)",
             "free_txt": [
@@ -2248,10 +2170,8 @@
               " Au-197      98.65+-0.09       1550.0+-1.8"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2262,8 +2182,8 @@
       }
     },
     "010": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2272,20 +2192,16 @@
               "for revised thermal capture cross section of 34-S."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               " Correction for revised gold standard: 622.7/586 =1.062"
             ]
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(21-SC-46-G,83.83D,DG,889.25,0.99984,                   DG,1120.51,0.99987)",
             "free_txt": [
@@ -2304,10 +2220,8 @@
               " 99.90+-0.02 % , 99.9824+-0.0005 % ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2315,10 +2229,8 @@
               " the adopted resonance parameters."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "((MONIT1),S.F.Mughabghab,B,NEUT.RES,,,2018)",
             "free_txt": [
@@ -2329,10 +2241,8 @@
             "x4_code": "((MONIT2),R.Reifarth+,J,EPJ/P,133,424,2018)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)16-S-34(N,G)16-S-35,,SIG,,SPA)",
             "free_txt": []
@@ -2349,20 +2259,16 @@
             "x4_code": "(27-CO-59(N,G)27-CO-60,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,P.M.Endt,J,NP/A,521,1,1990)",
             "free_txt": [
               " Res.parameters."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

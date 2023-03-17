@@ -43,37 +43,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,40,283,197005)",
-          "free_txt": [],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,VDGT)",
-          "free_txt": [
-            " 6 MeV and Tandem Van de Graaffs."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(VDGT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,40,283,197005)",
+        "free_txt": [],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,VDGT)",
+        "free_txt": [
+          " 6 MeV and Tandem Van de Graaffs."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(VDGT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(N,X)0-G-0,PAR,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(8-O-16(N,X)0-G-0,PAR,DA)",
+        "children": [
+          {
             "code": [
               "8-O-16",
               [
@@ -91,11 +86,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "021": {
+      "0": {
+        "x4_code": "(8-O-16(N,INL)8-O-16,,DA,G,4PI)",
+        "children": [
+          {
+            "code": [
+              "8-O-16",
+              [
+                "N,INL"
+              ],
+              "8-O-16,,DA,G,4PI"
+            ],
+            "type": null,
+            "target": "8-O-16",
+            "process": "N,INL",
+            "sf49": "8-O-16,,DA,G,4PI",
+            "sf4": "8-O-16",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "G",
+            "sf8": "4PI",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "022": {
+      "0": {
+        "x4_code": "(8-O-16(N,A)6-C-13,,DA,,4PI)",
+        "children": [
+          {
+            "code": [
+              "8-O-16",
+              [
+                "N,A"
+              ],
+              "6-C-13,,DA,,4PI"
+            ],
+            "type": null,
+            "target": "8-O-16",
+            "process": "N,A",
+            "sf49": "6-C-13,,DA,,4PI",
+            "sf4": "6-C-13",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "4PI",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -722,32 +780,6 @@
       }
     },
     "021": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(N,INL)8-O-16,,DA,G,4PI)",
-          "0": {
-            "code": [
-              "8-O-16",
-              [
-                "N,INL"
-              ],
-              "8-O-16,,DA,G,4PI"
-            ],
-            "type": null,
-            "target": "8-O-16",
-            "process": "N,INL",
-            "sf49": "8-O-16,,DA,G,4PI",
-            "sf4": "8-O-16",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "G",
-            "sf8": "4PI",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG"
@@ -815,32 +847,6 @@
       }
     },
     "022": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(N,A)6-C-13,,DA,,4PI)",
-          "0": {
-            "code": [
-              "8-O-16",
-              [
-                "N,A"
-              ],
-              "6-C-13,,DA,,4PI"
-            ],
-            "type": null,
-            "target": "8-O-16",
-            "process": "N,A",
-            "sf49": "6-C-13,,DA,,4PI",
-            "sf4": "6-C-13",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "4PI",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG"
@@ -890,8 +896,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -899,10 +905,8 @@
               " geometry, and multiple scattering."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -910,10 +914,8 @@
               " Sci.Eng. 36, 280 (1969)."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -930,10 +932,8 @@
               " sample detector distances 77-90 cm."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -944,30 +944,24 @@
               ". multiple scattering (<5%)."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,VDGT)",
             "free_txt": [
               " 6 MeV and Tandem Van de Graaffs."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": [
               " D(d,n) source. Deuterium gas target."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -979,10 +973,8 @@
               "Calculated detector efficiencies used for flux monitor."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -991,10 +983,8 @@
               "One sample 75 g, 2.54 cm diameter x 4.75cm long."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1007,8 +997,8 @@
     },
     "002": {},
     "021": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,10096002)",
             "free_txt": [
@@ -1021,8 +1011,8 @@
       }
     },
     "022": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,10096002)",
             "free_txt": [

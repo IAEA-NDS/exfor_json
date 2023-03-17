@@ -53,39 +53,97 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,26,26,1977)",
-          "free_txt": [],
-          "publication_year": "1977"
-        },
-        {
-          "x4_code": "(J,SNP,26,12,1977)",
-          "free_txt": [
-            " English translation"
-          ],
-          "publication_year": "1977"
-        },
-        {
-          "x4_code": "(R,JINR-P6-10010,1976)",
-          "free_txt": [],
-          "publication_year": "1976"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,YF,26,26,1977)",
+        "free_txt": [],
+        "publication_year": "1977",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SNP,26,12,1977)",
+        "free_txt": [
+          " English translation"
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,JINR-P6-10010,1976)",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCTM,4ZZZDUB)",
+        "free_txt": [
+          ".Beam intensity 1.0E+10 par/sec,",
+          "ions Xe-136 energy about 1 GeV."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCTM)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(92-U-0(54-XE-136,X)ELEM/MASS,,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-0",
+              [
+                "54-XE-136,X"
+              ],
+              "ELEM/MASS,,SIG"
+            ],
+            "type": null,
+            "target": "92-U-0",
+            "process": "54-XE-136,X",
+            "sf49": "ELEM/MASS,,SIG",
+            "sf4": "ELEM/MASS",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCTM,4ZZZDUB)",
-          "free_txt": [
-            ".Beam intensity 1.0E+10 par/sec,",
-            "ions Xe-136 energy about 1 GeV."
-          ],
-          "facility_type": "(CYCTM)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(92-U-0(54-XE-136,F)MASS,,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-0",
+              [
+                "54-XE-136,F"
+              ],
+              "MASS,,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-0",
+            "process": "54-XE-136,F",
+            "sf49": "MASS,,SIG,,,DERIV",
+            "sf4": "MASS",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -105,32 +163,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-0(54-XE-136,X)ELEM/MASS,,SIG)",
-          "0": {
-            "code": [
-              "92-U-0",
-              [
-                "54-XE-136,X"
-              ],
-              "ELEM/MASS,,SIG"
-            ],
-            "type": null,
-            "target": "92-U-0",
-            "process": "54-XE-136,X",
-            "sf49": "ELEM/MASS,,SIG",
-            "sf4": "ELEM/MASS",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1"
@@ -598,32 +630,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-0(54-XE-136,F)MASS,,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "92-U-0",
-              [
-                "54-XE-136,F"
-              ],
-              "MASS,,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-0",
-            "process": "54-XE-136,F",
-            "sf49": "MASS,,SIG,,,DERIV",
-            "sf4": "MASS",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -775,16 +781,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(AREA)",
             "free_txt": []
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": []
@@ -793,10 +797,8 @@
             "x4_code": "(G-SPC)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SOLST)",
             "free_txt": [
@@ -810,10 +812,8 @@
               " Gamma-rays detector"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCTM,4ZZZDUB)",
             "free_txt": [
@@ -821,10 +821,8 @@
               "ions Xe-136 energy about 1 GeV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(SITA,INTB,CHSEP,MOMIX,BCINT)",
             "free_txt": [
@@ -834,18 +832,14 @@
               "R0=1.3 Fm."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-238(54-XE-136,X)92-U-237,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -856,8 +850,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -870,10 +864,8 @@
               ".Beam current was measured with accuracy 20%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -884,8 +876,8 @@
       }
     },
     "003": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -893,10 +885,8 @@
               "had been made."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(+DATA-ERR)",
             "free_txt": [
@@ -909,10 +899,8 @@
               ".An information is absent."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -920,10 +908,8 @@
               "mass-distribution."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,JU.C.OGANESJAN+,R,JINR-E7-9187,1975)",
             "free_txt": [
@@ -937,10 +923,8 @@
               "correction on cumulativity."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,A0031002)",
             "free_txt": []

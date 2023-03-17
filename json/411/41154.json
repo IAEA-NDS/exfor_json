@@ -84,47 +84,43 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,FEI-2072,1990)",
-          "free_txt": [
-            "  Data Tables are given"
-          ],
-          "publication_year": "1990"
-        },
-        {
-          "x4_code": "(T,GRIGORIEV,2005)",
-          "free_txt": [
-            "  Dissertation of",
-            "                       Dr.Yu.V.Grigoriev"
-          ],
-          "publication_year": "2005"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            "   Fast pulse reactor IBR-30"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,FEI-2072,1990)",
+        "free_txt": [
+          "  Data Tables are given"
+        ],
+        "publication_year": "1990",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(T,GRIGORIEV,2005)",
+        "free_txt": [
+          "  Dissertation of",
+          "                       Dr.Yu.V.Grigoriev"
+        ],
+        "publication_year": "2005",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          "   Fast pulse reactor IBR-30"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,TOT),,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(N,TOT),,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -142,11 +138,130 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Average over energy    region given in the data table"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Average over energy    region given in the data table"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,G)92-U-239,,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,G"
+              ],
+              "92-U-239,,SIG,,AV"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,G",
+            "sf49": "92-U-239,,SIG,,AV",
+            "sf4": "92-U-239",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Cross-section averaged over energy interval given in the data table with the weight Exp(-(TOT-SIG)*L)"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-238(N,EL),,STF)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,EL"
+              ],
+              ",,STF"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,EL",
+            "sf49": ",,STF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "STF",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(92-U-238(N,G),,WID)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,G"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,G",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(92-U-238(N,EL)92-U-238,,RAD)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,EL"
+              ],
+              "92-U-238,,RAD"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,EL",
+            "sf49": "92-U-238,,RAD",
+            "sf4": "92-U-238",
+            "sf5": null,
+            "sf6": "RAD",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -206,32 +321,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,G)92-U-239,,SIG,,AV)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,G"
-              ],
-              "92-U-239,,SIG,,AV"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,G",
-            "sf49": "92-U-239,,SIG,,AV",
-            "sf4": "92-U-239",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Cross-section averaged over energy interval given in the data table with the weight Exp(-(TOT-SIG)*L)"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -287,32 +376,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,EL),,STF)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,EL"
-              ],
-              ",,STF"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,EL",
-            "sf49": ",,STF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "STF",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-RES-MIN",
@@ -365,32 +428,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,G),,WID)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,G",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "MOMENTUM L",
@@ -439,32 +476,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,EL)92-U-238,,RAD)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,EL"
-              ],
-              "92-U-238,,RAD"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,EL",
-            "sf49": "92-U-238,,RAD",
-            "sf4": "92-U-238",
-            "sf5": null,
-            "sf6": "RAD",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -513,38 +524,32 @@
   },
   "experimental_conditions": {
     "001": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "            Errors, if present, are not specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
               "   Fast pulse reactor IBR-30"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               " No information."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -556,8 +561,8 @@
       }
     },
     "002": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HE3SP)",
             "free_txt": [
@@ -565,10 +570,8 @@
               "         transmission measurements"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -576,20 +579,16 @@
               "articles."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time-of-flight, flight base is 1006 m"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -608,8 +607,8 @@
       }
     },
     "003": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -617,10 +616,8 @@
               "         consisting of 16 Na-I(TL) crystals"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -628,20 +625,16 @@
               "articles."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time-of-flight, flight base is 501 m"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -658,8 +651,8 @@
       }
     },
     "004": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM,92-U-238(N,0),,D)",
             "free_txt": [
@@ -667,10 +660,8 @@
               " Strength function for L=2 2.E-04"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -678,10 +669,8 @@
               "articles."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,41154002)",
             "free_txt": [
@@ -705,8 +694,8 @@
       }
     },
     "005": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM,92-U-238(N,0),,D)",
             "free_txt": [
@@ -714,10 +703,8 @@
               " Strength function for L=2 2.E-04"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -725,10 +712,8 @@
               "articles."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,41154002)",
             "free_txt": [
@@ -752,8 +737,8 @@
       }
     },
     "006": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM,92-U-238(N,0),,D)",
             "free_txt": [
@@ -762,10 +747,8 @@
               " Radus for L=3 9.35 Fermi"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,41154002)",
             "free_txt": [

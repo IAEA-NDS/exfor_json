@@ -50,48 +50,44 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NIM/A,337,474,1994)",
-          "free_txt": [
-            "  INTEGRAL SIGMA IS GIVEN"
-          ],
-          "publication_year": "1994"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM,2JPNTOH)",
-          "free_txt": [
-            " DYNAMITRON FOR 4 - 6.5 MEV REGION"
-          ],
-          "facility_type": "(DYNAM)",
-          "institute": "(2JPNTOH)"
-        },
-        {
-          "x4_code": "(VDGT,2JPNJAE)",
-          "free_txt": [
-            "  TANDEM ACCELERATORFOR 6.5 - 10.6 MEV",
-            "                NEUTRONS"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(2JPNJAE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NIM/A,337,474,1994)",
+        "free_txt": [
+          "  INTEGRAL SIGMA IS GIVEN"
+        ],
+        "publication_year": "1994",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM,2JPNTOH)",
+        "free_txt": [
+          " DYNAMITRON FOR 4 - 6.5 MEV REGION"
+        ],
+        "pointer": "0",
+        "facility_type": "(DYNAM)",
+        "institute": "(2JPNTOH)"
+      },
+      {
+        "x4_code": "(VDGT,2JPNJAE)",
+        "free_txt": [
+          "  TANDEM ACCELERATORFOR 6.5 - 10.6 MEV",
+          "                NEUTRONS"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2JPNJAE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-0(N,X)1-H-1,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(28-NI-0(N,X)1-H-1,,SIG)",
+        "children": [
+          {
             "code": [
               "28-NI-0",
               [
@@ -109,11 +105,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(28-NI-0(N,X)2-HE-4,,SIG)",
+        "children": [
+          {
+            "code": [
+              "28-NI-0",
+              [
+                "N,X"
+              ],
+              "2-HE-4,,SIG"
+            ],
+            "type": null,
+            "target": "28-NI-0",
+            "process": "N,X",
+            "sf49": "2-HE-4,,SIG",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -143,32 +174,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-0(N,X)2-HE-4,,SIG)",
-          "0": {
-            "code": [
-              "28-NI-0",
-              [
-                "N,X"
-              ],
-              "2-HE-4,,SIG"
-            ],
-            "type": null,
-            "target": "28-NI-0",
-            "process": "N,X",
-            "sf49": "2-HE-4,,SIG",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -202,8 +207,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
@@ -219,10 +224,8 @@
               "      AND SAMPLE-OUT MEASUREMENTS"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -231,10 +234,8 @@
               "   SAMPLE THICKNESS ERROR (LESS THAN 1 PC)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM,2JPNTOH)",
             "free_txt": [
@@ -248,20 +249,16 @@
               "                NEUTRONS"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": [
               "   RECOIL PROTONS DETECTION"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -272,24 +269,20 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTAD,INTED)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -301,24 +294,20 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTAD,INTED)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [

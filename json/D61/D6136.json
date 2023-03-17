@@ -92,37 +92,32 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,83,024605,2011)",
-          "free_txt": [],
-          "publication_year": "2011"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,3INDNSD)",
-          "free_txt": [
-            " 15 UD Pelletron Accelerator"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(3INDNSD)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,83,024605,2011)",
+        "free_txt": [],
+        "publication_year": "2011",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,3INDNSD)",
+        "free_txt": [
+          " 15 UD Pelletron Accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(3INDNSD)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(8-O-16,F),,NU/DA/DE,LF+HF/N)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(8-O-16,F),,NU/DA/DE,LF+HF/N)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -140,11 +135,74 @@
             "sf7": "LF+HF/N",
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(79-AU-197(8-O-16,F),,NU/DA/DE,LF+HF/N)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "8-O-16,F"
+              ],
+              ",,NU/DA/DE,LF+HF/N"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "8-O-16,F",
+            "sf49": ",,NU/DA/DE,LF+HF/N",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "NU/DA/DE",
+            "sf7": "LF+HF/N",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-238(8-O-16,F),,NU)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "8-O-16,F"
+              ],
+              ",,NU"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "8-O-16,F",
+            "sf49": ",,NU",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Total neutron multiplicity"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG"
@@ -364,32 +422,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(8-O-16,F),,NU/DA/DE,LF+HF/N)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "8-O-16,F"
-              ],
-              ",,NU/DA/DE,LF+HF/N"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "8-O-16,F",
-            "sf49": ",,NU/DA/DE,LF+HF/N",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "NU/DA/DE",
-            "sf7": "LF+HF/N",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -481,32 +513,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(8-O-16,F),,NU)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "8-O-16,F"
-              ],
-              ",,NU"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "8-O-16,F",
-            "sf49": ",,NU",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Total neutron multiplicity"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -569,8 +575,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -580,10 +586,8 @@
               " analysis"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(MWPC)",
             "free_txt": [
@@ -614,30 +618,24 @@
               " at a distance of 100 cm from the target."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,3INDNSD)",
             "free_txt": [
               " 15 UD Pelletron Accelerator"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -652,10 +650,8 @@
               " performed using the Monte Carlo computer code NEFF."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -663,10 +659,8 @@
               " and self-supporting 400 ug/cm2 197Au."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -677,8 +671,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -689,8 +683,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -701,8 +695,8 @@
       }
     },
     "004": {
-      "misc-col": {
-        "0": [
+      "0": {
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -715,10 +709,8 @@
               " Post-scission neutron multiplicities"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

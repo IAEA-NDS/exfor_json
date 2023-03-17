@@ -79,40 +79,35 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,JINR-P3-89-823,1989)",
-          "free_txt": [
-            "      Main reference,",
-            "                   data tables are given"
-          ],
-          "publication_year": "1989"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            "   Fast pulse reactor IBR-30"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,JINR-P3-89-823,1989)",
+        "free_txt": [
+          "      Main reference,",
+          "                   data tables are given"
+        ],
+        "publication_year": "1989",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          "   Fast pulse reactor IBR-30"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,TOT),,TRN)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(N,TOT),,TRN)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -130,11 +125,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "          Transmission, averaged  over energy region given in the data table"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "          Transmission, averaged  over energy region given in the data table"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,G)92-U-239,,SIF,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,G"
+              ],
+              "92-U-239,,SIF,,AV"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,G",
+            "sf49": "92-U-239,,SIF,,AV",
+            "sf4": "92-U-239",
+            "sf5": null,
+            "sf6": "SIF",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Self-Indication Func. averaged over energy interval given in the data table"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-238(N,G)92-U-239,,SIF,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,G"
+              ],
+              "92-U-239,,SIF,,AV"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,G",
+            "sf49": "92-U-239,,SIF,,AV",
+            "sf4": "92-U-239",
+            "sf5": null,
+            "sf6": "SIF",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Self-indication func. averaged over energy interval given in the data table"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -506,32 +564,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,G)92-U-239,,SIF,,AV)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,G"
-              ],
-              "92-U-239,,SIF,,AV"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,G",
-            "sf49": "92-U-239,,SIF,,AV",
-            "sf4": "92-U-239",
-            "sf5": null,
-            "sf6": "SIF",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Self-Indication Func. averaged over energy interval given in the data table"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -885,32 +917,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,G)92-U-239,,SIF,,AV)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,G"
-              ],
-              "92-U-239,,SIF,,AV"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,G",
-            "sf49": "92-U-239,,SIF,,AV",
-            "sf4": "92-U-239",
-            "sf5": null,
-            "sf6": "SIF",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Self-indication func. averaged over energy interval given in the data table"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1272,8 +1278,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1282,10 +1288,8 @@
               " spectra"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -1293,10 +1297,8 @@
               "         consisting of 16 Na-I(Tl) crystals"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1310,30 +1312,24 @@
               "  Max. statistical error"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
               "   Fast pulse reactor IBR-30"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               " No information - absolute measurements"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,G.P.Georgiev+,R,JINR-P3-88-555,1988)",
             "free_txt": [
@@ -1341,10 +1337,8 @@
               "                16-channel gamma-spectrometer"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1357,8 +1351,8 @@
       }
     },
     "002": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HE3SP)",
             "free_txt": [
@@ -1366,30 +1360,24 @@
               "         transmission measurements"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time-of-flight, flight base is 1006 m"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               "   Thickness in MM"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1406,38 +1394,32 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".Data obtained from the sum gamma spectra"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time-of-flight, flight base is 501 m"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               "   Thickness in MM"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1454,8 +1436,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1463,30 +1445,24 @@
               " the 3-d order gamma-ray multiplicity factor"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time-of-flight, flight base is 501 m"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               "   Thickness in MM"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

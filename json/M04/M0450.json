@@ -32,35 +32,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,96,83,1954)",
-          "free_txt": [],
-          "publication_year": "1954"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USASTF)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(1USASTF)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,96,83,1954)",
+        "free_txt": [],
+        "publication_year": "1954",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USASTF)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USASTF)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(29-CU-63(G,N)29-CU-62,,SIG,,BRS)",
-          "0": {
+      "0": {
+        "x4_code": "(29-CU-63(G,N)29-CU-62,,SIG,,BRS)",
+        "children": [
+          {
             "code": [
               "29-CU-63",
               [
@@ -78,11 +73,165 @@
             "sf7": null,
             "sf8": "BRS",
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(29-CU-63(G,2N)29-CU-61,,SIG,,BRS)",
+        "children": [
+          {
+            "code": [
+              "29-CU-63",
+              [
+                "G,2N"
+              ],
+              "29-CU-61,,SIG,,BRS"
+            ],
+            "type": null,
+            "target": "29-CU-63",
+            "process": "G,2N",
+            "sf49": "29-CU-61,,SIG,,BRS",
+            "sf4": "29-CU-61",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((29-CU-63(G,2N)29-CU-61,,SIG,,BRS)/((29-CU-63(G,N)29-CU-62,,SIG,,BRS)+(29-CU-63(G,2N)29-CU-61,,SIG,,BRS)))",
+        "children": [
+          {
+            "code": [
+              "29-CU-63",
+              [
+                "G,2N"
+              ],
+              "29-CU-61,,SIG,,BRS"
+            ],
+            "type": null,
+            "target": "29-CU-63",
+            "process": "G,2N",
+            "sf49": "29-CU-61,,SIG,,BRS",
+            "sf4": "29-CU-61",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              [
+                "29-CU-63",
+                [
+                  "G,N"
+                ],
+                "29-CU-62,,SIG,,BRS"
+              ],
+              "+",
+              [
+                "29-CU-63",
+                [
+                  "G,2N"
+                ],
+                "29-CU-61,,SIG,,BRS"
+              ]
+            ],
+            "type": null,
+            "target": [
+              "29-CU-63",
+              [
+                "G,N"
+              ],
+              "29-CU-62,,SIG,,BRS"
+            ],
+            "process": "+",
+            "sf49": "(29-CU-63)",
+            "sf4": "(29-CU-63)",
+            "sf5": null,
+            "sf6": null,
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(29-CU-63(G,N)29-CU-62,,INT)",
+        "children": [
+          {
+            "code": [
+              "29-CU-63",
+              [
+                "G,N"
+              ],
+              "29-CU-62,,INT"
+            ],
+            "type": null,
+            "target": "29-CU-63",
+            "process": "G,N",
+            "sf49": "29-CU-62,,INT",
+            "sf4": "29-CU-62",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(29-CU-63(G,2N)29-CU-61,,INT)",
+        "children": [
+          {
+            "code": [
+              "29-CU-63",
+              [
+                "G,2N"
+              ],
+              "29-CU-61,,INT"
+            ],
+            "type": null,
+            "target": "29-CU-63",
+            "process": "G,2N",
+            "sf49": "29-CU-61,,INT",
+            "sf4": "29-CU-61",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANAL-STEP",
@@ -137,32 +286,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(29-CU-63(G,2N)29-CU-61,,SIG,,BRS)",
-          "0": {
-            "code": [
-              "29-CU-63",
-              [
-                "G,2N"
-              ],
-              "29-CU-61,,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "29-CU-63",
-            "process": "G,2N",
-            "sf49": "29-CU-61,,SIG,,BRS",
-            "sf4": "29-CU-61",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "DATA-ERR"
@@ -210,43 +333,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((29-CU-63(G,2N)29-CU-61,,SIG,,BRS)/((29-CU-63(G,N)29-CU-62,,SIG,,BRS)+(29-CU-63(G,2N)29-CU-61,,SIG,,BRS)))",
-          "0": {
-            "code": [
-              [
-                "29-CU-63",
-                [
-                  "G,2N"
-                ],
-                "29-CU-61,,SIG,,BRS"
-              ],
-              "/",
-              [
-                [
-                  "29-CU-63",
-                  [
-                    "G,N"
-                  ],
-                  "29-CU-62,,SIG,,BRS"
-                ],
-                "+",
-                [
-                  "29-CU-63",
-                  [
-                    "G,2N"
-                  ],
-                  "29-CU-61,,SIG,,BRS"
-                ]
-              ]
-            ],
-            "type": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -274,32 +360,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(29-CU-63(G,N)29-CU-62,,INT)",
-          "0": {
-            "code": [
-              "29-CU-63",
-              [
-                "G,N"
-              ],
-              "29-CU-62,,INT"
-            ],
-            "type": null,
-            "target": "29-CU-63",
-            "process": "G,N",
-            "sf49": "29-CU-62,,INT",
-            "sf4": "29-CU-62",
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "DATA-ERR"
@@ -343,32 +403,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "(29-CU-63(G,2N)29-CU-61,,INT)",
-          "0": {
-            "code": [
-              "29-CU-63",
-              [
-                "G,2N"
-              ],
-              "29-CU-61,,INT"
-            ],
-            "type": null,
-            "target": "29-CU-63",
-            "process": "G,2N",
-            "sf49": "29-CU-61,,INT",
-            "sf4": "29-CU-61",
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "DATA-ERR"
@@ -409,8 +443,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(UNFLD,PHDIF)",
             "free_txt": [
@@ -426,10 +460,8 @@
               " radiator."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -448,10 +480,8 @@
               " varied from 4.0 to 0.4% from 12 to 36 MeV)."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -472,10 +502,8 @@
               "      isotopes."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -485,26 +513,20 @@
               " DuMont 6292 photomultipliers."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USASTF)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(STTA,ACTIV,BCINT)",
             "free_txt": [
@@ -519,10 +541,8 @@
               " isotopes with 4pi scintillation counter."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -539,16 +559,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(29-CU-62,9.73MIN,B+)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -564,10 +582,8 @@
               " distribution"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -578,16 +594,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(29-CU-61,3.32HR,B+)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -595,10 +609,8 @@
               " cross section."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -609,8 +621,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,M0450002)",
             "free_txt": []
@@ -629,8 +641,8 @@
       }
     },
     "005": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -646,10 +658,8 @@
               " distribution."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -660,8 +670,8 @@
       }
     },
     "006": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -669,10 +679,8 @@
               " cross section."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

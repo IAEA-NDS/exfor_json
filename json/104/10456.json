@@ -57,39 +57,35 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,7,1766,1973)",
-          "free_txt": [
-            "#doi:10.1103/PhysRevC.7.1766"
-          ],
-          "publication_year": "1973"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USAORL)",
-          "free_txt": [
-            " ORELA."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,7,1766,1973)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.7.1766"
+        ],
+        "publication_year": "1973",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.7.1766"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USAORL)",
+        "free_txt": [
+          " ORELA."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(9-F-19(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(9-F-19(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "9-F-19",
               [
@@ -107,13 +103,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(9-F-19(N,TOT),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(9-F-19(N,TOT),,WID)",
+        "children": [
+          {
             "code": [
               "9-F-19",
               [
@@ -131,13 +129,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "(9-F-19(N,G),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "(9-F-19(N,G),,WID)",
+        "children": [
+          {
             "code": [
               "9-F-19",
               [
@@ -155,13 +155,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "4": {
-          "x4_code": "(9-F-19(N,EL),,WID,,G)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "4": {
+        "x4_code": "(9-F-19(N,EL),,WID,,G)",
+        "children": [
+          {
             "code": [
               "9-F-19",
               [
@@ -179,11 +181,46 @@
             "sf7": null,
             "sf8": "G",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(9-F-19(N,G)9-F-20,,SIG)",
+        "children": [
+          {
+            "code": [
+              "9-F-19",
+              [
+                "N,G"
+              ],
+              "9-F-20,,SIG"
+            ],
+            "type": null,
+            "target": "9-F-19",
+            "process": "N,G",
+            "sf49": "9-F-20,,SIG",
+            "sf4": "9-F-20",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -531,32 +568,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(9-F-19(N,G)9-F-20,,SIG)",
-          "0": {
-            "code": [
-              "9-F-19",
-              [
-                "N,G"
-              ],
-              "9-F-20,,SIG"
-            ],
-            "type": null,
-            "target": "9-F-19",
-            "process": "N,G",
-            "sf49": "9-F-20,,SIG",
-            "sf4": "9-F-20",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "DATA-ERR"
@@ -3170,46 +3181,38 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Data corrected for inelastic scattering effects"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " C6F6 based gamma detector, 6Li neutron monitor."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USAORL)",
             "free_txt": [
               " ORELA."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,PHD)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,R.L.Macklin+,J,NIM,91,565,1971)",
             "free_txt": [
@@ -3220,8 +3223,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -3230,20 +3233,16 @@
               "standard deviation level."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " May include 2 resonances"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,10456005)",
             "free_txt": []
@@ -3258,8 +3257,8 @@
       }
     },
     "005": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -3270,10 +3269,8 @@
               "large as 1%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

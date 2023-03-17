@@ -88,51 +88,48 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JRN,283,439,2010)",
-          "free_txt": [],
-          "publication_year": "2010"
-        },
-        {
-          "x4_code": "((S,ISINN-19,259,2012)=(S,JINR-E3-2012-30,259,2012))",
-          "free_txt": [
-            " Same most probable masses given"
-          ],
-          "publication_year": "2012"
-        },
-        {
-          "x4_code": "(J,KPS,59,1848,2011)",
-          "free_txt": [
-            " Same mass yield in fig, <A> and its FWHM in table"
-          ],
-          "publication_year": "2011"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,3KORPUE)",
-          "free_txt": [
-            " Pohang Accelerator Laboratory (PAL)"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(3KORPUE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JRN,283,439,2010)",
+        "free_txt": [],
+        "publication_year": "2010",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((S,ISINN-19,259,2012)=(S,JINR-E3-2012-30,259,2012))",
+        "free_txt": [
+          " Same most probable masses given"
+        ],
+        "publication_year": "2012",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,KPS,59,1848,2011)",
+        "free_txt": [
+          " Same mass yield in fig, <A> and its FWHM in table"
+        ],
+        "publication_year": "2011",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,3KORPUE)",
+        "free_txt": [
+          " Pohang Accelerator Laboratory (PAL)"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(3KORPUE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "((82-PB-0(G,F)ELEM/MASS,CUM,FY,,BRA)/(82-PB-0(G,F)44-RU-103,CUM,FY,,BRA))",
-          "0": {
+      "1": {
+        "x4_code": "((82-PB-0(G,F)ELEM/MASS,CUM,FY,,BRA)/(82-PB-0(G,F)44-RU-103,CUM,FY,,BRA))",
+        "children": [
+          {
             "code": [
               "82-PB-0",
               [
@@ -151,7 +148,7 @@
             "sf8": "BRA",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "82-PB-0",
               [
@@ -169,13 +166,15 @@
             "sf7": null,
             "sf8": "BRA",
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(82-PB-0(G,F)ELEM/MASS,CUM,FY,,BRA)",
-          "0": {
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(82-PB-0(G,F)ELEM/MASS,CUM,FY,,BRA)",
+        "children": [
+          {
             "code": [
               "82-PB-0",
               [
@@ -193,11 +192,46 @@
             "sf7": null,
             "sf8": "BRA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(82-PB-0(G,F),,AP,,BRA)",
+        "children": [
+          {
+            "code": [
+              "82-PB-0",
+              [
+                "G,F"
+              ],
+              ",,AP,,BRA"
+            ],
+            "type": null,
+            "target": "82-PB-0",
+            "process": "G,F",
+            "sf49": ",,AP,,BRA",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "AP",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-SYS",
@@ -569,32 +603,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-0(G,F),,AP,,BRA)",
-          "0": {
-            "code": [
-              "82-PB-0",
-              [
-                "G,F"
-              ],
-              ",,AP,,BRA"
-            ],
-            "type": null,
-            "target": "82-PB-0",
-            "process": "G,F",
-            "sf49": ",,AP,,BRA",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "AP",
-            "sf7": null,
-            "sf8": "BRA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -629,8 +637,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -638,20 +646,16 @@
               " 2.2 keV FWHM at 1332.5 keV peak of 60Co"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,3KORPUE)",
             "free_txt": [
               " Pohang Accelerator Laboratory (PAL)"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": [
@@ -659,10 +663,8 @@
               " (size 10 x 10 cm, thickness 0.1 mm)"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -681,10 +683,8 @@
               " Relative to 103Ru yield"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,R.B.Firestone+,B,FIRESTONE,,2004)",
             "free_txt": [
@@ -697,10 +697,8 @@
               " Decay data"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -708,10 +706,8 @@
               " wrapped with super pure Al foil (0.025 mm thick)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -722,8 +718,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "((1.)40-ZR-89-G,89.41HR,DG,909.14,0.9987)",
             "free_txt": []
@@ -768,10 +764,8 @@
             "x4_code": "((11.)48-CD-115-G,53.46HR,DG,336.24,0.459)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -798,10 +792,8 @@
               " Half-life and gamma-ray abundance (1%)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -812,18 +804,16 @@
       }
     },
     "003": {
-      "misc-col": {
-        "0": [
+      "0": {
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               " FWHM of mass distribution"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

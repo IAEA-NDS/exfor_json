@@ -56,40 +56,36 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSTS,2,(1),397,2002)",
-          "free_txt": [],
-          "publication_year": "2002"
-        },
-        {
-          "x4_code": "(J,BAP,44,(5),72(JC03),199910)",
-          "free_txt": [],
-          "publication_year": "1999"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,1USALTI)",
-          "free_txt": [],
-          "facility_type": "(VDG)",
-          "institute": "(1USALTI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSTS,2,(1),397,2002)",
+        "free_txt": [],
+        "publication_year": "2002",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,BAP,44,(5),72(JC03),199910)",
+        "free_txt": [],
+        "publication_year": "1999",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,1USALTI)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(1USALTI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(65-TB-159(N,INL)65-TB-159,PAR,DA,G)",
-          "0": {
+      "0": {
+        "x4_code": "(65-TB-159(N,INL)65-TB-159,PAR,DA,G)",
+        "children": [
+          {
             "code": [
               "65-TB-159",
               [
@@ -107,11 +103,46 @@
             "sf7": "G",
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(65-TB-159(N,INL)65-TB-159,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "65-TB-159",
+              [
+                "N,INL"
+              ],
+              "65-TB-159,PAR,SIG"
+            ],
+            "type": null,
+            "target": "65-TB-159",
+            "process": "N,INL",
+            "sf49": "65-TB-159,PAR,SIG",
+            "sf4": "65-TB-159",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG"
@@ -1307,32 +1338,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(65-TB-159(N,INL)65-TB-159,PAR,SIG)",
-          "0": {
-            "code": [
-              "65-TB-159",
-              [
-                "N,INL"
-              ],
-              "65-TB-159,PAR,SIG"
-            ],
-            "type": null,
-            "target": "65-TB-159",
-            "process": "N,INL",
-            "sf49": "65-TB-159,PAR,SIG",
-            "sf4": "65-TB-159",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1834,8 +1839,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1847,10 +1852,8 @@
               "  source."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GE-IN)",
             "free_txt": [
@@ -1869,38 +1872,30 @@
               " associated TOF system."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,1USALTI)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
               " Pulsed proton beam on metallic lithium target."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC,TOF)",
             "free_txt": [
@@ -1909,30 +1904,24 @@
               " scattering."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,SIG)",
             "free_txt": [
               " 235U fission chamber."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "159Tb disk scatterer."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1946,8 +1935,8 @@
     },
     "002": {},
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(4PI1A)",
             "free_txt": [
@@ -1957,20 +1946,16 @@
               " those for feeding transitions from higher levels."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Corrected for internal conversion."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,13779002)",
             "free_txt": []

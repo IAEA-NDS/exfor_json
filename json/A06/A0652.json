@@ -56,45 +56,41 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,EPJ/A,6,451,1999)",
-          "free_txt": [],
-          "publication_year": "1999"
-        },
-        {
-          "x4_code": "(J,NP/A,621,161,1997)",
-          "free_txt": [
-            " Preliminary report."
-          ],
-          "publication_year": "1997"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM,2GERBOC)",
-          "free_txt": [
-            " 12-C ion beam with a particle current",
-            "of up to 20 mu-a at the target. E-lab = 4 - 15.5 MeV."
-          ],
-          "facility_type": "(DYNAM)",
-          "institute": "(2GERBOC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,EPJ/A,6,451,1999)",
+        "free_txt": [],
+        "publication_year": "1999",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,621,161,1997)",
+        "free_txt": [
+          " Preliminary report."
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM,2GERBOC)",
+        "free_txt": [
+          " 12-C ion beam with a particle current",
+          "of up to 20 mu-a at the target. E-lab = 4 - 15.5 MeV."
+        ],
+        "pointer": "0",
+        "facility_type": "(DYNAM)",
+        "institute": "(2GERBOC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(A,EL)6-C-12,,DA,,RTH)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(A,EL)6-C-12,,DA,,RTH)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -112,11 +108,121 @@
             "sf7": null,
             "sf8": "RTH",
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(2-HE-4(6-C-12,G)8-O-16,PAR,SIG,,REL)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "6-C-12,G"
+              ],
+              "8-O-16,PAR,SIG,,REL"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "6-C-12,G",
+            "sf49": "8-O-16,PAR,SIG,,REL",
+            "sf4": "8-O-16",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-12(A,G)8-O-16,EP,SIG,,SFC)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "A,G"
+              ],
+              "8-O-16,EP,SIG,,SFC"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "A,G",
+            "sf49": "8-O-16,EP,SIG,,SFC",
+            "sf4": "8-O-16",
+            "sf5": "EP",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SFC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "E1 contribution"
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "((6-C-12(A,G)8-O-16,EP,SIG)//(6-C-12(A,G)8-O-16,EP,SIG))",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "A,G"
+              ],
+              "8-O-16,EP,SIG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "A,G",
+            "sf49": "8-O-16,EP,SIG",
+            "sf4": "8-O-16",
+            "sf5": "EP",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "6-C-12",
+              [
+                "A,G"
+              ],
+              "8-O-16,EP,SIG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "A,G",
+            "sf49": "8-O-16,EP,SIG",
+            "sf4": "8-O-16",
+            "sf5": "EP",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": "Ratio of cross sections E2/E1 multipolarities."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -640,32 +746,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(6-C-12,G)8-O-16,PAR,SIG,,REL)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "6-C-12,G"
-              ],
-              "8-O-16,PAR,SIG,,REL"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "6-C-12,G",
-            "sf49": "8-O-16,PAR,SIG,,REL",
-            "sf4": "8-O-16",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL-FIN"
@@ -776,32 +856,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(A,G)8-O-16,EP,SIG,,SFC)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "A,G"
-              ],
-              "8-O-16,EP,SIG,,SFC"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "A,G",
-            "sf49": "8-O-16,EP,SIG,,SFC",
-            "sf4": "8-O-16",
-            "sf5": "EP",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "E1 contribution"
-        }
-      },
       "common": {
         "heads": [
           "POLAR"
@@ -876,51 +930,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "((6-C-12(A,G)8-O-16,EP,SIG)//(6-C-12(A,G)8-O-16,EP,SIG))",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "A,G"
-              ],
-              "8-O-16,EP,SIG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "A,G",
-            "sf49": "8-O-16,EP,SIG",
-            "sf4": "8-O-16",
-            "sf5": "EP",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "6-C-12",
-              [
-                "A,G"
-              ],
-              "8-O-16,EP,SIG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "A,G",
-            "sf49": "8-O-16,EP,SIG",
-            "sf4": "8-O-16",
-            "sf5": "EP",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": "Ratio of cross sections E2/E1 multipolarities."
-        }
-      },
       "common": {
         "heads": [
           "POLAR-NM",
@@ -1038,8 +1047,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BGO)",
             "free_txt": [
@@ -1050,10 +1059,8 @@
               "active shielding against muons was used too."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM,2GERBOC)",
             "free_txt": [
@@ -1061,18 +1068,14 @@
               "of up to 20 mu-a at the target. E-lab = 4 - 15.5 MeV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(2-HE-4(6-C-12,EL)2-HE-4,,DA)",
             "free_txt": [
@@ -1082,10 +1085,8 @@
               "contaminents in both."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1098,8 +1099,8 @@
       }
     },
     "002": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -1107,10 +1108,8 @@
               "degrees in lab-system."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1118,10 +1117,8 @@
               "absent"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1135,10 +1132,8 @@
               "measurements."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1151,8 +1146,8 @@
       }
     },
     "003": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1160,38 +1155,30 @@
               "corrected for variation in detection efficiency."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(BGO)",
             "free_txt": [
               " 4-inch crystal in the close geometry."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E-LVL-FIN,8-O-16)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical error only."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,A0652002)",
             "free_txt": [
@@ -1203,28 +1190,24 @@
       }
     },
     "004": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BGO)",
             "free_txt": [
               " 4-inchs crystal in close geometry."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical errors only."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,K.U.KETTNER+,J,ZP/A,308,73,1982)",
             "free_txt": [
@@ -1237,8 +1220,8 @@
       }
     },
     "005": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BGO)",
             "free_txt": [
@@ -1246,10 +1229,8 @@
               "in close geometry."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [

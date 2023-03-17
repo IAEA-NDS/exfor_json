@@ -42,40 +42,36 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JP/G,18,629,1992)",
-          "free_txt": [],
-          "publication_year": "1992"
-        },
-        {
-          "x4_code": "(R,ANL-NDM-120,1991)",
-          "free_txt": [],
-          "publication_year": "1991"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM)",
-          "free_txt": [
-            " Tandem Dynamitron"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JP/G,18,629,1992)",
+        "free_txt": [],
+        "publication_year": "1992",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,ANL-NDM-120,1991)",
+        "free_txt": [],
+        "publication_year": "1991",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM)",
+        "free_txt": [
+          " Tandem Dynamitron"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-58(N,EL)28-NI-58,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(28-NI-58(N,EL)28-NI-58,,DA)",
+        "children": [
+          {
             "code": [
               "28-NI-58",
               [
@@ -93,11 +89,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(28-NI-58(N,INL)28-NI-58,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "28-NI-58",
+              [
+                "N,INL"
+              ],
+              "28-NI-58,PAR,DA"
+            ],
+            "type": null,
+            "target": "28-NI-58",
+            "process": "N,INL",
+            "sf49": "28-NI-58,PAR,DA",
+            "sf4": "28-NI-58",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(28-NI-58(N,TOT),,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "28-NI-58",
+              [
+                "N,TOT"
+              ],
+              ",,SIG,,AV"
+            ],
+            "type": null,
+            "target": "28-NI-58",
+            "process": "N,TOT",
+            "sf49": ",,SIG,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-ERR",
@@ -3938,32 +3997,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-58(N,INL)28-NI-58,PAR,DA)",
-          "0": {
-            "code": [
-              "28-NI-58",
-              [
-                "N,INL"
-              ],
-              "28-NI-58,PAR,DA"
-            ],
-            "type": null,
-            "target": "28-NI-58",
-            "process": "N,INL",
-            "sf49": "28-NI-58,PAR,DA",
-            "sf4": "28-NI-58",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-EXC",
@@ -5236,32 +5269,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-58(N,TOT),,SIG,,AV)",
-          "0": {
-            "code": [
-              "28-NI-58",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,AV"
-            ],
-            "type": null,
-            "target": "28-NI-58",
-            "process": "N,TOT",
-            "sf49": ",,SIG,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -5500,18 +5507,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(DYNAM)",
             "free_txt": [
               " Tandem Dynamitron"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -5520,10 +5525,8 @@
               "otherwise, appeared to be chemecally pure."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -5534,8 +5537,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -5543,30 +5546,24 @@
               " beam-attenuation effects"
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               "Multiple measurements at same angle"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " Organic liquid scintillators."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -5576,38 +5573,30 @@
               " sources."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Mean energy determined to about 10 KeV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               ". Flight path about 5 m."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
             "free_txt": [
@@ -5617,10 +5606,8 @@
               " fission."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -5631,8 +5618,8 @@
       }
     },
     "003": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -5640,20 +5627,16 @@
               " beam-attenuation effects"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " Organic liquid scintillators."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -5663,38 +5646,30 @@
               " sources."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Mean energy determined to about 50 KeV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               ". Flight path 15.68 m."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
             "free_txt": [
@@ -5704,10 +5679,8 @@
               " fission."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -5718,8 +5691,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -5730,40 +5703,32 @@
               "         250 keV from 8-10 MeV."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Corrected for deadtime."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " Proton recil scintillator"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -5771,30 +5736,24 @@
               " beryllium bombarbed by 7.0 MeV deuterons"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Mean energy determined to about 50 keV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               "Rotating-sample method"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

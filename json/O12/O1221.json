@@ -88,50 +88,47 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,67,065803,2003)",
-          "free_txt": [],
-          "publication_year": "2003"
-        },
-        {
-          "x4_code": "(J,NP/A,718,499,2003)",
-          "free_txt": [
-            " Short data presentation and some",
-            "details of experiment."
-          ],
-          "publication_year": "2003"
-        },
-        {
-          "x4_code": "(J,NP/A,734,639,2004)",
-          "free_txt": [
-            " - S-factor given on fig."
-          ],
-          "publication_year": "2004"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,2ITYLNS)",
-          "free_txt": [],
-          "facility_type": "(VDGT)",
-          "institute": "(2ITYLNS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,67,065803,2003)",
+        "free_txt": [],
+        "publication_year": "2003",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,718,499,2003)",
+        "free_txt": [
+          " Short data presentation and some",
+          "details of experiment."
+        ],
+        "publication_year": "2003",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,734,639,2004)",
+        "free_txt": [
+          " - S-factor given on fig."
+        ],
+        "publication_year": "2004",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,2ITYLNS)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2ITYLNS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-6(P,HE3)2-HE-4,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(3-LI-6(P,HE3)2-HE-4,,SIG)",
+        "children": [
+          {
             "code": [
               "3-LI-6",
               [
@@ -149,11 +146,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Figure 8 the result represents the indirect P-Li-6 two-bodycross section extracted from the three-body reaction."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Figure 8 the result represents the indirect P-Li-6 two-bodycross section extracted from the three-body reaction."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(3-LI-6(P,HE3)2-HE-4,,SIG,,SFC)",
+        "children": [
+          {
+            "code": [
+              "3-LI-6",
+              [
+                "P,HE3"
+              ],
+              "2-HE-4,,SIG,,SFC"
+            ],
+            "type": null,
+            "target": "3-LI-6",
+            "process": "P,HE3",
+            "sf49": "2-HE-4,,SIG,,SFC",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SFC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Figure 9the astrophysical factor from the indirect P-Li-6two-body cross section."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-ERR",
@@ -281,32 +313,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-6(P,HE3)2-HE-4,,SIG,,SFC)",
-          "0": {
-            "code": [
-              "3-LI-6",
-              [
-                "P,HE3"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
-            "target": "3-LI-6",
-            "process": "P,HE3",
-            "sf49": "2-HE-4,,SIG,,SFC",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Figure 9the astrophysical factor from the indirect P-Li-6two-body cross section."
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG"
@@ -392,26 +398,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(TROJA)",
             "free_txt": [
               " Reaction Li6(d,N+He-3)2-He-4 was used."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": "(THEO)",
             "free_txt": []
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -422,10 +424,8 @@
               " to the three body D(Li-6,alpha+3He)n break-up reaction"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TELES,SI,PS)",
             "free_txt": [
@@ -434,26 +434,20 @@
               " sensitive detectors as E-detector."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2ITYLNS)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -462,10 +456,8 @@
               " diameter."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -476,8 +468,8 @@
       }
     },
     "002": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -485,10 +477,8 @@
               "reaction."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -508,10 +498,8 @@
               ".Digitizing error of data."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,F0012001,A.J.ELWIN+,J,PR/C,20,1984,1979)",
             "free_txt": []
@@ -520,8 +508,8 @@
       }
     },
     "003": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -529,10 +517,8 @@
               "reaction."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -546,10 +532,8 @@
               ".Digitizing error of incident energy."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,F0012001,A.J.ELWIN+,J,PR/C,20,1984,1979)",
             "free_txt": []

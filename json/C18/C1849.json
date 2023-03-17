@@ -29,40 +29,36 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,122,862,1961)",
-          "free_txt": [
-            "#doi:10.1103/PhysRev.122.862"
-          ],
-          "publication_year": "1961"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USALRL)",
-          "free_txt": [
-            " Livermore 90-inch cyclotron provides a",
-            "beam of protons variable in energy from 2.6 to 13.8 MeV"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USALRL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,122,862,1961)",
+        "free_txt": [
+          "#doi:10.1103/PhysRev.122.862"
+        ],
+        "publication_year": "1961",
+        "pointer": "0",
+        "doi": "10.1103/PhysRev.122.862"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USALRL)",
+        "free_txt": [
+          " Livermore 90-inch cyclotron provides a",
+          "beam of protons variable in energy from 2.6 to 13.8 MeV"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USALRL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(P,N)5-B-9,,DA,,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(4-BE-9(P,N)5-B-9,,DA,,REL)",
+        "children": [
+          {
             "code": [
               "4-BE-9",
               [
@@ -80,11 +76,74 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Fig.3"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Fig.3"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-13(P,N)7-N-13,,DA,,REL)",
+        "children": [
+          {
+            "code": [
+              "6-C-13",
+              [
+                "P,N"
+              ],
+              "7-N-13,,DA,,REL"
+            ],
+            "type": null,
+            "target": "6-C-13",
+            "process": "P,N",
+            "sf49": "7-N-13,,DA,,REL",
+            "sf4": "7-N-13",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(5-B-11(P,N)6-C-11,,DA,,REL)",
+        "children": [
+          {
+            "code": [
+              "5-B-11",
+              [
+                "P,N"
+              ],
+              "6-C-11,,DA,,REL"
+            ],
+            "type": null,
+            "target": "5-B-11",
+            "process": "P,N",
+            "sf49": "6-C-11,,DA,,REL",
+            "sf4": "6-C-11",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -468,32 +527,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-13(P,N)7-N-13,,DA,,REL)",
-          "0": {
-            "code": [
-              "6-C-13",
-              [
-                "P,N"
-              ],
-              "7-N-13,,DA,,REL"
-            ],
-            "type": null,
-            "target": "6-C-13",
-            "process": "P,N",
-            "sf49": "7-N-13,,DA,,REL",
-            "sf4": "7-N-13",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "COS-ERR-D",
@@ -798,32 +831,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-11(P,N)6-C-11,,DA,,REL)",
-          "0": {
-            "code": [
-              "5-B-11",
-              [
-                "P,N"
-              ],
-              "6-C-11,,DA,,REL"
-            ],
-            "type": null,
-            "target": "5-B-11",
-            "process": "P,N",
-            "sf49": "6-C-11,,DA,,REL",
-            "sf4": "6-C-11",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "COS-ERR-D",
@@ -1124,18 +1131,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BF3)",
             "free_txt": [
               " BF3 long-counter"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USALRL)",
             "free_txt": [
@@ -1143,18 +1148,14 @@
               "beam of protons variable in energy from 2.6 to 13.8 MeV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(BCINT)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1170,18 +1171,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information about uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1194,8 +1193,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(COS-ERR-D)",
             "free_txt": [
@@ -1208,10 +1207,8 @@
               " Digitizing error of DATA"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1222,8 +1219,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(COS-ERR-D)",
             "free_txt": [
@@ -1236,10 +1233,8 @@
               " Digitizing error of DATA"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

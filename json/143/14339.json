@@ -109,38 +109,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,85,054619,2012)",
-          "free_txt": [],
-          "publication_year": "2012"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USABRK)",
-          "free_txt": [
-            " Experiment performed using 88-Inch",
-            "Cyclotron at the Lawrence Berkeley National Laboratory"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USABRK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,85,054619,2012)",
+        "free_txt": [],
+        "publication_year": "2012",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USABRK)",
+        "free_txt": [
+          " Experiment performed using 88-Inch",
+          "Cyclotron at the Lawrence Berkeley National Laboratory"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USABRK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((64-GD-157(N,G)64-GD-158,PAR,SIG,,,DERIV)/(64-GD-155(N,G)64-GD-156,PAR,SIG,,,DERIV))",
-          "0": {
+      "0": {
+        "x4_code": "((64-GD-157(N,G)64-GD-158,PAR,SIG,,,DERIV)/(64-GD-155(N,G)64-GD-156,PAR,SIG,,,DERIV))",
+        "children": [
+          {
             "code": [
               "64-GD-157",
               [
@@ -159,7 +154,7 @@
             "sf8": null,
             "sf9": "DERIV"
           },
-          "1": {
+          {
             "code": [
               "64-GD-155",
               [
@@ -177,11 +172,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": "DERIV"
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((64-GD-157(N,G)64-GD-158,PAR,SIG,,,DERIV)//(64-GD-155(N,G)64-GD-156,PAR,SIG,,,DERIV))",
+        "children": [
+          {
+            "code": [
+              "64-GD-157",
+              [
+                "N,G"
+              ],
+              "64-GD-158,PAR,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "64-GD-157",
+            "process": "N,G",
+            "sf49": "64-GD-158,PAR,SIG,,,DERIV",
+            "sf4": "64-GD-158",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
           },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "64-GD-155",
+              [
+                "N,G"
+              ],
+              "64-GD-156,PAR,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "64-GD-155",
+            "process": "N,G",
+            "sf49": "64-GD-156,PAR,SIG,,,DERIV",
+            "sf4": "64-GD-156",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": "//",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-MIN"
@@ -292,51 +341,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((64-GD-157(N,G)64-GD-158,PAR,SIG,,,DERIV)//(64-GD-155(N,G)64-GD-156,PAR,SIG,,,DERIV))",
-          "0": {
-            "code": [
-              "64-GD-157",
-              [
-                "N,G"
-              ],
-              "64-GD-158,PAR,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "64-GD-157",
-            "process": "N,G",
-            "sf49": "64-GD-158,PAR,SIG,,,DERIV",
-            "sf4": "64-GD-158",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "1": {
-            "code": [
-              "64-GD-155",
-              [
-                "N,G"
-              ],
-              "64-GD-156,PAR,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "64-GD-155",
-            "process": "N,G",
-            "sf49": "64-GD-156,PAR,SIG,,,DERIV",
-            "sf4": "64-GD-156",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": "//",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-NM",
@@ -421,8 +425,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SISD,SISD,SISD)",
             "free_txt": [
@@ -446,20 +450,16 @@
               "Experiments (LiBerACE)"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Total uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USABRK)",
             "free_txt": [
@@ -467,18 +467,14 @@
               "Cyclotron at the Lawrence Berkeley National Laboratory"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE,COINC)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,14268001,M.D.Scielzo+,J,PR/C,81,034608,2010)",
             "free_txt": []
@@ -487,8 +483,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(SURGT)",
             "free_txt": [
@@ -499,10 +495,8 @@
               " Eg > 2.5MeV."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(64-GD-156,ENR=0.9379)",
             "free_txt": [
@@ -517,10 +511,8 @@
               "                       with thickness of 1 mg/cm2"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -532,8 +524,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(SURGT)",
             "free_txt": [
@@ -545,10 +537,8 @@
               "taken by compiler from REL-REF"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(64-GD-156,ENR=0.9379)",
             "free_txt": [
@@ -563,10 +553,8 @@
               "                       with thickness of 1 mg/cm2"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

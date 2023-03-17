@@ -72,49 +72,81 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,2007NICE,2,1007,200704)",
-          "free_txt": [
-            "#doi:10.1051/ndata:07628"
-          ],
-          "publication_year": "2007"
-        },
-        {
-          "x4_code": "(J,EPJ/CS,35,01003,2012)",
-          "free_txt": [
-            "Review of AMS data. Ni-60(n,2n) CS on Fig.3 ."
-          ],
-          "publication_year": "2012",
-          "doi": "10.1051/epjconf/20123501003"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2GERTUE)",
-          "free_txt": [
-            "Single-ended 3MV Van-de-Graaff accelerator"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2GERTUE)"
-        },
-        {
-          "x4_code": "(ACCEL,2GERMUN)",
-          "free_txt": [
-            " AMS setup in Munich Maier-Leibnitz Lab.",
-            " based on 14 MV tandem accelerator.Combination of large",
-            "accelerator and dedicated particle detection system",
-            "featuring a time-of-flight system, a gas-filled magnet",
-            "and multi-anode ionization chamber fulfills the",
-            "requirement of sensitive Ni-59 detection."
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(2GERMUN)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(C,2007NICE,2,1007,200704)",
+        "free_txt": [
+          "#doi:10.1051/ndata:07628"
+        ],
+        "publication_year": "2007",
+        "pointer": "0",
+        "doi": "10.1051/ndata:07628"
+      },
+      {
+        "x4_code": "(J,EPJ/CS,35,01003,2012)",
+        "free_txt": [
+          "#doi:10.1051/epjconf/20123501003",
+          "Review of AMS data. Ni-60(n,2n) CS on Fig.3 ."
+        ],
+        "publication_year": "2012",
+        "pointer": "0",
+        "doi": "10.1051/epjconf/20123501003"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2GERTUE)",
+        "free_txt": [
+          "Single-ended 3MV Van-de-Graaff accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2GERTUE)"
+      },
+      {
+        "x4_code": "(ACCEL,2GERMUN)",
+        "free_txt": [
+          " AMS setup in Munich Maier-Leibnitz Lab.",
+          " based on 14 MV tandem accelerator.Combination of large",
+          "accelerator and dedicated particle detection system",
+          "featuring a time-of-flight system, a gas-filled magnet",
+          "and multi-anode ionization chamber fulfills the",
+          "requirement of sensitive Ni-59 detection."
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(2GERMUN)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(28-NI-60(N,2N)28-NI-59,,SIG)",
+        "children": [
+          {
+            "code": [
+              "28-NI-60",
+              [
+                "N,2N"
+              ],
+              "28-NI-59,,SIG"
+            ],
+            "type": null,
+            "target": "28-NI-60",
+            "process": "N,2N",
+            "sf49": "28-NI-59,,SIG",
+            "sf4": "28-NI-59",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -149,32 +181,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-60(N,2N)28-NI-59,,SIG)",
-          "0": {
-            "code": [
-              "28-NI-60",
-              [
-                "N,2N"
-              ],
-              "28-NI-59,,SIG"
-            ],
-            "type": null,
-            "target": "28-NI-60",
-            "process": "N,2N",
-            "sf49": "28-NI-59,,SIG",
-            "sf4": "28-NI-59",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -236,8 +242,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM1,28-NI-64(N,G)28-NI-65,,SIG)",
             "free_txt": [
@@ -250,10 +256,8 @@
               " Thermal c-s."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -270,10 +274,8 @@
               " Self absorption of photons in Ni foil was negligible."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2GERTUE)",
             "free_txt": [
@@ -291,10 +293,8 @@
               "requirement of sensitive Ni-59 detection."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
@@ -302,10 +302,8 @@
               " deuterons to produce 17 and 19 MeV neutrons."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -315,10 +313,8 @@
               "  irradiation time 8 days."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(PSD)",
             "free_txt": [
@@ -350,10 +346,8 @@
               "determined to (9.1+-0.4)*10**-11 ."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,,A.Wallner,T,WALLNER,2000)",
             "free_txt": [
@@ -375,10 +369,8 @@
               "                                             ASSUM2."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -396,8 +388,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -406,10 +398,8 @@
               "account."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
@@ -419,10 +409,8 @@
               " for cross sections and conversion coefficient yield."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -430,20 +418,16 @@
               " measurement."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               " Ni-59/Ni-60 ratio."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)28-NI-58(N,X)27-CO-57,,SIG)",
             "free_txt": [
@@ -451,18 +435,14 @@
               " induced activity in samples."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,W.Ruehm+,J,PSPS,42,227,1994)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

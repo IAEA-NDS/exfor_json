@@ -47,45 +47,41 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ZP/A,329,229,1988)",
-          "free_txt": [
-            "  Main reference, all data are",
-            "                       given"
-          ],
-          "publication_year": "1988"
-        },
-        {
-          "x4_code": "(J,APP/B,37,282,1988)",
-          "free_txt": [
-            "  Data for energies 0.0 - 132 eV"
-          ],
-          "publication_year": "1988"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC)",
-          "free_txt": [
-            "  FRM research reactor with 4 MW thermal power."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ZP/A,329,229,1988)",
+        "free_txt": [
+          "  Main reference, all data are",
+          "                       given"
+        ],
+        "publication_year": "1988",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,APP/B,37,282,1988)",
+        "free_txt": [
+          "  Data for energies 0.0 - 132 eV"
+        ],
+        "publication_year": "1988",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC)",
+        "free_txt": [
+          "  FRM research reactor with 4 MW thermal power."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-0(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(82-PB-0(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "82-PB-0",
               [
@@ -103,11 +99,102 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(82-PB-0(N,THS)82-PB-0,COH,AMP,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "82-PB-0",
+              [
+                "N,THS"
+              ],
+              "82-PB-0,COH,AMP,,,DERIV"
+            ],
+            "type": null,
+            "target": "82-PB-0",
+            "process": "N,THS",
+            "sf49": "82-PB-0,COH,AMP,,,DERIV",
+            "sf4": "82-PB-0",
+            "sf5": "COH",
+            "sf6": "AMP",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(83-BI-209(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(83-BI-209(N,THS)83-BI-209,COH,AMP,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "N,THS"
+              ],
+              "83-BI-209,COH,AMP,,,DERIV"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "N,THS",
+            "sf49": "83-BI-209,COH,AMP,,,DERIV",
+            "sf4": "83-BI-209",
+            "sf5": "COH",
+            "sf6": "AMP",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -159,32 +246,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-0(N,THS)82-PB-0,COH,AMP,,,DERIV)",
-          "0": {
-            "code": [
-              "82-PB-0",
-              [
-                "N,THS"
-              ],
-              "82-PB-0,COH,AMP,,,DERIV"
-            ],
-            "type": null,
-            "target": "82-PB-0",
-            "process": "N,THS",
-            "sf49": "82-PB-0,COH,AMP,,,DERIV",
-            "sf4": "82-PB-0",
-            "sf5": "COH",
-            "sf6": "AMP",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -240,32 +301,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -317,32 +352,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(N,THS)83-BI-209,COH,AMP,,,DERIV)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "N,THS"
-              ],
-              "83-BI-209,COH,AMP,,,DERIV"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "N,THS",
-            "sf49": "83-BI-209,COH,AMP,,,DERIV",
-            "sf4": "83-BI-209",
-            "sf5": "COH",
-            "sf6": "AMP",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -400,8 +409,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BF3)",
             "free_txt": [
@@ -409,30 +418,24 @@
               " given."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No details given."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               "  FRM research reactor with 4 MW thermal power."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -451,10 +454,8 @@
               " the reactor with a silicon filter."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -467,10 +468,8 @@
               "  Filtered neutron beams"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -478,10 +477,8 @@
               " details given."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -492,8 +489,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -504,8 +501,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -514,10 +511,8 @@
               " measured transmission cross section."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -532,8 +527,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -544,8 +539,8 @@
       }
     },
     "005": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -554,10 +549,8 @@
               " measured transmission cross section."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -188,64 +188,62 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PRL,102,(1),012502,200901)",
-          "free_txt": [
-            "Main reference. See also TITLE and AUTHOR."
-          ],
-          "publication_year": "2009"
-        },
-        {
-          "x4_code": "(P,A-JCL-39,71,2006)",
-          "free_txt": [
-            " RIKEN Accel. Prog. Rep."
-          ],
-          "publication_year": "2006"
-        },
-        {
-          "x4_code": "(T,TAKESHITA,200803)",
-          "free_txt": [
-            " E.Takeshita, Doctoral thesis"
-          ],
-          "publication_year": "2008"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2JPNIPC)",
-          "free_txt": [
-            " To accelerate primary 63 MeV/nucleon",
-            "                70Zn"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2JPNIPC)"
-        },
-        {
-          "x4_code": "(PRJFS,2JPNIPC)",
-          "free_txt": [
-            " RIKEN projectile-fragment separator",
-            "                (RIPS). To separate fragment from Be",
-            "                bombarded by primary 70Zn beam"
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(2JPNIPC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PRL,102,(1),012502,200901)",
+        "free_txt": [
+          "Main reference. See also TITLE and AUTHOR."
+        ],
+        "publication_year": "2009",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,A-JCL-39,71,2006)",
+        "free_txt": [
+          " RIKEN Accel. Prog. Rep."
+        ],
+        "publication_year": "2006",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(T,TAKESHITA,200803)",
+        "free_txt": [
+          " E.Takeshita, Doctoral thesis"
+        ],
+        "publication_year": "2008",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2JPNIPC)",
+        "free_txt": [
+          " To accelerate primary 63 MeV/nucleon",
+          "                70Zn"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2JPNIPC)"
+      },
+      {
+        "x4_code": "(PRJFS,2JPNIPC)",
+        "free_txt": [
+          " RIKEN projectile-fragment separator",
+          "                (RIPS). To separate fragment from Be",
+          "                bombarded by primary 70Zn beam"
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2JPNIPC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(24-CR-60,INL)1-H-1,PAR,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-1(24-CR-60,INL)1-H-1,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -263,11 +261,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(24-CR-62,INL)1-H-1,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "24-CR-62,INL"
+              ],
+              "1-H-1,PAR,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "24-CR-62,INL",
+            "sf49": "1-H-1,PAR,SIG",
+            "sf4": "1-H-1",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL",
@@ -331,32 +364,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(24-CR-62,INL)1-H-1,PAR,SIG)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "24-CR-62,INL"
-              ],
-              "1-H-1,PAR,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "24-CR-62,INL",
-            "sf49": "1-H-1,PAR,SIG",
-            "sf4": "1-H-1",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL",
@@ -422,8 +429,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -435,10 +442,8 @@
               "          See NRDF D2142 DATA,4 for detail."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -451,10 +456,8 @@
               " To identify the scattered particles"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2JPNIPC)",
             "free_txt": [
@@ -470,20 +473,16 @@
               "                bombarded by primary 70Zn beam"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,EDE)",
             "free_txt": [
               " To identify the scattered particles"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -498,16 +497,14 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL,24-CR-60)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -539,46 +536,36 @@
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Beam intensity is 40 PPS."
             ]
           }
-        ]
-      },
-      "level-prop": {
-        "0": [
+        ],
+        "level-prop": [
           {
             "x4_code": "(24-CR-60,E-LVL=0.645,SPIN=2.,PARITY=+1.)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
               " Detect 60Cr and prompt gamma in coincidence."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G,24-CR-60)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -589,16 +576,14 @@
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL,24-CR-62)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -630,46 +615,36 @@
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Beam intensity is 34 PPS."
             ]
           }
-        ]
-      },
-      "level-prop": {
-        "0": [
+        ],
+        "level-prop": [
           {
             "x4_code": "(24-CR-62,E-LVL=0.449,SPIN=2.,PARITY=+1.)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
               " Detect 62Cr and prompt gamma in coincidence."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G,24-CR-62)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

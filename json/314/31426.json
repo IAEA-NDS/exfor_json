@@ -53,47 +53,43 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NIM/A,357,(2-3),519,199504)",
-          "free_txt": [],
-          "publication_year": "1995"
-        },
-        {
-          "x4_code": "(R,CNEA-CAB-IT-3510,1993)",
-          "free_txt": [
-            "Internal report"
-          ],
-          "publication_year": "1993"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,3ARGCAB)",
-          "free_txt": [
-            " Pulsed 25 MeV electron linear",
-            "accelerator at the Centro Atomico Bariloche. The Linac",
-            "was run at 100 pps (epithermal expt.)  and",
-            "25 pps (cold/therm. expt.),25 micro-amp average current"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(3ARGCAB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NIM/A,357,(2-3),519,199504)",
+        "free_txt": [],
+        "publication_year": "1995",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,CNEA-CAB-IT-3510,1993)",
+        "free_txt": [
+          "Internal report"
+        ],
+        "publication_year": "1993",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,3ARGCAB)",
+        "free_txt": [
+          " Pulsed 25 MeV electron linear",
+          "accelerator at the Centro Atomico Bariloche. The Linac",
+          "was run at 100 pps (epithermal expt.)  and",
+          "25 pps (cold/therm. expt.),25 micro-amp average current"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(3ARGCAB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-CMP(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-CMP(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "6-C-CMP",
               [
@@ -111,11 +107,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Teflon=(Cf2)ntotal cross section per Cf2 unit"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Teflon=(Cf2)ntotal cross section per Cf2 unit"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-CMP(N,THS),FA,SIG,,EPI,DERIV)",
+        "children": [
+          {
+            "code": [
+              "6-C-CMP",
+              [
+                "N,THS"
+              ],
+              ",FA,SIG,,EPI,DERIV"
+            ],
+            "type": null,
+            "target": "6-C-CMP",
+            "process": "N,THS",
+            "sf49": ",FA,SIG,,EPI,DERIV",
+            "sf4": null,
+            "sf5": "FA",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "EPI",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": " Teflon=(Cf2)naverage free-atom scattering cross section perCf2 unit."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(9-F-19(N,THS)9-F-19,FA,SIG,,EPI,DERIV)",
+        "children": [
+          {
+            "code": [
+              "9-F-19",
+              [
+                "N,THS"
+              ],
+              "9-F-19,FA,SIG,,EPI,DERIV"
+            ],
+            "type": null,
+            "target": "9-F-19",
+            "process": "N,THS",
+            "sf49": "9-F-19,FA,SIG,,EPI,DERIV",
+            "sf4": "9-F-19",
+            "sf5": "FA",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "EPI",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": " Average free-atom scattering cross section for fluorine, which wasobtained from the average free-atom cross section ofCf2 and the precision value for the free-atom (nuc-lear) cross section of carbon known from literature."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "TEMP",
@@ -531,32 +590,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-CMP(N,THS),FA,SIG,,EPI,DERIV)",
-          "0": {
-            "code": [
-              "6-C-CMP",
-              [
-                "N,THS"
-              ],
-              ",FA,SIG,,EPI,DERIV"
-            ],
-            "type": null,
-            "target": "6-C-CMP",
-            "process": "N,THS",
-            "sf49": ",FA,SIG,,EPI,DERIV",
-            "sf4": null,
-            "sf5": "FA",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "EPI",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": " Teflon=(Cf2)naverage free-atom scattering cross section perCf2 unit."
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -595,32 +628,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(9-F-19(N,THS)9-F-19,FA,SIG,,EPI,DERIV)",
-          "0": {
-            "code": [
-              "9-F-19",
-              [
-                "N,THS"
-              ],
-              "9-F-19,FA,SIG,,EPI,DERIV"
-            ],
-            "type": null,
-            "target": "9-F-19",
-            "process": "N,THS",
-            "sf49": "9-F-19,FA,SIG,,EPI,DERIV",
-            "sf4": "9-F-19",
-            "sf5": "FA",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "EPI",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": " Average free-atom scattering cross section for fluorine, which wasobtained from the average free-atom cross section ofCf2 and the precision value for the free-atom (nuc-lear) cross section of carbon known from literature."
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -661,8 +668,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -671,10 +678,8 @@
               "Negligible: in-scattering and multiple scattering."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
@@ -682,28 +687,22 @@
               "15 cm active length, with 10 atm filling gas pressure."
             ]
           }
-        ]
-      },
-      "exp-year": {
-        "0": [
+        ],
+        "exp-year": [
           {
             "x4_code": "(1993)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Quoted errors due to statistics only."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,3ARGCAB)",
             "free_txt": [
@@ -713,10 +712,8 @@
               "25 pps (cold/therm. expt.),25 micro-amp average current"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -724,10 +721,8 @@
               "+ liquid nitrogen cooled paraffin block (cold/thermal)"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -736,20 +731,16 @@
               "The sample-in sample-out method was used."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": [
               " Neutrons."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -761,10 +752,8 @@
               "Garching, Germany."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -776,8 +765,8 @@
     },
     "002": {},
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,31426002)",
             "free_txt": []
@@ -786,8 +775,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,31426003)",
             "free_txt": []

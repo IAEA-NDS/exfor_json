@@ -60,39 +60,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,92,044603,2015)",
-          "free_txt": [],
-          "publication_year": "2015"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ESTRG,1USATNL)",
-          "free_txt": [
-            " Experiment performed at the High",
-            "Intensity gamma-ray Source (HIgS) at Triangle",
-            "Universities Nuclear Laboratory, Durham"
-          ],
-          "facility_type": "(ESTRG)",
-          "institute": "(1USATNL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,92,044603,2015)",
+        "free_txt": [],
+        "publication_year": "2015",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ESTRG,1USATNL)",
+        "free_txt": [
+          " Experiment performed at the High",
+          "Intensity gamma-ray Source (HIgS) at Triangle",
+          "Universities Nuclear Laboratory, Durham"
+        ],
+        "pointer": "0",
+        "facility_type": "(ESTRG)",
+        "institute": "(1USATNL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-7(G,N)3-LI-6,PAR,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(3-LI-7(G,N)3-LI-6,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "3-LI-7",
               [
@@ -110,11 +105,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(3-LI-7(G,N)3-LI-6,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "3-LI-7",
+              [
+                "G,N"
+              ],
+              "3-LI-6,PAR,SIG"
+            ],
+            "type": null,
+            "target": "3-LI-7",
+            "process": "G,N",
+            "sf49": "3-LI-6,PAR,SIG",
+            "sf4": "3-LI-6",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(3-LI-7(G,D)2-HE-5,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "3-LI-7",
+              [
+                "G,D"
+              ],
+              "2-HE-5,PAR,SIG"
+            ],
+            "type": null,
+            "target": "3-LI-7",
+            "process": "G,D",
+            "sf49": "2-HE-5,PAR,SIG",
+            "sf4": "2-HE-5",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL"
@@ -156,32 +214,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-7(G,N)3-LI-6,PAR,SIG)",
-          "0": {
-            "code": [
-              "3-LI-7",
-              [
-                "G,N"
-              ],
-              "3-LI-6,PAR,SIG"
-            ],
-            "type": null,
-            "target": "3-LI-7",
-            "process": "G,N",
-            "sf49": "3-LI-6,PAR,SIG",
-            "sf4": "3-LI-6",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL"
@@ -220,32 +252,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-7(G,D)2-HE-5,PAR,SIG)",
-          "0": {
-            "code": [
-              "3-LI-7",
-              [
-                "G,D"
-              ],
-              "2-HE-5,PAR,SIG"
-            ],
-            "type": null,
-            "target": "3-LI-7",
-            "process": "G,D",
-            "sf49": "2-HE-5,PAR,SIG",
-            "sf4": "2-HE-5",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL"
@@ -292,8 +298,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -301,10 +307,8 @@
               "were calculated with the help of GEANT4 simulations"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -318,20 +322,16 @@
               "1/4 of 4Pi."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ESTRG,1USATNL)",
             "free_txt": [
@@ -340,10 +340,8 @@
               "Universities Nuclear Laboratory, Durham"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(LCS)",
             "free_txt": [
@@ -352,10 +350,8 @@
               "relativistic electrons in electron storage ring"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,PSD)",
             "free_txt": [
@@ -365,10 +361,8 @@
               "discrimination spectra for neutron identification."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -379,8 +373,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -391,8 +385,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -403,18 +397,16 @@
       }
     },
     "004": {
-      "part-det": {
-        "0": [
+      "0": {
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": [
               " Neutrons from 5He->n+a"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

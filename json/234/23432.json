@@ -43,47 +43,43 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PMB,31,601,1986)",
-          "free_txt": [],
-          "publication_year": "1986"
-        },
-        {
-          "x4_code": "(R,EUR-9762,309,1985)",
-          "free_txt": [
-            " Prelim.results -",
-            " the same data for Mg at 15 MeV, for Al at 15, 17 MeV",
-            " as in Subents 002,003, respectively.",
-            " Data for C ( Subent 004)."
-          ],
-          "publication_year": "1985"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2GERPTB)",
-          "free_txt": [
-            " Accelerator facility"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2GERPTB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PMB,31,601,1986)",
+        "free_txt": [],
+        "publication_year": "1986",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,EUR-9762,309,1985)",
+        "free_txt": [
+          " Prelim.results -",
+          " the same data for Mg at 15 MeV, for Al at 15, 17 MeV",
+          " as in Subents 002,003, respectively.",
+          " Data for C ( Subent 004)."
+        ],
+        "publication_year": "1985",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2GERPTB)",
+        "free_txt": [
+          " Accelerator facility"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2GERPTB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(12-MG-0(N,TOT),,KER)",
-          "0": {
+      "0": {
+        "x4_code": "(12-MG-0(N,TOT),,KER)",
+        "children": [
+          {
             "code": [
               "12-MG-0",
               [
@@ -101,11 +97,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "    Kerma factor"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "    Kerma factor"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(13-AL-27(N,TOT),,KER)",
+        "children": [
+          {
+            "code": [
+              "13-AL-27",
+              [
+                "N,TOT"
+              ],
+              ",,KER"
+            ],
+            "type": null,
+            "target": "13-AL-27",
+            "process": "N,TOT",
+            "sf49": ",,KER",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "KER",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "    Kerma factor"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-0(N,TOT),,KER)",
+        "children": [
+          {
+            "code": [
+              "6-C-0",
+              [
+                "N,TOT"
+              ],
+              ",,KER"
+            ],
+            "type": null,
+            "target": "6-C-0",
+            "process": "N,TOT",
+            "sf49": ",,KER",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "KER",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "    Kerma factor"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -179,32 +238,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(N,TOT),,KER)",
-          "0": {
-            "code": [
-              "13-AL-27",
-              [
-                "N,TOT"
-              ],
-              ",,KER"
-            ],
-            "type": null,
-            "target": "13-AL-27",
-            "process": "N,TOT",
-            "sf49": ",,KER",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "KER",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "    Kerma factor"
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -283,32 +316,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-0(N,TOT),,KER)",
-          "0": {
-            "code": [
-              "6-C-0",
-              [
-                "N,TOT"
-              ],
-              ",,KER"
-            ],
-            "type": null,
-            "target": "6-C-0",
-            "process": "N,TOT",
-            "sf49": ",,KER",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "KER",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "    Kerma factor"
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -374,18 +381,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".Kerma factors are derived from absorbed dose."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -393,10 +398,8 @@
               "Neutron fluence attenuation"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
@@ -415,20 +418,16 @@
               "nominal neutron energy."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2GERPTB)",
             "free_txt": [
               " Accelerator facility"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
@@ -444,20 +443,16 @@
               "Q - deuteron beam charge."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,PSD)",
             "free_txt": [
               " .For neutron spectra ."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,H.G.Menzel+,J,PMB,29,1537,1984)",
             "free_txt": [
@@ -468,8 +463,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -500,10 +495,8 @@
               " Uncertainty in alpha-particle calibration"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -511,10 +504,8 @@
               "K0 - kerma, Q deuteron beam charge ."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,E.Goldberg+,R,UCID-17789,1,1978)",
             "free_txt": [
@@ -546,10 +537,8 @@
               "                 Calculation"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -561,8 +550,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -593,10 +582,8 @@
               " Uncertainty in alpha-particle calibration"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -604,10 +591,8 @@
               "K0 - kerma, Q deuteron beam charge ."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,P.J.Dimbylow,J,PMB,27,989,1982)",
             "free_txt": [
@@ -632,10 +617,8 @@
               "                 Calculation"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -647,8 +630,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -676,10 +659,8 @@
               "of total kerma factor - 3.% ."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -687,10 +668,8 @@
               "K0 - kerma, Q deuteron beam charge ."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,E.Goldberg+,R,UCID-17789,1,1978)",
             "free_txt": [
@@ -713,10 +692,8 @@
               "         Calculation"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

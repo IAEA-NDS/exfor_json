@@ -48,49 +48,72 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,SJA,5,1019,1958)",
-          "free_txt": [
-            " Eng.trans.of AE,5,176,1958"
-          ],
-          "publication_year": "1958"
-        },
-        {
-          "x4_code": "(J,AE,5,176,1958)",
-          "free_txt": [],
-          "publication_year": "1958"
-        },
-        {
-          "x4_code": "(J,JNE/A,10,90,1959)",
-          "free_txt": [],
-          "publication_year": "1959"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4RUSKUR)",
-          "free_txt": [
-            " RTF reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4RUSKUR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,SJA,5,1019,1958)",
+        "free_txt": [
+          " Eng.trans.of AE,5,176,1958"
+        ],
+        "publication_year": "1958",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,AE,5,176,1958)",
+        "free_txt": [],
+        "publication_year": "1958",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JNE/A,10,90,1959)",
+        "free_txt": [],
+        "publication_year": "1959",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4RUSKUR)",
+        "free_txt": [
+          " RTF reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4RUSKUR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(95-AM-241(N,F),,NU,,SPA)",
-          "0": {
+      "1": {
+        "x4_code": "(95-AM-241(N,F),,NU,,SPA)",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,F"
+              ],
+              ",,NU,,SPA"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,F",
+            "sf49": ",,NU,,SPA",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "((95-AM-241(N,F),,NU,,SPA)/(92-U-235(N,F),,NU))",
+        "children": [
+          {
             "code": [
               "95-AM-241",
               [
@@ -109,31 +132,7 @@
             "sf8": "SPA",
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "((95-AM-241(N,F),,NU,,SPA)/(92-U-235(N,F),,NU))",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,F"
-              ],
-              ",,NU,,SPA"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,F",
-            "sf49": ",,NU,,SPA",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "1": {
+          {
             "code": [
               "92-U-235",
               [
@@ -151,11 +150,18 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -204,8 +210,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
@@ -218,48 +224,38 @@
               "  BF3 counters in paraffin block for fast neutrons"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4RUSKUR)",
             "free_txt": [
               " RTF reactor"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
               " Fission fragments and fis.neutrons coincidence"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -271,39 +267,35 @@
       }
     },
     "002": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " RFT-reactor spectrum"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,D.J.Hughes+,R,BNL-325,5,1957)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "1": [
-          {
-            "x4_code": "(92-U-235(N,F),,NU)",
-            "free_txt": []
-          }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
               " The text, page 1019 in SJA,5,1019,1958"
             ]
+          }
+        ]
+      },
+      "1": {
+        "monitor": [
+          {
+            "x4_code": "(92-U-235(N,F),,NU)",
+            "free_txt": []
           }
         ]
       }

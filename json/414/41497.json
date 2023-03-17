@@ -64,44 +64,102 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YK,,(2),12,1999)",
-          "free_txt": [
-            " Main Reference. Graphs ."
-          ],
-          "publication_year": "1999"
-        },
-        {
-          "x4_code": "(R,INDC(CCP)-426,17,2001)",
-          "free_txt": [
-            " Engl.transl. of YK,2,12,1999."
-          ],
-          "publication_year": "2001"
-        },
-        {
-          "x4_code": "(C,2004SANTA,1,67,2004)",
-          "free_txt": [
-            "  Data used for benchmarking.",
-            "                         Exp. details given.",
-            " First author S.Simakov."
-          ],
-          "publication_year": "2004"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,YK,,(2),12,1999)",
+        "free_txt": [
+          " Main Reference. Graphs ."
+        ],
+        "publication_year": "1999",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(CCP)-426,17,2001)",
+        "free_txt": [
+          " Engl.transl. of YK,2,12,1999."
+        ],
+        "publication_year": "2001",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,2004SANTA,1,67,2004)",
+        "free_txt": [
+          "  Data used for benchmarking.",
+          "                         Exp. details given.",
+          " First author S.Simakov."
+        ],
+        "publication_year": "2004",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CCW,4RUSFEI)",
+        "free_txt": [
+          " Pulsed neutron generator KG-0.3."
+        ],
+        "pointer": "0",
+        "facility_type": "(CCW)",
+        "institute": "(4RUSFEI)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(92-U-238(N,X)0-NN-1,,DE)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,X"
+              ],
+              "0-NN-1,,DE"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,X",
+            "sf49": "0-NN-1,,DE",
+            "sf4": "0-NN-1",
+            "sf5": null,
+            "sf6": "DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CCW,4RUSFEI)",
-          "free_txt": [
-            " Pulsed neutron generator KG-0.3."
-          ],
-          "facility_type": "(CCW)",
-          "institute": "(4RUSFEI)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,X)0-NN-1,EM,DA/DE)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,X"
+              ],
+              "0-NN-1,EM,DA/DE"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,X",
+            "sf49": "0-NN-1,EM,DA/DE",
+            "sf4": "0-NN-1",
+            "sf5": "EM",
+            "sf6": "DA/DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -136,32 +194,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,X)0-NN-1,,DE)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,X"
-              ],
-              "0-NN-1,,DE"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,X",
-            "sf49": "0-NN-1,,DE",
-            "sf4": "0-NN-1",
-            "sf5": null,
-            "sf6": "DE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -311,32 +343,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,X)0-NN-1,EM,DA/DE)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,X"
-              ],
-              "0-NN-1,EM,DA/DE"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,X",
-            "sf49": "0-NN-1,EM,DA/DE",
-            "sf4": "0-NN-1",
-            "sf5": "EM",
-            "sf6": "DA/DE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG-ERR-D"
@@ -1218,8 +1224,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1235,10 +1241,8 @@
               " T(d,n) source neutron spectrum at 0 degree."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -1278,10 +1282,8 @@
               "        from target."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1316,20 +1318,16 @@
               "     energy and angle of scattered neutrons."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CCW,4RUSFEI)",
             "free_txt": [
               " Pulsed neutron generator KG-0.3."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
@@ -1340,10 +1338,8 @@
               "pulsed beam of 280.keV deuterons."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1353,18 +1349,14 @@
               "without the sample."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,G.M.Hale+,R,NEANDC-311,10,1992)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": [
@@ -1372,10 +1364,8 @@
               " neutron energy spectra."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,,S.Simakov+,J,YK,,(3-4),93,1992)",
             "free_txt": [
@@ -1404,10 +1394,8 @@
               " IAEA-TECDOC-410"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1422,8 +1410,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1434,8 +1422,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1446,10 +1434,8 @@
               " peak ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

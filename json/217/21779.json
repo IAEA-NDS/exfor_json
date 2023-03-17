@@ -40,35 +40,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,KURRI-AR-13,1,80)",
-          "free_txt": [],
-          "publication_year": "1980"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC )",
-          "free_txt": [
-            " KYOTO UNIVERSITY REACTOR."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,KURRI-AR-13,1,80)",
+        "free_txt": [],
+        "publication_year": "1980",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC )",
+        "free_txt": [
+          " KYOTO UNIVERSITY REACTOR."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-32(N,P)15-P-32,,SIG,,FIS)",
-          "0": {
+      "0": {
+        "x4_code": "(16-S-32(N,P)15-P-32,,SIG,,FIS)",
+        "children": [
+          {
             "code": [
               "16-S-32",
               [
@@ -86,11 +81,46 @@
             "sf7": null,
             "sf8": "FIS",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(16-S-32(N,P)15-P-32,,SIG,,FIS)",
+        "children": [
+          {
+            "code": [
+              "16-S-32",
+              [
+                "N,P"
+              ],
+              "15-P-32,,SIG,,FIS"
+            ],
+            "type": null,
+            "target": "16-S-32",
+            "process": "N,P",
+            "sf49": "15-P-32,,SIG,,FIS",
+            "sf4": "15-P-32",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "FIS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MONIT1",
@@ -184,32 +214,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-32(N,P)15-P-32,,SIG,,FIS)",
-          "0": {
-            "code": [
-              "16-S-32",
-              [
-                "N,P"
-              ],
-              "15-P-32,,SIG,,FIS"
-            ],
-            "type": null,
-            "target": "16-S-32",
-            "process": "N,P",
-            "sf49": "15-P-32,,SIG,,FIS",
-            "sf4": "15-P-32",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "FIS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "MONIT1",
@@ -305,8 +309,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -314,10 +318,8 @@
               ".DEAD TIME AND PILE-UP LOSSES IN THE DETECTORS."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -325,18 +327,14 @@
               " AVERAGED CROSS SECTIONS CALCULATED FROM ENDF/B-IV."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(15-P-32,14.28D)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN )",
             "free_txt": [
@@ -355,10 +353,8 @@
               "        CO-60, AND CS-137 SOURCES."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -416,20 +412,16 @@
               "           CORRELATIONS."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC )",
             "free_txt": [
               " KYOTO UNIVERSITY REACTOR."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -442,10 +434,8 @@
               " CF-252 SPONTANEOUS FISSION SOURCE."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -454,10 +444,8 @@
               "        15 HOURS USING THE CF-252 SOURCE."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(B-   )",
             "free_txt": []
@@ -466,10 +454,8 @@
             "x4_code": "(DG   )",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -479,10 +465,8 @@
               " PER CENT PURE NATURAL NICKEL."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -493,26 +477,22 @@
       }
     },
     "002": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               ".U-235 THERMAL NEUTRON-INDUCED FISSION SPECTRUM."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,I.KIMURA+,J,NST,10,574,73)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(13-AL-27(N,A)11-NA-24,,SIG,,FIS)",
             "free_txt": []
@@ -521,10 +501,8 @@
             "x4_code": "(28-NI-58(N,P)27-CO-58,,SIG,,FIS)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -535,26 +513,22 @@
       }
     },
     "003": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               ".CF-252 SPONTANEOUS FISSION SPECTRUM."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,W.MANNHART+,J,NSE,69,333,79)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(13-AL-27(N,A)11-NA-24,,SIG,,FIS)",
             "free_txt": []
@@ -563,10 +537,8 @@
             "x4_code": "(28-NI-58(N,P)27-CO-58,,SIG,,FIS)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

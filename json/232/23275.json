@@ -79,38 +79,33 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,510,189,1990)",
-          "free_txt": [],
-          "publication_year": "1990"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCY,2ZZZCER)",
-          "free_txt": [
-            " ISOLDE facility at CERN",
-            "synchrocyclotron ."
-          ],
-          "facility_type": "(SYNCY)",
-          "institute": "(2ZZZCER)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,510,189,1990)",
+        "free_txt": [],
+        "publication_year": "1990",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCY,2ZZZCER)",
+        "free_txt": [
+          " ISOLDE facility at CERN",
+          "synchrocyclotron ."
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCY)",
+        "institute": "(2ZZZCER)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-9(0,B-)4-BE-9,,PN/DE,,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(3-LI-9(0,B-)4-BE-9,,PN/DE,,REL)",
+        "children": [
+          {
             "code": [
               "3-LI-9",
               [
@@ -128,11 +123,74 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Relative beta-delayed neutron spectrum, counts."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Relative beta-delayed neutron spectrum, counts."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(3-LI-9(0,B-)4-BE-9,,PN/DE,,REL)",
+        "children": [
+          {
+            "code": [
+              "3-LI-9",
+              [
+                "0,B-"
+              ],
+              "4-BE-9,,PN/DE,,REL"
+            ],
+            "type": null,
+            "target": "3-LI-9",
+            "process": "0,B-",
+            "sf49": "4-BE-9,,PN/DE,,REL",
+            "sf4": "4-BE-9",
+            "sf5": null,
+            "sf6": "PN/DE",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Relative beta-delayed neutrons spectrum, counts."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(3-LI-9(0,B-)4-BE-9,,PN/DE,,REL)",
+        "children": [
+          {
+            "code": [
+              "3-LI-9",
+              [
+                "0,B-"
+              ],
+              "4-BE-9,,PN/DE,,REL"
+            ],
+            "type": null,
+            "target": "3-LI-9",
+            "process": "0,B-",
+            "sf49": "4-BE-9,,PN/DE,,REL",
+            "sf4": "4-BE-9",
+            "sf5": null,
+            "sf6": "PN/DE",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Relative beta-delayed neutron spectrum, counts. Region around 682 keV peak corresponds toBe-9 5/2- -> Be-8-G transition."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -274,32 +332,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-9(0,B-)4-BE-9,,PN/DE,,REL)",
-          "0": {
-            "code": [
-              "3-LI-9",
-              [
-                "0,B-"
-              ],
-              "4-BE-9,,PN/DE,,REL"
-            ],
-            "type": null,
-            "target": "3-LI-9",
-            "process": "0,B-",
-            "sf49": "4-BE-9,,PN/DE,,REL",
-            "sf4": "4-BE-9",
-            "sf5": null,
-            "sf6": "PN/DE",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Relative beta-delayed neutrons spectrum, counts."
-        }
-      },
       "common": {
         "heads": [
           "E-ERR-DIG",
@@ -1036,32 +1068,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-9(0,B-)4-BE-9,,PN/DE,,REL)",
-          "0": {
-            "code": [
-              "3-LI-9",
-              [
-                "0,B-"
-              ],
-              "4-BE-9,,PN/DE,,REL"
-            ],
-            "type": null,
-            "target": "3-LI-9",
-            "process": "0,B-",
-            "sf49": "4-BE-9,,PN/DE,,REL",
-            "sf4": "4-BE-9",
-            "sf5": null,
-            "sf6": "PN/DE",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Relative beta-delayed neutron spectrum, counts. Region around 682 keV peak corresponds toBe-9 5/2- -> Be-8-G transition."
-        }
-      },
       "common": {
         "heads": [
           "E-ERR-DIG",
@@ -1152,8 +1158,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1171,10 +1177,8 @@
               "11.81                   400+-30      2.7+-0.2"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1182,18 +1186,14 @@
               "Thermal peak was subtracted."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(3-LI-9,178.3MSEC)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
@@ -1204,10 +1204,8 @@
               "Used for LI-9 delayed-neutron spectra measurement."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCY,2ZZZCER)",
             "free_txt": [
@@ -1215,10 +1213,8 @@
               "synchrocyclotron ."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1232,18 +1228,16 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E,N)",
             "free_txt": [
               " Energy of delayed neutrons."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1256,8 +1250,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1266,20 +1260,16 @@
               "histogram are of low size."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E,N)",
             "free_txt": [
               " Energy of delayed neutrons."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(E-ERR-DIG)",
             "free_txt": [
@@ -1296,10 +1286,8 @@
               "scale Y - 8.3 arb.units ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1310,18 +1298,16 @@
       }
     },
     "004": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               " For background."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1329,20 +1315,16 @@
               "polarization effects."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E,N)",
             "free_txt": [
               " Energy of delayed neutrons."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(E-ERR-DIG)",
             "free_txt": [
@@ -1359,10 +1341,8 @@
               "scale Y - 0.361 arb.units ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

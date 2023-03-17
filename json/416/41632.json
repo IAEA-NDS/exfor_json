@@ -29,45 +29,41 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JET,11,(5),1045,1960)",
-          "free_txt": [
-            " Engl.translation of:"
-          ],
-          "publication_year": "1960"
-        },
-        {
-          "x4_code": "(J,ZET,38,1446,1960)",
-          "free_txt": [],
-          "publication_year": "1960"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,4RUSITE)",
-          "free_txt": [
-            " Cyclotron with the pulsed beam, pulse",
-            "duration 2-3 microsec."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(4RUSITE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JET,11,(5),1045,1960)",
+        "free_txt": [
+          " Engl.translation of:"
+        ],
+        "publication_year": "1960",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,ZET,38,1446,1960)",
+        "free_txt": [],
+        "publication_year": "1960",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,4RUSITE)",
+        "free_txt": [
+          " Cyclotron with the pulsed beam, pulse",
+          "duration 2-3 microsec."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(4RUSITE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(78-PT-195(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(78-PT-195(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "78-PT-195",
               [
@@ -85,13 +81,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(78-PT-195(N,0),,J)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(78-PT-195(N,0),,J)",
+        "children": [
+          {
             "code": [
               "78-PT-195",
               [
@@ -109,11 +107,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((78-PT-195(N,G)78-PT-196,,SPC,,RES)//(78-PT-195(N,G)78-PT-196,,SPC,,RES))",
+        "children": [
+          {
+            "code": [
+              "78-PT-195",
+              [
+                "N,G"
+              ],
+              "78-PT-196,,SPC,,RES"
+            ],
+            "type": null,
+            "target": "78-PT-195",
+            "process": "N,G",
+            "sf49": "78-PT-196,,SPC,,RES",
+            "sf4": "78-PT-196",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": "RES",
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "78-PT-195",
+              [
+                "N,G"
+              ],
+              "78-PT-196,,SPC,,RES"
+            ],
+            "type": null,
+            "target": "78-PT-195",
+            "process": "N,G",
+            "sf49": "78-PT-196,,SPC,,RES",
+            "sf4": "78-PT-196",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": "RES",
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -149,51 +201,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((78-PT-195(N,G)78-PT-196,,SPC,,RES)//(78-PT-195(N,G)78-PT-196,,SPC,,RES))",
-          "0": {
-            "code": [
-              "78-PT-195",
-              [
-                "N,G"
-              ],
-              "78-PT-196,,SPC,,RES"
-            ],
-            "type": null,
-            "target": "78-PT-195",
-            "process": "N,G",
-            "sf49": "78-PT-196,,SPC,,RES",
-            "sf4": "78-PT-196",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": "RES",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "78-PT-195",
-              [
-                "N,G"
-              ],
-              "78-PT-196,,SPC,,RES"
-            ],
-            "type": null,
-            "target": "78-PT-195",
-            "process": "N,G",
-            "sf49": "78-PT-196,,SPC,,RES",
-            "sf4": "78-PT-196",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": "RES",
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-MIN-DN"
@@ -255,8 +262,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -274,10 +281,8 @@
               " Monitoring neutron counter."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,4RUSITE)",
             "free_txt": [
@@ -285,10 +290,8 @@
               "duration 2-3 microsec."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -300,18 +303,16 @@
       }
     },
     "002": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               "  Questionable spin value."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -323,8 +324,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

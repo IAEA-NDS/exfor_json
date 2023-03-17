@@ -97,40 +97,36 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,63,061603,2001)",
-          "free_txt": [
-            "#doi:10.1103/PhysRevC.63.061603"
-          ],
-          "publication_year": "2001"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,1USANOT)",
-          "free_txt": [
-            " Twinsol radioactive nuclear beam (RNB)",
-            "facility at the University of Notre Dame."
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(1USANOT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,63,061603,2001)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.63.061603"
+        ],
+        "publication_year": "2001",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.63.061603"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,1USANOT)",
+        "free_txt": [
+          " Twinsol radioactive nuclear beam (RNB)",
+          "facility at the University of Notre Dame."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(1USANOT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(2-HE-6,EL)83-BI-209,,DA,,RTH)",
-          "0": {
+      "0": {
+        "x4_code": "(83-BI-209(2-HE-6,EL)83-BI-209,,DA,,RTH)",
+        "children": [
+          {
             "code": [
               "83-BI-209",
               [
@@ -148,11 +144,74 @@
             "sf7": null,
             "sf8": "RTH",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(83-BI-209(2-HE-6,NON),,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "2-HE-6,NON"
+              ],
+              ",,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "2-HE-6,NON",
+            "sf49": ",,SIG,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(83-BI-209(2-HE-6,EL)83-BI-209,,DA)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "2-HE-6,EL"
+              ],
+              "83-BI-209,,DA"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "2-HE-6,EL",
+            "sf49": "83-BI-209,,DA",
+            "sf4": "83-BI-209",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -264,32 +323,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(2-HE-6,NON),,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "2-HE-6,NON"
-              ],
-              ",,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "2-HE-6,NON",
-            "sf49": ",,SIG,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -328,32 +361,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(2-HE-6,EL)83-BI-209,,DA)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "2-HE-6,EL"
-              ],
-              "83-BI-209,,DA"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "2-HE-6,EL",
-            "sf49": "83-BI-209,,DA",
-            "sf4": "83-BI-209",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-CM"
@@ -403,8 +410,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SI)",
             "free_txt": [
@@ -412,20 +419,16 @@
               "angles on either side of the beam."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on sources of uncertainties."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,1USANOT)",
             "free_txt": [
@@ -433,28 +436,22 @@
               "facility at the University of Notre Dame."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "6He projectile"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -466,8 +463,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -478,8 +475,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTAD)",
             "free_txt": [
@@ -488,10 +485,8 @@
               "fusion cross section deduced from the previous data."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,C2521003,J.J.Kolata+,J,PRL,81,4580,1998)",
             "free_txt": [
@@ -499,10 +494,8 @@
               "cross sections."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -513,8 +506,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

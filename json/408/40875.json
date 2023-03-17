@@ -1,7 +1,7 @@
 {
   "entry": "40875",
-  "last_updated": "2018-01-22",
-  "number_of_revisions": "5",
+  "last_updated": "2023-01-18b",
+  "number_of_revisions": "8",
   "histories": [
     {
       "x4_code": "(19851030C)",
@@ -44,6 +44,12 @@
         "J,YK,1985,(3),3,1985 -> J,YK,,(3),3,1985 .",
         "Ref. INDC(CCP)-235,2,197,1983 was added."
       ]
+    },
+    {
+      "x4_code": "(20220923A)",
+      "free_txt": [
+        " Code SPSDD was added in STATUS."
+      ]
     }
   ],
   "bib_record": {
@@ -85,24 +91,80 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,INDC(CCP)-293,5,1989)",
-          "free_txt": [
-            " English transl.",
-            "                           of YK,,(3),3,1985"
-          ],
-          "publication_year": "1989"
-        },
-        {
-          "x4_code": "((C,83KIEV,2,197,1983)=(R,INDC(CCP)-235,197,1983))",
-          "free_txt": [
-            "Part 2"
-          ],
-          "publication_year": "1983"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(R,INDC(CCP)-293,5,1989)",
+        "free_txt": [
+          " Subents 002,003 data.",
+          "English transl. of YK,,(3),3,1985."
+        ],
+        "publication_year": "1989",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((C,83KIEV,2,197,1983)=(R,INDC(CCP)-235,(2),197,1983))",
+        "free_txt": [],
+        "publication_year": "1983",
+        "pointer": "0"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F),PR,NU/DE,,FCT)",
+        "children": [
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              ",PR,NU/DE,,FCT"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": ",PR,NU/DE,,FCT",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU/DE",
+            "sf7": null,
+            "sf8": "FCT",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Spectrum measured in    neutrons per fission per MeV*steradian;   factor = 1/(4*PI)."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F),PR,NU/DE,,MXD)",
+        "children": [
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              ",PR,NU/DE,,MXD"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": ",PR,NU/DE,,MXD",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU/DE",
+            "sf7": null,
+            "sf8": "MXD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -110,32 +172,6 @@
       "common": null
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F),PR,NU/DE,,REL)",
-          "0": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              ",PR,NU/DE,,REL"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": ",PR,NU/DE,,REL",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU/DE",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Spectrum measured in    neutrons per fission per MeV*steradian"
-        }
-      },
       "common": {
         "heads": [
           "ERR-2",
@@ -756,32 +792,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F),PR,NU/DE,,MXD)",
-          "0": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              ",PR,NU/DE,,MXD"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": ",PR,NU/DE,,MXD",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU/DE",
-            "sf7": null,
-            "sf8": "MXD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "                               Ratio of the measured           neutron spectrum to that of Maxwell"
-        }
-      },
       "common": {
         "heads": [
           "KT-NRM"
@@ -799,7 +809,7 @@
         "heads": [
           "E",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
@@ -1029,8 +1039,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1040,10 +1050,8 @@
               " neutron detection (by Monte-Carlo method calculation)."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
@@ -1061,8 +1069,7 @@
               " Solid angle of neutron detection (0.0176 +- 0.0002) sr",
               " Measurements of the efficiency of the NE-912 glass",
               " were performed with reference to the 0.0835 cm NE-908",
-              " glass. Efficiency of NE-908 glass was calculated with",
-              " BRAND program."
+              " glass."
             ]
           },
           {
@@ -1074,10 +1081,8 @@
               " fission fragment and neutron channels, respectively."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1087,18 +1092,14 @@
               " NE-913, and NE-913 with cone (brass, 12 cm)."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(FF,N)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1109,8 +1110,17 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Efficiency of NE-908 glass was calculated with",
+              " BRAND program."
+            ]
+          }
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -1148,10 +1158,8 @@
             "x4_code": "(ERR-4)",
             "free_txt": []
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -1160,23 +1168,44 @@
               "   from Table 2 of C,83KIEV,2,197,1983."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(N,,P.A.Androsenko+,R,FEI-1300,1982)",
+            "free_txt": [
+              " BRAND code with Monte Carlo method."
+            ]
+          }
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table of R,INDC(CCP)-0293 .",
+              " Table of R,INDC(CCP)-0293,1989.",
               "   Table 2 of C,83KIEV,2,197,1983 ."
+            ]
+          },
+          {
+            "x4_code": "(SPSDD,41158002)",
+            "free_txt": [
+              " Final publication"
             ]
           }
         ]
       }
     },
     "003": {
-      "add-res": {
-        "0": [
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Efficiency of NE-908 glass was calculated with",
+              " BRAND program."
+            ]
+          }
+        ],
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1186,21 +1215,24 @@
               " N(E)=NUp*(2pi)**-1.5*T**-1.5*SQRT(E)*exp(-E/T)."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " kT-value    equal 1.42 MeV is the temperature of the",
-              " reference Maxwell spectrum"
+              " Total uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(N,,P.A.Androsenko+,R,FEI-1300,1982)",
+            "free_txt": [
+              " BRAND code with Monte Carlo method."
+            ]
+          }
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1209,7 +1241,15 @@
           },
           {
             "x4_code": "(TABLE)",
-            "free_txt": []
+            "free_txt": [
+              " From author."
+            ]
+          },
+          {
+            "x4_code": "(SPSDD,41158003)",
+            "free_txt": [
+              " Final publication"
+            ]
           }
         ]
       }

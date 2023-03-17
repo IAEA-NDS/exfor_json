@@ -90,37 +90,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PAN,83,520,2020)",
-          "free_txt": [],
-          "publication_year": "2020"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,2ITYLNS)",
-          "free_txt": [
-            " INFN-LNS Tandem"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(2ITYLNS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PAN,83,520,2020)",
+        "free_txt": [],
+        "publication_year": "2020",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,2ITYLNS)",
+        "free_txt": [
+          " INFN-LNS Tandem"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2ITYLNS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((2-HE-4(8-O-17,EL)2-HE-4,,DA,RSD)=(8-O-17(A,EL)8-O-17,,DA,RSD))",
-          "0": {
+      "0": {
+        "x4_code": "((2-HE-4(8-O-17,EL)2-HE-4,,DA,RSD)=(8-O-17(A,EL)8-O-17,,DA,RSD))",
+        "children": [
+          {
             "code": [
               "2-HE-4",
               [
@@ -139,7 +134,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "8-O-17",
               [
@@ -157,11 +152,65 @@
             "sf7": "RSD",
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((2-HE-4(8-O-17,EL)2-HE-4,,DA,RSD)=(8-O-17(A,EL)8-O-17,,DA,RSD))",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "8-O-17,EL"
+              ],
+              "2-HE-4,,DA,RSD"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "8-O-17,EL",
+            "sf49": "2-HE-4,,DA,RSD",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "RSD",
+            "sf8": null,
+            "sf9": null
           },
-          "type": "=",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "8-O-17",
+              [
+                "A,EL"
+              ],
+              "8-O-17,,DA,RSD"
+            ],
+            "type": null,
+            "target": "8-O-17",
+            "process": "A,EL",
+            "sf49": "8-O-17,,DA,RSD",
+            "sf4": "8-O-17",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "RSD",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-CM"
@@ -7796,51 +7845,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((2-HE-4(8-O-17,EL)2-HE-4,,DA,RSD)=(8-O-17(A,EL)8-O-17,,DA,RSD))",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "8-O-17,EL"
-              ],
-              "2-HE-4,,DA,RSD"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "8-O-17,EL",
-            "sf49": "2-HE-4,,DA,RSD",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "RSD",
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "8-O-17",
-              [
-                "A,EL"
-              ],
-              "8-O-17,,DA,RSD"
-            ],
-            "type": null,
-            "target": "8-O-17",
-            "process": "A,EL",
-            "sf49": "8-O-17,,DA,RSD",
-            "sf4": "8-O-17",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "RSD",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG-CM"
@@ -15579,8 +15583,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SI,SI)",
             "free_txt": [
@@ -15604,36 +15608,28 @@
               " measuring elastic scattering from the Au foil"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2ITYLNS)",
             "free_txt": [
               " INFN-LNS Tandem"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE,TTM)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(A)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -15645,18 +15641,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -15673,18 +15667,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

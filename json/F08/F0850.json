@@ -90,35 +90,30 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,464,717,1987)",
-          "free_txt": [],
-          "publication_year": "1987"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,2FR SAT)",
-          "free_txt": [],
-          "facility_type": "(SYNCH)",
-          "institute": "(2FR SAT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,464,717,1987)",
+        "free_txt": [],
+        "publication_year": "1987",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,2FR SAT)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(2FR SAT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(D,EL)8-O-16,,DA,,RTH)",
-          "0": {
+      "0": {
+        "x4_code": "(8-O-16(D,EL)8-O-16,,DA,,RTH)",
+        "children": [
+          {
             "code": [
               "8-O-16",
               [
@@ -136,11 +131,74 @@
             "sf7": null,
             "sf8": "RTH",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(8-O-16(D,EL)8-O-16,,POL/DA,,ANA)",
+        "children": [
+          {
+            "code": [
+              "8-O-16",
+              [
+                "D,EL"
+              ],
+              "8-O-16,,POL/DA,,ANA"
+            ],
+            "type": null,
+            "target": "8-O-16",
+            "process": "D,EL",
+            "sf49": "8-O-16,,POL/DA,,ANA",
+            "sf4": "8-O-16",
+            "sf5": null,
+            "sf6": "POL/DA",
+            "sf7": null,
+            "sf8": "ANA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(8-O-16(D,EL)8-O-16,NN,POL/DA,,ANA)",
+        "children": [
+          {
+            "code": [
+              "8-O-16",
+              [
+                "D,EL"
+              ],
+              "8-O-16,NN,POL/DA,,ANA"
+            ],
+            "type": null,
+            "target": "8-O-16",
+            "process": "D,EL",
+            "sf49": "8-O-16,NN,POL/DA,,ANA",
+            "sf4": "8-O-16",
+            "sf5": "NN",
+            "sf6": "POL/DA",
+            "sf7": null,
+            "sf8": "ANA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-ERR",
@@ -826,32 +884,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(D,EL)8-O-16,,POL/DA,,ANA)",
-          "0": {
-            "code": [
-              "8-O-16",
-              [
-                "D,EL"
-              ],
-              "8-O-16,,POL/DA,,ANA"
-            ],
-            "type": null,
-            "target": "8-O-16",
-            "process": "D,EL",
-            "sf49": "8-O-16,,POL/DA,,ANA",
-            "sf4": "8-O-16",
-            "sf5": null,
-            "sf6": "POL/DA",
-            "sf7": null,
-            "sf8": "ANA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -1697,32 +1729,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(D,EL)8-O-16,NN,POL/DA,,ANA)",
-          "0": {
-            "code": [
-              "8-O-16",
-              [
-                "D,EL"
-              ],
-              "8-O-16,NN,POL/DA,,ANA"
-            ],
-            "type": null,
-            "target": "8-O-16",
-            "process": "D,EL",
-            "sf49": "8-O-16,NN,POL/DA,,ANA",
-            "sf4": "8-O-16",
-            "sf5": "NN",
-            "sf6": "POL/DA",
-            "sf7": null,
-            "sf8": "ANA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -2598,8 +2604,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SPEC)",
             "free_txt": [
@@ -2612,10 +2618,8 @@
             "x4_code": "(SCIN)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -2640,26 +2644,20 @@
               "    Data digitizing error"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,2FR SAT)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(POLIS)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -2673,10 +2671,8 @@
               "keV for 400 MeV deuterons through a 11.9 mm target."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2695,8 +2691,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS)",
             "free_txt": [
@@ -2721,10 +2717,8 @@
               " Monitor instabilities"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -2735,8 +2729,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -2752,10 +2746,8 @@
               "uncertainties only"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -2766,8 +2758,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -2783,10 +2775,8 @@
               "uncertainties only"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

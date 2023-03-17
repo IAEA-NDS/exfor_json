@@ -42,37 +42,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,79,530,195008)",
-          "free_txt": [
-            " Short letter, no details"
-          ],
-          "publication_year": "1950"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,1USAANL)",
-          "free_txt": [],
-          "facility_type": "(REAC)",
-          "institute": "(1USAANL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,79,530,195008)",
+        "free_txt": [
+          " Short letter, no details"
+        ],
+        "publication_year": "1950",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USAANL)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USAANL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,G)95-AM-242,,SIG,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(95-AM-241(N,G)95-AM-242,,SIG,,SPA)",
+        "children": [
+          {
             "code": [
               "95-AM-241",
               [
@@ -90,11 +85,74 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(95-AM-242-M(N,G)95-AM-243,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "95-AM-242-M",
+              [
+                "N,G"
+              ],
+              "95-AM-243,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "95-AM-242-M",
+            "process": "N,G",
+            "sf49": "95-AM-243,,SIG,,SPA",
+            "sf4": "95-AM-243",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(95-AM-243(N,G)95-AM-244-M,,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "95-AM-243",
+              [
+                "N,G"
+              ],
+              "95-AM-244-M,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "95-AM-243",
+            "process": "N,G",
+            "sf49": "95-AM-244-M,,SIG,,MXW",
+            "sf4": "95-AM-244-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -116,32 +174,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-242-M(N,G)95-AM-243,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "95-AM-242-M",
-              [
-                "N,G"
-              ],
-              "95-AM-243,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "95-AM-242-M",
-            "process": "N,G",
-            "sf49": "95-AM-243,,SIG,,SPA",
-            "sf4": "95-AM-243",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -163,32 +195,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-243(N,G)95-AM-244-M,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "95-AM-243",
-              [
-                "N,G"
-              ],
-              "95-AM-244-M,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "95-AM-243",
-            "process": "N,G",
-            "sf49": "95-AM-244-M,,SIG,,MXW",
-            "sf4": "95-AM-244-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -212,8 +218,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(REAC,1USAANL)",
             "free_txt": []
@@ -222,8 +228,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -231,28 +237,22 @@
               " on incorrect decay scheme of Am 242."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Reactor spectrum"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(OUTDT)",
             "free_txt": []
@@ -267,8 +267,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(95-AM-242-M,152.YR)",
             "free_txt": []
@@ -277,28 +277,22 @@
             "x4_code": "(95-AM-243,,A)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Reactor spectrum"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -309,34 +303,28 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(95-AM-244-M,25.MIN)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Reactor spectrum"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

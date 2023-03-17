@@ -53,43 +53,39 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(T,TROCHON,1977)",
-          "free_txt": [
-            " Data."
-          ],
-          "publication_year": "1977"
-        },
-        {
-          "x4_code": "(C,70HELSINKI,1,495,1970)",
-          "free_txt": [],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": [
-            " 60MeV Electron Linac at 1.8kW, 1200microA,",
-            " 50ns pulse width, duty cycle 500pps."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(T,TROCHON,1977)",
+        "free_txt": [
+          " Data."
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,70HELSINKI,1,495,1970)",
+        "free_txt": [],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC)",
+        "free_txt": [
+          " 60MeV Electron Linac at 1.8kW, 1200microA,",
+          " 50ns pulse width, duty cycle 500pps."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(94-PU-239(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(94-PU-239(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -107,13 +103,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(94-PU-239(N,EL),,WID,,2G)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(94-PU-239(N,EL),,WID,,2G)",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -131,13 +129,15 @@
             "sf7": null,
             "sf8": "2G",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "(94-PU-239(N,TOT),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "(94-PU-239(N,TOT),,WID)",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -155,11 +155,253 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(94-PU-239(N,F),,WID,,AV)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,WID,,AV"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,WID,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ".60 levels were taken into account for spin 0..For spin 1 104 resonances."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(94-PU-239(N,0),,D)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,0"
+              ],
+              ",,D"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,0",
+            "sf49": ",,D",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "D",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ".Only class II states."
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(((94-PU-239(N,G),,WID)/(94-PU-239(N,F),,WID))/((94-PU-239(N,G),,WID,,AV)/(94-PU-239(N,F),,WID,,AV)))",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,G"
+              ],
+              ",,WID"
+            ],
+            "type": "/",
+            "target": "94-PU-239",
+            "process": "N,G",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,WID"
+            ],
+            "type": "/",
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,G"
+              ],
+              ",,WID,,AV"
+            ],
+            "type": "/",
+            "target": "94-PU-239",
+            "process": "N,G",
+            "sf49": ",,WID,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          },
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,WID,,AV"
+            ],
+            "type": "/",
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,WID,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "((94-PU-239(N,G),PAR,WID)/(94-PU-239(N,F),,WID))",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,G"
+              ],
+              ",PAR,WID"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,G",
+            "sf49": ",PAR,WID",
+            "sf4": null,
+            "sf5": "PAR",
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "007": {
+      "0": {
+        "x4_code": "((94-PU-239(N,G),,WID,,AV)/(94-PU-239(N,F),,WID,,AV))",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,G"
+              ],
+              ",,WID,,AV"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,G",
+            "sf49": ",,WID,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          },
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,WID,,AV"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,WID,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MONIT1",
@@ -878,32 +1120,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,F),,WID,,AV)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,WID,,AV"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,WID,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ".60 levels were taken into account for spin 0..For spin 1 104 resonances."
-        }
-      },
       "common": {
         "heads": [
           "MONIT1",
@@ -972,32 +1188,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,0),,D)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,0"
-              ],
-              ",,D"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,0",
-            "sf49": ",,D",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "D",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ".Only class II states."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1024,89 +1214,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(((94-PU-239(N,G),,WID)/(94-PU-239(N,F),,WID))/((94-PU-239(N,G),,WID,,AV)/(94-PU-239(N,F),,WID,,AV)))",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": "/",
-            "target": "94-PU-239",
-            "process": "N,G",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,WID"
-            ],
-            "type": "/",
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "2": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,G"
-              ],
-              ",,WID,,AV"
-            ],
-            "type": "/",
-            "target": "94-PU-239",
-            "process": "N,G",
-            "sf49": ",,WID,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "3": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,WID,,AV"
-            ],
-            "type": "/",
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,WID,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1318,51 +1425,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-239(N,G),PAR,WID)/(94-PU-239(N,F),,WID))",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,G"
-              ],
-              ",PAR,WID"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,G",
-            "sf49": ",PAR,WID",
-            "sf4": null,
-            "sf5": "PAR",
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-MIN",
@@ -1621,51 +1683,6 @@
       }
     },
     "007": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-239(N,G),,WID,,AV)/(94-PU-239(N,F),,WID,,AV))",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,G"
-              ],
-              ",,WID,,AV"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,G",
-            "sf49": ",,WID,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,WID,,AV"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,WID,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1709,8 +1726,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(LINAC)",
             "free_txt": [
@@ -1718,28 +1735,22 @@
               " 50ns pulse width, duty cycle 500pps."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
               ".U-bremsstrahlung target."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,J.Jary,C,75KIEV,1,239,197505)",
             "free_txt": [
@@ -1759,10 +1770,8 @@
             "x4_code": "(O,22530001,J.Trochon+,C,70HELSINKI,1,495,1970)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1773,8 +1782,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1787,10 +1796,8 @@
               " multiple scattering."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -1803,30 +1810,24 @@
               " on 56AVP tubes were employed."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               ".Flight path 32.41m."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(94-PU-240(N,0),,EN)",
             "free_txt": [
               ".MONIT1,-2,-3,-4 give the 4 resonance energies."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1835,10 +1836,8 @@
               ".The Pu was 6.5x10-4 and 4.0x10-4 atoms/b thick resp."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1856,8 +1855,8 @@
       }
     },
     "003": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1870,10 +1869,8 @@
               " multiple scattering."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -1886,10 +1883,8 @@
               " on 56AVP tubes were employed."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1897,30 +1892,24 @@
               "uncertainty."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               ".Flight path 32.41m."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(94-PU-240(N,0),,EN)",
             "free_txt": [
               ".MONIT1,-2,-3,-4 give the 4 resonance energies."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,20445001,H.Derrien+,C,70HELSINKI,1,481,1970)",
             "free_txt": [
@@ -1929,10 +1918,8 @@
               " author's."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1941,10 +1928,8 @@
               ".The Pu was 6.5x10-4 and 4.0x10-4 atoms/b thick resp.."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1955,8 +1940,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1964,10 +1949,8 @@
               " 207.3-eV used."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1980,10 +1963,8 @@
               " multiple scattering."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -1996,30 +1977,24 @@
               " on 56AVP tubes were employed."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "Not given"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               ".Flight path 32.41m."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2028,10 +2003,8 @@
               ".The Pu was 6.5x10-4 and 4.0x10-4 atoms/b thick resp.."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2042,8 +2015,8 @@
       }
     },
     "005": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -2057,20 +2030,16 @@
               " by 7cm thickness on XP 1040 tubes (2)."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               ".Flight path 12.50m."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2078,10 +2047,8 @@
               " atoms/b thickness and 100cm2 surface."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2092,8 +2059,8 @@
       }
     },
     "006": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -2107,10 +2074,8 @@
               " by 7cm thickness on XP 1040 tubes (2)."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E-MIN,G)",
             "free_txt": [
@@ -2123,10 +2088,8 @@
               " maximum energies of outgoing gammas."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2134,20 +2097,16 @@
               "uncertainty."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               " .Flight path 12.50m."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": []
@@ -2156,10 +2115,8 @@
             "x4_code": "(G)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2167,10 +2124,8 @@
               "atoms/b thickness and 100cm2 surface."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2181,8 +2136,8 @@
       }
     },
     "007": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -2196,10 +2151,8 @@
               " by 7cm thickness on XP 1040 Tubes (2)."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2207,20 +2160,16 @@
               "uncertainty."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               ".Flight path 12.50m."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2228,10 +2177,8 @@
               " atoms/b thickness and 100cm2 surface."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

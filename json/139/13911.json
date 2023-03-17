@@ -32,37 +32,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,6,1650,197211)",
-          "free_txt": [],
-          "publication_year": "1972"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,1USABNL)",
-          "free_txt": [
-            " High Flux Beam Reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(1USABNL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,6,1650,197211)",
+        "free_txt": [],
+        "publication_year": "1972",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USABNL)",
+        "free_txt": [
+          " High Flux Beam Reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USABNL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(28-NI-64(N,G)28-NI-65,,SPC,,MXW)",
-          "0": {
+      "1": {
+        "x4_code": "(28-NI-64(N,G)28-NI-65,,SPC,,MXW)",
+        "children": [
+          {
             "code": [
               "28-NI-64",
               [
@@ -80,13 +75,15 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(28-NI-64(N,G)28-NI-65,,SPC,,MXW/REL)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(28-NI-64(N,G)28-NI-65,,SPC,,MXW/REL)",
+        "children": [
+          {
             "code": [
               "28-NI-64",
               [
@@ -104,11 +101,18 @@
             "sf7": null,
             "sf8": "MXW/REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-DUMMY",
@@ -219,8 +223,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -231,30 +235,16 @@
               " neutron energies."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "1": [
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " No information given"
-            ]
-          }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,1USABNL)",
             "free_txt": [
               " High Flux Beam Reactor"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -262,18 +252,14 @@
               "   intensity of 7 x 10**7 n/cm2 sec."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(28-NI-64,ENR=0.9792)",
             "free_txt": []
@@ -301,19 +287,41 @@
             ]
           }
         ]
+      },
+      "1": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No information given"
+            ]
+          }
+        ]
       }
     },
     "002": {
-      "monit-ref": {
-        "1": [
+      "1": {
+        "monit-ref": [
           {
             "x4_code": "(,S.C.Pancholi+,J,ND/B,2,(6),1,1968)",
             "free_txt": []
           }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(28-NI-64(N,G)28-NI-65,,SPC,,MXW)",
+            "free_txt": [
+              "The gamma-spectrum taken after a long period of",
+              "activation (~10 half-lives for Ni-65) was used for",
+              "absolute intensity normalization. The sum of the",
+              "intensities of the 366.4-, 1115.4-, and 1481.7-keV",
+              "gamma-rays was taken from previous reports as 45.5%"
+            ]
+          }
         ]
       },
-      "monitor": {
-        "2": [
+      "2": {
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -322,8 +330,8 @@
           }
         ]
       },
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -23,39 +23,34 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,99OSAKA,,409,1999)",
-          "free_txt": [],
-          "publication_year": "1999"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,1USAANL)",
-          "free_txt": [
-            " IPNS - Intense Pulsed Neutron Source,",
-            "the first spallation slow neutron source based on a",
-            "proton synchrotron."
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(1USAANL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,99OSAKA,,409,1999)",
+        "free_txt": [],
+        "publication_year": "1999",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,1USAANL)",
+        "free_txt": [
+          " IPNS - Intense Pulsed Neutron Source,",
+          "the first spallation slow neutron source based on a",
+          "proton synchrotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(1USAANL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-0(N,X)25-MN-52,,SIG,,,DERIV)",
-          "0": {
+      "0": {
+        "x4_code": "(26-FE-0(N,X)25-MN-52,,SIG,,,DERIV)",
+        "children": [
+          {
             "code": [
               "26-FE-0",
               [
@@ -73,11 +68,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(26-FE-54(N,P)25-MN-54,,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "26-FE-54",
+              [
+                "N,P"
+              ],
+              "25-MN-54,,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "26-FE-54",
+            "process": "N,P",
+            "sf49": "25-MN-54,,SIG,,,DERIV",
+            "sf4": "25-MN-54",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(26-FE-54(N,A)24-CR-51,,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "26-FE-54",
+              [
+                "N,A"
+              ],
+              "24-CR-51,,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "26-FE-54",
+            "process": "N,A",
+            "sf49": "24-CR-51,,SIG,,,DERIV",
+            "sf4": "24-CR-51",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -213,32 +271,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-54(N,P)25-MN-54,,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "26-FE-54",
-              [
-                "N,P"
-              ],
-              "25-MN-54,,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "26-FE-54",
-            "process": "N,P",
-            "sf49": "25-MN-54,,SIG,,,DERIV",
-            "sf4": "25-MN-54",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -414,32 +446,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-54(N,A)24-CR-51,,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "26-FE-54",
-              [
-                "N,A"
-              ],
-              "24-CR-51,,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "26-FE-54",
-            "process": "N,A",
-            "sf49": "24-CR-51,,SIG,,,DERIV",
-            "sf4": "24-CR-51",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -605,8 +611,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -626,10 +632,8 @@
               "in integral testing."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,1USAANL)",
             "free_txt": [
@@ -638,10 +642,8 @@
               "proton synchrotron."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,TOF,GSPEC)",
             "free_txt": [
@@ -659,10 +661,8 @@
               "prior cross sections."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,C0746001,L.R.Greenwood+,R,ANL/NPBTSTR-023,1989)",
             "free_txt": [
@@ -670,10 +670,8 @@
               " original experimental data."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -687,8 +685,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(UNFLD)",
             "free_txt": [
@@ -696,10 +694,8 @@
               "reproduce the measured activity"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -711,8 +707,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(UNFLD)",
             "free_txt": [
@@ -720,10 +716,8 @@
               "reproduce the measured activity"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -735,8 +729,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(UNFLD)",
             "free_txt": [
@@ -744,10 +738,8 @@
               "reproduce the measured activity"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

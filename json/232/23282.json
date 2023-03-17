@@ -32,43 +32,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,2014DEBREC,,(102),2014)",
-          "free_txt": [
-            " XIII Nuclei in the Cosmos, Debrecen,Hungary,",
-            "7-11 July 2014 ."
-          ],
-          "publication_year": "2014"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,2SPNSEU)",
-          "free_txt": [
-            " 3 MV Tandem Pelletron at Centro",
-            "Nacional de Aceleradores, Seville .",
-            "Proton energy 1912 keV. Energy spread of proton beam",
-            "was < 1 keV."
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(2SPNSEU)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,2014DEBREC,,(102),2014)",
+        "free_txt": [
+          " XIII Nuclei in the Cosmos, Debrecen,Hungary,",
+          "7-11 July 2014 ."
+        ],
+        "publication_year": "2014",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,2SPNSEU)",
+        "free_txt": [
+          " 3 MV Tandem Pelletron at Centro",
+          "Nacional de Aceleradores, Seville .",
+          "Proton energy 1912 keV. Energy spread of proton beam",
+          "was < 1 keV."
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(2SPNSEU)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "79-AU-197",
               [
@@ -86,11 +81,46 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " MACS"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " MACS"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,MXW,DERIV)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,G"
+              ],
+              "79-AU-198,,SIG,,MXW,DERIV"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "N,G",
+            "sf49": "79-AU-198,,SIG,,MXW,DERIV",
+            "sf4": "79-AU-198",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": " MACS"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -179,32 +209,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,MXW,DERIV)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "N,G"
-              ],
-              "79-AU-198,,SIG,,MXW,DERIV"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "N,G",
-            "sf49": "79-AU-198,,SIG,,MXW,DERIV",
-            "sf4": "79-AU-198",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": " MACS"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -233,24 +237,20 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(79-AU-198-G,2.6947D,DG,411.8,0.9554)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(4-BE-7,53.29D,DG,477.6,0.1044)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -261,10 +261,8 @@
               "- by MNCP simulation."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,2SPNSEU)",
             "free_txt": [
@@ -274,10 +272,8 @@
               "was < 1 keV."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -285,10 +281,8 @@
               "thickness. Li layer of 380 microm thickness."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -296,18 +290,14 @@
               "Activities measurement 6hr 30min .Cooling time 15 min."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(3-LI-7(P,N)4-BE-7,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -320,8 +310,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -334,10 +324,8 @@
               "see formula 7 in C,20014DEBREC,(102),2014 ."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -351,10 +339,8 @@
               " true Maxwellian neutron spectrum of kT=25 keV - 0.955"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -431,10 +417,8 @@
               " Au sample thickness - 1.5% ."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,23152001,C.Lederer+,J,PR/C,83,034608,2011)",
             "free_txt": []
@@ -455,10 +439,8 @@
               " MACS=616+-17 mb."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -470,8 +452,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -479,20 +461,16 @@
               "at 25 keV as MACS(30keV) = 0.901 * MACS(25keV)"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Total uncertainty ~ 4% ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

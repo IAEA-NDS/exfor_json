@@ -68,68 +68,67 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RCA,89,357,2001)",
-          "free_txt": [],
-          "publication_year": "2001"
-        },
-        {
-          "x4_code": "(J,JLCR,44,S1055,2001)",
-          "free_txt": [
-            " Thick target yield in figures"
-          ],
-          "publication_year": "2001"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2GERJUL)",
-          "free_txt": [
-            " CV 28 Cyclotron"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2GERJUL)"
-        },
-        {
-          "x4_code": "(CYCLO,2GERJUL)",
-          "free_txt": [
-            " Injector of COSY Cyclotron"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2GERJUL)"
-        },
-        {
-          "x4_code": "(VDG,3HUNDEB)",
-          "free_txt": [
-            " 5 MV VdG"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(3HUNDEB)"
-        },
-        {
-          "x4_code": "(CYCLO,3HUNDEB)",
-          "free_txt": [
-            " MGC 20E Cyclotron"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(3HUNDEB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RCA,89,357,2001)",
+        "free_txt": [],
+        "publication_year": "2001",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JLCR,44,S1055,2001)",
+        "free_txt": [
+          " Thick target yield in figures"
+        ],
+        "publication_year": "2001",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2GERJUL)",
+        "free_txt": [
+          " CV 28 Cyclotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2GERJUL)"
+      },
+      {
+        "x4_code": "(CYCLO,2GERJUL)",
+        "free_txt": [
+          " Injector of COSY Cyclotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2GERJUL)"
+      },
+      {
+        "x4_code": "(VDG,3HUNDEB)",
+        "free_txt": [
+          " 5 MV VdG"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(3HUNDEB)"
+      },
+      {
+        "x4_code": "(CYCLO,3HUNDEB)",
+        "free_txt": [
+          " MGC 20E Cyclotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(3HUNDEB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-18(P,N)9-F-18,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(8-O-18(P,N)9-F-18,,SIG)",
+        "children": [
+          {
             "code": [
               "8-O-18",
               [
@@ -147,11 +146,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(8-O-18(P,N)9-F-18,,TTY,,SAT,DERIV)",
+        "children": [
+          {
+            "code": [
+              "8-O-18",
+              [
+                "P,N"
+              ],
+              "9-F-18,,TTY,,SAT,DERIV"
+            ],
+            "type": null,
+            "target": "8-O-18",
+            "process": "P,N",
+            "sf49": "9-F-18,,TTY,,SAT,DERIV",
+            "sf4": "9-F-18",
+            "sf5": null,
+            "sf6": "TTY",
+            "sf7": null,
+            "sf8": "SAT",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-2"
@@ -631,32 +665,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-18(P,N)9-F-18,,TTY,,SAT,DERIV)",
-          "0": {
-            "code": [
-              "8-O-18",
-              [
-                "P,N"
-              ],
-              "9-F-18,,TTY,,SAT,DERIV"
-            ],
-            "type": null,
-            "target": "8-O-18",
-            "process": "P,N",
-            "sf49": "9-F-18,,TTY,,SAT,DERIV",
-            "sf4": "9-F-18",
-            "sf5": null,
-            "sf6": "TTY",
-            "sf7": null,
-            "sf8": "SAT",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -762,8 +770,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
@@ -771,18 +779,14 @@
               " annihilation peaks"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2GERJUL)",
             "free_txt": [
@@ -807,10 +811,8 @@
               " MGC 20E Cyclotron"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,EXTB,STTA,GSPEC)",
             "free_txt": [
@@ -828,20 +830,16 @@
               " and also served as monitor foils."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,F.Tarkanyi+,R,IAEA-TECDOC-1211,49,2001)",
             "free_txt": [
               " p.49"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(29-CU-0(P,X)30-ZN-63,,SIG)",
             "free_txt": []
@@ -854,10 +852,8 @@
             "x4_code": "(22-TI-0(P,X)23-V-48,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(8-O-18,ENR=0.967)",
             "free_txt": [
@@ -894,16 +890,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(9-F-18,109.7MIN,AR,511.,1.94)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -944,10 +938,8 @@
               " uncertainty in number of target nuclei"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -964,18 +956,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTEF)",
             "free_txt": [
               " Derived from measured excitation function"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

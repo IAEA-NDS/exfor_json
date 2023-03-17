@@ -44,39 +44,34 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(W,Konovalov,20080429)",
-          "free_txt": [
-            "  Main reference."
-          ],
-          "publication_year": "2008"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            " IBR-2 pulsed reactor."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(W,Konovalov,20080429)",
+        "free_txt": [
+          "  Main reference."
+        ],
+        "publication_year": "2008",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          " IBR-2 pulsed reactor."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-234(N,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-234(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "92-U-234",
               [
@@ -94,11 +89,119 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(92-U-234(N,0),,EN)",
+        "children": [
+          {
+            "code": [
+              "92-U-234",
+              [
+                "N,0"
+              ],
+              ",,EN"
+            ],
+            "type": null,
+            "target": "92-U-234",
+            "process": "N,0",
+            "sf49": ",,EN",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "EN",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Resonance energy"
       },
+      "2": {
+        "x4_code": "((92-U-234(N,EL),,WID,,G)*(92-U-234(N,F),,WID))",
+        "children": [
+          {
+            "code": [
+              "92-U-234",
+              [
+                "N,EL"
+              ],
+              ",,WID,,G"
+            ],
+            "type": null,
+            "target": "92-U-234",
+            "process": "N,EL",
+            "sf49": ",,WID,,G",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "G",
+            "sf9": null
+          },
+          {
+            "code": [
+              "92-U-234",
+              [
+                "N,F"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "92-U-234",
+            "process": "N,F",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "*",
+        "free_text": " g*Gn*Gf upper estimation."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-234(N,EL),,WID,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-234",
+              [
+                "N,EL"
+              ],
+              ",,WID,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-234",
+            "process": "N,EL",
+            "sf49": ",,WID,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -179,75 +282,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(92-U-234(N,0),,EN)",
-          "0": {
-            "code": [
-              "92-U-234",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
-            "target": "92-U-234",
-            "process": "N,0",
-            "sf49": ",,EN",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "EN",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Resonance energy"
-        },
-        "2": {
-          "x4_code": "((92-U-234(N,EL),,WID,,G)*(92-U-234(N,F),,WID))",
-          "0": {
-            "code": [
-              "92-U-234",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": null,
-            "target": "92-U-234",
-            "process": "N,EL",
-            "sf49": ",,WID,,G",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "G",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-234",
-              [
-                "N,F"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "92-U-234",
-            "process": "N,F",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "*",
-          "free_text": " g*Gn*Gf upper estimation."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -269,32 +303,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-234(N,EL),,WID,,,DERIV)",
-          "0": {
-            "code": [
-              "92-U-234",
-              [
-                "N,EL"
-              ],
-              ",,WID,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-234",
-            "process": "N,EL",
-            "sf49": ",,WID,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ASSUM"
@@ -330,8 +338,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -341,58 +349,46 @@
               "content of 235U in the 234U sample."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
               " Multisectional ionization chamber containing:"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Errors are not specified."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
               " IBR-2 pulsed reactor."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "  Tangential neutron beam"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -401,18 +397,14 @@
               "without filter - 33 h, and background one - 13 h."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(FF)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -421,10 +413,8 @@
               "235-U content 0.078+-0.001% in the 234U sample."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -436,8 +426,8 @@
     },
     "002": {},
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -446,10 +436,8 @@
               "resonance that caused deviation from 1/v law."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,41513002)",
             "free_txt": []
@@ -458,8 +446,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -469,18 +457,14 @@
               " It could be p-wave resonance."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM,92-U-234(N,F),,WID,,AV)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,41513003)",
             "free_txt": []

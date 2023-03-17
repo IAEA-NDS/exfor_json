@@ -60,42 +60,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,18,2231,1978)",
-          "free_txt": [],
-          "publication_year": "1978"
-        },
-        {
-          "x4_code": "(J,PL/B,67,43,1977)",
-          "free_txt": [
-            " Preliminary account."
-          ],
-          "publication_year": "1977"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALAS)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,18,2231,1978)",
+        "free_txt": [],
+        "publication_year": "1978",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PL/B,67,43,1977)",
+        "free_txt": [
+          " Preliminary account."
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALAS)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(P,X)11-NA-24,CUM,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(79-AU-197(P,X)11-NA-24,CUM,SIG)",
+        "children": [
+          {
             "code": [
               "79-AU-197",
               [
@@ -113,11 +109,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(79-AU-197(PIP,X)11-NA-24,CUM,SIG)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "PIP,X"
+              ],
+              "11-NA-24,CUM,SIG"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "PIP,X",
+            "sf49": "11-NA-24,CUM,SIG",
+            "sf4": "11-NA-24",
+            "sf5": "CUM",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(79-AU-197(PIN,X)11-NA-24,CUM,SIG)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "PIN,X"
+              ],
+              "11-NA-24,CUM,SIG"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "PIN,X",
+            "sf49": "11-NA-24,CUM,SIG",
+            "sf4": "11-NA-24",
+            "sf5": "CUM",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -177,32 +236,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(PIP,X)11-NA-24,CUM,SIG)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "PIP,X"
-              ],
-              "11-NA-24,CUM,SIG"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "PIP,X",
-            "sf49": "11-NA-24,CUM,SIG",
-            "sf4": "11-NA-24",
-            "sf5": "CUM",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -262,32 +295,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(PIN,X)11-NA-24,CUM,SIG)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "PIN,X"
-              ],
-              "11-NA-24,CUM,SIG"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "PIN,X",
-            "sf49": "11-NA-24,CUM,SIG",
-            "sf4": "11-NA-24",
-            "sf5": "CUM",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -343,8 +350,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -352,10 +359,8 @@
               "of two or three determinations at each energy."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -363,10 +368,8 @@
               "from Au-197 for incident positive and negative PIONS."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -377,18 +380,14 @@
               "impurity was Si."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -406,18 +405,14 @@
               ". Any information is absent."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALAS)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -425,10 +420,8 @@
               "impurities were 30 ppm Si, 10 ppm Fe and 100 ppm Ag."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -439,18 +432,16 @@
       }
     },
     "002": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " Monit datum is regarding for 198. Mev"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB,STTA,MOSEP,CHSEP)",
             "free_txt": [
@@ -468,26 +459,20 @@
               "microampere."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,J.Tobailem+,R,CEA-N-1466,(1),1971)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)13-AL-27(P,X)11-NA-22,CUM,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(11-NA-24,DG)",
             "free_txt": []
@@ -496,8 +481,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -506,10 +491,8 @@
               "secondary production is negligible."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB,STTA,MOSEP,CHSEP)",
             "free_txt": [
@@ -526,20 +509,16 @@
               "to 12 hours with a beam intensity of 1-5E+8 1/sec."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               " Energy at the midpoint of the monitor foil."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)14-SI-0(PIP,X)11-NA-24,CUM,SIG)",
             "free_txt": [
@@ -547,10 +526,8 @@
               "data."
             ]
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(11-NA-24,DG)",
             "free_txt": []
@@ -559,8 +536,8 @@
       }
     },
     "004": {
-      "method": {
-        "0": [
+      "0": {
+        "method": [
           {
             "x4_code": "(EXTB,STTA,MOSEP,CHSEP)",
             "free_txt": [
@@ -577,20 +554,16 @@
               "to 12 hours with a beam intensity of 1-5e8 1/sec."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               " Energy at the midpoint of the monitor foil."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)14-SI-0(PIN,X)11-NA-24,CUM,SIG)",
             "free_txt": [
@@ -598,10 +571,8 @@
               "data."
             ]
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(11-NA-24,DG)",
             "free_txt": []

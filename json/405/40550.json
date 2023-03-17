@@ -55,37 +55,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "((C,77KIEV,3,119,1977)=(R,INDC(CCP)-118,(3),119,1977))",
-          "free_txt": [],
-          "publication_year": "1977"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,4RUSKUR)",
-          "free_txt": [
-            " Electron linear accelerator LEU-60"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(4RUSKUR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((C,77KIEV,3,119,1977)=(R,INDC(CCP)-118,(3),119,1977))",
+        "free_txt": [],
+        "publication_year": "1977",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,4RUSKUR)",
+        "free_txt": [
+          " Electron linear accelerator LEU-60"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4RUSKUR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,ABS),,ALF)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,ABS),,ALF)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -103,19 +98,17 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
-      "common": null,
-      "data": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -133,11 +126,50 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-235(N,G)92-U-236,,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,G"
+              ],
+              "92-U-236,,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,G",
+            "sf49": "92-U-236,,SIG",
+            "sf4": "92-U-236",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
+      "common": null,
+      "data": null
+    },
+    "003": {
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -246,32 +278,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,G)92-U-236,,SIG)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,G"
-              ],
-              "92-U-236,,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,G",
-            "sf49": "92-U-236,,SIG",
-            "sf4": "92-U-236",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -360,28 +366,24 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
               " 12-cells NaI(Tl) 4PI-detector"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,4RUSKUR)",
             "free_txt": [
               " Electron linear accelerator LEU-60"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -396,10 +398,8 @@
               "Co, Na, Cu filters are additional."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G,N)",
             "free_txt": [
@@ -407,10 +407,8 @@
               " by boron-10 converter"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -421,18 +419,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S,,2.)",
             "free_txt": [
               " Relative statistical error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(SPSDD,40581002)",
             "free_txt": [
@@ -450,8 +446,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S,2.,3.)",
             "free_txt": [
@@ -459,10 +455,8 @@
               "  Normalization errors not included."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,INT)",
             "free_txt": [
@@ -470,10 +464,8 @@
               "integral from 100 eV to 1000. eV  = 12209 b*eV."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -484,8 +476,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

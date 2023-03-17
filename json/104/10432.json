@@ -59,37 +59,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,11,1270,197504)",
-          "free_txt": [],
-          "publication_year": "1975"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USAORL)",
-          "free_txt": [
-            " Oak Ridge Electron Linear Accelerator."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,11,1270,197504)",
+        "free_txt": [],
+        "publication_year": "1975",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USAORL)",
+        "free_txt": [
+          " Oak Ridge Electron Linear Accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "79-AU-197",
               [
@@ -107,11 +102,177 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,G"
+              ],
+              "79-AU-198,,SIG,,AV"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "N,G",
+            "sf49": "79-AU-198,,SIG,,AV",
+            "sf4": "79-AU-198",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "1": {
+        "x4_code": "(79-AU-197(N,0),,EN)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,0"
+              ],
+              ",,EN"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "N,0",
+            "sf49": ",,EN",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "EN",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(((79-AU-197(N,EL),,WID,,G)*(79-AU-197(N,G),,WID))/(79-AU-197(N,TOT),,WID))",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,EL"
+              ],
+              ",,WID,,G"
+            ],
+            "type": "*",
+            "target": "79-AU-197",
+            "process": "N,EL",
+            "sf49": ",,WID,,G",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "G",
+            "sf9": null
+          },
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,G"
+              ],
+              ",,WID"
+            ],
+            "type": "*",
+            "target": "79-AU-197",
+            "process": "N,G",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": "79-AU-197",
+            "type": [
+              "N,TOT"
+            ],
+            "target": "7",
+            "process": "9",
+            "sf49": "-,A,U,-,1,9,7",
+            "sf4": "-",
+            "sf5": "A",
+            "sf6": "U",
+            "sf7": "-",
+            "sf8": "1",
+            "sf9": "9"
+          },
+          {
+            "code": ",,WID",
+            "type": [
+              "N,TOT"
+            ],
+            "target": ",",
+            "process": ",",
+            "sf49": "W,I,D",
+            "sf4": "W",
+            "sf5": "I",
+            "sf6": "D",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(79-AU-197(N,EL),,STF)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,EL"
+              ],
+              ",,STF"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "N,EL",
+            "sf49": ",,STF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "STF",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RSL"
@@ -943,32 +1104,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,AV)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "N,G"
-              ],
-              "79-AU-198,,SIG,,AV"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "N,G",
-            "sf49": "79-AU-198,,SIG,,AV",
-            "sf4": "79-AU-198",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-RSL"
@@ -1900,105 +2035,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "1": {
-          "x4_code": "(79-AU-197(N,0),,EN)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "N,0",
-            "sf49": ",,EN",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "EN",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(((79-AU-197(N,EL),,WID,,G)*(79-AU-197(N,G),,WID))/(79-AU-197(N,TOT),,WID))",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
-            "target": "79-AU-197",
-            "process": "N,EL",
-            "sf49": ",,WID,,G",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "G",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "79-AU-197",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
-            "target": "79-AU-197",
-            "process": "N,G",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "2": {
-            "code": "79-AU-197",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "7",
-            "process": "9",
-            "sf49": "-",
-            "sf4": "-",
-            "sf5": null,
-            "sf6": null,
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "3": {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W",
-            "sf4": "W",
-            "sf5": null,
-            "sf6": null,
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "DATA-ERR  1"
@@ -2379,32 +2415,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,EL),,STF)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "N,EL"
-              ],
-              ",,STF"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "N,EL",
-            "sf49": ",,STF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "STF",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -2456,8 +2466,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2466,60 +2476,48 @@
               " keV, inelastic gamma-ray yield."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
               " 6Li glass detector used as flux monitor."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USAORL)",
             "free_txt": [
               " Oak Ridge Electron Linear Accelerator."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Energy resolution better than 0.2% below 90 keV."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
             "free_txt": [
               " Energy calibrated using 4.9-eV resonance in gold."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(C,,MACKLIN+,J,NSE,78,110,198105)",
             "free_txt": [
               " Correction."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2536,8 +2534,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2545,20 +2543,16 @@
               " processing code, see Macklin et al."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information on uncertainties."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2569,8 +2563,8 @@
       }
     },
     "003": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2578,20 +2572,16 @@
               " processing code, see Macklin et al."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information on uncertainties."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2602,8 +2592,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2613,8 +2603,8 @@
           }
         ]
       },
-      "result": {
-        "2": [
+      "2": {
+        "result": [
           {
             "x4_code": "(CAPTA)",
             "free_txt": []
@@ -2623,8 +2613,8 @@
       }
     },
     "005": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [

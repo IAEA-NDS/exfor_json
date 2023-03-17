@@ -76,38 +76,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RCA,65,151,1994)",
-          "free_txt": [],
-          "publication_year": "1994"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,4RUSFVE)",
-          "free_txt": [
-            " Lu-100 at the Institute For High Energy",
-            "Physics in Serpukhuv (RUSSIA)"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(4RUSFVE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RCA,65,151,1994)",
+        "free_txt": [],
+        "publication_year": "1994",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,4RUSFVE)",
+        "free_txt": [
+          " Lu-100 at the Institute For High Energy",
+          "Physics in Serpukhuv (RUSSIA)"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4RUSFVE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-204(P,X)82-PB-201,CUM,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(82-PB-204(P,X)82-PB-201,CUM,SIG)",
+        "children": [
+          {
             "code": [
               "82-PB-204",
               [
@@ -125,11 +120,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(82-PB-204(P,X)82-PB-200,CUM,SIG)",
+        "children": [
+          {
+            "code": [
+              "82-PB-204",
+              [
+                "P,X"
+              ],
+              "82-PB-200,CUM,SIG"
+            ],
+            "type": null,
+            "target": "82-PB-204",
+            "process": "P,X",
+            "sf49": "82-PB-200,CUM,SIG",
+            "sf4": "82-PB-200",
+            "sf5": "CUM",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(82-PB-204(P,X)82-PB-202-M,,SIG)",
+        "children": [
+          {
+            "code": [
+              "82-PB-204",
+              [
+                "P,X"
+              ],
+              "82-PB-202-M,,SIG"
+            ],
+            "type": null,
+            "target": "82-PB-204",
+            "process": "P,X",
+            "sf49": "82-PB-202-M,,SIG",
+            "sf4": "82-PB-202-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -213,32 +271,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-204(P,X)82-PB-200,CUM,SIG)",
-          "0": {
-            "code": [
-              "82-PB-204",
-              [
-                "P,X"
-              ],
-              "82-PB-200,CUM,SIG"
-            ],
-            "type": null,
-            "target": "82-PB-204",
-            "process": "P,X",
-            "sf49": "82-PB-200,CUM,SIG",
-            "sf4": "82-PB-200",
-            "sf5": "CUM",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -292,32 +324,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-204(P,X)82-PB-202-M,,SIG)",
-          "0": {
-            "code": [
-              "82-PB-204",
-              [
-                "P,X"
-              ],
-              "82-PB-202-M,,SIG"
-            ],
-            "type": null,
-            "target": "82-PB-204",
-            "process": "P,X",
-            "sf49": "82-PB-202-M,,SIG",
-            "sf4": "82-PB-202-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -364,8 +370,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -373,18 +379,14 @@
               "developed computer code overlaid Alice."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -395,10 +397,8 @@
               "average of three determinations."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,4RUSFVE)",
             "free_txt": [
@@ -406,10 +406,8 @@
               "Physics in Serpukhuv (RUSSIA)"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(STTA,EXTB,ACTIV)",
             "free_txt": []
@@ -431,18 +429,14 @@
               "Pb-200,Pb-201 and Pb-202."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(13-AL-27(P,X)11-NA-24,CUM,SIG,,,EVAL)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,O0306001,C.Deptula+,J,NKA,35,3,1990)",
             "free_txt": [
@@ -450,10 +444,8 @@
               "  analysis is given"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -470,10 +462,8 @@
               "second stack was 3.24 g/cm**2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -484,8 +474,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(81-TL-201,3.04D,DG,135.3,0.028,                 DG,167.4,0.106)",
             "free_txt": []
@@ -494,8 +484,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(82-PB-200,21.5HR,DG,147.6,0.377)",
             "free_txt": []
@@ -508,8 +498,8 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(82-PB-202-M,3.5HR,DG,422.1,0.855,                   DG,960.7,0.914)",
             "free_txt": []

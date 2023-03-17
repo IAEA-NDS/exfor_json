@@ -43,47 +43,43 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,42,(4),1540,199010)",
-          "free_txt": [
-            "  Main reference"
-          ],
-          "publication_year": "1990"
-        },
-        {
-          "x4_code": "(J,NSE,88,143,1984)",
-          "free_txt": [
-            "  Experimental details"
-          ],
-          "publication_year": "1984"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2GERJUL)",
-          "free_txt": [
-            "  Variable energy compact cyclotron",
-            "                 cv28"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2GERJUL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,42,(4),1540,199010)",
+        "free_txt": [
+          "  Main reference"
+        ],
+        "publication_year": "1990",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NSE,88,143,1984)",
+        "free_txt": [
+          "  Experimental details"
+        ],
+        "publication_year": "1984",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2GERJUL)",
+        "free_txt": [
+          "  Variable energy compact cyclotron",
+          "                 cv28"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2GERJUL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(22-TI-46(N,P)21-SC-46,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(22-TI-46(N,P)21-SC-46,,SIG)",
+        "children": [
+          {
             "code": [
               "22-TI-46",
               [
@@ -101,11 +97,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "      Irradiation Time is   From 4 to 8 Hours"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "      Irradiation Time is   From 4 to 8 Hours"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(22-TI-46(N,P)21-SC-46-M,,SIG)",
+        "children": [
+          {
+            "code": [
+              "22-TI-46",
+              [
+                "N,P"
+              ],
+              "21-SC-46-M,,SIG"
+            ],
+            "type": null,
+            "target": "22-TI-46",
+            "process": "N,P",
+            "sf49": "21-SC-46-M,,SIG",
+            "sf4": "21-SC-46-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Sample was Quickly  Transferred from the Irradiation Position to the  Detector. Counting Started 25 Sec After Irradiation"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -161,32 +192,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(22-TI-46(N,P)21-SC-46-M,,SIG)",
-          "0": {
-            "code": [
-              "22-TI-46",
-              [
-                "N,P"
-              ],
-              "21-SC-46-M,,SIG"
-            ],
-            "type": null,
-            "target": "22-TI-46",
-            "process": "N,P",
-            "sf49": "21-SC-46-M,,SIG",
-            "sf4": "21-SC-46-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Sample was Quickly  Transferred from the Irradiation Position to the  Detector. Counting Started 25 Sec After Irradiation"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -244,26 +249,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(THEO)",
             "free_txt": [
               "  Nuclear  model calculation was performed"
             ]
           }
-        ]
-      },
-      "decay-mon": {
-        "2": [
-          {
-            "x4_code": "(11-NA-24,15.0HR,DG,1368.,1.0)",
-            "free_txt": []
-          }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -271,20 +266,16 @@
               "        using standard gamma-source"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
               "  Total error is given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2GERJUL)",
             "free_txt": [
@@ -292,20 +283,16 @@
               "                 cv28"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": [
               "  D2 gas target was used"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -314,10 +301,8 @@
               " 10.5 MeV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -331,30 +316,8 @@
               "         monitor foils was used"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "2": [
-          {
-            "x4_code": "(,H.VONACH,R,IAEA/TA-227,1983)",
-            "free_txt": [
-              "  First",
-              " monitor'S cross-section for 56Fe(N,P)56Mn was taken",
-              " from dosimetry file ENDF/B-V, 1979"
-            ]
-          }
-        ]
-      },
-      "monitor": {
-        "2": [
-          {
-            "x4_code": "(13-AL-27(N,A)11-NA-24,,SIG)",
-            "free_txt": []
-          }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -364,10 +327,8 @@
               " of the sample"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -379,11 +340,49 @@
             "free_txt": []
           }
         ]
+      },
+      "1": {
+        "decay-mon": [
+          {
+            "x4_code": "(25-MN-56,2.58HR,DG,847.,0.9887)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(26-FE-56(N,P)25-MN-56,,SIG)",
+            "free_txt": []
+          }
+        ]
+      },
+      "2": {
+        "decay-mon": [
+          {
+            "x4_code": "(11-NA-24,15.0HR,DG,1368.,1.0)",
+            "free_txt": []
+          }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(,H.VONACH,R,IAEA/TA-227,1983)",
+            "free_txt": [
+              "  First",
+              " monitor'S cross-section for 56Fe(N,P)56Mn was taken",
+              " from dosimetry file ENDF/B-V, 1979"
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(13-AL-27(N,A)11-NA-24,,SIG)",
+            "free_txt": []
+          }
+        ]
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(21-SC-46-G,84.0D,DG,889.,1.0,                  DG,1121.,1.0)",
             "free_txt": []
@@ -392,18 +391,16 @@
       }
     },
     "003": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
               "  Decay Properties Investigated"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -412,10 +409,8 @@
               " Determined Using 123Iodine Source, E-Gamma=159 KeV."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(21-SC-46-M,18.7SEC,DG,143.,0.621)",
             "free_txt": []

@@ -29,44 +29,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ZET,32,251,1957)",
-          "free_txt": [],
-          "publication_year": "1957"
-        },
-        {
-          "x4_code": "(J,JET,5,201,1957)",
-          "free_txt": [
-            " English translation"
-          ],
-          "publication_year": "1957"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,4UKRKFT)",
-          "free_txt": [
-            " The electrostatic generator"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(4UKRKFT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ZET,32,251,1957)",
+        "free_txt": [],
+        "publication_year": "1957",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JET,5,201,1957)",
+        "free_txt": [
+          " English translation"
+        ],
+        "publication_year": "1957",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,4UKRKFT)",
+        "free_txt": [
+          " The electrostatic generator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(4UKRKFT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(D,N)7-N-13,,PY,,TT)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(D,N)7-N-13,,PY,,TT)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -84,11 +80,74 @@
             "sf7": null,
             "sf8": "TT",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-12(P,G)7-N-13,,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "P,G"
+              ],
+              "7-N-13,,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "P,G",
+            "sf49": "7-N-13,,SIG,,,DERIV",
+            "sf4": "7-N-13",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-12(D,N)7-N-13,,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "D,N"
+              ],
+              "7-N-13,,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "D,N",
+            "sf49": "7-N-13,,SIG,,,DERIV",
+            "sf4": "7-N-13",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -121,32 +180,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(P,G)7-N-13,,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "P,G"
-              ],
-              "7-N-13,,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "P,G",
-            "sf49": "7-N-13,,SIG,,,DERIV",
-            "sf4": "7-N-13",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -172,32 +205,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(D,N)7-N-13,,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "D,N"
-              ],
-              "7-N-13,,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "D,N",
-            "sf49": "7-N-13,,SIG,,,DERIV",
-            "sf4": "7-N-13",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -221,8 +228,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -231,10 +238,8 @@
               " on the y-axis lead to negative yield values."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -253,28 +258,22 @@
               "emitted by the target."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,4UKRKFT)",
             "free_txt": [
               " The electrostatic generator"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,BSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -285,16 +284,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(7-N-13,10.2MIN,B+)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -303,10 +300,8 @@
               "determined cross sections do not exceed 10%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -317,18 +312,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Differentiation of thick target yield"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE,TABLE)",
             "free_txt": [
@@ -340,18 +333,16 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Differentiation of thick target yield"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

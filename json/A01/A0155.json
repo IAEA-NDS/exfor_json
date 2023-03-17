@@ -52,37 +52,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PRL,48,1664,1982)",
-          "free_txt": [],
-          "publication_year": "1982"
-        }
-      ]
-    },
-    "facilities": {
-      "2": [
-        {
-          "x4_code": "(VDGT,1USACAL)",
-          "free_txt": [
-            " For activation method."
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(1USACAL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PRL,48,1664,1982)",
+        "free_txt": [],
+        "publication_year": "1982",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,1USACAL)",
+        "free_txt": [
+          " For activation method."
+        ],
+        "pointer": "2",
+        "facility_type": "(VDGT)",
+        "institute": "(1USACAL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(HE3,G)4-BE-7,,SIG,,SFC)",
-          "0": {
+      "0": {
+        "x4_code": "(2-HE-4(HE3,G)4-BE-7,,SIG,,SFC)",
+        "children": [
+          {
             "code": [
               "2-HE-4",
               [
@@ -100,11 +95,18 @@
             "sf7": null,
             "sf8": "SFC",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-ERR-DIG"
@@ -210,16 +212,44 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(4-BE-7,,DG,477.,0.1)",
             "free_txt": []
           }
+        ],
+        "detector": [
+          {
+            "x4_code": "(GELI)",
+            "free_txt": [
+              " 100-cm3 Ge(Li) detector"
+            ]
+          }
+        ],
+        "rad-det": [
+          {
+            "x4_code": "(4-BE-7,DG)",
+            "free_txt": []
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(M,,M.R.Dwarakanath+,J,PR/C,4,1532,1971)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig. 1 from Phys.Rev.Lett.,48(1982)1664"
+            ]
+          }
         ]
       },
-      "detector": {
-        "1": [
+      "1": {
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -228,20 +258,40 @@
               "integration."
             ]
           }
+        ],
+        "facility": [
+          {
+            "x4_code": "(VDG,1USACAL)",
+            "free_txt": [
+              " Prompt gamma-rays."
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(GSPEC)",
+            "free_txt": []
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Windowless, recirculating, 3He gas target."
+            ]
+          }
         ]
       },
-      "facility": {
-        "2": [
+      "2": {
+        "facility": [
           {
             "x4_code": "(VDGT,1USACAL)",
             "free_txt": [
               " For activation method."
             ]
           }
-        ]
-      },
-      "method": {
-        "2": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -253,26 +303,8 @@
               "and 2.348 MeV, respectively."
             ]
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
-          {
-            "x4_code": "(4-BE-7,DG)",
-            "free_txt": []
-          }
-        ]
-      },
-      "rel-ref": {
-        "0": [
-          {
-            "x4_code": "(M,,M.R.Dwarakanath+,J,PR/C,4,1532,1971)",
-            "free_txt": []
-          }
-        ]
-      },
-      "sample": {
-        "2": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -280,31 +312,19 @@
             ]
           }
         ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": "(CURVE)",
-            "free_txt": [
-              " Fig. 1 from Phys.Rev.Lett.,48(1982)1664"
-            ]
-          }
-        ]
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information about source of uncertainty"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [

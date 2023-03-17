@@ -70,46 +70,42 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,87,054617,2013)",
-          "free_txt": [],
-          "publication_year": "2013"
-        },
-        {
-          "x4_code": "(S,AIP-1524,58,2013)",
-          "free_txt": [
-            " Preliminary data"
-          ],
-          "publication_year": "2013"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USAFSU)",
-          "free_txt": [
-            " Experiment at the John D. Fox",
-            "Superconducting Accelerator Laboratory at Florida",
-            "State University using RESOLUT facility."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USAFSU)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,87,054617,2013)",
+        "free_txt": [],
+        "publication_year": "2013",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(S,AIP-1524,58,2013)",
+        "free_txt": [
+          " Preliminary data"
+        ],
+        "publication_year": "2013",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USAFSU)",
+        "free_txt": [
+          " Experiment at the John D. Fox",
+          "Superconducting Accelerator Laboratory at Florida",
+          "State University using RESOLUT facility."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USAFSU)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(4-BE-7,EL)1-H-1,,DA)=(4-BE-7(P,EL)4-BE-7,,DA))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-1(4-BE-7,EL)1-H-1,,DA)=(4-BE-7(P,EL)4-BE-7,,DA))",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -128,7 +124,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "4-BE-7",
               [
@@ -146,11 +142,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((1-H-1(4-BE-7,INL)1-H-1,,DA,P)=(4-BE-7(P,INL)4-BE-7,,DA))",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "4-BE-7,INL"
+              ],
+              "1-H-1,,DA,P"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "4-BE-7,INL",
+            "sf49": "1-H-1,,DA,P",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "P",
+            "sf8": null,
+            "sf9": null
           },
-          "type": "=",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "4-BE-7",
+              [
+                "P,INL"
+              ],
+              "4-BE-7,,DA"
+            ],
+            "type": null,
+            "target": "4-BE-7",
+            "process": "P,INL",
+            "sf49": "4-BE-7,,DA",
+            "sf4": "4-BE-7",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-ERR"
@@ -626,51 +676,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(4-BE-7,INL)1-H-1,,DA,P)=(4-BE-7(P,INL)4-BE-7,,DA))",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "4-BE-7,INL"
-              ],
-              "1-H-1,,DA,P"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "4-BE-7,INL",
-            "sf49": "1-H-1,,DA,P",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "P",
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "4-BE-7",
-              [
-                "P,INL"
-              ],
-              "4-BE-7,,DA"
-            ],
-            "type": null,
-            "target": "4-BE-7",
-            "process": "P,INL",
-            "sf49": "4-BE-7,,DA",
-            "sf4": "4-BE-7",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG-ERR"
@@ -1200,8 +1205,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SISD)",
             "free_txt": [
@@ -1218,20 +1223,16 @@
               "detector were 500 mu-m each."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USAFSU)",
             "free_txt": [
@@ -1240,10 +1241,8 @@
               "State University using RESOLUT facility."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1261,10 +1260,8 @@
               "quadrupole magnets and a superconducting resonator."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": [
@@ -1281,18 +1278,14 @@
               "scattering events."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(3-LI-7(P,EL)3-LI-7,,DA)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1308,8 +1301,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1322,8 +1315,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

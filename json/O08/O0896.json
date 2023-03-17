@@ -156,39 +156,34 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,65,044608,2002)",
-          "free_txt": [],
-          "publication_year": "2002"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,2SWDUPP)",
-          "free_txt": [
-            " The experiment was performed at the",
-            " CELSIUS storage ring, using the WASA/PROMICE",
-            "experimental setup."
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(2SWDUPP)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,65,044608,2002)",
+        "free_txt": [],
+        "publication_year": "2002",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,2SWDUPP)",
+        "free_txt": [
+          " The experiment was performed at the",
+          " CELSIUS storage ring, using the WASA/PROMICE",
+          "experimental setup."
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(2SWDUPP)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(P,HE3)0-ET-0,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-2(P,HE3)0-ET-0,,DA)",
+        "children": [
+          {
             "code": [
               "1-H-2",
               [
@@ -206,11 +201,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-2(P,HE3)0-ET-0,,DA,,COS/RSD)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "P,HE3"
+              ],
+              "0-ET-0,,DA,,COS/RSD"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "P,HE3",
+            "sf49": "0-ET-0,,DA,,COS/RSD",
+            "sf4": "0-ET-0",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "COS/RSD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-2(P,HE3)0-ET-0,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "P,HE3"
+              ],
+              "0-ET-0,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "P,HE3",
+            "sf49": "0-ET-0,,SIG",
+            "sf4": "0-ET-0",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-CM"
@@ -258,32 +316,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(P,HE3)0-ET-0,,DA,,COS/RSD)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "P,HE3"
-              ],
-              "0-ET-0,,DA,,COS/RSD"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "P,HE3",
-            "sf49": "0-ET-0,,DA,,COS/RSD",
-            "sf4": "0-ET-0",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "COS/RSD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -375,32 +407,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(P,HE3)0-ET-0,,SIG)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "P,HE3"
-              ],
-              "0-ET-0,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "P,HE3",
-            "sf49": "0-ET-0,,SIG",
-            "sf4": "0-ET-0",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -460,18 +466,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
               "Missing mass distributions"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SPEC)",
             "free_txt": [
@@ -487,20 +491,16 @@
               "described in REL-REF."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,2SWDUPP)",
             "free_txt": [
@@ -509,10 +509,8 @@
               "experimental setup."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB)",
             "free_txt": []
@@ -523,18 +521,14 @@
               " He-3 and gamma rays from  ETA  meson decay."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(HE3,G)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,H.CALEN+,J,NIM/A,374,57,1996)",
             "free_txt": [
@@ -549,10 +543,8 @@
               "measurement of energy."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -564,8 +556,8 @@
     },
     "002": {},
     "003": {
-      "misc-col": {
-        "0": [
+      "0": {
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -576,16 +568,14 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTAD)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [

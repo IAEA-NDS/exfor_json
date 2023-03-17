@@ -64,40 +64,36 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,EUL,103,12001,2013)",
-          "free_txt": [
-            "#doi:10.1209/0295-5075/103/12001"
-          ],
-          "publication_year": "2013"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2FR ILL)",
-          "free_txt": [
-            "  IN4 TOF spectrometer at the Institute",
-            "Laue Langevin (ILL)."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2FR ILL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,EUL,103,12001,2013)",
+        "free_txt": [
+          "#doi:10.1209/0295-5075/103/12001"
+        ],
+        "publication_year": "2013",
+        "pointer": "0",
+        "doi": "10.1209/0295-5075/103/12001"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2FR ILL)",
+        "free_txt": [
+          "  IN4 TOF spectrometer at the Institute",
+          "Laue Langevin (ILL)."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2FR ILL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((7-N-14(N,THS)7-N-14,,SIG)/(7-N-15(N,THS)7-N-15,,SIG))",
-          "0": {
+      "0": {
+        "x4_code": "((7-N-14(N,THS)7-N-14,,SIG)/(7-N-15(N,THS)7-N-15,,SIG))",
+        "children": [
+          {
             "code": [
               "7-N-14",
               [
@@ -116,7 +112,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "7-N-15",
               [
@@ -134,11 +130,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(7-N-14(N,THS)7-N-14,,DE)",
+        "children": [
+          {
+            "code": [
+              "7-N-14",
+              [
+                "N,THS"
+              ],
+              "7-N-14,,DE"
+            ],
+            "type": null,
+            "target": "7-N-14",
+            "process": "N,THS",
+            "sf49": "7-N-14,,DE",
+            "sf4": "7-N-14",
+            "sf5": null,
+            "sf6": "DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Differential scattering cross-section. E > 0 correspond to energy loss, E < 0 to energy gain."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(7-N-15(N,THS)7-N-15,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "7-N-15",
+              [
+                "N,THS"
+              ],
+              "7-N-15,PAR,SIG"
+            ],
+            "type": null,
+            "target": "7-N-15",
+            "process": "N,THS",
+            "sf49": "7-N-15,PAR,SIG",
+            "sf4": "7-N-15",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "The UCN production cross-section in 15N2 forE-UCN < 181 neV versus incident neutron energy,energy range 2-15 millieV."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "WVE-LN"
@@ -167,32 +226,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(7-N-14(N,THS)7-N-14,,DE)",
-          "0": {
-            "code": [
-              "7-N-14",
-              [
-                "N,THS"
-              ],
-              "7-N-14,,DE"
-            ],
-            "type": null,
-            "target": "7-N-14",
-            "process": "N,THS",
-            "sf49": "7-N-14,,DE",
-            "sf4": "7-N-14",
-            "sf5": null,
-            "sf6": "DE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Differential scattering cross-section. E > 0 correspond to energy loss, E < 0 to energy gain."
-        }
-      },
       "common": {
         "heads": [
           "WVE-LN"
@@ -209,32 +242,6 @@
       "data": null
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(7-N-15(N,THS)7-N-15,PAR,SIG)",
-          "0": {
-            "code": [
-              "7-N-15",
-              [
-                "N,THS"
-              ],
-              "7-N-15,PAR,SIG"
-            ],
-            "type": null,
-            "target": "7-N-15",
-            "process": "N,THS",
-            "sf49": "7-N-15,PAR,SIG",
-            "sf4": "7-N-15",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "The UCN production cross-section in 15N2 forE-UCN < 181 neV versus incident neutron energy,energy range 2-15 millieV."
-        }
-      },
       "common": {
         "heads": [
           "E-MAX"
@@ -253,8 +260,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -262,10 +269,8 @@
               "at 11 K temperature."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -273,10 +278,8 @@
               "scattering vanadium sample."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -284,10 +287,8 @@
               "statistics."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2FR ILL)",
             "free_txt": [
@@ -295,28 +296,22 @@
               "Laue Langevin (ILL)."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Incident neutrons of wavelength 2.2 Angstrom."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -332,8 +327,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -344,8 +339,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -356,20 +351,16 @@
               "molecule; dSIG/dE - in arbitrary normalization."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               " Sample temperature 11 K ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(UNOBT)",
             "free_txt": [
@@ -380,8 +371,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -392,30 +383,24 @@
               "data) to determine the absolute 15N(2) cross-sections."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E-MAX,N)",
             "free_txt": [
               " Ultra-cold neutrons."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               " Sample temperature 5.9 K ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(UNOBT)",
             "free_txt": [

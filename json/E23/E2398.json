@@ -192,38 +192,95 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,78,024306,2008)",
-          "free_txt": [],
-          "publication_year": "2008"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,PR/C,78,024306,2008)",
+        "free_txt": [],
+        "publication_year": "2008",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2JPNIPC)",
+        "free_txt": [
+          " To accelerate primary 24Mg beam to 135",
+          "                MeV/A, bombarding a 135-mm-nickel",
+          "                target at Ring cyclotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2JPNIPC)"
+      },
+      {
+        "x4_code": "(PRJFS,2JPNIPC)",
+        "free_txt": [
+          " To separate secondary 20Mg beam from",
+          "                production nickel target at RIPS",
+          "                facility"
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2JPNIPC)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(82-PB-0(12-MG-20,INL)82-PB-0,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "82-PB-0",
+              [
+                "12-MG-20,INL"
+              ],
+              "82-PB-0,PAR,SIG"
+            ],
+            "type": null,
+            "target": "82-PB-0",
+            "process": "12-MG-20,INL",
+            "sf49": "82-PB-0,PAR,SIG",
+            "sf4": "82-PB-0",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2JPNIPC)",
-          "free_txt": [
-            " To accelerate primary 24Mg beam to 135",
-            "                MeV/A, bombarding a 135-mm-nickel",
-            "                target at Ring cyclotron"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2JPNIPC)"
-        },
-        {
-          "x4_code": "(PRJFS,2JPNIPC)",
-          "free_txt": [
-            " To separate secondary 20Mg beam from",
-            "                production nickel target at RIPS",
-            "                facility"
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(2JPNIPC)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(6-C-0(12-MG-20,INL)6-C-0,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-0",
+              [
+                "12-MG-20,INL"
+              ],
+              "6-C-0,PAR,SIG"
+            ],
+            "type": null,
+            "target": "6-C-0",
+            "process": "12-MG-20,INL",
+            "sf49": "6-C-0,PAR,SIG",
+            "sf4": "6-C-0",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -263,32 +320,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-0(12-MG-20,INL)82-PB-0,PAR,SIG)",
-          "0": {
-            "code": [
-              "82-PB-0",
-              [
-                "12-MG-20,INL"
-              ],
-              "82-PB-0,PAR,SIG"
-            ],
-            "type": null,
-            "target": "82-PB-0",
-            "process": "12-MG-20,INL",
-            "sf49": "82-PB-0,PAR,SIG",
-            "sf4": "82-PB-0",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -310,32 +341,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-0(12-MG-20,INL)6-C-0,PAR,SIG)",
-          "0": {
-            "code": [
-              "6-C-0",
-              [
-                "12-MG-20,INL"
-              ],
-              "6-C-0,PAR,SIG"
-            ],
-            "type": null,
-            "target": "6-C-0",
-            "process": "12-MG-20,INL",
-            "sf49": "6-C-0,PAR,SIG",
-            "sf4": "6-C-0",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -359,8 +364,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SI)",
             "free_txt": [
@@ -373,18 +378,14 @@
               " To detect deexcitation gamma-rays"
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E-LVL,12-MG-20)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -405,10 +406,8 @@
               "        gamma-rays"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2JPNIPC)",
             "free_txt": [
@@ -425,28 +424,22 @@
               "                facility"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Beam intensity is 500 PPS."
             ]
           }
-        ]
-      },
-      "level-prop": {
-        "0": [
+        ],
+        "level-prop": [
           {
             "x4_code": "(12-MG-20,E-LVL=1.61,SPIN=2.,PARITY=+1.)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -457,18 +450,14 @@
             "x4_code": "(TOF,EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G,12-MG-20)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -481,18 +470,16 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Target-thickness is 226 mg/cm2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -503,18 +490,16 @@
       }
     },
     "003": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Target-thickness is 118 mg/cm2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

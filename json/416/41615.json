@@ -86,49 +86,46 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PPN/L,13,504,2016)",
-          "free_txt": [
-            " Issue 4 .",
-            "Engl.translation of:"
-          ],
-          "publication_year": "2016",
-          "doi": "10.1134/S154747711604004X"
-        },
-        {
-          "x4_code": "(J,FCY/L,13,793,2016)",
-          "free_txt": [
-            " Issue 4."
-          ],
-          "publication_year": "2016"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(NGEN,4ZZZDUB)",
-          "free_txt": [
-            " Portable ING-27 neutron generator",
-            " designed and fabricated at VNIIA, Moscow."
-          ],
-          "facility_type": "(NGEN)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PPN/L,13,504,2016)",
+        "free_txt": [
+          " Issue 4 .",
+          "#doi:10.1134/S154747711604004X",
+          "Engl.translation of:"
+        ],
+        "publication_year": "2016",
+        "pointer": "0",
+        "doi": "10.1134/S154747711604004X"
+      },
+      {
+        "x4_code": "(J,FCY/L,13,793,2016)",
+        "free_txt": [
+          " Issue 4."
+        ],
+        "publication_year": "2016",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(NGEN,4ZZZDUB)",
+        "free_txt": [
+          " Portable ING-27 neutron generator",
+          " designed and fabricated at VNIIA, Moscow."
+        ],
+        "pointer": "0",
+        "facility_type": "(NGEN)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA,G,COS/RSD)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA,G,COS/RSD)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -146,11 +143,74 @@
             "sf7": "G",
             "sf8": "COS/RSD",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA,G,RSD)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "N,INL"
+              ],
+              "6-C-12,PAR,DA,G,RSD"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "N,INL",
+            "sf49": "6-C-12,PAR,DA,G,RSD",
+            "sf4": "6-C-12",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "G",
+            "sf8": "RSD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Anisotropy = Number(Theta)/Number(90deg)"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA,G,LEG/RS)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "N,INL"
+              ],
+              "6-C-12,PAR,DA,G,LEG/RS"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "N,INL",
+            "sf49": "6-C-12,PAR,DA,G,LEG/RS",
+            "sf4": "6-C-12",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "G",
+            "sf8": "LEG/RS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN",
@@ -197,32 +257,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA,G,RSD)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "N,INL"
-              ],
-              "6-C-12,PAR,DA,G,RSD"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "N,INL",
-            "sf49": "6-C-12,PAR,DA,G,RSD",
-            "sf4": "6-C-12",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "G",
-            "sf8": "RSD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Anisotropy = Number(Theta)/Number(90deg)"
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -296,32 +330,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA,G,LEG/RS)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "N,INL"
-              ],
-              "6-C-12,PAR,DA,G,LEG/RS"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "N,INL",
-            "sf49": "6-C-12,PAR,DA,G,LEG/RS",
-            "sf4": "6-C-12",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "G",
-            "sf8": "LEG/RS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -370,8 +378,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -385,10 +393,8 @@
               " Background(E) - background of random events."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SI)",
             "free_txt": [
@@ -405,10 +411,8 @@
               "~ 4.4 deg ."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(NGEN,4ZZZDUB)",
             "free_txt": [
@@ -416,18 +420,14 @@
               " designed and fabricated at VNIIA, Moscow."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -435,10 +435,8 @@
               "coincidences."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -449,8 +447,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -458,29 +456,14 @@
               " W(THETA)=1+a*cos(Theta)**2 - b*cos(THETA)**4"
             ]
           }
-        ]
-      },
-      "correction": {
-        "2": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              " For self-absorption in sample,",
-              " for angular resolution of exp.setup ."
-            ]
-          }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E,G)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -488,10 +471,8 @@
               "Systematical uncertainties are under study."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,11229001,J.D.Anderson+,J,PR,111,572,1958)",
             "free_txt": [
@@ -506,10 +487,8 @@
               "Agree in the frames of uncertainties."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -526,29 +505,36 @@
             ]
           }
         ]
+      },
+      "2": {
+        "correction": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " For self-absorption in sample,",
+              " for angular resolution of exp.setup ."
+            ]
+          }
+        ]
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E,G)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical error"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,11229001,J.D.Anderson+,J,PR,111,572,1958)",
             "free_txt": [
@@ -561,10 +547,8 @@
               "Agree in the frames of uncertainties."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -577,8 +561,8 @@
       }
     },
     "004": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -588,31 +572,16 @@
               " 2. - 6.495E-02, 4. - -4.722E-02 (received form author)"
             ]
           }
-        ]
-      },
-      "correction": {
-        "2": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              " For self-absorption in sample,",
-              " for angular resolution of exp.setup ."
-            ]
-          }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(O,41660001,D.N.Grozdanov+,J,PAN,81,588,2018)",
             "free_txt": [
@@ -627,10 +596,8 @@
               "#doi:10.1134/S0044002718050069"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,41615003)",
             "free_txt": [
@@ -642,6 +609,17 @@
             "free_txt": [
               " Table 1 of REL-REF .",
               "        From author"
+            ]
+          }
+        ]
+      },
+      "2": {
+        "correction": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " For self-absorption in sample,",
+              " for angular resolution of exp.setup ."
             ]
           }
         ]

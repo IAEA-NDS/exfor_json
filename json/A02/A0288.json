@@ -41,45 +41,41 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,413,432,1984)",
-          "free_txt": [],
-          "publication_year": "1984"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2JPNTOK)",
-          "free_txt": [
-            " 66 MeV alpha-beam"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2JPNTOK)"
-        },
-        {
-          "x4_code": "(ISOCY,2JPNOSA)",
-          "free_txt": [
-            " 109 MeV and 119 MeV alpha-beam"
-          ],
-          "facility_type": "(ISOCY)",
-          "institute": "(2JPNOSA)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,413,432,1984)",
+        "free_txt": [],
+        "publication_year": "1984",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2JPNTOK)",
+        "free_txt": [
+          " 66 MeV alpha-beam"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2JPNTOK)"
+      },
+      {
+        "x4_code": "(ISOCY,2JPNOSA)",
+        "free_txt": [
+          " 109 MeV and 119 MeV alpha-beam"
+        ],
+        "pointer": "0",
+        "facility_type": "(ISOCY)",
+        "institute": "(2JPNOSA)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(A,2P)79-AU-199,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(79-AU-197(A,2P)79-AU-199,,SIG)",
+        "children": [
+          {
             "code": [
               "79-AU-197",
               [
@@ -97,11 +93,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(79-AU-197(A,2N)81-TL-199,,SIG)",
+        "children": [
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "A,2N"
+              ],
+              "81-TL-199,,SIG"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "A,2N",
+            "sf49": "81-TL-199,,SIG",
+            "sf4": "81-TL-199",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -146,32 +177,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(A,2N)81-TL-199,,SIG)",
-          "0": {
-            "code": [
-              "79-AU-197",
-              [
-                "A,2N"
-              ],
-              "81-TL-199,,SIG"
-            ],
-            "type": null,
-            "target": "79-AU-197",
-            "process": "A,2N",
-            "sf49": "81-TL-199,,SIG",
-            "sf4": "81-TL-199",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -212,24 +217,20 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(G-SPC)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(79-AU-196-G,6.18D)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SPEC)",
             "free_txt": [
@@ -238,20 +239,16 @@
               "at 122 keV (57Co)."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information about source of uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2JPNTOK)",
             "free_txt": [
@@ -264,26 +261,20 @@
               " 109 MeV and 119 MeV alpha-beam"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(STTA,EDEG,BCINT)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(A,X)79-AU-196,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -295,16 +286,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(79-AU-199,3.14D,DG,158.4)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -315,16 +304,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(81-TL-199,7.42HR,DG,247.3,,                  DG,455.5)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

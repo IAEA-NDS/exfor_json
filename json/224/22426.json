@@ -84,34 +84,91 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "((S,JAERI-C-2000-005,20,2000)=(S,INDC(JPN)-185,20,2000))",
-          "free_txt": [],
-          "publication_year": "2000"
-        },
-        {
-          "x4_code": "((S,JAERI-C-99-002,176,1999)=(S,INDC(JPN)-182,176,1999))",
-          "free_txt": [
-            " Data are given"
-          ],
-          "publication_year": "1999"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "((S,JAERI-C-2000-005,20,2000)=(S,INDC(JPN)-185,20,2000))",
+        "free_txt": [],
+        "publication_year": "2000",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((S,JAERI-C-99-002,176,1999)=(S,INDC(JPN)-182,176,1999))",
+        "free_txt": [
+          " Data are given"
+        ],
+        "publication_year": "1999",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2JPNYOK)",
+        "free_txt": [
+          " TRIGA MARK-II Research Reactor of",
+          "               Rikkyo University"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2JPNYOK)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(53-I-127(N,G)53-I-128,,SIG)",
+        "children": [
+          {
+            "code": [
+              "53-I-127",
+              [
+                "N,G"
+              ],
+              "53-I-128,,SIG"
+            ],
+            "type": null,
+            "target": "53-I-127",
+            "process": "N,G",
+            "sf49": "53-I-128,,SIG",
+            "sf4": "53-I-128",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "   Sigma at V0=2200 m/sec"
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2JPNYOK)",
-          "free_txt": [
-            " TRIGA MARK-II Research Reactor of",
-            "               Rikkyo University"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2JPNYOK)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(53-I-127(N,G)53-I-128,,RI)",
+        "children": [
+          {
+            "code": [
+              "53-I-127",
+              [
+                "N,G"
+              ],
+              "53-I-128,,RI"
+            ],
+            "type": null,
+            "target": "53-I-127",
+            "process": "N,G",
+            "sf49": "53-I-128,,RI",
+            "sf4": "53-I-128",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -171,32 +228,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(53-I-127(N,G)53-I-128,,SIG)",
-          "0": {
-            "code": [
-              "53-I-127",
-              [
-                "N,G"
-              ],
-              "53-I-128,,SIG"
-            ],
-            "type": null,
-            "target": "53-I-127",
-            "process": "N,G",
-            "sf49": "53-I-128,,SIG",
-            "sf4": "53-I-128",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "   Sigma at V0=2200 m/sec"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -223,32 +254,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(53-I-127(N,G)53-I-128,,RI)",
-          "0": {
-            "code": [
-              "53-I-127",
-              [
-                "N,G"
-              ],
-              "53-I-128,,RI"
-            ],
-            "type": null,
-            "target": "53-I-127",
-            "process": "N,G",
-            "sf49": "53-I-128,,RI",
-            "sf4": "53-I-128",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -277,16 +282,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(53-I-128,24.72MIN)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -295,10 +298,8 @@
               "at 1.33 MeV"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -363,10 +364,8 @@
               "         Wires, Au and Co"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2JPNYOK)",
             "free_txt": [
@@ -374,36 +373,28 @@
               "               Rikkyo University"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Thermal spectrum of the Reactor"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(27-CO-59(N,G)27-CO-60,,SIG)",
             "free_txt": []
@@ -412,20 +403,16 @@
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,22819001,S.Nakamura+,J,NST,33,283,1996)",
             "free_txt": [
               "                                     Experim.details"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -448,10 +435,8 @@
               " solution."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

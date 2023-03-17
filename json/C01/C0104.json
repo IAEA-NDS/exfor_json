@@ -63,35 +63,30 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PRL,69,1896,1992)",
-          "free_txt": [],
-          "publication_year": "1992"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,1CANQU)",
-          "free_txt": [],
-          "facility_type": "(VDG)",
-          "institute": "(1CANQU)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PRL,69,1896,1992)",
+        "free_txt": [],
+        "publication_year": "1992",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,1CANQU)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(1CANQU)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(A,G)8-O-16,EP,SIG,,SFC)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(A,G)8-O-16,EP,SIG,,SFC)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -109,11 +104,65 @@
             "sf7": null,
             "sf8": "SFC",
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((6-C-12(A,G)8-O-16,EP,SIG)//(6-C-12(A,G)8-O-16,EP,SIG))",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "A,G"
+              ],
+              "8-O-16,EP,SIG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "A,G",
+            "sf49": "8-O-16,EP,SIG",
+            "sf4": "8-O-16",
+            "sf5": "EP",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "6-C-12",
+              [
+                "A,G"
+              ],
+              "8-O-16,EP,SIG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "A,G",
+            "sf49": "8-O-16,EP,SIG",
+            "sf4": "8-O-16",
+            "sf5": "EP",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -257,51 +306,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((6-C-12(A,G)8-O-16,EP,SIG)//(6-C-12(A,G)8-O-16,EP,SIG))",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "A,G"
-              ],
-              "8-O-16,EP,SIG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "A,G",
-            "sf49": "8-O-16,EP,SIG",
-            "sf4": "8-O-16",
-            "sf5": "EP",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "6-C-12",
-              [
-                "A,G"
-              ],
-              "8-O-16,EP,SIG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "A,G",
-            "sf49": "8-O-16,EP,SIG",
-            "sf4": "8-O-16",
-            "sf5": "EP",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "POLAR-NM",
@@ -397,8 +401,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -407,10 +411,8 @@
               " produce a relative yield curve."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -422,10 +424,8 @@
               " present data."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GE-IN)",
             "free_txt": [
@@ -436,10 +436,8 @@
               " target."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -447,26 +445,20 @@
               " several runs."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,1CANQU)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(F0580001,A.Redder+,J,NP/A,462,385,1987)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(6-C-12(A,G)8-O-16,,SIG)",
             "free_txt": [
@@ -475,10 +467,8 @@
               " previous works as determined by Redder et al."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -488,10 +478,8 @@
               "pure gold (16 to 18 mg/cm**2) had been evaporated."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(SPSDD)",
             "free_txt": [

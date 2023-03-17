@@ -66,41 +66,36 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "((S,JAERI-C-2000-005,137,2000)=(S,INDC(JPN)-185,137,2000))",
-          "free_txt": [
-            " Main Reference"
-          ],
-          "publication_year": "2000"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM,2JPNTOH)",
-          "free_txt": [
-            " 4.5 MV Dynamitron Facility",
-            "        ion beam is of 2 MHz repetition rate, and",
-            "        3 - 3.5 uA current."
-          ],
-          "facility_type": "(DYNAM)",
-          "institute": "(2JPNTOH)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((S,JAERI-C-2000-005,137,2000)=(S,INDC(JPN)-185,137,2000))",
+        "free_txt": [
+          " Main Reference"
+        ],
+        "publication_year": "2000",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM,2JPNTOH)",
+        "free_txt": [
+          " 4.5 MV Dynamitron Facility",
+          "        ion beam is of 2 MHz repetition rate, and",
+          "        3 - 3.5 uA current."
+        ],
+        "pointer": "0",
+        "facility_type": "(DYNAM)",
+        "institute": "(2JPNTOH)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,F)0-NN-1,PR,KEM)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(N,F)0-NN-1,PR,KEM)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -118,11 +113,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(90-TH-232(N,F)0-NN-1,PR,KEM)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,F"
+              ],
+              "0-NN-1,PR,KEM"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,F",
+            "sf49": "0-NN-1,PR,KEM",
+            "sf4": "0-NN-1",
+            "sf5": "PR",
+            "sf6": "KEM",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "004": {
       "common": null,
       "data": {
         "heads": [
@@ -155,32 +185,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,F)0-NN-1,PR,KEM)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,F"
-              ],
-              "0-NN-1,PR,KEM"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,F",
-            "sf49": "0-NN-1,PR,KEM",
-            "sf4": "0-NN-1",
-            "sf5": "PR",
-            "sf6": "KEM",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -212,8 +216,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -224,10 +228,8 @@
               " scattering in sample (see REL-REF)"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -235,20 +237,16 @@
               "        NE213 detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  No information about source of uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM,2JPNTOH)",
             "free_txt": [
@@ -257,10 +255,8 @@
               "        3 - 3.5 uA current."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -280,20 +276,16 @@
               "   For 4.1 MeV neutron energy"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "   Flight path is 2 m"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,,Than Win+,J,NST,36,486,1999)",
             "free_txt": [
@@ -322,10 +314,8 @@
               "                    probable neutron energy compiled"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -338,8 +328,8 @@
       }
     },
     "004": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -348,10 +338,8 @@
               " aluminum can"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -368,8 +356,8 @@
       }
     },
     "006": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -378,10 +366,8 @@
               " aluminum can"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

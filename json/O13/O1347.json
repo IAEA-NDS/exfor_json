@@ -108,39 +108,34 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NIM/A,519,623,2004)",
-          "free_txt": [
-            "See: arXiv:nucl-ex/0310025 v1 27 Oct 2003 also."
-          ],
-          "publication_year": "2004"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2FR BRC)",
-          "free_txt": [
-            " 3 MV Van de Graaff"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2FR BRC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NIM/A,519,623,2004)",
+        "free_txt": [
+          "See: arXiv:nucl-ex/0310025 v1 27 Oct 2003 also."
+        ],
+        "publication_year": "2004",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2FR BRC)",
+        "free_txt": [
+          " 3 MV Van de Graaff"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2FR BRC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-13(P,G)7-N-14,,SPC,,RES/REL)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-13(P,G)7-N-14,,SPC,,RES/REL)",
+        "children": [
+          {
             "code": [
               "6-C-13",
               [
@@ -158,11 +153,74 @@
             "sf7": null,
             "sf8": "RES/REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-13(P,G)7-N-14,,SPC,,RES/REL)",
+        "children": [
+          {
+            "code": [
+              "6-C-13",
+              [
+                "P,G"
+              ],
+              "7-N-14,,SPC,,RES/REL"
+            ],
+            "type": null,
+            "target": "6-C-13",
+            "process": "P,G",
+            "sf49": "7-N-14,,SPC,,RES/REL",
+            "sf4": "7-N-14",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": "RES/REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-13(P,G)7-N-14,PAR,DA,,LEG/RS)",
+        "children": [
+          {
+            "code": [
+              "6-C-13",
+              [
+                "P,G"
+              ],
+              "7-N-14,PAR,DA,,LEG/RS"
+            ],
+            "type": null,
+            "target": "6-C-13",
+            "process": "P,G",
+            "sf49": "7-N-14,PAR,DA,,LEG/RS",
+            "sf4": "7-N-14",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG/RS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RES"
@@ -300,32 +358,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-13(P,G)7-N-14,,SPC,,RES/REL)",
-          "0": {
-            "code": [
-              "6-C-13",
-              [
-                "P,G"
-              ],
-              "7-N-14,,SPC,,RES/REL"
-            ],
-            "type": null,
-            "target": "6-C-13",
-            "process": "P,G",
-            "sf49": "7-N-14,,SPC,,RES/REL",
-            "sf4": "7-N-14",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": "RES/REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-RES"
@@ -409,32 +441,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-13(P,G)7-N-14,PAR,DA,,LEG/RS)",
-          "0": {
-            "code": [
-              "6-C-13",
-              [
-                "P,G"
-              ],
-              "7-N-14,PAR,DA,,LEG/RS"
-            ],
-            "type": null,
-            "target": "6-C-13",
-            "process": "P,G",
-            "sf49": "7-N-14,PAR,DA,,LEG/RS",
-            "sf4": "7-N-14",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG/RS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -664,8 +670,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -674,20 +680,16 @@
               "the detectors were used for monitoring purposes."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2FR BRC)",
             "free_txt": [
               " 3 MV Van de Graaff"
             ]
           }
-        ]
-      },
-      "level-prop": {
-        "0": [
+        ],
+        "level-prop": [
           {
             "x4_code": "(7-N-14,E-LVL=9172.,SPIN=2.,PARITY=+1.)",
             "free_txt": []
@@ -724,10 +726,8 @@
             "x4_code": "(7-N-14,E-LVL=0.,SPIN=1.,PARITY=+1.)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB)",
             "free_txt": [
@@ -744,10 +744,8 @@
             "x4_code": "(SITA,GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -758,10 +756,8 @@
               "target or deviations of the proton beam."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -772,8 +768,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -792,10 +788,8 @@
               "paper."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E,G)",
             "free_txt": []
@@ -808,10 +802,8 @@
             "x4_code": "(LVL-FIN,7-N-14)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -821,10 +813,8 @@
               "curve for lines other than the 9169 KeV line."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -837,10 +827,8 @@
               " The result from fitting for L=1. see Comment too."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -851,8 +839,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -861,10 +849,8 @@
               " Ep =550 keV resonance of the 13-C(p,gamma) reaction."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E,G)",
             "free_txt": []
@@ -877,10 +863,8 @@
             "x4_code": "(LVL-FIN,7-N-14)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -890,10 +874,8 @@
               "curve for lines other than the 8060 KeV line."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -904,16 +886,14 @@
       }
     },
     "004": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E,G)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -928,20 +908,16 @@
               "quadratically."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " See COMMENT in O1347003."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

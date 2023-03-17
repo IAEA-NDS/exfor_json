@@ -1,7 +1,7 @@
 {
   "entry": "30670",
-  "last_updated": "2017-11-22",
-  "number_of_revisions": "5",
+  "last_updated": "2023-01-20",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19831207R)",
@@ -47,6 +47,12 @@
       "free_txt": [
         " On. ERR-ANALYS updated. Major rev. in 002."
       ]
+    },
+    {
+      "x4_code": "(20220823U)",
+      "free_txt": [
+        " On. CORRECTION and ERR-ANALYS modified."
+      ]
     }
   ],
   "bib_record": {
@@ -86,42 +92,72 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CNP,4,131,1982)",
-          "free_txt": [
-            " in Chinese, data in fig"
-          ],
-          "publication_year": "1982"
-        },
-        {
-          "x4_code": "(C,82ANTWER,,36,1982)",
-          "free_txt": [
-            " data in fig"
-          ],
-          "publication_year": "1982"
-        },
-        {
-          "x4_code": "(R,HSJ-82291,4,1982)",
-          "free_txt": [
-            " in Chinese, data in table"
-          ],
-          "publication_year": "1982"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,3CPRAEP)",
-          "free_txt": [
-            " 2.5 MV Van de Graaff accelerator"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(3CPRAEP)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,CNP,4,131,1982)",
+        "free_txt": [
+          " in Chinese, data in fig"
+        ],
+        "publication_year": "1982",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,82ANTWER,,36,1982)",
+        "free_txt": [
+          " data in fig"
+        ],
+        "publication_year": "1982",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,HSJ-82291,4,1982)",
+        "free_txt": [
+          " in Chinese, data in table"
+        ],
+        "publication_year": "1982",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,3CPRAEP)",
+        "free_txt": [
+          " 2.5 MV Van de Graaff accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(3CPRAEP)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(94-PU-239(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -156,32 +192,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,F),,SIG)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -315,13 +325,13 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Corrected for",
-              " - 240,241Pu(n,f) and 240(sf)",
+              " - effect of 240,241Pu impurities",
               " - hydrogen number quantification",
               " - sample self-absorption",
               " - effective radius",
@@ -331,10 +341,8 @@
               " - neutron transmission loss"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": []
@@ -354,10 +362,8 @@
               " to monitor neutron yields at 0 and 30 deg."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -367,7 +373,7 @@
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
-              " 240,241Pu(n,f) and 240(sf)              (0.8%)"
+              " Effect of 240,241Pu impurities          (0.8%)"
             ]
           },
           {
@@ -419,20 +425,16 @@
               " Instability                 (0.0-2.0%)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,3CPRAEP)",
             "free_txt": [
               " 2.5 MV Van de Graaff accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
             "free_txt": [
@@ -445,10 +447,8 @@
               " for En=3.4 to 5.6 MeV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -457,10 +457,8 @@
               "the fission chamber."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -488,10 +486,8 @@
               "  0.1+/-0.1%"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -502,8 +498,8 @@
       }
     },
     "002": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": []

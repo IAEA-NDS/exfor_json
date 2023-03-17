@@ -44,55 +44,52 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RMF,53,59,2007)",
-          "free_txt": [],
-          "publication_year": "2007"
-        },
-        {
-          "x4_code": "(J,EPJ/ST,150,27,2007)",
-          "free_txt": [
-            " - results only for 7Be +51V"
-          ],
-          "publication_year": "2007"
-        },
-        {
-          "x4_code": "(T,De Faria,2008)",
-          "free_txt": [
-            " thesis of Univ.San Paulo"
-          ],
-          "publication_year": "2008"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,3BZLUSP)",
-          "free_txt": [
-            " This facility is installed at the",
-            "Pelletron Laboratory of the University of Sao Paulo and",
-            "extends the capabilities of the original Pelletron",
-            "Tandem Accelerator of 8 MV terminal voltage (8 UD)",
-            "by producing secondary beams of unstable nuclei."
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(3BZLUSP)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RMF,53,59,2007)",
+        "free_txt": [],
+        "publication_year": "2007",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,EPJ/ST,150,27,2007)",
+        "free_txt": [
+          " - results only for 7Be +51V"
+        ],
+        "publication_year": "2007",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(T,De Faria,2008)",
+        "free_txt": [
+          " thesis of Univ.San Paulo"
+        ],
+        "publication_year": "2008",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,3BZLUSP)",
+        "free_txt": [
+          " This facility is installed at the",
+          "Pelletron Laboratory of the University of Sao Paulo and",
+          "extends the capabilities of the original Pelletron",
+          "Tandem Accelerator of 8 MV terminal voltage (8 UD)",
+          "by producing secondary beams of unstable nuclei."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(3BZLUSP)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(23-V-51(4-BE-7,EL)23-V-51,,DA,,RTH)",
-          "0": {
+      "0": {
+        "x4_code": "(23-V-51(4-BE-7,EL)23-V-51,,DA,,RTH)",
+        "children": [
+          {
             "code": [
               "23-V-51",
               [
@@ -110,11 +107,46 @@
             "sf7": null,
             "sf8": "RTH",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(28-NI-58(3-LI-8,EL)28-NI-58,,DA,,RTH)",
+        "children": [
+          {
+            "code": [
+              "28-NI-58",
+              [
+                "3-LI-8,EL"
+              ],
+              "28-NI-58,,DA,,RTH"
+            ],
+            "type": null,
+            "target": "28-NI-58",
+            "process": "3-LI-8,EL",
+            "sf49": "28-NI-58,,DA,,RTH",
+            "sf4": "28-NI-58",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "RTH",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN",
@@ -176,32 +208,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-58(3-LI-8,EL)28-NI-58,,DA,,RTH)",
-          "0": {
-            "code": [
-              "28-NI-58",
-              [
-                "3-LI-8,EL"
-              ],
-              "28-NI-58,,DA,,RTH"
-            ],
-            "type": null,
-            "target": "28-NI-58",
-            "process": "3-LI-8,EL",
-            "sf49": "28-NI-58,,DA,,RTH",
-            "sf4": "28-NI-58",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "RTH",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG-ERR-D",
@@ -324,8 +330,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SI,SI)",
             "free_txt": [
@@ -335,10 +341,8 @@
               "separated by 4 cm in front of the dE detectors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,3BZLUSP)",
             "free_txt": [
@@ -349,18 +353,14 @@
               "by producing secondary beams of unstable nuclei."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(O,D0440002,E.A.Benjamim+,J,PL/B,647,30,2007)",
             "free_txt": [
@@ -372,8 +372,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ANG-ERR)",
             "free_txt": [
@@ -387,10 +387,8 @@
               " Statistical error"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -406,20 +404,16 @@
               "rich beams and in general lower than the primary."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               " 51V was 1.95mg/cm2 thick and 99.75% purity."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -436,8 +430,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ANG-ERR-D)",
             "free_txt": [
@@ -456,10 +450,8 @@
               "  Nothing said about uncertainties"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -471,20 +463,16 @@
               "typically 100 pnA (particle nano-Amperes)."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "58Ni has 2.0 mg/cm2 thickness and 99.90% purity."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

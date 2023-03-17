@@ -44,38 +44,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RRP,32,725,1987)",
-          "free_txt": [],
-          "publication_year": "1987"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,3RUMBUC)",
-          "free_txt": [
-            " The intensity was kept constant (~15 nA)",
-            "during the irradiation time of about 1 h per each run"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(3RUMBUC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RRP,32,725,1987)",
+        "free_txt": [],
+        "publication_year": "1987",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,3RUMBUC)",
+        "free_txt": [
+          " The intensity was kept constant (~15 nA)",
+          "during the irradiation time of about 1 h per each run"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(3RUMBUC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(32-GE-70(A,N)34-SE-73-G,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(32-GE-70(A,N)34-SE-73-G,,SIG)",
+        "children": [
+          {
             "code": [
               "32-GE-70",
               [
@@ -93,11 +88,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(32-GE-70(A,N)34-SE-73-M,,SIG)",
+        "children": [
+          {
+            "code": [
+              "32-GE-70",
+              [
+                "A,N"
+              ],
+              "34-SE-73-M,,SIG"
+            ],
+            "type": null,
+            "target": "32-GE-70",
+            "process": "A,N",
+            "sf49": "34-SE-73-M,,SIG",
+            "sf4": "34-SE-73-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(32-GE-70(A,2N)34-SE-72,,SIG)",
+        "children": [
+          {
+            "code": [
+              "32-GE-70",
+              [
+                "A,2N"
+              ],
+              "34-SE-72,,SIG"
+            ],
+            "type": null,
+            "target": "32-GE-70",
+            "process": "A,2N",
+            "sf49": "34-SE-72,,SIG",
+            "sf4": "34-SE-72",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -214,32 +272,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(32-GE-70(A,N)34-SE-73-M,,SIG)",
-          "0": {
-            "code": [
-              "32-GE-70",
-              [
-                "A,N"
-              ],
-              "34-SE-73-M,,SIG"
-            ],
-            "type": null,
-            "target": "32-GE-70",
-            "process": "A,N",
-            "sf49": "34-SE-73-M,,SIG",
-            "sf4": "34-SE-73-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -356,32 +388,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(32-GE-70(A,2N)34-SE-72,,SIG)",
-          "0": {
-            "code": [
-              "32-GE-70",
-              [
-                "A,2N"
-              ],
-              "34-SE-72,,SIG"
-            ],
-            "type": null,
-            "target": "32-GE-70",
-            "process": "A,2N",
-            "sf49": "34-SE-72,,SIG",
-            "sf4": "34-SE-72",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -461,8 +467,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -473,30 +479,24 @@
               " projectile energy value."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
               " Statistical model."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               " 100 cm3 Ge(Li) detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -504,10 +504,8 @@
               "and beam monitoring and thickness uncertainties."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,3RUMBUC)",
             "free_txt": [
@@ -515,18 +513,14 @@
               "during the irradiation time of about 1 h per each run"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,STTA,EDEG,BCINT)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -534,10 +528,8 @@
               "purity natural germanium on to aluminium backing."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -548,8 +540,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(34-SE-73-G,7.1HR,DG,67.,0.70,                  DG,361.,0.97)",
             "free_txt": []
@@ -558,8 +550,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(34-SE-73-M,40.MIN,DG,84.,0.014,                   DG,253.,0.016)",
             "free_txt": []
@@ -568,8 +560,8 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(34-SE-72,8.4D,DG,46.,0.571,               DG,834.,0.913)",
             "free_txt": []

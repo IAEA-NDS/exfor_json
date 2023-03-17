@@ -28,37 +28,60 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ANE,21,629,9410)",
-          "free_txt": [],
-          "publication_year": "1994"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM,1USAANL)",
-          "free_txt": [
-            " Tandem dynamitron."
-          ],
-          "facility_type": "(DYNAM)",
-          "institute": "(1USAANL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ANE,21,629,9410)",
+        "free_txt": [],
+        "publication_year": "1994",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM,1USAANL)",
+        "free_txt": [
+          " Tandem dynamitron."
+        ],
+        "pointer": "0",
+        "facility_type": "(DYNAM)",
+        "institute": "(1USAANL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(46-PD-0(N,EL)46-PD-0,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(46-PD-0(N,EL)46-PD-0,,DA)",
+        "children": [
+          {
+            "code": [
+              "46-PD-0",
+              [
+                "N,EL"
+              ],
+              "46-PD-0,,DA"
+            ],
+            "type": null,
+            "target": "46-PD-0",
+            "process": "N,EL",
+            "sf49": "46-PD-0,,DA",
+            "sf4": "46-PD-0",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((46-PD-0(N,EL)46-PD-0,,DA)+(46-PD-0(N,INL)46-PD-0,PAR,DA))",
+        "children": [
+          {
             "code": [
               "46-PD-0",
               [
@@ -77,10 +100,64 @@
             "sf8": null,
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "46-PD-0",
+              [
+                "N,INL"
+              ],
+              "46-PD-0,PAR,DA"
+            ],
+            "type": null,
+            "target": "46-PD-0",
+            "process": "N,INL",
+            "sf49": "46-PD-0,PAR,DA",
+            "sf4": "46-PD-0",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "+",
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(46-PD-0(N,INL)46-PD-0,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "46-PD-0",
+              [
+                "N,INL"
+              ],
+              "46-PD-0,PAR,SIG"
+            ],
+            "type": null,
+            "target": "46-PD-0",
+            "process": "N,INL",
+            "sf49": "46-PD-0,PAR,SIG",
+            "sf4": "46-PD-0",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -1040,51 +1117,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((46-PD-0(N,EL)46-PD-0,,DA)+(46-PD-0(N,INL)46-PD-0,PAR,DA))",
-          "0": {
-            "code": [
-              "46-PD-0",
-              [
-                "N,EL"
-              ],
-              "46-PD-0,,DA"
-            ],
-            "type": null,
-            "target": "46-PD-0",
-            "process": "N,EL",
-            "sf49": "46-PD-0,,DA",
-            "sf4": "46-PD-0",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "46-PD-0",
-              [
-                "N,INL"
-              ],
-              "46-PD-0,PAR,DA"
-            ],
-            "type": null,
-            "target": "46-PD-0",
-            "process": "N,INL",
-            "sf49": "46-PD-0,PAR,DA",
-            "sf4": "46-PD-0",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "+",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-EXC-MAX"
@@ -2244,32 +2276,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(46-PD-0(N,INL)46-PD-0,PAR,SIG)",
-          "0": {
-            "code": [
-              "46-PD-0",
-              [
-                "N,INL"
-              ],
-              "46-PD-0,PAR,SIG"
-            ],
-            "type": null,
-            "target": "46-PD-0",
-            "process": "N,INL",
-            "sf49": "46-PD-0,PAR,SIG",
-            "sf4": "46-PD-0",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-EXC-MAX"
@@ -2319,8 +2325,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2328,10 +2334,8 @@
               " angular resolution effects."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -2339,64 +2343,50 @@
               " 252Cf spontaneous fission source."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information on source of uncertainties."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM,1USAANL)",
             "free_txt": [
               " Tandem dynamitron."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Metallic cylinder with chemical purity >99%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

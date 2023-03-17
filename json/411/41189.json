@@ -49,46 +49,42 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YK,,(3-4),38,1994)",
-          "free_txt": [
-            "   Data are given"
-          ],
-          "publication_year": "1994"
-        },
-        {
-          "x4_code": "(R,INDC(UKR)-003,13,1997)",
-          "free_txt": [
-            "           Engl.transl.of YK,,(3-4),38,1994."
-          ],
-          "publication_year": "1997"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4UKRIJD)",
-          "free_txt": [
-            "  Reactor WWR-M"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4UKRIJD)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YK,,(3-4),38,1994)",
+        "free_txt": [
+          "   Data are given"
+        ],
+        "publication_year": "1994",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(UKR)-003,13,1997)",
+        "free_txt": [
+          "           Engl.transl.of YK,,(3-4),38,1994."
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4UKRIJD)",
+        "free_txt": [
+          "  Reactor WWR-M"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4UKRIJD)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(47-AG-0(N,TOT),,SIG)",
-          "0": {
+      "1": {
+        "x4_code": "(47-AG-0(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "47-AG-0",
               [
@@ -106,13 +102,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "((47-AG-0(N,INL)47-AG-0,PAR,SIG)/(47-AG-0(N,EL)47-AG-0,,SIG))",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "((47-AG-0(N,INL)47-AG-0,PAR,SIG)/(47-AG-0(N,EL)47-AG-0,,SIG))",
+        "children": [
+          {
             "code": [
               "47-AG-0",
               [
@@ -131,7 +129,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "47-AG-0",
               [
@@ -149,11 +147,102 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": "          Primarily measured data."
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": "          Primarily measured data."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(47-AG-0(N,INL)47-AG-0,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "47-AG-0",
+              [
+                "N,INL"
+              ],
+              "47-AG-0,PAR,SIG"
+            ],
+            "type": null,
+            "target": "47-AG-0",
+            "process": "N,INL",
+            "sf49": "47-AG-0,PAR,SIG",
+            "sf4": "47-AG-0",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Inelastic scattering CS with excitation of 1-st 7/2+isomeric level."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(47-AG-0(N,EL)47-AG-0,,SIG)",
+        "children": [
+          {
+            "code": [
+              "47-AG-0",
+              [
+                "N,EL"
+              ],
+              "47-AG-0,,SIG"
+            ],
+            "type": null,
+            "target": "47-AG-0",
+            "process": "N,EL",
+            "sf49": "47-AG-0,,SIG",
+            "sf4": "47-AG-0",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(47-AG-0(N,EL),,STF)",
+        "children": [
+          {
+            "code": [
+              "47-AG-0",
+              [
+                "N,EL"
+              ],
+              ",,STF"
+            ],
+            "type": null,
+            "target": "47-AG-0",
+            "process": "N,EL",
+            "sf49": ",,STF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "STF",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -195,32 +284,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(47-AG-0(N,INL)47-AG-0,PAR,SIG)",
-          "0": {
-            "code": [
-              "47-AG-0",
-              [
-                "N,INL"
-              ],
-              "47-AG-0,PAR,SIG"
-            ],
-            "type": null,
-            "target": "47-AG-0",
-            "process": "N,INL",
-            "sf49": "47-AG-0,PAR,SIG",
-            "sf4": "47-AG-0",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Inelastic scattering CS with excitation of 1-st 7/2+isomeric level."
-        }
-      },
       "common": {
         "heads": [
           "ASSUM",
@@ -269,32 +332,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(47-AG-0(N,EL)47-AG-0,,SIG)",
-          "0": {
-            "code": [
-              "47-AG-0",
-              [
-                "N,EL"
-              ],
-              "47-AG-0,,SIG"
-            ],
-            "type": null,
-            "target": "47-AG-0",
-            "process": "N,EL",
-            "sf49": "47-AG-0,,SIG",
-            "sf4": "47-AG-0",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -331,32 +368,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(47-AG-0(N,EL),,STF)",
-          "0": {
-            "code": [
-              "47-AG-0",
-              [
-                "N,EL"
-              ],
-              ",,STF"
-            ],
-            "type": null,
-            "target": "47-AG-0",
-            "process": "N,EL",
-            "sf49": ",,STF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "STF",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -390,38 +401,32 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
               "  Proportional hydrogen counter CM-38"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Errors are not specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4UKRIJD)",
             "free_txt": [
               "  Reactor WWR-M"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -431,18 +436,14 @@
               "Neutron flux at sample position 3E+5 n/cm2."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(FNB)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,,L.L.Litvinsky,R,KIYAI-85-35,1985)",
             "free_txt": [
@@ -453,8 +454,8 @@
       }
     },
     "002": {
-      "method": {
-        "1": [
+      "1": {
+        "method": [
           {
             "x4_code": "(TRN)",
             "free_txt": [
@@ -463,8 +464,8 @@
           }
         ]
       },
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -473,10 +474,8 @@
               " large half-axe is 38.55 mm"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -488,8 +487,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -497,30 +496,24 @@
               " difference SIGMA(TOT)-SIGMA(N-GAMMA)"
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM,47-AG-0(N,G),,SIG)",
             "free_txt": [
               "   From:"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,T.S.Belanova+,J,AE,57,243,1984)",
             "free_txt": [
               " Issue 4."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -538,8 +531,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -547,30 +540,24 @@
               " difference SIGMA(TOT)-SIGMA(N-GAMMA)"
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM,47-AG-0(N,G),,SIG)",
             "free_txt": [
               "   From:"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,T.S.Belanova+,J,AE,57,243,1984)",
             "free_txt": [
               " Issue 4."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -588,8 +575,8 @@
       }
     },
     "005": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -597,18 +584,14 @@
               "fitting by Eq.(5)."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,W.G.Vonach+,J,NP,78,389,1966)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

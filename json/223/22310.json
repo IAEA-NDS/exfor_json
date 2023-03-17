@@ -41,38 +41,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AJ,439,(L),59,9502)",
-          "free_txt": [
-            "  DATA ARE GIVEN"
-          ],
-          "publication_year": "1995"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": null,
-          "free_txt": [
-            "   PELLETRON ACCELERATOR AT THE TOKYO INCTITUTE",
-            "   TECHNOLOGY"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AJ,439,(L),59,9502)",
+        "free_txt": [
+          "  DATA ARE GIVEN"
+        ],
+        "publication_year": "1995",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": null,
+        "free_txt": [
+          "   PELLETRON ACCELERATOR AT THE TOKYO INCTITUTE",
+          "   TECHNOLOGY"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,G)1-H-2,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-1(N,G)1-H-2,,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -90,11 +85,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(N,G)1-H-2,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,G"
+              ],
+              "1-H-2,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,G",
+            "sf49": "1-H-2,,SIG",
+            "sf4": "1-H-2",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-1(N,TOT),,SIG,,RAW)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,TOT"
+              ],
+              ",,SIG,,RAW"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,TOT",
+            "sf49": ",,SIG,,RAW",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "RAW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  TRANSMISSION"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -202,32 +260,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,G)1-H-2,,SIG)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,G"
-              ],
-              "1-H-2,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,G",
-            "sf49": "1-H-2,,SIG",
-            "sf4": "1-H-2",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -260,32 +292,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,TOT),,SIG,,RAW)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,RAW"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,TOT",
-            "sf49": ",,SIG,,RAW",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "RAW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  TRANSMISSION"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -347,8 +353,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -356,10 +362,8 @@
               " METHOD"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -368,20 +372,16 @@
               " WERE PERFORMED"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
               "  NAI(TL)  DETECTOR"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -390,10 +390,8 @@
               " RAYSYIELD OF AU-MONITOR, STANDARD CS ERROR"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": null,
             "free_txt": [
@@ -401,36 +399,28 @@
               "   TECHNOLOGY"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "  POLYETHILENE SAMPLES OF 1, 2, 3 AND 4 MM THICKNESS"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -441,8 +431,8 @@
       }
     },
     "002": {
-      "misc-col": {
-        "0": [
+      "0": {
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -461,8 +451,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,22310002)",
             "free_txt": []

@@ -29,39 +29,35 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,1001,121923,2020)",
-          "free_txt": [
-            "#doi:10.1016/j.nuclphysa.2020.121923"
-          ],
-          "publication_year": "2020"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,2JPNIRS)",
-          "free_txt": [
-            " Heavy Ion Medical Accelerator in Chiba"
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(2JPNIRS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,1001,121923,2020)",
+        "free_txt": [
+          "#doi:10.1016/j.nuclphysa.2020.121923"
+        ],
+        "publication_year": "2020",
+        "pointer": "0",
+        "doi": "10.1016/j.nuclphysa.2020.121923"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,2JPNIRS)",
+        "free_txt": [
+          " Heavy Ion Medical Accelerator in Chiba"
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(2JPNIRS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(26-FE-56,TCC),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(13-AL-27(26-FE-56,TCC),,SIG)",
+        "children": [
+          {
             "code": [
               "13-AL-27",
               [
@@ -79,11 +75,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-0(26-FE-56,TCC),,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-0",
+              [
+                "26-FE-56,TCC"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "6-C-0",
+            "process": "26-FE-56,TCC",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-PLE(26-FE-56,TCC),,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-PLE",
+              [
+                "26-FE-56,TCC"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "1-H-PLE",
+            "process": "26-FE-56,TCC",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -113,32 +172,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-0(26-FE-56,TCC),,SIG)",
-          "0": {
-            "code": [
-              "6-C-0",
-              [
-                "26-FE-56,TCC"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "6-C-0",
-            "process": "26-FE-56,TCC",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -168,32 +201,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-PLE(26-FE-56,TCC),,SIG)",
-          "0": {
-            "code": [
-              "1-H-PLE",
-              [
-                "26-FE-56,TCC"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "1-H-PLE",
-            "process": "26-FE-56,TCC",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -225,8 +232,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": [
@@ -235,30 +242,24 @@
               "were placed before and after each target."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,2JPNIRS)",
             "free_txt": [
               " Heavy Ion Medical Accelerator in Chiba"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -270,8 +271,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -281,10 +282,8 @@
               "were 497 MeV/n and 478 MeV/n, respectively."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -298,8 +297,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -309,10 +308,8 @@
               "were 497 MeV/n and 468 MeV/n, respectively."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -325,8 +322,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -336,10 +333,8 @@
               "were 497 MeV/n and 462 MeV/n, respectively."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [

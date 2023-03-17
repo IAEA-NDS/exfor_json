@@ -51,39 +51,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,102,024623,2020)",
-          "free_txt": [],
-          "publication_year": "2020"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALAS)",
-          "free_txt": [
-            " Experiment was carried out at Weapons",
-            "Neutron Research of the Los Alamos Neutron Science",
-            "Center using the 90L and 15R beamlines."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,102,024623,2020)",
+        "free_txt": [],
+        "publication_year": "2020",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALAS)",
+        "free_txt": [
+          " Experiment was carried out at Weapons",
+          "Neutron Research of the Los Alamos Neutron Science",
+          "Center using the 90L and 15R beamlines."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(17-CL-35(N,P)16-S-35,PAR,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(17-CL-35(N,P)16-S-35,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "17-CL-35",
               [
@@ -101,11 +96,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(17-CL-35(N,A)15-P-32,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "17-CL-35",
+              [
+                "N,A"
+              ],
+              "15-P-32,PAR,SIG"
+            ],
+            "type": null,
+            "target": "17-CL-35",
+            "process": "N,A",
+            "sf49": "15-P-32,PAR,SIG",
+            "sf4": "15-P-32",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(17-CL-35(N,P)16-S-35,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "17-CL-35",
+              [
+                "N,P"
+              ],
+              "16-S-35,PAR,SIG"
+            ],
+            "type": null,
+            "target": "17-CL-35",
+            "process": "N,P",
+            "sf49": "16-S-35,PAR,SIG",
+            "sf4": "16-S-35",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RSL"
@@ -349,32 +407,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(17-CL-35(N,A)15-P-32,PAR,SIG)",
-          "0": {
-            "code": [
-              "17-CL-35",
-              [
-                "N,A"
-              ],
-              "15-P-32,PAR,SIG"
-            ],
-            "type": null,
-            "target": "17-CL-35",
-            "process": "N,A",
-            "sf49": "15-P-32,PAR,SIG",
-            "sf4": "15-P-32",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-RSL"
@@ -470,32 +502,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(17-CL-35(N,P)16-S-35,PAR,SIG)",
-          "0": {
-            "code": [
-              "17-CL-35",
-              [
-                "N,P"
-              ],
-              "16-S-35,PAR,SIG"
-            ],
-            "type": null,
-            "target": "17-CL-35",
-            "process": "N,P",
-            "sf49": "16-S-35,PAR,SIG",
-            "sf4": "16-S-35",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL"
@@ -1673,8 +1679,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SISD,SISD)",
             "free_txt": [
@@ -1689,10 +1695,8 @@
               "   3    S1     -109.,-101.,-42.,-34. 500,300,1000,500"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-1,8.,9.)",
             "free_txt": [
@@ -1723,10 +1727,8 @@
               " Uncertainty solid angle/detection effic."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALAS)",
             "free_txt": [
@@ -1735,10 +1737,8 @@
               "Center using the 90L and 15R beamlines."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": [
@@ -1747,10 +1747,8 @@
               "by 800 MeV pulsed proton beam."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,EDE)",
             "free_txt": [
@@ -1766,10 +1764,8 @@
               "  3        14.191+-0.037      30           S1/4"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(17-CL-35,ENR=0.9935)",
             "free_txt": [
@@ -1784,8 +1780,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1798,10 +1794,8 @@
               " Systematic uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1812,8 +1806,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1826,10 +1820,8 @@
               " Systematic uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1840,18 +1832,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
               " Total uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

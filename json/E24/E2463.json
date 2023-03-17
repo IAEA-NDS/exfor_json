@@ -185,47 +185,43 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,90,035805,2014)",
-          "free_txt": [],
-          "publication_year": "2014"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ISOCY,2JPNIPC)",
-          "free_txt": [
-            " 25Al beam was produced via the",
-            "                3He(24Mg,25Al)d reaction"
-          ],
-          "facility_type": "(ISOCY)",
-          "institute": "(2JPNIPC)"
-        },
-        {
-          "x4_code": "(PRJFS,2JPNTOK)",
-          "free_txt": [
-            " produced 25Al beam at Center for",
-            "                Nuclear Study"
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(2JPNTOK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,90,035805,2014)",
+        "free_txt": [],
+        "publication_year": "2014",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ISOCY,2JPNIPC)",
+        "free_txt": [
+          " 25Al beam was produced via the",
+          "                3He(24Mg,25Al)d reaction"
+        ],
+        "pointer": "0",
+        "facility_type": "(ISOCY)",
+        "institute": "(2JPNIPC)"
+      },
+      {
+        "x4_code": "(PRJFS,2JPNTOK)",
+        "free_txt": [
+          " produced 25Al beam at Center for",
+          "                Nuclear Study"
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2JPNTOK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(13-AL-25,EL)1-H-1,,DA)=(13-AL-25(P,EL)13-AL-25,,DA))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-1(13-AL-25,EL)1-H-1,,DA)=(13-AL-25(P,EL)13-AL-25,,DA))",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -244,7 +240,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "13-AL-25",
               [
@@ -262,11 +258,72 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(1-H-1(13-AL-25,0),,EN)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "13-AL-25,0"
+              ],
+              ",,EN"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "13-AL-25,0",
+            "sf49": ",,EN",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "EN",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(1-H-1(13-AL-25,EL),,WID)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "13-AL-25,EL"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "13-AL-25,EL",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-CM"
@@ -485,56 +542,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(1-H-1(13-AL-25,0),,EN)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "13-AL-25,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "13-AL-25,0",
-            "sf49": ",,EN",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "EN",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(1-H-1(13-AL-25,EL),,WID)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "13-AL-25,EL"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "13-AL-25,EL",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -588,8 +595,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(PPAC)",
             "free_txt": [
@@ -602,10 +609,8 @@
               " To identify the recoiled protons"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ISOCY,2JPNIPC)",
             "free_txt": [
@@ -620,36 +625,28 @@
               "                Nuclear Study"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Beam intensity is 3.3E+4 PPS. (a purity of about 62%)"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE,TOF,TTM)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -665,18 +662,16 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": null,
             "free_txt": [
               "ANG-CM is polar angle (c.m.) between beam and proton"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -684,10 +679,8 @@
               "        proton scattering events"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -698,18 +691,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

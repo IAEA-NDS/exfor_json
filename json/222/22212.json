@@ -54,47 +54,43 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NIM/A,267,473,88)",
-          "free_txt": [],
-          "publication_year": "1988"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2BLGMOL)",
-          "free_txt": [
-            " BR2 REACTOR IN MOL, BELGIUM, HAVING",
-            " A THERMAL NEUTRON FLUX OF 10E+13 NEUTRONS/CM2/SEC"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2BLGMOL)"
-        },
-        {
-          "x4_code": "(REAC,2FR ILL)",
-          "free_txt": [
-            " THE HIGH FLUX REACTOR AT ILL, GRENOBLE,",
-            "               FOR DOUBLE CAPTURE MEASUREMENTS"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2FR ILL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NIM/A,267,473,88)",
+        "free_txt": [],
+        "publication_year": "1988",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2BLGMOL)",
+        "free_txt": [
+          " BR2 REACTOR IN MOL, BELGIUM, HAVING",
+          " A THERMAL NEUTRON FLUX OF 10E+13 NEUTRONS/CM2/SEC"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2BLGMOL)"
+      },
+      {
+        "x4_code": "(REAC,2FR ILL)",
+        "free_txt": [
+          " THE HIGH FLUX REACTOR AT ILL, GRENOBLE,",
+          "               FOR DOUBLE CAPTURE MEASUREMENTS"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2FR ILL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(66-DY-164(N,G)66-DY-165,,SPC,,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(66-DY-164(N,G)66-DY-165,,SPC,,REL)",
+        "children": [
+          {
             "code": [
               "66-DY-164",
               [
@@ -112,11 +108,46 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "TRANSITNS IN DY-165."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "TRANSITNS IN DY-165."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(66-DY-165(N,G)66-DY-166,,SPC)",
+        "children": [
+          {
+            "code": [
+              "66-DY-165",
+              [
+                "N,G"
+              ],
+              "66-DY-166,,SPC"
+            ],
+            "type": null,
+            "target": "66-DY-165",
+            "process": "N,G",
+            "sf49": "66-DY-166,,SPC",
+            "sf4": "66-DY-166",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " TRANSITIONS IN DY-166."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -264,32 +295,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(66-DY-165(N,G)66-DY-166,,SPC)",
-          "0": {
-            "code": [
-              "66-DY-165",
-              [
-                "N,G"
-              ],
-              "66-DY-166,,SPC"
-            ],
-            "type": null,
-            "target": "66-DY-165",
-            "process": "N,G",
-            "sf49": "66-DY-166,,SPC",
-            "sf4": "66-DY-166",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " TRANSITIONS IN DY-166."
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -395,8 +400,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -424,10 +429,8 @@
               " COUNTING TIME OF 1000 SEC./STEP."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2BLGMOL)",
             "free_txt": [
@@ -442,46 +445,36 @@
               "               FOR DOUBLE CAPTURE MEASUREMENTS"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC )",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               ".THERMAL NEUTRON SPECTRUM."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
               " IN-BEAM GAMMA SPECTROSCOPY."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G    )",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -490,10 +483,8 @@
               " MATERIAL."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -504,8 +495,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -513,10 +504,8 @@
               " MULTIPLICATION WITH A CONSTANT FACTOR."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -524,10 +513,8 @@
               " PERCENT."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -538,8 +525,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -552,20 +539,16 @@
               " GAMS 2/3 AT ILL."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " NO DETAILS GIVEN."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

@@ -52,37 +52,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,63,149,1977)",
-          "free_txt": [],
-          "publication_year": "1977"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALRL)",
-          "free_txt": [
-            " Livermore linear accelerator"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALRL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,63,149,1977)",
+        "free_txt": [],
+        "publication_year": "1977",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALRL)",
+        "free_txt": [
+          " Livermore linear accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALRL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "((94-PU-241(N,F),,SIG)/(3-LI-6(N,T)2-HE-4,,SIG))",
-          "0": {
+      "1": {
+        "x4_code": "((94-PU-241(N,F),,SIG)/(3-LI-6(N,T)2-HE-4,,SIG))",
+        "children": [
+          {
             "code": [
               "94-PU-241",
               [
@@ -101,7 +96,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "3-LI-6",
               [
@@ -119,13 +114,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(94-PU-241(N,F),,SIG)",
-          "0": {
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(94-PU-241(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "94-PU-241",
               [
@@ -143,11 +140,18 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-NRM-MIN2",
@@ -387,8 +391,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -401,10 +405,8 @@
               " - scattering in the Al foils of the fission chamber,"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
@@ -420,30 +422,24 @@
               " - 95% 6Li glass scintillator in high energy run"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALRL)",
             "free_txt": [
               " Livermore linear accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
               " Pulsed neutron source"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -452,10 +448,8 @@
               " - high energy data set (100 eV to 70 keV)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -465,10 +459,8 @@
               " 242Pu (0.1%), 241Am (1.8%)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -479,8 +471,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -498,18 +490,33 @@
               " error (3% at 50 keV)."
             ]
           }
+        ],
+        "monitor": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "The high energy data set was normalized to the low",
+              " energy data set in the region of overlap."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table I of Nucl.Sci.Eng.63(1977)149"
+            ]
+          }
         ]
       },
-      "monit-ref": {
-        "2": [
+      "2": {
+        "monit-ref": [
           {
             "x4_code": "((MONIT),H.D.Lemmel,C,75WASH,1,286,1975)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "2": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)94-PU-241(N,F),,SIG)",
             "free_txt": [
@@ -520,16 +527,6 @@
             "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
             "free_txt": [
               " shape normalization with ENDF/B-IV"
-            ]
-          }
-        ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              " Table I of Nucl.Sci.Eng.63(1977)149"
             ]
           }
         ]

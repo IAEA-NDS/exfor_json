@@ -52,38 +52,33 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,366,461,1981)",
-          "free_txt": [],
-          "publication_year": "1981"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCY,2ZZZCER)",
-          "free_txt": [
-            " ISOLDE facility at CERN",
-            "Synchro-Cyclotron ."
-          ],
-          "facility_type": "(SYNCY)",
-          "institute": "(2ZZZCER)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,366,461,1981)",
+        "free_txt": [],
+        "publication_year": "1981",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCY,2ZZZCER)",
+        "free_txt": [
+          " ISOLDE facility at CERN",
+          "Synchro-Cyclotron ."
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCY)",
+        "institute": "(2ZZZCER)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-8(0,B-)3-LI-8,,PN/DE,,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(2-HE-8(0,B-)3-LI-8,,PN/DE,,REL)",
+        "children": [
+          {
             "code": [
               "2-HE-8",
               [
@@ -101,11 +96,46 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Relative beta-delayed neutrons spectrum in arb.units."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Relative beta-delayed neutrons spectrum in arb.units."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(2-HE-8(0,B-)3-LI-8,,PN)",
+        "children": [
+          {
+            "code": [
+              "2-HE-8",
+              [
+                "0,B-"
+              ],
+              "3-LI-8,,PN"
+            ],
+            "type": null,
+            "target": "2-HE-8",
+            "process": "0,B-",
+            "sf49": "3-LI-8,,PN",
+            "sf4": "3-LI-8",
+            "sf5": null,
+            "sf6": "PN",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-ERR-DIG",
@@ -228,32 +258,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-8(0,B-)3-LI-8,,PN)",
-          "0": {
-            "code": [
-              "2-HE-8",
-              [
-                "0,B-"
-              ],
-              "3-LI-8,,PN"
-            ],
-            "type": null,
-            "target": "2-HE-8",
-            "process": "0,B-",
-            "sf49": "3-LI-8,,PN",
-            "sf4": "3-LI-8",
-            "sf5": null,
-            "sf6": "PN",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -277,8 +281,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -321,10 +325,8 @@
               "barrier Si detector."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCY,2ZZZCER)",
             "free_txt": [
@@ -332,20 +334,16 @@
               "Synchro-Cyclotron ."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
               " Beta-gamma and beta-neutron coincidence."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -359,8 +357,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -368,20 +366,16 @@
               "  (values were digitized from Fig.4)."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "For detection efficiency. Thermal peak was subtracted."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -390,10 +384,8 @@
               "the 3.21 MeV and 5.4 MeV states in Li-8."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(2-HE-8,117.5MSEC)",
             "free_txt": [
@@ -402,20 +394,16 @@
               "published earlier."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E,N)",
             "free_txt": [
               " Energy of delayed neutrons."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(E-ERR-DIG)",
             "free_txt": [
@@ -431,10 +419,8 @@
               "scale X - 0.0030 MeV, scale Y - 0.0030 arb.units ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -445,8 +431,8 @@
       }
     },
     "003": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
@@ -455,10 +441,8 @@
               "populate the first excited state in Li-7 at 478 keV."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(2-HE-8,117.5MSEC)",
             "free_txt": [
@@ -467,20 +451,16 @@
               "published earlier."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Type of error is not explained in article"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

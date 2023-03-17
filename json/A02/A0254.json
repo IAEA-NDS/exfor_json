@@ -37,45 +37,41 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ARI,34,1335,1983)",
-          "free_txt": [],
-          "publication_year": "1983"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ISOCY,2GERJUL)",
-          "free_txt": [
-            " Proton energies are 45 and 22.5 MeV."
-          ],
-          "facility_type": "(ISOCY)",
-          "institute": "(2GERJUL)"
-        },
-        {
-          "x4_code": "(CYCLO,2GERJUL)",
-          "free_txt": [
-            " CV28 cyclotron. Proton energy is 24 MeV"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2GERJUL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ARI,34,1335,1983)",
+        "free_txt": [],
+        "publication_year": "1983",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ISOCY,2GERJUL)",
+        "free_txt": [
+          " Proton energies are 45 and 22.5 MeV."
+        ],
+        "pointer": "0",
+        "facility_type": "(ISOCY)",
+        "institute": "(2GERJUL)"
+      },
+      {
+        "x4_code": "(CYCLO,2GERJUL)",
+        "free_txt": [
+          " CV28 cyclotron. Proton energy is 24 MeV"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2GERJUL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(35-BR-0(P,X)36-KR-79,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(35-BR-0(P,X)36-KR-79,,SIG)",
+        "children": [
+          {
             "code": [
               "35-BR-0",
               [
@@ -93,11 +89,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(35-BR-0(P,X)36-KR-77,,SIG)",
+        "children": [
+          {
+            "code": [
+              "35-BR-0",
+              [
+                "P,X"
+              ],
+              "36-KR-77,,SIG"
+            ],
+            "type": null,
+            "target": "35-BR-0",
+            "process": "P,X",
+            "sf49": "36-KR-77,,SIG",
+            "sf4": "36-KR-77",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(35-BR-0(P,X)36-KR-76,,SIG)",
+        "children": [
+          {
+            "code": [
+              "35-BR-0",
+              [
+                "P,X"
+              ],
+              "36-KR-76,,SIG"
+            ],
+            "type": null,
+            "target": "35-BR-0",
+            "process": "P,X",
+            "sf49": "36-KR-76,,SIG",
+            "sf4": "36-KR-76",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-ERR-DIG"
@@ -223,32 +282,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(35-BR-0(P,X)36-KR-77,,SIG)",
-          "0": {
-            "code": [
-              "35-BR-0",
-              [
-                "P,X"
-              ],
-              "36-KR-77,,SIG"
-            ],
-            "type": null,
-            "target": "35-BR-0",
-            "process": "P,X",
-            "sf49": "36-KR-77,,SIG",
-            "sf4": "36-KR-77",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG"
@@ -356,32 +389,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(35-BR-0(P,X)36-KR-76,,SIG)",
-          "0": {
-            "code": [
-              "35-BR-0",
-              [
-                "P,X"
-              ],
-              "36-KR-76,,SIG"
-            ],
-            "type": null,
-            "target": "35-BR-0",
-            "process": "P,X",
-            "sf49": "36-KR-76,,SIG",
-            "sf4": "36-KR-76",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG"
@@ -455,18 +462,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(TTY-C)",
             "free_txt": [
               " Separation procedure."
             ]
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(29-CU-61,3.41HR,DG,283.,0.130,                 DG,656.,0.114)",
             "free_txt": []
@@ -479,18 +484,14 @@
             "x4_code": "(30-ZN-63,38.1MIN,DG,669.6,0.084,                  DG,962.1,0.066,                  DG,1412.1,0.0076)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR,10.,15.)",
             "free_txt": [
@@ -499,10 +500,8 @@
               "detail earlier (see REL-REF)."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ISOCY,2GERJUL)",
             "free_txt": [
@@ -515,18 +514,14 @@
               " CV28 cyclotron. Proton energy is 24 MeV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(STTA,ACTIV,EXTB,BCINT)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(B0057002,R.Colle+,J,PR/C,9,1819,1974)",
             "free_txt": []
@@ -539,10 +534,8 @@
             "x4_code": "(,R.Weinreich+,J,JLCR,13,233,1977)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(29-CU-63(P,N)30-ZN-63,,SIG)",
             "free_txt": []
@@ -555,10 +548,8 @@
             "x4_code": "(29-CU-63(P,X)29-CU-61,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,C.F.Williamson+,R,CEA-R-3042,1966)",
             "free_txt": [
@@ -591,10 +582,8 @@
               " 63-Zn decay data."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -602,10 +591,8 @@
               "composition were sealed in polyethylene foils."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -616,16 +603,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(36-KR-79-G,35.0HR,DG,261.3,0.127,                   DG,397.5,0.095,                   DG,606.1,0.081)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,B0171011,M.Diksic+,J,PR/C,19,1753,1979)",
             "free_txt": []
@@ -648,16 +633,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(36-KR-77,74.7MIN,DG,129.7,0.822,                  DG,146.5,0.393)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,A.Houdayer+,J,PHF,9,85,1974)",
             "free_txt": [
@@ -684,16 +667,14 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(36-KR-76,14.6HR,DG,270.3/271.7,0.258,                 DG,315.7,0.437)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(D,,H.Lundqvist+,J,ARI,30,39,1979)",
             "free_txt": []

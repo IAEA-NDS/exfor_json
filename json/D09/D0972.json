@@ -57,37 +57,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,101,014611,2020)",
-          "free_txt": [],
-          "publication_year": "2020"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,3BZLUSP)",
-          "free_txt": [
-            " 8 MV tandem accelerator"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(3BZLUSP)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,101,014611,2020)",
+        "free_txt": [],
+        "publication_year": "2020",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,3BZLUSP)",
+        "free_txt": [
+          " 8 MV tandem accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(3BZLUSP)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(6-C-13,EL)14-SI-28,,DA,,RTH)",
-          "0": {
+      "0": {
+        "x4_code": "(14-SI-28(6-C-13,EL)14-SI-28,,DA,,RTH)",
+        "children": [
+          {
             "code": [
               "14-SI-28",
               [
@@ -105,11 +100,74 @@
             "sf7": null,
             "sf8": "RTH",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(14-SI-28(6-C-13,INL)14-SI-28,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "14-SI-28",
+              [
+                "6-C-13,INL"
+              ],
+              "14-SI-28,PAR,DA"
+            ],
+            "type": null,
+            "target": "14-SI-28",
+            "process": "6-C-13,INL",
+            "sf49": "14-SI-28,PAR,DA",
+            "sf4": "14-SI-28",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(14-SI-28(6-C-13,6-C-12)14-SI-29,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "14-SI-28",
+              [
+                "6-C-13,6-C-12"
+              ],
+              "14-SI-29,PAR,DA"
+            ],
+            "type": null,
+            "target": "14-SI-28",
+            "process": "6-C-13,6-C-12",
+            "sf49": "14-SI-29,PAR,DA",
+            "sf4": "14-SI-29",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -225,32 +283,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(6-C-13,INL)14-SI-28,PAR,DA)",
-          "0": {
-            "code": [
-              "14-SI-28",
-              [
-                "6-C-13,INL"
-              ],
-              "14-SI-28,PAR,DA"
-            ],
-            "type": null,
-            "target": "14-SI-28",
-            "process": "6-C-13,INL",
-            "sf49": "14-SI-28,PAR,DA",
-            "sf4": "14-SI-28",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL1",
@@ -339,32 +371,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(6-C-13,6-C-12)14-SI-29,PAR,DA)",
-          "0": {
-            "code": [
-              "14-SI-28",
-              [
-                "6-C-13,6-C-12"
-              ],
-              "14-SI-29,PAR,DA"
-            ],
-            "type": null,
-            "target": "14-SI-28",
-            "process": "6-C-13,6-C-12",
-            "sf49": "14-SI-29,PAR,DA",
-            "sf4": "14-SI-29",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL1",
@@ -463,8 +469,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(NTRTH)",
             "free_txt": [
@@ -473,10 +479,8 @@
               " 25, 30 and 35 deg, and the theoretical curve."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -484,30 +488,24 @@
               " away from the target"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on the source of uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,3BZLUSP)",
             "free_txt": [
               " 8 MV tandem accelerator"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -519,10 +517,8 @@
               " approximately 40 ug/cm2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -533,8 +529,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -545,8 +541,8 @@
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL1,14-SI-28)",
             "free_txt": []
@@ -555,10 +551,8 @@
             "x4_code": "(E-LVL2,6-C-13)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -569,8 +563,8 @@
       }
     },
     "004": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL1,14-SI-29)",
             "free_txt": []
@@ -579,10 +573,8 @@
             "x4_code": "(E-LVL2,6-C-12)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

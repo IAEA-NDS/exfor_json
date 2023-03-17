@@ -39,36 +39,31 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,EN,15,272,6804)",
-          "free_txt": [],
-          "publication_year": "1968"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC )",
-          "free_txt": [
-            " L-54 REACTOR AT CENTRO DI STUDI NUCLEARI",
-            " ENRICO FERMI, MILAN."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,EN,15,272,6804)",
+        "free_txt": [],
+        "publication_year": "1968",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC )",
+        "free_txt": [
+          " L-54 REACTOR AT CENTRO DI STUDI NUCLEARI",
+          " ENRICO FERMI, MILAN."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)56-BA-140,CUM,FY,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)56-BA-140,CUM,FY,,MXW)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -86,11 +81,46 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " THERMAL AVERAGE WHOLE CHAIN CUMULATIVE FISSION YIELD."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " THERMAL AVERAGE WHOLE CHAIN CUMULATIVE FISSION YIELD."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,F)56-BA-140,CUM,FY,,FIS)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              "56-BA-140,CUM,FY,,FIS"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": "56-BA-140,CUM,FY,,FIS",
+            "sf4": "56-BA-140",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "FIS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " FISSION SPECTRUM AVERAGE WHOLE CHAIN CUMULATIVE FISSION YIELD."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -117,32 +147,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,F)56-BA-140,CUM,FY,,FIS)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "56-BA-140,CUM,FY,,FIS"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": "56-BA-140,CUM,FY,,FIS",
-            "sf4": "56-BA-140",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "FIS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " FISSION SPECTRUM AVERAGE WHOLE CHAIN CUMULATIVE FISSION YIELD."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -186,18 +190,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               ".CORRECTED FOR COUNTER EFFICIENCY."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -210,10 +212,8 @@
               " FISSION CHAMBER FOR FISSION MONITORING."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -222,10 +222,8 @@
               " OXIDE REMOVAL FROM THE SAMPLE SURFACE."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC )",
             "free_txt": [
@@ -233,30 +231,24 @@
               " ENRICO FERMI, MILAN."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC )",
             "free_txt": [
               " REACTOR NEUTRONS."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               ".FISSION PRODUCT ACTIVITY MEASUREMENT."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -267,28 +259,24 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               ".ABSOLUTE MEASUREMENT."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(57-LA-140,40.2HR,DG,1600.)",
             "free_txt": [
               " 1.6 MEV GAMMAS."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -297,20 +285,16 @@
               " IN A FLUX OF 10*8 N/CM*2/SEC."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               ".NATURAL URANIUM SAMPLE OF 350.2 MG."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -321,8 +305,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -330,20 +314,16 @@
               " YIELD."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(57-LA-140,40.2HR,DG,1600.)",
             "free_txt": [
               " 1.6 MEV GAMMAS."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -355,10 +335,8 @@
               " TO FAST FLUX CONVERTER."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F)56-BA-140,CUM,FY,,MXW)",
             "free_txt": [
@@ -366,20 +344,16 @@
               " AVERAGE WHOLE CHAIN CUMULATIVE FISSION YIELD."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               ".DEPLETED URANIUM, 916.6 MG."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

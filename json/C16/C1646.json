@@ -97,35 +97,30 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(S,AIP-1005,77,2008)",
-          "free_txt": [],
-          "publication_year": "2008"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USABRK)",
-          "free_txt": [],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USABRK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(S,AIP-1005,77,2008)",
+        "free_txt": [],
+        "publication_year": "2008",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USABRK)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USABRK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((6-C-12(8-O-18,X)12-MG-27,,SIG)/(6-C-12(8-O-18,X)12-MG-28,,SIG))",
-          "0": {
+      "0": {
+        "x4_code": "((6-C-12(8-O-18,X)12-MG-27,,SIG)/(6-C-12(8-O-18,X)12-MG-28,,SIG))",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -144,7 +139,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "6-C-12",
               [
@@ -162,11 +157,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((4-BE-9(4-BE-9,X)6-C-15,,SIG)/(4-BE-9(4-BE-9,X)6-C-16,,SIG))",
+        "children": [
+          {
+            "code": [
+              "4-BE-9",
+              [
+                "4-BE-9,X"
+              ],
+              "6-C-15,,SIG"
+            ],
+            "type": null,
+            "target": "4-BE-9",
+            "process": "4-BE-9,X",
+            "sf49": "6-C-15,,SIG",
+            "sf4": "6-C-15",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "4-BE-9",
+              [
+                "4-BE-9,X"
+              ],
+              "6-C-16,,SIG"
+            ],
+            "type": null,
+            "target": "4-BE-9",
+            "process": "4-BE-9,X",
+            "sf49": "6-C-16,,SIG",
+            "sf4": "6-C-16",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "003": {
       "common": null,
       "data": {
         "heads": [
@@ -196,51 +245,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((4-BE-9(4-BE-9,X)6-C-15,,SIG)/(4-BE-9(4-BE-9,X)6-C-16,,SIG))",
-          "0": {
-            "code": [
-              "4-BE-9",
-              [
-                "4-BE-9,X"
-              ],
-              "6-C-15,,SIG"
-            ],
-            "type": null,
-            "target": "4-BE-9",
-            "process": "4-BE-9,X",
-            "sf49": "6-C-15,,SIG",
-            "sf4": "6-C-15",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "4-BE-9",
-              [
-                "4-BE-9,X"
-              ],
-              "6-C-16,,SIG"
-            ],
-            "type": null,
-            "target": "4-BE-9",
-            "process": "4-BE-9,X",
-            "sf49": "6-C-16,,SIG",
-            "sf4": "6-C-16",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -292,8 +296,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -306,10 +310,8 @@
               "within the same particle gate. ..'"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TELES,HPGE,SI)",
             "free_txt": [
@@ -328,28 +330,22 @@
               "a 152 mum as dE detector and a 1003 mum as E detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USABRK)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": [
@@ -365,20 +361,16 @@
               "array was required"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,J.T.Burke+,J,PR/C,73,054604,2006)",
             "free_txt": [
               "                          - detector array description."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(PRELM)",
             "free_txt": []
@@ -387,8 +379,8 @@
       }
     },
     "003": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SI)",
             "free_txt": [
@@ -398,10 +390,8 @@
               "covered by the telescope, described in Subent 1."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -410,10 +400,8 @@
               "thickness of 100 mum."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -424,8 +412,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
@@ -438,20 +426,16 @@
               "    Digitizing error"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "9Be target had a thickness of 2.6(+-0.1) mg/cm2"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

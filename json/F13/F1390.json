@@ -30,42 +30,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ZET,39,230,1960)",
-          "free_txt": [],
-          "publication_year": "1960"
-        },
-        {
-          "x4_code": "(J,JET,12,166,1961)",
-          "free_txt": [
-            "  English translation"
-          ],
-          "publication_year": "1961"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCY,4ZZZDUB)",
-          "free_txt": [],
-          "facility_type": "(SYNCY)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ZET,39,230,1960)",
+        "free_txt": [],
+        "publication_year": "1960",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JET,12,166,1961)",
+        "free_txt": [
+          "  English translation"
+        ],
+        "publication_year": "1961",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCY,4ZZZDUB)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(SYNCY)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(83-BI-209(P,X)85-AT-211,,SIG)",
-          "0": {
+      "1": {
+        "x4_code": "(83-BI-209(P,X)85-AT-211,,SIG)",
+        "children": [
+          {
             "code": [
               "83-BI-209",
               [
@@ -83,13 +79,43 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(83-BI-209(P,X)85-AT-210,,SIG)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(83-BI-209(P,X)85-AT-210,,SIG)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "P,X"
+              ],
+              "85-AT-210,,SIG"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "P,X",
+            "sf49": "85-AT-210,,SIG",
+            "sf4": "85-AT-210",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((83-BI-209(P,X)85-AT-210,,SIG)/(83-BI-209(P,X)85-AT-211,,SIG))",
+        "children": [
+          {
             "code": [
               "83-BI-209",
               [
@@ -108,10 +134,36 @@
             "sf8": null,
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "P,X"
+              ],
+              "85-AT-211,,SIG"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "P,X",
+            "sf49": "85-AT-211,,SIG",
+            "sf4": "85-AT-211",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "DATA-ERR"
@@ -171,51 +223,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((83-BI-209(P,X)85-AT-210,,SIG)/(83-BI-209(P,X)85-AT-211,,SIG))",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "P,X"
-              ],
-              "85-AT-210,,SIG"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "P,X",
-            "sf49": "85-AT-210,,SIG",
-            "sf4": "85-AT-210",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "83-BI-209",
-              [
-                "P,X"
-              ],
-              "85-AT-211,,SIG"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "P,X",
-            "sf49": "85-AT-211,,SIG",
-            "sf4": "85-AT-211",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "DATA-ERR"
@@ -265,16 +272,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": []
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -283,10 +288,8 @@
               "the shape of their spectrum were obtained."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -294,18 +297,14 @@
               "photomultiplier with a ZnS(Ag) scintillator was used."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCY,4ZZZDUB)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -320,18 +319,14 @@
             "x4_code": "(ASPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(13-AL-27(P,X)11-NA-24,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -342,10 +337,8 @@
               "0.5-0.6, and a length of 30 mm."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -356,8 +349,20 @@
       }
     },
     "002": {
-      "decay-data": {
-        "2": [
+      "1": {
+        "decay-data": [
+          {
+            "x4_code": "(85-AT-211,7.3HR,A,5860.)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(84-PO-211,0.52SEC,A,7440.)",
+            "free_txt": []
+          }
+        ]
+      },
+      "2": {
+        "decay-data": [
           {
             "x4_code": "(85-AT-210,8.3HR)",
             "free_txt": []
@@ -366,10 +371,16 @@
             "x4_code": "(84-PO-210,140.D,A,5300.)",
             "free_txt": []
           }
+        ],
+        "rad-det": [
+          {
+            "x4_code": "(84-PO-210,A)",
+            "free_txt": []
+          }
         ]
       },
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -378,19 +389,11 @@
             ]
           }
         ]
-      },
-      "rad-det": {
-        "2": [
-          {
-            "x4_code": "(84-PO-210,A)",
-            "free_txt": []
-          }
-        ]
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [

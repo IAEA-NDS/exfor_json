@@ -28,55 +28,52 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,HMI-B-210,1976)",
-          "free_txt": [
-            " Data."
-          ],
-          "publication_year": "1976"
-        },
-        {
-          "x4_code": "(J,NP/A,263,86,1976)",
-          "free_txt": [
-            " Exp. descript. ; data on figs."
-          ],
-          "publication_year": "1976"
-        },
-        {
-          "x4_code": "(J,NP/A,263,93,1976)",
-          "free_txt": [
-            " - same 24Mg+n data are given"
-          ],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2GERBER)",
-          "free_txt": [
-            " 7 MV cn Van de Graaff accelerator of the",
-            " Hahn-Meitner-Institut Berlin, run at 6.3 MeV and",
-            " 1 uA current."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2GERBER)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,HMI-B-210,1976)",
+        "free_txt": [
+          " Data."
+        ],
+        "publication_year": "1976",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,263,86,1976)",
+        "free_txt": [
+          " Exp. descript. ; data on figs."
+        ],
+        "publication_year": "1976",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,263,93,1976)",
+        "free_txt": [
+          " - same 24Mg+n data are given"
+        ],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2GERBER)",
+        "free_txt": [
+          " 7 MV cn Van de Graaff accelerator of the",
+          " Hahn-Meitner-Institut Berlin, run at 6.3 MeV and",
+          " 1 uA current."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2GERBER)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(7-N-0(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(7-N-0(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "7-N-0",
               [
@@ -94,11 +91,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(12-MG-24(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "12-MG-24",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "12-MG-24",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-SYS"
@@ -5126,32 +5158,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(12-MG-24(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "12-MG-24",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "12-MG-24",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-SYS"
@@ -9989,8 +9995,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -10001,10 +10007,8 @@
               " Erroneous electronic data collection and conversion."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -10012,10 +10016,8 @@
               " 1 in. thick) on a VALVO XP1040 photomultiplier."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS)",
             "free_txt": [
@@ -10030,10 +10032,8 @@
               " Statistical error"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2GERBER)",
             "free_txt": [
@@ -10042,10 +10042,8 @@
               " 1 uA current."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -10054,10 +10052,8 @@
               " per second for a solid angle of 2x10E-5 Sr."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TRN,TOF)",
             "free_txt": [
@@ -10078,20 +10074,16 @@
               "agreement between the two monitors was better than 1%."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               " Transmission measurement."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -10105,8 +10097,8 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -10118,8 +10110,8 @@
       }
     },
     "003": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": "(12-MG-24,ENR=0.99)",
             "free_txt": [

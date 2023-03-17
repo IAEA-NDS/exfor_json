@@ -23,51 +23,48 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NUK,7,265,1965)",
-          "free_txt": [
-            "  In German."
-          ],
-          "publication_year": "1965"
-        },
-        {
-          "x4_code": "(C,64GENEVA,,763,1964)",
-          "free_txt": [
-            " In English.",
-            " Authors: T.Springer,C.Hofmeyr,S.Kornbicher,H.D.Lemmel",
-            " Figures for H2O, D2O, ZrH(1.92), polyphenyls"
-          ],
-          "publication_year": "1964"
-        },
-        {
-          "x4_code": "(R,JUEL-160-NP,196405)",
-          "free_txt": [],
-          "publication_year": "1964"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2GERMUN)",
-          "free_txt": [],
-          "facility_type": "(REAC)",
-          "institute": "(2GERMUN)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NUK,7,265,1965)",
+        "free_txt": [
+          "  In German."
+        ],
+        "publication_year": "1965",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,64GENEVA,,763,1964)",
+        "free_txt": [
+          " In English.",
+          " Authors: T.Springer,C.Hofmeyr,S.Kornbicher,H.D.Lemmel",
+          " Figures for H2O, D2O, ZrH(1.92), polyphenyls"
+        ],
+        "publication_year": "1964",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,JUEL-160-NP,196405)",
+        "free_txt": [],
+        "publication_year": "1964",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2GERMUN)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2GERMUN)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-WTR(N,THS)1-H-WTR,,DA,,RS)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-WTR(N,THS)1-H-WTR,,DA,,RS)",
+        "children": [
+          {
             "code": [
               "1-H-WTR",
               [
@@ -85,11 +82,46 @@
             "sf7": null,
             "sf8": "RS",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Data at 20 deg C temperature"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Data at 20 deg C temperature"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-WTR(N,THS)1-H-WTR,,DA,,RS/TMP)",
+        "children": [
+          {
+            "code": [
+              "1-H-WTR",
+              [
+                "N,THS"
+              ],
+              "1-H-WTR,,DA,,RS/TMP"
+            ],
+            "type": null,
+            "target": "1-H-WTR",
+            "process": "N,THS",
+            "sf49": "1-H-WTR,,DA,,RS/TMP",
+            "sf4": "1-H-WTR",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "RS/TMP",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -593,32 +625,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-WTR(N,THS)1-H-WTR,,DA,,RS/TMP)",
-          "0": {
-            "code": [
-              "1-H-WTR",
-              [
-                "N,THS"
-              ],
-              "1-H-WTR,,DA,,RS/TMP"
-            ],
-            "type": null,
-            "target": "1-H-WTR",
-            "process": "N,THS",
-            "sf49": "1-H-WTR,,DA,,RS/TMP",
-            "sf4": "1-H-WTR",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "RS/TMP",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "TEMP"
@@ -1060,8 +1066,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1077,10 +1083,8 @@
               "           200.                 0.296+-0.007"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1088,10 +1092,8 @@
               "  For multiple scattering."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -1099,18 +1101,14 @@
               " Li6(I) - crystal detector."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2GERMUN)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1119,20 +1117,16 @@
               " total - 2.E+5 /sec."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TRN)",
             "free_txt": [
               " Transmission and scattering ."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,23427001,S.Kornbicher,J,NUK,7,281,1965)",
             "free_txt": [
@@ -1145,10 +1139,8 @@
               " Benzol, diphenyl, terphenyl data  (Part III)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1159,8 +1151,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1169,10 +1161,8 @@
               " angle, incident neutron energy, sample temperature ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1180,10 +1170,8 @@
               "                          +-0.02 for 200 deg C."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1194,8 +1182,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1204,10 +1192,8 @@
               " angle, incident neutron energy, sample temperature ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1215,10 +1201,8 @@
               "                          +-0.02 for 200 deg C."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

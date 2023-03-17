@@ -42,26 +42,108 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,156,1187,1967)",
-          "free_txt": [],
-          "publication_year": "1967"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,PR,156,1187,1967)",
+        "free_txt": [],
+        "publication_year": "1967",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,3INDTRM)",
+        "free_txt": [
+          "5.5 MeV HVEC"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(3INDTRM)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(6-C-13(A,N)8-O-16,,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-13",
+              [
+                "A,N"
+              ],
+              "8-O-16,,SIG"
+            ],
+            "type": null,
+            "target": "6-C-13",
+            "process": "A,N",
+            "sf49": "8-O-16,,SIG",
+            "sf4": "8-O-16",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,3INDTRM)",
-          "free_txt": [
-            "5.5 MeV HVEC"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(3INDTRM)"
-        }
-      ]
+    "003": {
+      "1": {
+        "x4_code": "(6-C-13(A,N)8-O-16,,SIG,,RES)",
+        "children": [
+          {
+            "code": [
+              "6-C-13",
+              [
+                "A,N"
+              ],
+              "8-O-16,,SIG,,RES"
+            ],
+            "type": null,
+            "target": "6-C-13",
+            "process": "A,N",
+            "sf49": "8-O-16,,SIG,,RES",
+            "sf4": "8-O-16",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "RES",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Peak cross section"
+      },
+      "2": {
+        "x4_code": "(6-C-13(A,TOT),,WID)",
+        "children": [
+          {
+            "code": [
+              "6-C-13",
+              [
+                "A,TOT"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "6-C-13",
+            "process": "A,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Total width"
+      }
     }
   },
   "data_tables": {
@@ -86,32 +168,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-13(A,N)8-O-16,,SIG)",
-          "0": {
-            "code": [
-              "6-C-13",
-              [
-                "A,N"
-              ],
-              "8-O-16,,SIG"
-            ],
-            "type": null,
-            "target": "6-C-13",
-            "process": "A,N",
-            "sf49": "8-O-16,,SIG",
-            "sf4": "8-O-16",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -728,56 +784,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(6-C-13(A,N)8-O-16,,SIG,,RES)",
-          "0": {
-            "code": [
-              "6-C-13",
-              [
-                "A,N"
-              ],
-              "8-O-16,,SIG,,RES"
-            ],
-            "type": null,
-            "target": "6-C-13",
-            "process": "A,N",
-            "sf49": "8-O-16,,SIG,,RES",
-            "sf4": "8-O-16",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "RES",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Peak cross section"
-        },
-        "2": {
-          "x4_code": "(6-C-13(A,TOT),,WID)",
-          "0": {
-            "code": [
-              "6-C-13",
-              [
-                "A,TOT"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "6-C-13",
-            "process": "A,TOT",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Total width"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -887,8 +893,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(RECIP)",
             "free_txt": [
@@ -897,10 +903,8 @@
               "applying the reciprocity theorem."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(D4PI,BF3)",
             "free_txt": [
@@ -909,10 +913,8 @@
               "block of paraffin."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -932,20 +934,16 @@
               "  Error in current integrator  (2%)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,3INDTRM)",
             "free_txt": [
               "5.5 MeV HVEC"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(6-C-13,NAT=0.30)",
             "free_txt": [
@@ -957,8 +955,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
@@ -971,10 +969,8 @@
               "    Digitizing error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -985,8 +981,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -60,56 +60,54 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AE,70,(3),194,1991)",
-          "free_txt": [],
-          "publication_year": "1991"
-        },
-        {
-          "x4_code": "(J,SJA,70,254,1991)",
-          "free_txt": [
-            " Engl.transl. of AE,70,(3),194,1991"
-          ],
-          "publication_year": "1991"
-        },
-        {
-          "x4_code": "((J,YK,,(3),39,1990)=(R,INDC(CCP)-328,39,1990))",
-          "free_txt": [],
-          "publication_year": "1990"
-        },
-        {
-          "x4_code": "(R,INDC(CCP)-335,19,1991)",
-          "free_txt": [
-            " Engl.transl.of YK,,(3),39,1990"
-          ],
-          "publication_year": "1991"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4RUSKUR)",
-          "free_txt": [
-            "  Reactor F-1"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4RUSKUR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AE,70,(3),194,1991)",
+        "free_txt": [],
+        "publication_year": "1991",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SJA,70,254,1991)",
+        "free_txt": [
+          " Engl.transl. of AE,70,(3),194,1991"
+        ],
+        "publication_year": "1991",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((J,YK,,(3),39,1990)=(R,INDC(CCP)-328,39,1990))",
+        "free_txt": [],
+        "publication_year": "1990",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(CCP)-335,19,1991)",
+        "free_txt": [
+          " Engl.transl.of YK,,(3),39,1990"
+        ],
+        "publication_year": "1991",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4RUSKUR)",
+        "free_txt": [
+          "  Reactor F-1"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4RUSKUR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-54(N,A)24-CR-51,,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(26-FE-54(N,A)24-CR-51,,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "26-FE-54",
               [
@@ -127,11 +125,46 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(26-FE-54(N,A)24-CR-51,,RI)",
+        "children": [
+          {
+            "code": [
+              "26-FE-54",
+              [
+                "N,A"
+              ],
+              "24-CR-51,,RI"
+            ],
+            "type": null,
+            "target": "26-FE-54",
+            "process": "N,A",
+            "sf49": "24-CR-51,,RI",
+            "sf4": "24-CR-51",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -153,32 +186,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-54(N,A)24-CR-51,,RI)",
-          "0": {
-            "code": [
-              "26-FE-54",
-              [
-                "N,A"
-              ],
-              "24-CR-51,,RI"
-            ],
-            "type": null,
-            "target": "26-FE-54",
-            "process": "N,A",
-            "sf49": "24-CR-51,,RI",
-            "sf4": "24-CR-51",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -207,16 +214,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(24-CR-51,27.73D,DG,320.1)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GE-IN)",
             "free_txt": [
@@ -224,20 +229,16 @@
               " Energy resolution 1.5keV for E-gamma = 320 keV."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4RUSKUR)",
             "free_txt": [
               "  Reactor F-1"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -246,10 +247,8 @@
               " Resonance neutrons - (6.0+-0.2) %."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -257,20 +256,16 @@
               "without Cd."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -278,10 +273,8 @@
               " Fe-54 mass is 11.74 gram"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -292,8 +285,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -304,8 +297,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [

@@ -41,35 +41,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CJP,31,903,53)",
-          "free_txt": [],
-          "publication_year": "1953"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC)",
-          "free_txt": [
-            " NRX REACTOR."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CJP,31,903,53)",
+        "free_txt": [],
+        "publication_year": "1953",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC)",
+        "free_txt": [
+          " NRX REACTOR."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(27-CO-60-M(N,G)27-CO-61,,SIG,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(27-CO-60-M(N,G)27-CO-61,,SIG,,SPA)",
+        "children": [
+          {
             "code": [
               "27-CO-60-M",
               [
@@ -87,11 +82,46 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(27-CO-60(N,G)27-CO-61,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "27-CO-60",
+              [
+                "N,G"
+              ],
+              "27-CO-61,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "27-CO-60",
+            "process": "N,G",
+            "sf49": "27-CO-61,,SIG,,SPA",
+            "sf4": "27-CO-61",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -128,32 +158,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(27-CO-60(N,G)27-CO-61,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "27-CO-60",
-              [
-                "N,G"
-              ],
-              "27-CO-61,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "27-CO-60",
-            "process": "N,G",
-            "sf49": "27-CO-61,,SIG,,SPA",
-            "sf4": "27-CO-61",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -192,54 +196,44 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(27-CO-61,105.MIN)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " ANTHRACENE SCINTILLATION SPECTROMETER."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               " NRX REACTOR."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "REACTOR SPECTRUM"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(SCSRS)",
             "free_txt": []
@@ -248,16 +242,14 @@
       }
     },
     "002": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM,27-CO-59(N,G)27-CO-60-M,,SIG,,SPA)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(27-CO-60-M,10.5MIN)",
             "free_txt": []
@@ -266,16 +258,14 @@
       }
     },
     "003": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM,27-CO-59(N,G)27-CO-60-G,,SIG,,SPA)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(27-CO-60-G,5.25YR)",
             "free_txt": []

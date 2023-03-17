@@ -54,33 +54,31 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,SJA,55,528,1983)",
-          "free_txt": [
-            " Engl.transl.of J,AE,55,97,1983",
-            "#doi:10.1007/BF01138346"
-          ],
-          "publication_year": "1983"
-        },
-        {
-          "x4_code": "(J,AE,55,(2),97,198308)",
-          "free_txt": [],
-          "publication_year": "1983"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,SJA,55,528,1983)",
+        "free_txt": [
+          " Engl.transl.of J,AE,55,97,1983",
+          "#doi:10.1007/BF01138346"
+        ],
+        "publication_year": "1983",
+        "pointer": "0",
+        "doi": "10.1007/BF01138346"
+      },
+      {
+        "x4_code": "(J,AE,55,(2),97,198308)",
+        "free_txt": [],
+        "publication_year": "1983",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(0,F),PR,NU)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(0,F),PR,NU)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -98,11 +96,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "Average prompt neutron multiplicity."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "Average prompt neutron multiplicity."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-236(0,F),PR,NU)",
+        "children": [
+          {
+            "code": [
+              "92-U-236",
+              [
+                "0,F"
+              ],
+              ",PR,NU"
+            ],
+            "type": null,
+            "target": "92-U-236",
+            "process": "0,F",
+            "sf49": ",PR,NU",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Average prompt neutron multiplicity."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-238(0,F),PR/NUM,NU,,RAW)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "0,F"
+              ],
+              ",PR/NUM,NU,,RAW"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "0,F",
+            "sf49": ",PR/NUM,NU,,RAW",
+            "sf4": null,
+            "sf5": "PR/NUM",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": "RAW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Neutron multiplicity distributions for 3 samples ofU-238 of mass 1 g on different squares during 10**4 seccounting. Number of counts, not normalized."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -134,32 +195,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-236(0,F),PR,NU)",
-          "0": {
-            "code": [
-              "92-U-236",
-              [
-                "0,F"
-              ],
-              ",PR,NU"
-            ],
-            "type": null,
-            "target": "92-U-236",
-            "process": "0,F",
-            "sf49": ",PR,NU",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Average prompt neutron multiplicity."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -191,32 +226,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(0,F),PR/NUM,NU,,RAW)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "0,F"
-              ],
-              ",PR/NUM,NU,,RAW"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "0,F",
-            "sf49": ",PR/NUM,NU,,RAW",
-            "sf4": null,
-            "sf5": "PR/NUM",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": "RAW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Neutron multiplicity distributions for 3 samples ofU-238 of mass 1 g on different squares during 10**4 seccounting. Number of counts, not normalized."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -306,8 +315,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -318,10 +327,8 @@
               "Extrapolation to zero thickness was done."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
@@ -333,30 +340,24 @@
               "neutron spectra."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not specified."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "No information."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -367,8 +368,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -376,10 +377,8 @@
               "For counting loses."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -387,10 +386,8 @@
               "Table 1 of J,AE,55,(2),97,1983 is 100.0008%."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": null,
             "free_txt": [
@@ -398,10 +395,8 @@
               "from p.23 of A. Nichols+,INDC(NDS)-I05/N,15(1979))."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -409,10 +404,8 @@
               "sig**2."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -421,10 +414,8 @@
               "U-236 - 0.0003%, U-238 - 99.9999 % ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -435,8 +426,8 @@
       }
     },
     "003": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -444,10 +435,8 @@
               "For counting loses."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": null,
             "free_txt": [
@@ -456,10 +445,8 @@
               "from H.Von Gunten+, Phys. Rev.,C23,1110(1981))."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -467,10 +454,8 @@
               "sig**2."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -479,10 +464,8 @@
               "U-236 - 99.845%, U-238 - 0.107 % ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -493,8 +476,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -504,20 +487,16 @@
               "for n=5, 6."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               " Sample square in cm**2 ."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -526,10 +505,8 @@
               "U-236 - 0.0003%, U-238 - 99.9999 % ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

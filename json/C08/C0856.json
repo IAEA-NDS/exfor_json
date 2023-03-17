@@ -40,37 +40,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,116,1563,195912)",
-          "free_txt": [],
-          "publication_year": "1959"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,1USADKE)",
-          "free_txt": [
-            " Protons analyzed by electrostatic analyzer."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(1USADKE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,116,1563,195912)",
+        "free_txt": [],
+        "publication_year": "1959",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,1USADKE)",
+        "free_txt": [
+          " Protons analyzed by electrostatic analyzer."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(1USADKE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(P,EL)14-SI-28,,DA,,RTH)",
-          "0": {
+      "0": {
+        "x4_code": "(14-SI-28(P,EL)14-SI-28,,DA,,RTH)",
+        "children": [
+          {
             "code": [
               "14-SI-28",
               [
@@ -88,11 +83,74 @@
             "sf7": null,
             "sf8": "RTH",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(14-SI-28(P,EL)14-SI-28,,DA)",
+        "children": [
+          {
+            "code": [
+              "14-SI-28",
+              [
+                "P,EL"
+              ],
+              "14-SI-28,,DA"
+            ],
+            "type": null,
+            "target": "14-SI-28",
+            "process": "P,EL",
+            "sf49": "14-SI-28,,DA",
+            "sf4": "14-SI-28",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(14-SI-28(P,INL)14-SI-28,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "14-SI-28",
+              [
+                "P,INL"
+              ],
+              "14-SI-28,PAR,DA"
+            ],
+            "type": null,
+            "target": "14-SI-28",
+            "process": "P,INL",
+            "sf49": "14-SI-28,PAR,DA",
+            "sf4": "14-SI-28",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-CM",
@@ -491,32 +549,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(P,EL)14-SI-28,,DA)",
-          "0": {
-            "code": [
-              "14-SI-28",
-              [
-                "P,EL"
-              ],
-              "14-SI-28,,DA"
-            ],
-            "type": null,
-            "target": "14-SI-28",
-            "process": "P,EL",
-            "sf49": "14-SI-28,,DA",
-            "sf4": "14-SI-28",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "DATA-ERR"
@@ -3219,32 +3251,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-28(P,INL)14-SI-28,PAR,DA)",
-          "0": {
-            "code": [
-              "14-SI-28",
-              [
-                "P,INL"
-              ],
-              "14-SI-28,PAR,DA"
-            ],
-            "type": null,
-            "target": "14-SI-28",
-            "process": "P,INL",
-            "sf49": "14-SI-28,PAR,DA",
-            "sf4": "14-SI-28",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG-CM",
@@ -3476,16 +3482,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(CSICR)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3498,28 +3502,22 @@
               " . uncertainty in geometry of chamber."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,1USADKE)",
             "free_txt": [
               " Protons analyzed by electrostatic analyzer."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(BCINT)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3530,10 +3528,8 @@
               " at 3.100 and 3.337 MeV."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3545,8 +3541,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3554,10 +3550,8 @@
               " SigmaBase."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3568,8 +3562,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -3580,8 +3574,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

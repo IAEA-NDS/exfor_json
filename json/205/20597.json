@@ -25,58 +25,56 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,11,103,7501)",
-          "free_txt": [
-            " FINAL PUBLICATION."
-          ],
-          "publication_year": "1975"
-        },
-        {
-          "x4_code": "(J,ZN/A,26,442,7103)",
-          "free_txt": [
-            " CARBON X-SECTION."
-          ],
-          "publication_year": "1971"
-        },
-        {
-          "x4_code": "(J,PL/B,36,208,7109)",
-          "free_txt": [
-            " OXYGEN X-SECTION."
-          ],
-          "publication_year": "1971"
-        },
-        {
-          "x4_code": "(P,NEANDC(E)-161,,7408)",
-          "free_txt": [
-            " PROGRESS REPORT."
-          ],
-          "publication_year": "1974"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": null,
-          "free_txt": [
-            ".FRM RESEARCH REACTOR, MUNICH."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,11,103,7501)",
+        "free_txt": [
+          " FINAL PUBLICATION."
+        ],
+        "publication_year": "1975",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,ZN/A,26,442,7103)",
+        "free_txt": [
+          " CARBON X-SECTION."
+        ],
+        "publication_year": "1971",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PL/B,36,208,7109)",
+        "free_txt": [
+          " OXYGEN X-SECTION."
+        ],
+        "publication_year": "1971",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,NEANDC(E)-161,,7408)",
+        "free_txt": [
+          " PROGRESS REPORT."
+        ],
+        "publication_year": "1974",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": null,
+        "free_txt": [
+          ".FRM RESEARCH REACTOR, MUNICH."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,THS)1-H-1,FA,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-1(N,THS)1-H-1,FA,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -94,11 +92,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  ZERO ENERGY."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  ZERO ENERGY."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " BOUND H ATOM."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -125,32 +158,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " BOUND H ATOM."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -196,8 +203,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -205,10 +212,8 @@
               " AIR SCATTERING WITHOUT SAMPLE, INSCATTERING."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -220,20 +225,16 @@
               " ZN/A,26,442,7103 FOR C, AND  PL/B,36,208,7109 FOR O."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
               ".RESONANCE ACTIVATION OF FOIL."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -243,28 +244,22 @@
               " FOR DEAD TIME AND INSCATTERING."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": null,
             "free_txt": [
               ".FRM RESEARCH REACTOR, MUNICH."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC )",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -273,30 +268,24 @@
               " 5.6 EV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               ".TRANSMISSION."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               ".ABSOLUTE."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -307,10 +296,8 @@
               " OF PURITY 99.7 PERCENT, 0.02 PERCENT WATER."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -321,8 +308,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -330,10 +317,8 @@
               " BINDING AND DEUTERIUM CONCENTRATION."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -349,10 +334,8 @@
               " LENGTHS AND EFFECTIVE RANGES ARE GIVEN."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -361,10 +344,8 @@
               " ERRORS AND UNCERTAINTY IN MOLECULAR BINDING."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP  )",
             "free_txt": [
@@ -376,18 +357,16 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               ".FOUR MEASUREMENTS ON DIFFERENT LIQUIDS."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -412,10 +391,8 @@
               " C7H8"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

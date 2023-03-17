@@ -40,43 +40,39 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JIN,40,1457,7808)",
-          "free_txt": [
-            " MAIN REFERENCE."
-          ],
-          "publication_year": "1978"
-        },
-        {
-          "x4_code": "(P,NEANDC(J)-36L,18,7409)",
-          "free_txt": [],
-          "publication_year": "1974"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC )",
-          "free_txt": [
-            " THREE DIFFERENT REACTORS, JRR-2, JRR-3 AND",
-            " JRR-4 AT THE JAPAN ATOMIC ENERGY RESEARCH INSTITUTE."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JIN,40,1457,7808)",
+        "free_txt": [
+          " MAIN REFERENCE."
+        ],
+        "publication_year": "1978",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,NEANDC(J)-36L,18,7409)",
+        "free_txt": [],
+        "publication_year": "1974",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC )",
+        "free_txt": [
+          " THREE DIFFERENT REACTORS, JRR-2, JRR-3 AND",
+          " JRR-4 AT THE JAPAN ATOMIC ENERGY RESEARCH INSTITUTE."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(12-MG-27(N,G)12-MG-28,,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(12-MG-27(N,G)12-MG-28,,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "12-MG-27",
               [
@@ -94,11 +90,46 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(13-AL-28(N,P)12-MG-28,,SIG,,FIS)",
+        "children": [
+          {
+            "code": [
+              "13-AL-28",
+              [
+                "N,P"
+              ],
+              "12-MG-28,,SIG,,FIS"
+            ],
+            "type": null,
+            "target": "13-AL-28",
+            "process": "N,P",
+            "sf49": "12-MG-28,,SIG,,FIS",
+            "sf4": "12-MG-28",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "FIS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -142,32 +173,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-28(N,P)12-MG-28,,SIG,,FIS)",
-          "0": {
-            "code": [
-              "13-AL-28",
-              [
-                "N,P"
-              ],
-              "12-MG-28,,SIG,,FIS"
-            ],
-            "type": null,
-            "target": "13-AL-28",
-            "process": "N,P",
-            "sf49": "12-MG-28,,SIG,,FIS",
-            "sf4": "12-MG-28",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "FIS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY",
@@ -233,18 +238,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI )",
             "free_txt": [
               " GE(LI) DETECTORS, EFFICIENCY CALIBRATED."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC )",
             "free_txt": [
@@ -252,40 +255,32 @@
               " JRR-4 AT THE JAPAN ATOMIC ENERGY RESEARCH INSTITUTE."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC )",
             "free_txt": [
               " THE THREE DIFFERENT REACTORS."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
               " ACTIVATION FOLLOWED BY CHEMICAL SEPARATION."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(DG   )",
             "free_txt": [
               " DECAY GAMMAS."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -296,16 +291,14 @@
       }
     },
     "002": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM,12-MG-26(N,G)12-MG-27,,SIG,,MXW)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(12-MG-27,9.46MIN,DG)",
             "free_txt": []
@@ -314,10 +307,8 @@
             "x4_code": "(12-MG-28,21.2HR,DG,1779.)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -328,10 +319,8 @@
               " UNIFORMITY IN THE NEUTRON FLUX (2 - 4 PERCENT)."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -339,10 +328,8 @@
               " GIVEN IN TABLE 1 IN MAIN REFERENCE."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(27-CO-59(N,G)27-CO-60,,SIG)",
             "free_txt": [
@@ -352,10 +339,8 @@
               " COMPONENT IN THE WHOLE NEUTRON SPECTRUM."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -366,10 +351,8 @@
               ".PIECES OF CO-AL ALLOY WIRE AS FLUX MONITOR."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -380,8 +363,8 @@
       }
     },
     "003": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM1,13-AL-27(N,P)12-MG-27,,SIG,,FIS)",
             "free_txt": []
@@ -394,10 +377,8 @@
             "x4_code": "(ASSUM3,13-AL-27(N,G)13-AL-28,,SIG,,FIS)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(12-MG-27,9.46MIN,DG)",
             "free_txt": []
@@ -410,18 +391,14 @@
             "x4_code": "(13-AL-28,2.31MIN,DG)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(27-CO-58-G,,DG,810.,0.99)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -432,10 +409,8 @@
               " EFFICIENCY."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -445,18 +420,14 @@
               " DEPENDENCE OF THE REACTOR SPECTRUM."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(28-NI-58(N,P)27-CO-58-G,,SIG,,FIS)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -465,10 +436,8 @@
               ".NICKEL FOIL AS NEUTRON MONITOR."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

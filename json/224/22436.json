@@ -62,44 +62,40 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,621,262C,1997)",
-          "free_txt": [],
-          "publication_year": "1997"
-        },
-        {
-          "x4_code": "(S,INDC(EUR)-031,30,199706)",
-          "free_txt": [
-            " Report IRMM-NEA/NSC/DOC(97)7,30,199706"
-          ],
-          "publication_year": "1997"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2ZZZGEL)",
-          "free_txt": [
-            " Lineal Accelerator GELINA"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,621,262C,1997)",
+        "free_txt": [],
+        "publication_year": "1997",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(S,INDC(EUR)-031,30,199706)",
+        "free_txt": [
+          " Report IRMM-NEA/NSC/DOC(97)7,30,199706"
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2ZZZGEL)",
+        "free_txt": [
+          " Lineal Accelerator GELINA"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(56-BA-136(N,G),,WID,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(56-BA-136(N,G),,WID,,AV)",
+        "children": [
+          {
             "code": [
               "56-BA-136",
               [
@@ -117,11 +113,100 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "   Averaged over resonances"
-        }
+          }
+        ],
+        "type": null,
+        "free_text": "   Averaged over resonances"
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(56-BA-136(N,G)56-BA-137,,SIG,,MXW/MSC)",
+        "children": [
+          {
+            "code": [
+              "56-BA-136",
+              [
+                "N,G"
+              ],
+              "56-BA-137,,SIG,,MXW/MSC"
+            ],
+            "type": null,
+            "target": "56-BA-136",
+            "process": "N,G",
+            "sf49": "56-BA-137,,SIG,,MXW/MSC",
+            "sf4": "56-BA-137",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW/MSC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Value given in data section is avg(sigma*V)/V-therm  (Not partial for outgoing gamma, but contribution   of neutron resonance lower than 60 keV to MACS.)"
       },
+      "2": {
+        "x4_code": "(56-BA-136(N,G)56-BA-137,,SIG,,MXW,DERIV)",
+        "children": [
+          {
+            "code": [
+              "56-BA-136",
+              [
+                "N,G"
+              ],
+              "56-BA-137,,SIG,,MXW,DERIV"
+            ],
+            "type": null,
+            "target": "56-BA-136",
+            "process": "N,G",
+            "sf49": "56-BA-137,,SIG,,MXW,DERIV",
+            "sf4": "56-BA-137",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(56-BA-136(N,G),,WID/STR)",
+        "children": [
+          {
+            "code": [
+              "56-BA-136",
+              [
+                "N,G"
+              ],
+              ",,WID/STR"
+            ],
+            "type": null,
+            "target": "56-BA-136",
+            "process": "N,G",
+            "sf49": ",,WID/STR",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID/STR",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RES-MAX"
@@ -163,56 +248,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(56-BA-136(N,G)56-BA-137,,SIG,,MXW/MSC)",
-          "0": {
-            "code": [
-              "56-BA-136",
-              [
-                "N,G"
-              ],
-              "56-BA-137,,SIG,,MXW/MSC"
-            ],
-            "type": null,
-            "target": "56-BA-136",
-            "process": "N,G",
-            "sf49": "56-BA-137,,SIG,,MXW/MSC",
-            "sf4": "56-BA-137",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW/MSC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Value given in data section is avg(sigma*V)/V-therm  (Not partial for outgoing gamma, but contribution   of neutron resonance lower than 60 keV to MACS.)"
-        },
-        "2": {
-          "x4_code": "(56-BA-136(N,G)56-BA-137,,SIG,,MXW,DERIV)",
-          "0": {
-            "code": [
-              "56-BA-136",
-              [
-                "N,G"
-              ],
-              "56-BA-137,,SIG,,MXW,DERIV"
-            ],
-            "type": null,
-            "target": "56-BA-136",
-            "process": "N,G",
-            "sf49": "56-BA-137,,SIG,,MXW,DERIV",
-            "sf4": "56-BA-137",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -322,32 +357,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(56-BA-136(N,G),,WID/STR)",
-          "0": {
-            "code": [
-              "56-BA-136",
-              [
-                "N,G"
-              ],
-              ",,WID/STR"
-            ],
-            "type": null,
-            "target": "56-BA-136",
-            "process": "N,G",
-            "sf49": ",,WID/STR",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID/STR",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1"
@@ -937,8 +946,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(STANK)",
             "free_txt": [
@@ -956,20 +965,16 @@
               "40 mu-g/cm2 thickness."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
               " Lineal Accelerator GELINA"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
@@ -978,28 +983,22 @@
               "in two 4 cm thick water slabs canned in beryllium."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,22442002,H.Beer+,J,AJ,474,843,1997)",
             "free_txt": [
               " Experim.details"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1011,26 +1010,22 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  No description"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,13729001,P.E.Koehler+,J,PR/C,54,1463,1996)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,22436004)",
             "free_txt": [
@@ -1051,8 +1046,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTED)",
             "free_txt": [
@@ -1063,10 +1058,8 @@
               "F.Voss et al.)."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1075,20 +1068,16 @@
               "E-dependence of the neutron flux."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "   For neutron energy determination"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -1096,18 +1085,14 @@
               "average values of ref. (see F.Voss et al.)."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,22307021,F.Voss+,J,PR/C,50,2582,1994)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1122,8 +1107,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(SHAPE)",
             "free_txt": [
@@ -1149,10 +1134,8 @@
               "results."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1175,10 +1158,8 @@
               " 100 keV, with log(E) interpolation."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1192,10 +1173,8 @@
               "value 4.91 + 0.14 meV given in ref. (see H.Beer et al.)"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,13729002,P.E.Koehler+,J,PR/C,54,1463,1996)",
             "free_txt": []
@@ -1208,10 +1187,8 @@
             "x4_code": "(R,22442002,H.Beer+,J,AJ,474,843,1997)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

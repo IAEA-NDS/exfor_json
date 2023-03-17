@@ -63,41 +63,36 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,58,(2),932,199808)",
-          "free_txt": [
-            "  Main Reference, data are",
-            "                            given"
-          ],
-          "publication_year": "1998"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2GERKFK)",
-          "free_txt": [
-            "  3.75 MV Van-de-Graaff accelerator of",
-            "               Forschungszentrum Karlsruhe"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2GERKFK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,58,(2),932,199808)",
+        "free_txt": [
+          "  Main Reference, data are",
+          "                            given"
+        ],
+        "publication_year": "1998",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2GERKFK)",
+        "free_txt": [
+          "  3.75 MV Van-de-Graaff accelerator of",
+          "               Forschungszentrum Karlsruhe"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2GERKFK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(12-MG-26(N,G)12-MG-27,,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(12-MG-26(N,G)12-MG-27,,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "12-MG-26",
               [
@@ -115,11 +110,46 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(12-MG-26(N,G)12-MG-27,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "12-MG-26",
+              [
+                "N,G"
+              ],
+              "12-MG-27,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "12-MG-26",
+            "process": "N,G",
+            "sf49": "12-MG-27,,SIG,,SPA",
+            "sf4": "12-MG-27",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Averaged over neutr.              energy spectrum"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -146,32 +176,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(12-MG-26(N,G)12-MG-27,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "12-MG-26",
-              [
-                "N,G"
-              ],
-              "12-MG-27,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "12-MG-26",
-            "process": "N,G",
-            "sf49": "12-MG-27,,SIG,,SPA",
-            "sf4": "12-MG-27",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Averaged over neutr.              energy spectrum"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -221,8 +225,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(THEO)",
             "free_txt": [
@@ -231,26 +235,20 @@
               "       are discussed"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(12-MG-27,9.458MIN,B-,,,                   DG,843.76,0.718,                   DG,1014.44,0.280)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(79-AU-198-G,2.69517D,DG,411.80,0.9550)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -264,20 +262,16 @@
               " 6LI Glass monitor for neutron flux"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Errors are not specified. Must be total"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2GERKFK)",
             "free_txt": [
@@ -285,10 +279,8 @@
               "               Forschungszentrum Karlsruhe"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -297,10 +289,8 @@
               "        1 MHz, pulse width 10 ns"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -316,28 +306,22 @@
               "       energy widths 20-50 keV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "  Time-of-flight"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -348,10 +332,8 @@
               ".Gold metallic sample, weight 15.8-16.5 mg"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -363,8 +345,8 @@
     },
     "002": {},
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [

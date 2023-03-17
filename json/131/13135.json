@@ -1,30 +1,38 @@
 {
   "entry": "13135",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-01-13",
+  "number_of_revisions": "4",
   "histories": [
     {
-      "x4_code": "(881115C)",
+      "x4_code": "(19881115C)",
       "free_txt": []
     },
     {
-      "x4_code": "(891106A)",
+      "x4_code": "(19891106A)",
       "free_txt": [
-        " REFERENCE UPDATE."
+        " Reference update."
+      ]
+    },
+    {
+      "x4_code": "(20220702A)",
+      "free_txt": [
+        " OS. Data format in sub.3 corrected,",
+        " updated ERR-ANALYS, added SAMPLE, converted to lower",
+        " case."
       ]
     }
   ],
   "bib_record": {
-    "title": "NEUTRON SCATERING AND THE FERMI SURFACE ANOMALY IN 51V.",
+    "title": "Neutron scattering and the Fermi surface anomaly in 51V.",
     "authors": [
       {
         "name": "R.D.Lawson"
       },
       {
-        "name": "A.B.Smith"
+        "name": "P.T.Guenther"
       },
       {
-        "name": "P.T.Guenther"
+        "name": "A.B.Smith"
       }
     ],
     "institutes": [
@@ -33,40 +41,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,493,267,8903)",
-          "free_txt": [],
-          "publication_year": "1989"
-        },
-        {
-          "x4_code": "(R,ANL-NDM-106,8805)",
-          "free_txt": [],
-          "publication_year": "1988"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM)",
-          "free_txt": [
-            " TANDEM DYNAMITRON"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,493,267,1989)",
+        "free_txt": [],
+        "publication_year": "1989",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,ANL-NDM-106,1988)",
+        "free_txt": [],
+        "publication_year": "1988",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM,1USAANL)",
+        "free_txt": [
+          " Tandem dynamitron"
+        ],
+        "pointer": "0",
+        "facility_type": "(DYNAM)",
+        "institute": "(1USAANL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(23-V-0(N,EL)23-V-0,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(23-V-0(N,EL)23-V-0,,DA)",
+        "children": [
+          {
             "code": [
               "23-V-0",
               [
@@ -84,18 +90,53 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(23-V-0(N,INL)23-V-0,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "23-V-0",
+              [
+                "N,INL"
+              ],
+              "23-V-0,PAR,SIG"
+            ],
+            "type": null,
+            "target": "23-V-0",
+            "process": "N,INL",
+            "sf49": "23-V-0,PAR,SIG",
+            "sf4": "23-V-0",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
           "EN",
           "ANG",
           "DATA",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "MEV",
@@ -2196,32 +2237,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(23-V-0(N,INL)23-V-0,PAR,SIG)",
-          "0": {
-            "code": [
-              "23-V-0",
-              [
-                "N,INL"
-              ],
-              "23-V-0,PAR,SIG"
-            ],
-            "type": null,
-            "target": "23-V-0",
-            "process": "N,INL",
-            "sf49": "23-V-0,PAR,SIG",
-            "sf4": "23-V-0",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL-MIN",
@@ -2300,86 +2315,113 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
-            "x4_code": "(DYNAM)",
+            "x4_code": "(DYNAM,1USAANL)",
             "free_txt": [
-              " TANDEM DYNAMITRON"
+              " Tandem dynamitron"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "DATA RECEIVED VIA ELECTRONIC MAIL 88/7/11"
+              "Chemically pure V metal, solid cylinders, 2 cm diam.,",
+              " 2 cm long"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Data received via electronic mail 88/7/11"
             ]
           },
           {
             "x4_code": "(APRVD)",
             "free_txt": [
-              " A.B.SMITH, 88/12/21."
+              " A.B.Smith, 88/12/21."
             ]
           }
         ]
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
-              "MULTIPLE MEASUREMENTS AT SAME ANGLE"
+              "Multiple measurements at same angle"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(ERR-S,1.)",
             "free_txt": [
-              "STATISTICAL UNCERTAINTIES VARIED FROM < 1% IN REGIONS",
-              "  OF LARGE CROSS SECTIONS, TO > 10% AT THE MINIMA OF",
-              "  THE DISTRIBUTIONS",
-              "SYSTEMATIC UNCERTAINTIES ESTIMATED <= 3%, ARISING",
-              "  PRIMARILY FROM ABSOLUTE CALIBRATION OF DETECTORS",
-              "UNCERTAINTY DUE TO CORRECTION PROCEDURES GENERALLY",
-              "  <= 1%, EXCEPT AT MINIMA OF DISTRIBUTIONS WHERE",
-              "  THEY MAY BE CONSIDERABLY LARGER"
+              " Statistical uncertainties varied from < 1%",
+              " in regions of large cross sections, to > 10% at the",
+              " minima of the distributions"
+            ]
+          },
+          {
+            "x4_code": "(ERR-SYS,,3.)",
+            "free_txt": [
+              " Systematic uncertainties estimated <= 3%,",
+              " arising primarily from absolute calibration of",
+              " detectors"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1,1.)",
+            "free_txt": [
+              " Uncertainty due to correction procedures",
+              " generally <= 1%, except at minima of distributions",
+              " where they may be considerably larger"
+            ]
+          },
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total uncertainty"
             ]
           }
         ]
       }
     },
-    "003": {}
+    "003": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No information on sources of uncertainties"
+            ]
+          }
+        ]
+      }
+    }
   }
 }

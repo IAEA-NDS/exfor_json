@@ -73,49 +73,45 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(S,AIP-1175,207,2009)",
-          "free_txt": [
-            " Proc.of Int.Workshop on Nuclear Fission and",
-            " Fission-product Spectroscopy."
-          ],
-          "publication_year": "2009"
-        },
-        {
-          "x4_code": "(J,KPS,59,1896,2011)",
-          "free_txt": [
-            " ND2010 Conf.Proc. paper #1506;",
-            "in ND2010 Abstract book, page 65."
-          ],
-          "publication_year": "2011"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,2ZZZGEL)",
-          "free_txt": [
-            " GELINA neutron facility of IRMM, Geel.",
-            "Repetition frequency of the accelerator 800 Hz."
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(S,AIP-1175,207,2009)",
+        "free_txt": [
+          " Proc.of Int.Workshop on Nuclear Fission and",
+          " Fission-product Spectroscopy."
+        ],
+        "publication_year": "2009",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,KPS,59,1896,2011)",
+        "free_txt": [
+          " ND2010 Conf.Proc. paper #1506;",
+          "in ND2010 Abstract book, page 65."
+        ],
+        "publication_year": "2011",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,2ZZZGEL)",
+        "free_txt": [
+          " GELINA neutron facility of IRMM, Geel.",
+          "Repetition frequency of the accelerator 800 Hz."
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(96-CM-245(N,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(96-CM-245(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "96-CM-245",
               [
@@ -133,11 +129,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(96-CM-245(N,F),,RI,,LIM)",
+        "children": [
+          {
+            "code": [
+              "96-CM-245",
+              [
+                "N,F"
+              ],
+              ",,RI,,LIM"
+            ],
+            "type": null,
+            "target": "96-CM-245",
+            "process": "N,F",
+            "sf49": ",,RI,,LIM",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": "LIM",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -3527,32 +3558,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(96-CM-245(N,F),,RI,,LIM)",
-          "0": {
-            "code": [
-              "96-CM-245",
-              [
-                "N,F"
-              ],
-              ",,RI,,LIM"
-            ],
-            "type": null,
-            "target": "96-CM-245",
-            "process": "N,F",
-            "sf49": ",,RI,,LIM",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": "LIM",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -3606,8 +3611,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -3615,10 +3620,8 @@
               "fission fragments from Cm and alphas from monitor."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,2ZZZGEL)",
             "free_txt": [
@@ -3626,10 +3629,8 @@
               "Repetition frequency of the accelerator 800 Hz."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST,PHOTO)",
             "free_txt": [
@@ -3642,10 +3643,8 @@
               "remove overlapping neutrons from previous bursts."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -3664,10 +3663,8 @@
               "Au, Mn, W, Co."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(5-B-10(N,A)3-LI-7,,SIG)",
             "free_txt": [
@@ -3684,8 +3681,8 @@
       }
     },
     "002": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3698,20 +3695,16 @@
               "resonance parameters using the Reich-Moore formalism."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not specified, probably total."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,10730001,J.C.Brown+,J,NSE,65,166,1978)",
             "free_txt": [
@@ -3738,10 +3731,8 @@
               " CONRAD code"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3753,10 +3744,8 @@
               "Cm-248 - 0.002%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -3775,8 +3764,8 @@
       }
     },
     "004": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -3786,20 +3775,16 @@
               "underestimation (up to 15%) compared to JEFF-3.1.1."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not specified, probably total."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,10730001,J.C.Brown+,J,NSE,65,166,1978)",
             "free_txt": []
@@ -3821,10 +3806,8 @@
               "100.   1000.       54.59             54.53"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3836,10 +3819,8 @@
               "Cm-248 - 0.002%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

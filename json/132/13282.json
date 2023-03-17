@@ -38,47 +38,44 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JIN,33,1,1971)",
-          "free_txt": [
-            "#NSR: 1971HA07"
-          ],
-          "publication_year": "1971",
-          "doi": "10.1016/0022-1902(71)80002-7"
-        },
-        {
-          "x4_code": "(J,DA/B,30,1578,1969)",
-          "free_txt": [
-            " Data for 99Nb are the same as in",
-            "the main reference.",
-            "#NSR: 1969HAZQ"
-          ],
-          "publication_year": "1969"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,1USAORL)",
-          "free_txt": [],
-          "facility_type": "(REAC)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JIN,33,1,1971)",
+        "free_txt": [
+          "#doi:10.1016/0022-1902(71)80002-7",
+          "#NSR: 1971HA07"
+        ],
+        "publication_year": "1971",
+        "pointer": "0",
+        "doi": "10.1016/0022-1902(71)80002-7"
+      },
+      {
+        "x4_code": "(J,DA/B,30,1578,1969)",
+        "free_txt": [
+          " Data for 99Nb are the same as in",
+          "the main reference.",
+          "#NSR: 1969HAZQ"
+        ],
+        "publication_year": "1969",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USAORL)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-233(N,F)ELEM/MASS,CUM,FY,,FRC/SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-233(N,F)ELEM/MASS,CUM,FY,,FRC/SPA)",
+        "children": [
+          {
             "code": [
               "92-U-233",
               [
@@ -96,11 +93,121 @@
             "sf7": null,
             "sf8": "FRC/SPA",
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,FRC/SPA)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,CUM,FY,,FRC/SPA"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,CUM,FY,,FRC/SPA",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "FRC/SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY,,FRC/EPI)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,CUM,FY,,FRC/EPI"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,CUM,FY,,FRC/EPI",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "FRC/EPI",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "((98-CF-252(0,F)ELEM/MASS,CUM,FY)/(98-CF-252(0,F)MASS,CHN,FY))",
+        "children": [
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              "ELEM/MASS,CUM,FY"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": "ELEM/MASS,CUM,FY",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              "MASS,CHN,FY"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": "MASS,CHN,FY",
+            "sf4": "MASS",
+            "sf5": "CHN",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -149,32 +256,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,FRC/SPA)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,FRC/SPA"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,CUM,FY,,FRC/SPA",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "FRC/SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -223,32 +304,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY,,FRC/EPI)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,FRC/EPI"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,CUM,FY,,FRC/EPI",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "FRC/EPI",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -290,51 +345,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "((98-CF-252(0,F)ELEM/MASS,CUM,FY)/(98-CF-252(0,F)MASS,CHN,FY))",
-          "0": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              "ELEM/MASS,CUM,FY"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": "ELEM/MASS,CUM,FY",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              "MASS,CHN,FY"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": "MASS,CHN,FY",
-            "sf4": "MASS",
-            "sf5": "CHN",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -373,26 +383,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(41-NB-99-M,2.6MIN,B-)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
               " Proportional-flow counters"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -400,26 +406,20 @@
               "from mean."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,1USAORL)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -430,8 +430,8 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": "(92-U-233,ENR=0.985)",
             "free_txt": [
@@ -442,8 +442,8 @@
       }
     },
     "003": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": "(92-U-233,ENR=0.93)",
             "free_txt": [
@@ -454,18 +454,16 @@
       }
     },
     "004": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Epi-Cd spectrum"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -477,8 +475,8 @@
       }
     },
     "005": {
-      "result": {
-        "0": [
+      "0": {
+        "result": [
           {
             "x4_code": "(FRCUM)",
             "free_txt": []

@@ -197,35 +197,30 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,84,035808,2011)",
-          "free_txt": [],
-          "publication_year": "2011"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(PRJFS,2JPNIPC)",
-          "free_txt": [],
-          "facility_type": "(PRJFS)",
-          "institute": "(2JPNIPC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,84,035808,2011)",
+        "free_txt": [],
+        "publication_year": "2011",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(PRJFS,2JPNIPC)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2JPNIPC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-0(15-P-27,INL)82-PB-0,PAR,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(82-PB-0(15-P-27,INL)82-PB-0,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "82-PB-0",
               [
@@ -243,11 +238,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(14-SI-26(P,G)15-P-27,,SGV,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "14-SI-26",
+              [
+                "P,G"
+              ],
+              "15-P-27,,SGV,,,DERIV"
+            ],
+            "type": null,
+            "target": "14-SI-26",
+            "process": "P,G",
+            "sf49": "15-P-27,,SGV,,,DERIV",
+            "sf4": "15-P-27",
+            "sf5": null,
+            "sf6": "SGV",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": "Calculated from resonance energy and strength of 27P"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(82-PB-0(15-P-27,P+X)14-SI-26,,DE,P+RSD,REL)",
+        "children": [
+          {
+            "code": [
+              "82-PB-0",
+              [
+                "15-P-27,P+X"
+              ],
+              "14-SI-26,,DE,P+RSD,REL"
+            ],
+            "type": null,
+            "target": "82-PB-0",
+            "process": "15-P-27,P+X",
+            "sf49": "14-SI-26,,DE,P+RSD,REL",
+            "sf4": "14-SI-26",
+            "sf5": null,
+            "sf6": "DE",
+            "sf7": "P+RSD",
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Data in counts/150 keV"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -292,32 +350,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(14-SI-26(P,G)15-P-27,,SGV,,,DERIV)",
-          "0": {
-            "code": [
-              "14-SI-26",
-              [
-                "P,G"
-              ],
-              "15-P-27,,SGV,,,DERIV"
-            ],
-            "type": null,
-            "target": "14-SI-26",
-            "process": "P,G",
-            "sf49": "15-P-27,,SGV,,,DERIV",
-            "sf4": "15-P-27",
-            "sf5": null,
-            "sf6": "SGV",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": "Calculated from resonance energy and strength of 27P"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -393,32 +425,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-0(15-P-27,P+X)14-SI-26,,DE,P+RSD,REL)",
-          "0": {
-            "code": [
-              "82-PB-0",
-              [
-                "15-P-27,P+X"
-              ],
-              "14-SI-26,,DE,P+RSD,REL"
-            ],
-            "type": null,
-            "target": "82-PB-0",
-            "process": "15-P-27,P+X",
-            "sf49": "14-SI-26,,DE,P+RSD,REL",
-            "sf4": "14-SI-26",
-            "sf5": null,
-            "sf6": "DE",
-            "sf7": "P+RSD",
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Data in counts/150 keV"
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -546,16 +552,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(PRJFS,2JPNIPC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -563,28 +567,22 @@
               "- Ion source: 36Ar+9Be"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
               " Detect 26Si and proton in coincidence."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P,14-SI-26)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -597,16 +595,14 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL,15-P-27)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -617,10 +613,8 @@
               "           statistical uncertainty."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -631,8 +625,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -643,26 +637,22 @@
       }
     },
     "004": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-RL,P+14-SI-26)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -64,35 +64,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JPJ,57,5,1988)",
-          "free_txt": [],
-          "publication_year": "1988"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2JPNTOH)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(2JPNTOH)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JPJ,57,5,1988)",
+        "free_txt": [],
+        "publication_year": "1988",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2JPNTOH)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2JPNTOH)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-10(G,P)4-BE-9,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(5-B-10(G,P)4-BE-9,,DA)",
+        "children": [
+          {
             "code": [
               "5-B-10",
               [
@@ -110,11 +105,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(5-B-10(G,N+P)4-BE-8,,DA)",
+        "children": [
+          {
+            "code": [
+              "5-B-10",
+              [
+                "G,N+P"
+              ],
+              "4-BE-8,,DA"
+            ],
+            "type": null,
+            "target": "5-B-10",
+            "process": "G,N+P",
+            "sf49": "4-BE-8,,DA",
+            "sf4": "4-BE-8",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(5-B-10(G,P)4-BE-9,,DA,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "5-B-10",
+              [
+                "G,P"
+              ],
+              "4-BE-9,,DA,,,DERIV"
+            ],
+            "type": null,
+            "target": "5-B-10",
+            "process": "G,P",
+            "sf49": "4-BE-9,,DA,,,DERIV",
+            "sf4": "4-BE-9",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-MIN",
@@ -164,32 +222,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-10(G,N+P)4-BE-8,,DA)",
-          "0": {
-            "code": [
-              "5-B-10",
-              [
-                "G,N+P"
-              ],
-              "4-BE-8,,DA"
-            ],
-            "type": null,
-            "target": "5-B-10",
-            "process": "G,N+P",
-            "sf49": "4-BE-8,,DA",
-            "sf4": "4-BE-8",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -239,32 +271,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-10(G,P)4-BE-9,,DA,,,DERIV)",
-          "0": {
-            "code": [
-              "5-B-10",
-              [
-                "G,P"
-              ],
-              "4-BE-9,,DA,,,DERIV"
-            ],
-            "type": null,
-            "target": "5-B-10",
-            "process": "G,P",
-            "sf49": "4-BE-9,,DA,,,DERIV",
-            "sf4": "4-BE-9",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -316,8 +322,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTED)",
             "free_txt": [
@@ -327,10 +333,8 @@
               " - 103 MeV."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -345,10 +349,8 @@
               " photoneutron is not detected."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN,SCIN,NAICR)",
             "free_txt": [
@@ -361,36 +363,28 @@
               " Liquid scintillator NE213 for neutrons."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " statistical errors are presented."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2JPNTOH)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(QMPH,TAGD)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -399,10 +393,8 @@
               " thickness 292 mg/cm**2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -413,16 +405,14 @@
       }
     },
     "002": {
-      "method": {
-        "0": [
+      "0": {
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(COREL,M0408004)",
             "free_txt": [
@@ -433,16 +423,14 @@
       }
     },
     "003": {
-      "method": {
-        "0": [
+      "0": {
+        "method": [
           {
             "x4_code": "(EDE,COINC)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": []
@@ -455,8 +443,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -465,20 +453,16 @@
               " transparency factor (0.5)."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,J.L.Matthews+,J,NP/A,112,654,1968)",
             "free_txt": [
               " B-10(g,pn) reaction cross section."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,M0408003)",
             "free_txt": []

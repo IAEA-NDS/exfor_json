@@ -50,38 +50,33 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ARI,156,108973,2020)",
-          "free_txt": [],
-          "publication_year": "2020"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALAS)",
-          "free_txt": [
-            " Experiment performed at LANL IPF with",
-            "an incident proton beam energy of 100.0 MeV"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ARI,156,108973,2020)",
+        "free_txt": [],
+        "publication_year": "2020",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALAS)",
+        "free_txt": [
+          " Experiment performed at LANL IPF with",
+          "an incident proton beam energy of 100.0 MeV"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(P,3N)91-PA-230,,TTY,,EOB)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-232(P,3N)91-PA-230,,TTY,,EOB)",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -99,11 +94,18 @@
             "sf7": null,
             "sf8": "EOB",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "Thin target yield at EOB"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "Thin target yield at EOB"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RSL",
@@ -155,16 +157,36 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-mon": {
-        "1": [
+      "2": {
+        "decay-mon": [
           {
-            "x4_code": "(28-NI-57,35.60HR,DG,127.16,0.167,                  DG,1377.63,0.817)",
+            "x4_code": "(27-CO-57,271.74D,DG,122.06,0.856,                  DG,136.47,0.107)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(28-NI-0(P,X)27-CO-57,,SIG)",
             "free_txt": []
           }
         ]
       },
-      "detector": {
-        "0": [
+      "1": {
+        "decay-mon": [
+          {
+            "x4_code": "(28-NI-57,35.60HR,DG,127.16,0.167,                  DG,1377.63,0.817)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(28-NI-0(P,X)28-NI-57,,SIG)",
+            "free_txt": []
+          }
+        ]
+      },
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -173,10 +195,8 @@
               "was 50 mm and its length was 53.5 mm."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALAS)",
             "free_txt": [
@@ -184,10 +204,8 @@
               "an incident proton beam energy of 100.0 MeV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,CHSEP)",
             "free_txt": [
@@ -197,18 +215,8 @@
               "activity ratio 57Ni/57Co"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "2": [
-          {
-            "x4_code": "(28-NI-0(P,X)27-CO-57,,SIG)",
-            "free_txt": []
-          }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -224,26 +232,22 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(91-PA-230,17.4D,DG,454.92,0.068,                 DG,918.59,0.083,                 DG,951.88,0.296)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Origin of uncertainties not described"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

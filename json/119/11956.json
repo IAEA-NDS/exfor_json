@@ -46,37 +46,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RCA,12,61,1969)",
-          "free_txt": [],
-          "publication_year": "1969"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,1USAGIT)",
-          "free_txt": [
-            " 200 KV accelerator"
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(1USAGIT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RCA,12,61,1969)",
+        "free_txt": [],
+        "publication_year": "1969",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,1USAGIT)",
+        "free_txt": [
+          " 200 KV accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(1USAGIT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(48-CD-106(N,2N)48-CD-105,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(48-CD-106(N,2N)48-CD-105,,SIG)",
+        "children": [
+          {
             "code": [
               "48-CD-106",
               [
@@ -94,11 +89,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(48-CD-106(N,X)47-AG-105,,SIG)",
+        "children": [
+          {
+            "code": [
+              "48-CD-106",
+              [
+                "N,X"
+              ],
+              "47-AG-105,,SIG"
+            ],
+            "type": null,
+            "target": "48-CD-106",
+            "process": "N,X",
+            "sf49": "47-AG-105,,SIG",
+            "sf4": "47-AG-105",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(48-CD-106(N,2N)48-CD-105,,SIG)",
+        "children": [
+          {
+            "code": [
+              "48-CD-106",
+              [
+                "N,2N"
+              ],
+              "48-CD-105,,SIG"
+            ],
+            "type": null,
+            "target": "48-CD-106",
+            "process": "N,2N",
+            "sf49": "48-CD-105,,SIG",
+            "sf4": "48-CD-105",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -140,32 +198,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(48-CD-106(N,X)47-AG-105,,SIG)",
-          "0": {
-            "code": [
-              "48-CD-106",
-              [
-                "N,X"
-              ],
-              "47-AG-105,,SIG"
-            ],
-            "type": null,
-            "target": "48-CD-106",
-            "process": "N,X",
-            "sf49": "47-AG-105,,SIG",
-            "sf4": "47-AG-105",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -207,32 +239,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(48-CD-106(N,2N)48-CD-105,,SIG)",
-          "0": {
-            "code": [
-              "48-CD-106",
-              [
-                "N,2N"
-              ],
-              "48-CD-105,,SIG"
-            ],
-            "type": null,
-            "target": "48-CD-106",
-            "process": "N,2N",
-            "sf49": "48-CD-105,,SIG",
-            "sf4": "48-CD-105",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -276,16 +282,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -293,36 +297,28 @@
               " errors and error of monitor cross section"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,1USAGIT)",
             "free_txt": [
               " 200 KV accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -333,8 +329,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(48-CD-105,55.MIN)",
             "free_txt": []
@@ -343,18 +339,14 @@
             "x4_code": "(47-AG-105-G,41.2D,DG,280.5,0.32)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(10145016,W.D.Lu+,J,PR/C,1,358,1970)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(48-CD-112(N,P)47-AG-112,,SIG)",
             "free_txt": []
@@ -363,24 +355,20 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(47-AG-105-G,41.2D,DG,280.5,0.32)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(10145016,W.D.Lu+,J,PR/C,1,358,1970)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(48-CD-112(N,P)47-AG-112,,SIG)",
             "free_txt": []
@@ -389,16 +377,14 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(48-CD-105,55.MIN)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(48-CD-116(N,2N)48-CD-115,,SIG)",
             "free_txt": []

@@ -42,41 +42,37 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PPRC,47,144,2013)",
-          "free_txt": [
-            " Preliminary data.",
-            "Scientific Workshop on Nuclear Fission Dynamics and the",
-            "Emission of Prompt Neutrons and Gamma Rays, Biarritz,",
-            "France, 28-30 November 2012."
-          ],
-          "publication_year": "2013",
-          "doi": "10.1016/j.phpro.2013.06.021"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2FR BRC)",
-          "free_txt": [],
-          "facility_type": "(VDG)",
-          "institute": "(2FR BRC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PPRC,47,144,2013)",
+        "free_txt": [
+          " Preliminary data.",
+          "#doi:10.1016/j.phpro.2013.06.021",
+          "Scientific Workshop on Nuclear Fission Dynamics and the",
+          "Emission of Prompt Neutrons and Gamma Rays, Biarritz,",
+          "France, 28-30 November 2012."
+        ],
+        "publication_year": "2013",
+        "pointer": "0",
+        "doi": "10.1016/j.phpro.2013.06.021"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2FR BRC)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2FR BRC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,F),PR,NU/DE,,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(N,F),PR,NU/DE,,REL)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -94,11 +90,46 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Relative yield/MeV. Spectrum is normalized inyield to the other ones (see REL-REF)."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Relative yield/MeV. Spectrum is normalized inyield to the other ones (see REL-REF)."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,F),PR,KE)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              ",PR,KE"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": ",PR,KE",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "KE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Prompt neutron spectrum temperature for U-238 fissionby 5.2 MeV incident neutrons is given as value 1.23+-0.05 MeV, multiplied by compiler by factor 3/2 ."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN",
@@ -288,32 +319,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,F),PR,KE)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              ",PR,KE"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": ",PR,KE",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "KE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Prompt neutron spectrum temperature for U-238 fissionby 5.2 MeV incident neutrons is given as value 1.23+-0.05 MeV, multiplied by compiler by factor 3/2 ."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -352,18 +357,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Pulse shape analysis."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -371,10 +374,8 @@
               "For neutron detection efficiency energy dependence."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
@@ -413,36 +414,28 @@
               "the fission chamber perpendicular to the ion beam axis."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2FR BRC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Quasi-monoenergetic neutrons."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
@@ -451,8 +444,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -460,28 +453,22 @@
               " preliminary to be inserted in the EXFOR database."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information about source of uncertainty"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,41450002,A.M.Trufanov+,J,PAN,64,1,2001)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(PRELM)",
             "free_txt": [
@@ -498,38 +485,32 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Fitting Maxwellians to the experimental values."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               " Prompt neutron spectrum temperature."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(D,41450001,A.M.Trufanov+,J,YF,64,(1),3,2001)",
             "free_txt": [
               " 1.34+-0.01 MeV temperature."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

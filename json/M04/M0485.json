@@ -1,7 +1,7 @@
 {
   "entry": "M0485",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "5",
+  "last_updated": "2023-03-07",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19910218C)",
@@ -22,6 +22,13 @@
       "free_txt": [
         " Corrected by V.Varlamov:  BRA substituted",
         " by BRS in line REACTION of SUBENT 002."
+      ]
+    },
+    {
+      "x4_code": "(20230106A)",
+      "free_txt": [
+        " Corrected by V.Varlamov: CRITIQUE, STATUS,",
+        " REACTION, (EN-CM) -> EN in SUBENT 002."
       ]
     }
   ],
@@ -47,24 +54,52 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PL/B,47,433,1973)",
-          "free_txt": [],
-          "publication_year": "1973"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1CANSAS)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(1CANSAS)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,PL/B,47,433,1973)",
+        "free_txt": [],
+        "publication_year": "1973",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1CANSAS)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1CANSAS)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(2-HE-4(G,N)2-HE-3,,SIG)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "G,N"
+              ],
+              "2-HE-3,,SIG"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "G,N",
+            "sf49": "2-HE-3,,SIG",
+            "sf4": "2-HE-3",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -72,38 +107,12 @@
       "common": null
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(G,N)2-HE-3,,SIG,,BRS)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "G,N"
-              ],
-              "2-HE-3,,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "G,N",
-            "sf49": "2-HE-3,,SIG,,BRS",
-            "sf4": "2-HE-3",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
-          "EN-CM",
+          "EN",
           "DATA",
-          "DATA-ERR"
+          "ERR-S"
         ],
         "units": [
           "MEV",
@@ -219,164 +228,154 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTAD)",
             "free_txt": [
               " With reasonably high statistical accuracy",
-              "the reaction cross section simultaneously have been",
-              "measured at five laboratory angles between 30 and",
-              "142 degrees. Differential cross sections were",
-              "obtained by comparing the He-4(g,n)He-3 and",
-              "H-2(g,n)H-1 cross sections. The latter were obtained",
-              "from alternating runs with D(2)O and H(2)O in an",
-              "identical target configuration as that used for",
-              "helium. for the deuterium cross section, the",
-              "experimental results were normalized to the",
-              "calculation of partovi. Differential cross sections",
-              "were used to obtain the total cross section."
+              " the reaction cross section simultaneously have been",
+              " measured at five laboratory angles between 30 and",
+              " 142 degrees. Differential cross sections were",
+              " obtained by comparing the He-4(g,n)He-3 and",
+              " H-2(g,n)H-1 cross sections. The latter were obtained",
+              " from alternating runs with D(2)O and H(2)O in an",
+              " identical target configuration as that used for",
+              " helium. for the deuterium cross section, the",
+              " experimental results were normalized to the",
+              " calculation of Partovi. Differential cross sections",
+              " were used to obtain the total cross section."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "The photoneutron energy spectra were first",
-              "corrected for counting losses (< 2%), and",
-              "background was substracted. corrections for neutron",
-              "scattering and absorption within the target were",
-              "made with a monte-carlo method. the contribution",
-              "of neutrons from other competing channels was",
-              "assessed by comparing data taken at lower incident",
-              "electron energies. the other neutron producing",
-              "channels, contributing < 10% to the spectra, were",
-              "substracted where necessary from the data."
+              " corrected for counting losses (< 2%), and",
+              " background was substracted. corrections for neutron",
+              " scattering and absorption within the target were",
+              " made with a monte-carlo method. the contribution",
+              " of neutrons from other competing channels was",
+              " assessed by comparing data taken at lower incident",
+              " electron energies. the other neutron producing",
+              " channels, contributing < 10% to the spectra, were",
+              " substracted where necessary from the data."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               "The He-4(g,n)He-3 differential cross section has",
-              "been simultaneously measured at five laboratory",
-              "angles between 30 and 142 defrees, from threshold",
-              "to 110 MeV. The asymmetry in the angular distribution",
-              "from 24 to 70 MeV has been extracted and found to",
-              "have sign changes at energies which are in accord",
-              "with the previous experiments. The total photo-",
-              "neutron cross section has been observed to be close",
-              "to the known (g,p) cross section. fFom the energy",
-              "dependence of the asymmetry coefficient a 2+ state",
-              "in He-4 at energy of about 35 MeV has been confirmed."
+              " been simultaneously measured at five laboratory",
+              " angles between 30 and 142 degrees, from threshold",
+              " to 110 MeV. The asymmetry in the angular distribution",
+              " from 24 to 70 MeV has been extracted and found to",
+              " have sign changes at energies which are in accord",
+              " with the previous experiments. The total photo-",
+              " neutron cross section has been observed to be close",
+              " to the known (g,p) cross section. From the energy",
+              " dependence of the asymmetry coefficient a 2+ state",
+              " in He-4 at energy of about 35 MeV has been confirmed."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "critique": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "EN-CM in the capture to Fig.1 is the mistake."
+            ]
+          }
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(ERR-S)",
             "free_txt": [
-              "The statistical errors are presented only."
+              " The statistical errors are presented only."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1CANSAS)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
-            "x4_code": "(,Y.M.SHIN+,J,NP/A,154,482,1970)",
+            "x4_code": "(,Y.M.Shin+,J,NP/A,154,482,1970)",
             "free_txt": [
               " Experimental data",
-              "on the H-2(g,n) reaction cross section."
+              " on the H-2(g,n) reaction cross section."
             ]
           },
           {
-            "x4_code": "(,F.PARTOVI,J,AP,27,79,1964)",
+            "x4_code": "(,F.Partovi,J,AP,27,79,1964)",
             "free_txt": [
               " Calculation for the",
-              "H-2(g,n) reaction cross section."
+              " H-2(g,n) reaction cross section."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-2(G,N)1-H-1,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "The target was a conventional 7 liter, liquid helium",
-              "dewar. While runnung, the dewar was pressured to",
-              "0.034 atm to minimize the loss rate and reduce",
-              "thermal density variations."
+              " dewar. While runnung, the dewar was pressured to",
+              " 0.034 atm to minimize the loss rate and reduce",
+              " thermal density variations."
             ]
-          }
-        ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": "(CURVE)",
-            "free_txt": []
           }
         ]
       }
     },
-    "002": {}
+    "002": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Data from Fig. 1 of",
+              " Phys.Lett.,B47(1973)433."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

@@ -45,40 +45,35 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AKE,35,(1),23,1980)",
-          "free_txt": [],
-          "publication_year": "1980"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,3ARGCAB)",
-          "free_txt": [
-            " Pulsed 25 MeV electron linear accelera-",
-            "tor at the Centro Atomico Bariloche.",
-            "The linac was run at 12.5 pps., 3.0 micro-A average",
-            "current."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(3ARGCAB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AKE,35,(1),23,1980)",
+        "free_txt": [],
+        "publication_year": "1980",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,3ARGCAB)",
+        "free_txt": [
+          " Pulsed 25 MeV electron linear accelera-",
+          "tor at the Centro Atomico Bariloche.",
+          "The linac was run at 12.5 pps., 3.0 micro-A average",
+          "current."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(3ARGCAB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-BNZ(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-BNZ(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-BNZ",
               [
@@ -96,11 +91,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(N,G)1-H-2,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,G"
+              ],
+              "1-H-2,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,G",
+            "sf49": "1-H-2,,SIG",
+            "sf4": "1-H-2",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "TEMP"
@@ -1021,32 +1051,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,G)1-H-2,,SIG)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,G"
-              ],
-              "1-H-2,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,G",
-            "sf49": "1-H-2,,SIG",
-            "sf4": "1-H-2",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1075,8 +1079,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1088,10 +1092,8 @@
               "than 0.001%) were not made."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HE3SP)",
             "free_txt": [
@@ -1100,10 +1102,8 @@
               "Filling gas pressure."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,3ARGCAB)",
             "free_txt": [
@@ -1113,10 +1113,8 @@
               "current."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
@@ -1124,10 +1122,8 @@
               "         paraffin moderator."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,TRN)",
             "free_txt": [
@@ -1138,20 +1134,16 @@
               "as an average of two hundred curves or runs."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "Absolute, transmission experiment."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1162,10 +1154,8 @@
               "aluminium walls."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1177,18 +1167,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Total error, absolute"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1200,18 +1188,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No further information."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,30551002)",
             "free_txt": []

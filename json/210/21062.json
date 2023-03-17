@@ -68,35 +68,30 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP,40,186,1963)",
-          "free_txt": [],
-          "publication_year": "1963"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCY)",
-          "free_txt": [
-            " Harwell synchrocyclotron and polarized beam"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP,40,186,1963)",
+        "free_txt": [],
+        "publication_year": "1963",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCY)",
+        "free_txt": [
+          " Harwell synchrocyclotron and polarized beam"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-0(N,EL)92-U-0,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-0(N,EL)92-U-0,,DA)",
+        "children": [
+          {
             "code": [
               "92-U-0",
               [
@@ -114,11 +109,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-0(N,EL)92-U-0,,DA,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-0",
+              [
+                "N,EL"
+              ],
+              "92-U-0,,DA,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-0",
+            "process": "N,EL",
+            "sf49": "92-U-0,,DA,,,DERIV",
+            "sf4": "92-U-0",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": " Extrapolated to zero degree."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-0(N,EL)92-U-0,,POL/DA,,ASY)",
+        "children": [
+          {
+            "code": [
+              "92-U-0",
+              [
+                "N,EL"
+              ],
+              "92-U-0,,POL/DA,,ASY"
+            ],
+            "type": null,
+            "target": "92-U-0",
+            "process": "N,EL",
+            "sf49": "92-U-0,,POL/DA,,ASY",
+            "sf4": "92-U-0",
+            "sf5": null,
+            "sf6": "POL/DA",
+            "sf7": null,
+            "sf8": "ASY",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -442,32 +500,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-0(N,EL)92-U-0,,DA,,,DERIV)",
-          "0": {
-            "code": [
-              "92-U-0",
-              [
-                "N,EL"
-              ],
-              "92-U-0,,DA,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-0",
-            "process": "N,EL",
-            "sf49": "92-U-0,,DA,,,DERIV",
-            "sf4": "92-U-0",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": " Extrapolated to zero degree."
-        }
-      },
       "common": {
         "heads": [
           "ANG"
@@ -571,32 +603,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-0(N,EL)92-U-0,,POL/DA,,ASY)",
-          "0": {
-            "code": [
-              "92-U-0",
-              [
-                "N,EL"
-              ],
-              "92-U-0,,POL/DA,,ASY"
-            ],
-            "type": null,
-            "target": "92-U-0",
-            "process": "N,EL",
-            "sf49": "92-U-0,,POL/DA,,ASY",
-            "sf4": "92-U-0",
-            "sf5": null,
-            "sf6": "POL/DA",
-            "sf7": null,
-            "sf8": "ASY",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -818,8 +824,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -830,10 +836,8 @@
               " polarizations."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -859,30 +863,24 @@
               " upon the nuclear cross-sections."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " Organic liquid scintillator counters."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCY)",
             "free_txt": [
               " Harwell synchrocyclotron and polarized beam"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
@@ -890,10 +888,8 @@
               " producing neutrons at 45 degrees to the proton beam."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": "(EN-RSL)",
             "free_txt": [
@@ -902,20 +898,16 @@
               " intrinsic energy resolution of the spectrometer."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time of flight spectrometer, 27 m flight path."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,,J.Hadley+,J,PR,80,345,1950)",
             "free_txt": [
@@ -928,10 +920,8 @@
               "  at 14. MeV"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -943,8 +933,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -957,10 +947,8 @@
               " systematic normalization error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -971,8 +959,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -980,10 +968,8 @@
               " lization errors (see 21062002)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -998,18 +984,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information, probably - statist.error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

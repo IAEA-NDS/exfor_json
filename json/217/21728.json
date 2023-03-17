@@ -33,45 +33,41 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JP/G,4,7,1133,7807)",
-          "free_txt": [
-            " MAIN REFERENCE."
-          ],
-          "publication_year": "1978"
-        },
-        {
-          "x4_code": "(C,76LOWELL,2,1451,7607)",
-          "free_txt": [
-            " ABSTRACT."
-          ],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": [
-            " 120 MEV ELECTRON LINEAR ACCELERATOR",
-            " AT THE KELVIN LABORATORY."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JP/G,4,7,1133,7807)",
+        "free_txt": [
+          " MAIN REFERENCE."
+        ],
+        "publication_year": "1978",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,76LOWELL,2,1451,7607)",
+        "free_txt": [
+          " ABSTRACT."
+        ],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC)",
+        "free_txt": [
+          " 120 MEV ELECTRON LINEAR ACCELERATOR",
+          " AT THE KELVIN LABORATORY."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(39-Y-89(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(39-Y-89(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "39-Y-89",
               [
@@ -89,11 +85,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(39-Y-89(N,0),,D)",
+        "children": [
+          {
+            "code": [
+              "39-Y-89",
+              [
+                "N,0"
+              ],
+              ",,D"
+            ],
+            "type": null,
+            "target": "39-Y-89",
+            "process": "N,0",
+            "sf49": ",,D",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "D",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(39-Y-89(N,TOT),,WID,,AV)",
+        "children": [
+          {
+            "code": [
+              "39-Y-89",
+              [
+                "N,TOT"
+              ],
+              ",,WID,,AV"
+            ],
+            "type": null,
+            "target": "39-Y-89",
+            "process": "N,TOT",
+            "sf49": ",,WID,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-MIN",
@@ -115,32 +174,6 @@
       "data": null
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(39-Y-89(N,0),,D)",
-          "0": {
-            "code": [
-              "39-Y-89",
-              [
-                "N,0"
-              ],
-              ",,D"
-            ],
-            "type": null,
-            "target": "39-Y-89",
-            "process": "N,0",
-            "sf49": ",,D",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "D",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-EXC"
@@ -182,32 +215,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(39-Y-89(N,TOT),,WID,,AV)",
-          "0": {
-            "code": [
-              "39-Y-89",
-              [
-                "N,TOT"
-              ],
-              ",,WID,,AV"
-            ],
-            "type": null,
-            "target": "39-Y-89",
-            "process": "N,TOT",
-            "sf49": ",,WID,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -242,8 +249,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -252,20 +259,16 @@
               " TIONS."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN )",
             "free_txt": [
               " SCINTILLATORS."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC)",
             "free_txt": [
@@ -273,30 +276,24 @@
               " AT THE KELVIN LABORATORY."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
               " PHOTO-NEUTRON SOURCE."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF  )",
             "free_txt": [
               " TIME-OF-FLIGHT TECHNIQUES."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -306,10 +303,8 @@
               " 31.7 MM IN DIAMETER."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -320,8 +315,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(UNOBT)",
             "free_txt": [
@@ -333,8 +328,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -345,18 +340,16 @@
       }
     },
     "004": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               ".FOR DETECTOR AND CHANNEL RESOLUTION."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

@@ -85,38 +85,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PRL,108,242701,2012)",
-          "free_txt": [],
-          "publication_year": "2012"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1CANTMF)",
-          "free_txt": [
-            " Time-reversal measurement was carried",
-            "out at the ISAC II facility at TRIUMF"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1CANTMF)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PRL,108,242701,2012)",
+        "free_txt": [],
+        "publication_year": "2012",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1CANTMF)",
+        "free_txt": [
+          " Time-reversal measurement was carried",
+          "out at the ISAC II facility at TRIUMF"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1CANTMF)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(11-NA-21,A)10-NE-18,,SIG)=(11-NA-21(P,A)10-NE-18,,SIG))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-1(11-NA-21,A)10-NE-18,,SIG)=(11-NA-21(P,A)10-NE-18,,SIG))",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -135,7 +130,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "11-NA-21",
               [
@@ -153,11 +148,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(10-NE-18(A,P)11-NA-21,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "10-NE-18",
+              [
+                "A,P"
+              ],
+              "11-NA-21,PAR,SIG"
+            ],
+            "type": null,
+            "target": "10-NE-18",
+            "process": "A,P",
+            "sf49": "11-NA-21,PAR,SIG",
+            "sf4": "11-NA-21",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(10-NE-18(A,P)11-NA-21,PAR,SGV,,MXW)",
+        "children": [
+          {
+            "code": [
+              "10-NE-18",
+              [
+                "A,P"
+              ],
+              "11-NA-21,PAR,SGV,,MXW"
+            ],
+            "type": null,
+            "target": "10-NE-18",
+            "process": "A,P",
+            "sf49": "11-NA-21,PAR,SGV,,MXW",
+            "sf4": "11-NA-21",
+            "sf5": "PAR",
+            "sf6": "SGV",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -251,32 +309,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(10-NE-18(A,P)11-NA-21,PAR,SIG)",
-          "0": {
-            "code": [
-              "10-NE-18",
-              [
-                "A,P"
-              ],
-              "11-NA-21,PAR,SIG"
-            ],
-            "type": null,
-            "target": "10-NE-18",
-            "process": "A,P",
-            "sf49": "11-NA-21,PAR,SIG",
-            "sf4": "11-NA-21",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL"
@@ -360,32 +392,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(10-NE-18(A,P)11-NA-21,PAR,SGV,,MXW)",
-          "0": {
-            "code": [
-              "10-NE-18",
-              [
-                "A,P"
-              ],
-              "11-NA-21,PAR,SGV,,MXW"
-            ],
-            "type": null,
-            "target": "10-NE-18",
-            "process": "A,P",
-            "sf49": "11-NA-21,PAR,SGV,,MXW",
-            "sf4": "11-NA-21",
-            "sf5": "PAR",
-            "sf6": "SGV",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL"
@@ -511,8 +517,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SISD,SISD)",
             "free_txt": [
@@ -535,10 +541,8 @@
               "16 front strips and 24 rear sectors"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1CANTMF)",
             "free_txt": [
@@ -546,10 +550,8 @@
               "out at the ISAC II facility at TRIUMF"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -563,18 +565,14 @@
               "switchyard to room-temperature linac"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -586,8 +584,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -596,10 +594,8 @@
               "of a thin-target condition at each investigated energy"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -626,10 +622,8 @@
               " Total systematic uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -640,8 +634,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -649,10 +643,8 @@
               "inferred by using the principle of detailed balance"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -667,8 +659,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -678,10 +670,8 @@
               "code EXP2RATE"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -694,10 +684,8 @@
               " High limit of reaction rate"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

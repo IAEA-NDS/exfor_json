@@ -29,37 +29,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(T,Stadler,1998)",
-          "free_txt": [
-            " Diploma thesis, Techn.Univ. Vienna"
-          ],
-          "publication_year": "1998"
-        }
-      ]
-    },
-    "facilities": {
-      "2": [
-        {
-          "x4_code": "(VDG,2GERTUE)",
-          "free_txt": [],
-          "facility_type": "(VDG)",
-          "institute": "(2GERTUE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(T,Stadler,1998)",
+        "free_txt": [
+          " Diploma thesis, Techn.Univ. Vienna"
+        ],
+        "publication_year": "1998",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2GERTUE)",
+        "free_txt": [],
+        "pointer": "2",
+        "facility_type": "(VDG)",
+        "institute": "(2GERTUE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(50-SN-122(N,G)50-SN-123-M,,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(50-SN-122(N,G)50-SN-123-M,,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "50-SN-122",
               [
@@ -77,11 +72,46 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(50-SN-124(N,G)50-SN-125-M,,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "50-SN-124",
+              [
+                "N,G"
+              ],
+              "50-SN-125-M,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "50-SN-124",
+            "process": "N,G",
+            "sf49": "50-SN-125-M,,SIG,,MXW",
+            "sf4": "50-SN-125-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -125,32 +155,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(50-SN-124(N,G)50-SN-125-M,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "50-SN-124",
-              [
-                "N,G"
-              ],
-              "50-SN-125-M,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "50-SN-124",
-            "process": "N,G",
-            "sf49": "50-SN-125-M,,SIG,,MXW",
-            "sf4": "50-SN-125-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -196,55 +200,30 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-mon": {
-        "0": [
+      "0": {
+        "decay-mon": [
           {
             "x4_code": "(79-AU-198-G,232863.SEC,DG,411.80,0.9558)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "2": [
-          {
-            "x4_code": "(VDG,2GERTUE)",
-            "free_txt": []
-          }
-        ]
-      },
-      "inc-source": {
-        "2": [
-          {
-            "x4_code": "(P-T)",
-            "free_txt": [
-              " at Univ. Tuebingen 3.75 MV Van de Graaff",
-              " accelerator, for 52 keV neutrons"
-            ]
-          }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Nearly Maxwellian spectrum"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -260,28 +239,60 @@
               " for measurement of short-lived nuclides"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
         ]
+      },
+      "1": {
+        "facility": [
+          {
+            "x4_code": "(VDG,2GERKFK)",
+            "free_txt": []
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(P-LI7)",
+            "free_txt": [
+              "Neutrons were produced via the 7Li(p,n)7Be",
+              "reaction by bombarding metallic Li targets with the",
+              "pulsed proton beam of the Karlsruhe 3.75 MV Van de",
+              "Graaff accelerator."
+            ]
+          }
+        ]
+      },
+      "2": {
+        "facility": [
+          {
+            "x4_code": "(VDG,2GERTUE)",
+            "free_txt": []
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(P-T)",
+            "free_txt": [
+              " at Univ. Tuebingen 3.75 MV Van de Graaff",
+              " accelerator, for 52 keV neutrons"
+            ]
+          }
+        ]
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(50-SN-123-M,2403.6SEC,DG,160.32,0.8570)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -292,16 +303,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(50-SN-125-M,571.20SEC,DG,331.90,0.9720)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

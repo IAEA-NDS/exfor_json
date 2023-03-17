@@ -34,35 +34,58 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,34,1397,1986)",
-          "free_txt": [],
-          "publication_year": "1986"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM,1USABLN)",
-          "free_txt": [],
-          "facility_type": "(DYNAM)",
-          "institute": "(1USABLN)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,34,1397,1986)",
+        "free_txt": [],
+        "publication_year": "1986",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM,1USABLN)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(DYNAM)",
+        "institute": "(1USABLN)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(G,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-232(G,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "G,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "G,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((90-TH-232(G,F),,SIG)/(90-TH-232(G,ABS),,SIG))",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -81,10 +104,36 @@
             "sf8": null,
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "G,ABS"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "G,ABS",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": " Data on fission probability."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -171,51 +220,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((90-TH-232(G,F),,SIG)/(90-TH-232(G,ABS),,SIG))",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "G,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "G,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "90-TH-232",
-              [
-                "G,ABS"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "G,ABS",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": " Data on fission probability."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -304,8 +308,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -314,10 +318,8 @@
               " in a strip."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -331,10 +333,8 @@
               " estimated to be smoller than 2%."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -344,10 +344,8 @@
               " structure was observed at 5.91, 5.97, and 6.31 MeV."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PLATE)",
             "free_txt": [
@@ -355,10 +353,8 @@
               " films (KIMFOL) with thorium sample between them."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -371,18 +367,14 @@
               " proton target."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM,1USABLN)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(MPH=(73-TA-181(P,G)74-W-182))",
             "free_txt": [
@@ -392,26 +384,20 @@
               " beam."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(FF)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -423,8 +409,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -435,18 +421,16 @@
       }
     },
     "003": {
-      "rel-ref": {
-        "0": [
+      "0": {
+        "rel-ref": [
           {
             "x4_code": "(R,,J.T.Caldwell+,J,PR/C,21,1215,1980)",
             "free_txt": [
               " Data on (g,abs) reaction cross section."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

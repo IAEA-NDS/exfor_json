@@ -48,47 +48,43 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,77KIEV,3,3,19770418)",
-          "free_txt": [
-            " Comments, curves and fission",
-            " width values are given.   (In English)"
-          ],
-          "publication_year": "1977"
-        },
-        {
-          "x4_code": "(W,GAYTHER,19780923)",
-          "free_txt": [
-            " Cross-section values given on",
-            " sheets."
-          ],
-          "publication_year": "1978"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": [
-            " Harwell 45 MeV electron accelerator, running at",
-            " repetition frequency of 192 MHz."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,77KIEV,3,3,19770418)",
+        "free_txt": [
+          " Comments, curves and fission",
+          " width values are given.   (In English)"
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,GAYTHER,19780923)",
+        "free_txt": [
+          " Cross-section values given on",
+          " sheets."
+        ],
+        "publication_year": "1978",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC)",
+        "free_txt": [
+          " Harwell 45 MeV electron accelerator, running at",
+          " repetition frequency of 192 MHz."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,ABS),,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(95-AM-241(N,ABS),,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "95-AM-241",
               [
@@ -106,11 +102,74 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "   Average neutron  absorption cross-section (predominantly capture)."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "   Average neutron  absorption cross-section (predominantly capture)."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(95-AM-241(N,F),,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,F"
+              ],
+              ",,SIG,,AV"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,F",
+            "sf49": ",,SIG,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(95-AM-241(N,F),,WID)",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,F"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,F",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -321,32 +380,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,F),,SIG,,AV)",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,F"
-              ],
-              ",,SIG,,AV"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,F",
-            "sf49": ",,SIG,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -498,32 +531,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,F),,WID)",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,F"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,F",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -591,18 +598,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               " Comparison with other data."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC)",
             "free_txt": [
@@ -610,20 +615,16 @@
               " repetition frequency of 192 MHz."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
               " Neutron booster target of the Harwell LINAC."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,M.S.Coates+,C,77KIEV,4,139,1977)",
             "free_txt": [
@@ -631,10 +632,8 @@
               "                             (In English)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -655,10 +654,8 @@
               "  measurement only."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -670,8 +667,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -682,10 +679,8 @@
               "-For detector efficiency."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(STANK)",
             "free_txt": [
@@ -694,10 +689,8 @@
               "  fission events."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -715,10 +708,8 @@
               " neutron flux less 3%."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -747,18 +738,14 @@
               " obtained for blank sample holder in region < 150 keV."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(10767002,L.W.Weston+,C,75WASH,229,1975)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,G)92-U-236,,SIG,,AV)",
             "free_txt": []
@@ -778,20 +765,16 @@
               " to 2keV to value of 9.48b from MONIT-REF."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G)",
             "free_txt": [
               " Capture gammas."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -803,8 +786,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -824,10 +807,8 @@
               " into account,using the values of Manero and Konshin."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -846,10 +827,8 @@
               "-For detector efficiency."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
@@ -870,10 +849,8 @@
               " energy was applied in all measurements."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -893,10 +870,8 @@
               " correction, were all less about 3.% ."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -943,10 +918,8 @@
               " neutrons."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,M.R.Bhat,R,ERDA-NDC-5,1975)",
             "free_txt": [
@@ -954,10 +927,8 @@
               " used for normalization.  ERDA-NDC-5/L."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)92-U-235(N,F),,SIG,,AV)",
             "free_txt": [
@@ -972,20 +943,16 @@
               "  to measure incident neutron spectrum."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(PN)",
             "free_txt": [
               " Prompt neutrons."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,F.Manero+,J,REA,10,637,1972)",
             "free_txt": [
@@ -1004,10 +971,8 @@
               " data of U.K. Data Library were used."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1020,8 +985,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1043,10 +1008,8 @@
               " U-235 data."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM1,95-AM-241(N,G),,WID,,G)",
             "free_txt": [
@@ -1060,10 +1023,8 @@
               "Same assumption as above."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -1071,20 +1032,16 @@
               "due to normalization and was thought to be 15 %."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " See SUBENTRY 20785002 and 20785003."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,F.Manero+,J,REA,10,637,1972)",
             "free_txt": [
@@ -1092,10 +1049,8 @@
               "               NU-BAR, used in analysis ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [

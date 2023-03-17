@@ -47,44 +47,41 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,12,1850,197512)",
-          "free_txt": [
-            "#doi:10.1103/PhysRevC.12.1850"
-          ],
-          "publication_year": "1975"
-        },
-        {
-          "x4_code": "(C,75WASH,2,560,197503)",
-          "free_txt": [],
-          "publication_year": "1975"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USAORL)",
-          "free_txt": [
-            " Oak Ridge electron linear accelerator"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,12,1850,197512)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.12.1850"
+        ],
+        "publication_year": "1975",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.12.1850"
+      },
+      {
+        "x4_code": "(C,75WASH,2,560,197503)",
+        "free_txt": [],
+        "publication_year": "1975",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USAORL)",
+        "free_txt": [
+          " Oak Ridge electron linear accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(94-PU-240(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(94-PU-240(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "94-PU-240",
               [
@@ -102,13 +99,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(94-PU-240(N,F),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(94-PU-240(N,F),,WID)",
+        "children": [
+          {
             "code": [
               "94-PU-240",
               [
@@ -126,11 +125,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(94-PU-240(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-240",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-240",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MOMENTUM L"
@@ -842,32 +876,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-240(N,F),,SIG)",
-          "0": {
-            "code": [
-              "94-PU-240",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-240",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -1744,8 +1752,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1755,10 +1763,8 @@
               "was not made."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -1768,30 +1774,24 @@
               "detectors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USAORL)",
             "free_txt": [
               " Oak Ridge electron linear accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
               " Electrons on tantalum target."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,PSD)",
             "free_txt": [
@@ -1816,26 +1816,20 @@
               "for 240Pu(SF) of 1.4xE11 yrs."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,,M.Forte,C,58GENEVA,15,(A),1514,1958)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1852,8 +1846,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(AREA,SHAPE,SLA)",
             "free_txt": [
@@ -1866,10 +1860,8 @@
               "functional form."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM,94-PU-240(N,EL),,WID/RED)",
             "free_txt": [
@@ -1877,20 +1869,16 @@
               "given by Kolar and Bockhoff, J.Nuc.En.,22, 299 (1968)."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               "Class I resonance parameters."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1898,18 +1886,14 @@
               "fission widths plus errors of assumed neutron widths."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,20117005,W.Kolar+,J,JNE,22,299,1968)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1926,26 +1910,22 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               "Class II states."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,,3,ENDF/B-IV,1264,1974)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(94-PU-239(N,F),,SIG)",
             "free_txt": [
@@ -1955,10 +1935,8 @@
               "1000 eV from ENDF/B-IV."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

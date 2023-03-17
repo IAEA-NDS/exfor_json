@@ -34,39 +34,34 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,94BOLOGN,,261,199411)",
-          "free_txt": [
-            "  MAIN REF, DATA ARE GIVEN"
-          ],
-          "publication_year": "1994"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            "   FAST NEUTRON BOOSTER IBR-30"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,94BOLOGN,,261,199411)",
+        "free_txt": [
+          "  MAIN REF, DATA ARE GIVEN"
+        ],
+        "publication_year": "1994",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          "   FAST NEUTRON BOOSTER IBR-30"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(72-HF-177(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(72-HF-177(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "72-HF-177",
               [
@@ -84,13 +79,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  RESONANCE ENERGY"
-        },
-        "2": {
-          "x4_code": "(72-HF-177(N,0),,J)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": "  RESONANCE ENERGY"
+      },
+      "2": {
+        "x4_code": "(72-HF-177(N,0),,J)",
+        "children": [
+          {
             "code": [
               "72-HF-177",
               [
@@ -108,11 +105,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "   SPIN OF THE RESONANCE"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "   SPIN OF THE RESONANCE"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(72-HF-177(N,G),,STF)",
+        "children": [
+          {
+            "code": [
+              "72-HF-177",
+              [
+                "N,G"
+              ],
+              ",,STF"
+            ],
+            "type": null,
+            "target": "72-HF-177",
+            "process": "N,G",
+            "sf49": ",,STF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "STF",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  GAMMA STRENGTH FUNCTION"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -364,32 +396,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(72-HF-177(N,G),,STF)",
-          "0": {
-            "code": [
-              "72-HF-177",
-              [
-                "N,G"
-              ],
-              ",,STF"
-            ],
-            "type": null,
-            "target": "72-HF-177",
-            "process": "N,G",
-            "sf49": ",,STF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "STF",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  GAMMA STRENGTH FUNCTION"
-        }
-      },
       "common": {
         "heads": [
           "MOMENTUM L"
@@ -559,36 +565,30 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".GAMMA MULTIPLICITY SPECTROMETRY"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
               "   FAST NEUTRON BOOSTER IBR-30"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -596,20 +596,16 @@
               "       WITH MULTIPLICITY SPECTROMETRY"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               ".NO INFORMATION"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -621,28 +617,24 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               " ERRORS ARE NOT GIVEN"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               "     SPIN VALUE DETERMINED WITH UNCERTAINTY"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -653,8 +645,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(+DATA-ERR)",
             "free_txt": [
@@ -667,10 +659,8 @@
               "  NEGATIVE ERROR"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

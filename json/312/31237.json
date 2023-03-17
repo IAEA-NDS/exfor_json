@@ -1,7 +1,7 @@
 {
   "entry": "31237",
-  "last_updated": "2016-09-05",
-  "number_of_revisions": "5",
+  "last_updated": "2023-01-20",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19771115T)",
@@ -12,7 +12,7 @@
     {
       "x4_code": "(20090912A)",
       "free_txt": [
-        " SD:Updated to new date formats,lower case.",
+        " SD:Updated to new date formats, lower case",
         "Subent 004 and description of experiment added."
       ]
     },
@@ -21,13 +21,21 @@
       "free_txt": [
         " VS. DECAY-DATA corrected in 004."
       ]
+    },
+    {
+      "x4_code": "(20220822A)",
+      "free_txt": [
+        " VT. Revision in 002-004",
+        " EN-DUMMY added in COMMON and replaced floating point",
+        "to fixed point values."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Measurement of thermal neutron activation cross section.",
+    "title": "Measurement of thermal neutron activation cross section",
     "authors": [
       {
-        "name": "M.Sehgal"
+        "name": "M.L.Sehgal"
       }
     ],
     "institutes": [
@@ -36,28 +44,118 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,IJP,31,630,1957)",
-          "free_txt": [],
-          "publication_year": "1957"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,IJP,31,630,1957)",
+        "free_txt": [],
+        "publication_year": "1957",
+        "pointer": "0"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(47-AG-109(N,G)47-AG-110-G,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "47-AG-109",
+              [
+                "N,G"
+              ],
+              "47-AG-110-G,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "47-AG-109",
+            "process": "N,G",
+            "sf49": "47-AG-110-G,,SIG,,SPA",
+            "sf4": "47-AG-110-G",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(49-IN-115(N,G)49-IN-116-M1+M2,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "49-IN-115",
+              [
+                "N,G"
+              ],
+              "49-IN-116-M1+M2,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "49-IN-115",
+            "process": "N,G",
+            "sf49": "49-IN-116-M1+M2,,SIG,,SPA",
+            "sf4": "49-IN-116-M1+M2",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(47-AG-107(N,G)47-AG-108-G,M+,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "47-AG-107",
+              [
+                "N,G"
+              ],
+              "47-AG-108-G,M+,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "47-AG-107",
+            "process": "N,G",
+            "sf49": "47-AG-108-G,M+,SIG,,SPA",
+            "sf4": "47-AG-108-G",
+            "sf5": "M+",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
     "001": {
       "common": {
         "heads": [
+          "EN-DUMMY",
           "ERR-1",
           "ERR-2"
         ],
         "units": [
+          "EV",
           "PER-CENT",
           "PER-CENT"
         ],
         "data": [
+          [
+            0.0253
+          ],
           [
             1.0
           ],
@@ -68,48 +166,17 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(47-AG-109(N,G)47-AG-110-G,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "47-AG-109",
-              [
-                "N,G"
-              ],
-              "47-AG-110-G,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "47-AG-109",
-            "process": "N,G",
-            "sf49": "47-AG-110-G,,SIG,,MXW",
-            "sf4": "47-AG-110-G",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
-          "EN-DUMMY",
           "DATA",
           "ERR-T"
         ],
         "units": [
-          "MEV",
           "B",
           "B"
         ],
         "data": [
-          [
-            2.53e-08
-          ],
           [
             113.5
           ],
@@ -120,48 +187,17 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(49-IN-115(N,G)49-IN-116-M,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "49-IN-115",
-              [
-                "N,G"
-              ],
-              "49-IN-116-M,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "49-IN-115",
-            "process": "N,G",
-            "sf49": "49-IN-116-M,,SIG,,MXW",
-            "sf4": "49-IN-116-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
-          "EN-DUMMY",
           "DATA",
           "ERR-T"
         ],
         "units": [
-          "MEV",
           "B",
           "B"
         ],
         "data": [
-          [
-            2.53e-08
-          ],
           [
             134.7
           ],
@@ -172,48 +208,17 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(47-AG-107(N,G)47-AG-108-G,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "47-AG-107",
-              [
-                "N,G"
-              ],
-              "47-AG-108-G,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "47-AG-107",
-            "process": "N,G",
-            "sf49": "47-AG-108-G,,SIG,,MXW",
-            "sf4": "47-AG-108-G",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
-          "EN-DUMMY",
           "DATA",
           "ERR-T"
         ],
         "units": [
-          "MEV",
           "B",
           "B"
         ],
         "data": [
-          [
-            2.53e-08
-          ],
           [
             45.7
           ],
@@ -226,18 +231,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
               "Beta-counter"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -247,13 +250,13 @@
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
-              " Error due to counting rate (1%)"
+              " Error due to counting rate   1%"
             ]
           },
           {
             "x4_code": "(ERR-2)",
             "free_txt": [
-              " Error due to half-life"
+              " Error due to half-life     ~5%"
             ]
           },
           {
@@ -265,50 +268,29 @@
           {
             "x4_code": "(ERR-4,,1.)",
             "free_txt": [
-              " Error in the weight of sample",
-              "and others."
+              " Error in the weight of sample and others."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(RA-BE)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              " Thermal spectrum"
-            ]
-          }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
-            "free_txt": [
-              "    Activation"
-            ]
+            "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(25-MN-55(N,G)25-MN-56,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -320,10 +302,8 @@
               "then irradiated"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -334,8 +314,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(47-AG-110-G,24.2SEC)",
             "free_txt": []
@@ -344,18 +324,18 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
-            "x4_code": "(49-IN-116-M,54.MIN)",
+            "x4_code": "(49-IN-116-M1,54.MIN)",
             "free_txt": []
           }
         ]
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(47-AG-108-G,2.2MIN)",
             "free_txt": []

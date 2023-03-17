@@ -53,49 +53,45 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PTE,,(1),51,2008)",
-          "free_txt": [
-            "        Main Reference"
-          ],
-          "publication_year": "2008"
-        },
-        {
-          "x4_code": "(J,IET,51,44,2008)",
-          "free_txt": [
-            " Eng.translation of PTE,,(1),51,2008."
-          ],
-          "publication_year": "2008"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SPECC,4ZZZDUB)",
-          "free_txt": [
-            " TOF spectrometer CORSET (Correlation",
-            " Setup) consists of two identical TOF arms to measure",
-            " velocity of both reaction fragments and several",
-            " telescopes."
-          ],
-          "facility_type": "(SPECC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PTE,,(1),51,2008)",
+        "free_txt": [
+          "        Main Reference"
+        ],
+        "publication_year": "2008",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,IET,51,44,2008)",
+        "free_txt": [
+          " Eng.translation of PTE,,(1),51,2008."
+        ],
+        "publication_year": "2008",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SPECC,4ZZZDUB)",
+        "free_txt": [
+          " TOF spectrometer CORSET (Correlation",
+          " Setup) consists of two identical TOF arms to measure",
+          " velocity of both reaction fragments and several",
+          " telescopes."
+        ],
+        "pointer": "0",
+        "facility_type": "(SPECC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F)MASS,PRE,FY/DE,LF+HF)",
-          "0": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F)MASS,PRE,FY/DE,LF+HF)",
+        "children": [
+          {
             "code": [
               "98-CF-252",
               [
@@ -113,19 +109,17 @@
             "sf7": "LF+HF",
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Fission fragment yield distribution as dependence from mass and total  kinetic energy."
-        }
-      },
-      "common": null,
-      "data": null
+          }
+        ],
+        "type": null,
+        "free_text": " Fission fragment yield distribution as dependence from mass and total  kinetic energy."
+      }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F)MASS,PRE,FY)",
-          "0": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F)MASS,PRE,FY)",
+        "children": [
+          {
             "code": [
               "98-CF-252",
               [
@@ -143,11 +137,50 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Mass yield distribution"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Mass yield distribution"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F)MASS,,KE)",
+        "children": [
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              "MASS,,KE"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": "MASS,,KE",
+            "sf4": "MASS",
+            "sf5": null,
+            "sf6": "KE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Average kinetic energy of  fission fragment as dependence from mass, in c.m.sys."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
+      "common": null,
+      "data": null
+    },
+    "003": {
       "common": {
         "heads": [
           "ERR-DIG"
@@ -365,32 +398,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F)MASS,,KE)",
-          "0": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              "MASS,,KE"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": "MASS,,KE",
-            "sf4": "MASS",
-            "sf5": null,
-            "sf6": "KE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Average kinetic energy of  fission fragment as dependence from mass, in c.m.sys."
-        }
-      },
       "common": {
         "heads": [
           "ERR-DIG"
@@ -614,8 +621,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -624,10 +631,8 @@
               " number of nucleons."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -637,10 +642,8 @@
               " For dead time of \"start\" detectors - less 10%."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TELES,MCPLT,MCPLT,SOLST)",
             "free_txt": [
@@ -674,10 +677,8 @@
               "Mass resolution-       3 (FWHM)           4(FWHM)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SPECC,4ZZZDUB)",
             "free_txt": [
@@ -687,10 +688,8 @@
               " telescopes."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -704,10 +703,8 @@
               " angular resolution 0.3 deg."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -720,8 +717,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(UNOBT)",
             "free_txt": [
@@ -735,8 +732,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -745,20 +742,16 @@
               " of F.Hambsch+ used for comparison."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-DIG)",
             "free_txt": [
               "    Digitizing error of DATA."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,22780002,F.-J.Hambsch+,J,NP/A,617,347,1997)",
             "free_txt": [
@@ -766,10 +759,8 @@
               " F.Hambsch."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(UNOBT)",
             "free_txt": [
@@ -787,8 +778,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -797,28 +788,22 @@
               " of F.Hambsch+ used for comparison."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-DIG)",
             "free_txt": [
               "    Digitizing error of DATA."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,22780003,F.-J.Hambsch+,J,NP/A,617,347,1997)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(UNOBT)",
             "free_txt": [

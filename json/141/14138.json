@@ -41,37 +41,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(P,ORNL-3360,51,1962)",
-          "free_txt": [],
-          "publication_year": "1962"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,1USAORL)",
-          "free_txt": [
-            " 3.5 MeV Van de Graaff"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(P,ORNL-3360,51,1962)",
+        "free_txt": [],
+        "publication_year": "1962",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,1USAORL)",
+        "free_txt": [
+          " 3.5 MeV Van de Graaff"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,ABS),,ALF)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,ABS),,ALF)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -89,11 +84,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "((92-U-238(N,G)92-U-239,,SIG)/(92-U-235(N,ABS),,SIG))",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,G"
+              ],
+              "92-U-239,,SIG"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,G",
+            "sf49": "92-U-239,,SIG",
+            "sf4": "92-U-239",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,ABS"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,ABS",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "003": {
       "common": null,
       "data": {
         "heads": [
@@ -129,51 +178,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(N,G)92-U-239,,SIG)/(92-U-235(N,ABS),,SIG))",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,G"
-              ],
-              "92-U-239,,SIG"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,G",
-            "sf49": "92-U-239,,SIG",
-            "sf4": "92-U-239",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,ABS"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,ABS",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -211,46 +215,38 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
               " Multi plate fission chamber"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,1USAORL)",
             "free_txt": [
               " 3.5 MeV Van de Graaff"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " (p,n) reactions on Li7 and H3"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -261,18 +257,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Total uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -283,18 +277,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

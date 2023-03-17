@@ -61,44 +61,40 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AJ,628,533,2005)",
-          "free_txt": [],
-          "publication_year": "2005"
-        },
-        {
-          "x4_code": "(J,NP/A,718,665,2003)",
-          "free_txt": [
-            " preliminary data given"
-          ],
-          "publication_year": "2003"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2JPNJAE)",
-          "free_txt": [
-            " Reactor JRR-4"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2JPNJAE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AJ,628,533,2005)",
+        "free_txt": [],
+        "publication_year": "2005",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,718,665,2003)",
+        "free_txt": [
+          " preliminary data given"
+        ],
+        "publication_year": "2003",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2JPNJAE)",
+        "free_txt": [
+          " Reactor JRR-4"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2JPNJAE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(75-RE-185(N,G)75-RE-186-M,,SIG,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(75-RE-185(N,G)75-RE-186-M,,SIG,,SPA)",
+        "children": [
+          {
             "code": [
               "75-RE-185",
               [
@@ -116,11 +112,74 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Effective cross section"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Effective cross section"
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(75-RE-185(N,G)75-RE-186-M,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "75-RE-185",
+              [
+                "N,G"
+              ],
+              "75-RE-186-M,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "75-RE-185",
+            "process": "N,G",
+            "sf49": "75-RE-186-M,,SIG,,SPA",
+            "sf4": "75-RE-186-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Effective cross section"
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(75-RE-185(N,G)75-RE-186-G,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "75-RE-185",
+              [
+                "N,G"
+              ],
+              "75-RE-186-G,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "75-RE-185",
+            "process": "N,G",
+            "sf49": "75-RE-186-G,,SIG,,SPA",
+            "sf4": "75-RE-186-G",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Effective cross section"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -152,32 +211,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(75-RE-185(N,G)75-RE-186-M,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "75-RE-185",
-              [
-                "N,G"
-              ],
-              "75-RE-186-M,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "75-RE-185",
-            "process": "N,G",
-            "sf49": "75-RE-186-M,,SIG,,SPA",
-            "sf4": "75-RE-186-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Effective cross section"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -204,32 +237,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "(75-RE-185(N,G)75-RE-186-G,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "75-RE-185",
-              [
-                "N,G"
-              ],
-              "75-RE-186-G,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "75-RE-185",
-            "process": "N,G",
-            "sf49": "75-RE-186-G,,SIG,,SPA",
-            "sf4": "75-RE-186-G",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Effective cross section"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -258,8 +265,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(75-RE-186-G,90.64HR,DG,137.2,0.0822)",
             "free_txt": []
@@ -268,10 +275,8 @@
             "x4_code": "(75-RE-186-M,2.0E+5YR)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -279,38 +284,30 @@
               " and resolution of about 2.2 keV at 1.3 MeV."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2JPNJAE)",
             "free_txt": [
               " Reactor JRR-4"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -318,10 +315,8 @@
               " Al-Co wires"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -329,18 +324,14 @@
               " 4 months due to strong activities of 186Re and 188Re."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(27-CO-59(N,G)27-CO-60,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -348,10 +339,8 @@
               "Al-Co wires (1.74 and 4.58 mg, 0.475% Co)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -362,26 +351,22 @@
       }
     },
     "002": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM,75-RE-185(N,G)75-RE-186-G,,SIG,,SPA)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
               " Measured 4 months after irradiation"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -398,8 +383,8 @@
       }
     },
     "005": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -408,20 +393,16 @@
               " 187Re(n,2n)186mRe is negligibly small."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
               " Measured 8 and 12 months after irradiation"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -432,28 +413,24 @@
       }
     },
     "006": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Metastable production is subtracted"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
               " Measured 4 months after irradiation"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

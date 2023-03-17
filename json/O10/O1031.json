@@ -48,37 +48,32 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CHP,4,6,1966)",
-          "free_txt": [],
-          "publication_year": "1966"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,3CHFTHU)",
-          "free_txt": [
-            " 2-3-MeV Van de Graaff accelerator."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(3CHFTHU)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CHP,4,6,1966)",
+        "free_txt": [],
+        "publication_year": "1966",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,3CHFTHU)",
+        "free_txt": [
+          " 2-3-MeV Van de Graaff accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(3CHFTHU)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(D,A)12-MG-25,PAR,DA,,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(13-AL-27(D,A)12-MG-25,PAR,DA,,REL)",
+        "children": [
+          {
             "code": [
               "13-AL-27",
               [
@@ -96,11 +91,74 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Fig.3"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Fig.3"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(13-AL-27(D,A)12-MG-25,PAR,DA,,REL)",
+        "children": [
+          {
+            "code": [
+              "13-AL-27",
+              [
+                "D,A"
+              ],
+              "12-MG-25,PAR,DA,,REL"
+            ],
+            "type": null,
+            "target": "13-AL-27",
+            "process": "D,A",
+            "sf49": "12-MG-25,PAR,DA,,REL",
+            "sf4": "12-MG-25",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Fig.4 and fig.5"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(13-AL-27(D,A)12-MG-25,PAR,SIG,,REL)",
+        "children": [
+          {
+            "code": [
+              "13-AL-27",
+              [
+                "D,A"
+              ],
+              "12-MG-25,PAR,SIG,,REL"
+            ],
+            "type": null,
+            "target": "13-AL-27",
+            "process": "D,A",
+            "sf49": "12-MG-25,PAR,SIG,,REL",
+            "sf4": "12-MG-25",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Table 2.The relative total cross sections were normalized toground state peak at each energy.  No correction wasintroduced for the penetrability of the coulomb barrierfor outgoing alpha-particles."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG",
@@ -518,32 +576,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(D,A)12-MG-25,PAR,DA,,REL)",
-          "0": {
-            "code": [
-              "13-AL-27",
-              [
-                "D,A"
-              ],
-              "12-MG-25,PAR,DA,,REL"
-            ],
-            "type": null,
-            "target": "13-AL-27",
-            "process": "D,A",
-            "sf49": "12-MG-25,PAR,DA,,REL",
-            "sf4": "12-MG-25",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Fig.4 and fig.5"
-        }
-      },
       "common": {
         "heads": [
           "ANG-ERR-D",
@@ -1544,32 +1576,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(D,A)12-MG-25,PAR,SIG,,REL)",
-          "0": {
-            "code": [
-              "13-AL-27",
-              [
-                "D,A"
-              ],
-              "12-MG-25,PAR,SIG,,REL"
-            ],
-            "type": null,
-            "target": "13-AL-27",
-            "process": "D,A",
-            "sf49": "12-MG-25,PAR,SIG,,REL",
-            "sf4": "12-MG-25",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Table 2.The relative total cross sections were normalized toground state peak at each energy.  No correction wasintroduced for the penetrability of the coulomb barrierfor outgoing alpha-particles."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1691,8 +1697,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1700,30 +1706,24 @@
               "represented."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
               " Two surface barrier detectors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,3CHFTHU)",
             "free_txt": [
               " 2-3-MeV Van de Graaff accelerator."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB)",
             "free_txt": []
@@ -1732,10 +1732,8 @@
             "x4_code": "(BCINT)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,C.C.HSU+,J,NC/B,56,39,1969)",
             "free_txt": []
@@ -1748,10 +1746,8 @@
             "x4_code": "(R,O1031001,E.K.LIN+,J,CHP,4,6,1966)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1766,16 +1762,14 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-EXC,12-MG-25)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-DIG)",
             "free_txt": [
@@ -1788,18 +1782,14 @@
               " Data-point reader uncertainty."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(A)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1810,16 +1800,14 @@
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-EXC,12-MG-25)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-DIG)",
             "free_txt": [
@@ -1832,18 +1820,14 @@
               " Data-point reader uncertainty."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(A)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1854,8 +1838,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1863,18 +1847,14 @@
               "was used."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E-EXC,12-MG-25)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": []

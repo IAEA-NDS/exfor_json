@@ -42,37 +42,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,76LOWELL,2,1319,197607)",
-          "free_txt": [],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USAORL)",
-          "free_txt": [
-            " Oak Ridge Electron Linear Accelerator"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,76LOWELL,2,1319,197607)",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USAORL)",
+        "free_txt": [
+          " Oak Ridge Electron Linear Accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(11-NA-23(N,EL)11-NA-23,,DA,,LEG/RS)",
-          "0": {
+      "0": {
+        "x4_code": "(11-NA-23(N,EL)11-NA-23,,DA,,LEG/RS)",
+        "children": [
+          {
             "code": [
               "11-NA-23",
               [
@@ -90,11 +85,74 @@
             "sf7": null,
             "sf8": "LEG/RS",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(11-NA-23(N,EL)11-NA-23,,SIG)",
+        "children": [
+          {
+            "code": [
+              "11-NA-23",
+              [
+                "N,EL"
+              ],
+              "11-NA-23,,SIG"
+            ],
+            "type": null,
+            "target": "11-NA-23",
+            "process": "N,EL",
+            "sf49": "11-NA-23,,SIG",
+            "sf4": "11-NA-23",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(11-NA-23(N,EL)11-NA-23,,DA)",
+        "children": [
+          {
+            "code": [
+              "11-NA-23",
+              [
+                "N,EL"
+              ],
+              "11-NA-23,,DA"
+            ],
+            "type": null,
+            "target": "11-NA-23",
+            "process": "N,EL",
+            "sf49": "11-NA-23,,DA",
+            "sf4": "11-NA-23",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -17306,32 +17364,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(11-NA-23(N,EL)11-NA-23,,SIG)",
-          "0": {
-            "code": [
-              "11-NA-23",
-              [
-                "N,EL"
-              ],
-              "11-NA-23,,SIG"
-            ],
-            "type": null,
-            "target": "11-NA-23",
-            "process": "N,EL",
-            "sf49": "11-NA-23,,SIG",
-            "sf4": "11-NA-23",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -21708,32 +21740,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(11-NA-23(N,EL)11-NA-23,,DA)",
-          "0": {
-            "code": [
-              "11-NA-23",
-              [
-                "N,EL"
-              ],
-              "11-NA-23,,DA"
-            ],
-            "type": null,
-            "target": "11-NA-23",
-            "process": "N,EL",
-            "sf49": "11-NA-23,,DA",
-            "sf4": "11-NA-23",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -62391,28 +62397,24 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Data corrected for finite sample effects"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " Liquid scintillator"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -62420,50 +62422,40 @@
               "  monitor."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USAORL)",
             "free_txt": [
               " Oak Ridge Electron Linear Accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
               " White source."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Incident spectrum resolution of 0.2 nsec/meter"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time-of-flight over 40 meter flight path"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(6-C-12(N,EL)6-C-12,,DA)",
             "free_txt": [
@@ -62471,10 +62463,8 @@
               "below inelastic threshold(factor of 1.1)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -62486,8 +62476,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -62496,10 +62486,8 @@
               " where A(l)= coefficient of P(l)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,10572004)",
             "free_txt": [
@@ -62515,8 +62503,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,10572004)",
             "free_txt": [

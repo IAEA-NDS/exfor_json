@@ -40,37 +40,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,64,897,197712)",
-          "free_txt": [],
-          "publication_year": "1977"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,1USAANL)",
-          "free_txt": [
-            " Fast Neutron Generator"
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(1USAANL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,64,897,197712)",
+        "free_txt": [],
+        "publication_year": "1977",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,1USAANL)",
+        "free_txt": [
+          " Fast Neutron Generator"
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(1USAANL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "((11-NA-23(N,INL)11-NA-23,PAR,DA,G,4PI)/(92-U-235(N,F),,SIG))",
-          "0": {
+      "1": {
+        "x4_code": "((11-NA-23(N,INL)11-NA-23,PAR,DA,G,4PI)/(92-U-235(N,F),,SIG))",
+        "children": [
+          {
             "code": [
               "11-NA-23",
               [
@@ -89,7 +84,7 @@
             "sf8": "4PI",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "92-U-235",
               [
@@ -107,13 +102,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(11-NA-23(N,INL)11-NA-23,PAR,DA,G,4PI)",
-          "0": {
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(11-NA-23(N,INL)11-NA-23,PAR,DA,G,4PI)",
+        "children": [
+          {
             "code": [
               "11-NA-23",
               [
@@ -131,11 +128,46 @@
             "sf7": "G",
             "sf8": "4PI",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(11-NA-23(N,INL)11-NA-23,PAR,DA,G,RSD)",
+        "children": [
+          {
+            "code": [
+              "11-NA-23",
+              [
+                "N,INL"
+              ],
+              "11-NA-23,PAR,DA,G,RSD"
+            ],
+            "type": null,
+            "target": "11-NA-23",
+            "process": "N,INL",
+            "sf49": "11-NA-23,PAR,DA,G,RSD",
+            "sf4": "11-NA-23",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "G",
+            "sf8": "RSD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E",
@@ -410,32 +442,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(11-NA-23(N,INL)11-NA-23,PAR,DA,G,RSD)",
-          "0": {
-            "code": [
-              "11-NA-23",
-              [
-                "N,INL"
-              ],
-              "11-NA-23,PAR,DA,G,RSD"
-            ],
-            "type": null,
-            "target": "11-NA-23",
-            "process": "N,INL",
-            "sf49": "11-NA-23,PAR,DA,G,RSD",
-            "sf4": "11-NA-23",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "G",
-            "sf8": "RSD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E",
@@ -721,8 +727,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -732,50 +738,40 @@
               "thickness"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               " Germanium-lithium detector"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,1USAANL)",
             "free_txt": [
               " Fast Neutron Generator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
               " Protons on lithium-7"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Metallic sodium samples in stainless steel cans."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -787,8 +783,27 @@
       }
     },
     "002": {
-      "err-analys": {
-        "2": [
+      "1": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Overall ratio error is estimated to be 8%",
+              " due to contributions from the following sources:",
+              " - detector counting efficiency   (5%),",
+              " - geometric effects              (3%),",
+              " - neutron source characteristics (>2%),",
+              " - gamma detector efficiency      (4%),",
+              " - mass of uranium deposit        (1%),",
+              " - gamma absorption in sample     (1%),",
+              " - neutron absorption in sample   (2%),",
+              " - neutron multiple scattering    (2.4%)."
+            ]
+          }
+        ]
+      },
+      "2": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -796,10 +811,8 @@
               " normalization error."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "2": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,SIG)",
             "free_txt": [
@@ -811,18 +824,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Relative uncertainty of gamma yields."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [

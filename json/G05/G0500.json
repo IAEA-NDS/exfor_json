@@ -56,44 +56,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CNP,10,244,1988)",
-          "free_txt": [],
-          "publication_year": "1988"
-        },
-        {
-          "x4_code": "(C,88MITO,,1151,1988)",
-          "free_txt": [
-            " Same yields except for A=87 and 92 chain yields"
-          ],
-          "publication_year": "1988"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,3CPRAEP)",
-          "free_txt": [
-            " Swimming pool reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(3CPRAEP)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CNP,10,244,1988)",
+        "free_txt": [],
+        "publication_year": "1988",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,88MITO,,1151,1988)",
+        "free_txt": [
+          " Same yields except for A=87 and 92 chain yields"
+        ],
+        "publication_year": "1988",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,3CPRAEP)",
+        "free_txt": [
+          " Swimming pool reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(3CPRAEP)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(G,F)ELEM/MASS,CUM,FY)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-232(G,F)ELEM/MASS,CUM,FY)",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -111,11 +107,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(G,F)MASS,CHN,FY)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "G,F"
+              ],
+              "MASS,CHN,FY"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "G,F",
+            "sf49": "MASS,CHN,FY",
+            "sf4": "MASS",
+            "sf5": "CHN",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -241,32 +272,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(G,F)MASS,CHN,FY)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "G,F"
-              ],
-              "MASS,CHN,FY"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "G,F",
-            "sf49": "MASS,CHN,FY",
-            "sf4": "MASS",
-            "sf5": "CHN",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -334,8 +339,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "((1.)35-BR-87,0.927MIN)",
             "free_txt": []
@@ -440,10 +445,8 @@
             "x4_code": "((13.)58-CE-143,33.0HR,DG,293.3,0.42)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -456,10 +459,8 @@
               " for fission rate measurement"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -475,38 +476,30 @@
               "      instrument for every contribution"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,3CPRAEP)",
             "free_txt": [
               " Swimming pool reactor"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(MPH=(26-FE-0(N,G)))",
             "free_txt": [
               " Egamma=9.298, 7.646, 7.632, and 7.279 MeV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ABSFY,FPGAM)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -517,10 +510,8 @@
               " thick one for fission product measurement."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

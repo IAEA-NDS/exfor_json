@@ -47,45 +47,41 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RCA,91,105,2003)",
-          "free_txt": [],
-          "publication_year": "2003"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2GERJUL)",
-          "free_txt": [
-            " CV-28 cyclotron"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2GERJUL)"
-        },
-        {
-          "x4_code": "(CYCLO,2GERJUL)",
-          "free_txt": [
-            " Injector cyclotron of COSY"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2GERJUL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RCA,91,105,2003)",
+        "free_txt": [],
+        "publication_year": "2003",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2GERJUL)",
+        "free_txt": [
+          " CV-28 cyclotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2GERJUL)"
+      },
+      {
+        "x4_code": "(CYCLO,2GERJUL)",
+        "free_txt": [
+          " Injector cyclotron of COSY"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2GERJUL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-54(D,N)27-CO-55,,TTY,,EOB)",
-          "0": {
+      "0": {
+        "x4_code": "(26-FE-54(D,N)27-CO-55,,TTY,,EOB)",
+        "children": [
+          {
             "code": [
               "26-FE-54",
               [
@@ -103,11 +99,72 @@
             "sf7": null,
             "sf8": "EOB",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(26-FE-54(D,A)25-MN-52-M,,SIG)",
+        "children": [
+          {
+            "code": [
+              "26-FE-54",
+              [
+                "D,A"
+              ],
+              "25-MN-52-M,,SIG"
+            ],
+            "type": null,
+            "target": "26-FE-54",
+            "process": "D,A",
+            "sf49": "25-MN-52-M,,SIG",
+            "sf4": "25-MN-52-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(26-FE-54(D,T)26-FE-53,,SIG)",
+        "children": [
+          {
+            "code": [
+              "26-FE-54",
+              [
+                "D,T"
+              ],
+              "26-FE-53,,SIG"
+            ],
+            "type": null,
+            "target": "26-FE-54",
+            "process": "D,T",
+            "sf49": "26-FE-53,,SIG",
+            "sf4": "26-FE-53",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -139,56 +196,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(26-FE-54(D,A)25-MN-52-M,,SIG)",
-          "0": {
-            "code": [
-              "26-FE-54",
-              [
-                "D,A"
-              ],
-              "25-MN-52-M,,SIG"
-            ],
-            "type": null,
-            "target": "26-FE-54",
-            "process": "D,A",
-            "sf49": "25-MN-52-M,,SIG",
-            "sf4": "25-MN-52-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(26-FE-54(D,T)26-FE-53,,SIG)",
-          "0": {
-            "code": [
-              "26-FE-54",
-              [
-                "D,T"
-              ],
-              "26-FE-53,,SIG"
-            ],
-            "type": null,
-            "target": "26-FE-54",
-            "process": "D,T",
-            "sf49": "26-FE-53,,SIG",
-            "sf4": "26-FE-53",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -322,18 +329,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
               " HpGe  high purity germanium gamma detector"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2GERJUL)",
             "free_txt": [
@@ -350,16 +355,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(27-CO-55,17.6HR,DG,477.,0.203,                 DG,932.,0.75)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,EXTB,GSPEC,CHSEP)",
             "free_txt": [
@@ -373,10 +376,8 @@
               "separate the 55Co and 52Mn."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -391,10 +392,8 @@
               "thickness about 0.25 mm."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -406,16 +405,24 @@
       }
     },
     "003": {
-      "decay-data": {
-        "2": [
+      "1": {
+        "decay-data": [
+          {
+            "x4_code": "(25-MN-52-M,21.2MIN,DG,1434.1,0.982)",
+            "free_txt": []
+          }
+        ]
+      },
+      "2": {
+        "decay-data": [
           {
             "x4_code": "(26-FE-53-G,8.5MIN,DG,377.9,0.42)",
             "free_txt": []
           }
         ]
       },
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -440,10 +447,8 @@
               " peak area determination        0.5-2%"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,EXTB,STTA)",
             "free_txt": [
@@ -451,28 +456,22 @@
               "  (see REL-REF)."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,D4131001,M.R.Zaman+,J,RCA,75,59,1996)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Samples were natural iron foils of 25 microns."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

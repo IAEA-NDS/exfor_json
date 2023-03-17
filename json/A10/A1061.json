@@ -51,43 +51,39 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,176,631,1971)",
-          "free_txt": [],
-          "publication_year": "1971"
-        },
-        {
-          "x4_code": "(J,FBS,9,165,1990)",
-          "free_txt": [
-            " Tabulated data and",
-            "     new experiment (see REL-REF)."
-          ],
-          "publication_year": "1990"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,2SWTETH)",
-          "free_txt": [],
-          "facility_type": "(VDGT)",
-          "institute": "(2SWTETH)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,176,631,1971)",
+        "free_txt": [],
+        "publication_year": "1971",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,FBS,9,165,1990)",
+        "free_txt": [
+          " Tabulated data and",
+          "     new experiment (see REL-REF)."
+        ],
+        "publication_year": "1990",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,2SWTETH)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2SWTETH)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-3(D,P)2-HE-4,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(2-HE-3(D,P)2-HE-4,,DA)",
+        "children": [
+          {
             "code": [
               "2-HE-3",
               [
@@ -105,11 +101,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(2-HE-3(D,P)2-HE-4,,DA,,LEG)",
+        "children": [
+          {
+            "code": [
+              "2-HE-3",
+              [
+                "D,P"
+              ],
+              "2-HE-4,,DA,,LEG"
+            ],
+            "type": null,
+            "target": "2-HE-3",
+            "process": "D,P",
+            "sf49": "2-HE-4,,DA,,LEG",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " sigma/4pi"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(2-HE-3(D,P)2-HE-4,,DA,,LEG/RS)",
+        "children": [
+          {
+            "code": [
+              "2-HE-3",
+              [
+                "D,P"
+              ],
+              "2-HE-4,,DA,,LEG/RS"
+            ],
+            "type": null,
+            "target": "2-HE-3",
+            "process": "D,P",
+            "sf49": "2-HE-4,,DA,,LEG/RS",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG/RS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-ERR-D",
@@ -665,32 +724,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-3(D,P)2-HE-4,,DA,,LEG)",
-          "0": {
-            "code": [
-              "2-HE-3",
-              [
-                "D,P"
-              ],
-              "2-HE-4,,DA,,LEG"
-            ],
-            "type": null,
-            "target": "2-HE-3",
-            "process": "D,P",
-            "sf49": "2-HE-4,,DA,,LEG",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " sigma/4pi"
-        }
-      },
       "common": {
         "heads": [
           "NUMBER",
@@ -758,32 +791,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-3(D,P)2-HE-4,,DA,,LEG/RS)",
-          "0": {
-            "code": [
-              "2-HE-3",
-              [
-                "D,P"
-              ],
-              "2-HE-4,,DA,,LEG/RS"
-            ],
-            "type": null,
-            "target": "2-HE-3",
-            "process": "D,P",
-            "sf49": "2-HE-4,,DA,,LEG/RS",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG/RS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1077,8 +1084,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -1091,28 +1098,22 @@
               "suppressor electrode."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical error"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2SWTETH)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(PHD,BCINT)",
             "free_txt": [
@@ -1120,10 +1121,8 @@
               "for each energy"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(O,O2484001,M.Bittcher+,J,FBS,9,165,1990)",
             "free_txt": [
@@ -1131,10 +1130,8 @@
               "                      experim. at E=1.,2.,12.,13. MeV."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1148,18 +1145,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T,,3.)",
             "free_txt": [
               " Total error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1170,18 +1165,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS)",
             "free_txt": [
               " Systematic error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1204,8 +1197,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

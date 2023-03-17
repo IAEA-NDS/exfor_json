@@ -46,51 +46,47 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,91JUELIC,,35,1991)",
-          "free_txt": [
-            " Main reference"
-          ],
-          "publication_year": "1991"
-        },
-        {
-          "x4_code": "(C,90MARSEI,1,(III),9,1990)",
-          "free_txt": [
-            " prelim.results, including",
-            " results of previous measurements on 233-U, 235-U and",
-            " 239-Pu, see EXFOR 22080."
-          ],
-          "publication_year": "1990"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2ZZZGEL)",
-          "free_txt": [
-            " Geel electron linear accelerator,",
-            " GELINA, operated at 40 Hz repetition rate with",
-            " 2 micro-sec burst width and average electron current",
-            " of 15 micro-Amp."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,91JUELIC,,35,1991)",
+        "free_txt": [
+          " Main reference"
+        ],
+        "publication_year": "1991",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,90MARSEI,1,(III),9,1990)",
+        "free_txt": [
+          " prelim.results, including",
+          " results of previous measurements on 233-U, 235-U and",
+          " 239-Pu, see EXFOR 22080."
+        ],
+        "publication_year": "1990",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2ZZZGEL)",
+        "free_txt": [
+          " Geel electron linear accelerator,",
+          " GELINA, operated at 40 Hz repetition rate with",
+          " 2 micro-sec burst width and average electron current",
+          " of 15 micro-Amp."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-241(N,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(94-PU-241(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "94-PU-241",
               [
@@ -108,11 +104,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(94-PU-241(N,F),,INT)",
+        "children": [
+          {
+            "code": [
+              "94-PU-241",
+              [
+                "N,F"
+              ],
+              ",,INT"
+            ],
+            "type": null,
+            "target": "94-PU-241",
+            "process": "N,F",
+            "sf49": ",,INT",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-NRM",
@@ -3839,32 +3870,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-241(N,F),,INT)",
-          "0": {
-            "code": [
-              "94-PU-241",
-              [
-                "N,F"
-              ],
-              ",,INT"
-            ],
-            "type": null,
-            "target": "94-PU-241",
-            "process": "N,F",
-            "sf49": ",,INT",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM-MIN",
@@ -3970,8 +3975,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -3979,10 +3984,8 @@
               " placed outside the neutron beam in a low geometry."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
@@ -3992,28 +3995,22 @@
               " of 15 micro-Amp."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " 8.2m flight path"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -4032,10 +4029,8 @@
               " incident on both a Li-Pu and Pu-Li sandwich."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -4046,8 +4041,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -4062,20 +4057,16 @@
               " from ENDF/B-VI."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information about source of uncertainties"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
             "free_txt": [
@@ -4084,10 +4075,8 @@
               "sigma(E)*sqrt(E) between 20 and 30 meV"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -4098,28 +4087,24 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Errors excluding normalization uncertainty"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " Value obtained with a poor energy resolution"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(94-PU-241(N,F),,INT)",
             "free_txt": [
@@ -4127,10 +4112,8 @@
               " to 264.58 b*eV"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

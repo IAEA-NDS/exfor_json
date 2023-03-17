@@ -1,12 +1,12 @@
 {
   "entry": "M0515",
-  "last_updated": "2016-05-03",
-  "number_of_revisions": "4",
+  "last_updated": "2022-11-08",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19971208C)",
       "free_txt": [
-        " Data  were compiled at the Russia MSU SINP",
+        " Data were compiled at the Russia MSU SINP",
         " CDFE by V.Varlamov."
       ]
     },
@@ -16,13 +16,24 @@
         " Corrected by V.Varlamov: dates, STATUS,",
         " ERR-ANALYS, COMMON, lowercase."
       ]
+    },
+    {
+      "x4_code": "(20220817A)",
+      "free_txt": [
+        " Corrected by VV and SD: SUBENT 003 deleted",
+        " because duplication with M0406003), EACTION in SUBENT",
+        " 004, STATUS."
+      ]
     }
   ],
   "bib_record": {
     "title": "Photonuclear cross sections of Pu-239 using neutron capture gamma rays, near threshold.",
     "authors": [
       {
-        "name": "M.A.P.V.De Moraes"
+        "name": "M.Antonio"
+      },
+      {
+        "name": "P.V.De Moraes"
       },
       {
         "name": "M.F.Cesar"
@@ -34,26 +45,110 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PS,47,519,1993)",
-          "free_txt": [],
-          "publication_year": "1993"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,PS,47,519,1993)",
+        "free_txt": [],
+        "publication_year": "1993",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,3BZLIPE)",
+        "free_txt": [
+          " IEA-R1 reactor."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(3BZLIPE)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(94-PU-239(G,ABS),,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "G,ABS"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "G,ABS",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,3BZLIPE)",
-          "free_txt": [
-            " IEA-R1 reactor."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(3BZLIPE)"
-        }
-      ]
+    "004": {
+      "0": {
+        "x4_code": "(94-PU-239(G,N)94-PU-238,,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "G,N"
+              ],
+              "94-PU-238,,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "G,N",
+            "sf49": "94-PU-238,,SIG,,,DERIV",
+            "sf4": "94-PU-238",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(94-PU-239(G,X)0-NN-1,,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "G,X"
+              ],
+              "0-NN-1,,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "G,X",
+            "sf49": "0-NN-1,,SIG",
+            "sf4": "0-NN-1",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -88,32 +183,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(G,ABS),,SIG)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "G,ABS"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "G,ABS",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -163,112 +232,7 @@
         ]
       }
     },
-    "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(G,F),,SIG)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "G,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "G,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
-      "common": null,
-      "data": {
-        "heads": [
-          "EN",
-          "DATA",
-          "ERR-T"
-        ],
-        "units": [
-          "MEV",
-          "MB",
-          "MB"
-        ],
-        "data": [
-          [
-            5.43,
-            6.73,
-            7.23,
-            7.38,
-            7.64,
-            7.72,
-            7.88,
-            7.91,
-            9.0,
-            9.72
-          ],
-          [
-            8.9,
-            20.8,
-            26.8,
-            34.5,
-            37.6,
-            44.2,
-            42.4,
-            36.2,
-            92.7,
-            131.9
-          ],
-          [
-            4.9,
-            2.1,
-            6.2,
-            4.0,
-            5.3,
-            6.2,
-            7.5,
-            4.9,
-            14.9,
-            25.0
-          ]
-        ]
-      }
-    },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(G,N)94-PU-238,,SIG,,MSC)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "G,N"
-              ],
-              "94-PU-238,,SIG,,MSC"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "G,N",
-            "sf49": "94-PU-238,,SIG,,MSC",
-            "sf4": "94-PU-238",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MSC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Cross section for photoneutron reaction SIG(g,n) was obtained  from  the  neutron  yield  reaction  cross section, photofission reaction SIG(g,f)cross section and nu: (g,xn) = SIG(g,n) + nu x SIG(g,f)"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -319,32 +283,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(G,X)0-NN-1,,SIG)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "G,X"
-              ],
-              "0-NN-1,,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "G,X",
-            "sf49": "0-NN-1,,SIG",
-            "sf4": "0-NN-1",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -397,81 +335,89 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "The direct measurements of number of fission fragments",
               " using the scanning of the MAKROFOL sheets by means of",
               " conventional optical microscopy.",
-              "The direct measurements  of photoneutrons from a total",
-              " neutron production     reaction     (g,n-tot)     and",
-              " photofission reaction (g,f) -  sig  (g,n-tot)  =  sig",
-              " (g,n) +  nu * sig (g,f),  where nu(e) is the value of",
-              " the prompt neutron multiplicity (the  average  number",
+              "The direct measurements of photoneutrons from a total",
+              " neutron production reaction (g,n-tot) and",
+              " photofission reaction (g,f) - sig (g,n-tot) = sig",
+              " (g,n) +  nu * sig (g,f), where nu(e) is the value of",
+              " the prompt neutron multiplicity (the average number",
               " of prompt neutrons per fission)."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
-              "The  photofission  and photoneutron  cross sections of",
-              " Pu-239 have  been measured by using monochromatic and",
-              " discrete photons produced by thermal neutron  capture",
-              " gamma-rays  in  several targets placed at the core of",
-              " the IAA-R1 reactor in the energy interval  from  5.43",
-              " to  9.72  MeV.  From  the photofission cross sections",
-              " obtained anbd according to the liquid drop model, the",
+              " The error sources  were:",
+              " Gamma flux - 10% of the systematic uncertainty in the",
+              " photopeak efficiency determination plus 1.5 to 3%  of",
+              " statistical error; photofission events - 3% of the",
+              " systematic error in the calibration for fission",
+              " counting plus 2 to 5% of the statistical uncertainty;",
+              " photoneutron events - 3.6% of the systematic error in",
+              " the calibration for neutron counting plus 6 to 10% of",
+              " the statistical uncertainty; sample atom content - 2%",
+              " of the  systematic error. The experimental errors in",
+              " nu(e) and in the relative intensity of the  gamma-ray",
+              " lines were not included in any error analysis. These",
+              " values resulted in overall uncertainties of about 15%",
+              " for the final photofission cross sections and about",
+              " 20%  for the final total neutron cross sections. The",
+              " overall uncertainties for the final photoneutron",
+              " cross sections ranged from 20 to 60%.",
+              "The photofission and photoneutron cross sections of",
+              " Pu-239 have been measured by using monochromatic and",
+              " discrete photons produced by thermal neutron capture",
+              " gamma-rays in several targets placed at the core of",
+              " the IAA-R1 reactor in the energy interval from 5.43",
+              " to 9.72 MeV. From the photofission cross sections",
+              " obtained and according to the liquid drop model, the",
               " height of the simple fission barrier was determined -",
               " f.b.  = 5.7 (0.2) MeV. The relative fissionability to",
-              " U-238  was  also  determined  and  shown to be energy",
-              " independent  -  f.r.  =  3.32   (0.41).   the   total",
-              " photoabsorption  cross  sections  were  calculated as",
-              " well as the photofission branching ratio  or  fission",
+              " U-238 was also determined and shown to be energy",
+              " independent - f.r. = 3.32(0.41). The total",
+              " photoabsorption cross sections were calculated as",
+              " well as the photofission branching ratio or fission",
               " probability pf = 0.70 (0.06)."
             ]
           }
-        ]
-      },
-      "critique": {
-        "0": [
+        ],
+        "critique": [
           {
             "x4_code": null,
             "free_txt": [
               "28-Ni-64 should be instead of 28-Ni-84."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": [
               " Photofission fragments were detected by fission",
-              " track registration   technique  in  MAKROFOL  KG  (8",
-              " micron)."
+              " track registration technique in MAKROFOL KG (8 micron)"
             ]
           },
           {
             "x4_code": "(HE3SP)",
             "free_txt": [
-              "  Neutrons from (g,f)  and (g,n) reactions were",
+              " Neutrons from (g,f) and (g,n) reactions were",
               " detected simultaneously with fission fragments by 4pi",
-              " long-counter consisting    of   60   He-3   detectors",
-              " conventionally distributed   inside    a    moderator",
-              " material (poliethene)."
+              " long-counter consisting of 60 He-3 detectors",
+              " conventionally distributed inside a moderator",
+              " material (polyethylene)."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -503,40 +449,19 @@
             "x4_code": "(ERR-4)",
             "free_txt": [
               " Systematic error from sample atom content -",
-              " 2.0 %.",
-              "The error sources  were:",
-              " Gamma flux - 10% of the systematic uncertainty in the",
-              " photopeak efficiency determination plus 1.5 to 3%  of",
-              " statistical error;   photofission events -  3% of the",
-              " systematic error  in  the  calibration  for   fission",
-              " counting plus 2 to 5% of the statistical uncertainty;",
-              " photoneutron events - 3.6% of the systematic error in",
-              " the calibration for neutron counting plus 6 to 10% of",
-              " the statistical uncertainty; sample atom content - 2%",
-              " of the  systematic error.  The experimental errors in",
-              " nu(e) and in the relative intensity of the  gamma-ray",
-              " lines were  not  included in any error analys.  These",
-              " values resulted in overall uncertainties of about 15%",
-              " for  the  final photofission cross sections and about",
-              " 20%  for the final total neutron cross sections.  The",
-              " overall  uncertainties  for  the  final  photoneutron",
-              " cross sections ranged from 20 to 60%."
+              " 2.0%."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,3BZLIPE)",
             "free_txt": [
               " IEA-R1 reactor."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(MPH=(16-S-32(N,G)16-S-33))",
             "free_txt": [
@@ -597,23 +522,28 @@
               "   EG = 9.72 MeV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB,SITA,FISCT)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(O,M0406003,M.A.P.V.De Moraes+,J,NIM/A,277,467,1989)",
+            "free_txt": [
+              " -",
+              " data for Pu-239."
+            ]
+          }
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "The Pu-239 samples contained 51.4 mg deposited in  the",
-              " form of PuO-2 on four  titanum  disks  each  with  an",
+              "The Pu-239 samples contained 51.4 mg deposited in the",
+              " form of PuO-2 on four titanium disks each with an",
               " active diameter of 40 mm was used:",
               "     masses       isotope     isotopic percentage",
               "      (mg)           A             (atoms/%)",
@@ -626,12 +556,13 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Data from Table II."
+              " Data from Table II of",
+              " Phys.Script.,47(1993)519."
             ]
           },
           {
@@ -649,35 +580,33 @@
         ]
       }
     },
-    "003": {
-      "status": {
-        "0": [
+    "004": {
+      "0": {
+        "analysis": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": null,
             "free_txt": [
-              " Data from Table II."
+              "Cross section for photoneutron reaction SIG(g,n) was",
+              " obtained  from  the  neutron  yield  reaction  cross",
+              " section, photofission reaction SIG(g,f)cross section",
+              " and nu: (g,xn) = SIG(g,n) + nu x SIG(g,f)"
             ]
           }
-        ]
-      }
-    },
-    "004": {
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,B.L.Berman+,J,PR/C,34,2201,1986)",
             "free_txt": [
               " The data for nu(e) values."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Data from Table II."
+              " Data from Table II of",
+              " Phys.Script.,47(1993)519."
             ]
           },
           {
@@ -696,12 +625,13 @@
       }
     },
     "005": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Data from Table II."
+              " Data from Table II of",
+              " Phys.Script.,47(1993)519."
             ]
           }
         ]

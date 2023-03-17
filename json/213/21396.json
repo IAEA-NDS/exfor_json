@@ -37,35 +37,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,CR,240,2306,5506)",
-          "free_txt": [],
-          "publication_year": "1955"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC )",
-          "free_txt": [
-            " PILE AT SACLAY."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,CR,240,2306,5506)",
+        "free_txt": [],
+        "publication_year": "1955",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC )",
+        "free_txt": [
+          " PILE AT SACLAY."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-233(N,F),,SIG,,MXW)/(94-PU-239(N,F),,SIG,,MXW))",
-          "0": {
+      "0": {
+        "x4_code": "((92-U-233(N,F),,SIG,,MXW)/(94-PU-239(N,F),,SIG,,MXW))",
+        "children": [
+          {
             "code": [
               "92-U-233",
               [
@@ -84,7 +79,7 @@
             "sf8": "MXW",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "94-PU-239",
               [
@@ -102,11 +97,74 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-233(N,F),,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "92-U-233",
+              [
+                "N,F"
+              ],
+              ",,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "92-U-233",
+            "process": "N,F",
+            "sf49": ",,SIG,,MXW",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " MAXWELLIAN AVERAGE CROSS SECTION."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-233(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-233",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-233",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " 2200 M/SEC VALUE."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -133,32 +191,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-233(N,F),,SIG,,MXW)",
-          "0": {
-            "code": [
-              "92-U-233",
-              [
-                "N,F"
-              ],
-              ",,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "92-U-233",
-            "process": "N,F",
-            "sf49": ",,SIG,,MXW",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " MAXWELLIAN AVERAGE CROSS SECTION."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -195,32 +227,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-233(N,F),,SIG)",
-          "0": {
-            "code": [
-              "92-U-233",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-233",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " 2200 M/SEC VALUE."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -259,8 +265,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -268,60 +274,48 @@
               " IN THE U-233 SAMPLE."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
               " DOUBLE FISSION CHAMBER."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               ".ONE STANDARD DEVIATION, STATISTICAL ERRORS."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC )",
             "free_txt": [
               " PILE AT SACLAY."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC )",
             "free_txt": [
               " THERMAL REACTOR NEUTRONS."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(FF   )",
             "free_txt": [
               " FISSION FRAGMENTS."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -329,10 +323,8 @@
               " AND PU-239, SURFACE DENSITY 25 MICRO-G/CM*2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -343,18 +335,16 @@
       }
     },
     "002": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "MAXWELLIAN PILE SPECTRUM."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -365,38 +355,32 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".FROM RATIO MEASUREMENT."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "MAXWELLIAN PILE SPECTRUM."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(94-PU-239(N,F),,SIG)",
             "free_txt": [
               " 2200 M/SEC VALUE."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -411,28 +395,24 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".DERIVED FROM THERMAL AVERAGE RATIO."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(94-PU-239(N,F),,SIG)",
             "free_txt": [
               " 2200 M/SEC VALUE."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

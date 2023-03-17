@@ -38,45 +38,41 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RRL,28,205,1977)",
-          "free_txt": [],
-          "publication_year": "1977"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2GERDKZ)",
-          "free_txt": [
-            " the Heidelberg compact cyclotron"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2GERDKZ)"
-        },
-        {
-          "x4_code": "(ISOCY,2GERKFK)",
-          "free_txt": [
-            " the KFK compact cyclotron"
-          ],
-          "facility_type": "(ISOCY)",
-          "institute": "(2GERKFK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RRL,28,205,1977)",
+        "free_txt": [],
+        "publication_year": "1977",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2GERDKZ)",
+        "free_txt": [
+          " the Heidelberg compact cyclotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2GERDKZ)"
+      },
+      {
+        "x4_code": "(ISOCY,2GERKFK)",
+        "free_txt": [
+          " the KFK compact cyclotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(ISOCY)",
+        "institute": "(2GERKFK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(42-MO-100(P,X)42-MO-99,,TTY,,(PHY))",
-          "0": {
+      "0": {
+        "x4_code": "(42-MO-100(P,X)42-MO-99,,TTY,,(PHY))",
+        "children": [
+          {
             "code": [
               "42-MO-100",
               [
@@ -90,18 +86,56 @@
             "type": null,
             "target": "42-MO-100",
             "process": "P,X",
-            "sf49": "42-MO-99,,TTY,,",
+            "sf49": "42-MO-99,,TTY,,,(PHY)",
             "sf4": "42-MO-99",
             "sf5": null,
             "sf6": "TTY",
             "sf7": null,
             "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+            "sf9": "(PHY)"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(42-MO-100(P,2N)43-TC-99-M,,TTY,,(PHY))",
+        "children": [
+          {
+            "code": [
+              "42-MO-100",
+              [
+                "P,2N"
+              ],
+              "43-TC-99-M,,TTY,,",
+              [
+                "PHY"
+              ]
+            ],
+            "type": null,
+            "target": "42-MO-100",
+            "process": "P,2N",
+            "sf49": "43-TC-99-M,,TTY,,,(PHY)",
+            "sf4": "43-TC-99-M",
+            "sf5": null,
+            "sf6": "TTY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "(PHY)"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -163,35 +197,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(42-MO-100(P,2N)43-TC-99-M,,TTY,,(PHY))",
-          "0": {
-            "code": [
-              "42-MO-100",
-              [
-                "P,2N"
-              ],
-              "43-TC-99-M,,TTY,,",
-              [
-                "PHY"
-              ]
-            ],
-            "type": null,
-            "target": "42-MO-100",
-            "process": "P,2N",
-            "sf49": "43-TC-99-M,,TTY,,",
-            "sf4": "43-TC-99-M",
-            "sf5": null,
-            "sf6": "TTY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -255,8 +260,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -267,10 +272,8 @@
               "in fig.5"
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -283,28 +286,22 @@
               "chosen experiments."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information about source of uncertainties"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2GERDKZ)",
             "free_txt": [
@@ -317,38 +314,30 @@
               " the KFK compact cyclotron"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(BCINT)",
             "free_txt": [
               " 1 muA beam current."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(O0419001,P.P.Dmitriev+,J,AE,24,279,1968)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(29-CU-65(P,N)30-ZN-65,,SIG)",
             "free_txt": [
               " for beam monitoring"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -366,8 +355,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -378,8 +367,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

@@ -79,39 +79,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,83,041601,2011)",
-          "free_txt": [],
-          "publication_year": "2011"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LASER,1USATNL)",
-          "free_txt": [
-            "Experiment was conducted using",
-            "TUNL's High-Intensity Gamma-Ray Source (HIgS) at the",
-            "Duke Free-Electron-Laser Laboratory"
-          ],
-          "facility_type": "(LASER)",
-          "institute": "(1USATNL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,83,041601,2011)",
+        "free_txt": [],
+        "publication_year": "2011",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LASER,1USATNL)",
+        "free_txt": [
+          "Experiment was conducted using",
+          "TUNL's High-Intensity Gamma-Ray Source (HIgS) at the",
+          "Duke Free-Electron-Laser Laboratory"
+        ],
+        "pointer": "0",
+        "facility_type": "(LASER)",
+        "institute": "(1USATNL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(G,EL),,ARE)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(G,EL),,ARE)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -129,11 +124,95 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(((92-U-235(G,EL),,WID)*(92-U-235(G,EL),,WID,,2G))/(92-U-235(G,TOT),,WID))",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "G,EL"
+              ],
+              ",,WID"
+            ],
+            "type": "*",
+            "target": "92-U-235",
+            "process": "G,EL",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "G,EL"
+              ],
+              ",,WID,,2G"
+            ],
+            "type": "*",
+            "target": "92-U-235",
+            "process": "G,EL",
+            "sf49": ",,WID,,2G",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "2G",
+            "sf9": null
+          },
+          {
+            "code": "92-U-235",
+            "type": [
+              "G,TOT"
+            ],
+            "target": "9",
+            "process": "2",
+            "sf49": "-,U,-,2,3,5",
+            "sf4": "-",
+            "sf5": "U",
+            "sf6": "-",
+            "sf7": "2",
+            "sf8": "3",
+            "sf9": "5"
+          },
+          {
+            "code": ",,WID",
+            "type": [
+              "G,TOT"
+            ],
+            "target": ",",
+            "process": ",",
+            "sf49": "W,I,D",
+            "sf4": "W",
+            "sf5": "I",
+            "sf6": "D",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -233,81 +312,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(((92-U-235(G,EL),,WID)*(92-U-235(G,EL),,WID,,2G))/(92-U-235(G,TOT),,WID))",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "G,EL"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
-            "target": "92-U-235",
-            "process": "G,EL",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "G,EL"
-              ],
-              ",,WID,,2G"
-            ],
-            "type": "*",
-            "target": "92-U-235",
-            "process": "G,EL",
-            "sf49": ",,WID,,2G",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "2G",
-            "sf9": null
-          },
-          "2": {
-            "code": "92-U-235",
-            "type": [
-              "G,TOT"
-            ],
-            "target": "9",
-            "process": "2",
-            "sf49": "-",
-            "sf4": "-",
-            "sf5": null,
-            "sf6": null,
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "3": {
-            "code": ",,WID",
-            "type": [
-              "G,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W",
-            "sf4": "W",
-            "sf5": null,
-            "sf6": null,
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -453,8 +457,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -468,20 +472,16 @@
               "in the vertical plane."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LASER,1USATNL)",
             "free_txt": [
@@ -490,10 +490,8 @@
               "Duke Free-Electron-Laser Laboratory"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(LCS)",
             "free_txt": [
@@ -506,26 +504,20 @@
               "linear polarization of the beam was almost 100%."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(5-B-11(G,SCT),PAR,ARE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(92-U-235,ENR=0.937)",
             "free_txt": [
@@ -541,8 +533,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -553,8 +545,8 @@
       }
     },
     "003": {
-      "misc-col": {
-        "0": [
+      "0": {
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -563,10 +555,8 @@
               " to the ground state"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

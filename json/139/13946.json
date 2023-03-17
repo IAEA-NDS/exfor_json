@@ -75,40 +75,35 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,70,054613,200411)",
-          "free_txt": [],
-          "publication_year": "2004"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,1USALAS)",
-          "free_txt": [
-            " 4FP15L flight path at 90 m from the",
-            " spallation target of the Weapons Neutron Research",
-            " Center at the Los Alamos Neutron Science Center",
-            " (LANSCE)"
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,70,054613,200411)",
+        "free_txt": [],
+        "publication_year": "2004",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,1USALAS)",
+        "free_txt": [
+          " 4FP15L flight path at 90 m from the",
+          " spallation target of the Weapons Neutron Research",
+          " Center at the Los Alamos Neutron Science Center",
+          " (LANSCE)"
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,EL)6-C-12,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(N,EL)6-C-12,,DA)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -126,11 +121,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(20-CA-40(N,EL)20-CA-40,,DA)",
+        "children": [
+          {
+            "code": [
+              "20-CA-40",
+              [
+                "N,EL"
+              ],
+              "20-CA-40,,DA"
+            ],
+            "type": null,
+            "target": "20-CA-40",
+            "process": "N,EL",
+            "sf49": "20-CA-40,,DA",
+            "sf4": "20-CA-40",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(82-PB-208(N,EL)82-PB-208,,DA)",
+        "children": [
+          {
+            "code": [
+              "82-PB-208",
+              [
+                "N,EL"
+              ],
+              "82-PB-208,,DA"
+            ],
+            "type": null,
+            "target": "82-PB-208",
+            "process": "N,EL",
+            "sf49": "82-PB-208,,DA",
+            "sf4": "82-PB-208",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -544,32 +602,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(20-CA-40(N,EL)20-CA-40,,DA)",
-          "0": {
-            "code": [
-              "20-CA-40",
-              [
-                "N,EL"
-              ],
-              "20-CA-40,,DA"
-            ],
-            "type": null,
-            "target": "20-CA-40",
-            "process": "N,EL",
-            "sf49": "20-CA-40,,DA",
-            "sf4": "20-CA-40",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1037,32 +1069,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-208(N,EL)82-PB-208,,DA)",
-          "0": {
-            "code": [
-              "82-PB-208",
-              [
-                "N,EL"
-              ],
-              "82-PB-208,,DA"
-            ],
-            "type": null,
-            "target": "82-PB-208",
-            "process": "N,EL",
-            "sf49": "82-PB-208,,DA",
-            "sf4": "82-PB-208",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1520,8 +1526,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -1538,10 +1544,8 @@
               " particle energies."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,1USALAS)",
             "free_txt": [
@@ -1551,28 +1555,22 @@
               " (LANSCE)"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": [
               " Spallation neutron source."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-238(N,F),,SIG)",
             "free_txt": [
@@ -1583,8 +1581,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -1605,10 +1603,8 @@
               " Systematical uncertainties"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1618,10 +1614,8 @@
               " 5.084 cm in diameter, 0.964 g/cm3."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1632,8 +1626,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -1654,10 +1648,8 @@
               " Systematical uncertainties"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1665,10 +1657,8 @@
               " 5.116 cm in diameter, 1.573 g/cm3."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1679,8 +1669,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -1701,10 +1691,8 @@
               " Systematical uncertainties"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1712,10 +1700,8 @@
               " thickness of 11.71 g/cm2"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

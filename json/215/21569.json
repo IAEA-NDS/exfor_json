@@ -44,39 +44,34 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,79JUELICH,1,187,80)",
-          "free_txt": [
-            " PAPER SM-241/B5."
-          ],
-          "publication_year": "1980"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2FR GRA)",
-          "free_txt": [
-            " 4 MEV VAN DE GRAAFF."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2FR GRA)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,79JUELICH,1,187,80)",
+        "free_txt": [
+          " PAPER SM-241/B5."
+        ],
+        "publication_year": "1980",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2FR GRA)",
+        "free_txt": [
+          " 4 MEV VAN DE GRAAFF."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2FR GRA)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(91-PA-231(N,F),,DA,,RSD)",
-          "0": {
+      "0": {
+        "x4_code": "(91-PA-231(N,F),,DA,,RSD)",
+        "children": [
+          {
             "code": [
               "91-PA-231",
               [
@@ -94,11 +89,74 @@
             "sf7": null,
             "sf8": "RSD",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  W(0 DEGR)/W(90 DEGR)."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  W(0 DEGR)/W(90 DEGR)."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(91-PA-231(N,F),,DA,,LEG/RSL)",
+        "children": [
+          {
+            "code": [
+              "91-PA-231",
+              [
+                "N,F"
+              ],
+              ",,DA,,LEG/RSL"
+            ],
+            "type": null,
+            "target": "91-PA-231",
+            "process": "N,F",
+            "sf49": ",,DA,,LEG/RSL",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG/RSL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " LEGENDRE COEFFICIENTS."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(91-PA-231(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "91-PA-231",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "91-PA-231",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " FISSION CROSS SECTION."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RSL",
@@ -178,32 +236,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(91-PA-231(N,F),,DA,,LEG/RSL)",
-          "0": {
-            "code": [
-              "91-PA-231",
-              [
-                "N,F"
-              ],
-              ",,DA,,LEG/RSL"
-            ],
-            "type": null,
-            "target": "91-PA-231",
-            "process": "N,F",
-            "sf49": ",,DA,,LEG/RSL",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG/RSL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " LEGENDRE COEFFICIENTS."
-        }
-      },
       "common": {
         "heads": [
           "EN-RSL"
@@ -307,32 +339,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(91-PA-231(N,F),,SIG)",
-          "0": {
-            "code": [
-              "91-PA-231",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "91-PA-231",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " FISSION CROSS SECTION."
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -356,8 +362,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -368,10 +374,8 @@
               " ANGULAR DISTRIBUTION BY SELFABSORPTION EFFECTS."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TRD  )",
             "free_txt": [
@@ -384,20 +388,16 @@
               " MENTS A CYLINDRICAL ONE."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2FR GRA)",
             "free_txt": [
               " 4 MEV VAN DE GRAAFF."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -406,10 +406,8 @@
               " AT A DISTANCE OF 10 CM."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -420,10 +418,8 @@
               " DAUGHTERS."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -434,8 +430,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -446,8 +442,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -458,8 +454,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -467,10 +463,8 @@
               " WITH A RESOLUTION OF 2 KEV NEAR 160 KEV N-ENERGY."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,SIG)",
             "free_txt": [
@@ -478,10 +472,8 @@
               " NSE,1,7-8(1974)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

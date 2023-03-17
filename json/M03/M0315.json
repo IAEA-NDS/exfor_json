@@ -50,37 +50,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,337,503,1980)",
-          "free_txt": [
-            "#doi:10.1016/0375-9474(80)90156-6"
-          ],
-          "publication_year": "1980"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1CANOTC)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(1CANOTC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,337,503,1980)",
+        "free_txt": [
+          "#doi:10.1016/0375-9474(80)90156-6"
+        ],
+        "publication_year": "1980",
+        "pointer": "0",
+        "doi": "10.1016/0375-9474(80)90156-6"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1CANOTC)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1CANOTC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(7-N-14(G,X)0-NN-1,,DA/DE,,BRA/REL)",
-          "0": {
+      "0": {
+        "x4_code": "(7-N-14(G,X)0-NN-1,,DA/DE,,BRA/REL)",
+        "children": [
+          {
             "code": [
               "7-N-14",
               [
@@ -98,11 +94,74 @@
             "sf7": null,
             "sf8": "BRA/REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Relative number of neutrons"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Relative number of neutrons"
+      }
+    },
+    "010": {
+      "0": {
+        "x4_code": "(7-N-14(G,N)7-N-13,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "7-N-14",
+              [
+                "G,N"
+              ],
+              "7-N-13,PAR,SIG"
+            ],
+            "type": null,
+            "target": "7-N-14",
+            "process": "G,N",
+            "sf49": "7-N-13,PAR,SIG",
+            "sf4": "7-N-13",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "011": {
+      "0": {
+        "x4_code": "(7-N-14(G,N)7-N-13,PAR,DA,,LEG/RS)",
+        "children": [
+          {
+            "code": [
+              "7-N-14",
+              [
+                "G,N"
+              ],
+              "7-N-13,PAR,DA,,LEG/RS"
+            ],
+            "type": null,
+            "target": "7-N-14",
+            "process": "G,N",
+            "sf49": "7-N-13,PAR,DA,,LEG/RS",
+            "sf4": "7-N-13",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG/RS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-MAX"
@@ -686,32 +745,6 @@
       }
     },
     "010": {
-      "reaction": {
-        "0": {
-          "x4_code": "(7-N-14(G,N)7-N-13,PAR,SIG)",
-          "0": {
-            "code": [
-              "7-N-14",
-              [
-                "G,N"
-              ],
-              "7-N-13,PAR,SIG"
-            ],
-            "type": null,
-            "target": "7-N-14",
-            "process": "G,N",
-            "sf49": "7-N-13,PAR,SIG",
-            "sf4": "7-N-13",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL"
@@ -885,32 +918,6 @@
       }
     },
     "011": {
-      "reaction": {
-        "0": {
-          "x4_code": "(7-N-14(G,N)7-N-13,PAR,DA,,LEG/RS)",
-          "0": {
-            "code": [
-              "7-N-14",
-              [
-                "G,N"
-              ],
-              "7-N-13,PAR,DA,,LEG/RS"
-            ],
-            "type": null,
-            "target": "7-N-14",
-            "process": "G,N",
-            "sf49": "7-N-13,PAR,DA,,LEG/RS",
-            "sf4": "7-N-13",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG/RS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL"
@@ -1412,8 +1419,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -1423,38 +1430,30 @@
               " tubes."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical errors are presented."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1CANOTC)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " flight path = 10 m."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1470,8 +1469,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1481,10 +1480,8 @@
               " the c.m. frame."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1495,10 +1492,8 @@
               "  d) the neutron detection efficiency."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1512,18 +1507,14 @@
               " terms of a simple single particle nuclear model."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1534,8 +1525,8 @@
       }
     },
     "010": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1549,10 +1540,8 @@
               " section."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1561,10 +1550,8 @@
               " C-13(g,p0) reaction."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1575,10 +1562,8 @@
               " negligible."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1586,10 +1571,8 @@
               " bremsstrahlung spectra."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1614,18 +1597,14 @@
               " displaced upwards in energy of about 1 MeV."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(KINDT)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,F.Partovi,J,AP,27,79,1964)",
             "free_txt": []
@@ -1634,10 +1613,8 @@
             "x4_code": "(,J.Ahrens+,J,PL/B,52,49,1974)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1647,10 +1624,8 @@
               " by Ahrens et al."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,J.E.E.Baglin+,J,PR/C,10,24,1974)",
             "free_txt": [
@@ -1673,10 +1648,8 @@
               " photon absorption strengths calculation."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1693,8 +1666,8 @@
       }
     },
     "011": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1708,10 +1681,8 @@
               " section."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1720,10 +1691,8 @@
               " C-13(g,p0) reactions."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1734,10 +1703,8 @@
               " negligible."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1745,10 +1712,8 @@
               " bremsstrahlung spectra."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1767,18 +1732,14 @@
               " MeV."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(KINDT)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,J.E.E.Baglin+,J,PR/C,10,24,1974)",
             "free_txt": [
@@ -1786,10 +1747,8 @@
               " measurement of N-14(g,p0) cross section."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

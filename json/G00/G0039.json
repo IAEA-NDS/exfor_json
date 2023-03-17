@@ -93,37 +93,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,94,044304,2016)",
-          "free_txt": [],
-          "publication_year": "2016"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2GERZFK)",
-          "free_txt": [
-            " gammaELBE"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2GERZFK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,94,044304,2016)",
+        "free_txt": [],
+        "publication_year": "2016",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2GERZFK)",
+        "free_txt": [
+          " gammaELBE"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2GERZFK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(34-SE-80(G,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(34-SE-80(G,0),,EN)",
+        "children": [
+          {
             "code": [
               "34-SE-80",
               [
@@ -141,13 +136,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "((34-SE-80(G,EL)34-SE-80,,DA,,RES)//(34-SE-80(G,EL)34-SE-80,,DA,,RES))",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "((34-SE-80(G,EL)34-SE-80,,DA,,RES)//(34-SE-80(G,EL)34-SE-80,,DA,,RES))",
+        "children": [
+          {
             "code": [
               "34-SE-80",
               [
@@ -166,7 +163,7 @@
             "sf8": "RES",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "34-SE-80",
               [
@@ -184,13 +181,15 @@
             "sf7": null,
             "sf8": "RES",
             "sf9": null
-          },
-          "type": "//",
-          "free_text": "90 deg/127 deg intensity ratio"
-        },
-        "3": {
-          "x4_code": "(34-SE-80(G,EL),,ARE)",
-          "0": {
+          }
+        ],
+        "type": "//",
+        "free_text": "90 deg/127 deg intensity ratio"
+      },
+      "3": {
+        "x4_code": "(34-SE-80(G,EL),,ARE)",
+        "children": [
+          {
             "code": [
               "34-SE-80",
               [
@@ -208,13 +207,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "Measured at 127 deg"
-        },
-        "4": {
-          "x4_code": "(34-SE-80(G,0),,J)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": "Measured at 127 deg"
+      },
+      "4": {
+        "x4_code": "(34-SE-80(G,0),,J)",
+        "children": [
+          {
             "code": [
               "34-SE-80",
               [
@@ -232,11 +233,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(34-SE-80(G,SCT)34-SE-80,,SIG)",
+        "children": [
+          {
+            "code": [
+              "34-SE-80",
+              [
+                "G,SCT"
+              ],
+              "34-SE-80,,SIG"
+            ],
+            "type": null,
+            "target": "34-SE-80",
+            "process": "G,SCT",
+            "sf49": "34-SE-80,,SIG",
+            "sf4": "34-SE-80",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-NM    2",
@@ -1761,32 +1797,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(34-SE-80(G,SCT)34-SE-80,,SIG)",
-          "0": {
-            "code": [
-              "34-SE-80",
-              [
-                "G,SCT"
-              ],
-              "34-SE-80,,SIG"
-            ],
-            "type": null,
-            "target": "34-SE-80",
-            "process": "G,SCT",
-            "sf49": "34-SE-80,,SIG",
-            "sf4": "34-SE-80",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1872,8 +1882,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -1897,30 +1907,24 @@
               " scintillation detectors (3 cm thick)."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on the source of uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2GERZFK)",
             "free_txt": [
               " gammaELBE"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": [
@@ -1930,10 +1934,8 @@
               " the bremsstrahlung spectrum."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(34-SE-80,ENR=0.999)",
             "free_txt": [
@@ -1947,10 +1949,8 @@
               " flux determination"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1961,8 +1961,8 @@
       }
     },
     "002": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1975,10 +1975,8 @@
               " Spin assignment uncertain"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,B.Singh+,J,NDS,105,223,2005)",
             "free_txt": [
@@ -1986,10 +1984,8 @@
               " given"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2000,8 +1996,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2010,10 +2006,8 @@
               " by the ground state transition branching ratio."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2024,10 +2018,8 @@
               " code gammaDEX."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

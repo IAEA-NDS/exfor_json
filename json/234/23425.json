@@ -29,38 +29,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JAC,15,15,1982)",
-          "free_txt": [],
-          "publication_year": "1982"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2FR ILL)",
-          "free_txt": [
-            " High flux reactor in Grenoble",
-            " Mechanical velocity selector"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2FR ILL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JAC,15,15,1982)",
+        "free_txt": [],
+        "publication_year": "1982",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2FR ILL)",
+        "free_txt": [
+          " High flux reactor in Grenoble",
+          " Mechanical velocity selector"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2FR ILL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-WTR(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-WTR(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "1-H-WTR",
               [
@@ -78,11 +73,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Wave length dependence of the total cross sectionat temperature 281.8 K Neutron wavelength digitized."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Wave length dependence of the total cross sectionat temperature 281.8 K Neutron wavelength digitized."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-D2O(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-D2O",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "1-H-D2O",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Wave length dependence of the total cross sectionat temperature 281.8 K Neutron wavelength digitized."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-WTR(N,TOT),,SIG,,TMP)",
+        "children": [
+          {
+            "code": [
+              "1-H-WTR",
+              [
+                "N,TOT"
+              ],
+              ",,SIG,,TMP"
+            ],
+            "type": null,
+            "target": "1-H-WTR",
+            "process": "N,TOT",
+            "sf49": ",,SIG,,TMP",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "TMP",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Temperature dependence of the total cross sectionfor 1.0 nm wavelength neutrons"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-DIG"
@@ -136,32 +194,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-D2O(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "1-H-D2O",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "1-H-D2O",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Wave length dependence of the total cross sectionat temperature 281.8 K Neutron wavelength digitized."
-        }
-      },
       "common": {
         "heads": [
           "ERR-DIG"
@@ -221,32 +253,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-WTR(N,TOT),,SIG,,TMP)",
-          "0": {
-            "code": [
-              "1-H-WTR",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,TMP"
-            ],
-            "type": null,
-            "target": "1-H-WTR",
-            "process": "N,TOT",
-            "sf49": ",,SIG,,TMP",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "TMP",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Temperature dependence of the total cross sectionfor 1.0 nm wavelength neutrons"
-        }
-      },
       "common": {
         "heads": [
           "WVE-LN",
@@ -307,8 +313,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -318,10 +324,8 @@
               "15,15,1982"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -331,10 +335,8 @@
               "Other - checked with Cd in sample position -negligible"
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -353,10 +355,8 @@
               "comment of N.Otsuka (NDS, IAEA) ."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(BF3)",
             "free_txt": [
@@ -369,10 +369,8 @@
               "Solid angle 4.7E-3 times of the full solid angle 4PI."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -380,10 +378,8 @@
               "article."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2FR ILL)",
             "free_txt": [
@@ -391,10 +387,8 @@
               " Mechanical velocity selector"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -406,10 +400,8 @@
               "1/1100 +-4% ."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TRN)",
             "free_txt": [
@@ -417,10 +409,8 @@
               " 20 min for scattering experiment."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -437,8 +427,8 @@
       }
     },
     "002": {
-      "rel-ref": {
-        "0": [
+      "0": {
+        "rel-ref": [
           {
             "x4_code": "(A,,,R,BNL-325,1976)",
             "free_txt": [
@@ -453,10 +443,8 @@
               "       Neutron wavelength digitized."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -467,8 +455,8 @@
       }
     },
     "003": {
-      "rel-ref": {
-        "0": [
+      "0": {
+        "rel-ref": [
           {
             "x4_code": "(A,,D.I.Gaber+,R,BNL-325,1976)",
             "free_txt": [
@@ -482,10 +470,8 @@
               " Values at 291 K temperature"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -496,8 +482,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

@@ -55,37 +55,32 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JRN,257,195,2003)",
-          "free_txt": [],
-          "publication_year": "2003"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2BLGVUB)",
-          "free_txt": [
-            " CGR 560 cyclotron of VUB"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2BLGVUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JRN,257,195,2003)",
+        "free_txt": [],
+        "publication_year": "2003",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2BLGVUB)",
+        "free_txt": [
+          " CGR 560 cyclotron of VUB"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2BLGVUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(42-MO-100(P,X)42-MO-99,,SIG)",
-          "0": {
+      "1": {
+        "x4_code": "(42-MO-100(P,X)42-MO-99,,SIG)",
+        "children": [
+          {
             "code": [
               "42-MO-100",
               [
@@ -103,13 +98,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(42-MO-100(P,2N)43-TC-99-M,,SIG)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(42-MO-100(P,2N)43-TC-99-M,,SIG)",
+        "children": [
+          {
             "code": [
               "42-MO-100",
               [
@@ -127,11 +124,18 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-5",
@@ -330,28 +334,24 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
               " High purity Ge gamma detector"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2BLGVUB)",
             "free_txt": [
               " CGR 560 cyclotron of VUB"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,EXTB,STTA,GSPEC)",
             "free_txt": [
@@ -366,20 +366,16 @@
               "London, 1986."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,F.TARKANYI+,R,IAEA-1211,2001)",
             "free_txt": [
               " chapter 4"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(29-CU-0(P,X)30-ZN-62,,SIG)",
             "free_txt": []
@@ -401,10 +397,8 @@
               "along the stack."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -420,16 +414,36 @@
       }
     },
     "002": {
-      "decay-data": {
-        "2": [
+      "1": {
+        "decay-data": [
           {
-            "x4_code": "(43-TC-99-M,6.01HR,DG,140.511,0.89)",
+            "x4_code": "(42-MO-99,65.94HR,DG,140.511,0.8943,                DG,181.069,0.0599,                DG,739.5,0.1213)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(SPSDD,D4322005)",
             "free_txt": []
           }
         ]
       },
-      "err-analys": {
-        "0": [
+      "2": {
+        "decay-data": [
+          {
+            "x4_code": "(43-TC-99-M,6.01HR,DG,140.511,0.89)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(SPSDD,D4322004)",
+            "free_txt": []
+          }
+        ]
+      },
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -483,13 +497,20 @@
               "        Nuclear data                        3%"
             ]
           }
-        ]
-      },
-      "status": {
-        "2": [
+        ],
+        "status": [
           {
-            "x4_code": "(SPSDD,D4322004)",
-            "free_txt": []
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Numerical data were taken from Table 4. of the",
+              "publication."
+            ]
+          },
+          {
+            "x4_code": "(APRVD)",
+            "free_txt": [
+              " Approved by S. Takacs."
+            ]
           }
         ]
       }

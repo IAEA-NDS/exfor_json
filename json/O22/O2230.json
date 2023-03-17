@@ -95,34 +95,91 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,85,055809,2012)",
-          "free_txt": [],
-          "publication_year": "2012"
-        },
-        {
-          "x4_code": "(J,JP/CS,337,012045,2012)",
-          "free_txt": [
-            " - Preliminary results on the",
-            "neutron spectrum of the 7Li(p,n)7Be reaction"
-          ],
-          "publication_year": "2012"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,PR/C,85,055809,2012)",
+        "free_txt": [],
+        "publication_year": "2012",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JP/CS,337,012045,2012)",
+        "free_txt": [
+          " - Preliminary results on the",
+          "neutron spectrum of the 7Li(p,n)7Be reaction"
+        ],
+        "publication_year": "2012",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2GERPTB)",
+        "free_txt": [
+          " 3.75 MV Van de Graaff accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2GERPTB)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(3-LI-7(P,N)4-BE-7,,MLT/DE,,TT/NPD)",
+        "children": [
+          {
+            "code": [
+              "3-LI-7",
+              [
+                "P,N"
+              ],
+              "4-BE-7,,MLT/DE,,TT/NPD"
+            ],
+            "type": null,
+            "target": "3-LI-7",
+            "process": "P,N",
+            "sf49": "4-BE-7,,MLT/DE,,TT/NPD",
+            "sf4": "4-BE-7",
+            "sf5": null,
+            "sf6": "MLT/DE",
+            "sf7": null,
+            "sf8": "TT/NPD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Summation of all values multiplied by the energy bin width is normalized to 1."
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2GERPTB)",
-          "free_txt": [
-            " 3.75 MV Van de Graaff accelerator"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2GERPTB)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(3-LI-7(P,N)4-BE-7,,MLT/IPA/DE,,TT/NPD)",
+        "children": [
+          {
+            "code": [
+              "3-LI-7",
+              [
+                "P,N"
+              ],
+              "4-BE-7,,MLT/IPA/DE,,TT/NPD"
+            ],
+            "type": null,
+            "target": "3-LI-7",
+            "process": "P,N",
+            "sf49": "4-BE-7,,MLT/IPA/DE,,TT/NPD",
+            "sf4": "4-BE-7",
+            "sf5": null,
+            "sf6": "MLT/IPA/DE",
+            "sf7": null,
+            "sf8": "TT/NPD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Angular differential spectra scaled by the solid angle of the individual angular positions.Summation of all values multiplied by the energy bin width is normalized to 1."
+      }
     }
   },
   "data_tables": {
@@ -152,32 +209,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-7(P,N)4-BE-7,,MLT/DE,,TT/NPD)",
-          "0": {
-            "code": [
-              "3-LI-7",
-              [
-                "P,N"
-              ],
-              "4-BE-7,,MLT/DE,,TT/NPD"
-            ],
-            "type": null,
-            "target": "3-LI-7",
-            "process": "P,N",
-            "sf49": "4-BE-7,,MLT/DE,,TT/NPD",
-            "sf4": "4-BE-7",
-            "sf5": null,
-            "sf6": "MLT/DE",
-            "sf7": null,
-            "sf8": "TT/NPD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Summation of all values multiplied by the energy bin width is normalized to 1."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -701,32 +732,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-7(P,N)4-BE-7,,MLT/IPA/DE,,TT/NPD)",
-          "0": {
-            "code": [
-              "3-LI-7",
-              [
-                "P,N"
-              ],
-              "4-BE-7,,MLT/IPA/DE,,TT/NPD"
-            ],
-            "type": null,
-            "target": "3-LI-7",
-            "process": "P,N",
-            "sf49": "4-BE-7,,MLT/IPA/DE,,TT/NPD",
-            "sf4": "4-BE-7",
-            "sf5": null,
-            "sf6": "MLT/IPA/DE",
-            "sf7": null,
-            "sf8": "TT/NPD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Angular differential spectra scaled by the solid angle of the individual angular positions.Summation of all values multiplied by the energy bin width is normalized to 1."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -11606,8 +11611,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
@@ -11616,10 +11621,8 @@
               " 719 mm or 369 mm from the target."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -11636,30 +11639,24 @@
               "    each detection angle"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2GERPTB)",
             "free_txt": [
               " 3.75 MV Van de Graaff accelerator"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "  For neutron spectrum determination"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -11672,10 +11669,8 @@
               " cross section."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -11687,8 +11682,8 @@
     },
     "002": {},
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [

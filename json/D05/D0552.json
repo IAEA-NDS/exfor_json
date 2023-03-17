@@ -60,38 +60,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,78,035805,2008)",
-          "free_txt": [],
-          "publication_year": "2008"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,3CPRAEP)",
-          "free_txt": [
-            " Beijing Tandem Accelerator National",
-            "Laboratory, of the China Institute of Atomic Energy."
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(3CPRAEP)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,78,035805,2008)",
+        "free_txt": [],
+        "publication_year": "2008",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,3CPRAEP)",
+        "free_txt": [
+          " Beijing Tandem Accelerator National",
+          "Laboratory, of the China Institute of Atomic Energy."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(3CPRAEP)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(P,A)3-LI-6,,SIG,,SFC)",
-          "0": {
+      "0": {
+        "x4_code": "(4-BE-9(P,A)3-LI-6,,SIG,,SFC)",
+        "children": [
+          {
             "code": [
               "4-BE-9",
               [
@@ -109,11 +104,74 @@
             "sf7": null,
             "sf8": "SFC",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(4-BE-9(P,A)3-LI-6,,SIG)",
+        "children": [
+          {
+            "code": [
+              "4-BE-9",
+              [
+                "P,A"
+              ],
+              "3-LI-6,,SIG"
+            ],
+            "type": null,
+            "target": "4-BE-9",
+            "process": "P,A",
+            "sf49": "3-LI-6,,SIG",
+            "sf4": "3-LI-6",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(4-BE-9(P,A)3-LI-6,,DA,,REL)",
+        "children": [
+          {
+            "code": [
+              "4-BE-9",
+              [
+                "P,A"
+              ],
+              "3-LI-6,,DA,,REL"
+            ],
+            "type": null,
+            "target": "4-BE-9",
+            "process": "P,A",
+            "sf49": "3-LI-6,,DA,,REL",
+            "sf4": "3-LI-6",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -173,32 +231,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(P,A)3-LI-6,,SIG)",
-          "0": {
-            "code": [
-              "4-BE-9",
-              [
-                "P,A"
-              ],
-              "3-LI-6,,SIG"
-            ],
-            "type": null,
-            "target": "4-BE-9",
-            "process": "P,A",
-            "sf49": "3-LI-6,,SIG",
-            "sf4": "3-LI-6",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -259,32 +291,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(P,A)3-LI-6,,DA,,REL)",
-          "0": {
-            "code": [
-              "4-BE-9",
-              [
-                "P,A"
-              ],
-              "3-LI-6,,DA,,REL"
-            ],
-            "type": null,
-            "target": "4-BE-9",
-            "process": "P,A",
-            "sf49": "3-LI-6,,DA,,REL",
-            "sf4": "3-LI-6",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "COS-ERR-D",
@@ -459,8 +465,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(TROJA)",
             "free_txt": [
@@ -471,10 +477,8 @@
               "9Be beam at 22.35 MeV."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PS)",
             "free_txt": [
@@ -486,10 +490,8 @@
               "direction."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,3CPRAEP)",
             "free_txt": [
@@ -497,18 +499,14 @@
               "Laboratory, of the China Institute of Atomic Energy."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE,COINC)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -522,8 +520,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -534,8 +532,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
@@ -548,10 +546,8 @@
               "    Digitizing error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -562,8 +558,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(COS-ERR-D)",
             "free_txt": [
@@ -582,10 +578,8 @@
               " Nothing said about uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

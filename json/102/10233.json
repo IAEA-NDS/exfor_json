@@ -56,34 +56,31 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,18,126,1964)",
-          "free_txt": [
-            " Author: Smith"
-          ],
-          "publication_year": "1964"
-        },
-        {
-          "x4_code": "(J,PRL,16,525,1966)",
-          "free_txt": [
-            " Authors: Smith, Whalen"
-          ],
-          "publication_year": "1966"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,18,126,1964)",
+        "free_txt": [
+          " Author: Smith"
+        ],
+        "publication_year": "1964",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PRL,16,525,1966)",
+        "free_txt": [
+          " Authors: Smith, Whalen"
+        ],
+        "publication_year": "1966",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,SCT)92-U-235,PAR,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,SCT)92-U-235,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -101,11 +98,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,SCT)92-U-235,PAR,DA,,LEG/RS)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,SCT"
+              ],
+              "92-U-235,PAR,DA,,LEG/RS"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,SCT",
+            "sf49": "92-U-235,PAR,DA,,LEG/RS",
+            "sf4": "92-U-235",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG/RS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -321,32 +353,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,SCT)92-U-235,PAR,DA,,LEG/RS)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,SCT"
-              ],
-              "92-U-235,PAR,DA,,LEG/RS"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,SCT",
-            "sf49": "92-U-235,PAR,DA,,LEG/RS",
-            "sf4": "92-U-235",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG/RS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1794,8 +1800,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1803,28 +1809,22 @@
               " presence of other isotopes of uranium."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time-of-flight."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(6-C-0(N,EL)6-C-0,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1836,8 +1836,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1847,10 +1847,8 @@
               "monitor."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1863,10 +1861,8 @@
               " For fitting coefficient set with FLAG 2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1888,8 +1884,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1899,10 +1895,8 @@
               "procedure."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1915,10 +1909,8 @@
               " For elastic point with FLAG 2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

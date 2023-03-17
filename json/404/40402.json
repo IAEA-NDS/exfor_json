@@ -1,31 +1,37 @@
 {
   "entry": "40402",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-01-18b",
+  "number_of_revisions": "6",
   "histories": [
     {
-      "x4_code": "(761010C)",
+      "x4_code": "(19761010C)",
       "free_txt": [
-        "  COMPILED AT THE CENTRE"
+        "  Compiled at the centre"
       ]
     },
     {
-      "x4_code": "(821109A)",
+      "x4_code": "(19821109A)",
       "free_txt": [
-        "  DATA DEFINED AS PRELIMINARY"
+        "  Data defined as preliminary"
       ]
     },
     {
-      "x4_code": "(890407A)",
+      "x4_code": "(19890407A)",
       "free_txt": [
-        "  DATA SUPERCEEDED DUE TO THE APPEARANCE",
-        "          OF NEW MEASUREMENTS. SOME KEYWORDS AND CODES",
-        "          CORRECTED"
+        "  Data superseded due to the appearance",
+        "          of new measurements. Some keywords and codes",
+        "          corrected"
+      ]
+    },
+    {
+      "x4_code": "(20220722A)",
+      "free_txt": [
+        " Update for current rules and dictionaries."
       ]
     }
   ],
   "bib_record": {
-    "title": "RADIATIVE CAPTURE CROSS SECTION OF FAST NEUTRONS BY AU-197 NUCLEOUS",
+    "title": "Radiative capture cross section of fast neutrons by Au-197 nucleus",
     "authors": [
       {
         "name": "A.N.Davletshin"
@@ -37,52 +43,54 @@
         "name": "V.A.Tolstikov"
       },
       {
-        "name": "S.N.Bajkalov"
+        "name": "S.N.Baykalov"
       },
       {
         "name": "V.S.Korolev"
       },
       {
-        "name": "V.V.Chubinskij"
+        "name": "V.V.Chubinskiy"
       }
     ],
     "institutes": [
       {
-        "x4_code": "(4CCPFEI)",
-        "free_txt": []
+        "x4_code": "(4RUSFEI)",
+        "free_txt": [
+          " A.N.Davletshin, A.O.Tipunkov, V.A.Tolstikov"
+        ]
+      },
+      {
+        "x4_code": "(4RUSRUS)",
+        "free_txt": [
+          " \"Soyuznyy Institute Priborostroeniya\"",
+          "  S.N.Baykalov, V.S.Korolev, V.V.Chubinskiy"
+        ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,75KIEV,4,99,76)",
-          "free_txt": [
-            " DATA ARE GIVEN"
-          ],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG)",
-          "free_txt": [
-            " VAN DE GRAAFF ACCELERATOR"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((C,75KIEV,4,99,1976)=(R,INDC(CCP)-099,(4),99,1976))",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,4RUSFEI)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(4RUSFEI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
+        "children": [
+          {
             "code": [
               "79-AU-197",
               [
@@ -100,150 +108,199 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
+      "common": {
+        "heads": [
+          "ERR-1"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            2.2
+          ]
+        ]
       },
-      "common": null,
-      "data": null
+      "data": {
+        "heads": [
+          "EN",
+          "EN-RSL",
+          "DATA",
+          "ERR-T",
+          "FLAG",
+          "ERR-2"
+        ],
+        "units": [
+          "KEV",
+          "KEV",
+          "MB",
+          "PER-CENT",
+          "NO-DIM",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            590.0,
+            597.0
+          ],
+          [
+            23.0,
+            16.0
+          ],
+          [
+            121.2,
+            125.5
+          ],
+          [
+            3.4,
+            3.3
+          ],
+          [
+            2.0,
+            1.0
+          ],
+          [
+            1.2,
+            1.4
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
-              "ABSORPTION OF THERMAL NEUTRONS WAS TAKEN INTO ACCOUNT",
-              "FOR EFFECTIVITY MEASUREMENT OF GAMMA-SPECTROMETER"
+              "Absorption of thermal neutrons was taken into account",
+              "for efficiency measurement of gamma-spectrometer"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
-              " GERMANIUM LITHIUM SPECTROMETER"
+              " Gamma-spectrometer with Ge-Li detector of",
+              "33 cm3 volume - for induced activity measurement.",
+              "Efficiency was measured by 4PI beta-gamma coincidence",
+              "technique at BR10 reactor thermal column and at",
+              "BR-1 fast reactor critical assembly ."
             ]
           },
           {
             "x4_code": "(PROPC)",
             "free_txt": [
-              " PROPORTIONAL COUNTER"
+              " Hydrogen gas counter of two different types",
+              "for neutron flux measurement."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "facility": [
           {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " UNCERTAINTY OF FLUX DETERMINATION AND",
-              "           ACTIVITY MEASUREMENT WERE TAKEN INTO ACCOUNT"
-            ]
+            "x4_code": "(VDG,4RUSFEI)",
+            "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
-          {
-            "x4_code": "(VDG)",
-            "free_txt": [
-              " VAN DE GRAAFF ACCELERATOR"
-            ]
-          }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
-            "free_txt": [
-              " PROTON-TRITIUM REACTION"
-            ]
+            "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
-              " EN-RSL) RESOLUTION OF THE SPECTROMETER"
+              " EN-RSL - resolution of the spectrometer"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
-            "free_txt": [
-              "    ACTIVATION MEASUREMENT"
-            ]
+            "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
-            "free_txt": [
-              "  ELASTIC   CROSS SECTION"
-            ]
-          }
-        ]
-      },
-      "part-det": {
-        "0": [
-          {
-            "x4_code": "(G)",
-            "free_txt": [
-              " GAMMAS"
-            ]
-          }
-        ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": "(PRELM)",
-            "free_txt": [
-              "  DAVLETSHIN,  821010"
-            ]
+            "free_txt": []
           }
         ]
       }
     },
     "002": {
-      "flag": {
-        "0": [
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              "     Includes:"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Uncertainty of flux determination;"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Uncertainty of activity measurement."
+            ]
+          }
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
-              " PROPORTIONAL COUNTER OF TYPE I-1 WAS USED FOR",
-              "     NEUTRON FLUX DETERMINATION"
+              " Proportional counter of type I-1 was used for",
+              "     neutron flux determination"
             ]
           },
           {
             "x4_code": "(2.)",
             "free_txt": [
-              " PROPORTIONAL COUNTER OF TYPE K-1 WAS USED FOR",
-              "     NEUTRON FLUX DETERMINATION"
+              " Proportional counter of type K-1 was used for",
+              "     neutron flux determination"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table on page 102 of INDC(CCP)-099,(4),99,1976"
+            ]
+          },
           {
             "x4_code": "(SPSDD,40968003)",
-            "free_txt": []
+            "free_txt": [
+              " Re-analyzed data of this experiment",
+              "together with new measurement are in 40968.003."
+            ]
+          },
+          {
+            "x4_code": "(PRELM)",
+            "free_txt": [
+              "  Davletshin,  1982-10-10"
+            ]
           }
         ]
       }

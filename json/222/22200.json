@@ -53,38 +53,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,107,22,1991)",
-          "free_txt": [],
-          "publication_year": "1991"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2GERPTB)",
-          "free_txt": [
-            " The PTB energy-variable",
-            "                compact cyclotron."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2GERPTB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,107,22,1991)",
+        "free_txt": [],
+        "publication_year": "1991",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2GERPTB)",
+        "free_txt": [
+          " The PTB energy-variable",
+          "                compact cyclotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2GERPTB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,X)2-HE-4,UNW,SIG,,MSC)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(N,X)2-HE-4,UNW,SIG,,MSC)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -102,11 +97,46 @@
             "sf7": null,
             "sf8": "MSC",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " - unweightedalpha production cross sections excluding12C(alpha,alpha2)12C contribution"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " - unweightedalpha production cross sections excluding12C(alpha,alpha2)12C contribution"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-12(N,A)4-BE-9,PAR,DA,,LEG)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "N,A"
+              ],
+              "4-BE-9,PAR,DA,,LEG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "N,A",
+            "sf49": "4-BE-9,PAR,DA,,LEG",
+            "sf4": "4-BE-9",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL",
@@ -388,32 +418,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,A)4-BE-9,PAR,DA,,LEG)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "N,A"
-              ],
-              "4-BE-9,PAR,DA,,LEG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "N,A",
-            "sf49": "4-BE-9,PAR,DA,,LEG",
-            "sf4": "4-BE-9",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL"
@@ -643,8 +647,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -653,10 +657,8 @@
               " for these calculations were taken from ENDF/B-V."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -672,10 +674,8 @@
               " were used."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2GERPTB)",
             "free_txt": [
@@ -683,10 +683,8 @@
               "                compact cyclotron."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": [
@@ -694,10 +692,8 @@
               " on a deuterium gas target."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -705,10 +701,8 @@
               " separated by TOF techniques."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
@@ -719,20 +713,16 @@
               "   N-gamma discrimination was applied."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": [
               " Proton recoil spectrum."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -744,8 +734,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -789,10 +779,8 @@
               "     Statistical uncertainties             0.9"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -805,10 +793,8 @@
               " 1 by 4 inch detector."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -819,8 +805,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-1,5.,10.)",
             "free_txt": [
@@ -828,10 +814,8 @@
               "               coefficients"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

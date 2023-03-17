@@ -79,57 +79,54 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AE,60,141,1986)",
-          "free_txt": [
-            " Issue 2."
-          ],
-          "publication_year": "1986"
-        },
-        {
-          "x4_code": "(J,SJA,60,177,1986)",
-          "free_txt": [
-            " Engl.transl.of J,AE,60,141,1986"
-          ],
-          "publication_year": "1986"
-        }
-      ]
-    },
-    "facilities": {
-      "1": [
-        {
-          "x4_code": "(REAC,4RUSLIN)",
-          "free_txt": [
-            "  Source of neutrons for cross-section",
-            "                measurements"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4RUSLIN)"
-        },
-        {
-          "x4_code": "(CYCLO,4KASKAZ)",
-          "free_txt": [
-            "  Cyclotron U-150, proton energy 30 MeV,",
-            "       average current 8. microAmp, used for Np-236",
-            "       preparation from reaction U-238(p,3n)Np-236-m2"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(4KASKAZ)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AE,60,141,1986)",
+        "free_txt": [
+          " Issue 2."
+        ],
+        "publication_year": "1986",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SJA,60,177,1986)",
+        "free_txt": [
+          " Engl.transl.of J,AE,60,141,1986"
+        ],
+        "publication_year": "1986",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4RUSLIN)",
+        "free_txt": [
+          "  Source of neutrons for cross-section",
+          "                measurements"
+        ],
+        "pointer": "1",
+        "facility_type": "(REAC)",
+        "institute": "(4RUSLIN)"
+      },
+      {
+        "x4_code": "(CYCLO,4KASKAZ)",
+        "free_txt": [
+          "  Cyclotron U-150, proton energy 30 MeV,",
+          "       average current 8. microAmp, used for Np-236",
+          "       preparation from reaction U-238(p,3n)Np-236-m2"
+        ],
+        "pointer": "1",
+        "facility_type": "(CYCLO)",
+        "institute": "(4KASKAZ)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(93-NP-236(N,F),,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(93-NP-236(N,F),,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "93-NP-236",
               [
@@ -147,11 +144,46 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(93-NP-236-M(N,F),,RI)",
+        "children": [
+          {
+            "code": [
+              "93-NP-236-M",
+              [
+                "N,F"
+              ],
+              ",,RI"
+            ],
+            "type": null,
+            "target": "93-NP-236-M",
+            "process": "N,F",
+            "sf49": ",,RI",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-MEAN",
@@ -220,32 +252,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(93-NP-236-M(N,F),,RI)",
-          "0": {
-            "code": [
-              "93-NP-236-M",
-              [
-                "N,F"
-              ],
-              ",,RI"
-            ],
-            "type": null,
-            "target": "93-NP-236-M",
-            "process": "N,F",
-            "sf49": ",,RI",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -296,8 +302,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -308,10 +314,8 @@
               " neutrons - 0.4 % ."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SOLST)",
             "free_txt": [
@@ -329,52 +333,16 @@
               " about 160 keV."
             ]
           }
-        ]
-      },
-      "facility": {
-        "1": [
-          {
-            "x4_code": "(REAC,4RUSLIN)",
-            "free_txt": [
-              "  Source of neutrons for cross-section",
-              "                measurements"
-            ]
-          },
-          {
-            "x4_code": "(CYCLO,4KASKAZ)",
-            "free_txt": [
-              "  Cyclotron U-150, proton energy 30 MeV,",
-              "       average current 8. microAmp, used for Np-236",
-              "       preparation from reaction U-238(p,3n)Np-236-m2"
-            ]
-          }
-        ]
-      },
-      "inc-spect": {
-        "1": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "  Horizontal thermal neutron beam with Maxwell",
-              "  spectrum having temperature 330 deg. Cadmium ratio",
-              "  on U-235(N,F) is 42.7 +- 2.4 for Cd thickness 1 mm.",
-              "  Neutron flux 2.E+8 n/cm2/sec ."
-            ]
-          }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CADMB)",
             "free_txt": [
               " Measurement with and without Cd shield."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -390,11 +358,41 @@
             ]
           }
         ]
+      },
+      "1": {
+        "facility": [
+          {
+            "x4_code": "(REAC,4RUSLIN)",
+            "free_txt": [
+              "  Source of neutrons for cross-section",
+              "                measurements"
+            ]
+          },
+          {
+            "x4_code": "(CYCLO,4KASKAZ)",
+            "free_txt": [
+              "  Cyclotron U-150, proton energy 30 MeV,",
+              "       average current 8. microAmp, used for Np-236",
+              "       preparation from reaction U-238(p,3n)Np-236-m2"
+            ]
+          }
+        ],
+        "inc-spect": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "  Horizontal thermal neutron beam with Maxwell",
+              "  spectrum having temperature 330 deg. Cadmium ratio",
+              "  on U-235(N,F) is 42.7 +- 2.4 for Cd thickness 1 mm.",
+              "  Neutron flux 2.E+8 n/cm2/sec ."
+            ]
+          }
+        ]
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -403,10 +401,8 @@
               "normalization."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(93-NP-236-G,1.55E+05YR,DG,158.3,0.0367,                        DG,160.3,0.3138)",
             "free_txt": [
@@ -421,10 +417,8 @@
               " Used to measure mass of Np-236-G"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -450,28 +444,22 @@
               " Total error - root mean square"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,M.Divadeenam+,J,ANE,11,(8),375,1984)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,SIG)",
             "free_txt": [
               " CS at thermal point."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,M.H.Studier+,J,PR,97,88,1955)",
             "free_txt": [
@@ -502,10 +490,8 @@
               " 2540+-560 b at reactor spectrum"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -516,8 +502,8 @@
       }
     },
     "003": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM,93-NP-237(N,F),,SIG)",
             "free_txt": [
@@ -525,10 +511,8 @@
               "                            above-cadmium neutrons"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -536,20 +520,16 @@
               " neutrons and correction on U-235 fission were made"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Total error"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,RI)",
             "free_txt": [
@@ -558,10 +538,8 @@
               "of the Nuclei, in Russian, Atomizdat, Moscow, 1976."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

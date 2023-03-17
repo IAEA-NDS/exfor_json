@@ -21,39 +21,35 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,155,443,1970)",
-          "free_txt": [
-            "#doi:10.1016/0375-9474(70)90905-X"
-          ],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2UK BIR)",
-          "free_txt": [
-            " Nuffield fixed frequency cyclotron."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2UK BIR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,155,443,1970)",
+        "free_txt": [
+          "#doi:10.1016/0375-9474(70)90905-X"
+        ],
+        "publication_year": "1970",
+        "pointer": "0",
+        "doi": "10.1016/0375-9474(70)90905-X"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2UK BIR)",
+        "free_txt": [
+          " Nuffield fixed frequency cyclotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2UK BIR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(HE3,N)8-O-14,PAR,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(HE3,N)8-O-14,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -71,11 +67,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-12(HE3,X)7-N-13,PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "HE3,X"
+              ],
+              "7-N-13,PAR,SIG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "HE3,X",
+            "sf49": "7-N-13,PAR,SIG",
+            "sf4": "7-N-13",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-12(HE3,P)7-N-14,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "HE3,P"
+              ],
+              "7-N-14,PAR,DA"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "HE3,P",
+            "sf49": "7-N-14,PAR,DA",
+            "sf4": "7-N-14",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "E-LVL",
@@ -261,32 +320,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(HE3,X)7-N-13,PAR,SIG)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "HE3,X"
-              ],
-              "7-N-13,PAR,SIG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "HE3,X",
-            "sf49": "7-N-13,PAR,SIG",
-            "sf4": "7-N-13",
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL",
@@ -424,32 +457,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(HE3,P)7-N-14,PAR,DA)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "HE3,P"
-              ],
-              "7-N-14,PAR,DA"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "HE3,P",
-            "sf49": "7-N-14,PAR,DA",
-            "sf4": "7-N-14",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG",
@@ -587,8 +594,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
@@ -601,20 +608,16 @@
               "    Data digitizing error"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2UK BIR)",
             "free_txt": [
               " Nuffield fixed frequency cyclotron."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(BCINT)",
             "free_txt": []
@@ -627,16 +630,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(8-O-14,70.30SEC,DG,2310.,0.994)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(CSICR)",
             "free_txt": [
@@ -644,10 +645,8 @@
               "a 5 cm* 5 cm sodium iodide crystal."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -660,10 +659,8 @@
               "   Error from the graphic bars"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
@@ -672,10 +669,8 @@
             "x4_code": "(EDEG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -685,10 +680,8 @@
               "platform."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -699,16 +692,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(7-N-13,,B+,1190.)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -717,10 +708,8 @@
               "degr. to the beam direction."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -733,28 +722,22 @@
               "   Error from the graphic bars"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "A self-supporting carbon foil of 2.9 mg/cm2 thickness."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -765,8 +748,8 @@
       }
     },
     "004": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SIBAR)",
             "free_txt": [
@@ -778,28 +761,22 @@
               "0.109 msr at the target a centre."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDEG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "A self-supporting carbon foil of 2.8 mg/cm2 thickness."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

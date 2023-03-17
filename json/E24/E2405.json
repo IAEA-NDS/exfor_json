@@ -125,37 +125,85 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,87,015803,2013)",
-          "free_txt": [],
-          "publication_year": "2013"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ISOCY,2JPNIPC)",
-          "free_txt": [
-            " 10B primary beam with an energy of",
-            "                82MeV by AVF cyclotron"
-          ],
-          "facility_type": "(ISOCY)",
-          "institute": "(2JPNIPC)"
-        },
-        {
-          "x4_code": "(PRJFS,2JPNTOK)",
-          "free_txt": [
-            " The secondary 12N ions were selected",
-            "                by the CRIB separator at Center for",
-            "                Nuclear Study (CNS)"
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(2JPNTOK)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,PR/C,87,015803,2013)",
+        "free_txt": [],
+        "publication_year": "2013",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ISOCY,2JPNIPC)",
+        "free_txt": [
+          " 10B primary beam with an energy of",
+          "                82MeV by AVF cyclotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(ISOCY)",
+        "institute": "(2JPNIPC)"
+      },
+      {
+        "x4_code": "(PRJFS,2JPNTOK)",
+        "free_txt": [
+          " The secondary 12N ions were selected",
+          "                by the CRIB separator at Center for",
+          "                Nuclear Study (CNS)"
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2JPNTOK)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "((1-H-2(7-N-12,N)8-O-13,PAR,DA,RSD)=(7-N-12(D,N)8-O-13,PAR,DA))",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "7-N-12,N"
+              ],
+              "8-O-13,PAR,DA,RSD"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "7-N-12,N",
+            "sf49": "8-O-13,PAR,DA,RSD",
+            "sf4": "8-O-13",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "RSD",
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "7-N-12",
+              [
+                "D,N"
+              ],
+              "8-O-13,PAR,DA"
+            ],
+            "type": null,
+            "target": "7-N-12",
+            "process": "D,N",
+            "sf49": "8-O-13,PAR,DA",
+            "sf4": "8-O-13",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -185,51 +233,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-2(7-N-12,N)8-O-13,PAR,DA,RSD)=(7-N-12(D,N)8-O-13,PAR,DA))",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "7-N-12,N"
-              ],
-              "8-O-13,PAR,DA,RSD"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "7-N-12,N",
-            "sf49": "8-O-13,PAR,DA,RSD",
-            "sf4": "8-O-13",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "RSD",
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "7-N-12",
-              [
-                "D,N"
-              ],
-              "8-O-13,PAR,DA"
-            ],
-            "type": null,
-            "target": "7-N-12",
-            "process": "D,N",
-            "sf49": "8-O-13,PAR,DA",
-            "sf4": "8-O-13",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -270,8 +273,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -295,18 +298,14 @@
               " to determine emission angles of products"
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E-LVL,8-O-13)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -319,10 +318,8 @@
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ISOCY,2JPNIPC)",
             "free_txt": [
@@ -338,36 +335,28 @@
               "                Nuclear Study (CNS)"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Beam intensity is 500 PPS."
             ]
           }
-        ]
-      },
-      "level-prop": {
-        "0": [
+        ],
+        "level-prop": [
           {
             "x4_code": "(8-O-13,E-LVL=0.,SPIN=1.5,PARITY=-1.)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(8-O-13)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -376,10 +365,8 @@
               "- Target-thickness is 1.5 mg/cm**2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -391,8 +378,8 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": null,
             "free_txt": [

@@ -46,44 +46,40 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(T,DUPONT,1998)",
-          "free_txt": [
-            " In French ."
-          ],
-          "publication_year": "1998"
-        },
-        {
-          "x4_code": "(C,97TRIEST,,529,1997)",
-          "free_txt": [],
-          "publication_year": "1997"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2ZZZGEL)",
-          "free_txt": [
-            " Geel electron linear accelerator."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(T,DUPONT,1998)",
+        "free_txt": [
+          " In French ."
+        ],
+        "publication_year": "1998",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,97TRIEST,,529,1997)",
+        "free_txt": [],
+        "publication_year": "1997",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2ZZZGEL)",
+        "free_txt": [
+          " Geel electron linear accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-56(N,INL)26-FE-56,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(26-FE-56(N,INL)26-FE-56,,SIG)",
+        "children": [
+          {
             "code": [
               "26-FE-56",
               [
@@ -101,11 +97,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Measured at 90 degrees"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Measured at 90 degrees"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(26-FE-56(N,INL)26-FE-56,,SIG)",
+        "children": [
+          {
+            "code": [
+              "26-FE-56",
+              [
+                "N,INL"
+              ],
+              "26-FE-56,,SIG"
+            ],
+            "type": null,
+            "target": "26-FE-56",
+            "process": "N,INL",
+            "sf49": "26-FE-56,,SIG",
+            "sf4": "26-FE-56",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Measured at 135 degrees"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -33951,32 +33982,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-56(N,INL)26-FE-56,,SIG)",
-          "0": {
-            "code": [
-              "26-FE-56",
-              [
-                "N,INL"
-              ],
-              "26-FE-56,,SIG"
-            ],
-            "type": null,
-            "target": "26-FE-56",
-            "process": "N,INL",
-            "sf49": "26-FE-56,,SIG",
-            "sf4": "26-FE-56",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Measured at 135 degrees"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -67824,8 +67829,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -67842,10 +67847,8 @@
               " Time-of-flight binning   1ns bins"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -67855,10 +67858,8 @@
               " (2.4 mm steel) and the air (~9m)."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(BAF2)",
             "free_txt": [
@@ -67879,20 +67880,16 @@
               " Detector                            Gaussian"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
               " Geel electron linear accelerator."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
@@ -67912,10 +67909,8 @@
               "  neutrons to enter the FP3 tube)."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -67931,18 +67926,14 @@
               "                                the gamma-flash"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(13515001,R.A.Schrack+,J,NSE,114,352,1993)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(5-B-10(N,A)3-LI-7,PAR,SIG)",
             "free_txt": [
@@ -67950,10 +67941,8 @@
               " To monitor neutron flux and normalize cross section."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -67976,10 +67965,8 @@
               "    Simultaneous measurement of 56Fe and B4C samples."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -67990,18 +67977,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -68024,18 +68009,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

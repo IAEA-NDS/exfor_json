@@ -46,45 +46,41 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,FEI-1216,1981)",
-          "free_txt": [],
-          "publication_year": "1981"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            " Fast pulse reactor IBR-30"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        },
-        {
-          "x4_code": "(LINAC,4ZZZDUB)",
-          "free_txt": [
-            " Linear electron accelerator"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,FEI-1216,1981)",
+        "free_txt": [],
+        "publication_year": "1981",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          " Fast pulse reactor IBR-30"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      },
+      {
+        "x4_code": "(LINAC,4ZZZDUB)",
+        "free_txt": [
+          " Linear electron accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,SCT)92-U-238,,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(N,SCT)92-U-238,,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -102,11 +98,46 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,SCT)92-U-238,,TRN)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,SCT"
+              ],
+              "92-U-238,,TRN"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,SCT",
+            "sf49": "92-U-238,,TRN",
+            "sf4": "92-U-238",
+            "sf5": null,
+            "sf6": "TRN",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -168,32 +199,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,SCT)92-U-238,,TRN)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,SCT"
-              ],
-              "92-U-238,,TRN"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,SCT",
-            "sf49": "92-U-238,,TRN",
-            "sf4": "92-U-238",
-            "sf5": null,
-            "sf6": "TRN",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -479,18 +484,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
               " 16 proportional counters SNM-18 filled by He-3"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
@@ -503,40 +506,32 @@
               " Linear electron accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               " Impulse fast reactor IBR-30"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Flight base ~1006.m"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               " Metallic disks from depleted U-238 diameter 195 mm"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(PRELM)",
             "free_txt": []
@@ -545,8 +540,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -554,28 +549,22 @@
               "article."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(82-PB-0(N,SCT)82-PB-0,,SIG,,AV)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               " Pb monitor sample of 0.00569 nucl/barn thickness."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -586,18 +575,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR,1.,6.)",
             "free_txt": [
               " Uncertainty mainly due to background."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -33,44 +33,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,70HELSINKI,2,815,1970)",
-          "free_txt": [
-            " Data Reported"
-          ],
-          "publication_year": "1970"
-        },
-        {
-          "x4_code": "(R,AERE-I/R-68/3739,1968)",
-          "free_txt": [
-            "   Experimental Details"
-          ],
-          "publication_year": "1968"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": [
-            " 45-MeV Electron Linac"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,70HELSINKI,2,815,1970)",
+        "free_txt": [
+          " Data Reported"
+        ],
+        "publication_year": "1970",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,AERE-I/R-68/3739,1968)",
+        "free_txt": [
+          "   Experimental Details"
+        ],
+        "publication_year": "1968",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC)",
+        "free_txt": [
+          " 45-MeV Electron Linac"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(23-V-51(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(23-V-51(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "23-V-51",
               [
@@ -88,13 +84,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(23-V-51(N,0),,J)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(23-V-51(N,0),,J)",
+        "children": [
+          {
             "code": [
               "23-V-51",
               [
@@ -112,13 +110,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "(23-V-51(N,EL),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "(23-V-51(N,EL),,WID)",
+        "children": [
+          {
             "code": [
               "23-V-51",
               [
@@ -136,13 +136,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "4": {
-          "x4_code": "(23-V-51(N,G),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "4": {
+        "x4_code": "(23-V-51(N,G),,WID)",
+        "children": [
+          {
             "code": [
               "23-V-51",
               [
@@ -160,13 +162,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "5": {
-          "x4_code": "(((23-V-51(N,EL),,WID)*(23-V-51(N,G),,WID))/(23-V-51(N,TOT),,WID))",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "5": {
+        "x4_code": "(((23-V-51(N,EL),,WID)*(23-V-51(N,G),,WID))/(23-V-51(N,TOT),,WID))",
+        "children": [
+          {
             "code": [
               "23-V-51",
               [
@@ -185,7 +189,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "23-V-51",
               [
@@ -204,40 +208,47 @@
             "sf8": null,
             "sf9": null
           },
-          "2": {
+          {
             "code": "23-V-51",
             "type": [
               "N,TOT"
             ],
             "target": "2",
             "process": "3",
-            "sf49": "-",
+            "sf49": "-,V,-,5,1",
             "sf4": "-",
-            "sf5": null,
-            "sf6": null,
-            "sf7": null,
-            "sf8": null,
+            "sf5": "V",
+            "sf6": "-",
+            "sf7": "5",
+            "sf8": "1",
             "sf9": null
           },
-          "3": {
+          {
             "code": ",,WID",
             "type": [
               "N,TOT"
             ],
             "target": ",",
             "process": ",",
-            "sf49": "W",
+            "sf49": "W,I,D",
             "sf4": "W",
-            "sf5": null,
-            "sf6": null,
+            "sf5": "I",
+            "sf6": "D",
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -301,26 +312,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(MOXR)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC)",
             "free_txt": [
               " 45-MeV Electron Linac"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -331,8 +338,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(AREA)",
             "free_txt": []

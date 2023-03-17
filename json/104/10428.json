@@ -60,47 +60,44 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,57,18,1975)",
-          "free_txt": [],
-          "publication_year": "1975"
-        },
-        {
-          "x4_code": "(C,75WASH,2,615,1975)",
-          "free_txt": [],
-          "publication_year": "1975"
-        },
-        {
-          "x4_code": "(R,UCRL-76676,1975)",
-          "free_txt": [],
-          "publication_year": "1975"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALRL)",
-          "free_txt": [
-            " 100-MeV electron linac"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALRL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,57,18,1975)",
+        "free_txt": [],
+        "publication_year": "1975",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,75WASH,2,615,1975)",
+        "free_txt": [],
+        "publication_year": "1975",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,UCRL-76676,1975)",
+        "free_txt": [],
+        "publication_year": "1975",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALRL)",
+        "free_txt": [
+          " 100-MeV electron linac"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALRL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(92-U-235(N,F),,SIG,,REL)",
-          "0": {
+      "1": {
+        "x4_code": "(92-U-235(N,F),,SIG,,REL)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -118,13 +115,15 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(92-U-235(N,F),,SIG)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(92-U-235(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -142,11 +141,18 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-NRM-MIN2",
@@ -572,8 +578,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -586,10 +592,8 @@
               " - flux perturbation."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
@@ -603,20 +607,16 @@
               " detection"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALRL)",
             "free_txt": [
               " 100-MeV electron linac"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
@@ -625,10 +625,8 @@
               " time-analyzer channel width of 16 ns."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -638,20 +636,16 @@
               " 2077+/-2 keV."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(O,10558002,J.B.Czirr+,J,NSE,58,371,1975)",
             "free_txt": [
               " Data from 0.75 to 4.1 MeV"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -665,10 +659,8 @@
               "  for each)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -679,8 +671,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -704,41 +696,59 @@
               " - pulse-height bias."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " Systematic uncertainty negligible (0.1%)"
             ]
           }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(,L.Stewart+,R,LA-4574,1971)",
+            "free_txt": [
+              " n-p cross section"
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table II of Nucl.Sci.Eng.57(1975)18 and",
+              " private communication, Czirr, December 1975."
+            ]
+          }
         ]
       },
-      "monit-ref": {
-        "2": [
+      "2": {
+        "monit-ref": [
           {
             "x4_code": "((MONIT)10333001,W.P.Poenitz,J,NSE,53,370,1974)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "2": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT)92-U-235(N,F),,SIG,,AV)",
             "free_txt": []
           }
         ]
       },
-      "status": {
-        "0": [
+      "1": {
+        "monitor": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": null,
             "free_txt": [
-              " Table II of Nucl.Sci.Eng.57(1975)18 and",
-              " private communication, Czirr, December 1975."
+              "Average between 3 and 4 MeV normalized to 1.000."
             ]
           }
         ]

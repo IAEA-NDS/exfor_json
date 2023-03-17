@@ -60,46 +60,43 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(P,KAPL-1770,65,195704)",
-          "free_txt": [],
-          "publication_year": "1957"
-        },
-        {
-          "x4_code": "(J,RSI,28,514,195707)",
-          "free_txt": [
-            " Curves for part of data.",
-            "#doi:10.1063/1.1715923"
-          ],
-          "publication_year": "1957"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(BETAT,1USAKAP)",
-          "free_txt": [
-            " A neutron velocity spectrometer with a",
-            "l00-MeV betatron as a source of neutron pulses."
-          ],
-          "facility_type": "(BETAT)",
-          "institute": "(1USAKAP)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(P,KAPL-1770,65,195704)",
+        "free_txt": [],
+        "publication_year": "1957",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,RSI,28,514,195707)",
+        "free_txt": [
+          " Curves for part of data.",
+          "#doi:10.1063/1.1715923"
+        ],
+        "publication_year": "1957",
+        "pointer": "0",
+        "doi": "10.1063/1.1715923"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(BETAT,1USAKAP)",
+        "free_txt": [
+          " A neutron velocity spectrometer with a",
+          "l00-MeV betatron as a source of neutron pulses."
+        ],
+        "pointer": "0",
+        "facility_type": "(BETAT)",
+        "institute": "(1USAKAP)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(25-MN-55(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(25-MN-55(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "25-MN-55",
               [
@@ -117,11 +114,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-233(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-233",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-233",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-235(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -327,32 +387,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-233(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "92-U-233",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-233",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -816,32 +850,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1251,8 +1259,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(BETAT,1USAKAP)",
             "free_txt": [
@@ -1260,20 +1268,16 @@
               "l00-MeV betatron as a source of neutron pulses."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " 19.55-m flight path."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1285,16 +1289,14 @@
       }
     },
     "002": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BF3)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1305,8 +1307,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1314,10 +1316,8 @@
               " Sci.Eng. 9,105(1961)."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1328,8 +1328,8 @@
       }
     },
     "004": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [

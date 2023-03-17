@@ -49,48 +49,44 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JIN,29,1189,1967)",
-          "free_txt": [
-            "  Main reference, data tables",
-            "                      are given"
-          ],
-          "publication_year": "1967"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2ZZZISP)",
-          "free_txt": [
-            "  Ispra-1 thermal reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2ZZZISP)"
-        },
-        {
-          "x4_code": "(REAC,2ITYSAL)",
-          "free_txt": [
-            "  Avogadro RS 1 reactor at Sorin,"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2ITYSAL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JIN,29,1189,1967)",
+        "free_txt": [
+          "  Main reference, data tables",
+          "                      are given"
+        ],
+        "publication_year": "1967",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2ZZZISP)",
+        "free_txt": [
+          "  Ispra-1 thermal reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2ZZZISP)"
+      },
+      {
+        "x4_code": "(REAC,2ITYSAL)",
+        "free_txt": [
+          "  Avogadro RS 1 reactor at Sorin,"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2ITYSAL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -108,11 +104,46 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(N,F)ELEM/MASS,CUM,FY,,SPA)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,CUM,FY,,SPA"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,CUM,FY,,SPA",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-DUMMY",
@@ -177,32 +208,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(N,F)ELEM/MASS,CUM,FY,,SPA)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,SPA"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,CUM,FY,,SPA",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-APRX",
@@ -293,8 +298,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -303,10 +308,8 @@
               " gamma ray spectroscopy"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(39-Y-93-G,10.HR,DG,267.,,B-)",
             "free_txt": []
@@ -357,10 +360,8 @@
             "x4_code": "(62-SM-153,47.HR,DG,103.,,B-)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -374,20 +375,16 @@
               "         NaI(Tl) counter"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "   Standard uncertainty"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2ZZZISP)",
             "free_txt": [
@@ -400,10 +397,8 @@
               "  Avogadro RS 1 reactor at Sorin,"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP)",
             "free_txt": [
@@ -423,18 +418,14 @@
               "              analysis"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G,B-)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,P.C.Stevenson+,R,NAS-NRC-3020,1961)",
             "free_txt": [
@@ -443,10 +434,8 @@
               "  Rare Earths."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -459,36 +448,30 @@
       }
     },
     "002": {
-      "inc-source": {
-        "0": [
+      "0": {
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               " Graphite reflector of the Ispra-1 reactor"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               ".Thermal neutrons, flux 2.E+11 n/cm2/sec"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F)58-CE-141,CUM,FY)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,,R,ANL-5800,1963)",
             "free_txt": [
@@ -496,10 +479,8 @@
               "                       Second edition."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -511,10 +492,8 @@
             "x4_code": "(92-U-235,ENR=0.93)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -525,8 +504,8 @@
       }
     },
     "003": {
-      "inc-source": {
-        "0": [
+      "0": {
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -534,10 +513,8 @@
               "  and reflector of Ispra-1 reactor"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -546,28 +523,22 @@
               " in Avogadro RS reactor"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               "   Number of measurements"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(90-TH-232(N,F)58-CE-141,CUM,FY)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(D,,J.M.Crook+,R,TID-1599,1963)",
             "free_txt": [
@@ -587,10 +558,8 @@
             "x4_code": "(D,,A.Wyttenbach+,J,RCA,3,118,1964)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -600,10 +569,8 @@
               " several samples from 200 to 500 milligram"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

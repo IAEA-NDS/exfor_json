@@ -57,34 +57,31 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,KURRI-AR-6,1,1973)",
-          "free_txt": [
-            " Annu.Rep.Res.Reactor Inst., Kyoto Univ."
-          ],
-          "publication_year": "1973"
-        },
-        {
-          "x4_code": "(P,EANDC(J)-26,39,1972)",
-          "free_txt": [
-            " Prog.rep. for Np-237 and Th-232"
-          ],
-          "publication_year": "1972"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,KURRI-AR-6,1,1973)",
+        "free_txt": [
+          " Annu.Rep.Res.Reactor Inst., Kyoto Univ."
+        ],
+        "publication_year": "1973",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,EANDC(J)-26,39,1972)",
+        "free_txt": [
+          " Prog.rep. for Np-237 and Th-232"
+        ],
+        "publication_year": "1972",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(93-NP-237(N,F),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(93-NP-237(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "93-NP-237",
               [
@@ -102,11 +99,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(93-NP-237(N,F),,SIG,,FIS)",
+        "children": [
+          {
+            "code": [
+              "93-NP-237",
+              [
+                "N,F"
+              ],
+              ",,SIG,,FIS"
+            ],
+            "type": null,
+            "target": "93-NP-237",
+            "process": "N,F",
+            "sf49": ",,SIG,,FIS",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "FIS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(93-NP-237(N,F),,SIG,,FIS)",
+        "children": [
+          {
+            "code": [
+              "93-NP-237",
+              [
+                "N,F"
+              ],
+              ",,SIG,,FIS"
+            ],
+            "type": null,
+            "target": "93-NP-237",
+            "process": "N,F",
+            "sf49": ",,SIG,,FIS",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "FIS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1"
@@ -185,32 +245,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(93-NP-237(N,F),,SIG,,FIS)",
-          "0": {
-            "code": [
-              "93-NP-237",
-              [
-                "N,F"
-              ],
-              ",,SIG,,FIS"
-            ],
-            "type": null,
-            "target": "93-NP-237",
-            "process": "N,F",
-            "sf49": ",,SIG,,FIS",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "FIS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -247,32 +281,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(93-NP-237(N,F),,SIG,,FIS)",
-          "0": {
-            "code": [
-              "93-NP-237",
-              [
-                "N,F"
-              ],
-              ",,SIG,,FIS"
-            ],
-            "type": null,
-            "target": "93-NP-237",
-            "process": "N,F",
-            "sf49": ",,SIG,,FIS",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "FIS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -301,8 +309,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -316,18 +324,16 @@
       }
     },
     "002": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SOLST)",
             "free_txt": [
               "    Silicon detector in the chamber."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -347,50 +353,40 @@
               " Statistical error of 5 to 8%."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2JPNJAE)",
             "free_txt": [
               " 2 MeV Van de Graaff accelerator at JAERI."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               "       Metal target"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D  )",
             "free_txt": [
               "    D(d,n)He-3 reaction. Gas and metal target."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               " Counting in fission chamber."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,Kobayashi+,J,JNE,22,741,1973)",
             "free_txt": [
@@ -399,28 +395,22 @@
               " the neutron-flux."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(49-IN-115(N,INL)49-IN-115,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(FF   )",
             "free_txt": [
               "    Fission fragments."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -432,18 +422,16 @@
       }
     },
     "003": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SOLST)",
             "free_txt": [
               "    Silicon detector in the chamber."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -451,40 +439,32 @@
               "measurement statistical error and of mass of Np-sample."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2JPNKTO)",
             "free_txt": [
               "    Kyoto Univ. Reactor of 5 MW."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Fission-type reactor spectrum."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               " Counting in fission chamber."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,Kobayashi+,J,JNE,22,741,1973)",
             "free_txt": [
@@ -492,30 +472,24 @@
               " result with Ge(Li) counter for monitoring of n-flux."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(49-IN-115(N,INL)49-IN-115,,SIG)",
             "free_txt": [
               " Average cross-section of 175 +- 6 mb,"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(FF   )",
             "free_txt": [
               "    Fission fragments."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -527,26 +501,22 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(57-LA-140,,DG,1600.)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI )",
             "free_txt": [
               "    Ge(Li) detector."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -554,20 +524,16 @@
               "measurement statistical error and of mass of Np-sample."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2JPNKTO)",
             "free_txt": [
               "    Kyoto Univ. Reactor of 5 MW."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -576,10 +542,8 @@
               " spectrum from thermal neutron facility."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -587,10 +551,8 @@
               " daughter of direct fission product Ba-140."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(93-NP-237(N,F),PRE,FY)",
             "free_txt": [
@@ -600,20 +562,16 @@
               " Mg24(n,p) and Al27(n,a)."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(DG   )",
             "free_txt": [
               "    Decay gamma."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

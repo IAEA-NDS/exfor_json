@@ -44,35 +44,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,154,1111,1967)",
-          "free_txt": [],
-          "publication_year": "1967"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALRL)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALRL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,154,1111,1967)",
+        "free_txt": [],
+        "publication_year": "1967",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALRL)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALRL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(((94-PU-238(N,EL),,WID/RED)*(94-PU-238(N,F),,WID))/(94-PU-238(N,TOT),,WID))",
-          "0": {
+      "0": {
+        "x4_code": "(((94-PU-238(N,EL),,WID/RED)*(94-PU-238(N,F),,WID))/(94-PU-238(N,TOT),,WID))",
+        "children": [
+          {
             "code": [
               "94-PU-238",
               [
@@ -91,7 +86,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "94-PU-238",
               [
@@ -110,40 +105,103 @@
             "sf8": null,
             "sf9": null
           },
-          "2": {
+          {
             "code": "94-PU-238",
             "type": [
               "N,TOT"
             ],
             "target": "9",
             "process": "4",
-            "sf49": "-",
+            "sf49": "-,P,U,-,2,3,8",
             "sf4": "-",
-            "sf5": null,
-            "sf6": null,
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
+            "sf5": "P",
+            "sf6": "U",
+            "sf7": "-",
+            "sf8": "2",
+            "sf9": "3"
           },
-          "3": {
+          {
             "code": ",,WID",
             "type": [
               "N,TOT"
             ],
             "target": ",",
             "process": ",",
-            "sf49": "W",
+            "sf49": "W,I,D",
             "sf4": "W",
-            "sf5": null,
-            "sf6": null,
+            "sf5": "I",
+            "sf6": "D",
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(94-PU-238(N,0),,D)",
+        "children": [
+          {
+            "code": [
+              "94-PU-238",
+              [
+                "N,0"
+              ],
+              ",,D"
+            ],
+            "type": null,
+            "target": "94-PU-238",
+            "process": "N,0",
+            "sf49": ",,D",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "D",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(94-PU-238(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-238",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-238",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MOMENTUM L"
@@ -247,32 +305,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-238(N,0),,D)",
-          "0": {
-            "code": [
-              "94-PU-238",
-              [
-                "N,0"
-              ],
-              ",,D"
-            ],
-            "type": null,
-            "target": "94-PU-238",
-            "process": "N,0",
-            "sf49": ",,D",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "D",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -304,32 +336,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-238(N,F),,SIG)",
-          "0": {
-            "code": [
-              "94-PU-238",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-238",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM",
@@ -874,26 +880,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": [
               " Spark chamber"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALRL)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(SCSRS)",
             "free_txt": []
@@ -902,8 +904,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(AREA)",
             "free_txt": [
@@ -915,8 +917,8 @@
     },
     "003": {},
     "004": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": "(94-PU-238(N,F),,SIG)",
             "free_txt": [
@@ -924,10 +926,8 @@
               " and Koontz, priv. com."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": []

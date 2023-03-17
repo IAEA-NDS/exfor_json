@@ -50,49 +50,47 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,27,2058,1983)",
-          "free_txt": [
-            " Tabulated data.",
-            "#doi:10.1103/PhysRevC.27.2058"
-          ],
-          "publication_year": "1983"
-        },
-        {
-          "x4_code": "(J,PR/C,17,163,1978)",
-          "free_txt": [
-            " description of neutron beam",
-            "characteristics and gamma counting, decay data.",
-            "#doi:10.1103/PhysRevC.17.163"
-          ],
-          "publication_year": "1978"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(NGEN,1USAANL)",
-          "free_txt": [
-            " Fast neutron generator facility"
-          ],
-          "facility_type": "(NGEN)",
-          "institute": "(1USAANL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,27,2058,1983)",
+        "free_txt": [
+          " Tabulated data.",
+          "#doi:10.1103/PhysRevC.27.2058"
+        ],
+        "publication_year": "1983",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.27.2058"
+      },
+      {
+        "x4_code": "(J,PR/C,17,163,1978)",
+        "free_txt": [
+          " description of neutron beam",
+          "characteristics and gamma counting, decay data.",
+          "#doi:10.1103/PhysRevC.17.163"
+        ],
+        "publication_year": "1978",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.17.163"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(NGEN,1USAANL)",
+        "free_txt": [
+          " Fast neutron generator facility"
+        ],
+        "pointer": "0",
+        "facility_type": "(NGEN)",
+        "institute": "(1USAANL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,F)ELEM/MASS,CUM,FY)",
-          "0": {
+      "0": {
+        "x4_code": "(94-PU-239(N,F)ELEM/MASS,CUM,FY)",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -110,11 +108,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(94-PU-239(N,F)ELEM/MASS,IND,FY)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,IND,FY"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,IND,FY",
+            "sf4": "ELEM/MASS",
+            "sf5": "IND",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -1260,32 +1293,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,F)ELEM/MASS,IND,FY)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,IND,FY"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,IND,FY",
-            "sf4": "ELEM/MASS",
-            "sf5": "IND",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1425,8 +1432,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
@@ -1439,10 +1446,8 @@
               " for gammas"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1450,20 +1455,16 @@
               "systematic uncertainty."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(NGEN,1USAANL)",
             "free_txt": [
               " Fast neutron generator facility"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -1476,10 +1477,8 @@
               " above 5 MeV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1498,10 +1497,8 @@
               " chemical separation followed by beta counting."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1509,10 +1506,8 @@
               "239-Pu."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1520,10 +1515,8 @@
               "Isotopic composition given in paper."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1534,8 +1527,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "((1.)36-KR-87,76.3MIN,DG,402.6,0.495)",
             "free_txt": []
@@ -1612,10 +1605,8 @@
             "x4_code": "((24.)58-CE-143,33.0HR,DG,293.3,0.434)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1627,8 +1618,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "((1.)53-I-134,,DG)",
             "free_txt": []
@@ -1637,10 +1628,8 @@
             "x4_code": "((2.)54-XE-135-M,15.3MIN,DG,526.6,0.810)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

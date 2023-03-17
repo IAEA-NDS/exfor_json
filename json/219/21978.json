@@ -59,46 +59,42 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RE,93,157,1986)",
-          "free_txt": [
-            " publ.of Conf.Proc. of 85SANTA"
-          ],
-          "publication_year": "1986"
-        },
-        {
-          "x4_code": "(C,85SANTA,1,493,1985)",
-          "free_txt": [
-            " Santa Fe conference 1985"
-          ],
-          "publication_year": "1985"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2ZZZGEL)",
-          "free_txt": [
-            " GELINA, 150 MeV electron accelerator"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RE,93,157,1986)",
+        "free_txt": [
+          " publ.of Conf.Proc. of 85SANTA"
+        ],
+        "publication_year": "1986",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,85SANTA,1,493,1985)",
+        "free_txt": [
+          " Santa Fe conference 1985"
+        ],
+        "publication_year": "1985",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2ZZZGEL)",
+        "free_txt": [
+          " GELINA, 150 MeV electron accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,G)95-AM-242,,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(95-AM-241(N,G)95-AM-242,,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "95-AM-241",
               [
@@ -116,11 +112,46 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(95-AM-241(N,G)95-AM-242,,SIG)",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,G"
+              ],
+              "95-AM-242,,SIG"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,G",
+            "sf49": "95-AM-242,,SIG",
+            "sf4": "95-AM-242",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -239,32 +270,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,G)95-AM-242,,SIG)",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,G"
-              ],
-              "95-AM-242,,SIG"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,G",
-            "sf49": "95-AM-242,,SIG",
-            "sf4": "95-AM-242",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -29718,8 +29723,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -29728,20 +29733,16 @@
               " agreed within 0.5%."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               ".No correction for self-screening"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -29749,20 +29750,16 @@
               ".Maier-Leibnitz weighting method"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
               " GELINA, 150 MeV electron accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -29771,10 +29768,8 @@
               " rotating target of depleted uranium"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -29782,10 +29777,8 @@
               " a capture sample"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -29795,10 +29788,8 @@
               " time dependent background"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -29806,10 +29797,8 @@
               " net weight 1.74 g, thickness 1.063*10-3 at/barn"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -29821,8 +29810,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S,,0.5)",
             "free_txt": [
@@ -29841,10 +29830,8 @@
               "    - normalisation and flux 5%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -29855,8 +29842,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -29875,10 +29862,8 @@
               "   correlated uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

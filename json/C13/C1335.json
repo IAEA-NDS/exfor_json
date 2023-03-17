@@ -83,38 +83,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,631,788,1998)",
-          "free_txt": [],
-          "publication_year": "1998"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USATAM)",
-          "free_txt": [
-            " Texas A&M University K500",
-            " superconducting cyclotron"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USATAM)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,631,788,1998)",
+        "free_txt": [],
+        "publication_year": "1998",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USATAM)",
+        "free_txt": [
+          " Texas A&M University K500",
+          " superconducting cyclotron"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USATAM)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(5-B-10,4-BE-9)5-B-10,PAR,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(4-BE-9(5-B-10,4-BE-9)5-B-10,PAR,DA)",
+        "children": [
+          {
             "code": [
               "4-BE-9",
               [
@@ -132,11 +127,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(4-BE-9(5-B-10,EL)4-BE-9,,DA,,RTH)",
+        "children": [
+          {
+            "code": [
+              "4-BE-9",
+              [
+                "5-B-10,EL"
+              ],
+              "4-BE-9,,DA,,RTH"
+            ],
+            "type": null,
+            "target": "4-BE-9",
+            "process": "5-B-10,EL",
+            "sf49": "4-BE-9,,DA,,RTH",
+            "sf4": "4-BE-9",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "RTH",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(4-BE-9(5-B-10,INL)4-BE-9,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "4-BE-9",
+              [
+                "5-B-10,INL"
+              ],
+              "4-BE-9,PAR,DA"
+            ],
+            "type": null,
+            "target": "4-BE-9",
+            "process": "5-B-10,INL",
+            "sf49": "4-BE-9,PAR,DA",
+            "sf4": "4-BE-9",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN",
@@ -256,32 +314,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(5-B-10,EL)4-BE-9,,DA,,RTH)",
-          "0": {
-            "code": [
-              "4-BE-9",
-              [
-                "5-B-10,EL"
-              ],
-              "4-BE-9,,DA,,RTH"
-            ],
-            "type": null,
-            "target": "4-BE-9",
-            "process": "5-B-10,EL",
-            "sf49": "4-BE-9,,DA,,RTH",
-            "sf4": "4-BE-9",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "RTH",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -430,32 +462,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(5-B-10,INL)4-BE-9,PAR,DA)",
-          "0": {
-            "code": [
-              "4-BE-9",
-              [
-                "5-B-10,INL"
-              ],
-              "4-BE-9,PAR,DA"
-            ],
-            "type": null,
-            "target": "4-BE-9",
-            "process": "5-B-10,INL",
-            "sf49": "4-BE-9,PAR,DA",
-            "sf4": "4-BE-9",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -930,8 +936,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(MAGSP)",
             "free_txt": [
@@ -939,10 +945,8 @@
               " spectrometer"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USATAM)",
             "free_txt": [
@@ -950,28 +954,22 @@
               " superconducting cyclotron"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "100 MeV 10B beam at TAM"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -982,26 +980,22 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-EXC,5-B-10)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS)",
             "free_txt": [
               " Systematic error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1012,18 +1006,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS)",
             "free_txt": [
               " Systematic error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1034,26 +1026,22 @@
       }
     },
     "004": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-EXC,5-B-10)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS)",
             "free_txt": [
               " Systematic error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

@@ -25,44 +25,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,CEA-652,17,58)",
-          "free_txt": [
-            " CHAPTER III."
-          ],
-          "publication_year": "1958"
-        },
-        {
-          "x4_code": "(C,55GENEVA,8,592,55)",
-          "free_txt": [
-            "  ARTICLE BY LEACHMAN."
-          ],
-          "publication_year": "1955"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC )",
-          "free_txt": [
-            " THERMAL PILE, SACLAY."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,CEA-652,17,58)",
+        "free_txt": [
+          " CHAPTER III."
+        ],
+        "publication_year": "1958",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,55GENEVA,8,592,55)",
+        "free_txt": [
+          "  ARTICLE BY LEACHMAN."
+        ],
+        "publication_year": "1955",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC )",
+        "free_txt": [
+          " THERMAL PILE, SACLAY."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-239(N,F),,NU,,MXW)/(94-PU-239(N,F),,NU,,FIS))",
-          "0": {
+      "0": {
+        "x4_code": "((94-PU-239(N,F),,NU,,MXW)/(94-PU-239(N,F),,NU,,FIS))",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -81,7 +77,7 @@
             "sf8": "MXW",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "94-PU-239",
               [
@@ -99,11 +95,46 @@
             "sf7": null,
             "sf8": "FIS",
             "sf9": null
-          },
-          "type": "/",
-          "free_text": " RATIO OF FISSION SPECTRUM AVERAGE TO THERMAL SPECTRUM AVERAGE NU."
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": " RATIO OF FISSION SPECTRUM AVERAGE TO THERMAL SPECTRUM AVERAGE NU."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(94-PU-239(N,F),,NU,,FIS)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,NU,,FIS"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,NU,,FIS",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": "FIS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " FISSION SPECTRUM AVERAGE NU."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -135,32 +166,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,F),,NU,,FIS)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,NU,,FIS"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,NU,,FIS",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": "FIS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " FISSION SPECTRUM AVERAGE NU."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -204,8 +209,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BF3  )",
             "free_txt": [
@@ -218,40 +223,32 @@
               " FISSION CHAMBER FOR FRAGMENT MONITOR."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               ".ONE STANDARD DEVIATION, PRIMARILLY STATISTICAL."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC )",
             "free_txt": [
               " THERMAL PILE, SACLAY."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC )",
             "free_txt": [
               " THERMAL NEUTRON BEAM."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -259,10 +256,8 @@
               " FRAGMENTS."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N    )",
             "free_txt": [
@@ -275,20 +270,16 @@
               " FISSION FRAGMENTS."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               ".PLUTONIUM 239, NO DETAILS."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -300,8 +291,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -310,10 +301,8 @@
               " CONFIDENCE LIMITS."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -325,10 +314,8 @@
               " FACTOR OF 0.6."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -339,8 +326,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -348,10 +335,8 @@
               " THERMAL SPECTRUM AVERAGE VALUES."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -360,20 +345,16 @@
               " FISSION SPECTRUM CONVERTER."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(94-PU-239(N,F),,NU,,MXW)",
             "free_txt": [
               " MAXWELLIAN AVERAGE NU."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

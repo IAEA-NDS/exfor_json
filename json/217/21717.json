@@ -41,38 +41,33 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JRC,3,205,1969)",
-          "free_txt": [
-            " Full Report."
-          ],
-          "publication_year": "1969"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC )",
-          "free_txt": [
-            " Thetis reactor of the Institute for Nuclear",
-            " Sciences at Ghent."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JRC,3,205,1969)",
+        "free_txt": [
+          " Full Report."
+        ],
+        "publication_year": "1969",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC )",
+        "free_txt": [
+          " Thetis reactor of the Institute for Nuclear",
+          " Sciences at Ghent."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(49-IN-113(N,G)49-IN-114-M1+M2,,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(49-IN-113(N,G)49-IN-114-M1+M2,,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "49-IN-113",
               [
@@ -90,11 +85,46 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(49-IN-113(N,G)49-IN-114-M1+M2,,RI)",
+        "children": [
+          {
+            "code": [
+              "49-IN-113",
+              [
+                "N,G"
+              ],
+              "49-IN-114-M1+M2,,RI"
+            ],
+            "type": null,
+            "target": "49-IN-113",
+            "process": "N,G",
+            "sf49": "49-IN-114-M1+M2,,RI",
+            "sf4": "49-IN-114-M1+M2",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -141,32 +171,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(49-IN-113(N,G)49-IN-114-M1+M2,,RI)",
-          "0": {
-            "code": [
-              "49-IN-113",
-              [
-                "N,G"
-              ],
-              "49-IN-114-M1+M2,,RI"
-            ],
-            "type": null,
-            "target": "49-IN-113",
-            "process": "N,G",
-            "sf49": "49-IN-114-M1+M2,,RI",
-            "sf4": "49-IN-114-M1+M2",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -215,8 +219,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -228,10 +232,8 @@
               " In-114m, Au-198 are compared."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -239,10 +241,8 @@
               " ratio and extraneous activities."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -251,10 +251,8 @@
               " method."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -262,10 +260,8 @@
               " not including uncertainties in monitor cross sections"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC )",
             "free_txt": [
@@ -273,10 +269,8 @@
               " Sciences at Ghent."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -286,10 +280,8 @@
               " monitors."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -301,10 +293,8 @@
               " type NaI(Tl) scintillation counter."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,M.K.Drake+,J,NUC,24,108,1969)",
             "free_txt": [
@@ -313,10 +303,8 @@
               " cross-sections."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -330,10 +318,8 @@
               " (N,A) reaction on Al-27."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -344,8 +330,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -353,10 +339,8 @@
               " positions."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(49-IN-114-M1,50.0D,DG,192.)",
             "free_txt": [
@@ -365,10 +349,8 @@
               " gamma."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -377,10 +359,8 @@
               " 23.7 at 1st position, 119. at 2nd position."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)27-CO-59(N,G)27-CO-60,,SIG,,MXW)",
             "free_txt": [
@@ -405,10 +385,8 @@
               " resonance integral."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -419,8 +397,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -428,10 +406,8 @@
               " positions."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(49-IN-114-M1,49.0D,DG,192.)",
             "free_txt": [
@@ -439,10 +415,8 @@
               " conversion ratio was taken as 5 for the 192keV gamma."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)27-CO-59(N,G)27-CO-60,,RI)",
             "free_txt": [
@@ -467,10 +441,8 @@
               " resonance integral."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

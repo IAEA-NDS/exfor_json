@@ -65,39 +65,37 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,502,307C,1989)",
-          "free_txt": [],
-          "publication_year": "1989"
-        },
-        {
-          "x4_code": "(J,JRN,140,215,1990)",
-          "free_txt": [
-            " Same 137,138,139Xe yields given"
-          ],
-          "publication_year": "1990"
-        },
-        {
-          "x4_code": "(P,BARC-1381,62,1987)",
-          "free_txt": [
-            " Same FCY for 140,142,146Ba"
-          ],
-          "publication_year": "1987"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,502,307C,1989)",
+        "free_txt": [],
+        "publication_year": "1989",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JRN,140,215,1990)",
+        "free_txt": [
+          " Same 137,138,139Xe yields given"
+        ],
+        "publication_year": "1990",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,BARC-1381,62,1987)",
+        "free_txt": [
+          " Same FCY for 140,142,146Ba"
+        ],
+        "publication_year": "1987",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F)ELEM/MASS,CUM,FY)",
-          "0": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F)ELEM/MASS,CUM,FY)",
+        "children": [
+          {
             "code": [
               "98-CF-252",
               [
@@ -115,11 +113,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F)ELEM/MASS,CUM,FY,,FRC)",
+        "children": [
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              "ELEM/MASS,CUM,FY,,FRC"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": "ELEM/MASS,CUM,FY,,FRC",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "FRC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(98-CF-252(0,F)ELEM/MASS,CUM,FY,,FRC)",
+        "children": [
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              "ELEM/MASS,CUM,FY,,FRC"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": "ELEM/MASS,CUM,FY,,FRC",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "FRC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -181,32 +242,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F)ELEM/MASS,CUM,FY,,FRC)",
-          "0": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              "ELEM/MASS,CUM,FY,,FRC"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": "ELEM/MASS,CUM,FY,,FRC",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "FRC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -278,32 +313,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(98-CF-252(0,F)ELEM/MASS,CUM,FY,,FRC)",
-          "0": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              "ELEM/MASS,CUM,FY,,FRC"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": "ELEM/MASS,CUM,FY,,FRC",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "FRC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -359,8 +368,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -369,20 +378,16 @@
               " 1.9 keV at 1332 keV."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on sources of uncertainties."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
@@ -391,10 +396,8 @@
               " gamma spectrometry."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -408,8 +411,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "((1.)54-XE-137,3.83MIN,DG,455.,0.296)",
             "free_txt": []
@@ -430,10 +433,8 @@
             "x4_code": "((6.)56-BA-142,10.60MIN,DG,255.,0.206)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP)",
             "free_txt": [
@@ -449,20 +450,16 @@
               " determined relative to the cumulative yield of 140Ba."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(O,33048002,A.G.C.Nair+,J,JRN,82,263,1984)",
             "free_txt": [
               " Data for 108Ru and 109Ru given"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -473,8 +470,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -482,28 +479,22 @@
               " literature"
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM,98-CF-252(0,F)MASS,CHN,FY)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,A.C.Wahl,J,AND,39,1,1988)",
             "free_txt": [
               " Chain yields are taken."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -526,8 +517,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
@@ -535,10 +526,8 @@
               " activities were followed for its growth and decay"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "((1.)56-BA-140,12.8D)",
             "free_txt": []
@@ -563,10 +552,8 @@
             "x4_code": "((6.)59-PR-146,24.10MIN,DG,453.)",
             "free_txt": []
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(57-LA-140,DG)",
             "free_txt": []
@@ -579,10 +566,8 @@
             "x4_code": "(59-PR-146,DG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

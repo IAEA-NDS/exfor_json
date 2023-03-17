@@ -80,47 +80,71 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,89,014305,2014)",
-          "free_txt": [
-            "   Main reference"
-          ],
-          "publication_year": "2014"
-        },
-        {
-          "x4_code": "(J,JP/CS,420,012050,2013)",
-          "free_txt": [
-            " Preliminary data"
-          ],
-          "publication_year": "2013"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1CANTMF)",
-          "free_txt": [
-            " Experiment performed at the ISAC-I",
-            "accelerator at TRIUMF using DRAGON spectrometer"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1CANTMF)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,89,014305,2014)",
+        "free_txt": [
+          "   Main reference"
+        ],
+        "publication_year": "2014",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JP/CS,420,012050,2013)",
+        "free_txt": [
+          " Preliminary data"
+        ],
+        "publication_year": "2013",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1CANTMF)",
+        "free_txt": [
+          " Experiment performed at the ISAC-I",
+          "accelerator at TRIUMF using DRAGON spectrometer"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1CANTMF)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(8-O-16,G)14-SI-28,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(8-O-16,G)14-SI-28,,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "8-O-16,G"
+              ],
+              "14-SI-28,,SIG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "8-O-16,G",
+            "sf49": "14-SI-28,,SIG",
+            "sf4": "14-SI-28",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((6-C-12(8-O-16,G)14-SI-28,,SIG)/(6-C-12(8-O-16,FUS),,SIG))",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -139,10 +163,36 @@
             "sf8": null,
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "6-C-12",
+              [
+                "8-O-16,FUS"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "8-O-16,FUS",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -181,51 +231,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((6-C-12(8-O-16,G)14-SI-28,,SIG)/(6-C-12(8-O-16,FUS),,SIG))",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "8-O-16,G"
-              ],
-              "14-SI-28,,SIG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "8-O-16,G",
-            "sf49": "14-SI-28,,SIG",
-            "sf4": "14-SI-28",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "6-C-12",
-              [
-                "8-O-16,FUS"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "8-O-16,FUS",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -257,8 +262,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(MAGSP)",
             "free_txt": [
@@ -283,10 +288,8 @@
               "array."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1CANTMF)",
             "free_txt": [
@@ -294,10 +297,8 @@
               "accelerator at TRIUMF using DRAGON spectrometer"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -308,10 +309,8 @@
               "the focal plane."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(6-C-12,ENR=0.999)",
             "free_txt": [
@@ -323,18 +322,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -345,18 +342,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No information given"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

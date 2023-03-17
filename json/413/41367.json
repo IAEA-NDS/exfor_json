@@ -68,40 +68,35 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,97TRIEST,2,1313,199705)",
-          "free_txt": [
-            " Main reference.",
-            "              241-Am(N,F) cumulative yield table"
-          ],
-          "publication_year": "1997"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CCW,4RUSRI)",
-          "free_txt": [
-            "  Neutron Generator NG-400"
-          ],
-          "facility_type": "(CCW)",
-          "institute": "(4RUSRI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,97TRIEST,2,1313,199705)",
+        "free_txt": [
+          " Main reference.",
+          "              241-Am(N,F) cumulative yield table"
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CCW,4RUSRI)",
+        "free_txt": [
+          "  Neutron Generator NG-400"
+        ],
+        "pointer": "0",
+        "facility_type": "(CCW)",
+        "institute": "(4RUSRI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,F)ELEM/MASS,(CUM),FY)",
-          "0": {
+      "0": {
+        "x4_code": "(95-AM-241(N,F)ELEM/MASS,(CUM),FY)",
+        "children": [
+          {
             "code": [
               "95-AM-241",
               [
@@ -116,18 +111,25 @@
             "type": null,
             "target": "95-AM-241",
             "process": "N,F",
-            "sf49": "ELEM/MASS,",
+            "sf49": "ELEM/MASS,,(CUM),,FY",
             "sf4": "ELEM/MASS",
             "sf5": null,
-            "sf6": null,
+            "sf6": "(CUM)",
             "sf7": null,
-            "sf8": null,
+            "sf8": "FY",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN",
@@ -273,8 +275,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -287,10 +289,8 @@
               "  Ge(Li) detectors."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -298,48 +298,38 @@
               " given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CCW,4RUSRI)",
             "free_txt": [
               "  Neutron Generator NG-400"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
               " Activation"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(41240001,A.A.Filatenkov+,R,INDC(CCP)-402,1997)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(41-NB-93(N,2N)41-NB-92-M,,SIG)",
             "free_txt": [
               " For neutron fluence."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N,G)",
             "free_txt": [
@@ -348,10 +338,8 @@
               "irradiation."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -362,28 +350,24 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               ".Fission yields obtained after analysing decay curves"
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM,95-AM-241(N,F),,SIG)",
             "free_txt": [
               " at 14.7 MeV."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "((1.)36-KR-87,76.3MIN)",
             "free_txt": []
@@ -460,10 +444,8 @@
             "x4_code": "((19.)58-CE-143,33.10HR)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -471,10 +453,8 @@
               " weight 2.6 mg, Am-241 content 99.9 %."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,41240071)",
             "free_txt": [

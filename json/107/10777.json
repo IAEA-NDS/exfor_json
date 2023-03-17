@@ -40,38 +40,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,69,109,197901)",
-          "free_txt": [],
-          "publication_year": "1979"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,1USAANL)",
-          "free_txt": [
-            " Argonne national laboratory fast-",
-            " neutron generator"
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(1USAANL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,69,109,197901)",
+        "free_txt": [],
+        "publication_year": "1979",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,1USAANL)",
+        "free_txt": [
+          " Argonne national laboratory fast-",
+          " neutron generator"
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(1USAANL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "((13-AL-27(N,INL)13-AL-27,PAR,SIG,G)/(92-U-235(N,F),,SIG))",
-          "0": {
+      "1": {
+        "x4_code": "((13-AL-27(N,INL)13-AL-27,PAR,SIG,G)/(92-U-235(N,F),,SIG))",
+        "children": [
+          {
             "code": [
               "13-AL-27",
               [
@@ -90,7 +85,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "92-U-235",
               [
@@ -108,13 +103,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(13-AL-27(N,INL)13-AL-27,PAR,SIG,G)",
-          "0": {
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(13-AL-27(N,INL)13-AL-27,PAR,SIG,G)",
+        "children": [
+          {
             "code": [
               "13-AL-27",
               [
@@ -132,11 +129,46 @@
             "sf7": "G",
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(13-AL-27(N,INL)13-AL-27,PAR,DA,G,RSD)",
+        "children": [
+          {
+            "code": [
+              "13-AL-27",
+              [
+                "N,INL"
+              ],
+              "13-AL-27,PAR,DA,G,RSD"
+            ],
+            "type": null,
+            "target": "13-AL-27",
+            "process": "N,INL",
+            "sf49": "13-AL-27,PAR,DA,G,RSD",
+            "sf4": "13-AL-27",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "G",
+            "sf8": "RSD",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Gamma-ray yield distributions normalized to unity at around 90 deg."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1     1",
@@ -827,32 +859,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(13-AL-27(N,INL)13-AL-27,PAR,DA,G,RSD)",
-          "0": {
-            "code": [
-              "13-AL-27",
-              [
-                "N,INL"
-              ],
-              "13-AL-27,PAR,DA,G,RSD"
-            ],
-            "type": null,
-            "target": "13-AL-27",
-            "process": "N,INL",
-            "sf49": "13-AL-27,PAR,DA,G,RSD",
-            "sf4": "13-AL-27",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "G",
-            "sf8": "RSD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Gamma-ray yield distributions normalized to unity at around 90 deg."
-        }
-      },
       "common": {
         "heads": [
           "EN-RSL"
@@ -1878,8 +1884,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1896,10 +1902,8 @@
               " 56Fe."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,1USAANL)",
             "free_txt": [
@@ -1907,26 +1911,20 @@
               " neutron generator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1936,10 +1934,8 @@
               " while the other three samples were solid cylinders."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1950,8 +1946,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(4PI1A)",
             "free_txt": [
@@ -1961,10 +1957,8 @@
               " sections."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1973,10 +1967,8 @@
               " in the determination of corrections."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH,GELI)",
             "free_txt": [
@@ -1985,10 +1977,93 @@
               " Ge-Li detector for gamma-rays"
             ]
           }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(92-U-235(N,F),,SIG)",
+            "free_txt": [
+              " Taken from ENDF/B-IV, 1976."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Data taken from Table II in reference."
+            ]
+          }
         ]
       },
-      "err-analys": {
-        "2": [
+      "1": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total rms error (for most neutron energies)",
+              " is ~10%. The principal sources of experimental error",
+              " in the cross section ratios are:"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Determination of detector counts (~6%),"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Geometric effects (3%),"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3,,2.)",
+            "free_txt": [
+              " Neutron source characteristics (<2%),"
+            ]
+          },
+          {
+            "x4_code": "(ERR-4)",
+            "free_txt": [
+              " Gamma-ray detector efficiency (4%),"
+            ]
+          },
+          {
+            "x4_code": "(ERR-5)",
+            "free_txt": [
+              " Mass of uranium deposit (1%),"
+            ]
+          },
+          {
+            "x4_code": "(ERR-6)",
+            "free_txt": [
+              " Gamma-ray absorption in the Al samples (3%),"
+            ]
+          },
+          {
+            "x4_code": "(ERR-7)",
+            "free_txt": [
+              " Neutron absorption in the Al samples (2%),"
+            ]
+          },
+          {
+            "x4_code": "(ERR-8)",
+            "free_txt": [
+              " Neutron multiple scattering in the Al (3%),"
+            ]
+          },
+          {
+            "x4_code": "(ERR-9)",
+            "free_txt": [
+              " Interference from 0.847 MeV Fe background",
+              "  gamma rays (~5%)."
+            ]
+          }
+        ]
+      },
+      "2": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1998,41 +2073,19 @@
             ]
           }
         ]
-      },
-      "monitor": {
-        "0": [
-          {
-            "x4_code": "(92-U-235(N,F),,SIG)",
-            "free_txt": [
-              " Taken from ENDF/B-IV, 1976."
-            ]
-          }
-        ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              " Data taken from Table II in reference."
-            ]
-          }
-        ]
       }
     },
     "003": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               " Coaxial Ge-Li detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -2042,10 +2095,8 @@
               " equal to 6%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

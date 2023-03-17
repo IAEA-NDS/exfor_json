@@ -200,35 +200,83 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,91,054321,2015)",
-          "free_txt": [
-            " final reference"
-          ],
-          "publication_year": "2015"
-        },
-        {
-          "x4_code": "(J,PL/B,736,533,2014)",
-          "free_txt": [],
-          "publication_year": "2014"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(OLMS,2ZZZCER)",
-          "free_txt": [
-            " Experiment was performed at the CERN",
-            "Radioactive Beam Experiment On-Line Isotope Mass",
-            "Separator (REX-ISOLDE) facility"
-          ],
-          "facility_type": "(OLMS)",
-          "institute": "(2ZZZCER)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,PR/C,91,054321,2015)",
+        "free_txt": [
+          " final reference"
+        ],
+        "publication_year": "2015",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PL/B,736,533,2014)",
+        "free_txt": [],
+        "publication_year": "2014",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(OLMS,2ZZZCER)",
+        "free_txt": [
+          " Experiment was performed at the CERN",
+          "Radioactive Beam Experiment On-Line Isotope Mass",
+          "Separator (REX-ISOLDE) facility"
+        ],
+        "pointer": "0",
+        "facility_type": "(OLMS)",
+        "institute": "(2ZZZCER)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "((1-H-2(28-NI-66,P)28-NI-67,PAR,DA,RSD)=(28-NI-66(D,P)28-NI-67,PAR,DA))",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "28-NI-66,P"
+              ],
+              "28-NI-67,PAR,DA,RSD"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "28-NI-66,P",
+            "sf49": "28-NI-67,PAR,DA,RSD",
+            "sf4": "28-NI-67",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "RSD",
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "28-NI-66",
+              [
+                "D,P"
+              ],
+              "28-NI-67,PAR,DA"
+            ],
+            "type": null,
+            "target": "28-NI-66",
+            "process": "D,P",
+            "sf49": "28-NI-67,PAR,DA",
+            "sf4": "28-NI-67",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -248,51 +296,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-2(28-NI-66,P)28-NI-67,PAR,DA,RSD)=(28-NI-66(D,P)28-NI-67,PAR,DA))",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "28-NI-66,P"
-              ],
-              "28-NI-67,PAR,DA,RSD"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "28-NI-66,P",
-            "sf49": "28-NI-67,PAR,DA,RSD",
-            "sf4": "28-NI-67",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "RSD",
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "28-NI-66",
-              [
-                "D,P"
-              ],
-              "28-NI-67,PAR,DA"
-            ],
-            "type": null,
-            "target": "28-NI-66",
-            "process": "D,P",
-            "sf49": "28-NI-67,PAR,DA",
-            "sf4": "28-NI-67",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -762,8 +765,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,SISD)",
             "free_txt": [
@@ -781,10 +784,8 @@
               "detectors"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(OLMS,2ZZZCER)",
             "free_txt": [
@@ -793,10 +794,8 @@
               "Separator (REX-ISOLDE) facility"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -805,10 +804,8 @@
               "accelerated to 2.95 MeV/nucleon by REX."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
@@ -825,28 +822,22 @@
               " gamma-gamma coincidences"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,O1886001,K.Wimmer+,J,PRL,105,252501,2010)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "A 100-mug/cm**2 thick CD(2) target was used."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -858,16 +849,14 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL,28-NI-67)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -878,10 +867,8 @@
               "ratios"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

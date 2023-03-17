@@ -1,7 +1,7 @@
 {
   "entry": "M0754",
-  "last_updated": "2022-04-01",
-  "number_of_revisions": "4",
+  "last_updated": "2022-11-08",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(20080814C)",
@@ -31,6 +31,13 @@
         " Corrected by V.Varlamov: REFERENCE,",
         " STATUS, REL-REF in SUBENT 003."
       ]
+    },
+    {
+      "x4_code": "(20220817A)",
+      "free_txt": [
+        " Corrected by VV and SD: REFERENCE,",
+        " ANALYSIS deleted."
+      ]
     }
   ],
   "bib_record": {
@@ -52,45 +59,41 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,IZV,59,(1),186,1995)",
-          "free_txt": [],
-          "publication_year": "1995"
-        },
-        {
-          "x4_code": "(J,BAS,59,159,1995)",
-          "free_txt": [
-            " English translation of IZV,59,(1),186,1995."
-          ],
-          "publication_year": "1995"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(BETAT,4RUSSUL)",
-          "free_txt": [
-            "  Betatron  of Institute of Physics of",
-            " St.Petersburg University."
-          ],
-          "facility_type": "(BETAT)",
-          "institute": "(4RUSSUL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,BAS,59,159,1995)",
+        "free_txt": [
+          " English translation of IZV,59,(1),186,1995."
+        ],
+        "publication_year": "1995",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,IZV,59,(1),186,1995)",
+        "free_txt": [],
+        "publication_year": "1995",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(BETAT,4RUSSUL)",
+        "free_txt": [
+          "  Betatron  of Institute of Physics of",
+          " St.Petersburg University."
+        ],
+        "pointer": "0",
+        "facility_type": "(BETAT)",
+        "institute": "(4RUSSUL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(49-IN-115(G,INL)49-IN-115-M,,SIG,,BRA/REL)",
-          "0": {
+      "0": {
+        "x4_code": "(49-IN-115(G,INL)49-IN-115-M,,SIG,,BRA/REL)",
+        "children": [
+          {
             "code": [
               "49-IN-115",
               [
@@ -108,11 +111,46 @@
             "sf7": null,
             "sf8": "BRA/REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(49-IN-115(G,INL)49-IN-115-M,,INT,,BRA)",
+        "children": [
+          {
+            "code": [
+              "49-IN-115",
+              [
+                "G,INL"
+              ],
+              "49-IN-115-M,,INT,,BRA"
+            ],
+            "type": null,
+            "target": "49-IN-115",
+            "process": "G,INL",
+            "sf49": "49-IN-115-M,,INT,,BRA",
+            "sf4": "49-IN-115-M",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -172,32 +210,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(49-IN-115(G,INL)49-IN-115-M,,INT,,BRA)",
-          "0": {
-            "code": [
-              "49-IN-115",
-              [
-                "G,INL"
-              ],
-              "49-IN-115-M,,INT,,BRA"
-            ],
-            "type": null,
-            "target": "49-IN-115",
-            "process": "G,INL",
-            "sf49": "49-IN-115-M,,INT,,BRA",
-            "sf4": "49-IN-115-M",
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": "BRA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -226,42 +238,28 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
-          {
-            "x4_code": "(AREA)",
-            "free_txt": []
-          }
-        ]
-      },
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(49-IN-115-M,4.49HR,DG,336.2)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical errors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(BETAT,4RUSSUL)",
             "free_txt": [
@@ -269,26 +267,20 @@
               " St.Petersburg University."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -299,8 +291,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -312,8 +304,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -321,10 +313,8 @@
               " obtained using special normalization."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,P.von Neumann-Cosel+,J,PL/B,266,9,1991)",
             "free_txt": [
@@ -332,10 +322,8 @@
               " isomeric states with energies 2.8 and 3.3 MeV."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

@@ -53,35 +53,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JNE/AB,14,85,1961)",
-          "free_txt": [],
-          "publication_year": "1961"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG)",
-          "free_txt": [
-            "   6 MeV Van de Graaff."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JNE/AB,14,85,1961)",
+        "free_txt": [],
+        "publication_year": "1961",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG)",
+        "free_txt": [
+          "   6 MeV Van de Graaff."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(92-U-238(N,F),,SIG,,REL)",
-          "0": {
+      "1": {
+        "x4_code": "(92-U-238(N,F),,SIG,,REL)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -99,13 +94,15 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Cross-section normalized to        unity at 14 MeV."
-        },
-        "2": {
-          "x4_code": "(92-U-238(N,F),,SIG)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": " Cross-section normalized to        unity at 14 MeV."
+      },
+      "2": {
+        "x4_code": "(92-U-238(N,F),,SIG)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -123,11 +120,164 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Normalized to U-238 cross-section        at 14 MeV."
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "((92-U-235(N,F),,SIG,,REL)/(92-U-238(N,F),,SIG,,REL))",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG,,REL"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG,,REL",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
           },
-          "type": null,
-          "free_text": " Normalized to U-238 cross-section        at 14 MeV."
-        }
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              ",,SIG,,REL"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": ",,SIG,,REL",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": "        Normalized to unity at 14 MeV."
       },
+      "2": {
+        "x4_code": "(92-U-235(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "1": {
+        "x4_code": "((94-PU-239(N,F),,SIG,,REL)/(92-U-238(N,F),,SIG,,REL))",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,SIG,,REL"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,SIG,,REL",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          },
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              ",,SIG,,REL"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": ",,SIG,,REL",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": "         Normalized to unity at 14 MeV."
+      },
+      "2": {
+        "x4_code": "(94-PU-239(N,F),,SIG)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-NRM"
@@ -241,75 +391,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "((92-U-235(N,F),,SIG,,REL)/(92-U-238(N,F),,SIG,,REL))",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG,,REL"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG,,REL",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              ",,SIG,,REL"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": ",,SIG,,REL",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": "        Normalized to unity at 14 MeV."
-        },
-        "2": {
-          "x4_code": "(92-U-235(N,F),,SIG)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM"
@@ -418,75 +499,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "1": {
-          "x4_code": "((94-PU-239(N,F),,SIG,,REL)/(92-U-238(N,F),,SIG,,REL))",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,SIG,,REL"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,SIG,,REL",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              ",,SIG,,REL"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": ",,SIG,,REL",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": "         Normalized to unity at 14 MeV."
-        },
-        "2": {
-          "x4_code": "(94-PU-239(N,F),,SIG)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-NRM"
@@ -597,18 +609,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               ".Background measured by removing the gas from the cell."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
@@ -631,20 +641,16 @@
               "        monitor neutron production."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG)",
             "free_txt": [
               "   6 MeV Van de Graaff."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
@@ -653,20 +659,16 @@
               "        window. Gas cell at 1 atmosphere pressure."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               ".Measurement of fission events."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-238(N,F),,SIG)",
             "free_txt": [
@@ -674,10 +676,8 @@
               "        private communication."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(NDD)",
             "free_txt": [
@@ -688,8 +688,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -697,20 +697,16 @@
               "<DATA-ERR>  Not specified for pointer 2"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               ".53 mg of natural uranium in the fission chamber."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -721,8 +717,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -730,10 +726,8 @@
               "<DATA-ERR>  Not specified for pointer 2"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -742,10 +736,8 @@
               " U-238 (5.5 percent), U-234 (1.2 percent)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -756,8 +748,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -765,10 +757,8 @@
               "<DATA-ERR>  Not specified for pointer 2"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -777,10 +767,8 @@
               " percent)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

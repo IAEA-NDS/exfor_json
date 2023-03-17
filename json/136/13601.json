@@ -42,37 +42,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,94GATLIN,1,99,199405)",
-          "free_txt": [],
-          "publication_year": "1994"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USAORL)",
-          "free_txt": [
-            " Orela, 40-m flight path."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,94GATLIN,1,99,199405)",
+        "free_txt": [],
+        "publication_year": "1994",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USAORL)",
+        "free_txt": [
+          " Orela, 40-m flight path."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-0(N,G),,SIG,,RAW)",
-          "0": {
+      "0": {
+        "x4_code": "(26-FE-0(N,G),,SIG,,RAW)",
+        "children": [
+          {
             "code": [
               "26-FE-0",
               [
@@ -90,11 +85,74 @@
             "sf7": null,
             "sf8": "RAW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "Effective cross section, not corrected for targetthickness."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "Effective cross section, not corrected for targetthickness."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(26-FE-56(N,EL),,WID)",
+        "children": [
+          {
+            "code": [
+              "26-FE-56",
+              [
+                "N,EL"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "26-FE-56",
+            "process": "N,EL",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(26-FE-0(N,G),,SIG,,RAW)",
+        "children": [
+          {
+            "code": [
+              "26-FE-0",
+              [
+                "N,G"
+              ],
+              ",,SIG,,RAW"
+            ],
+            "type": null,
+            "target": "26-FE-0",
+            "process": "N,G",
+            "sf49": ",,SIG,,RAW",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "RAW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Effective cross section, not corrected for targetthickness."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -166,32 +224,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-56(N,EL),,WID)",
-          "0": {
-            "code": [
-              "26-FE-56",
-              [
-                "N,EL"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "26-FE-56",
-            "process": "N,EL",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -223,32 +255,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-0(N,G),,SIG,,RAW)",
-          "0": {
-            "code": [
-              "26-FE-0",
-              [
-                "N,G"
-              ],
-              ",,SIG,,RAW"
-            ],
-            "type": null,
-            "target": "26-FE-0",
-            "process": "N,G",
-            "sf49": ",,SIG,,RAW",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "RAW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Effective cross section, not corrected for targetthickness."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -622,18 +628,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Capture yields corrected for deadtime and background."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GLASD)",
             "free_txt": [
@@ -646,20 +650,16 @@
               " C6D6 scintillators for gamma detection."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USAORL)",
             "free_txt": [
               " Orela, 40-m flight path."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(PHD,TOF)",
             "free_txt": [
@@ -670,10 +670,8 @@
               "resonance of gold."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N,G)",
             "free_txt": []
@@ -682,28 +680,24 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No details on source of uncertainties."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Natural iron sample 0.004 a/b."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -714,16 +708,14 @@
       }
     },
     "003": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM,26-FE-56(N,G),,WID)",
             "free_txt": []
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -732,10 +724,8 @@
               "Fe-56."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -743,20 +733,16 @@
               " due to Au saturated resonance normalization."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Natural iron sample."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -767,28 +753,24 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No details on source of uncertainties."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Natural iron sample 0.010 a/b."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

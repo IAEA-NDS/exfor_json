@@ -50,47 +50,77 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,70,(6),1011,200706)",
-          "free_txt": [
-            "  Main Reference"
-          ],
-          "publication_year": "2007"
-        },
-        {
-          "x4_code": "(J,PAN,70,(6),975,200706)",
-          "free_txt": [
-            "Engl.translation of YF,70,1011"
-          ],
-          "publication_year": "2007"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            "  Fast pulse reactor IBR-2",
-            "   Improved (2004 year) exp. setup \"Isomer-M\" on the",
-            " channel 11-B of IBR-2 reactor."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        },
-        {
-          "x4_code": "(CHOPS,4ZZZDUB)",
-          "free_txt": [
-            " Bent mirror neutron guide and neutron",
-            "cadmium chopper synchronized with reactor neutron",
-            " bursts cadmium \"ping-pong\"."
-          ],
-          "facility_type": "(CHOPS)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,YF,70,(6),1011,200706)",
+        "free_txt": [
+          "  Main Reference"
+        ],
+        "publication_year": "2007",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PAN,70,(6),975,200706)",
+        "free_txt": [
+          "Engl.translation of YF,70,1011"
+        ],
+        "publication_year": "2007",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          "  Fast pulse reactor IBR-2",
+          "   Improved (2004 year) exp. setup \"Isomer-M\" on the",
+          " channel 11-B of IBR-2 reactor."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      },
+      {
+        "x4_code": "(CHOPS,4ZZZDUB)",
+        "free_txt": [
+          " Bent mirror neutron guide and neutron",
+          "cadmium chopper synchronized with reactor neutron",
+          " bursts cadmium \"ping-pong\"."
+        ],
+        "pointer": "0",
+        "facility_type": "(CHOPS)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(93-NP-237(N,F),DL,NU,,MXW)",
+        "children": [
+          {
+            "code": [
+              "93-NP-237",
+              [
+                "N,F"
+              ],
+              ",DL,NU,,MXW"
+            ],
+            "type": null,
+            "target": "93-NP-237",
+            "process": "N,F",
+            "sf49": ",DL,NU,,MXW",
+            "sf4": null,
+            "sf5": "DL",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -135,32 +165,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(93-NP-237(N,F),DL,NU,,MXW)",
-          "0": {
-            "code": [
-              "93-NP-237",
-              [
-                "N,F"
-              ],
-              ",DL,NU,,MXW"
-            ],
-            "type": null,
-            "target": "93-NP-237",
-            "process": "N,F",
-            "sf49": ",DL,NU,,MXW",
-            "sf4": null,
-            "sf5": "DL",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -189,8 +193,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -205,10 +209,8 @@
               " reaction of oxygen  of NpO2 sample - from 20 to 40%."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(D4PI,PROPC)",
             "free_txt": [
@@ -220,10 +222,8 @@
               " U-235 sample. EPS(prompt)/EPS(delayed)=0.76+-0.02."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
@@ -240,10 +240,8 @@
               " bursts cadmium \"ping-pong\"."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -251,10 +249,8 @@
               "        peak power - 1300 MVt."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -262,30 +258,24 @@
               "  6.E+05 n/s/cm**2."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               "  23 m flight path."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "((MONIT2),E.FORT+,J,PNE,41,385,2002)",
             "free_txt": [
               " MONIT3 Reference the same as MONIT1."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)92-U-235(N,F),PR,NU)",
             "free_txt": [
@@ -301,20 +291,16 @@
             "x4_code": "((MONIT3)93-NP-237(N,F),PR,NU)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,S.B.BORZAKOV+,J,AE,79,231,1995)",
             "free_txt": [
               " Experiment.method"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -325,10 +311,8 @@
               " 99.999%. U-235 and Pu-239 admixtures less 1.E-06."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(COREL,41366001)",
             "free_txt": []
@@ -337,8 +321,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -346,20 +330,16 @@
               "  0.0108+-0.0009, 0.0114+-0.0014, 0.0107+-0.0014."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
               "  Total Error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

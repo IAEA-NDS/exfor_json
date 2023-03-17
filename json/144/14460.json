@@ -52,39 +52,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,94,034617,2016)",
-          "free_txt": [],
-          "publication_year": "2016"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALAS)",
-          "free_txt": [
-            " Experiment performed at the Manuel",
-            "Lujan Jr. Neutron Scattering Center at the Los Alamos",
-            "Neutron Science Center."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,94,034617,2016)",
+        "free_txt": [],
+        "publication_year": "2016",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALAS)",
+        "free_txt": [
+          " Experiment performed at the Manuel",
+          "Lujan Jr. Neutron Scattering Center at the Los Alamos",
+          "Neutron Science Center."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((54-XE-136(N,G)54-XE-137,,SIG)//(54-XE-136(N,G)54-XE-137,,INT))",
-          "0": {
+      "0": {
+        "x4_code": "((54-XE-136(N,G)54-XE-137,,SIG)//(54-XE-136(N,G)54-XE-137,,INT))",
+        "children": [
+          {
             "code": [
               "54-XE-136",
               [
@@ -103,7 +98,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "54-XE-136",
               [
@@ -121,11 +116,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "//",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "//",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(54-XE-136(N,G)54-XE-137,,SIG)",
+        "children": [
+          {
+            "code": [
+              "54-XE-136",
+              [
+                "N,G"
+              ],
+              "54-XE-137,,SIG"
+            ],
+            "type": null,
+            "target": "54-XE-136",
+            "process": "N,G",
+            "sf49": "54-XE-137,,SIG",
+            "sf4": "54-XE-137",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -199,32 +229,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(54-XE-136(N,G)54-XE-137,,SIG)",
-          "0": {
-            "code": [
-              "54-XE-136",
-              [
-                "N,G"
-              ],
-              "54-XE-137,,SIG"
-            ],
-            "type": null,
-            "target": "54-XE-136",
-            "process": "N,G",
-            "sf49": "54-XE-137,,SIG",
-            "sf4": "54-XE-137",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -268,8 +272,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BAF2)",
             "free_txt": [
@@ -280,10 +284,8 @@
               "solid angle of approx. 3.5 Pi steradians."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALAS)",
             "free_txt": [
@@ -292,10 +294,8 @@
               "Neutron Science Center."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": [
@@ -304,10 +304,8 @@
               "moderated using room temperature water moderator."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -328,10 +326,8 @@
               "0.0256 eV."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(54-XE-136,ENR=0.999)",
             "free_txt": [
@@ -348,8 +344,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -387,10 +383,8 @@
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -401,18 +395,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Total uncertainty"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(13159002,R.L.Macklin,R,ORNL-TM-1766,1988)",
             "free_txt": [
@@ -420,18 +412,14 @@
               "cross section integral 58.0+/-2.9 b*eV by the author"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(54-XE-136(N,G)54-XE-137,,INT)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -44,44 +44,40 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ZET,31,169,1956)",
-          "free_txt": [
-            "  Graph is given . Issue 2 ."
-          ],
-          "publication_year": "1956"
-        },
-        {
-          "x4_code": "(J,JET,4,161,1957)",
-          "free_txt": [
-            "       Engl.translation"
-          ],
-          "publication_year": "1957"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCY,4ZZZDUB)",
-          "free_txt": [],
-          "facility_type": "(SYNCY)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ZET,31,169,1956)",
+        "free_txt": [
+          "  Graph is given . Issue 2 ."
+        ],
+        "publication_year": "1956",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JET,4,161,1957)",
+        "free_txt": [
+          "       Engl.translation"
+        ],
+        "publication_year": "1957",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCY,4ZZZDUB)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(SYNCY)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -99,11 +95,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(N,EL)1-H-1,,DA,,LEG/1K2/FCT,DERIV)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,EL"
+              ],
+              "1-H-1,,DA,,LEG/1K2/FCT,DERIV"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,EL",
+            "sf49": "1-H-1,,DA,,LEG/1K2/FCT,DERIV",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "LEG/1K2/FCT",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": " For neutron.Legendre coefficients in form of :  d/dA=(1/(4*pi**2))*(1/k**2)*SUM(A(L)*P(L)) , where k=1/lambda, lambda= wave length."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN",
@@ -234,32 +265,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,EL)1-H-1,,DA,,LEG/1K2/FCT,DERIV)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,EL"
-              ],
-              "1-H-1,,DA,,LEG/1K2/FCT,DERIV"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,EL",
-            "sf49": "1-H-1,,DA,,LEG/1K2/FCT,DERIV",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "LEG/1K2/FCT",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": " For neutron.Legendre coefficients in form of :  d/dA=(1/(4*pi**2))*(1/k**2)*SUM(A(L)*P(L)) , where k=1/lambda, lambda= wave length."
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -341,8 +346,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -350,10 +355,8 @@
               " For self-absorption."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TELES,SCIN,SCIN)",
             "free_txt": [
@@ -363,26 +366,20 @@
               " copper filters."
             ]
           }
-        ]
-      },
-      "exp-year": {
-        "0": [
+        ],
+        "exp-year": [
           {
             "x4_code": "(1954)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCY,4ZZZDUB)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-BE)",
             "free_txt": [
@@ -390,10 +387,8 @@
               "      at bombardment of Be-target with 680-MeV protons"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -404,10 +399,8 @@
               " 2.E+4 neutron/cm**2/sec."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(REC)",
             "free_txt": [
@@ -424,8 +417,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -443,10 +436,8 @@
               "range 300-400 MeV(see REL-REF of Hartzler+ for details)"
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM1,1-H-1(N,X)0-P0-0,,SIG)",
             "free_txt": [
@@ -460,10 +451,8 @@
               "        Dzhelepov+."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -483,18 +472,14 @@
               " Uncertainty in normalization."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "((MONIT1)1-H-1(N,EL)1-H-1,,SIG,,,DERIV)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,11078001,A.L.Hartzler+,J,PR,95,591,1954)",
             "free_txt": []
@@ -511,10 +496,8 @@
               "  Engl.translation ."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -523,10 +506,8 @@
               " 0.-15., 25.-60. , 60.-70. degrees, respectively ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -539,8 +520,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -548,10 +529,8 @@
               "           article."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,41224002)",
             "free_txt": []

@@ -44,52 +44,49 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AKE,13,(2),152,196804)",
-          "free_txt": [],
-          "publication_year": "1968"
-        },
-        {
-          "x4_code": "(R,IAEA-124,(1),149,197002)",
-          "free_txt": [
-            "Brief summary,no data given."
-          ],
-          "publication_year": "1970"
-        },
-        {
-          "x4_code": "(J,NIM,40,153,1966)",
-          "free_txt": [
-            " Detail of mechanical chopper."
-          ],
-          "publication_year": "1966"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CHOPS,3EGYCAI)",
-          "free_txt": [
-            "Rotar of pertinax 160mm in diam.,with 3 slits each of",
-            "3 * 25 mm2."
-          ],
-          "facility_type": "(CHOPS)",
-          "institute": "(3EGYCAI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AKE,13,(2),152,196804)",
+        "free_txt": [],
+        "publication_year": "1968",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,IAEA-124,(1),149,197002)",
+        "free_txt": [
+          "Brief summary,no data given."
+        ],
+        "publication_year": "1970",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NIM,40,153,1966)",
+        "free_txt": [
+          " Detail of mechanical chopper."
+        ],
+        "publication_year": "1966",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CHOPS,3EGYCAI)",
+        "free_txt": [
+          "Rotar of pertinax 160mm in diam.,with 3 slits each of",
+          "3 * 25 mm2."
+        ],
+        "pointer": "0",
+        "facility_type": "(CHOPS)",
+        "institute": "(3EGYCAI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-0(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(16-S-0(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "16-S-0",
               [
@@ -107,11 +104,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(16-S-0(N,TOT),,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "16-S-0",
+              [
+                "N,TOT"
+              ],
+              ",,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "16-S-0",
+            "process": "N,TOT",
+            "sf49": ",,SIG,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(16-S-0(N,EL)16-S-0,POT,SIG)",
+        "children": [
+          {
+            "code": [
+              "16-S-0",
+              [
+                "N,EL"
+              ],
+              "16-S-0,POT,SIG"
+            ],
+            "type": null,
+            "target": "16-S-0",
+            "process": "N,EL",
+            "sf49": "16-S-0,POT,SIG",
+            "sf4": "16-S-0",
+            "sf5": "POT",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "DATA-ERR"
@@ -486,32 +546,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-0(N,TOT),,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "16-S-0",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "16-S-0",
-            "process": "N,TOT",
-            "sf49": ",,SIG,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -538,32 +572,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-0(N,EL)16-S-0,POT,SIG)",
-          "0": {
-            "code": [
-              "16-S-0",
-              [
-                "N,EL"
-              ],
-              "16-S-0,POT,SIG"
-            ],
-            "type": null,
-            "target": "16-S-0",
-            "process": "N,EL",
-            "sf49": "16-S-0,POT,SIG",
-            "sf4": "16-S-0",
-            "sf5": "POT",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -604,8 +612,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -614,18 +622,14 @@
               "without sample."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(BF3)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CHOPS,3EGYCAI)",
             "free_txt": [
@@ -633,40 +637,32 @@
               "3 * 25 mm2."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               " ET-RR-1 reactor, horizontal channel."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Flight path = 5.50 m."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "Absolute, transmission."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -674,10 +670,8 @@
               "4.5 cm diameter and 18.5 g/cm2 thickness."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -688,8 +682,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -699,20 +693,16 @@
               " sig tot(0.025eV) = (1.9+-0.1) barn."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "5 PERCENT."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
@@ -722,10 +712,8 @@
               "   C= 81.574."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -738,18 +726,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No further information."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,30466002)",
             "free_txt": [
@@ -761,18 +747,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No further information."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,30466002)",
             "free_txt": [

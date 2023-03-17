@@ -75,40 +75,35 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NST,37,827,2000)",
-          "free_txt": [
-            "  Main reference, data given"
-          ],
-          "publication_year": "2000"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2JPNKTO)",
-          "free_txt": [
-            "  Pneumatic irradiating facility of Kyoto",
-            "   University Reactor (KUR)"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2JPNKTO)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NST,37,827,2000)",
+        "free_txt": [
+          "  Main reference, data given"
+        ],
+        "publication_year": "2000",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2JPNKTO)",
+        "free_txt": [
+          "  Pneumatic irradiating facility of Kyoto",
+          "   University Reactor (KUR)"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2JPNKTO)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(55-CS-137(N,G)55-CS-138-M/T,,SIG/RAT,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(55-CS-137(N,G)55-CS-138-M/T,,SIG/RAT,,SPA)",
+        "children": [
+          {
             "code": [
               "55-CS-137",
               [
@@ -126,11 +121,102 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(55-CS-137(N,G)55-CS-138,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "55-CS-137",
+              [
+                "N,G"
+              ],
+              "55-CS-138,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "55-CS-137",
+            "process": "N,G",
+            "sf49": "55-CS-138,,SIG,,SPA",
+            "sf4": "55-CS-138",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Averaged over   thermal and epithermal energy region. Cs-138m   production is taken into account"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(55-CS-137(N,G)55-CS-138,,SIG,,,RECOM)",
+        "children": [
+          {
+            "code": [
+              "55-CS-137",
+              [
+                "N,G"
+              ],
+              "55-CS-138,,SIG,,,RECOM"
+            ],
+            "type": null,
+            "target": "55-CS-137",
+            "process": "N,G",
+            "sf49": "55-CS-138,,SIG,,,RECOM",
+            "sf4": "55-CS-138",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "RECOM"
+          }
+        ],
+        "type": null,
+        "free_text": " Sigma-0   after taking into account Cs-138m production"
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(55-CS-137(N,G)55-CS-138,,SIG,,SPA,RECOM)",
+        "children": [
+          {
+            "code": [
+              "55-CS-137",
+              [
+                "N,G"
+              ],
+              "55-CS-138,,SIG,,SPA,RECOM"
+            ],
+            "type": null,
+            "target": "55-CS-137",
+            "process": "N,G",
+            "sf49": "55-CS-138,,SIG,,SPA,RECOM",
+            "sf4": "55-CS-138",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": "RECOM"
+          }
+        ],
+        "type": null,
+        "free_text": "  Averaged   over thermal+epithermal  energy region"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -157,32 +243,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(55-CS-137(N,G)55-CS-138,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "55-CS-137",
-              [
-                "N,G"
-              ],
-              "55-CS-138,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "55-CS-137",
-            "process": "N,G",
-            "sf49": "55-CS-138,,SIG,,SPA",
-            "sf4": "55-CS-138",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  Averaged over   thermal and epithermal energy region. Cs-138m   production is taken into account"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -209,32 +269,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(55-CS-137(N,G)55-CS-138,,SIG,,,RECOM)",
-          "0": {
-            "code": [
-              "55-CS-137",
-              [
-                "N,G"
-              ],
-              "55-CS-138,,SIG,,,RECOM"
-            ],
-            "type": null,
-            "target": "55-CS-137",
-            "process": "N,G",
-            "sf49": "55-CS-138,,SIG,,,RECOM",
-            "sf4": "55-CS-138",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "RECOM"
-          },
-          "type": null,
-          "free_text": " Sigma-0   after taking into account Cs-138m production"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -261,32 +295,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(55-CS-137(N,G)55-CS-138,,SIG,,SPA,RECOM)",
-          "0": {
-            "code": [
-              "55-CS-137",
-              [
-                "N,G"
-              ],
-              "55-CS-138,,SIG,,SPA,RECOM"
-            ],
-            "type": null,
-            "target": "55-CS-137",
-            "process": "N,G",
-            "sf49": "55-CS-138,,SIG,,SPA,RECOM",
-            "sf4": "55-CS-138",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": "RECOM"
-          },
-          "type": null,
-          "free_text": "  Averaged   over thermal+epithermal  energy region"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -315,8 +323,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(55-CS-137,30.1YR,DG,662.,0.851)",
             "free_txt": []
@@ -329,10 +337,8 @@
             "x4_code": "(55-CS-138-G,33.41MIN,DG,1436.,0.763)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -341,10 +347,8 @@
               "    at 1.33 MeV gamma-peak of 60Co"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -352,10 +356,8 @@
               " uncertainty of the nuclear data used in analysis"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2JPNKTO)",
             "free_txt": [
@@ -363,10 +365,8 @@
               "   University Reactor (KUR)"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -374,10 +374,8 @@
               " flux monitors"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,,H.Harada+,J,NST,27,577,1990)",
             "free_txt": [
@@ -390,10 +388,8 @@
               " Experimental details"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -402,10 +398,8 @@
               " of 1 milli-liter each and dried out"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -416,8 +410,8 @@
       }
     },
     "002": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -428,18 +422,16 @@
       }
     },
     "003": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " Thermal + epithermal neutron energy spectrum"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(COREL,22174004)",
             "free_txt": [
@@ -456,8 +448,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(DEP,22649005)",
             "free_txt": []
@@ -470,18 +462,16 @@
       }
     },
     "005": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               ".Thermal + epithermal neutron energy spectrum"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,22174002,H.Harada+,J,NST,27,577,1990)",
             "free_txt": []
@@ -490,10 +480,8 @@
             "x4_code": "(R,22737002,T.Sekine+,J,NST,30,1099,1993)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,22174002)",
             "free_txt": []

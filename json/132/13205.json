@@ -39,35 +39,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(P,GEAP-5060,196512)",
-          "free_txt": [],
-          "publication_year": "1965"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,1USAMTR)",
-          "free_txt": [],
-          "facility_type": "(REAC)",
-          "institute": "(1USAMTR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(P,GEAP-5060,196512)",
+        "free_txt": [],
+        "publication_year": "1965",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USAMTR)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USAMTR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,SPA)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -85,11 +80,74 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,ABS),,ALF,,SPA)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,ABS"
+              ],
+              ",,ALF,,SPA"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,ABS",
+            "sf49": ",,ALF,,SPA",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "ALF",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-235(N,ABS),,ALF)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,ABS"
+              ],
+              ",,ALF"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,ABS",
+            "sf49": ",,ALF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "ALF",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -153,32 +211,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,ABS),,ALF,,SPA)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,ABS"
-              ],
-              ",,ALF,,SPA"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,ABS",
-            "sf49": ",,ALF,,SPA",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "ALF",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -212,32 +244,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,ABS),,ALF)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,ABS"
-              ],
-              ",,ALF"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,ABS",
-            "sf49": ",,ALF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "ALF",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -273,26 +279,22 @@
   },
   "experimental_conditions": {
     "001": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Data uncertainty is standard deviation."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,1USAMTR)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -300,10 +302,8 @@
               "flux of 6 x 10**13 neutrons/cm2-sec (nvt=2.4 x 10**20)."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ASEP)",
             "free_txt": [
@@ -318,10 +318,8 @@
               "uranium before and after irradiation."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(92-U-234,ENR=0.004677)",
             "free_txt": [
@@ -340,10 +338,8 @@
             "x4_code": "(92-U-238,ENR=0.003087)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(RIDER)",
             "free_txt": [
@@ -354,8 +350,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -364,10 +360,8 @@
               "holdup."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -378,8 +372,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -390,8 +384,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -399,10 +393,8 @@
               "at 20 degC."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

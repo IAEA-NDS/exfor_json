@@ -50,42 +50,38 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,69,015803,200401)",
-          "free_txt": [],
-          "publication_year": "2004"
-        },
-        {
-          "x4_code": "(J,NSTS,2,358,2002)",
-          "free_txt": [],
-          "publication_year": "2002"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USAORL)",
-          "free_txt": [
-            " ORELA"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,69,015803,200401)",
+        "free_txt": [],
+        "publication_year": "2004",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NSTS,2,358,2002)",
+        "free_txt": [],
+        "publication_year": "2002",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USAORL)",
+        "free_txt": [
+          " ORELA"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(((62-SM-147(N,EL),,WID,,G)*(62-SM-147(N,A),,WID))/(62-SM-147(N,TOT),,WID))",
-          "0": {
+      "0": {
+        "x4_code": "(((62-SM-147(N,EL),,WID,,G)*(62-SM-147(N,A),,WID))/(62-SM-147(N,TOT),,WID))",
+        "children": [
+          {
             "code": [
               "62-SM-147",
               [
@@ -104,7 +100,7 @@
             "sf8": "G",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "62-SM-147",
               [
@@ -123,40 +119,75 @@
             "sf8": null,
             "sf9": null
           },
-          "2": {
+          {
             "code": "62-SM-147",
             "type": [
               "N,TOT"
             ],
             "target": "6",
             "process": "2",
-            "sf49": "-",
+            "sf49": "-,S,M,-,1,4,7",
             "sf4": "-",
-            "sf5": null,
-            "sf6": null,
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
+            "sf5": "S",
+            "sf6": "M",
+            "sf7": "-",
+            "sf8": "1",
+            "sf9": "4"
           },
-          "3": {
+          {
             "code": ",,WID",
             "type": [
               "N,TOT"
             ],
             "target": ",",
             "process": ",",
-            "sf49": "W",
+            "sf49": "W,I,D",
             "sf4": "W",
-            "sf5": null,
-            "sf6": null,
+            "sf5": "I",
+            "sf6": "D",
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(62-SM-147(N,A),,WID)",
+        "children": [
+          {
+            "code": [
+              "62-SM-147",
+              [
+                "N,A"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "62-SM-147",
+            "process": "N,A",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -600,32 +631,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(62-SM-147(N,A),,WID)",
-          "0": {
-            "code": [
-              "62-SM-147",
-              [
-                "N,A"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "62-SM-147",
-            "process": "N,A",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1719,46 +1724,38 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
               " Parallel-plate compensated ionization chamber."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USAORL)",
             "free_txt": [
               " ORELA"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "White neutron source."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,A.D.Carlson+,R,NISTIR-5177,1993)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
             "free_txt": [
@@ -1767,10 +1764,8 @@
               " standard cross section."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(62-SM-147,ENR=0.953)",
             "free_txt": [
@@ -1780,10 +1775,8 @@
               " 147 Sm; sample thickness 5.0 mg/cm2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(COREL,13841001)",
             "free_txt": [
@@ -1795,18 +1788,16 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "R-matrix analysis code SAMMY."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1817,10 +1808,8 @@
               " standard-deviation uncertainty determined by SAMMY."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1831,8 +1820,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1845,10 +1834,8 @@
               " assumed."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM1,62-SM-147(N,EL),,WID,,2G)",
             "free_txt": []
@@ -1857,10 +1844,8 @@
             "x4_code": "(ASSUM2,62-SM-147(N,G),,WID)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1872,10 +1857,8 @@
               " standard-deviation uncertainty determined by SAMMY."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,13892002)",
             "free_txt": [

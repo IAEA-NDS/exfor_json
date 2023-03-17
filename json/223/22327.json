@@ -49,40 +49,35 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,94GATLIN,1,285,199405)",
-          "free_txt": [
-            " Main ref."
-          ],
-          "publication_year": "1994"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2GERPTB)",
-          "free_txt": [
-            " The compact cyclotron CV-28 at PTB,",
-            " Braunschweig, Germany."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2GERPTB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,94GATLIN,1,285,199405)",
+        "free_txt": [
+          " Main ref."
+        ],
+        "publication_year": "1994",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2GERPTB)",
+        "free_txt": [
+          " The compact cyclotron CV-28 at PTB,",
+          " Braunschweig, Germany."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2GERPTB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(27-CO-59(N,2N)27-CO-58,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(27-CO-59(N,2N)27-CO-58,,SIG)",
+        "children": [
+          {
             "code": [
               "27-CO-59",
               [
@@ -100,11 +95,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(27-CO-59(N,A)25-MN-56,,SIG)",
+        "children": [
+          {
+            "code": [
+              "27-CO-59",
+              [
+                "N,A"
+              ],
+              "25-MN-56,,SIG"
+            ],
+            "type": null,
+            "target": "27-CO-59",
+            "process": "N,A",
+            "sf49": "25-MN-56,,SIG",
+            "sf4": "25-MN-56",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(27-CO-59(N,P)26-FE-59,,SIG)",
+        "children": [
+          {
+            "code": [
+              "27-CO-59",
+              [
+                "N,P"
+              ],
+              "26-FE-59,,SIG"
+            ],
+            "type": null,
+            "target": "27-CO-59",
+            "process": "N,P",
+            "sf49": "26-FE-59,,SIG",
+            "sf4": "26-FE-59",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -136,32 +194,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(27-CO-59(N,A)25-MN-56,,SIG)",
-          "0": {
-            "code": [
-              "27-CO-59",
-              [
-                "N,A"
-              ],
-              "25-MN-56,,SIG"
-            ],
-            "type": null,
-            "target": "27-CO-59",
-            "process": "N,A",
-            "sf49": "25-MN-56,,SIG",
-            "sf4": "25-MN-56",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -193,32 +225,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(27-CO-59(N,P)26-FE-59,,SIG)",
-          "0": {
-            "code": [
-              "27-CO-59",
-              [
-                "N,P"
-              ],
-              "26-FE-59,,SIG"
-            ],
-            "type": null,
-            "target": "27-CO-59",
-            "process": "N,P",
-            "sf49": "26-FE-59,,SIG",
-            "sf4": "26-FE-59",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -252,8 +258,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -263,30 +269,24 @@
               " For \"gas-out\" effect and breakup neutrons."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
               " A 300 cm3 HPGe detector was used."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Errors not specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2GERPTB)",
             "free_txt": [
@@ -294,10 +294,8 @@
               " Braunschweig, Germany."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": [
@@ -305,10 +303,8 @@
               " with a gas pressure of 0.2 MPa."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -318,10 +314,8 @@
               " between 134 keV at 8.1 MeV and 106 keV at 14.3 MeV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
@@ -333,28 +327,22 @@
               " detector."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-238(N,F),,SIG)",
             "free_txt": [
               "  With data from ENDF/B."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -366,8 +354,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -377,18 +365,14 @@
               "decays to the ground state."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(27-CO-58-G,70.86D,DG,810.78,.9945)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -403,16 +387,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(25-MN-56,2.5785HR,DG,846.75,.989)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -427,16 +409,14 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(26-FE-59,44.53D,DG,1099.25,.561,                 DG,1291.57,.436)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

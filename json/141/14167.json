@@ -32,32 +32,29 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(S,NUREG/CP-0004,(3),953,1979)",
-          "free_txt": [],
-          "publication_year": "1979"
-        },
-        {
-          "x4_code": "(C,77PALOALTO,2,953,1977)",
-          "free_txt": [
-            " Preliminary data."
-          ],
-          "publication_year": "1977"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(S,NUREG/CP-0004,(3),953,1979)",
+        "free_txt": [],
+        "publication_year": "1979",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,77PALOALTO,2,953,1977)",
+        "free_txt": [
+          " Preliminary data."
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((28-NI-58(N,P)27-CO-58,,SIG,,FIS)/(26-FE-54(N,P)25-MN-54,,SIG,,FIS))",
-          "0": {
+      "0": {
+        "x4_code": "((28-NI-58(N,P)27-CO-58,,SIG,,FIS)/(26-FE-54(N,P)25-MN-54,,SIG,,FIS))",
+        "children": [
+          {
             "code": [
               "28-NI-58",
               [
@@ -76,7 +73,7 @@
             "sf8": "FIS",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "26-FE-54",
               [
@@ -94,11 +91,65 @@
             "sf7": null,
             "sf8": "FIS",
             "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((28-NI-58(N,P)27-CO-58,,SIG,,FIS)/(26-FE-54(N,P)25-MN-54,,SIG,,FIS))",
+        "children": [
+          {
+            "code": [
+              "28-NI-58",
+              [
+                "N,P"
+              ],
+              "27-CO-58,,SIG,,FIS"
+            ],
+            "type": null,
+            "target": "28-NI-58",
+            "process": "N,P",
+            "sf49": "27-CO-58,,SIG,,FIS",
+            "sf4": "27-CO-58",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "FIS",
+            "sf9": null
           },
-          "type": "/",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "26-FE-54",
+              [
+                "N,P"
+              ],
+              "25-MN-54,,SIG,,FIS"
+            ],
+            "type": null,
+            "target": "26-FE-54",
+            "process": "N,P",
+            "sf49": "25-MN-54,,SIG,,FIS",
+            "sf4": "25-MN-54",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "FIS",
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -125,51 +176,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((28-NI-58(N,P)27-CO-58,,SIG,,FIS)/(26-FE-54(N,P)25-MN-54,,SIG,,FIS))",
-          "0": {
-            "code": [
-              "28-NI-58",
-              [
-                "N,P"
-              ],
-              "27-CO-58,,SIG,,FIS"
-            ],
-            "type": null,
-            "target": "28-NI-58",
-            "process": "N,P",
-            "sf49": "27-CO-58,,SIG,,FIS",
-            "sf4": "27-CO-58",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "FIS",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "26-FE-54",
-              [
-                "N,P"
-              ],
-              "25-MN-54,,SIG,,FIS"
-            ],
-            "type": null,
-            "target": "26-FE-54",
-            "process": "N,P",
-            "sf49": "25-MN-54,,SIG,,FIS",
-            "sf4": "25-MN-54",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "FIS",
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -198,18 +204,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               " 66 cm3 detector."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-SYS)",
             "free_txt": [
@@ -224,10 +228,8 @@
               "than 1%."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -239,8 +241,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(27-CO-58,,DG,810.8)",
             "free_txt": []
@@ -249,30 +251,24 @@
             "x4_code": "(25-MN-54,,DG,834.8)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,1USANBS)",
             "free_txt": [
               " NBS 235U cavity fission facility"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "U-235 fission neutron spectrum."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,INTB)",
             "free_txt": [
@@ -280,10 +276,8 @@
               "from several hours to several days."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -294,8 +288,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(27-CO-58,,DG,810.8)",
             "free_txt": []
@@ -304,20 +298,16 @@
             "x4_code": "(25-MN-54,,DG,834.8)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Cf-252 fission neutron spectrum."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,INTB)",
             "free_txt": [
@@ -327,10 +317,8 @@
               "and 54Mn, respectively."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

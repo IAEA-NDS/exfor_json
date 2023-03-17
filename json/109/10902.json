@@ -36,40 +36,36 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,76,61,8010)",
-          "free_txt": [],
-          "publication_year": "1980"
-        },
-        {
-          "x4_code": "(W,SMITH,8003)",
-          "free_txt": [],
-          "publication_year": "1980"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM)",
-          "free_txt": [
-            " ANL FAST NEUTRON GENERATOR"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,76,61,8010)",
+        "free_txt": [],
+        "publication_year": "1980",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,SMITH,8003)",
+        "free_txt": [],
+        "publication_year": "1980",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM)",
+        "free_txt": [
+          " ANL FAST NEUTRON GENERATOR"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "((30-ZN-66(N,P)29-CU-66,,SIG)/(92-U-238(N,F),,SIG))",
-          "0": {
+      "1": {
+        "x4_code": "((30-ZN-66(N,P)29-CU-66,,SIG)/(92-U-238(N,F),,SIG))",
+        "children": [
+          {
             "code": [
               "30-ZN-66",
               [
@@ -88,7 +84,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "92-U-238",
               [
@@ -106,13 +102,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(30-ZN-66(N,P)29-CU-66,,SIG)",
-          "0": {
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(30-ZN-66(N,P)29-CU-66,,SIG)",
+        "children": [
+          {
             "code": [
               "30-ZN-66",
               [
@@ -130,11 +128,18 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MONIT-ERR"
@@ -433,8 +438,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -449,18 +454,14 @@
               " -ENERGY DEPENDENCE OF ALL PARAMETERS"
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(29-CU-66,5.10MIN,DG,1039.,0.08)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -475,10 +476,8 @@
               " DEPOSIT OF DEPLETED URANIUM-238."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -496,20 +495,16 @@
               "  4-PERCENT"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM)",
             "free_txt": [
               " ANL FAST NEUTRON GENERATOR"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -524,10 +519,8 @@
               " FROM 4.7 TO 10-MEV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -536,21 +529,18 @@
               " 3-5 CM."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "2": [
+        ],
+        "monitor": [
           {
-            "x4_code": "(92-U-238(N,F),,SIG)",
+            "x4_code": null,
             "free_txt": [
-              " VALUES TAKEN FROM ENDF/B-V TO",
-              " OBTAIN ABSOLUTE CROSS SECTION VALUES."
+              "GAMMAS FROM NA-22 USED TO CALIBRATE NAI DETECTOR",
+              "PROTONS ON LI-7, B-11, AND AL-27 USED TO CALIBRATE",
+              " NEUTRON ENERGY SCALE."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -558,14 +548,23 @@
               " WITH AVERAGE MASS OF 11.5-GMS."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
               " APPROVED BY D.L.SMITH, 80/5/30."
+            ]
+          }
+        ]
+      },
+      "2": {
+        "monitor": [
+          {
+            "x4_code": "(92-U-238(N,F),,SIG)",
+            "free_txt": [
+              " VALUES TAKEN FROM ENDF/B-V TO",
+              " OBTAIN ABSOLUTE CROSS SECTION VALUES."
             ]
           }
         ]

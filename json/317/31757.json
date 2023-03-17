@@ -47,37 +47,32 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RCA,103,85,2015)",
-          "free_txt": [],
-          "publication_year": "2015"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,3BANSAV)",
-          "free_txt": [
-            " TRIGA Mark-II research reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(3BANSAV)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RCA,103,85,2015)",
+        "free_txt": [],
+        "publication_year": "2015",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,3BANSAV)",
+        "free_txt": [
+          " TRIGA Mark-II research reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(3BANSAV)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(42-MO-98(N,G)42-MO-99,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(42-MO-98(N,G)42-MO-99,,SIG)",
+        "children": [
+          {
             "code": [
               "42-MO-98",
               [
@@ -95,11 +90,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(42-MO-98(N,G)42-MO-99,,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "42-MO-98",
+              [
+                "N,G"
+              ],
+              "42-MO-99,,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "42-MO-98",
+            "process": "N,G",
+            "sf49": "42-MO-99,,SIG,,,DERIV",
+            "sf4": "42-MO-99",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-S",
@@ -173,32 +203,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(42-MO-98(N,G)42-MO-99,,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "42-MO-98",
-              [
-                "N,G"
-              ],
-              "42-MO-99,,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "42-MO-98",
-            "process": "N,G",
-            "sf49": "42-MO-99,,SIG,,,DERIV",
-            "sf4": "42-MO-99",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -227,8 +231,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -238,10 +242,8 @@
               " - neutron and gamma attenuation."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -249,20 +251,16 @@
               " 1332.5 keV of 60Co."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,3BANSAV)",
             "free_txt": [
               " TRIGA Mark-II research reactor"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -270,10 +268,8 @@
               " covered with Cd)"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -290,10 +286,8 @@
               " Si(115) single crystal slabs (1.45 x 0.53 x 19.05 cm3)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -302,10 +296,8 @@
               "Two stacks of Au-Mo-Au were prepared."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -322,8 +314,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(42-MO-99,65.98HR)",
             "free_txt": []
@@ -332,18 +324,14 @@
             "x4_code": "(43-TC-99-M,6.01HR,DG,140.5,0.890)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(79-AU-198-G,2.69D,DG,411.0,0.960)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -386,18 +374,14 @@
               "         neutron flux             (3%)"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(43-TC-99-M,DG)",
             "free_txt": []
@@ -410,8 +394,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -422,20 +406,16 @@
               " averaged."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,31757002)",
             "free_txt": [

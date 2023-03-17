@@ -72,35 +72,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,46,1873,1992)",
-          "free_txt": [],
-          "publication_year": "1992"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USABRK)",
-          "free_txt": [],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USABRK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,46,1873,1992)",
+        "free_txt": [],
+        "publication_year": "1992",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USABRK)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USABRK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(103-LR-259(0,F),PRE,FY/DE,LF+HF,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(103-LR-259(0,F),PRE,FY/DE,LF+HF,REL)",
+        "children": [
+          {
             "code": [
               "103-LR-259",
               [
@@ -118,11 +113,74 @@
             "sf7": "LF+HF",
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Total kinetic energy distribution in units of events/10 MeV"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Total kinetic energy distribution in units of events/10 MeV"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(103-LR-259(0,F)MASS,PRE,FY)",
+        "children": [
+          {
+            "code": [
+              "103-LR-259",
+              [
+                "0,F"
+              ],
+              "MASS,PRE,FY"
+            ],
+            "type": null,
+            "target": "103-LR-259",
+            "process": "0,F",
+            "sf49": "MASS,PRE,FY",
+            "sf4": "MASS",
+            "sf5": "PRE",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Pre-neutron emission fission yields"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(103-LR-259(0,F)MASS,CHN,FY)",
+        "children": [
+          {
+            "code": [
+              "103-LR-259",
+              [
+                "0,F"
+              ],
+              "MASS,CHN,FY"
+            ],
+            "type": null,
+            "target": "103-LR-259",
+            "process": "0,F",
+            "sf49": "MASS,CHN,FY",
+            "sf4": "MASS",
+            "sf5": "CHN",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Post-neutron emission fission yields"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -182,32 +240,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(103-LR-259(0,F)MASS,PRE,FY)",
-          "0": {
-            "code": [
-              "103-LR-259",
-              [
-                "0,F"
-              ],
-              "MASS,PRE,FY"
-            ],
-            "type": null,
-            "target": "103-LR-259",
-            "process": "0,F",
-            "sf49": "MASS,PRE,FY",
-            "sf4": "MASS",
-            "sf5": "PRE",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Pre-neutron emission fission yields"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -267,32 +299,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(103-LR-259(0,F)MASS,CHN,FY)",
-          "0": {
-            "code": [
-              "103-LR-259",
-              [
-                "0,F"
-              ],
-              "MASS,CHN,FY"
-            ],
-            "type": null,
-            "target": "103-LR-259",
-            "process": "0,F",
-            "sf49": "MASS,CHN,FY",
-            "sf4": "MASS",
-            "sf5": "CHN",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Post-neutron emission fission yields"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -390,16 +396,14 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(103-LR-259,6.14SEC)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SI)",
             "free_txt": [
@@ -408,18 +412,14 @@
               "above and below the wheel at 180.degr. to each other."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USABRK)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -427,10 +427,8 @@
               " and the alpha particles."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -450,18 +448,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -472,18 +468,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -494,18 +488,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

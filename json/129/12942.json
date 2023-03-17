@@ -35,35 +35,30 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,32,379,1985)",
-          "free_txt": [],
-          "publication_year": "1985"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC)",
-          "free_txt": [
-            "  ORELA"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,32,379,1985)",
+        "free_txt": [],
+        "publication_year": "1985",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC)",
+        "free_txt": [
+          "  ORELA"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(15-P-31(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(15-P-31(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "15-P-31",
               [
@@ -81,13 +76,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "((15-P-31(N,EL),,WID,,G)*(15-P-31(N,G),,WID)/(15-P-31(N,TOT),,WID))",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "((15-P-31(N,EL),,WID,,G)*(15-P-31(N,G),,WID)/(15-P-31(N,TOT),,WID))",
+        "children": [
+          {
             "code": [
               "15-P-31",
               [
@@ -106,7 +103,7 @@
             "sf8": "G",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "15-P-31",
               [
@@ -124,13 +121,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "*",
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "(15-P-31(N,TOT),,WID)",
-          "0": {
+          }
+        ],
+        "type": "*",
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "(15-P-31(N,TOT),,WID)",
+        "children": [
+          {
             "code": [
               "15-P-31",
               [
@@ -148,11 +147,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(15-P-31(N,EL),,STF,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "15-P-31",
+              [
+                "N,EL"
+              ],
+              ",,STF,,,DERIV"
+            ],
+            "type": null,
+            "target": "15-P-31",
+            "process": "N,EL",
+            "sf49": ",,STF,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "STF",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(15-P-31(N,G)15-P-32,,SIG,,MXW,DERIV)",
+        "children": [
+          {
+            "code": [
+              "15-P-31",
+              [
+                "N,G"
+              ],
+              "15-P-32,,SIG,,MXW,DERIV"
+            ],
+            "type": null,
+            "target": "15-P-31",
+            "process": "N,G",
+            "sf49": "15-P-32,,SIG,,MXW,DERIV",
+            "sf4": "15-P-32",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-2"
@@ -414,32 +476,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(15-P-31(N,EL),,STF,,,DERIV)",
-          "0": {
-            "code": [
-              "15-P-31",
-              [
-                "N,EL"
-              ],
-              ",,STF,,,DERIV"
-            ],
-            "type": null,
-            "target": "15-P-31",
-            "process": "N,EL",
-            "sf49": ",,STF,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "STF",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -471,32 +507,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(15-P-31(N,G)15-P-32,,SIG,,MXW,DERIV)",
-          "0": {
-            "code": [
-              "15-P-31",
-              [
-                "N,G"
-              ],
-              "15-P-32,,SIG,,MXW,DERIV"
-            ],
-            "type": null,
-            "target": "15-P-31",
-            "process": "N,G",
-            "sf49": "15-P-32,,SIG,,MXW,DERIV",
-            "sf4": "15-P-32",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -525,8 +535,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -535,10 +545,8 @@
               " protection, multiple scattering and background."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -547,38 +555,30 @@
               " scintillator to monitor the flux"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC)",
             "free_txt": [
               "  ORELA"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " 40 Meter vacuum flight path"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -587,10 +587,8 @@
               " 6 mm thick"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -601,16 +599,14 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(SLA)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -634,18 +630,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical error."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,12942002)",
             "free_txt": []
@@ -654,8 +648,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -663,20 +657,16 @@
               "EN-MEAN is the Maxwelian averaged temperature of 30 keV"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical error."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,12942002)",
             "free_txt": []

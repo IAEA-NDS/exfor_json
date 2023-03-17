@@ -44,37 +44,32 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JP/G,32,489,2006)",
-          "free_txt": [],
-          "publication_year": "2006"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM,2GERBOC)",
-          "free_txt": [
-            " The 4-mv tandem accelerator."
-          ],
-          "facility_type": "(DYNAM)",
-          "institute": "(2GERBOC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JP/G,32,489,2006)",
+        "free_txt": [],
+        "publication_year": "2006",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM,2GERBOC)",
+        "free_txt": [
+          " The 4-mv tandem accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(DYNAM)",
+        "institute": "(2GERBOC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(23-V-50(P,N)24-CR-50,,TTY/PY)",
-          "0": {
+      "0": {
+        "x4_code": "(23-V-50(P,N)24-CR-50,,TTY/PY)",
+        "children": [
+          {
             "code": [
               "23-V-50",
               [
@@ -92,11 +87,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Figure 1."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Figure 1."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(71-LU-176(P,N)72-HF-176,,TTY/PY)",
+        "children": [
+          {
+            "code": [
+              "71-LU-176",
+              [
+                "P,N"
+              ],
+              "72-HF-176,,TTY/PY"
+            ],
+            "type": null,
+            "target": "71-LU-176",
+            "process": "P,N",
+            "sf49": "72-HF-176,,TTY/PY",
+            "sf4": "72-HF-176",
+            "sf5": null,
+            "sf6": "TTY/PY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Figure 1."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(71-LU-176(P,N)72-HF-176,,TTY/PY,,REL)",
+        "children": [
+          {
+            "code": [
+              "71-LU-176",
+              [
+                "P,N"
+              ],
+              "72-HF-176,,TTY/PY,,REL"
+            ],
+            "type": null,
+            "target": "71-LU-176",
+            "process": "P,N",
+            "sf49": "72-HF-176,,TTY/PY,,REL",
+            "sf4": "72-HF-176",
+            "sf5": null,
+            "sf6": "TTY/PY",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Fig 3thick-target yields near the e=0.81-MeV narrowresonance."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -239,32 +297,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(71-LU-176(P,N)72-HF-176,,TTY/PY)",
-          "0": {
-            "code": [
-              "71-LU-176",
-              [
-                "P,N"
-              ],
-              "72-HF-176,,TTY/PY"
-            ],
-            "type": null,
-            "target": "71-LU-176",
-            "process": "P,N",
-            "sf49": "72-HF-176,,TTY/PY",
-            "sf4": "72-HF-176",
-            "sf5": null,
-            "sf6": "TTY/PY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Figure 1."
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -398,32 +430,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(71-LU-176(P,N)72-HF-176,,TTY/PY,,REL)",
-          "0": {
-            "code": [
-              "71-LU-176",
-              [
-                "P,N"
-              ],
-              "72-HF-176,,TTY/PY,,REL"
-            ],
-            "type": null,
-            "target": "71-LU-176",
-            "process": "P,N",
-            "sf49": "72-HF-176,,TTY/PY,,REL",
-            "sf4": "72-HF-176",
-            "sf5": null,
-            "sf6": "TTY/PY",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Fig 3thick-target yields near the e=0.81-MeV narrowresonance."
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG"
@@ -585,8 +591,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -600,10 +606,8 @@
               "and Ra-226 half-lives."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(D4PI)",
             "free_txt": [
@@ -619,10 +623,8 @@
               "Energy range."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -642,20 +644,16 @@
               " Data point reader uncertainty."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM,2GERBOC)",
             "free_txt": [
               " The 4-mv tandem accelerator."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(SITA)",
             "free_txt": []
@@ -667,10 +665,8 @@
               "secondary electrons."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,O1282001,J.CRUZ+,J,PL/B,614,181,2005)",
             "free_txt": []
@@ -681,10 +677,8 @@
               " (p,alpha) reactions on Li-7, li-6 and be-9."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -696,10 +690,8 @@
               "thickness of about 5-mm."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -710,8 +702,8 @@
       }
     },
     "002": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(COMP)",
             "free_txt": [
@@ -719,10 +711,8 @@
               "alloy relative to V-O2 insulator."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -731,10 +721,8 @@
               "V metal."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -745,8 +733,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -755,10 +743,8 @@
               "relative to the Lu(2)O(3) insulator."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -769,8 +755,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -783,10 +769,8 @@
               "on a flat plateau, which is due to the Lewis effect."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -805,10 +789,8 @@
               ".The Pd-Lu(10%) alloy as target."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,W.H.SCHULTE+,J,NIM/B,71,291,1992)",
             "free_txt": [

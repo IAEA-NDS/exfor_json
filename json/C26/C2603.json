@@ -33,39 +33,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,103,034610,2021)",
-          "free_txt": [],
-          "publication_year": "2021"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,1USALRL)",
-          "free_txt": [
-            " Experiment performed at the Center for",
-            "Accelerator Mass Spectrometry at Lawrence Livermore",
-            "National Laboratory using 10 MV tandem accelerator"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(1USALRL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,103,034610,2021)",
+        "free_txt": [],
+        "publication_year": "2021",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,1USALRL)",
+        "free_txt": [
+          " Experiment performed at the Center for",
+          "Accelerator Mass Spectrometry at Lawrence Livermore",
+          "National Laboratory using 10 MV tandem accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(1USALRL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-230(P,2N)91-PA-229,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-230(P,2N)91-PA-229,,SIG)",
+        "children": [
+          {
             "code": [
               "90-TH-230",
               [
@@ -83,11 +78,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-230(P,3N)91-PA-228,,SIG)",
+        "children": [
+          {
+            "code": [
+              "90-TH-230",
+              [
+                "P,3N"
+              ],
+              "91-PA-228,,SIG"
+            ],
+            "type": null,
+            "target": "90-TH-230",
+            "process": "P,3N",
+            "sf49": "91-PA-228,,SIG",
+            "sf4": "91-PA-228",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(90-TH-232(P,N)91-PA-232,,SIG)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "P,N"
+              ],
+              "91-PA-232,,SIG"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "P,N",
+            "sf49": "91-PA-232,,SIG",
+            "sf4": "91-PA-232",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -139,32 +197,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-230(P,3N)91-PA-228,,SIG)",
-          "0": {
-            "code": [
-              "90-TH-230",
-              [
-                "P,3N"
-              ],
-              "91-PA-228,,SIG"
-            ],
-            "type": null,
-            "target": "90-TH-230",
-            "process": "P,3N",
-            "sf49": "91-PA-228,,SIG",
-            "sf4": "91-PA-228",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -204,32 +236,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(P,N)91-PA-232,,SIG)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "P,N"
-              ],
-              "91-PA-232,,SIG"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "P,N",
-            "sf49": "91-PA-232,,SIG",
-            "sf4": "91-PA-232",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -283,8 +289,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -293,20 +299,16 @@
               " (LAPS) detector."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Source of uncertainties not described"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,1USALRL)",
             "free_txt": [
@@ -315,10 +317,8 @@
               "National Laboratory using 10 MV tandem accelerator"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,CHSEP)",
             "free_txt": [
@@ -326,18 +326,14 @@
               "              separate protactinium."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(39-Y-89(P,N)40-ZR-89,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -374,16 +370,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(91-PA-229,1.50D,DG,119.0,0.00129,                 XR,89.957,0.182,                 XR,93.35,0.293)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -394,8 +388,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(91-PA-228,19.5HR,DG,129.065,0.426,                  DG,338.320,0.076,                  DG,409.462,0.093,                  DG,911.204,0.23,                  XR,89.957,0.257,                  XR,93.350,0.419)",
             "free_txt": [
@@ -410,10 +404,8 @@
               "which is different from the value used in literature."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -424,16 +416,14 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(91-PA-232,1.31D,DG,150.059,0.104,                 DG,387.884,0.0655,                 DG,581.398,0.0618,                 DG,819.187,0.0734,                 DG,866.760,0.0734,                 DG,969.315,0.423,                 XR,94.654,0.0101,                 XR,98.434,0.0162)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

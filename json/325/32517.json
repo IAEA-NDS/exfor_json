@@ -1,7 +1,7 @@
 {
   "entry": "32517",
-  "last_updated": "2011-06-21",
-  "number_of_revisions": "5",
+  "last_updated": "2023-01-20",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19910612C)",
@@ -23,10 +23,17 @@
       "free_txt": [
         " On. DETECTOR: PS -> SCIN"
       ]
+    },
+    {
+      "x4_code": "(20220825A)",
+      "free_txt": [
+        " VT. Revision in 002.",
+        "  REFERENCE: R,INDC(CPR)-011,131,1988 added in 001"
+      ]
     }
   ],
   "bib_record": {
-    "title": "Measurement of small-angle scattering of 14.7 MeV neutrons by U-238 and Cu nuclei",
+    "title": "Measurement of small-angle scattering of 14.7 MeV neutrons by 238U and Cu nuclei",
     "authors": [
       {
         "name": "Wan Dairong"
@@ -47,26 +54,88 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JSIU,27,(1),102,199002)",
-          "free_txt": [],
-          "publication_year": "1990"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,JSIU,27,102,1990)",
+        "free_txt": [],
+        "publication_year": "1990",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(CPR)-011,131,1988)",
+        "free_txt": [],
+        "publication_year": "1988",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CCW,3CPRSIU)",
+        "free_txt": [
+          " 400 kV Cockcroft-Walton accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(CCW)",
+        "institute": "(3CPRSIU)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(92-U-238(N,EL)92-U-238,EXL,DA)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,EL"
+              ],
+              "92-U-238,EXL,DA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,EL",
+            "sf49": "92-U-238,EXL,DA",
+            "sf4": "92-U-238",
+            "sf5": "EXL",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CCW,3CPRSIU)",
-          "free_txt": [
-            " 400 kV Cockcroft-Walton accelerator"
-          ],
-          "facility_type": "(CCW)",
-          "institute": "(3CPRSIU)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(29-CU-0(N,EL)29-CU-0,,DA)",
+        "children": [
+          {
+            "code": [
+              "29-CU-0",
+              [
+                "N,EL"
+              ],
+              "29-CU-0,,DA"
+            ],
+            "type": null,
+            "target": "29-CU-0",
+            "process": "N,EL",
+            "sf49": "29-CU-0,,DA",
+            "sf4": "29-CU-0",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -91,32 +160,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,EL)92-U-238,,DA)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,EL"
-              ],
-              "92-U-238,,DA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,EL",
-            "sf49": "92-U-238,,DA",
-            "sf4": "92-U-238",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -155,32 +198,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(29-CU-0(N,EL)29-CU-0,,DA)",
-          "0": {
-            "code": [
-              "29-CU-0",
-              [
-                "N,EL"
-              ],
-              "29-CU-0,,DA"
-            ],
-            "type": null,
-            "target": "29-CU-0",
-            "process": "N,EL",
-            "sf49": "29-CU-0,,DA",
-            "sf4": "29-CU-0",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -227,8 +244,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -238,10 +255,8 @@
               " - multiple scattering."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -249,10 +264,8 @@
               " detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -271,38 +284,30 @@
               " the error of various corrections (~3%)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CCW,3CPRSIU)",
             "free_txt": [
               " 400 kV Cockcroft-Walton accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Associated particle time of flight"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -312,13 +317,31 @@
           {
             "x4_code": "(APRVD)",
             "free_txt": [
-              "Proof-copy was approved by authors"
+              " Proof-copy was approved by authors"
             ]
           }
         ]
       }
     },
-    "002": {},
+    "002": {
+      "0": {
+        "critique": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Comment by S.Simakov: possible inclusion of inelastic",
+              "scattering below Ex ~> 0.1 MeV."
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(C,,S.Simakov+,S,INDC(NDS)-0857,91,2022)",
+            "free_txt": []
+          }
+        ]
+      }
+    },
     "003": {}
   }
 }

@@ -97,40 +97,35 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PRL,96,192501,2006)",
-          "free_txt": [],
-          "publication_year": "2006"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ESTRG,2JPNAIS)",
-          "free_txt": [
-            " Electron storage ring Tsukuba",
-            " Electron Ring for Accelerating and Storage at the",
-            " National Institute of Advanced Industrial Science and",
-            " Technology."
-          ],
-          "facility_type": "(ESTRG)",
-          "institute": "(2JPNAIS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PRL,96,192501,2006)",
+        "free_txt": [],
+        "publication_year": "2006",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ESTRG,2JPNAIS)",
+        "free_txt": [
+          " Electron storage ring Tsukuba",
+          " Electron Ring for Accelerating and Storage at the",
+          " National Institute of Advanced Industrial Science and",
+          " Technology."
+        ],
+        "pointer": "0",
+        "facility_type": "(ESTRG)",
+        "institute": "(2JPNAIS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "T": {
-          "x4_code": "(73-TA-181(G,N)73-TA-180,,SIG)",
-          "0": {
+      "T": {
+        "x4_code": "(73-TA-181(G,N)73-TA-180,,SIG)",
+        "children": [
+          {
             "code": [
               "73-TA-181",
               [
@@ -148,13 +143,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "G": {
-          "x4_code": "(73-TA-181(G,N)73-TA-180-G,,SIG)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "G": {
+        "x4_code": "(73-TA-181(G,N)73-TA-180-G,,SIG)",
+        "children": [
+          {
             "code": [
               "73-TA-181",
               [
@@ -172,13 +169,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "M": {
-          "x4_code": "(73-TA-181(G,N)73-TA-180-M,,SIG)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "M": {
+        "x4_code": "(73-TA-181(G,N)73-TA-180-M,,SIG)",
+        "children": [
+          {
             "code": [
               "73-TA-181",
               [
@@ -196,11 +195,18 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -314,8 +320,93 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "M": [
+      "T": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Direct measurement."
+            ]
+          }
+        ],
+        "detector": [
+          {
+            "x4_code": "(PROPC)",
+            "free_txt": [
+              " 3He proportional counters to detect neutron."
+            ]
+          },
+          {
+            "x4_code": "(NAICR)",
+            "free_txt": [
+              " to measure the intensity of the LCS gamma-rays."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-SYS)",
+            "free_txt": [
+              " The systematic uncertainty is 4.4% (3% for",
+              " initial photon flux and 3.2% for neutron detection",
+              " efficiency)."
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(RINGR)",
+            "free_txt": [
+              " Direct neutron counting measurement of total",
+              " photoneutron cross section using 20 3He proportional",
+              " counters (three concentric rings of 4, 8, and 8",
+              " detectors) embedded at 38, 70 and 100 mm,",
+              " respectively from the axis in a polyethylene",
+              " moderator."
+            ]
+          }
+        ]
+      },
+      "G": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Direct measurement."
+            ]
+          }
+        ],
+        "detector": [
+          {
+            "x4_code": "(HPGE)",
+            "free_txt": [
+              " Hyperpure Germanium detector of planer type",
+              " with active volume of 114 cm**3 to measure the energy",
+              " distribution of the LCS gamma-rays."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-SYS)",
+            "free_txt": [
+              " The systematic uncertainty for the ground",
+              " state cross section is 4.6%."
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(ACTIV)",
+            "free_txt": [
+              " Photoactivation measurement of partial cross",
+              "section for the ground state in 181Ta."
+            ]
+          }
+        ]
+      },
+      "M": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -328,10 +419,19 @@
               "procedure was used: SIG-m = (SIG-tot) - (SIG-gs).     M"
             ]
           }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-SYS)",
+            "free_txt": [
+              " The systematic uncertainties were obtained",
+              " using the procedure specially described in text."
+            ]
+          }
         ]
       },
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -349,10 +449,8 @@
               " given."
             ]
           }
-        ]
-      },
-      "critique": {
-        "0": [
+        ],
+        "critique": [
           {
             "x4_code": null,
             "free_txt": [
@@ -360,33 +458,16 @@
               " the Table 2: Eg(MeV) must be, not Eg(mb)."
             ]
           }
-        ]
-      },
-      "detector": {
-        "G": [
+        ],
+        "err-analys": [
           {
-            "x4_code": "(HPGE)",
+            "x4_code": "(ERR-S)",
             "free_txt": [
-              " Hyperpure Germanium detector of planer type",
-              " with active volume of 114 cm**3 to measure the energy",
-              " distribution of the LCS gamma-rays."
+              " Statistical errors."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "M": [
-          {
-            "x4_code": "(ERR-SYS)",
-            "free_txt": [
-              " The systematic uncertainties were obtained",
-              " using the procedure specially described in text."
-            ]
-          }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ESTRG,2JPNAIS)",
             "free_txt": [
@@ -396,10 +477,8 @@
               " Technology."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(LCS)",
             "free_txt": [
@@ -410,21 +489,8 @@
               "half maximum."
             ]
           }
-        ]
-      },
-      "method": {
-        "G": [
-          {
-            "x4_code": "(ACTIV)",
-            "free_txt": [
-              " Photoactivation measurement of partial cross",
-              "section for the ground state in 181Ta."
-            ]
-          }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -432,10 +498,8 @@
               " 99.95%."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -452,8 +516,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -465,8 +529,16 @@
           }
         ]
       },
-      "decay-data": {
-        "M": [
+      "G": {
+        "decay-data": [
+          {
+            "x4_code": "(73-TA-180-G,8.152HR,XR,55.79,0.331,XR,54.61,0.192)",
+            "free_txt": []
+          }
+        ]
+      },
+      "M": {
+        "decay-data": [
           {
             "x4_code": "(73-TA-180-M,1.2E15YR)",
             "free_txt": []

@@ -26,37 +26,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,501,513,1989)",
-          "free_txt": [],
-          "publication_year": "1989"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,2GERKLN)",
-          "free_txt": [
-            " HVEC FN tandem Van de Graaff accelerator"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(2GERKLN)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,501,513,1989)",
+        "free_txt": [],
+        "publication_year": "1989",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,2GERKLN)",
+        "free_txt": [
+          " HVEC FN tandem Van de Graaff accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(2GERKLN)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(56-BA-138(P,EL)56-BA-138,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(56-BA-138(P,EL)56-BA-138,,DA)",
+        "children": [
+          {
             "code": [
               "56-BA-138",
               [
@@ -74,11 +69,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(56-BA-138(P,EL)56-BA-138,,POL/DA,,ANA)",
+        "children": [
+          {
+            "code": [
+              "56-BA-138",
+              [
+                "P,EL"
+              ],
+              "56-BA-138,,POL/DA,,ANA"
+            ],
+            "type": null,
+            "target": "56-BA-138",
+            "process": "P,EL",
+            "sf49": "56-BA-138,,POL/DA,,ANA",
+            "sf4": "56-BA-138",
+            "sf5": null,
+            "sf6": "POL/DA",
+            "sf7": null,
+            "sf8": "ANA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(56-BA-138(P,INL)56-BA-138,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "56-BA-138",
+              [
+                "P,INL"
+              ],
+              "56-BA-138,PAR,DA"
+            ],
+            "type": null,
+            "target": "56-BA-138",
+            "process": "P,INL",
+            "sf49": "56-BA-138,PAR,DA",
+            "sf4": "56-BA-138",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  The first 2+ collective state at an excitation energy E = 1.436 MeV"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -1691,32 +1749,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(56-BA-138(P,EL)56-BA-138,,POL/DA,,ANA)",
-          "0": {
-            "code": [
-              "56-BA-138",
-              [
-                "P,EL"
-              ],
-              "56-BA-138,,POL/DA,,ANA"
-            ],
-            "type": null,
-            "target": "56-BA-138",
-            "process": "P,EL",
-            "sf49": "56-BA-138,,POL/DA,,ANA",
-            "sf4": "56-BA-138",
-            "sf5": null,
-            "sf6": "POL/DA",
-            "sf7": null,
-            "sf8": "ANA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -3349,32 +3381,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(56-BA-138(P,INL)56-BA-138,PAR,DA)",
-          "0": {
-            "code": [
-              "56-BA-138",
-              [
-                "P,INL"
-              ],
-              "56-BA-138,PAR,DA"
-            ],
-            "type": null,
-            "target": "56-BA-138",
-            "process": "P,INL",
-            "sf49": "56-BA-138,PAR,DA",
-            "sf4": "56-BA-138",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  The first 2+ collective state at an excitation energy E = 1.436 MeV"
-        }
-      },
       "common": {
         "heads": [
           "E-LVL",
@@ -4922,8 +4928,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -4931,10 +4937,8 @@
               "are given on figs 4,5(b)."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -4949,48 +4953,38 @@
               "the scattering chamber."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information about source of uncertainty."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,2GERKLN)",
             "free_txt": [
               " HVEC FN tandem Van de Graaff accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(POLIS)",
             "free_txt": [
               " Lamb-shift source LASCO"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(BCINT)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -5004,8 +4998,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -5016,8 +5010,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -5028,8 +5022,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

@@ -35,42 +35,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,11,312,61)",
-          "free_txt": [],
-          "publication_year": "1961"
-        },
-        {
-          "x4_code": "(W,BOLLINGER,58)",
-          "free_txt": [
-            " TABULATED DATA"
-          ],
-          "publication_year": "1958"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CHOPF)",
-          "free_txt": [
-            " FAST CHOPPER"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,11,312,61)",
+        "free_txt": [],
+        "publication_year": "1961",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,BOLLINGER,58)",
+        "free_txt": [
+          " TABULATED DATA"
+        ],
+        "publication_year": "1958",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CHOPF)",
+        "free_txt": [
+          " FAST CHOPPER"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -88,11 +84,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,TOT),,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,TOT"
+              ],
+              ",,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,TOT",
+            "sf49": ",,SIG,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-235(N,ABS),,SIG,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,ABS"
+              ],
+              ",,SIG,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,ABS",
+            "sf49": ",,SIG,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -206,32 +265,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,TOT),,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,TOT",
-            "sf49": ",,SIG,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -258,32 +291,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,ABS),,SIG,,,DERIV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,ABS"
-              ],
-              ",,SIG,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,ABS",
-            "sf49": ",,SIG,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -312,34 +319,28 @@
   },
   "experimental_conditions": {
     "001": {
-      "exp-year": {
-        "0": [
+      "0": {
+        "exp-year": [
           {
             "x4_code": "(57)",
             "free_txt": []
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CHOPF)",
             "free_txt": [
               " FAST CHOPPER"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(SCSRS)",
             "free_txt": []
@@ -348,8 +349,8 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -360,18 +361,16 @@
       }
     },
     "003": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "METALLIC SAMPLE 93.18 PERCENT U-235."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,12406002)",
             "free_txt": [
@@ -382,8 +381,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -391,10 +390,8 @@
               " SCATTERING = 14 B."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,12406002)",
             "free_txt": []

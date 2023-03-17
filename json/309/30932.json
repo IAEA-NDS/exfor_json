@@ -52,34 +52,91 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JP/G,15,1025,1989)",
-          "free_txt": [
-            " Full details on experim.+analysis"
-          ],
-          "publication_year": "1989"
-        },
-        {
-          "x4_code": "(J,NIM/A,273,299,1988)",
-          "free_txt": [
-            " Detailed information",
-            "  about spectrometer, diff. cross section at 0 deg"
-          ],
-          "publication_year": "1988"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,JP/G,15,1025,1989)",
+        "free_txt": [
+          " Full details on experim.+analysis"
+        ],
+        "publication_year": "1989",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NIM/A,273,299,1988)",
+        "free_txt": [
+          " Detailed information",
+          "  about spectrometer, diff. cross section at 0 deg"
+        ],
+        "publication_year": "1988",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,3DDRROS)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(3DDRROS)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(1-H-1(N,G)1-H-2,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,G"
+              ],
+              "1-H-2,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,G",
+            "sf49": "1-H-2,,SIG",
+            "sf4": "1-H-2",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,3DDRROS)",
-          "free_txt": [],
-          "facility_type": "(VDGT)",
-          "institute": "(3DDRROS)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(N,G)1-H-2,,DA,D,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,G"
+              ],
+              "1-H-2,,DA,D,,DERIV"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,G",
+            "sf49": "1-H-2,,DA,D,,DERIV",
+            "sf4": "1-H-2",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "D",
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -104,32 +161,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,G)1-H-2,,SIG)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,G"
-              ],
-              "1-H-2,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,G",
-            "sf49": "1-H-2,,SIG",
-            "sf4": "1-H-2",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -161,32 +192,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,G)1-H-2,,DA,D,,DERIV)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,G"
-              ],
-              "1-H-2,,DA,D,,DERIV"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,G",
-            "sf49": "1-H-2,,DA,D,,DERIV",
-            "sf4": "1-H-2",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "D",
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -220,8 +225,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -243,10 +248,8 @@
               "* * * * * * * * * * * * * * * * * * * * * * * * * * *"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TELES,SCIN,SCIN)",
             "free_txt": [
@@ -267,18 +270,14 @@
               "reconstruct the neutron-deuteron angle."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,3DDRROS)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
@@ -287,10 +286,8 @@
               " 4 x 10**5 n/sec at 2 micro-a deuteron current."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,COINC,EDE,OLMS)",
             "free_txt": [
@@ -302,26 +299,20 @@
               " online and data were recorded event-by-event."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,R.KINSEY,R,BNL-NCS-17541,1979)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(D)",
             "free_txt": []
@@ -332,10 +323,8 @@
               " Elastically scattered protons."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -346,8 +335,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -357,10 +346,8 @@
               "simulation."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -371,10 +358,8 @@
               "gamma's energy in lab. system."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -395,10 +380,8 @@
               " b)Uncertainty of n-p elast. cross section   ( 1 % )"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -409,8 +392,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -423,10 +406,8 @@
               "and geometrical effects.-"
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -436,10 +417,8 @@
               "under 15.03 MeV gammas."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -454,10 +433,8 @@
               " Systematic  part     :   0.9 micro-b/sr"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

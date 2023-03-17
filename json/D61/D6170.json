@@ -35,35 +35,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JRN/L,119,(4),303,1987)",
-          "free_txt": [],
-          "publication_year": "1987"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,3INDVEC)",
-          "free_txt": [],
-          "facility_type": "(CYCLO)",
-          "institute": "(3INDVEC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JRN/L,119,(4),303,1987)",
+        "free_txt": [],
+        "publication_year": "1987",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,3INDVEC)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(3INDVEC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(37-RB-85(A,2N)39-Y-87-M/G,,SIG/RAT)",
-          "0": {
+      "0": {
+        "x4_code": "(37-RB-85(A,2N)39-Y-87-M/G,,SIG/RAT)",
+        "children": [
+          {
             "code": [
               "37-RB-85",
               [
@@ -81,11 +76,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(37-RB-85(A,3N)39-Y-86-M/G,,SIG/RAT)",
+        "children": [
+          {
+            "code": [
+              "37-RB-85",
+              [
+                "A,3N"
+              ],
+              "39-Y-86-M/G,,SIG/RAT"
+            ],
+            "type": null,
+            "target": "37-RB-85",
+            "process": "A,3N",
+            "sf49": "39-Y-86-M/G,,SIG/RAT",
+            "sf4": "39-Y-86-M/G",
+            "sf5": null,
+            "sf6": "SIG/RAT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(37-RB-85(A,N+A)37-RB-84-M/G,,SIG/RAT)",
+        "children": [
+          {
+            "code": [
+              "37-RB-85",
+              [
+                "A,N+A"
+              ],
+              "37-RB-84-M/G,,SIG/RAT"
+            ],
+            "type": null,
+            "target": "37-RB-85",
+            "process": "A,N+A",
+            "sf49": "37-RB-84-M/G,,SIG/RAT",
+            "sf4": "37-RB-84-M/G",
+            "sf5": null,
+            "sf6": "SIG/RAT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -121,32 +179,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(37-RB-85(A,3N)39-Y-86-M/G,,SIG/RAT)",
-          "0": {
-            "code": [
-              "37-RB-85",
-              [
-                "A,3N"
-              ],
-              "39-Y-86-M/G,,SIG/RAT"
-            ],
-            "type": null,
-            "target": "37-RB-85",
-            "process": "A,3N",
-            "sf49": "39-Y-86-M/G,,SIG/RAT",
-            "sf4": "39-Y-86-M/G",
-            "sf5": null,
-            "sf6": "SIG/RAT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -190,32 +222,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(37-RB-85(A,N+A)37-RB-84-M/G,,SIG/RAT)",
-          "0": {
-            "code": [
-              "37-RB-85",
-              [
-                "A,N+A"
-              ],
-              "37-RB-84-M/G,,SIG/RAT"
-            ],
-            "type": null,
-            "target": "37-RB-85",
-            "process": "A,N+A",
-            "sf49": "37-RB-84-M/G,,SIG/RAT",
-            "sf4": "37-RB-84-M/G",
-            "sf5": null,
-            "sf6": "SIG/RAT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -253,8 +259,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -268,10 +274,8 @@
               " half-lives of the isotopes being studied."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T,,10.)",
             "free_txt": [
@@ -291,18 +295,14 @@
               "  Detector efficiency                  (<5%)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,3INDVEC)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(STTA)",
             "free_txt": [
@@ -317,18 +317,14 @@
               " foil along with the target assembly."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,U.Martens+,R,KFK-1083,1969)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(13-AL-27(A,X)11-NA-24,,SIG)",
             "free_txt": [
@@ -339,20 +335,16 @@
               " tables of Martens and Schweimer"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,C.F.Williamson+,R,CEA-R-3042,1966)",
             "free_txt": [
               " Stopping power to calculate energy degradations"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -371,10 +363,8 @@
               " stopping power data of Willlamson et al."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -385,8 +375,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(39-Y-87-G,3.35D,DG,388.4,0.848,                 DG,484.9,0.922)",
             "free_txt": []
@@ -395,8 +385,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(39-Y-86-G,14.74HR,DG,627.7,0.326,                   DG,777.4,0.224,                   DG,1076.6,0.825)",
             "free_txt": []
@@ -405,8 +395,8 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(37-RB-84-M,20.26MIN,DG,248.0,0.590,                     DG,463.6,0.354)",
             "free_txt": []

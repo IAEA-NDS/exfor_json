@@ -49,40 +49,36 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,61,346,197611)",
-          "free_txt": [],
-          "publication_year": "1976"
-        },
-        {
-          "x4_code": "(P,ERDA-NDC-3,173,197605)",
-          "free_txt": [],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USAORL)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,61,346,197611)",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,ERDA-NDC-3,173,197605)",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USAORL)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(27-CO-59(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(27-CO-59(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "27-CO-59",
               [
@@ -100,13 +96,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(27-CO-59(N,EL),,WID,,2G)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(27-CO-59(N,EL),,WID,,2G)",
+        "children": [
+          {
             "code": [
               "27-CO-59",
               [
@@ -124,13 +122,15 @@
             "sf7": null,
             "sf8": "2G",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "(27-CO-59(N,G),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "(27-CO-59(N,G),,WID)",
+        "children": [
+          {
             "code": [
               "27-CO-59",
               [
@@ -148,13 +148,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "4": {
-          "x4_code": "(27-CO-59(N,G),,WID,,2G)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "4": {
+        "x4_code": "(27-CO-59(N,G),,WID,,2G)",
+        "children": [
+          {
             "code": [
               "27-CO-59",
               [
@@ -172,13 +174,15 @@
             "sf7": null,
             "sf8": "2G",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "5": {
-          "x4_code": "((27-CO-59(N,EL),,WID,,G)*(27-CO-59(N,G),,WID)/(27-CO-59(N,TOT),,WID))",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "5": {
+        "x4_code": "((27-CO-59(N,EL),,WID,,G)*(27-CO-59(N,G),,WID)/(27-CO-59(N,TOT),,WID))",
+        "children": [
+          {
             "code": [
               "27-CO-59",
               [
@@ -197,7 +201,7 @@
             "sf8": "G",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "27-CO-59",
               [
@@ -215,11 +219,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": "*",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "*",
+        "free_text": ""
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(27-CO-59(N,G)27-CO-60,,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "27-CO-59",
+              [
+                "N,G"
+              ],
+              "27-CO-60,,SIG,,AV"
+            ],
+            "type": null,
+            "target": "27-CO-59",
+            "process": "N,G",
+            "sf49": "27-CO-60,,SIG,,AV",
+            "sf4": "27-CO-60",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MOMENTUM L"
@@ -2808,32 +2847,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(27-CO-59(N,G)27-CO-60,,SIG,,AV)",
-          "0": {
-            "code": [
-              "27-CO-59",
-              [
-                "N,G"
-              ],
-              "27-CO-60,,SIG,,AV"
-            ],
-            "type": null,
-            "target": "27-CO-59",
-            "process": "N,G",
-            "sf49": "27-CO-60,,SIG,,AV",
-            "sf4": "27-CO-60",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2939,8 +2952,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2948,10 +2961,8 @@
               " multiple scattering in the sample."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -2959,18 +2970,14 @@
               " ray detectors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USAORL)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
@@ -2978,38 +2985,30 @@
               " cooled tantalum."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time-of-flight"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Metallic cobalt 0.0022 atoms/barn. 98.6% 59Co."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -3021,26 +3020,22 @@
       }
     },
     "002": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM,27-CO-59(N,EL),,WID,,2G)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -3063,8 +3058,8 @@
       }
     },
     "005": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [

@@ -521,37 +521,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,97,064603,2018)",
-          "free_txt": [],
-          "publication_year": "2018"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,2ZZZCER)",
-          "free_txt": [
-            " nTOF facility (EAR1)"
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(2ZZZCER)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,97,064603,2018)",
+        "free_txt": [],
+        "publication_year": "2018",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,2ZZZCER)",
+        "free_txt": [
+          " nTOF facility (EAR1)"
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(2ZZZCER)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(16-S-33(N,A)14-SI-30,,SIG,,TTA)",
-          "0": {
+      "0": {
+        "x4_code": "(16-S-33(N,A)14-SI-30,,SIG,,TTA)",
+        "children": [
+          {
             "code": [
               "16-S-33",
               [
@@ -569,11 +564,72 @@
             "sf7": null,
             "sf8": "TTA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "Yield divided by areal density"
-        }
+          }
+        ],
+        "type": null,
+        "free_text": "Yield divided by areal density"
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(16-S-33(N,A),,WID,,RM)",
+        "children": [
+          {
+            "code": [
+              "16-S-33",
+              [
+                "N,A"
+              ],
+              ",,WID,,RM"
+            ],
+            "type": null,
+            "target": "16-S-33",
+            "process": "N,A",
+            "sf49": ",,WID,,RM",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "RM",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(16-S-33(N,A),,WID/STR,,RM)",
+        "children": [
+          {
+            "code": [
+              "16-S-33",
+              [
+                "N,A"
+              ],
+              ",,WID/STR,,RM"
+            ],
+            "type": null,
+            "target": "16-S-33",
+            "process": "N,A",
+            "sf49": ",,WID/STR,,RM",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID/STR",
+            "sf7": null,
+            "sf8": "RM",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -4005,56 +4061,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(16-S-33(N,A),,WID,,RM)",
-          "0": {
-            "code": [
-              "16-S-33",
-              [
-                "N,A"
-              ],
-              ",,WID,,RM"
-            ],
-            "type": null,
-            "target": "16-S-33",
-            "process": "N,A",
-            "sf49": ",,WID,,RM",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "RM",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(16-S-33(N,A),,WID/STR,,RM)",
-          "0": {
-            "code": [
-              "16-S-33",
-              [
-                "N,A"
-              ],
-              ",,WID/STR,,RM"
-            ],
-            "type": null,
-            "target": "16-S-33",
-            "process": "N,A",
-            "sf49": ",,WID/STR,,RM",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID/STR",
-            "sf7": null,
-            "sf8": "RM",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -4248,8 +4254,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -4258,10 +4264,8 @@
               " into account."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
@@ -4269,40 +4273,32 @@
               " sample and a 10B (B4C) reference sample"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,2ZZZCER)",
             "free_txt": [
               " nTOF facility (EAR1)"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": [
               " 20 GeV/c proton beam on a Pb target"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Flight path of 185 m"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,C.Guerrero+,J,EPJ/A,49,27,2013)",
             "free_txt": [
@@ -4321,10 +4317,8 @@
               " Description on sample preparation and characterization"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -4338,10 +4332,8 @@
               " was confirmed."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -4352,8 +4344,8 @@
       }
     },
     "002": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -4364,10 +4356,8 @@
               " - resolution function."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -4398,26 +4388,20 @@
               " Neutron beam attenuation or scattering    (1%)"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,A.D.Carlson+,J,NDS,110,3215,2009)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(5-B-10(N,A)3-LI-7,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -4428,8 +4412,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(MLA)",
             "free_txt": [
@@ -4437,10 +4421,8 @@
               " potential scattering radius of 3.85 fm."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM1,16-S-33(N,G),,WID)",
             "free_txt": []
@@ -4449,20 +4431,16 @@
             "x4_code": "(ASSUM2,16-S-33(N,EL),,WID)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on the source of uncertainty"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -4481,20 +4459,16 @@
               " Tentavie spin-parity assignment"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,12967001,G.P.Coddens+,J,NP/A,469,480,1987)",
             "free_txt": [
               " Source of capture and elastic widths assumed"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

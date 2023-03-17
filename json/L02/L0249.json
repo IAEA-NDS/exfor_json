@@ -32,38 +32,34 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JIN,35,2621,1973)",
-          "free_txt": [
-            "#NSR: 1973CH15"
-          ],
-          "publication_year": "1973",
-          "doi": "10.1016/0022-1902(73)80491-9"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1CANTOR)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(1CANTOR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JIN,35,2621,1973)",
+        "free_txt": [
+          "#doi:10.1016/0022-1902(73)80491-9",
+          "#NSR: 1973CH15"
+        ],
+        "publication_year": "1973",
+        "pointer": "0",
+        "doi": "10.1016/0022-1902(73)80491-9"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1CANTOR)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1CANTOR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(G,F)MASS,CHN,FY,,BRA)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(G,F)MASS,CHN,FY,,BRA)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -81,11 +77,74 @@
             "sf7": null,
             "sf8": "BRA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-232(G,F)MASS,CHN,FY,,BRA)",
+        "children": [
+          {
+            "code": [
+              "90-TH-232",
+              [
+                "G,F"
+              ],
+              "MASS,CHN,FY,,BRA"
+            ],
+            "type": null,
+            "target": "90-TH-232",
+            "process": "G,F",
+            "sf49": "MASS,CHN,FY,,BRA",
+            "sf4": "MASS",
+            "sf5": "CHN",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-238(G,F)ELEM/MASS,IND,FY,,FRC/BRA)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "G,F"
+              ],
+              "ELEM/MASS,IND,FY,,FRC/BRA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "G,F",
+            "sf49": "ELEM/MASS,IND,FY,,FRC/BRA",
+            "sf4": "ELEM/MASS",
+            "sf5": "IND",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "FRC/BRA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-ERR"
@@ -967,32 +1026,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(G,F)MASS,CHN,FY,,BRA)",
-          "0": {
-            "code": [
-              "90-TH-232",
-              [
-                "G,F"
-              ],
-              "MASS,CHN,FY,,BRA"
-            ],
-            "type": null,
-            "target": "90-TH-232",
-            "process": "G,F",
-            "sf49": "MASS,CHN,FY,,BRA",
-            "sf4": "MASS",
-            "sf5": "CHN",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "BRA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR"
@@ -1496,32 +1529,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(G,F)ELEM/MASS,IND,FY,,FRC/BRA)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "G,F"
-              ],
-              "ELEM/MASS,IND,FY,,FRC/BRA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "G,F",
-            "sf49": "ELEM/MASS,IND,FY,,FRC/BRA",
-            "sf4": "ELEM/MASS",
-            "sf5": "IND",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "FRC/BRA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1654,8 +1661,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1931,10 +1938,8 @@
               "238U(g,n)reaction was taken as an internal standard."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -1943,26 +1948,20 @@
               "The detector had a peak-to-Compton ratio of 17 to 1."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1CANTOR)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -1981,10 +1980,8 @@
             "x4_code": "(CHSEP)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1995,10 +1992,8 @@
               "the spectra."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2014,8 +2009,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T,,8.)",
             "free_txt": [
@@ -2054,10 +2049,8 @@
               " Determination of absolute yields."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -2072,10 +2065,8 @@
               "followed by gamma-ray spectrometry."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2086,8 +2077,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T,,8.)",
             "free_txt": [
@@ -2126,10 +2117,8 @@
               " Determination of absolute yields."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -2140,8 +2129,8 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "((21.)51-SB-126-G,12.5D,DG,667.21,0.98)",
             "free_txt": [
@@ -2154,20 +2143,16 @@
               " CHSEP"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on sources of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

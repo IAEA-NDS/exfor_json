@@ -45,63 +45,61 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AF,29,293,196503)",
-          "free_txt": [
-            " Main reference."
-          ],
-          "publication_year": "1965"
-        },
-        {
-          "x4_code": "(C,65SALZBURG,2,57,1965)",
-          "free_txt": [
-            " Prelim. thermal value given."
-          ],
-          "publication_year": "1965"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2SWDFOA)",
-          "free_txt": [
-            " 2.5 MeV Van de Graaff for 60 keV neutrons"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2SWDFOA)"
-        },
-        {
-          "x4_code": "(VDG,2SWDAE )",
-          "free_txt": [
-            " 5 MeV Van de Graaff for 7.5 MeV neutrons."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2SWDAE )"
-        },
-        {
-          "x4_code": "(CCW,2SWDFOA)",
-          "free_txt": [
-            " Electrostatic accelerator for 14.8 MeV",
-            " neutrons."
-          ],
-          "facility_type": "(CCW)",
-          "institute": "(2SWDFOA)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AF,29,293,196503)",
+        "free_txt": [
+          " Main reference."
+        ],
+        "publication_year": "1965",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,65SALZBURG,2,57,1965)",
+        "free_txt": [
+          " Prelim. thermal value given."
+        ],
+        "publication_year": "1965",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2SWDFOA)",
+        "free_txt": [
+          " 2.5 MeV Van de Graaff for 60 keV neutrons"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2SWDFOA)"
+      },
+      {
+        "x4_code": "(VDG,2SWDAE )",
+        "free_txt": [
+          " 5 MeV Van de Graaff for 7.5 MeV neutrons."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2SWDAE )"
+      },
+      {
+        "x4_code": "(CCW,2SWDFOA)",
+        "free_txt": [
+          " Electrostatic accelerator for 14.8 MeV",
+          " neutrons."
+        ],
+        "pointer": "0",
+        "facility_type": "(CCW)",
+        "institute": "(2SWDFOA)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),PR,NU)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),PR,NU)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -119,11 +117,119 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(92-U-235(N,F),PR,NU,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",PR,NU,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",PR,NU,,,DERIV",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "((92-U-235(N,F),PR,NU,,,DERIV)/(98-CF-252(0,F),PR,NU))",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",PR,NU,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",PR,NU,,,DERIV",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          },
+          {
+            "code": [
+              "98-CF-252",
+              [
+                "0,F"
+              ],
+              ",PR,NU"
+            ],
+            "type": null,
+            "target": "98-CF-252",
+            "process": "0,F",
+            "sf49": ",PR,NU",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),PR,NU,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",PR,NU,,,DERIV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",PR,NU,,,DERIV",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MONIT",
@@ -170,75 +276,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(92-U-235(N,F),PR,NU,,,DERIV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",PR,NU,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",PR,NU,,,DERIV",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "((92-U-235(N,F),PR,NU,,,DERIV)/(98-CF-252(0,F),PR,NU))",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",PR,NU,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",PR,NU,,,DERIV",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "1": {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              ",PR,NU"
-            ],
-            "type": null,
-            "target": "98-CF-252",
-            "process": "0,F",
-            "sf49": ",PR,NU",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "MONIT     1",
@@ -292,32 +329,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),PR,NU,,,DERIV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",PR,NU,,,DERIV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",PR,NU,,,DERIV",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "MONIT",
@@ -363,8 +374,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -379,10 +390,8 @@
               "The total correction was estimated to be -0.013+-0.007"
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -390,10 +399,8 @@
               " for nu-bar(thermal)(U-235)=2.412+-0.015 is derived"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -402,10 +409,8 @@
               "scintillator for the 7.5 MeV data."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -419,10 +424,8 @@
               " Uncertainty in Cf standard"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2SWDFOA)",
             "free_txt": [
@@ -442,10 +445,8 @@
               " neutrons."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -464,10 +465,8 @@
               "      T(d,n)-reaction for 14.8 MeV neutrons"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -480,10 +479,8 @@
               "    Time of flight technique at 7.5 and 14.8 MeV"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -497,26 +494,22 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               " Nu-bar at 60 keV is not given."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(98-CF-252(0,F),PR,NU)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -527,8 +520,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -538,18 +531,8 @@
               " neutrons per MeV."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "1": [
-          {
-            "x4_code": "(98-CF-252(0,F),PR,NU)",
-            "free_txt": []
-          }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -557,11 +540,19 @@
             ]
           }
         ]
+      },
+      "1": {
+        "monitor": [
+          {
+            "x4_code": "(98-CF-252(0,F),PR,NU)",
+            "free_txt": []
+          }
+        ]
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -571,20 +562,16 @@
               " 0.085 neutrons/MeV, starting from nu-bar at 60 keV."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               ".The total correction was estimated to be 0.013+-0.007."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -595,10 +582,8 @@
               ".the 60 keV value is not given."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -607,18 +592,14 @@
               " corrections"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(98-CF-252(0,F),PR,NU)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,12326004,J.C.Hopkins+,J,NP,48,433,1963)",
             "free_txt": [
@@ -626,10 +607,8 @@
               " A.Moat,D.S.Mather,P.Fieldhouse priv.communication"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

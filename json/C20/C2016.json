@@ -29,35 +29,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JIN,38,1581,1976)",
-          "free_txt": [],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1CANMCG)",
-          "free_txt": [],
-          "facility_type": "(CYCLO)",
-          "institute": "(1CANMCG)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JIN,38,1581,1976)",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1CANMCG)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1CANMCG)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(33-AS-75(P,N)34-SE-75,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(33-AS-75(P,N)34-SE-75,,SIG)",
+        "children": [
+          {
             "code": [
               "33-AS-75",
               [
@@ -75,11 +70,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(33-AS-75(P,3N)34-SE-73,,SIG)",
+        "children": [
+          {
+            "code": [
+              "33-AS-75",
+              [
+                "P,3N"
+              ],
+              "34-SE-73,,SIG"
+            ],
+            "type": null,
+            "target": "33-AS-75",
+            "process": "P,3N",
+            "sf49": "34-SE-73,,SIG",
+            "sf4": "34-SE-73",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -145,32 +175,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(33-AS-75(P,3N)34-SE-73,,SIG)",
-          "0": {
-            "code": [
-              "33-AS-75",
-              [
-                "P,3N"
-              ],
-              "34-SE-73,,SIG"
-            ],
-            "type": null,
-            "target": "33-AS-75",
-            "process": "P,3N",
-            "sf49": "34-SE-73,,SIG",
-            "sf4": "34-SE-73",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -229,18 +233,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "Activities were obtained by analysis of decay curves"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -248,10 +250,8 @@
               "branching abundancies were made"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI,NAICR)",
             "free_txt": [
@@ -260,44 +260,28 @@
               "crystal"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1CANMCG)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "2": [
-          {
-            "x4_code": "(29-CU-65(P,X)29-CU-64,,SIG)",
-            "free_txt": []
-          }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -305,19 +289,33 @@
             ]
           }
         ]
-      }
-    },
-    "002": {
-      "decay-data": {
-        "0": [
+      },
+      "1": {
+        "monitor": [
           {
-            "x4_code": "(34-SE-75,120.0D,DG,265.0,0.57,                 DG,280.0,0.24)",
+            "x4_code": "(29-CU-63(P,N)30-ZN-63,,SIG)",
             "free_txt": []
           }
         ]
       },
-      "status": {
-        "0": [
+      "2": {
+        "monitor": [
+          {
+            "x4_code": "(29-CU-65(P,X)29-CU-64,,SIG)",
+            "free_txt": []
+          }
+        ]
+      }
+    },
+    "002": {
+      "0": {
+        "decay-data": [
+          {
+            "x4_code": "(34-SE-75,120.0D,DG,265.0,0.57,                 DG,280.0,0.24)",
+            "free_txt": []
+          }
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -328,8 +326,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(34-SE-73-M,39.0MIN,DG,254.0,0.02)",
             "free_txt": []
@@ -338,10 +336,8 @@
             "x4_code": "(34-SE-73-G,7.2HR,DG,361.0,0.97)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

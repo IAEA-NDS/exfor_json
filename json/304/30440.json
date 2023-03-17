@@ -60,44 +60,105 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(P,BARC-978,26(2),1977)",
-          "free_txt": [
-            " Final data"
-          ],
-          "publication_year": "1977"
-        },
-        {
-          "x4_code": "(T,ATHOUGIES,1977)",
-          "free_txt": [
-            " Experimental details"
-          ],
-          "publication_year": "1977"
-        },
-        {
-          "x4_code": "(P,INDC(SEC)-61,95,1977)",
-          "free_txt": [
-            " Preliminary data"
-          ],
-          "publication_year": "1977"
-        },
-        {
-          "x4_code": "(C,76AHMEDABA,2,(19B),116,1976)",
-          "free_txt": [
-            " Preliminary data"
-          ],
-          "publication_year": "1976"
-        },
-        {
-          "x4_code": "(C,77TOKYO,,750,1977)",
-          "free_txt": [
-            " M.K.Mehta+, Short description."
-          ],
-          "publication_year": "1977"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(P,BARC-978,26(2),1977)",
+        "free_txt": [
+          " Final data"
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(T,ATHOUGIES,1977)",
+        "free_txt": [
+          " Experimental details"
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,INDC(SEC)-61,95,1977)",
+        "free_txt": [
+          " Preliminary data"
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,76AHMEDABA,2,(19B),116,1976)",
+        "free_txt": [
+          " Preliminary data"
+        ],
+        "publication_year": "1976",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,77TOKYO,,750,1977)",
+        "free_txt": [
+          " M.K.Mehta+, Short description."
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(92-U-238(N,INL+F),PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,INL+F"
+              ],
+              ",PAR,SIG"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,INL+F",
+            "sf49": ",PAR,SIG",
+            "sf4": null,
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Delayed fission cross-section thru U-238(n,n')U-238(SF)"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,G+F),PAR,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,G+F"
+              ],
+              ",PAR,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,G+F",
+            "sf49": ",PAR,SIG",
+            "sf4": null,
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Delayed fission cross-section thru U-235(n,g)U-236(SF)."
+      }
     }
   },
   "data_tables": {
@@ -137,32 +198,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,INL+F),PAR,SIG)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,INL+F"
-              ],
-              ",PAR,SIG"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,INL+F",
-            "sf49": ",PAR,SIG",
-            "sf4": null,
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Delayed fission cross-section thru U-238(n,n')U-238(SF)"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -189,32 +224,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,G+F),PAR,SIG)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,G+F"
-              ],
-              ",PAR,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,G+F",
-            "sf49": ",PAR,SIG",
-            "sf4": null,
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Delayed fission cross-section thru U-235(n,g)U-236(SF)."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -243,8 +252,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -252,10 +261,8 @@
               "decay in flight"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TRD)",
             "free_txt": [
@@ -273,10 +280,8 @@
               "spontaneous fission nu(bar) = 3.729+-0.015."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -309,18 +314,14 @@
               "-statistical errors"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -331,20 +332,16 @@
               "ized mylar."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(FF)",
             "free_txt": [
               " Delayed fission fragments"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -352,10 +349,8 @@
               "secured to detector with cellotape"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -368,8 +363,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(92-U-238-L,195.NSEC,SF,,0.04)",
             "free_txt": [
@@ -377,10 +372,8 @@
               "Table of Isotopes."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E-LVL,92-U-238-L)",
             "free_txt": [
@@ -388,10 +381,8 @@
               " isotopes."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CCW,3INDTAT)",
             "free_txt": [
@@ -399,10 +390,8 @@
               "at Tata Institute of Fundemental Research, India"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -413,16 +402,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(92-U-236-L,105.NSEC,SF)",
             "free_txt": []
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E-LVL,92-U-236-L)",
             "free_txt": [
@@ -430,10 +417,8 @@
               "Isotopes."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,3INDITK)",
             "free_txt": [
@@ -441,10 +426,8 @@
               "of Technology, India"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [

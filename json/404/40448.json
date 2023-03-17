@@ -1,12 +1,12 @@
 {
   "entry": "40448",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "4",
+  "last_updated": "2023-01-18b",
+  "number_of_revisions": "7",
   "histories": [
     {
       "x4_code": "(19830926C)",
       "free_txt": [
-        " SIMILAR TO THE ENTRY 80036"
+        " Similar to the ENTRY 80036"
       ]
     },
     {
@@ -15,10 +15,16 @@
         " Correction according to Memo CP-E/70,",
         "             dates were corrected,MONITs were corrected"
       ]
+    },
+    {
+      "x4_code": "(20220722A)",
+      "free_txt": [
+        " Update for current rules and dictionaries."
+      ]
     }
   ],
   "bib_record": {
-    "title": "MEASUREMENT OF RADIATIVE CAPTURE CROSS SECTIONS OF FAST NEUTRONS, USING GALLIUM ISOTOPES.",
+    "title": "Measurement of the fast neutron radiative capture cross-sections of gallium isotopes",
     "authors": [
       {
         "name": "Yu.Ya.Stavisskii"
@@ -33,70 +39,50 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AE,7,(3),259,195909)",
-          "free_txt": [],
-          "publication_year": "1959"
-        },
-        {
-          "x4_code": "(J,SJA,7,750,1961)",
-          "free_txt": [],
-          "publication_year": "1961"
-        },
-        {
-          "x4_code": "(J,JNE/A,12,132,1960)",
-          "free_txt": [],
-          "publication_year": "1960"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG)",
-          "free_txt": []
-        }
-      ]
-    }
-  },
-  "data_tables": {
-    "001": {
-      "common": {
-        "heads": [
-          "EN-NRM",
-          "MONIT3",
-          "MONIT3-ERR",
-          "ERR-S"
+    "references": [
+      {
+        "x4_code": "(J,JNE/A,12,132,1960)",
+        "free_txt": [
+          " Engl.translation of AE,7,259,1959"
         ],
-        "units": [
-          "EV",
-          "B",
-          "B",
-          "PER-CENT"
+        "publication_year": "1960",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,AE,7,259,1959)",
+        "free_txt": [
+          " Issue 3."
         ],
-        "data": [
-          [
-            0.0253
-          ],
-          [
-            5.6
-          ],
-          [
-            0.3
-          ],
-          [
-            4.0
-          ]
-        ]
+        "publication_year": "1959",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SJA,7,750,1961)",
+        "free_txt": [
+          " Engl.translation of AE,7,259,1959"
+        ],
+        "publication_year": "1961",
+        "pointer": "0"
       }
-    },
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4RUSFEI)",
+        "free_txt": [
+          " Experimental fast reactor."
+        ],
+        "pointer": "2",
+        "facility_type": "(REAC)",
+        "institute": "(4RUSFEI)"
+      }
+    ]
+  },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(31-GA-69(N,G)31-GA-70,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(31-GA-69(N,G)31-GA-70,,SIG)",
+        "children": [
+          {
             "code": [
               "31-GA-69",
               [
@@ -114,11 +100,68 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(31-GA-71(N,G)31-GA-72,,SIG)",
+        "children": [
+          {
+            "code": [
+              "31-GA-71",
+              [
+                "N,G"
+              ],
+              "31-GA-72,,SIG"
+            ],
+            "type": null,
+            "target": "31-GA-71",
+            "process": "N,G",
+            "sf49": "31-GA-72,,SIG",
+            "sf4": "31-GA-72",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": {
+        "heads": [
+          "EN-NRM",
+          "MONIT3",
+          "MONIT3-ERR"
+        ],
+        "units": [
+          "EV",
+          "B",
+          "B"
+        ],
+        "data": [
+          [
+            0.0253
+          ],
+          [
+            5.6
+          ],
+          [
+            0.3
+          ]
+        ]
+      }
+    },
+    "002": {
       "common": {
         "heads": [
           "MONIT2",
@@ -140,7 +183,7 @@
       "data": {
         "heads": [
           "EN",
-          "EN-RSL",
+          "EN-RSL-HW",
           "DATA",
           "DATA-ERR"
         ],
@@ -223,32 +266,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(31-GA-71(N,G)31-GA-72,,SIG)",
-          "0": {
-            "code": [
-              "31-GA-71",
-              [
-                "N,G"
-              ],
-              "31-GA-72,,SIG"
-            ],
-            "type": null,
-            "target": "31-GA-71",
-            "process": "N,G",
-            "sf49": "31-GA-72,,SIG",
-            "sf4": "31-GA-72",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "MONIT2",
@@ -270,7 +287,7 @@
       "data": {
         "heads": [
           "EN",
-          "EN-RSL-FW",
+          "EN-RSL-HW",
           "DATA",
           "DATA-ERR"
         ],
@@ -323,66 +340,53 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
-              "  CADMIUM DIFFERENCE METHOD WAS USED"
+              "  Cadmium difference method was used"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "detector": [
           {
-            "x4_code": "(ERR-S)",
+            "x4_code": null,
             "free_txt": [
-              " STATISTICAL ERROR 3-4 PERCENT."
+              "  End-window counters to measure induced activity."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "err-analys": [
           {
-            "x4_code": "(VDG)",
-            "free_txt": []
-          }
-        ]
-      },
-      "inc-source": {
-        "0": [
-          {
-            "x4_code": "(P-T)",
-            "free_txt": []
+            "x4_code": "(ERR-S,3.,4.)",
+            "free_txt": [
+              " Statistical error 3-4 %."
+            ]
           },
           {
-            "x4_code": "(THCOL)",
-            "free_txt": []
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty was not explained by",
+              "the authors."
+            ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
-            "x4_code": "((MONIT1)12028003,H.C.MARTIN+,J,PR,89,1302,1953)",
+            "x4_code": "((MONIT1)12028003,H.C.Martin+,J,PR,89,1302,1953)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
-            "x4_code": "((MONIT1)53-I-127(N,G)53-I-128,,SIG)",
+            "x4_code": "(53-I-127(N,G)53-I-128,,SIG)",
             "free_txt": [
               " for fast neutrons"
             ]
@@ -395,33 +399,87 @@
           }
         ]
       },
-      "status": {
-        "0": [
+      "1": {
+        "facility": [
           {
-            "x4_code": "(APRVD)",
+            "x4_code": "(VDG,4RUSFEI)",
+            "free_txt": []
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(P-T)",
             "free_txt": [
-              "   TOLSTIKOV 198309"
+              "    Fast neutrons."
+            ]
+          }
+        ]
+      },
+      "2": {
+        "facility": [
+          {
+            "x4_code": "(REAC,4RUSFEI)",
+            "free_txt": [
+              " Experimental fast reactor."
+            ]
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(THCOL)",
+            "free_txt": [
+              "  Thermal neutrons."
             ]
           }
         ]
       }
     },
     "002": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": "((MONIT2)31-GA-69(N,G)31-GA-70,,SIG)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(APRVD)",
+            "free_txt": [
+              "   Tolstikov 1983-09."
+            ]
+          },
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Data from author.",
+              " Given on Fig.1 of JNE/A,12,132,1960"
+            ]
           }
         ]
       }
     },
     "003": {
-      "monitor": {
-        "0": [
+      "0": {
+        "monitor": [
           {
             "x4_code": "((MONIT2)31-GA-71(N,G)31-GA-72,,SIG)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(APRVD)",
+            "free_txt": [
+              "   Tolstikov 1983-09."
+            ]
+          },
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Data from author.",
+              " Given on Fig.1 of JNE/A,12,132,1960"
+            ]
           }
         ]
       }

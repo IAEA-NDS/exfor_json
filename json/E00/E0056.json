@@ -40,37 +40,32 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,230,(1),98,197409)",
-          "free_txt": [],
-          "publication_year": "1974"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2JPNTOK)",
-          "free_txt": [
-            " Institute for Nuclear Study"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2JPNTOK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,230,(1),98,197409)",
+        "free_txt": [],
+        "publication_year": "1974",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2JPNTOK)",
+        "free_txt": [
+          " Institute for Nuclear Study"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2JPNTOK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(P,3N)84-PO-207,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(83-BI-209(P,3N)84-PO-207,,SIG)",
+        "children": [
+          {
             "code": [
               "83-BI-209",
               [
@@ -88,11 +83,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(83-BI-209(P,4N)84-PO-206,,SIG)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "P,4N"
+              ],
+              "84-PO-206,,SIG"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "P,4N",
+            "sf49": "84-PO-206,,SIG",
+            "sf4": "84-PO-206",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(83-BI-209(P,X)83-BI-206,IND,SIG)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "P,X"
+              ],
+              "83-BI-206,IND,SIG"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "P,X",
+            "sf49": "83-BI-206,IND,SIG",
+            "sf4": "83-BI-206",
+            "sf5": "IND",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -161,32 +219,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(P,4N)84-PO-206,,SIG)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "P,4N"
-              ],
-              "84-PO-206,,SIG"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "P,4N",
-            "sf49": "84-PO-206,,SIG",
-            "sf4": "84-PO-206",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -258,32 +290,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(P,X)83-BI-206,IND,SIG)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "P,X"
-              ],
-              "83-BI-206,IND,SIG"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "P,X",
-            "sf49": "83-BI-206,IND,SIG",
-            "sf4": "83-BI-206",
-            "sf5": "IND",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -348,8 +354,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -365,40 +371,32 @@
               "       model)"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               " To measure residual activities"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2JPNTOK)",
             "free_txt": [
               " Institute for Nuclear Study"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -421,10 +419,8 @@
               "       1968)]"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -440,26 +436,22 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(84-PO-207,,DG,405.7,,            DG,742.6,,            DG,911.)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,G.Astner+,J,NP,140,(3),643,197001)",
             "free_txt": [
               "Relative gamma-intensities in this reference referred"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -470,16 +462,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(84-PO-206,,DG,286.,,            DG,338.5,,            DG,807.,,            DG,1032.)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -490,8 +480,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -500,18 +490,14 @@
               "206Bi."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(83-BI-206,,DG,187.,,            DG,802.,,            DG,880.,,            DG,1098.,,            DG,1719.)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

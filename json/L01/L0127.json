@@ -42,54 +42,51 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,IZV,27,866,1963)",
-          "free_txt": [
-            " Primary reference."
-          ],
-          "publication_year": "1963"
-        },
-        {
-          "x4_code": "(J,BAS,27,856,1964)",
-          "free_txt": [
-            " English translation."
-          ],
-          "publication_year": "1964"
-        },
-        {
-          "x4_code": "(J,JET,16,50,1963)",
-          "free_txt": [
-            " 16O data only."
-          ],
-          "publication_year": "1963"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,4RUSLEB)",
-          "free_txt": [
-            " The 250-MeV synchrotron of the Physics",
-            "Institute of the Academy of Sciences."
-          ],
-          "facility_type": "(SYNCH)",
-          "institute": "(4RUSLEB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,IZV,27,866,1963)",
+        "free_txt": [
+          " Primary reference."
+        ],
+        "publication_year": "1963",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,BAS,27,856,1964)",
+        "free_txt": [
+          " English translation."
+        ],
+        "publication_year": "1964",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JET,16,50,1963)",
+        "free_txt": [
+          " 16O data only."
+        ],
+        "publication_year": "1963",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,4RUSLEB)",
+        "free_txt": [
+          " The 250-MeV synchrotron of the Physics",
+          "Institute of the Academy of Sciences."
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(4RUSLEB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(G,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(8-O-16(G,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "8-O-16",
               [
@@ -107,11 +104,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(8-O-16(G,TOT),,INT)",
+        "children": [
+          {
+            "code": [
+              "8-O-16",
+              [
+                "G,TOT"
+              ],
+              ",,INT"
+            ],
+            "type": null,
+            "target": "8-O-16",
+            "process": "G,TOT",
+            "sf49": ",,INT",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-12(G,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "G,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "G,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-S"
@@ -471,32 +531,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(8-O-16(G,TOT),,INT)",
-          "0": {
-            "code": [
-              "8-O-16",
-              [
-                "G,TOT"
-              ],
-              ",,INT"
-            ],
-            "type": null,
-            "target": "8-O-16",
-            "process": "G,TOT",
-            "sf49": ",,INT",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-MIN",
@@ -540,32 +574,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(G,TOT),,SIG)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "G,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "G,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -834,8 +842,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BPAIR)",
             "free_txt": [
@@ -849,10 +857,8 @@
               "thin wall ionization chamber."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,4RUSLEB)",
             "free_txt": [
@@ -860,18 +866,14 @@
               "Institute of the Academy of Sciences."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TRN)",
             "free_txt": []
@@ -880,8 +882,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -895,20 +897,16 @@
               " Statistical accuracy of each point."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Distilled water of thickness of 100 g/cm2 (1 m)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -919,18 +917,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No details on sources of uncertainties."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,L0127002)",
             "free_txt": []
@@ -945,8 +941,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -954,20 +950,16 @@
               "values (standard deviations)."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Graphite of thickness of 100 g/cm2 (1 m)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

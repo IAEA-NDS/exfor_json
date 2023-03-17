@@ -26,39 +26,35 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,66,231,1944)",
-          "free_txt": [
-            "#doi:10.1103/PhysRev.66.231"
-          ],
-          "publication_year": "1944"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USAMIT)",
-          "free_txt": [
-            " MIT cyclotron."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USAMIT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,66,231,1944)",
+        "free_txt": [
+          "#doi:10.1103/PhysRev.66.231"
+        ],
+        "publication_year": "1944",
+        "pointer": "0",
+        "doi": "10.1103/PhysRev.66.231"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USAMIT)",
+        "free_txt": [
+          " MIT cyclotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USAMIT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(11-NA-23(D,P)11-NA-24,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(11-NA-23(D,P)11-NA-24,,SIG)",
+        "children": [
+          {
             "code": [
               "11-NA-23",
               [
@@ -76,11 +72,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(35-BR-81(D,P)35-BR-82,,SIG)",
+        "children": [
+          {
+            "code": [
+              "35-BR-81",
+              [
+                "D,P"
+              ],
+              "35-BR-82,,SIG"
+            ],
+            "type": null,
+            "target": "35-BR-81",
+            "process": "D,P",
+            "sf49": "35-BR-82,,SIG",
+            "sf4": "35-BR-82",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(35-BR-79(D,2N)36-KR-79,,SIG,,REL)",
+        "children": [
+          {
+            "code": [
+              "35-BR-79",
+              [
+                "D,2N"
+              ],
+              "36-KR-79,,SIG,,REL"
+            ],
+            "type": null,
+            "target": "35-BR-79",
+            "process": "D,2N",
+            "sf49": "36-KR-79,,SIG,,REL",
+            "sf4": "36-KR-79",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -156,32 +215,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(35-BR-81(D,P)35-BR-82,,SIG)",
-          "0": {
-            "code": [
-              "35-BR-81",
-              [
-                "D,P"
-              ],
-              "35-BR-82,,SIG"
-            ],
-            "type": null,
-            "target": "35-BR-81",
-            "process": "D,P",
-            "sf49": "35-BR-82,,SIG",
-            "sf4": "35-BR-82",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -239,32 +272,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(35-BR-79(D,2N)36-KR-79,,SIG,,REL)",
-          "0": {
-            "code": [
-              "35-BR-79",
-              [
-                "D,2N"
-              ],
-              "36-KR-79,,SIG,,REL"
-            ],
-            "type": null,
-            "target": "35-BR-79",
-            "process": "D,2N",
-            "sf49": "36-KR-79,,SIG,,REL",
-            "sf4": "36-KR-79",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -324,8 +331,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -333,20 +340,16 @@
               "cathode ray gamma ray counter."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USAMIT)",
             "free_txt": [
               " MIT cyclotron."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,TTM,CHSEP)",
             "free_txt": [
@@ -366,10 +369,8 @@
               "foils in water."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -384,16 +385,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(11-NA-24,14.8HR,B-)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -404,16 +403,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(35-BR-82-G,34.0HR,B-)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -424,8 +421,8 @@
       }
     },
     "004": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -439,18 +436,14 @@
               "the (d,4n) reaction which has a much higher threshold."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(36-KR-79-G,34.0HR,DG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

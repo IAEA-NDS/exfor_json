@@ -38,37 +38,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,9,531,1974)",
-          "free_txt": [
-            "#doi:10.1103/PhysRevC.9.531"
-          ],
-          "publication_year": "1974"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1CANSAS)",
-          "free_txt": [],
-          "facility_type": "(LINAC)",
-          "institute": "(1CANSAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,9,531,1974)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.9.531"
+        ],
+        "publication_year": "1974",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.9.531"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1CANSAS)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1CANSAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(G,N)1-H-1,,DA,,BRS)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-2(G,N)1-H-1,,DA,,BRS)",
+        "children": [
+          {
             "code": [
               "1-H-2",
               [
@@ -86,11 +82,74 @@
             "sf7": null,
             "sf8": "BRS",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-2(G,N)1-H-1,,DA,,BRS)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "G,N"
+              ],
+              "1-H-1,,DA,,BRS"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "G,N",
+            "sf49": "1-H-1,,DA,,BRS",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-2(G,N)1-H-1,,SIG,,BRS)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "G,N"
+              ],
+              "1-H-1,,SIG,,BRS"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "G,N",
+            "sf49": "1-H-1,,SIG,,BRS",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Total cross section results determined fromthe  angular  distribution  data combined in  1.0 MeVintervals."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN",
@@ -239,32 +298,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(G,N)1-H-1,,DA,,BRS)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "G,N"
-              ],
-              "1-H-1,,DA,,BRS"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "G,N",
-            "sf49": "1-H-1,,DA,,BRS",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -359,32 +392,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(G,N)1-H-1,,SIG,,BRS)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "G,N"
-              ],
-              "1-H-1,,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "G,N",
-            "sf49": "1-H-1,,SIG,,BRS",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Total cross section results determined fromthe  angular  distribution  data combined in  1.0 MeVintervals."
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -478,8 +485,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -491,10 +498,8 @@
               " the virtual photon spectrum technique."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -508,10 +513,8 @@
               " degrees was also measured."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(MAGSP,SOLST)",
             "free_txt": [
@@ -520,44 +523,34 @@
               " doublefocusing magnet."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1CANSAS)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(VPH)",
             "free_txt": [
               " Virtual photons."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(MAGFR)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -571,18 +564,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical errors only."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -595,10 +586,8 @@
               " Electron energy Ee = 29.7 (0.25) MeV."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -609,18 +598,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical errors only."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -631,8 +618,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -672,10 +659,8 @@
               " real photon contamination - about 4.6 %."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,M0462002)",
             "free_txt": []

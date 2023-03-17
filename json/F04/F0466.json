@@ -1,15 +1,21 @@
 {
   "entry": "F0466",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2022-12-23",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19920921C)",
       "free_txt": []
+    },
+    {
+      "x4_code": "(20220609A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
+      ]
     }
   ],
   "bib_record": {
-    "title": "A study of the reaction 11B(3He,g0)14N in the energy range E(3He) = 0.9 - 2.6 MeV",
+    "title": "A study of the reaction 11B(3He,gamma0)14N in the energy range E(3He) = 0.9 - 2.6 MeV",
     "authors": [
       {
         "name": "J.L.Black"
@@ -30,22 +36,52 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,153,233,197009)",
-          "free_txt": [],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG)",
-          "free_txt": []
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,NP/A,153,233,1970)",
+        "free_txt": [],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,3AULCBR)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(3AULCBR)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(5-B-11(HE3,G)7-N-14,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "5-B-11",
+              [
+                "HE3,G"
+              ],
+              "7-N-14,PAR,DA"
+            ],
+            "type": null,
+            "target": "5-B-11",
+            "process": "HE3,G",
+            "sf49": "7-N-14,PAR,DA",
+            "sf4": "7-N-14",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -53,38 +89,12 @@
       "common": null
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-11(HE3,G)7-N-14,PAR,DA,,,EXP)",
-          "0": {
-            "code": [
-              "5-B-11",
-              [
-                "HE3,G"
-              ],
-              "7-N-14,PAR,DA,,,EXP"
-            ],
-            "type": null,
-            "target": "5-B-11",
-            "process": "HE3,G",
-            "sf49": "7-N-14,PAR,DA,,,EXP",
-            "sf4": "7-N-14",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EXP"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
-          "EN-ERR",
-          "ANG",
           "E-LVL",
-          "DATA-ERR1"
+          "ANG",
+          "EN-ERR-DIG",
+          "ERR-1"
         ],
         "units": [
           "MEV",
@@ -94,13 +104,13 @@
         ],
         "data": [
           [
-            0.01
+            0.0
           ],
           [
             90.0
           ],
           [
-            0.0
+            0.01
           ],
           [
             15.0
@@ -115,16 +125,16 @@
         ],
         "units": [
           "MEV",
-          "MB/SR",
-          "MB/SR"
+          "MU-B/SR",
+          "MU-B/SR"
         ],
         "data": [
           [
-            0.8912,
-            0.9319,
-            0.9443,
-            0.9855,
-            0.9979,
+            0.891,
+            0.932,
+            0.944,
+            0.986,
+            0.998,
             1.025,
             1.051,
             1.078,
@@ -338,8 +348,24 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "The absolute cross-section scale was obtained by",
+              "measuring spectra for the reaction 11B(p,gamma) 12C,",
+              "taken with the same target and the same geometry as",
+              "were used for the 11B(3He,gamma) 14N experiment. The",
+              "11B(p,gamma) spectra were taken at Ep = 1.42 MeV, at",
+              "the peak of the broad (Gcm = 1.15 MeV),",
+              "Eexc = 17.26 MeV, resonance. The absolute cross-section",
+              "measurements of Segel etc.(see REL-REF) were used for",
+              "an absolute normalisation."
+            ]
+          }
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -347,30 +373,30 @@
               "coupled to a 60 AVP twelve-stage phototube."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,3AULCBR)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "method": [
           {
-            "x4_code": "(,SEGEL+,J,PR/B,139,818,196508)",
+            "x4_code": "(BCINT)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(M,F0332001,R.E.Segel+,J,PR,139,B818,1965)",
+            "free_txt": []
+          }
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "The targets, of thickness approximately 25 mu-g/cm2,",
+              "The targets, of thickness approximately 25 ug/cm2,",
               "were obtained by electrongun evaporation of",
               "isotopically enriched (>99%) 11B onto thick copper",
               "or tungsten backings."
@@ -380,47 +406,30 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
-          {
-            "x4_code": "(E-LVL,7-N-14)",
-            "free_txt": []
-          }
-        ]
-      },
-      "err-analys": {
-        "0": [
-          {
-            "x4_code": "(EN-ERR)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          },
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " From graphic bars and digitizing error",
-              "The error bars include the statistical errors of the",
-              "summed peak and the cosmic ray background, and in",
-              "addition the error resulting from the normalization",
-              "of sections of the exitation functions against each",
-              "other."
+              " The error bars include the statistical",
+              "errors of the summed peak and the cosmic ray",
+              "background, and in addition the error resulting from",
+              "the normalization of sections of the excitation",
+              "functions against each other."
             ]
           },
           {
-            "x4_code": "(DATA-ERR1)",
+            "x4_code": "(ERR-1)",
             "free_txt": [
-              " Absolute error"
+              " Normalization error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
-              " Fig.2"
+              " Fig.2 from Nucl.Phys.,A153(1970)233"
             ]
           }
         ]

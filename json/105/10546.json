@@ -66,45 +66,42 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,58,291,197511)",
-          "free_txt": [],
-          "publication_year": "1975"
-        },
-        {
-          "x4_code": "(T,RUNDBERG,1978)",
-          "free_txt": [],
-          "publication_year": "1978"
-        },
-        {
-          "x4_code": "(C,75WASH,2,792,197503)",
-          "free_txt": [],
-          "publication_year": "1975"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,1USABNL)",
-          "free_txt": [],
-          "facility_type": "(REAC)",
-          "institute": "(1USABNL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,58,291,197511)",
+        "free_txt": [],
+        "publication_year": "1975",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(T,RUNDBERG,1978)",
+        "free_txt": [],
+        "publication_year": "1978",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,75WASH,2,792,197503)",
+        "free_txt": [],
+        "publication_year": "1975",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USABNL)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USABNL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(11-NA-22(N,ABS),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(11-NA-22(N,ABS),,SIG)",
+        "children": [
+          {
             "code": [
               "11-NA-22",
               [
@@ -122,11 +119,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(11-NA-22(N,ABS),,RI,,RNV)",
+        "children": [
+          {
+            "code": [
+              "11-NA-22",
+              [
+                "N,ABS"
+              ],
+              ",,RI,,RNV"
+            ],
+            "type": null,
+            "target": "11-NA-22",
+            "process": "N,ABS",
+            "sf49": ",,RI,,RNV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": "RNV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(53-I-126(N,ABS),,SIG)",
+        "children": [
+          {
+            "code": [
+              "53-I-126",
+              [
+                "N,ABS"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "53-I-126",
+            "process": "N,ABS",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -153,32 +213,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(11-NA-22(N,ABS),,RI,,RNV)",
-          "0": {
-            "code": [
-              "11-NA-22",
-              [
-                "N,ABS"
-              ],
-              ",,RI,,RNV"
-            ],
-            "type": null,
-            "target": "11-NA-22",
-            "process": "N,ABS",
-            "sf49": ",,RI,,RNV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": "RNV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -205,32 +239,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(53-I-126(N,ABS),,SIG)",
-          "0": {
-            "code": [
-              "53-I-126",
-              [
-                "N,ABS"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "53-I-126",
-            "process": "N,ABS",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -259,8 +267,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-mon": {
-        "0": [
+      "0": {
+        "decay-mon": [
           {
             "x4_code": "(27-CO-60-G,5.77YR,DG,1330.)",
             "free_txt": []
@@ -269,46 +277,36 @@
             "x4_code": "(79-AU-198-G,2.698D)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               " Ge-Li detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Data errors given are statistical errors"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,1USABNL)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -316,20 +314,16 @@
               " from core."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(BURN)",
             "free_txt": [
               " Burnup calculations. Bare and Cd-wrapped samples"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(27-CO-59(N,G)27-CO-60,,SIG)",
             "free_txt": []
@@ -340,10 +334,8 @@
               "Fast flux determined using 58Ni(n,p)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -354,8 +346,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -363,10 +355,8 @@
               " +-0.0001 and s(0) = 2.3+-0.2. Assumed g = 1."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(11-NA-22,2.602YR,DG,1250.,,AR)",
             "free_txt": []
@@ -375,8 +365,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -384,10 +374,8 @@
               " +-0.0002 and s(0) = 2.3+-0.2. Assumed g = 1."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(11-NA-22,2.602YR,DG,1250.,,AR)",
             "free_txt": []
@@ -396,8 +384,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -405,10 +393,8 @@
               " +-0.0001. Assumed g = 1."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(53-I-126,13.0D,DG,386.)",
             "free_txt": []

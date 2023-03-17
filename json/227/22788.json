@@ -42,48 +42,44 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "((S,ISINN-8,153,200005)=(R,JINR-E3-2000-192,153,200005))",
-          "free_txt": [
-            "Main reference, graphs",
-            " are given for cross sections and angular distributions"
-          ],
-          "publication_year": "2000"
-        },
-        {
-          "x4_code": "((S,ISINN-8,153,200005)=(R,JINR-E3-2000-192,153,200005))",
-          "free_txt": [
-            "Main reference, graphs",
-            " are given for cross sections and angular distributions"
-          ],
-          "publication_year": "2000"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,2ZZZGEL)",
-          "free_txt": [
-            " 7 MV CN Van de Graaff accelerator"
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((S,ISINN-8,153,200005)=(R,JINR-E3-2000-192,153,200005))",
+        "free_txt": [
+          "Main reference, graphs",
+          " are given for cross sections and angular distributions"
+        ],
+        "publication_year": "2000",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((S,ISINN-8,153,200005)=(R,JINR-E3-2000-192,153,200005))",
+        "free_txt": [
+          "Main reference, graphs",
+          " are given for cross sections and angular distributions"
+        ],
+        "publication_year": "2000",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2ZZZGEL)",
+        "free_txt": [
+          " 7 MV CN Van de Graaff accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,INL)92-U-238,PAR,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(N,INL)92-U-238,PAR,SIG)",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -101,11 +97,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(N,SCT)92-U-238,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,SCT"
+              ],
+              "92-U-238,PAR,DA"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,SCT",
+            "sf49": "92-U-238,PAR,DA",
+            "sf4": "92-U-238",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -213,32 +244,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,SCT)92-U-238,PAR,DA)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,SCT"
-              ],
-              "92-U-238,PAR,DA"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,SCT",
-            "sf49": "92-U-238,PAR,DA",
-            "sf4": "92-U-238",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-LVL-MIN",
@@ -365,8 +370,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -374,20 +379,16 @@
               "        1.8 m from uranium sample"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,2ZZZGEL)",
             "free_txt": [
               " 7 MV CN Van de Graaff accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
             "free_txt": [
@@ -396,10 +397,8 @@
               " tritium target 0.4 milligram/cm2"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
             "free_txt": []
@@ -408,18 +407,14 @@
             "x4_code": "(6-C-12(N,EL)6-C-12,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,Y.Kanda+,R,NEACRP-L-4,1999)",
             "free_txt": [
@@ -431,16 +426,14 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL,92-U-238)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
@@ -459,10 +452,8 @@
               "   Error bars on Fig.1, not specified"
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -475,10 +466,8 @@
               "     Fig.2"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -489,16 +478,14 @@
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-LVL,92-U-238)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

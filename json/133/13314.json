@@ -29,33 +29,28 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JIN,35,3079,7309)",
-          "free_txt": [],
-          "publication_year": "1973"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC)",
-          "free_txt": []
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JIN,35,3079,7309)",
+        "free_txt": [],
+        "publication_year": "1973",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC)",
+        "free_txt": [],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-239(N,F)ELEM/MASS,CUM,FY,,SPA)//(94-PU-239(N,F)ELEM/MASS,CUM,FY,,EPI))",
-          "0": {
+      "0": {
+        "x4_code": "((94-PU-239(N,F)ELEM/MASS,CUM,FY,,SPA)//(94-PU-239(N,F)ELEM/MASS,CUM,FY,,EPI))",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -74,7 +69,7 @@
             "sf8": "SPA",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "94-PU-239",
               [
@@ -92,11 +87,65 @@
             "sf7": null,
             "sf8": "EPI",
             "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": " RATIO THERMAL TO EPI-SM SPECTRUM"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((94-PU-239(N,F)ELEM/MASS,CUM,FY,,SPA)//(94-PU-239(N,F)ELEM/MASS,CUM,FY,,EPI))",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,CUM,FY,,SPA"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,CUM,FY,,SPA",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
           },
-          "type": "//",
-          "free_text": " RATIO THERMAL TO EPI-SM SPECTRUM"
-        }
-      },
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,CUM,FY,,EPI"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,CUM,FY,,EPI",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "EPI",
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": " RATIO THERMAL TO EPI-CD SPECTRUM"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-DUM-NM",
@@ -153,51 +202,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-239(N,F)ELEM/MASS,CUM,FY,,SPA)//(94-PU-239(N,F)ELEM/MASS,CUM,FY,,EPI))",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,SPA"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,CUM,FY,,SPA",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,EPI"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,CUM,FY,,EPI",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "EPI",
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": " RATIO THERMAL TO EPI-CD SPECTRUM"
-        }
-      },
       "common": {
         "heads": [
           "EN-DUM-NM",
@@ -252,8 +256,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -262,54 +266,42 @@
               " ESTIMATED 1% OF TOTAL FISSION EVENTS."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "DATA UNCERTAINTIES GIVEN ARE STATISTICAL ERRORS"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(RCHEM)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "PU-AL ALLOY CONTAINING 13.9% PU (96.1% 239PU)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(RIDER)",
             "free_txt": [

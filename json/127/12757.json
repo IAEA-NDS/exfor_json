@@ -33,33 +33,28 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,ANL-NDM-71,8206)",
-          "free_txt": [],
-          "publication_year": "1982"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(DYNAM)",
-          "free_txt": []
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,ANL-NDM-71,8206)",
+        "free_txt": [],
+        "publication_year": "1982",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(DYNAM)",
+        "free_txt": [],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(46-PD-0(N,TOT),,SIG,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(46-PD-0(N,TOT),,SIG,,AV)",
+        "children": [
+          {
             "code": [
               "46-PD-0",
               [
@@ -77,11 +72,74 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(46-PD-0(N,EL),,DA,,AV)",
+        "children": [
+          {
+            "code": [
+              "46-PD-0",
+              [
+                "N,EL"
+              ],
+              ",,DA,,AV"
+            ],
+            "type": null,
+            "target": "46-PD-0",
+            "process": "N,EL",
+            "sf49": ",,DA,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(46-PD-0(N,INL),PAR,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "46-PD-0",
+              [
+                "N,INL"
+              ],
+              ",PAR,SIG,,AV"
+            ],
+            "type": null,
+            "target": "46-PD-0",
+            "process": "N,INL",
+            "sf49": ",PAR,SIG,,AV",
+            "sf4": null,
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-RSL"
@@ -324,32 +382,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(46-PD-0(N,EL),,DA,,AV)",
-          "0": {
-            "code": [
-              "46-PD-0",
-              [
-                "N,EL"
-              ],
-              ",,DA,,AV"
-            ],
-            "type": null,
-            "target": "46-PD-0",
-            "process": "N,EL",
-            "sf49": ",,DA,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-RSL",
@@ -2262,32 +2294,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(46-PD-0(N,INL),PAR,SIG,,AV)",
-          "0": {
-            "code": [
-              "46-PD-0",
-              [
-                "N,INL"
-              ],
-              ",PAR,SIG,,AV"
-            ],
-            "type": null,
-            "target": "46-PD-0",
-            "process": "N,INL",
-            "sf49": ",PAR,SIG,,AV",
-            "sf4": null,
-            "sf5": "PAR",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-RSL"
@@ -3216,64 +3222,52 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " PROTON RECOIL SCINTILLATOR"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(DYNAM)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "BEAM RESOLUTION 30 TO 70 KEV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " 5.4 METER FLIGHT PATH"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(6-C-0(N,TOT),,SIG)",
             "free_txt": [
               "   MEASURED IN THE EXPERIMENT"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -3285,18 +3279,16 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "AVERAGED OVER 50 KEV INTERVALS"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3304,10 +3296,8 @@
               " SHIELDING WAS NEGLIGIBLE."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -3316,10 +3306,8 @@
               " 0.1 PERCENT FOR SAMPLE DENSITY."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3331,18 +3319,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               "AVERAGED OVER 200 KEV INTERVALS"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3350,10 +3336,8 @@
               " AND MULTIPLE SCATTERING."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -3364,10 +3348,8 @@
               "  SAMPLE DENSITY           LESS THAN .1 PERCENT"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3378,8 +3360,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(INTAD)",
             "free_txt": [
@@ -3387,10 +3369,8 @@
               "  200 KEV INTERVALS"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -3398,10 +3378,8 @@
               " MULTIPLE SCATTERING AND SECOND SOURCE NEUTRON GROUP."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(E-EXC-ERR)",
             "free_txt": [
@@ -3418,10 +3396,8 @@
               "  SAMPLE DENSITY           LESS THAN .1 PERCENT"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [

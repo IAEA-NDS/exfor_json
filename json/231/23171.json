@@ -96,69 +96,68 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,KPS,59,(2),1378,2011)",
-          "free_txt": [
-            " Proc. of ND2010 .",
-            "  Paper #1280, page 29 in Abstract book of ND2010 ."
-          ],
-          "publication_year": "2011",
-          "doi": "10.3938/jkps.59.1378"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(NGEN,2GERDRE)",
-          "free_txt": [
-            " Quasi-monoenergetic neutrons at TU",
-            " Dresden's 14-MeV neutron generator."
-          ],
-          "facility_type": "(NGEN)",
-          "institute": "(2GERDRE)"
-        },
-        {
-          "x4_code": "(VDG,2ZZZGEL)",
-          "free_txt": [
-            " Van de Graaff accelerator at IRMM."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2ZZZGEL)"
-        },
-        {
-          "x4_code": "(ACCEL,2AUSIRK)",
-          "free_txt": [
-            " For AMS (accelerator mass spectrometry)",
-            " at VERA lab. for radionuclides 10Be, 14C, 26Al, 55Fe,",
-            "210mBi, 202gPb measurement."
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(2AUSIRK)"
-        },
-        {
-          "x4_code": "(ACCEL,2GERMUN)",
-          "free_txt": [
-            " 14-MV tandem of the Maier-Leibnitz-lab.",
-            "for production of long-lived 53Mn and 59Ni measurement."
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(2GERMUN)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,KPS,59,(2),1378,2011)",
+        "free_txt": [
+          " Proc. of ND2010 .",
+          "#doi:10.3938/jkps.59.1378",
+          "  Paper #1280, page 29 in Abstract book of ND2010 ."
+        ],
+        "publication_year": "2011",
+        "pointer": "0",
+        "doi": "10.3938/jkps.59.1378"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(NGEN,2GERDRE)",
+        "free_txt": [
+          " Quasi-monoenergetic neutrons at TU",
+          " Dresden's 14-MeV neutron generator."
+        ],
+        "pointer": "0",
+        "facility_type": "(NGEN)",
+        "institute": "(2GERDRE)"
+      },
+      {
+        "x4_code": "(VDG,2ZZZGEL)",
+        "free_txt": [
+          " Van de Graaff accelerator at IRMM."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(2ZZZGEL)"
+      },
+      {
+        "x4_code": "(ACCEL,2AUSIRK)",
+        "free_txt": [
+          " For AMS (accelerator mass spectrometry)",
+          " at VERA lab. for radionuclides 10Be, 14C, 26Al, 55Fe,",
+          "210mBi, 202gPb measurement."
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(2AUSIRK)"
+      },
+      {
+        "x4_code": "(ACCEL,2GERMUN)",
+        "free_txt": [
+          " 14-MV tandem of the Maier-Leibnitz-lab.",
+          "for production of long-lived 53Mn and 59Ni measurement."
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(2GERMUN)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-54(N,X)25-MN-53,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(26-FE-54(N,X)25-MN-53,,SIG)",
+        "children": [
+          {
             "code": [
               "26-FE-54",
               [
@@ -176,11 +175,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Mn-53 production excitation function."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Mn-53 production excitation function."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(26-FE-56(N,2N)26-FE-55,,SIG)",
+        "children": [
+          {
+            "code": [
+              "26-FE-56",
+              [
+                "N,2N"
+              ],
+              "26-FE-55,,SIG"
+            ],
+            "type": null,
+            "target": "26-FE-56",
+            "process": "N,2N",
+            "sf49": "26-FE-55,,SIG",
+            "sf4": "26-FE-55",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(26-FE-54(N,2N)26-FE-53,,SIG)",
+        "children": [
+          {
+            "code": [
+              "26-FE-54",
+              [
+                "N,2N"
+              ],
+              "26-FE-53,,SIG"
+            ],
+            "type": null,
+            "target": "26-FE-54",
+            "process": "N,2N",
+            "sf49": "26-FE-53,,SIG",
+            "sf4": "26-FE-53",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -226,32 +288,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-56(N,2N)26-FE-55,,SIG)",
-          "0": {
-            "code": [
-              "26-FE-56",
-              [
-                "N,2N"
-              ],
-              "26-FE-55,,SIG"
-            ],
-            "type": null,
-            "target": "26-FE-56",
-            "process": "N,2N",
-            "sf49": "26-FE-55,,SIG",
-            "sf4": "26-FE-55",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -358,32 +394,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(26-FE-54(N,2N)26-FE-53,,SIG)",
-          "0": {
-            "code": [
-              "26-FE-54",
-              [
-                "N,2N"
-              ],
-              "26-FE-53,,SIG"
-            ],
-            "type": null,
-            "target": "26-FE-54",
-            "process": "N,2N",
-            "sf49": "26-FE-53,,SIG",
-            "sf4": "26-FE-53",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -462,8 +472,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -471,20 +481,16 @@
               " IRMM irradiation, VERA AMS."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No description of the uncertainties"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(NGEN,2GERDRE)",
             "free_txt": [
@@ -513,10 +519,8 @@
               "for production of long-lived 53Mn and 59Ni measurement."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -529,10 +533,8 @@
               "    accelerator mass spectrometry."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,K.Seidel+,J,FED,81,1211,2006)",
             "free_txt": [
@@ -543,8 +545,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -554,10 +556,8 @@
               " Fe-54(n,2n)Fe-53 -> e -> Mn-53 ."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(25-MN-53,3.7E+6YR)",
             "free_txt": []
@@ -566,10 +566,8 @@
             "x4_code": "(26-FE-53-G,8.5MIN)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
@@ -579,30 +577,16 @@
               "isotope ratios."
             ]
           }
-        ]
-      },
-      "facility": {
-        "2": [
-          {
-            "x4_code": "(ACCEL,2GERMUN)",
-            "free_txt": [
-              " 14-MV tandem of the Maier-Leibnitz-lab."
-            ]
-          }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-T)",
             "free_txt": [
               " T(d,n)He-4 ."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -610,24 +594,8 @@
               " 13.4 and 14.9 MeV."
             ]
           }
-        ]
-      },
-      "method": {
-        "2": [
-          {
-            "x4_code": "(AMS)",
-            "free_txt": [
-              "    accelerator mass spectrometry.",
-              "Several Fe samples were exposed to neutrons with total",
-              " fluence of a few 10**13 n/cm**2 .",
-              "In addition, short-term irradiations were performed to",
-              "measure the production of short-lived 53Fe."
-            ]
-          }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -635,10 +603,8 @@
               " irradiated at TU Dresden's 14-MeV neutron generator."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -655,19 +621,58 @@
             ]
           }
         ]
+      },
+      "1": {
+        "facility": [
+          {
+            "x4_code": "(CCW,2GERDRE)",
+            "free_txt": [
+              " Quasi-monoenergetic neutrons at TU",
+              " Dresden's 14-MeV neutron generator."
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(ACTIV)",
+            "free_txt": [
+              "  Activation technique combined with"
+            ]
+          }
+        ]
+      },
+      "2": {
+        "facility": [
+          {
+            "x4_code": "(ACCEL,2GERMUN)",
+            "free_txt": [
+              " 14-MV tandem of the Maier-Leibnitz-lab."
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(AMS)",
+            "free_txt": [
+              "    accelerator mass spectrometry.",
+              "Several Fe samples were exposed to neutrons with total",
+              " fluence of a few 10**13 n/cm**2 .",
+              "In addition, short-term irradiations were performed to",
+              "measure the production of short-lived 53Fe."
+            ]
+          }
+        ]
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(26-FE-55,2.73YR)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -676,25 +681,8 @@
               "           (namely it is EN-ERR+EN-RSL)."
             ]
           }
-        ]
-      },
-      "facility": {
-        "2": [
-          {
-            "x4_code": "(ACCEL,2AUSIRK)",
-            "free_txt": [
-              " For AMS (accelerator mass spectrometry)",
-              " at VERA lab. for radionuclides 10Be, 14C, 26Al, 55Fe,"
-            ]
-          },
-          {
-            "x4_code": "(CCW,2GERDRE)",
-            "free_txt": []
-          }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -713,40 +701,8 @@
               " Experiment in 2010 yr,   IRMM/VERA"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "1": [
-          {
-            "x4_code": "(D-T)",
-            "free_txt": [
-              " T(d,n)He-4 ."
-            ]
-          }
-        ]
-      },
-      "inc-spect": {
-        "2": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              " from 13 to 20 MeV."
-            ]
-          }
-        ]
-      },
-      "method": {
-        "2": [
-          {
-            "x4_code": "(AMS)",
-            "free_txt": [
-              "    mass spectrometric technique"
-            ]
-          }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -754,10 +710,8 @@
               " and IRMM."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(PRELM)",
             "free_txt": [
@@ -772,19 +726,83 @@
             ]
           }
         ]
+      },
+      "1": {
+        "facility": [
+          {
+            "x4_code": "(VDG,2ZZZGEL)",
+            "free_txt": [
+              " Van de Graaff accelerator at IRMM."
+            ]
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(D-T)",
+            "free_txt": [
+              " T(d,n)He-4 ."
+            ]
+          }
+        ],
+        "inc-spect": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Quasi-monoenergetic neutrons with energies between",
+              " 13.4 and 14.8 MeV;"
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(ACTIV)",
+            "free_txt": [
+              "  Activation technique combined with"
+            ]
+          }
+        ]
+      },
+      "2": {
+        "facility": [
+          {
+            "x4_code": "(ACCEL,2AUSIRK)",
+            "free_txt": [
+              " For AMS (accelerator mass spectrometry)",
+              " at VERA lab. for radionuclides 10Be, 14C, 26Al, 55Fe,"
+            ]
+          },
+          {
+            "x4_code": "(CCW,2GERDRE)",
+            "free_txt": []
+          }
+        ],
+        "inc-spect": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " from 13 to 20 MeV."
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(AMS)",
+            "free_txt": [
+              "    mass spectrometric technique"
+            ]
+          }
+        ]
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(26-FE-53,8.5MIN)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -793,10 +811,8 @@
               "           (namely it is EN-ERR+EN-RSL)."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CCW,2GERDRE)",
             "free_txt": [
@@ -804,10 +820,8 @@
               " Dresden."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -826,20 +840,16 @@
               " all 4 data points combined"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
               "  Activation technique"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -847,10 +857,8 @@
               " irradiated at TU Dresden."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(PRELM)",
             "free_txt": [

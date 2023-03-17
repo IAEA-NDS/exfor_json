@@ -76,54 +76,51 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JP/G,8,1283,1982)",
-          "free_txt": [
-            " Main reference for Zr-90 data."
-          ],
-          "publication_year": "1982"
-        },
-        {
-          "x4_code": "(C,82ANTWER,,400,198209)",
-          "free_txt": [],
-          "publication_year": "1982"
-        },
-        {
-          "x4_code": "(T,PAVLIK,1982)",
-          "free_txt": [
-            "     Thesis university of vienna.",
-            "                  Experimental details."
-          ],
-          "publication_year": "1982"
-        }
-      ]
-    },
-    "facilities": {
-      "2": [
-        {
-          "x4_code": "(VDG,2ZZZGEL)",
-          "free_txt": [
-            " 7 MV Van de Graaff accelerator of Geel.",
-            "                For the energy range 12.3 to 19.5 MeV.",
-            "                Energy steps 0.2 to 0.8 MeV."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JP/G,8,1283,1982)",
+        "free_txt": [
+          " Main reference for Zr-90 data."
+        ],
+        "publication_year": "1982",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,82ANTWER,,400,198209)",
+        "free_txt": [],
+        "publication_year": "1982",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(T,PAVLIK,1982)",
+        "free_txt": [
+          "     Thesis university of vienna.",
+          "                  Experimental details."
+        ],
+        "publication_year": "1982",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,2ZZZGEL)",
+        "free_txt": [
+          " 7 MV Van de Graaff accelerator of Geel.",
+          "                For the energy range 12.3 to 19.5 MeV.",
+          "                Energy steps 0.2 to 0.8 MeV."
+        ],
+        "pointer": "2",
+        "facility_type": "(VDG)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(40-ZR-90(N,2N)40-ZR-89,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(40-ZR-90(N,2N)40-ZR-89,,SIG)",
+        "children": [
+          {
             "code": [
               "40-ZR-90",
               [
@@ -141,11 +138,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(40-ZR-90(N,2N)40-ZR-89,,SIG)",
+        "children": [
+          {
+            "code": [
+              "40-ZR-90",
+              [
+                "N,2N"
+              ],
+              "40-ZR-89,,SIG"
+            ],
+            "type": null,
+            "target": "40-ZR-90",
+            "process": "N,2N",
+            "sf49": "40-ZR-89,,SIG",
+            "sf4": "40-ZR-89",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -242,32 +274,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(40-ZR-90(N,2N)40-ZR-89,,SIG)",
-          "0": {
-            "code": [
-              "40-ZR-90",
-              [
-                "N,2N"
-              ],
-              "40-ZR-89,,SIG"
-            ],
-            "type": null,
-            "target": "40-ZR-90",
-            "process": "N,2N",
-            "sf49": "40-ZR-89,,SIG",
-            "sf4": "40-ZR-89",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -428,8 +434,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -440,28 +446,17 @@
               "          kanada et Al. (J,Np/a,185,177,72)."
             ]
           }
-        ]
-      },
-      "decay-mon": {
-        "1": [
+        ],
+        "detector": [
           {
-            "x4_code": "(11-NA-24,14.98HR,DG)",
-            "free_txt": []
-          }
-        ]
-      },
-      "detector": {
-        "2": [
-          {
-            "x4_code": "(CSICR)",
+            "x4_code": "(NAICR)",
             "free_txt": [
-              " To detect the recoil protons."
+              " 12.7 cm * 12.7 cm NaI(Tl)  detector to",
+              "        measure Zr-98-g,Na-24 gamma activities."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -476,55 +471,22 @@
               ".Error matrices are given in tables 5+6."
             ]
           }
-        ]
-      },
-      "facility": {
-        "2": [
+        ],
+        "inc-source": [
           {
-            "x4_code": "(VDG,2ZZZGEL)",
+            "x4_code": "(D-T  )",
             "free_txt": [
-              " 7 MV Van de Graaff accelerator of Geel.",
-              "                For the energy range 12.3 to 19.5 MeV.",
-              "                Energy steps 0.2 to 0.8 MeV."
+              " T(d,N)He-4 reaction."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "2": [
+        ],
+        "method": [
           {
-            "x4_code": null,
-            "free_txt": [
-              "        Solid state target of tritium occluded in",
-              "        a 3.9 mg/cm**2 Y-layer on a 0.5 mm Cu-backing."
-            ]
-          }
-        ]
-      },
-      "method": {
-        "2": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              ".Neutron fluences were determined by means of a",
-              " proton-recoil telescope at 0 degree, and",
-              " differential neutron production cross sections.",
-              ".Zr-89 activity measurements  started about 60 hours",
-              " after the end of the irradiation."
-            ]
-          }
-        ]
-      },
-      "monitor": {
-        "2": [
-          {
-            "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
+            "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -538,10 +500,8 @@
               " at least one aluminium foil for monitoring."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -549,19 +509,107 @@
             ]
           }
         ]
+      },
+      "1": {
+        "decay-mon": [
+          {
+            "x4_code": "(11-NA-24,14.98HR,DG)",
+            "free_txt": []
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(CCW,2AUSIRK)",
+            "free_txt": [
+              " IRK accelerator. For the energy range 14",
+              "        13.4 to energy steps 0.04 to 0.15 MeV."
+            ]
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "        Air-jet-cooled solid state Ti-t target."
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ".Measurements were done relative to Al-27(N,a)Na-24."
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(13-AL-27(N,A)11-NA-24,,SIG)",
+            "free_txt": [
+              " Cross section data taken from evaluation",
+              " by tagesen and vonach,physics data 13-1,1981,",
+              " fachinformationszentrum karlsruhe."
+            ]
+          }
+        ]
+      },
+      "2": {
+        "detector": [
+          {
+            "x4_code": "(CSICR)",
+            "free_txt": [
+              " To detect the recoil protons."
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(VDG,2ZZZGEL)",
+            "free_txt": [
+              " 7 MV Van de Graaff accelerator of Geel.",
+              "                For the energy range 12.3 to 19.5 MeV.",
+              "                Energy steps 0.2 to 0.8 MeV."
+            ]
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "        Solid state target of tritium occluded in",
+              "        a 3.9 mg/cm**2 Y-layer on a 0.5 mm Cu-backing."
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ".Neutron fluences were determined by means of a",
+              " proton-recoil telescope at 0 degree, and",
+              " differential neutron production cross sections.",
+              ".Zr-89 activity measurements  started about 60 hours",
+              " after the end of the irradiation."
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
+            "free_txt": []
+          }
+        ]
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(40-ZR-89-G,78.43HR,DG)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -577,20 +625,16 @@
               "     (less than 1.75 per cent)"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(REC)",
             "free_txt": [
               "   Recoil protons method"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -601,16 +645,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(40-ZR-89-G,78.43HR,DG)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -622,10 +664,8 @@
               "   - correction for neutron scattering (0.15)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

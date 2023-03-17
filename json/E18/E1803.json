@@ -104,48 +104,44 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PL/B,556,(1-2),27,200303)",
-          "free_txt": [],
-          "publication_year": "2003"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ISOCY,2JPNIPC)",
-          "free_txt": [
-            " Primary 10B beam with 7.8 MeV/A"
-          ],
-          "facility_type": "(ISOCY)",
-          "institute": "(2JPNIPC)"
-        },
-        {
-          "x4_code": "(PRJFS,2JPNIPC)",
-          "free_txt": [
-            " To produce 11C secondary beam by the",
-            "                3He(10B,12N*)n reaction, where the 11C",
-            "                particles were emitted from the",
-            "                unbound levels in 12N."
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(2JPNIPC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PL/B,556,(1-2),27,200303)",
+        "free_txt": [],
+        "publication_year": "2003",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ISOCY,2JPNIPC)",
+        "free_txt": [
+          " Primary 10B beam with 7.8 MeV/A"
+        ],
+        "pointer": "0",
+        "facility_type": "(ISOCY)",
+        "institute": "(2JPNIPC)"
+      },
+      {
+        "x4_code": "(PRJFS,2JPNIPC)",
+        "free_txt": [
+          " To produce 11C secondary beam by the",
+          "                3He(10B,12N*)n reaction, where the 11C",
+          "                particles were emitted from the",
+          "                unbound levels in 12N."
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2JPNIPC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(6-C-11,EL)1-H-1,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-1(6-C-11,EL)1-H-1,,DA)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -163,11 +159,72 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(1-H-1(6-C-11,0),,J)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "6-C-11,0"
+              ],
+              ",,J"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "6-C-11,0",
+            "sf49": ",,J",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "J",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Tentative value for 3.6 MeV level"
       },
+      "2": {
+        "x4_code": "(1-H-1(6-C-11,0),,PTY)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "6-C-11,0"
+              ],
+              ",,PTY"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "6-C-11,0",
+            "sf49": ",,PTY",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "PTY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG-CM",
@@ -538,56 +595,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(1-H-1(6-C-11,0),,J)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "6-C-11,0"
-              ],
-              ",,J"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "6-C-11,0",
-            "sf49": ",,J",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "J",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Tentative value for 3.6 MeV level"
-        },
-        "2": {
-          "x4_code": "(1-H-1(6-C-11,0),,PTY)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "6-C-11,0"
-              ],
-              ",,PTY"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "6-C-11,0",
-            "sf49": ",,PTY",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "PTY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -631,8 +638,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(PPAC)",
             "free_txt": [
@@ -648,10 +655,8 @@
               " To identify proton using E-Delta E infomation"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ISOCY,2JPNIPC)",
             "free_txt": [
@@ -667,20 +672,16 @@
               "                unbound levels in 12N."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Beam intensity is 17000 PPS."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -688,10 +689,8 @@
               "method"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -720,18 +719,14 @@
               "      for detail."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,A.H.Hernandez+,J,NIM/B,143,(4),569,199810)",
             "free_txt": [
@@ -744,10 +739,8 @@
               "Thick target method"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -765,18 +758,16 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
               "EN-RSL-FW: Resolution of center of mass energy"
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": null,
             "free_txt": [
@@ -784,10 +775,8 @@
               "center of mass system"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -808,10 +797,8 @@
               " Mainly due to that in detector solid angle"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -823,8 +810,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -832,10 +819,8 @@
               "Biedenharn, Rev. Mod. Phys. 24(1952)258]"
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -844,10 +829,8 @@
               "J-pi"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [
@@ -863,10 +846,8 @@
               "        J-pi"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

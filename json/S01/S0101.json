@@ -84,47 +84,43 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PHE,26,594,2002)",
-          "free_txt": [],
-          "publication_year": "2002"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,3CPRIMP)",
-          "free_txt": [
-            " Heavy Ion Research Facility in",
-            "Lanzhou (HIRFL)."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(3CPRIMP)"
-        },
-        {
-          "x4_code": "(PRJFS,3CPRIMP)",
-          "free_txt": [
-            " The Radioactive Ion Beam Line in",
-            "Lanzhou (RIBLL)."
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(3CPRIMP)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PHE,26,594,2002)",
+        "free_txt": [],
+        "publication_year": "2002",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,3CPRIMP)",
+        "free_txt": [
+          " Heavy Ion Research Facility in",
+          "Lanzhou (HIRFL)."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(3CPRIMP)"
+      },
+      {
+        "x4_code": "(PRJFS,3CPRIMP)",
+        "free_txt": [
+          " The Radioactive Ion Beam Line in",
+          "Lanzhou (RIBLL)."
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(3CPRIMP)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(9-F-17,EL)1-H-1,,DA)=(9-F-17(P,EL)9-F-17,,DA))",
-          "0": {
+      "0": {
+        "x4_code": "((1-H-1(9-F-17,EL)1-H-1,,DA)=(9-F-17(P,EL)9-F-17,,DA))",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -143,7 +139,7 @@
             "sf8": null,
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "9-F-17",
               [
@@ -161,11 +157,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((1-H-1(10-NE-18,EL)1-H-1,,DA)=(10-NE-18(P,EL)10-NE-18,,DA))",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "10-NE-18,EL"
+              ],
+              "1-H-1,,DA"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "10-NE-18,EL",
+            "sf49": "1-H-1,,DA",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "=",
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "10-NE-18",
+              [
+                "P,EL"
+              ],
+              "10-NE-18,,DA"
+            ],
+            "type": null,
+            "target": "10-NE-18",
+            "process": "P,EL",
+            "sf49": "10-NE-18,,DA",
+            "sf4": "10-NE-18",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -264,51 +314,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-1(10-NE-18,EL)1-H-1,,DA)=(10-NE-18(P,EL)10-NE-18,,DA))",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "10-NE-18,EL"
-              ],
-              "1-H-1,,DA"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "10-NE-18,EL",
-            "sf49": "1-H-1,,DA",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "10-NE-18",
-              [
-                "P,EL"
-              ],
-              "10-NE-18,,DA"
-            ],
-            "type": null,
-            "target": "10-NE-18",
-            "process": "P,EL",
-            "sf49": "10-NE-18,,DA",
-            "sf4": "10-NE-18",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -415,8 +420,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(PPAC,CSICR)",
             "free_txt": [
@@ -454,10 +459,8 @@
               "1737.3 cm."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -465,10 +468,8 @@
               "due to correction."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,3CPRIMP)",
             "free_txt": [
@@ -483,10 +484,8 @@
               "Lanzhou (RIBLL)."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -496,28 +495,22 @@
               "target with a 80nA and 45 MeV/u 20Ne primary beam."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " To identify secondary beam."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -528,8 +521,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -541,8 +534,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

@@ -126,50 +126,46 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PRL,73,(20),2680,199411)",
-          "free_txt": [],
-          "publication_year": "1994"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2JPNIPC)",
-          "free_txt": [
-            " Primary 12C beam of 91 MeV/A bombarded",
-            "                a 9Be target of 1.4 g/cm**2 thickness.",
-            "                Reaction products were analyzed by the",
-            "                projectile fragment separator RIPS to",
-            "                obtain a radioactive 8B beam."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2JPNIPC)"
-        },
-        {
-          "x4_code": "(PRJFS,2JPNIPC)",
-          "free_txt": [
-            " RIKEN projectile fragment separator",
-            "                (RIPS)"
-          ],
-          "facility_type": "(PRJFS)",
-          "institute": "(2JPNIPC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PRL,73,(20),2680,199411)",
+        "free_txt": [],
+        "publication_year": "1994",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2JPNIPC)",
+        "free_txt": [
+          " Primary 12C beam of 91 MeV/A bombarded",
+          "                a 9Be target of 1.4 g/cm**2 thickness.",
+          "                Reaction products were analyzed by the",
+          "                projectile fragment separator RIPS to",
+          "                obtain a radioactive 8B beam."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2JPNIPC)"
+      },
+      {
+        "x4_code": "(PRJFS,2JPNIPC)",
+        "free_txt": [
+          " RIKEN projectile fragment separator",
+          "                (RIPS)"
+        ],
+        "pointer": "0",
+        "facility_type": "(PRJFS)",
+        "institute": "(2JPNIPC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-208(5-B-8,INL)82-PB-208,,DE,,RAW)",
-          "0": {
+      "0": {
+        "x4_code": "(82-PB-208(5-B-8,INL)82-PB-208,,DE,,RAW)",
+        "children": [
+          {
             "code": [
               "82-PB-208",
               [
@@ -187,11 +183,46 @@
             "sf7": null,
             "sf8": "RAW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "Not corrected for efficiency"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "Not corrected for efficiency"
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(4-BE-7(P,G)5-B-8,,SIG,,SFC,DERIV)",
+        "children": [
+          {
+            "code": [
+              "4-BE-7",
+              [
+                "P,G"
+              ],
+              "5-B-8,,SIG,,SFC,DERIV"
+            ],
+            "type": null,
+            "target": "4-BE-7",
+            "process": "P,G",
+            "sf49": "5-B-8,,SIG,,SFC,DERIV",
+            "sf4": "5-B-8",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SFC",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN"
@@ -245,32 +276,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-7(P,G)5-B-8,,SIG,,SFC,DERIV)",
-          "0": {
-            "code": [
-              "4-BE-7",
-              [
-                "P,G"
-              ],
-              "5-B-8,,SIG,,SFC,DERIV"
-            ],
-            "type": null,
-            "target": "4-BE-7",
-            "process": "P,G",
-            "sf49": "5-B-8,,SIG,,SFC,DERIV",
-            "sf4": "5-B-8",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -324,8 +329,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -340,10 +345,8 @@
               "          See NRDF D1576 DATA,4 for detail."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -358,10 +361,8 @@
               " Plastic scintillator: To detect proton and 7Be"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2JPNIPC)",
             "free_txt": [
@@ -379,20 +380,16 @@
               "                (RIPS)"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Beam intensity: 2*10**4/s"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -409,18 +406,14 @@
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P,4-BE-7)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -434,8 +427,8 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": "(E-EXC,5-B-8)",
             "free_txt": [
@@ -444,20 +437,16 @@
               "              7Be and proton threshold)"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -468,8 +457,8 @@
       }
     },
     "006": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -478,10 +467,8 @@
               "angle in the 208Pb(8B, 7Be+p)208Pb reaction"
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -491,10 +478,8 @@
               "Phys. Rev. C 28(1983)2222]"
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -502,20 +487,16 @@
               "EN-CM-MAX: Upper limit of incident projectile energy"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,C0501002,F.J.Vaughn+,J,PR/C,2,(5),1657,197011)",
             "free_txt": []
@@ -536,10 +517,8 @@
               "No discussion on comparison in main reference"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

@@ -30,40 +30,36 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,110,507,1958)",
-          "free_txt": [
-            "#doi:10.1103/PhysRev.110.507"
-          ],
-          "publication_year": "1958"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USABRK)",
-          "free_txt": [
-            " The Crocker Laboratory 60-inch",
-            "cyclotron."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USABRK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,110,507,1958)",
+        "free_txt": [
+          "#doi:10.1103/PhysRev.110.507"
+        ],
+        "publication_year": "1958",
+        "pointer": "0",
+        "doi": "10.1103/PhysRev.110.507"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USABRK)",
+        "free_txt": [
+          " The Crocker Laboratory 60-inch",
+          "cyclotron."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USABRK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(88-RA-226(A,X)90-TH-226,CUM,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(88-RA-226(A,X)90-TH-226,CUM,SIG)",
+        "children": [
+          {
             "code": [
               "88-RA-226",
               [
@@ -81,11 +77,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(90-TH-230(A,X)92-U-230,CUM,SIG)",
+        "children": [
+          {
+            "code": [
+              "90-TH-230",
+              [
+                "A,X"
+              ],
+              "92-U-230,CUM,SIG"
+            ],
+            "type": null,
+            "target": "90-TH-230",
+            "process": "A,X",
+            "sf49": "92-U-230,CUM,SIG",
+            "sf4": "92-U-230",
+            "sf5": "CUM",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-236(A,X)94-PU-236,CUM,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-236",
+              [
+                "A,X"
+              ],
+              "94-PU-236,CUM,SIG"
+            ],
+            "type": null,
+            "target": "92-U-236",
+            "process": "A,X",
+            "sf49": "94-PU-236,CUM,SIG",
+            "sf4": "94-PU-236",
+            "sf5": "CUM",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -133,32 +192,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-230(A,X)92-U-230,CUM,SIG)",
-          "0": {
-            "code": [
-              "90-TH-230",
-              [
-                "A,X"
-              ],
-              "92-U-230,CUM,SIG"
-            ],
-            "type": null,
-            "target": "90-TH-230",
-            "process": "A,X",
-            "sf49": "92-U-230,CUM,SIG",
-            "sf4": "92-U-230",
-            "sf5": "CUM",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -200,32 +233,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-236(A,X)94-PU-236,CUM,SIG)",
-          "0": {
-            "code": [
-              "92-U-236",
-              [
-                "A,X"
-              ],
-              "94-PU-236,CUM,SIG"
-            ],
-            "type": null,
-            "target": "92-U-236",
-            "process": "A,X",
-            "sf49": "94-PU-236,CUM,SIG",
-            "sf4": "94-PU-236",
-            "sf5": "CUM",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -263,8 +270,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
@@ -274,10 +281,8 @@
               "alpha-pulse-height analyzers."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -286,10 +291,8 @@
               "material which was bombarded."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USABRK)",
             "free_txt": [
@@ -301,8 +304,8 @@
       }
     },
     "002": {
-      "method": {
-        "0": [
+      "0": {
+        "method": [
           {
             "x4_code": "(REC,CHSEP,ACTIV)",
             "free_txt": [
@@ -313,10 +316,8 @@
               "thorium cross-section measurements."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -325,10 +326,8 @@
               "various materials onto gold or aluminum foils."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -339,32 +338,26 @@
       }
     },
     "003": {
-      "method": {
-        "0": [
+      "0": {
+        "method": [
           {
             "x4_code": "(CHSEP,ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "((MONIT)C2296001,R.A.Glass+,J,PR,104,434,1956)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(94-PU-239(A,3N)96-CM-240,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(90-TH-230,ENR=0.8785)",
             "free_txt": []
@@ -377,10 +370,8 @@
               "or aluminum foils."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -391,8 +382,8 @@
       }
     },
     "004": {
-      "method": {
-        "0": [
+      "0": {
+        "method": [
           {
             "x4_code": "(CHSEP,ACTIV)",
             "free_txt": [
@@ -401,10 +392,8 @@
               "fractions, respectively, were isolated radiochemically."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(92-U-236,ENR=0.949)",
             "free_txt": []
@@ -425,10 +414,8 @@
               "or aluminum foils."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

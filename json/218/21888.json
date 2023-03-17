@@ -30,38 +30,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NC/A,70,(4),402,8208)",
-          "free_txt": [],
-          "publication_year": "1982"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG  ,2ITYPAD)",
-          "free_txt": [
-            " 7.5 MEV ACCELERATOR AT THE NATIONAL",
-            " LABORATORY IN LEGNARO."
-          ],
-          "facility_type": "(VDG  )",
-          "institute": "(2ITYPAD)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NC/A,70,(4),402,8208)",
+        "free_txt": [],
+        "publication_year": "1982",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG  ,2ITYPAD)",
+        "free_txt": [
+          " 7.5 MEV ACCELERATOR AT THE NATIONAL",
+          " LABORATORY IN LEGNARO."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG  )",
+        "institute": "(2ITYPAD)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-6(N,EL)3-LI-6,,POL/DA,,ANA)",
-          "0": {
+      "0": {
+        "x4_code": "(3-LI-6(N,EL)3-LI-6,,POL/DA,,ANA)",
+        "children": [
+          {
             "code": [
               "3-LI-6",
               [
@@ -79,11 +74,46 @@
             "sf7": null,
             "sf8": "ANA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(3-LI-6(N,INL)3-LI-6,PAR,POL/DA,,ANA)",
+        "children": [
+          {
+            "code": [
+              "3-LI-6",
+              [
+                "N,INL"
+              ],
+              "3-LI-6,PAR,POL/DA,,ANA"
+            ],
+            "type": null,
+            "target": "3-LI-6",
+            "process": "N,INL",
+            "sf49": "3-LI-6,PAR,POL/DA,,ANA",
+            "sf4": "3-LI-6",
+            "sf5": "PAR",
+            "sf6": "POL/DA",
+            "sf7": null,
+            "sf8": "ANA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -330,32 +360,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(3-LI-6(N,INL)3-LI-6,PAR,POL/DA,,ANA)",
-          "0": {
-            "code": [
-              "3-LI-6",
-              [
-                "N,INL"
-              ],
-              "3-LI-6,PAR,POL/DA,,ANA"
-            ],
-            "type": null,
-            "target": "3-LI-6",
-            "process": "N,INL",
-            "sf49": "3-LI-6,PAR,POL/DA,,ANA",
-            "sf4": "3-LI-6",
-            "sf5": "PAR",
-            "sf6": "POL/DA",
-            "sf7": null,
-            "sf8": "ANA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "E-EXC"
@@ -436,8 +440,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -452,10 +456,8 @@
               " (B,R.L.WALTER,PHENOM.IN NUCL.PHYS.,P317,1971)EN - 2.43"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -466,20 +468,16 @@
               "   DESCRIBED IN (J,NIM,57,197,67)."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN )",
             "free_txt": [
               " 12 NE213 SCINTILLATORS."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG  ,2ITYPAD)",
             "free_txt": [
@@ -487,10 +485,8 @@
               " LABORATORY IN LEGNARO."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(POLNS,D-C12)",
             "free_txt": [
@@ -506,10 +502,8 @@
               " VALUES GIVEN IN 'ANALYSIS'."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF  )",
             "free_txt": [
@@ -523,18 +517,14 @@
               " COUNTING WAS PERFORMED WITH AN EMPTY ALUMINUM CAN."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N    )",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -545,10 +535,8 @@
               " THE LITHIUM SAMPLE WAS 110 CM."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -559,8 +547,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -573,10 +561,8 @@
               "   EXPERIMENTAL ERRORS."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -587,8 +573,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -596,10 +582,8 @@
               "           ESTIMATED UNCERTAINTIES IN BACKGROUND."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

@@ -63,38 +63,95 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,98VOLOS,,204,1998)",
-          "free_txt": [
-            " Main ref. Data Table."
-          ],
-          "publication_year": "1998"
-        },
-        {
-          "x4_code": "(C,97TRIEST,2,1584,199705)",
-          "free_txt": [
-            " Prelim.results."
-          ],
-          "publication_year": "1997"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(C,98VOLOS,,204,1998)",
+        "free_txt": [
+          " Main ref. Data Table."
+        ],
+        "publication_year": "1998",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,97TRIEST,2,1584,199705)",
+        "free_txt": [
+          " Prelim.results."
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2ZZZGEL)",
+        "free_txt": [
+          " Pulsed Linear Accelerator - GELINA.",
+          "       Beam energy is 100 mev, averaged current is",
+          "       70 microAmpere. Electron bursts width is 2 ns",
+          "       repetition rate 800 Hz"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(82-PB-207(N,G)82-PB-208,,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "82-PB-207",
+              [
+                "N,G"
+              ],
+              "82-PB-208,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "82-PB-207",
+            "process": "N,G",
+            "sf49": "82-PB-208,,SIG,,MXW",
+            "sf4": "82-PB-208",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "   Averaged <SIGMA*   V) divided by thermal velocity  V-therm - MACS"
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2ZZZGEL)",
-          "free_txt": [
-            " Pulsed Linear Accelerator - GELINA.",
-            "       Beam energy is 100 mev, averaged current is",
-            "       70 microAmpere. Electron bursts width is 2 ns",
-            "       repetition rate 800 Hz"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(83-BI-209(N,G)83-BI-210,,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "N,G"
+              ],
+              "83-BI-210,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "N,G",
+            "sf49": "83-BI-210,,SIG,,MXW",
+            "sf4": "83-BI-210",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Averaged <SIGMA*V>      divided by thermal velocity  V-therm -MACS"
+      }
     }
   },
   "data_tables": {
@@ -119,32 +176,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-207(N,G)82-PB-208,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "82-PB-207",
-              [
-                "N,G"
-              ],
-              "82-PB-208,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "82-PB-207",
-            "process": "N,G",
-            "sf49": "82-PB-208,,SIG,,MXW",
-            "sf4": "82-PB-208",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "   Averaged <SIGMA*   V) divided by thermal velocity  V-therm - MACS"
-        }
-      },
       "common": {
         "heads": [
           "EN-RES-NRM",
@@ -215,32 +246,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(N,G)83-BI-210,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "N,G"
-              ],
-              "83-BI-210,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "N,G",
-            "sf49": "83-BI-210,,SIG,,MXW",
-            "sf4": "83-BI-210",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Averaged <SIGMA*V>      divided by thermal velocity  V-therm -MACS"
-        }
-      },
       "common": {
         "heads": [
           "ERR-1"
@@ -308,8 +313,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -322,10 +327,8 @@
               "areas."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -333,10 +336,8 @@
               " For neutron flux shape."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(STANK)",
             "free_txt": [
@@ -352,10 +353,8 @@
               "  For neutron flux measurement"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
@@ -365,10 +364,8 @@
               "       repetition rate 800 Hz"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
@@ -377,10 +374,8 @@
               "        thick water slabs canned in beryllium"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -391,8 +386,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -414,18 +409,14 @@
               "logE interpolation."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,F.Perey,C,85SANTA,2,1523,1985)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(26-FE-56(N,G),,ARE)",
             "free_txt": [
@@ -434,10 +425,8 @@
               "13% iron."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -445,10 +434,8 @@
               " total mass 83.4 gram. Pb-207 content is 90.4 % ."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -459,8 +446,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -469,10 +456,8 @@
               "containing 9% silver."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -486,10 +471,8 @@
               " error due to the normalization procedure."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -497,10 +480,8 @@
               " total mass 177.2 gram."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

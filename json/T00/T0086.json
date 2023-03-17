@@ -1,7 +1,7 @@
 {
   "entry": "T0086",
-  "last_updated": "2012-05-30",
-  "number_of_revisions": "4",
+  "last_updated": "2023-01-13",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(20010306C)",
@@ -12,8 +12,17 @@
     {
       "x4_code": "(20120318A)",
       "free_txt": [
-        " SD. In Subents 002, 003 units for E-LVL",
-        "in DATA section were changed (keV -> MeV)"
+        " SD. In subents 002, 003 units for E-LVL",
+        "in data section were changed (keV -> MeV)."
+      ]
+    },
+    {
+      "x4_code": "(20220418A)",
+      "free_txt": [
+        " BP: Added doi, digitized data",
+        " (unobtainable data) per an NRDC decision for data",
+        "sets that were published before 2000 (C32 of WP2022-",
+        "01)."
       ]
     }
   ],
@@ -39,47 +48,51 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,37,2281,198806)",
-          "free_txt": [],
-          "publication_year": "1988"
-        },
-        {
-          "x4_code": "(J,PL/B,92,67,1980)",
-          "free_txt": [],
-          "publication_year": "1980"
-        },
-        {
-          "x4_code": "(T,KURJAN,1980)",
-          "free_txt": [],
-          "publication_year": "1980"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,1USASTF)",
-          "free_txt": [
-            " FN tandem accelerator"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(1USASTF)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,37,2281,1988)",
+        "free_txt": [
+          " Main reference.",
+          "#doi:10.1103/PhysRevC.37.2281"
+        ],
+        "publication_year": "1988",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.37.2281"
+      },
+      {
+        "x4_code": "(J,PL/B,92,67,1980)",
+        "free_txt": [
+          "#doi:10.1016/0370-2693(80)90305-6"
+        ],
+        "publication_year": "1980",
+        "pointer": "0",
+        "doi": "10.1016/0370-2693(80)90305-6"
+      },
+      {
+        "x4_code": "(T,KURJAN,1980)",
+        "free_txt": [],
+        "publication_year": "1980",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,1USASTF)",
+        "free_txt": [
+          " FN tandem accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(1USASTF)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(9-F-19(P,G)10-NE-20,PAR,DA,,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(9-F-19(P,G)10-NE-20,PAR,DA,,REL)",
+        "children": [
+          {
             "code": [
               "9-F-19",
               [
@@ -97,11 +110,74 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(9-F-19(P,G)10-NE-20,PAR,DA)",
+        "children": [
+          {
+            "code": [
+              "9-F-19",
+              [
+                "P,G"
+              ],
+              "10-NE-20,PAR,DA"
+            ],
+            "type": null,
+            "target": "9-F-19",
+            "process": "P,G",
+            "sf49": "10-NE-20,PAR,DA",
+            "sf4": "10-NE-20",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(9-F-19(P,G)10-NE-20,PAR,POL/DA,,ANA)",
+        "children": [
+          {
+            "code": [
+              "9-F-19",
+              [
+                "P,G"
+              ],
+              "10-NE-20,PAR,POL/DA,,ANA"
+            ],
+            "type": null,
+            "target": "9-F-19",
+            "process": "P,G",
+            "sf49": "10-NE-20,PAR,POL/DA,,ANA",
+            "sf4": "10-NE-20",
+            "sf5": "PAR",
+            "sf6": "POL/DA",
+            "sf7": null,
+            "sf8": "ANA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -563,32 +639,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(9-F-19(P,G)10-NE-20,PAR,DA)",
-          "0": {
-            "code": [
-              "9-F-19",
-              [
-                "P,G"
-              ],
-              "10-NE-20,PAR,DA"
-            ],
-            "type": null,
-            "target": "9-F-19",
-            "process": "P,G",
-            "sf49": "10-NE-20,PAR,DA",
-            "sf4": "10-NE-20",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ANG"
@@ -1134,93 +1184,204 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(9-F-19(P,G)10-NE-20,PAR,POL/DA,,ANA)",
-          "0": {
-            "code": [
-              "9-F-19",
-              [
-                "P,G"
-              ],
-              "10-NE-20,PAR,POL/DA,,ANA"
-            ],
-            "type": null,
-            "target": "9-F-19",
-            "process": "P,G",
-            "sf49": "10-NE-20,PAR,POL/DA,,ANA",
-            "sf4": "10-NE-20",
-            "sf5": "PAR",
-            "sf6": "POL/DA",
-            "sf7": null,
-            "sf8": "ANA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
-      "data": null
+      "data": {
+        "heads": [
+          "E-LVL",
+          "EN",
+          "ANG",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MEV",
+          "ADEG",
+          "ARB-UNITS",
+          "ARB-UNITS"
+        ],
+        "data": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.63,
+            1.63,
+            1.63,
+            1.63,
+            1.63,
+            1.63,
+            1.63,
+            1.63,
+            1.63,
+            1.63,
+            1.63,
+            1.63
+          ],
+          [
+            5.2,
+            5.2,
+            5.2,
+            5.7,
+            5.7,
+            5.7,
+            6.1,
+            6.1,
+            6.1,
+            7.1,
+            7.1,
+            7.1,
+            5.8,
+            5.8,
+            5.8,
+            5.9,
+            5.9,
+            5.9,
+            6.1,
+            6.1,
+            6.1,
+            7.1,
+            7.1,
+            7.1
+          ],
+          [
+            43.846,
+            88.462,
+            133.846,
+            44.989,
+            90.016,
+            134.288,
+            43.846,
+            89.231,
+            133.846,
+            44.106,
+            88.994,
+            134.599,
+            46.092,
+            90.344,
+            135.406,
+            46.537,
+            91.317,
+            136.976,
+            43.478,
+            89.565,
+            133.913,
+            45.611,
+            91.222,
+            136.018
+          ],
+          [
+            0.34005,
+            0.05113,
+            -0.38133,
+            0.53802,
+            0.23998,
+            -0.28102,
+            -0.00971,
+            -0.02404,
+            -0.02131,
+            -0.31744,
+            -0.08337,
+            0.31043,
+            -0.17292,
+            0.03139,
+            0.26194,
+            -0.15082,
+            0.02726,
+            0.09943,
+            0.05766,
+            0.08309,
+            0.01142,
+            0.04656,
+            0.18957,
+            0.07895
+          ],
+          [
+            0.06705,
+            0.07498,
+            0.10895,
+            0.06115,
+            0.07446,
+            0.10784,
+            0.09697,
+            0.04805,
+            0.0958,
+            0.10894,
+            0.09864,
+            0.12416,
+            0.05324,
+            0.12547,
+            0.08151,
+            0.10053,
+            0.09823,
+            0.10713,
+            0.12692,
+            0.11083,
+            0.08015,
+            0.09317,
+            0.0948,
+            0.06581
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Data corrected for finite solid angle."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
               " 25*25-cm NaI spectrometer equipped with",
-              " anticoincidence shield.",
-              "Gamma-ray spectra were recorded with a 24 cm*24 cm",
-              "NaI detector equipped with an anticoincidence shield"
+              "anticoincidence shield. Gamma-ray spectra were",
+              "recorded with a 24 cm*24 cm NaI detector equipped",
+              "with an anticoincidence shield"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,1USASTF)",
             "free_txt": [
               " FN tandem accelerator"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "Beam polarization determined relative to 12C(p,p0)",
-              " reaction at 9.8 MeV and 70 degrees; monitored using",
-              " 19F(p,p0) reaction at 30 degrees."
+              "reaction at 9.8 MeV and 70 degrees; monitored using",
+              "19F(p,p0) reaction at 30 degrees.)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1231,8 +1392,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1242,20 +1403,16 @@
               "Digitizing error in data 5."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Unpolarized beam."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1263,10 +1420,8 @@
               " thickness typically 2 mg/cm2 CaF2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1278,8 +1433,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1288,20 +1443,16 @@
               "Digitizing error in data 0.5 microb/sr.."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Unpolarized beam."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1309,10 +1460,8 @@
               " thickness typically 2 mg/cm2 CaF2."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1324,34 +1473,49 @@
       }
     },
     "004": {
-      "inc-source": {
-        "0": [
+      "0": {
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Compiler's comment: both data sets for dsigma/dtheta",
+              "and A*dsigma/dtheta were digitized. Analyzing power",
+              "was extracted by dividing the second data set by the",
+              "first. Analyzing power value around 90 degree is the",
+              "most reliable."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No details on sources of uncertainties."
+            ]
+          }
+        ],
+        "inc-source": [
           {
             "x4_code": "(ATOMI)",
             "free_txt": [
               " Polarized protons from ANAC ground state",
-              " atomic beam source."
+              "atomic beam source."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "Layer of CaF2 deposited on thin gold foils."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
-            "x4_code": "(UNOBT)",
+            "x4_code": "(CURVE)",
             "free_txt": [
-              " Data for analyzing power x cross section given",
-              " in Figs. 3, 5 of main reference."
+              " Fig.3,5, pages 2282-2283 of main reference."
             ]
           }
         ]

@@ -92,44 +92,40 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ZP/A,289,219,1979)",
-          "free_txt": [
-            "  Issue 2"
-          ],
-          "publication_year": "1979"
-        },
-        {
-          "x4_code": "(C,79GRENOB,,288,1979)",
-          "free_txt": [],
-          "publication_year": "1979"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2GERMNZ)",
-          "free_txt": [
-            " TRIGA reactor."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2GERMNZ)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ZP/A,289,219,1979)",
+        "free_txt": [
+          "  Issue 2"
+        ],
+        "publication_year": "1979",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,79GRENOB,,288,1979)",
+        "free_txt": [],
+        "publication_year": "1979",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2GERMNZ)",
+        "free_txt": [
+          " TRIGA reactor."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2GERMNZ)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(37-RB-99(0,B-)38-SR-98,,PN)",
-          "0": {
+      "0": {
+        "x4_code": "(37-RB-99(0,B-)38-SR-98,,PN)",
+        "children": [
+          {
             "code": [
               "37-RB-99",
               [
@@ -147,11 +143,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,F)ELEM/MASS,IND,FY,,MXW)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,IND,FY,,MXW"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,IND,FY,,MXW",
+            "sf4": "ELEM/MASS",
+            "sf5": "IND",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -183,32 +214,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F)ELEM/MASS,IND,FY,,MXW)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,IND,FY,,MXW"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,IND,FY,,MXW",
-            "sf4": "ELEM/MASS",
-            "sf5": "IND",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY",
@@ -277,8 +282,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -295,10 +300,8 @@
               "  width of Gaussian distribution  0.64+-0.04."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -306,10 +309,8 @@
               " For decay of nuclei during the diffusion process."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(PROPC)",
             "free_txt": [
@@ -337,38 +338,30 @@
               " detection of the fission product decay gammas."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No details given."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2GERMNZ)",
             "free_txt": [
               " TRIGA reactor."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -376,10 +369,8 @@
               " Flux density 1.7E+11 n/sec/cm2."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(OLMS)",
             "free_txt": [
@@ -392,18 +383,14 @@
               " in the well shielded detector position."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(B,DG,DN)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -417,8 +404,8 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(37-RB-99,59.MSEC)",
             "free_txt": [
@@ -428,10 +415,8 @@
               " 109+-12 msec from gamma-rays spectra."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": null,
             "free_txt": [
@@ -446,20 +431,16 @@
               " 13.3+-2.1 %"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(37-RB-98(0,B-)38-SR-98,,PN)",
             "free_txt": [
               "  Average of two values was used:"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -471,8 +452,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -480,10 +461,8 @@
               "spectral distribution of delayed neutrons."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "((1.)37-RB-97,173.MSEC)",
             "free_txt": [
@@ -503,10 +482,8 @@
               " Half-lives were measured."
             ]
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(37-RB-96,188.MSEC,DG,815.,                  ,DG,692.,                  ,DG,1037.)",
             "free_txt": [
@@ -519,18 +496,14 @@
               " 188. +- 2. msec. Three (from 9)prominent gamma lines."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F)37-RB-96,IND,FY,,MXW)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

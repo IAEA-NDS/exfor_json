@@ -40,59 +40,56 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,615,220,1997)",
-          "free_txt": [
-            " Data of Subent 002"
-          ],
-          "publication_year": "1997"
-        },
-        {
-          "x4_code": "(J,PMB,44,719,1999)",
-          "free_txt": [
-            "   Data of Subent 003",
-            "Experimental hydrogen kerma factors for incident",
-            "neutron energies from 25 to 75 MeV .",
-            "Authors:V.Corcalciuc, S.Benck, R.Malu, J.P.Meulders,",
-            "I.Slypen."
-          ],
-          "publication_year": "1999"
-        },
-        {
-          "x4_code": "(J,MED,27,2541,2000)",
-          "free_txt": [
-            "  Subent 004 data.",
-            " Authors: J.P.Meulders, S.Benck, I.Slypen, V.Corcalciuc"
-          ],
-          "publication_year": "2000"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2BLGLVN)",
-          "free_txt": [
-            " Fast-neutron-beam facility at the",
-            "Louvain-la-Neuve Cyclotron, CYCLONE"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2BLGLVN)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,615,220,1997)",
+        "free_txt": [
+          " Data of Subent 002"
+        ],
+        "publication_year": "1997",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PMB,44,719,1999)",
+        "free_txt": [
+          "   Data of Subent 003",
+          "Experimental hydrogen kerma factors for incident",
+          "neutron energies from 25 to 75 MeV .",
+          "Authors:V.Corcalciuc, S.Benck, R.Malu, J.P.Meulders,",
+          "I.Slypen."
+        ],
+        "publication_year": "1999",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,MED,27,2541,2000)",
+        "free_txt": [
+          "  Subent 004 data.",
+          " Authors: J.P.Meulders, S.Benck, I.Slypen, V.Corcalciuc"
+        ],
+        "publication_year": "2000",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2BLGLVN)",
+        "free_txt": [
+          " Fast-neutron-beam facility at the",
+          "Louvain-la-Neuve Cyclotron, CYCLONE"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2BLGLVN)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
+        "children": [
+          {
             "code": [
               "1-H-1",
               [
@@ -110,11 +107,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(N,TOT),,KER,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,TOT"
+              ],
+              ",,KER,,,DERIV"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,TOT",
+            "sf49": ",,KER,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "KER",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-1(N,TOT),,KER,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,TOT"
+              ],
+              ",,KER,,,DERIV"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,TOT",
+            "sf49": ",,KER,,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "KER",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": "    Kerma factor"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -533,32 +593,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,TOT),,KER,,,DERIV)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,TOT"
-              ],
-              ",,KER,,,DERIV"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,TOT",
-            "sf49": ",,KER,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "KER",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -672,32 +706,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,TOT),,KER,,,DERIV)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,TOT"
-              ],
-              ",,KER,,,DERIV"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,TOT",
-            "sf49": ",,KER,,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "KER",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": "    Kerma factor"
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -858,8 +866,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1048,10 +1056,8 @@
               " 4.0  4.24+-0.10  4.14+-0.09  4.10+-0.09"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(TELES,SCIN,CSICR)",
             "free_txt": [
@@ -1063,10 +1069,8 @@
               "photomultiplier."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2BLGLVN)",
             "free_txt": [
@@ -1074,10 +1078,8 @@
               "Louvain-la-Neuve Cyclotron, CYCLONE"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
@@ -1085,10 +1087,8 @@
               "10 muA proton beam current,"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1100,10 +1100,8 @@
               "second monitor."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -1114,10 +1112,8 @@
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(O,22718001,J.P.Meulders+,J,MED,27,2541,2000)",
             "free_txt": [
@@ -1135,8 +1131,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1144,10 +1140,8 @@
               "the integral of the fourth order Legendre fit ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1179,10 +1173,8 @@
               " number of nuclei in target  - 1.% ."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(1-H-1(N,TOT),,SIG)",
             "free_txt": [
@@ -1204,10 +1196,8 @@
               "J.Binstock."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,J.Binstock,J,PR/C,10,19,1974)",
             "free_txt": [
@@ -1252,10 +1242,8 @@
               " Three rel.refs. for data reduction procedure ."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1263,10 +1251,8 @@
               "1. or 0.5 mm thickness."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1277,8 +1263,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1313,20 +1299,16 @@
               "for transformation of units, N=9.5736E-3 ."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM,1-H-1(N,TOT),,SIG)",
             "free_txt": [
               " From  ENDF/B-VI.6"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1358,10 +1340,8 @@
               "uncertainties as result of fit."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,T.W.Burrows,J,PR/C,7,1306,1973)",
             "free_txt": [
@@ -1448,10 +1428,8 @@
               "Total CS used in analysis."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1470,8 +1448,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1485,10 +1463,8 @@
               "for transformation of units, N=9.5736E-3 ."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1496,10 +1472,8 @@
               "\"incident energy beam width\" , but is given with +- ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1527,20 +1501,16 @@
               " number of nuclei in target  - 1.% ."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
               " Extrapolated value"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,,T.W.Burrows,J,PR/C,7,1306,1973)",
             "free_txt": []
@@ -1588,10 +1558,8 @@
               " from PMB,44,719,1999:"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

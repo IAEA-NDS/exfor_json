@@ -77,47 +77,43 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "((S,ISINN-14,319,2007)=(S,JINR-E3-2007-23,319,2007))",
-          "free_txt": [
-            "  Main reference."
-          ],
-          "publication_year": "2007"
-        },
-        {
-          "x4_code": "((S,ISINN-14,319,2007)=(S,JINR-E3-2007-23,319,2007))",
-          "free_txt": [
-            "  Main reference."
-          ],
-          "publication_year": "2007"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4ZZZDUB)",
-          "free_txt": [
-            " IBR-30 reactor., 10kW, 100Hz, 4microsec.",
-            " Electronic apparatus  of CAMAC standard."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4ZZZDUB)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "((S,ISINN-14,319,2007)=(S,JINR-E3-2007-23,319,2007))",
+        "free_txt": [
+          "  Main reference."
+        ],
+        "publication_year": "2007",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((S,ISINN-14,319,2007)=(S,JINR-E3-2007-23,319,2007))",
+        "free_txt": [
+          "  Main reference."
+        ],
+        "publication_year": "2007",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          " IBR-30 reactor., 10kW, 100Hz, 4microsec.",
+          " Electronic apparatus  of CAMAC standard."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,ABS),,ALF,,AV)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-235(N,ABS),,ALF,,AV)",
+        "children": [
+          {
             "code": [
               "92-U-235",
               [
@@ -135,11 +131,130 @@
             "sf7": null,
             "sf8": "AV",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Alpha averaged over energy interval given in DATA section, broad energy groups of BNAB system."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Alpha averaged over energy interval given in DATA section, broad energy groups of BNAB system."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-235(N,ABS),,ALF,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,ABS"
+              ],
+              ",,ALF,,AV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,ABS",
+            "sf49": ",,ALF,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "ALF",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Alpha averaged over energy interval given in DATA section, narrow energy groups."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-235(N,G)92-U-236,,MLT,,AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,G"
+              ],
+              "92-U-236,,MLT,,AV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,G",
+            "sf49": "92-U-236,,MLT,,AV",
+            "sf4": "92-U-236",
+            "sf5": null,
+            "sf6": "MLT",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Multiplicity averagedover energy interval given in DATA section, narrowenergy groups."
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(92-U-235(N,G)92-U-236,,MLT,,RES)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,G"
+              ],
+              "92-U-236,,MLT,,RES"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,G",
+            "sf49": "92-U-236,,MLT,,RES",
+            "sf4": "92-U-236",
+            "sf5": null,
+            "sf6": "MLT",
+            "sf7": null,
+            "sf8": "RES",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Gamma multiplicityaveraged over resonance energy boundaries."
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(92-U-235(N,ABS),,ALF,,RES/AV)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,ABS"
+              ],
+              ",,ALF,,RES/AV"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,ABS",
+            "sf49": ",,ALF,,RES/AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "ALF",
+            "sf7": null,
+            "sf8": "RES/AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Alpha values forresolved resonances average over resonance energyboundaries"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -195,32 +310,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,ABS),,ALF,,AV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,ABS"
-              ],
-              ",,ALF,,AV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,ABS",
-            "sf49": ",,ALF,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "ALF",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Alpha averaged over energy interval given in DATA section, narrow energy groups."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -324,32 +413,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,G)92-U-236,,MLT,,AV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,G"
-              ],
-              "92-U-236,,MLT,,AV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,G",
-            "sf49": "92-U-236,,MLT,,AV",
-            "sf4": "92-U-236",
-            "sf5": null,
-            "sf6": "MLT",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Multiplicity averagedover energy interval given in DATA section, narrowenergy groups."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -453,32 +516,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,G)92-U-236,,MLT,,RES)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,G"
-              ],
-              "92-U-236,,MLT,,RES"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,G",
-            "sf49": "92-U-236,,MLT,,RES",
-            "sf4": "92-U-236",
-            "sf5": null,
-            "sf6": "MLT",
-            "sf7": null,
-            "sf8": "RES",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Gamma multiplicityaveraged over resonance energy boundaries."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -604,32 +641,6 @@
       }
     },
     "006": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,ABS),,ALF,,RES/AV)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,ABS"
-              ],
-              ",,ALF,,RES/AV"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,ABS",
-            "sf49": ",,ALF,,RES/AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "ALF",
-            "sf7": null,
-            "sf8": "RES/AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Alpha values forresolved resonances average over resonance energyboundaries"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -757,18 +768,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(SHAPE)",
             "free_txt": [
               "Analysis of shape of multiplicity spectra ."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -794,10 +803,8 @@
               " control the power level of IBR-30."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
@@ -805,10 +812,8 @@
               " Electronic apparatus  of CAMAC standard."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -819,10 +824,8 @@
               "  background components in measured TOF spectra."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -837,10 +840,8 @@
               " Transmission was determined."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -853,26 +854,22 @@
       }
     },
     "002": {
-      "exp-year": {
-        "0": [
+      "0": {
+        "exp-year": [
           {
             "x4_code": "(2005)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Errors are not specified."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -889,18 +886,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Errors are not specified."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -917,18 +912,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Errors are not specified."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -945,8 +938,8 @@
       }
     },
     "005": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -963,8 +956,8 @@
       }
     },
     "006": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR1,3.,7.)",
             "free_txt": [
@@ -972,10 +965,8 @@
               "         Exp. error in some resonances up to 10-20 %."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

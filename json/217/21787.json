@@ -39,39 +39,34 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR,71,20,1947)",
-          "free_txt": [],
-          "publication_year": "1947"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(ACCEL,2ITYISR)",
-          "free_txt": [
-            " Li,B,and Be targets were bombarded with",
-            "deuterons of 0.8 MeV produced by the 1 MeV equipment of",
-            "the Instituto Superiore di Ssanita."
-          ],
-          "facility_type": "(ACCEL)",
-          "institute": "(2ITYISR)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR,71,20,1947)",
+        "free_txt": [],
+        "publication_year": "1947",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,2ITYISR)",
+        "free_txt": [
+          " Li,B,and Be targets were bombarded with",
+          "deuterons of 0.8 MeV produced by the 1 MeV equipment of",
+          "the Instituto Superiore di Ssanita."
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(2ITYISR)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(N,EL)6-C-12,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(N,EL)6-C-12,,SIG)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -89,11 +84,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-2(N,EL)1-H-2,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "N,EL"
+              ],
+              "1-H-2,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "N,EL",
+            "sf49": "1-H-2,,SIG",
+            "sf4": "1-H-2",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "N,EL"
+              ],
+              "1-H-1,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "N,EL",
+            "sf49": "1-H-1,,SIG",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -133,32 +191,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-2(N,EL)1-H-2,,SIG)",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "N,EL"
-              ],
-              "1-H-2,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "N,EL",
-            "sf49": "1-H-2,,SIG",
-            "sf4": "1-H-2",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -198,32 +230,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "N,EL"
-              ],
-              "1-H-1,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "N,EL",
-            "sf49": "1-H-1,,SIG",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -265,18 +271,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               " The given energy is a mean energy"
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": "(THEO)",
             "free_txt": [
@@ -284,20 +288,16 @@
               " neutron-deuteron collision."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(COIN,PROPC,PROPC,PROPC)",
             "free_txt": [
               " coincidence set of three proportional counters."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -305,10 +305,8 @@
               " analysis is missing."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(ACCEL,2ITYISR)",
             "free_txt": [
@@ -317,10 +315,8 @@
               "the Instituto Superiore di Ssanita."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -330,10 +326,8 @@
               " are slightly different (13.5 MeV and 14.0 MeV)."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(D-BE)",
             "free_txt": [
@@ -347,10 +341,8 @@
               " For neutrons of 13.5 MeV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -371,10 +363,8 @@
               " Recoil protons projected in the forward direction."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,,E.Amaldi+,J,NWS,30,582,1942)",
             "free_txt": [
@@ -395,10 +385,8 @@
             "x4_code": "(M,,E.O.Salant+,J,PR,57,1075(104),1940)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -409,10 +397,8 @@
               " 1.4 and 15.9 g/cm2"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

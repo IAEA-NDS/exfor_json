@@ -46,42 +46,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YF,3,711,1966)",
-          "free_txt": [],
-          "publication_year": "1966"
-        },
-        {
-          "x4_code": "(J,SNP,3,522,1966)",
-          "free_txt": [
-            " - Eng.trans.of YF,3,711,1966"
-          ],
-          "publication_year": "1966"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,4RUSFTI)",
-          "free_txt": [],
-          "facility_type": "(SYNCH)",
-          "institute": "(4RUSFTI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YF,3,711,1966)",
+        "free_txt": [],
+        "publication_year": "1966",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SNP,3,522,1966)",
+        "free_txt": [
+          " - Eng.trans.of YF,3,711,1966"
+        ],
+        "publication_year": "1966",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,4RUSFTI)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(4RUSFTI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(G,N)6-C-11,,SIG,,BRS)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(G,N)6-C-11,,SIG,,BRS)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -99,11 +95,72 @@
             "sf7": null,
             "sf8": "BRS",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(6-C-12(G,N)6-C-11,,SIG,,BRS)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "G,N"
+              ],
+              "6-C-11,,SIG,,BRS"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "G,N",
+            "sf49": "6-C-11,,SIG,,BRS",
+            "sf4": "6-C-11",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "The yield was measured with the step 1.0 MeV"
       },
+      "2": {
+        "x4_code": "(6-C-12(G,N)6-C-11,,SIG,,BRA)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "G,N"
+              ],
+              "6-C-11,,SIG,,BRA"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "G,N",
+            "sf49": "6-C-11,,SIG,,BRA",
+            "sf4": "6-C-11",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "The yield was measured with the step 0.5 MeV"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANAL-STEP"
@@ -241,56 +298,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(6-C-12(G,N)6-C-11,,SIG,,BRS)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "G,N"
-              ],
-              "6-C-11,,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "G,N",
-            "sf49": "6-C-11,,SIG,,BRS",
-            "sf4": "6-C-11",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "The yield was measured with the step 1.0 MeV"
-        },
-        "2": {
-          "x4_code": "(6-C-12(G,N)6-C-11,,SIG,,BRA)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "G,N"
-              ],
-              "6-C-11,,SIG,,BRA"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "G,N",
-            "sf49": "6-C-11,,SIG,,BRA",
-            "sf4": "6-C-11",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "The yield was measured with the step 0.5 MeV"
-        }
-      },
       "common": {
         "heads": [
           "ANAL-STEP"
@@ -521,8 +528,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(THEO)",
             "free_txt": [
@@ -537,10 +544,8 @@
               " With experimental data of early measurements."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -552,10 +557,8 @@
               "inverse matrix method (Penfold-Leiss)."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(BF3)",
             "free_txt": [
@@ -563,28 +566,22 @@
               "parallelly to the beam axis."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical errors are presented only."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,4RUSFTI)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": [
@@ -592,10 +589,8 @@
               "MeV."
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -604,10 +599,8 @@
               "13 millisec."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB,SITA)",
             "free_txt": [
@@ -616,10 +609,8 @@
               "beam."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -628,10 +619,8 @@
               "maximum position for the reaction O-16(gamma,p)n-15."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": [
@@ -639,10 +628,8 @@
               "energy."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -653,8 +640,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(PLA)",
             "free_txt": [
@@ -663,10 +650,8 @@
               "was shifted with respect to the other by 0.25 MeV."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -677,18 +662,16 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(PLA)",
             "free_txt": [
               ". The step of analysis  is 1.0 MeV"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

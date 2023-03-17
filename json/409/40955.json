@@ -57,46 +57,42 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AE,62,415,1987)",
-          "free_txt": [
-            " Issue 6."
-          ],
-          "publication_year": "1987"
-        },
-        {
-          "x4_code": "(J,SJA,62,483,1987)",
-          "free_txt": [
-            " Engl.transl.of J,AE,62,415,1987"
-          ],
-          "publication_year": "1987"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4RUSITE)",
-          "free_txt": [
-            " Heavy-water reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4RUSITE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AE,62,415,1987)",
+        "free_txt": [
+          " Issue 6."
+        ],
+        "publication_year": "1987",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,SJA,62,483,1987)",
+        "free_txt": [
+          " Engl.transl.of J,AE,62,415,1987"
+        ],
+        "publication_year": "1987",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4RUSITE)",
+        "free_txt": [
+          " Heavy-water reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4RUSITE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(48-CD-109(N,ABS),,SIG,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(48-CD-109(N,ABS),,SIG,,SPA)",
+        "children": [
+          {
             "code": [
               "48-CD-109",
               [
@@ -114,11 +110,46 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Averaged over reactor                              thermal spectrum"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Averaged over reactor                              thermal spectrum"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(48-CD-109(N,ABS),,RI)",
+        "children": [
+          {
+            "code": [
+              "48-CD-109",
+              [
+                "N,ABS"
+              ],
+              ",,RI"
+            ],
+            "type": null,
+            "target": "48-CD-109",
+            "process": "N,ABS",
+            "sf49": ",,RI",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ASSUM1",
@@ -162,32 +193,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(48-CD-109(N,ABS),,RI)",
-          "0": {
-            "code": [
-              "48-CD-109",
-              [
-                "N,ABS"
-              ],
-              ",,RI"
-            ],
-            "type": null,
-            "target": "48-CD-109",
-            "process": "N,ABS",
-            "sf49": ",,RI",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ASSUM2",
@@ -233,52 +238,42 @@
   },
   "experimental_conditions": {
     "001": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(48-CD-109,,DG,88.)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               "  Not specified"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4RUSITE)",
             "free_txt": [
               " Heavy-water reactor"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -297,10 +292,8 @@
               "after irradiation     1.25286+-0.00207"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -312,16 +305,14 @@
       }
     },
     "002": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM1,48-CD-108(N,ABS),,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -330,10 +321,8 @@
               " (1.342+-0.052)*10**13"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -344,16 +333,14 @@
       }
     },
     "003": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM2,48-CD-108(N,ABS),,RI)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -361,10 +348,8 @@
               "  (1.332+-0.060)*10**12 n/cm2/sec"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

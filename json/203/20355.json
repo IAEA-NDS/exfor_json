@@ -41,51 +41,48 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NSE,70,(1),98,7903)",
-          "free_txt": [
-            " REFERENCE FOR AVERAGE DATA."
-          ],
-          "publication_year": "1979"
-        },
-        {
-          "x4_code": "((R,KFK-1518,7301)=(R,EANDC(E)-147,7301))",
-          "free_txt": [
-            " CURVE."
-          ],
-          "publication_year": "1973"
-        },
-        {
-          "x4_code": "(W,SPENCER,7401)",
-          "free_txt": [
-            " NUMERICAL VALUES ON CARD. REMARKS."
-          ],
-          "publication_year": "1974"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG  )",
-          "free_txt": [
-            "    KFK 3 MV VAN DE GRAAFF ACCELERATOR."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NSE,70,(1),98,7903)",
+        "free_txt": [
+          " REFERENCE FOR AVERAGE DATA."
+        ],
+        "publication_year": "1979",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((R,KFK-1518,7301)=(R,EANDC(E)-147,7301))",
+        "free_txt": [
+          " CURVE."
+        ],
+        "publication_year": "1973",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,SPENCER,7401)",
+        "free_txt": [
+          " NUMERICAL VALUES ON CARD. REMARKS."
+        ],
+        "publication_year": "1974",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG  )",
+        "free_txt": [
+          "    KFK 3 MV VAN DE GRAAFF ACCELERATOR."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-10(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(5-B-10(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "5-B-10",
               [
@@ -103,11 +100,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(5-B-10(N,TOT),,SIG)",
+        "children": [
+          {
+            "code": [
+              "5-B-10",
+              [
+                "N,TOT"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "5-B-10",
+            "process": "N,TOT",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(5-B-10(N,TOT),,SIG,,AV)",
+        "children": [
+          {
+            "code": [
+              "5-B-10",
+              [
+                "N,TOT"
+              ],
+              ",,SIG,,AV"
+            ],
+            "type": null,
+            "target": "5-B-10",
+            "process": "N,TOT",
+            "sf49": ",,SIG,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -902,32 +962,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-10(N,TOT),,SIG)",
-          "0": {
-            "code": [
-              "5-B-10",
-              [
-                "N,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "5-B-10",
-            "process": "N,TOT",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1794,32 +1828,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-10(N,TOT),,SIG,,AV)",
-          "0": {
-            "code": [
-              "5-B-10",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,AV"
-            ],
-            "type": null,
-            "target": "5-B-10",
-            "process": "N,TOT",
-            "sf49": ",,SIG,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1925,8 +1933,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1936,10 +1944,8 @@
               ".B10, O AND C IMPURITIES WERE TAKEN INTO ACCOUNT."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN )",
             "free_txt": [
@@ -1948,10 +1954,8 @@
               " PHOTOMULTIPLIER."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1960,30 +1964,24 @@
               " 184.795 AND 229.699 KEV (RUN II, 500 KHZ)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG  )",
             "free_txt": [
               "    KFK 3 MV VAN DE GRAAFF ACCELERATOR."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
               "    LI7(P,N)BE7 REACTION ON THICK LITHIUM TARGET"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1991,30 +1989,24 @@
               ".NEUTRON ENERGY 230 TO 420 KEV, REP.FREQ. OF 500 KHZ."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF  )",
             "free_txt": [
               "    TIME OF FLIGHT, PATH = 4.962 M."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               ".ABSOLUTE, TRANSMISSION EXPERIMENT."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2024,10 +2016,8 @@
               " TION OF THE BORON SAMPLE."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2039,8 +2029,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2051,8 +2041,8 @@
       }
     },
     "003": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2065,8 +2055,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

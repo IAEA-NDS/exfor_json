@@ -52,38 +52,33 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,70HELSINKI,1,495,1970)",
-          "free_txt": [],
-          "publication_year": "1970"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2FR SAC)",
-          "free_txt": [
-            " Saclay 45-MeV Electron Linear",
-            "Accelerator."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2FR SAC)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,70HELSINKI,1,495,1970)",
+        "free_txt": [],
+        "publication_year": "1970",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2FR SAC)",
+        "free_txt": [
+          " Saclay 45-MeV Electron Linear",
+          "Accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2FR SAC)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(94-PU-239(N,ABS),,ALF)",
-          "0": {
+      "0": {
+        "x4_code": "(94-PU-239(N,ABS),,ALF)",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -101,11 +96,72 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "1": {
+        "x4_code": "(94-PU-239(N,EL),,ARE)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,EL"
+              ],
+              ",,ARE"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,EL",
+            "sf49": ",,ARE",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "ARE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(94-PU-239(N,EL),,ARE)",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,EL"
+              ],
+              ",,ARE"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,EL",
+            "sf49": ",,ARE",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "ARE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "003": {
       "common": null,
       "data": {
         "heads": [
@@ -150,56 +206,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "1": {
-          "x4_code": "(94-PU-239(N,EL),,ARE)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,EL"
-              ],
-              ",,ARE"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,EL",
-            "sf49": ",,ARE",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "ARE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(94-PU-239(N,EL),,ARE)",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,EL"
-              ],
-              ",,ARE"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,EL",
-            "sf49": ",,ARE",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "ARE",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -909,8 +915,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -918,10 +924,8 @@
               "obtainable."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -929,10 +933,8 @@
               "neutrons were discriminated from the fission neutrons."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2FR SAC)",
             "free_txt": [
@@ -940,30 +942,24 @@
               "Accelerator."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
               " Moderated photo-neutrons."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
               " Time of flight scattering measurement."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(O,20445009,H.Derrien,T,DERRIEN,1973)",
             "free_txt": [
@@ -974,8 +970,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -987,10 +983,8 @@
               ".GAMMA(gamma) = 42 milli-eV if not known."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1009,18 +1003,16 @@
       }
     },
     "004": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               ".Corrected for background and fission contribution."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -1028,10 +1020,8 @@
               "the article."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1062,18 +1052,14 @@
               " 629.8 eV + 622.6 eV"
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(20139001,K.H.Boeckhoff+,C,66PARIS,2,135,196610)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1089,22 +1075,8 @@
               " 1966 Paris Conf.,Vol.Ii,P.135, ENTRY 20139."
             ]
           }
-        ]
-      },
-      "sample": {
-        "2": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "Thickness - 4.0E-4 atom/barn ,",
-              "between two Al foils of 0.12 mm thick each.",
-              ".Contains a little Pu-240."
-            ]
-          }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1116,6 +1088,28 @@
             "free_txt": [
               " Res.parameters of Table I -",
               " Eres, 2g*GAMMAn, GAMMAtot, spin J ."
+            ]
+          }
+        ]
+      },
+      "1": {
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Thickness = 6.5E-4 atom/barn"
+            ]
+          }
+        ]
+      },
+      "2": {
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Thickness - 4.0E-4 atom/barn ,",
+              "between two Al foils of 0.12 mm thick each.",
+              ".Contains a little Pu-240."
             ]
           }
         ]

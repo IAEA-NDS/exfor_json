@@ -77,37 +77,32 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,2002PRUHON,,734,2002)",
-          "free_txt": [],
-          "publication_year": "2002"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2FR ILL)",
-          "free_txt": [
-            " High neutron flux reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2FR ILL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,2002PRUHON,,734,2002)",
+        "free_txt": [],
+        "publication_year": "2002",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2FR ILL)",
+        "free_txt": [
+          " High neutron flux reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2FR ILL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(N,G)83-BI-210,,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(83-BI-209(N,G)83-BI-210,,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "83-BI-209",
               [
@@ -125,11 +120,100 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(83-BI-209(N,G)83-BI-210-G/M,,SIG/RAT,,MXW)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "N,G"
+              ],
+              "83-BI-210-G/M,,SIG/RAT,,MXW"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "N,G",
+            "sf49": "83-BI-210-G/M,,SIG/RAT,,MXW",
+            "sf4": "83-BI-210-G/M",
+            "sf5": null,
+            "sf6": "SIG/RAT",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "1": {
+        "x4_code": "(83-BI-209(N,G)83-BI-210-G,,SIG,,MXW,DERIV)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "N,G"
+              ],
+              "83-BI-210-G,,SIG,,MXW,DERIV"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "N,G",
+            "sf49": "83-BI-210-G,,SIG,,MXW,DERIV",
+            "sf4": "83-BI-210-G",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(83-BI-209(N,G)83-BI-210-M,,SIG,,MXW,DERIV)",
+        "children": [
+          {
+            "code": [
+              "83-BI-209",
+              [
+                "N,G"
+              ],
+              "83-BI-210-M,,SIG,,MXW,DERIV"
+            ],
+            "type": null,
+            "target": "83-BI-209",
+            "process": "N,G",
+            "sf49": "83-BI-210-M,,SIG,,MXW,DERIV",
+            "sf4": "83-BI-210-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -163,32 +247,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(N,G)83-BI-210-G/M,,SIG/RAT,,MXW)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "N,G"
-              ],
-              "83-BI-210-G/M,,SIG/RAT,,MXW"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "N,G",
-            "sf49": "83-BI-210-G/M,,SIG/RAT,,MXW",
-            "sf4": "83-BI-210-G/M",
-            "sf5": null,
-            "sf6": "SIG/RAT",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -222,56 +280,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "1": {
-          "x4_code": "(83-BI-209(N,G)83-BI-210-G,,SIG,,MXW,DERIV)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "N,G"
-              ],
-              "83-BI-210-G,,SIG,,MXW,DERIV"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "N,G",
-            "sf49": "83-BI-210-G,,SIG,,MXW,DERIV",
-            "sf4": "83-BI-210-G",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(83-BI-209(N,G)83-BI-210-M,,SIG,,MXW,DERIV)",
-          "0": {
-            "code": [
-              "83-BI-209",
-              [
-                "N,G"
-              ],
-              "83-BI-210-M,,SIG,,MXW,DERIV"
-            ],
-            "type": null,
-            "target": "83-BI-209",
-            "process": "N,G",
-            "sf49": "83-BI-210-M,,SIG,,MXW,DERIV",
-            "sf4": "83-BI-210-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -317,8 +325,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -327,10 +335,8 @@
               "targets."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GE)",
             "free_txt": [
@@ -341,40 +347,32 @@
               "100-8578 keV ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               " No information."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2FR ILL)",
             "free_txt": [
               " High neutron flux reactor"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               " Ultra-cold beam facility"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -383,10 +381,8 @@
               "3.8 mm diameter by 5mm-thick B4C apertures."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
@@ -396,10 +392,8 @@
               "beam intensity 1.E+9 n/cm2/sec)"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -413,10 +407,8 @@
               "Cl-35(n,gamma)Cl-36 reaction."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(PRELM)",
             "free_txt": []
@@ -425,16 +417,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(83-BI-210-M,3.04E+6YR)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -442,10 +432,8 @@
               "effective thickness of Bi and normalization samples."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -457,16 +445,14 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(83-BI-210-M,3.04E+6YR)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -474,10 +460,8 @@
               "self-attenuation, internal conversion correction."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -489,8 +473,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -498,10 +482,8 @@
               "measured branching ratio."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -509,10 +491,8 @@
               "effective thickness of Bi and normalization samples."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

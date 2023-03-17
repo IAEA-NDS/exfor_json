@@ -60,44 +60,40 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RCA,65,1,1994)",
-          "free_txt": [],
-          "publication_year": "1994"
-        },
-        {
-          "x4_code": "(C,91JUELIC,,711,1991)",
-          "free_txt": [
-            " preliminary report"
-          ],
-          "publication_year": "1991"
-        }
-      ]
-    },
-    "facilities": {
-      "2": [
-        {
-          "x4_code": "(CYCLO,2GERJUL)",
-          "free_txt": [
-            " 2 irradiations (Ep=22 MeV)"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2GERJUL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RCA,65,1,1994)",
+        "free_txt": [],
+        "publication_year": "1994",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,91JUELIC,,711,1991)",
+        "free_txt": [
+          " preliminary report"
+        ],
+        "publication_year": "1991",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2GERJUL)",
+        "free_txt": [
+          " 2 irradiations (Ep=22 MeV)"
+        ],
+        "pointer": "2",
+        "facility_type": "(CYCLO)",
+        "institute": "(2GERJUL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(83-BI-209(P,X)80-HG-203,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(83-BI-209(P,X)80-HG-203,,SIG)",
+        "children": [
+          {
             "code": [
               "83-BI-209",
               [
@@ -115,11 +111,18 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -185,18 +188,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
               " 140 cm3 HPGe detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -235,32 +236,43 @@
               " No information given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "2": [
+        ],
+        "method": [
           {
-            "x4_code": "(CYCLO,2GERJUL)",
+            "x4_code": "(STTA,EDEG)",
             "free_txt": [
-              " 2 irradiations (Ep=22 MeV)"
+              " Several Al and Cu foils were inserted in",
+              " the stack as energy degrader and monitor foils.",
+              "The beam current were measured in faraday cup and via",
+              " monitor reactions on natural Cu and Al, and more",
+              " reliance was attached to measurements through monitor",
+              " reactions."
+            ]
+          },
+          {
+            "x4_code": "(CHSEP)",
+            "free_txt": [
+              " The [7Be]BeO and the [203Hg]HgS were obtained",
+              " after a multi step chemical separation.",
+              "The radiochemical yield was determined gravimetrically.",
+              "The Be and Hg content of the samples were determined",
+              " by using AES-ICP and AAFS respectively.",
+              "The [7Be]Be0 samples were directly measured on a gamma",
+              " detector."
+            ]
+          },
+          {
+            "x4_code": "(GSPEC)",
+            "free_txt": [
+              " The decay was followed for five hours.",
+              "The [203Hg]HgS was measured on a low background",
+              " shielded detector.",
+              "The Tl-208 background peak was separated from the peak",
+              " of 203Hg."
             ]
           }
-        ]
-      },
-      "method": {
-        "2": [
-          {
-            "x4_code": "(ACTIV)",
-            "free_txt": [
-              " KFA, Juelich",
-              " - Primary energy 22 MeV",
-              " - Irradiated for 8 hr with beam current of 70 nA."
-            ]
-          }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,B.Scholten,T,SCHOLTEN,1992)",
             "free_txt": [
@@ -283,10 +295,8 @@
             "x4_code": "(A0497002,G.F.Steyn+,J,ARI,41,315,1990)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(29-CU-0(P,X)30-ZN-65,,SIG)",
             "free_txt": []
@@ -301,10 +311,8 @@
               " above 35 MeV"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,C.F.Williamson+,R,CEA-12-3042,1966)",
             "free_txt": [
@@ -312,10 +320,8 @@
               " energy degradation"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -333,11 +339,51 @@
             ]
           }
         ]
+      },
+      "1": {
+        "facility": [
+          {
+            "x4_code": "(CYCLO,2SWTPSI)",
+            "free_txt": [
+              " 4 irradiations (Ep=46 and 72 MeV)"
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(ACTIV)",
+            "free_txt": [
+              " PSI, Villigen",
+              " - Primary proton energy 72 MeV and 46 MeV",
+              " - Irradiated for 6 hr with beam current of 50 - 70 nA."
+            ]
+          }
+        ]
+      },
+      "2": {
+        "facility": [
+          {
+            "x4_code": "(CYCLO,2GERJUL)",
+            "free_txt": [
+              " 2 irradiations (Ep=22 MeV)"
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(ACTIV)",
+            "free_txt": [
+              " KFA, Juelich",
+              " - Primary energy 22 MeV",
+              " - Irradiated for 8 hr with beam current of 70 nA."
+            ]
+          }
+        ]
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -350,18 +396,14 @@
               "  nucleons (4p3n)."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(80-HG-203,46.6D,DG,279.2,0.815)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

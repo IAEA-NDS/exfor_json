@@ -1,12 +1,21 @@
 {
   "entry": "C0302",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-03-07",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19990222C)",
       "free_txt": [
         " VV"
+      ]
+    },
+    {
+      "x4_code": "(20220426A)",
+      "free_txt": [
+        " BP: Updated entry, added doi, digitized",
+        " (unobtainable data) per an NRDC decision for data",
+        "sets that were published before 2000 (C32 of WP2022-",
+        "01)."
       ]
     }
   ],
@@ -42,37 +51,36 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,50,1528,199409)",
-          "free_txt": [],
-          "publication_year": "1994"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,1USABRK)",
-          "free_txt": [
-            " 88-inch cyclotron."
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(1USABRK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,50,1528,1994)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.50.1528"
+        ],
+        "publication_year": "1994",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.50.1528"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USABRK)",
+        "free_txt": [
+          " The 88-inch cyclotron of the Lawrence",
+          "Berkeley Laboratory."
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USABRK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(39-Y-89(P,G)40-ZR-90,PAR,POL/DA,,ANA)",
-          "0": {
+      "0": {
+        "x4_code": "(39-Y-89(P,G)40-ZR-90,PAR,POL/DA,,ANA)",
+        "children": [
+          {
             "code": [
               "39-Y-89",
               [
@@ -90,11 +98,46 @@
             "sf7": null,
             "sf8": "ANA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(39-Y-89(P,G)40-ZR-90,PAR,DA,,RS0)",
+        "children": [
+          {
+            "code": [
+              "39-Y-89",
+              [
+                "P,G"
+              ],
+              "40-ZR-90,PAR,DA,,RS0"
+            ],
+            "type": null,
+            "target": "39-Y-89",
+            "process": "P,G",
+            "sf49": "40-ZR-90,PAR,DA,,RS0",
+            "sf4": "40-ZR-90",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "RS0",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG"
@@ -110,7 +153,7 @@
       },
       "data": {
         "heads": [
-          "E-EXC",
+          "E-LVL",
           "E-EXC-MEAN",
           "EN",
           "DATA",
@@ -198,32 +241,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(39-Y-89(P,G)40-ZR-90,PAR,DA,,RSD)",
-          "0": {
-            "code": [
-              "39-Y-89",
-              [
-                "P,G"
-              ],
-              "40-ZR-90,PAR,DA,,RSD"
-            ],
-            "type": null,
-            "target": "39-Y-89",
-            "process": "P,G",
-            "sf49": "40-ZR-90,PAR,DA,,RSD",
-            "sf4": "40-ZR-90",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "RSD",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN"
@@ -237,77 +254,169 @@
           ]
         ]
       },
-      "data": null
+      "data": {
+        "heads": [
+          "E-LVL",
+          "E-LVL",
+          "E-LVL",
+          "ANG-CM",
+          "DATA-CM",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MEV",
+          "MEV",
+          "ADEG",
+          "NO-DIM",
+          "NO-DIM"
+        ],
+        "data": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.76,
+            1.76,
+            1.76,
+            1.76,
+            1.76,
+            1.76
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            2.32,
+            2.32,
+            2.32,
+            2.32,
+            2.32,
+            2.32
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            2.73,
+            2.73,
+            2.73,
+            2.73,
+            2.73,
+            2.73
+          ],
+          [
+            39.059,
+            65.116,
+            74.656,
+            89.865,
+            109.83,
+            130.237,
+            38.0,
+            63.777,
+            73.81,
+            89.111,
+            109.19,
+            129.79
+          ],
+          [
+            1.951,
+            1.913,
+            1.411,
+            1.023,
+            0.483,
+            0.189,
+            1.468,
+            1.506,
+            1.458,
+            1.288,
+            1.089,
+            0.568
+          ],
+          [
+            0.057,
+            0.057,
+            0.085,
+            0.047,
+            0.038,
+            0.038,
+            0.047,
+            0.047,
+            0.095,
+            0.047,
+            0.057,
+            0.047
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Corrected for dead time and accidental rejection of",
-              " good gamma-ray events."
+              "good gamma-ray events."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
               " A 25.4 x 27.9 cm NaI(Tl) detector."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information about sources of",
-              " uncertainties."
+              "uncertainties."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,1USABRK)",
             "free_txt": [
-              " 88-inch cyclotron."
+              " The 88-inch cyclotron of the Lawrence",
+              "Berkeley Laboratory."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(ATOMI)",
             "free_txt": [
               " Atomic beam polarized ion source (ABPIS).",
-              "Typical beam polarizations were about 0.58."
+              "typical beam polarizations were about 0.58."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB,SITA)",
             "free_txt": [
               " Bombarding of thin targets with protons",
-              " and observation the gamma-quanta spectra."
+              "and observation the gamma-quanta spectra."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -315,50 +424,38 @@
             ]
           }
         ]
-      },
-      "status": {
-        "0": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "No reply to author proof from M. Godwin."
-            ]
-          }
-        ]
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": null,
             "free_txt": [
-              "Mean energy of 2.3 represents transitions to a cluster",
-              " of the first three strong single-particle excited",
-              " states (final nucleus states near 2.3 MeV)."
+              "Mean energy of 2.3 represents transitions to a",
+              "cluster of the first three strong single-particle",
+              "excited states (final nucleus states near 2.3 MeV)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE)",
             "free_txt": [
-              "Data were obtained by email from M. Godwin, Feb. 1999."
+              " Data were obtained by email from M.Godwin,",
+              "Feb. 1999."
             ]
           }
         ]
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
-            "x4_code": "(UNOBT)",
+            "x4_code": "(CURVE)",
             "free_txt": [
-              " Unable to obtain data.",
-              " See Fig. 2 of reference."
+              " Fig. 2, page 1530."
             ]
           }
         ]

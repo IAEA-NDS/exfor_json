@@ -698,49 +698,45 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,2006VANCOU,,(B072),200609)",
-          "free_txt": [
-            "  Main reference, graphs"
-          ],
-          "publication_year": "2006"
-        },
-        {
-          "x4_code": "(J,NIM/A,531,392,2004)",
-          "free_txt": [
-            "  Experimental details"
-          ],
-          "publication_year": "2004"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2ZZZGEL)",
-          "free_txt": [
-            " Pulsed GEEL linear electron",
-            "   accelerator GELINA, beam energy is 100 MeV, averaged",
-            "   electron current 70 microAmp. compressed 1 ns width",
-            "   electron bursts, repetition rate 800 Hz"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,2006VANCOU,,(B072),200609)",
+        "free_txt": [
+          "  Main reference, graphs"
+        ],
+        "publication_year": "2006",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NIM/A,531,392,2004)",
+        "free_txt": [
+          "  Experimental details"
+        ],
+        "publication_year": "2004",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2ZZZGEL)",
+        "free_txt": [
+          " Pulsed GEEL linear electron",
+          "   accelerator GELINA, beam energy is 100 MeV, averaged",
+          "   electron current 70 microAmp. compressed 1 ns width",
+          "   electron bursts, repetition rate 800 Hz"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-236(N,G)92-U-237,,SIG,,REL)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-236(N,G)92-U-237,,SIG,,REL)",
+        "children": [
+          {
             "code": [
               "92-U-236",
               [
@@ -758,11 +754,46 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Capture yield"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": "  Capture yield"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-236(N,G)92-U-237,,SIG,,REL)",
+        "children": [
+          {
+            "code": [
+              "92-U-236",
+              [
+                "N,G"
+              ],
+              "92-U-237,,SIG,,REL"
+            ],
+            "type": null,
+            "target": "92-U-236",
+            "process": "N,G",
+            "sf49": "92-U-237,,SIG,,REL",
+            "sf4": "92-U-237",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Capture yield in the  first s-wave resonance of U-236"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -11471,32 +11502,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-236(N,G)92-U-237,,SIG,,REL)",
-          "0": {
-            "code": [
-              "92-U-236",
-              [
-                "N,G"
-              ],
-              "92-U-237,,SIG,,REL"
-            ],
-            "type": null,
-            "target": "92-U-236",
-            "process": "N,G",
-            "sf49": "92-U-237,,SIG,,REL",
-            "sf4": "92-U-237",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Capture yield in the  first s-wave resonance of U-236"
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -12473,8 +12478,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -12490,10 +12495,8 @@
               "  deposit of B-10. For neutron flux monitoring."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
@@ -12503,10 +12506,8 @@
               "   electron bursts, repetition rate 800 Hz"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": [
@@ -12521,10 +12522,8 @@
               "  Water moderated fast neutron beam"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -12537,10 +12536,8 @@
               "  Pulse-height distribution"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(I,,D.Tronc+,J,NIM/A,228,217,1985)",
             "free_txt": [
@@ -12548,10 +12545,8 @@
               "   linear accelerator facility"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -12566,8 +12561,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
@@ -12580,10 +12575,8 @@
               "    Data digitizing error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -12594,8 +12587,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(EN-ERR-DIG)",
             "free_txt": [
@@ -12608,10 +12601,8 @@
               "    Data digitizing error"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

@@ -32,37 +32,32 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,90,253,1967)",
-          "free_txt": [],
-          "publication_year": "1967"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO,2JPNTOK)",
-          "free_txt": [
-            " Institute for Nuclear Study"
-          ],
-          "facility_type": "(CYCLO)",
-          "institute": "(2JPNTOK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,90,253,1967)",
+        "free_txt": [],
+        "publication_year": "1967",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2JPNTOK)",
+        "free_txt": [
+          " Institute for Nuclear Study"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2JPNTOK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(58-CE-140(P,N)59-PR-140,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(58-CE-140(P,N)59-PR-140,,SIG)",
+        "children": [
+          {
             "code": [
               "58-CE-140",
               [
@@ -80,11 +75,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(58-CE-140(P,2N)59-PR-139,,SIG)",
+        "children": [
+          {
+            "code": [
+              "58-CE-140",
+              [
+                "P,2N"
+              ],
+              "59-PR-139,,SIG"
+            ],
+            "type": null,
+            "target": "58-CE-140",
+            "process": "P,2N",
+            "sf49": "59-PR-139,,SIG",
+            "sf4": "59-PR-139",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(58-CE-142(P,N)59-PR-142,,SIG)",
+        "children": [
+          {
+            "code": [
+              "58-CE-142",
+              [
+                "P,N"
+              ],
+              "59-PR-142,,SIG"
+            ],
+            "type": null,
+            "target": "58-CE-142",
+            "process": "P,N",
+            "sf49": "59-PR-142,,SIG",
+            "sf4": "59-PR-142",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -150,32 +208,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(58-CE-140(P,2N)59-PR-139,,SIG)",
-          "0": {
-            "code": [
-              "58-CE-140",
-              [
-                "P,2N"
-              ],
-              "59-PR-139,,SIG"
-            ],
-            "type": null,
-            "target": "58-CE-140",
-            "process": "P,2N",
-            "sf49": "59-PR-139,,SIG",
-            "sf4": "59-PR-139",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -208,32 +240,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(58-CE-142(P,N)59-PR-142,,SIG)",
-          "0": {
-            "code": [
-              "58-CE-142",
-              [
-                "P,N"
-              ],
-              "59-PR-142,,SIG"
-            ],
-            "type": null,
-            "target": "58-CE-142",
-            "process": "P,N",
-            "sf49": "59-PR-142,,SIG",
-            "sf4": "59-PR-142",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -304,8 +310,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(TRCS)",
             "free_txt": [
@@ -321,10 +327,8 @@
               " Statistical model"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
@@ -338,30 +342,24 @@
               " No information on source of uncertainties"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO,2JPNTOK)",
             "free_txt": [
               " Institute for Nuclear Study"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
               "Beam intensity is about 0.5 uA."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -377,10 +375,8 @@
               "       Phys. Rev. 115(1959)137]."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -392,10 +388,8 @@
               "- Backing is aluminium. Deposited on aluminium foil"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -406,16 +400,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(59-PR-140,3.4MIN,AR,0.51,1.08)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -423,10 +415,8 @@
               "        annihilation"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -434,10 +424,8 @@
               "        radiation in coincidence."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(D,P0033001,J.P.Blaser+,J,HPA,24,441,1951)",
             "free_txt": []
@@ -446,8 +434,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(58-CE-139-G,140.D,DG,166.,0.82)",
             "free_txt": [
@@ -455,28 +443,22 @@
               "given abundance."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
               " To detect 166 keV decay gamma from 139Ce"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP)",
             "free_txt": []
           }
-        ]
-      },
-      "rad-det": {
-        "0": [
+        ],
+        "rad-det": [
           {
             "x4_code": "(58-CE-139-G,DG)",
             "free_txt": []
@@ -485,42 +467,34 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": []
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(59-PR-142-G,19.2HR,B-,,1.00)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GEMUC)",
             "free_txt": [
               " To detect negatons from 142Pr"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(D,P0033001,J.P.Blaser+,J,HPA,24,441,1951)",
             "free_txt": []

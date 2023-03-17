@@ -29,43 +29,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,INDC(NDS)-0646,2013)",
-          "free_txt": [
-            " In English."
-          ],
-          "publication_year": "2013"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,4RUSFEI)",
-          "free_txt": [
-            " Cascade Generator CG-2.5.",
-            "Pneumatic transfer system. The times of sample",
-            "transportation from the irradiation position to the",
-            "neutron detector were from 150 to 200 ms depending on",
-            "gas pressure and the weight of the samples."
-          ],
-          "facility_type": "(VDG)",
-          "institute": "(4RUSFEI)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,INDC(NDS)-0646,2013)",
+        "free_txt": [
+          " In English."
+        ],
+        "publication_year": "2013",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,4RUSFEI)",
+        "free_txt": [
+          " Cascade Generator CG-2.5.",
+          "Pneumatic transfer system. The times of sample",
+          "transportation from the irradiation position to the",
+          "neutron detector were from 150 to 200 ms depending on",
+          "gas pressure and the weight of the samples."
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(4RUSFEI)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(95-AM-241(N,F),DL,NU)",
-          "0": {
+      "0": {
+        "x4_code": "(95-AM-241(N,F),DL,NU)",
+        "children": [
+          {
             "code": [
               "95-AM-241",
               [
@@ -83,11 +78,65 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  Energy dependence of   absolute total yield of delayed neutrons"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((95-AM-241(N,F),DL/GRP,NU)/(95-AM-241(N,F),DL,NU))",
+        "children": [
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,F"
+              ],
+              ",DL/GRP,NU"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,F",
+            "sf49": ",DL/GRP,NU",
+            "sf4": null,
+            "sf5": "DL/GRP",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": null,
-          "free_text": "  Energy dependence of   absolute total yield of delayed neutrons"
-        }
-      },
+          {
+            "code": [
+              "95-AM-241",
+              [
+                "N,F"
+              ],
+              ",DL,NU"
+            ],
+            "type": null,
+            "target": "95-AM-241",
+            "process": "N,F",
+            "sf49": ",DL,NU",
+            "sf4": null,
+            "sf5": "DL",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": "Relative abundances of delayed neutrons in 6-groupsmodel presentation."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -126,51 +175,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((95-AM-241(N,F),DL/GRP,NU)/(95-AM-241(N,F),DL,NU))",
-          "0": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,F"
-              ],
-              ",DL/GRP,NU"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,F",
-            "sf49": ",DL/GRP,NU",
-            "sf4": null,
-            "sf5": "DL/GRP",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "95-AM-241",
-              [
-                "N,F"
-              ],
-              ",DL,NU"
-            ],
-            "type": null,
-            "target": "95-AM-241",
-            "process": "N,F",
-            "sf49": ",DL,NU",
-            "sf4": null,
-            "sf5": "DL",
-            "sf6": "NU",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": "Relative abundances of delayed neutrons in 6-groupsmodel presentation."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -496,8 +500,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -507,10 +511,8 @@
               "Intensity of background,n/s          129.9"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(D4PI)",
             "free_txt": [
@@ -530,20 +532,16 @@
               "target."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Not specified."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,4RUSFEI)",
             "free_txt": [
@@ -554,10 +552,8 @@
               "gas pressure and the weight of the samples."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(P-T)",
             "free_txt": [
@@ -570,20 +566,16 @@
               " D(d,n)He-3"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Mono-energetic neutrons."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -603,10 +595,8 @@
               " 50 channels)."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -617,8 +607,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -629,8 +619,8 @@
       }
     },
     "003": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -646,10 +636,8 @@
               "   4.97 +- 0.13   9.7 +- 0.5"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -58,37 +58,33 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NIM/A,927,443,2019)",
-          "free_txt": [
-            "#doi:10.1016/j.nima.2019.02.072"
-          ],
-          "publication_year": "2019"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,2UK NIN)",
-          "free_txt": [],
-          "facility_type": "(SYNCH)",
-          "institute": "(2UK NIN)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NIM/A,927,443,2019)",
+        "free_txt": [
+          "#doi:10.1016/j.nima.2019.02.072"
+        ],
+        "publication_year": "2019",
+        "pointer": "0",
+        "doi": "10.1016/j.nima.2019.02.072"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,2UK NIN)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(2UK NIN)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(20-CA-0(N,TOT),,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(20-CA-0(N,TOT),,SIG)",
+        "children": [
+          {
             "code": [
               "20-CA-0",
               [
@@ -106,11 +102,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(20-CA-0(N,THS)20-CA-0,BA,SIG)",
+        "children": [
+          {
+            "code": [
+              "20-CA-0",
+              [
+                "N,THS"
+              ],
+              "20-CA-0,BA,SIG"
+            ],
+            "type": null,
+            "target": "20-CA-0",
+            "process": "N,THS",
+            "sf49": "20-CA-0,BA,SIG",
+            "sf4": "20-CA-0",
+            "sf5": "BA",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(20-CA-0(N,THS)20-CA-0,COH,AMP)",
+        "children": [
+          {
+            "code": [
+              "20-CA-0",
+              [
+                "N,THS"
+              ],
+              "20-CA-0,COH,AMP"
+            ],
+            "type": null,
+            "target": "20-CA-0",
+            "process": "N,THS",
+            "sf49": "20-CA-0,COH,AMP",
+            "sf4": "20-CA-0",
+            "sf5": "COH",
+            "sf6": "AMP",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -233,32 +292,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(20-CA-0(N,THS)20-CA-0,BA,SIG)",
-          "0": {
-            "code": [
-              "20-CA-0",
-              [
-                "N,THS"
-              ],
-              "20-CA-0,BA,SIG"
-            ],
-            "type": null,
-            "target": "20-CA-0",
-            "process": "N,THS",
-            "sf49": "20-CA-0,BA,SIG",
-            "sf4": "20-CA-0",
-            "sf5": "BA",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -285,32 +318,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(20-CA-0(N,THS)20-CA-0,COH,AMP)",
-          "0": {
-            "code": [
-              "20-CA-0",
-              [
-                "N,THS"
-              ],
-              "20-CA-0,COH,AMP"
-            ],
-            "type": null,
-            "target": "20-CA-0",
-            "process": "N,THS",
-            "sf49": "20-CA-0,COH,AMP",
-            "sf4": "20-CA-0",
-            "sf5": "COH",
-            "sf6": "AMP",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -339,8 +346,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -360,10 +367,8 @@
               "calculated with Synthetic Model."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": null,
             "free_txt": [
@@ -386,38 +391,30 @@
               "measurements at temperature of about 10 K."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on sources of uncertainties"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,2UK NIN)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(SPALL)",
             "free_txt": [
               " ISIS spallation neutron source"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,TRN)",
             "free_txt": [
@@ -427,10 +424,8 @@
               " - beam monitor: 8.60 m."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -447,10 +442,8 @@
               "Sample thickness 0.71 g/cm2"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -461,8 +454,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -474,8 +467,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -492,8 +485,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

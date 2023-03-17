@@ -44,38 +44,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(W,PERRY,1959)",
-          "free_txt": [
-            " - data were given to J.D.Seagrave for",
-            "presentation on the Conference (see REL-REF)."
-          ],
-          "publication_year": "1959"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,1USALAS)",
-          "free_txt": [],
-          "facility_type": "(VDG)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(W,PERRY,1959)",
+        "free_txt": [
+          " - data were given to J.D.Seagrave for",
+          "presentation on the Conference (see REL-REF)."
+        ],
+        "publication_year": "1959",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,1USALAS)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-3(P,N)2-HE-3,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(1-H-3(P,N)2-HE-3,,DA)",
+        "children": [
+          {
             "code": [
               "1-H-3",
               [
@@ -93,11 +88,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-3(P,N)2-HE-3,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-3",
+              [
+                "P,N"
+              ],
+              "2-HE-3,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-3",
+            "process": "P,N",
+            "sf49": "2-HE-3,,SIG",
+            "sf4": "2-HE-3",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(1-H-3(P,N)2-HE-3,,DA,,COS/1K2)",
+        "children": [
+          {
+            "code": [
+              "1-H-3",
+              [
+                "P,N"
+              ],
+              "2-HE-3,,DA,,COS/1K2"
+            ],
+            "type": null,
+            "target": "1-H-3",
+            "process": "P,N",
+            "sf49": "2-HE-3,,DA,,COS/1K2",
+            "sf4": "2-HE-3",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "COS/1K2",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG",
@@ -200,32 +258,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-3(P,N)2-HE-3,,SIG)",
-          "0": {
-            "code": [
-              "1-H-3",
-              [
-                "P,N"
-              ],
-              "2-HE-3,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-3",
-            "process": "P,N",
-            "sf49": "2-HE-3,,SIG",
-            "sf4": "2-HE-3",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -328,32 +360,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-3(P,N)2-HE-3,,DA,,COS/1K2)",
-          "0": {
-            "code": [
-              "1-H-3",
-              [
-                "P,N"
-              ],
-              "2-HE-3,,DA,,COS/1K2"
-            ],
-            "type": null,
-            "target": "1-H-3",
-            "process": "P,N",
-            "sf49": "2-HE-3,,DA,,COS/1K2",
-            "sf4": "2-HE-3",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "COS/1K2",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -724,8 +730,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,PROPC,SCIN)",
             "free_txt": [
@@ -733,28 +739,22 @@
               "and a crystal scintillation counter in coincidence"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,1USALAS)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
               " Proton recoiling"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,J.D.Seagrave,C,59LONDON,2,583,1959)",
             "free_txt": [
@@ -777,8 +777,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -791,18 +791,14 @@
               " relative error"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,A1149001,G.V.Gorlov+,J,ZTF,26,985,1956)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -813,8 +809,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -833,10 +829,8 @@
               " relative error"
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(A,C0051006,R.L.Macklin+,J,PR,109,105,1958)",
             "free_txt": []
@@ -845,10 +839,8 @@
             "x4_code": "(A,A0098001,N.A.Vlasov+,J,ZET,28,639,1955)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -865,8 +857,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -875,10 +867,8 @@
               "the statistical goodness-of-fit parameter"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

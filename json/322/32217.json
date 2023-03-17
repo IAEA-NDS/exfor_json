@@ -67,60 +67,58 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,2008AKERSL,,549,2008)",
-          "free_txt": [
-            " All results presented"
-          ],
-          "publication_year": "2008"
-        },
-        {
-          "x4_code": "(C,2008KYIV,,548,2008)",
-          "free_txt": [
-            " first result at 59 keV"
-          ],
-          "publication_year": "2008"
-        },
-        {
-          "x4_code": "(C,2006KYIV,,569,2006)",
-          "free_txt": [
-            " first result at 2 keV"
-          ],
-          "publication_year": "2006"
-        },
-        {
-          "x4_code": "(W,GRITZAY,20110318)",
-          "free_txt": [
-            " Data with revised uncertainties"
-          ],
-          "publication_year": "2011"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4UKRIJD)",
-          "free_txt": [
-            " Reactor WWR-M"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4UKRIJD)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(C,2008AKERSL,,549,2008)",
+        "free_txt": [
+          " All results presented"
+        ],
+        "publication_year": "2008",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,2008KYIV,,548,2008)",
+        "free_txt": [
+          " first result at 59 keV"
+        ],
+        "publication_year": "2008",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,2006KYIV,,569,2006)",
+        "free_txt": [
+          " first result at 2 keV"
+        ],
+        "publication_year": "2006",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(W,GRITZAY,20110318)",
+        "free_txt": [
+          " Data with revised uncertainties"
+        ],
+        "publication_year": "2011",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4UKRIJD)",
+        "free_txt": [
+          " Reactor WWR-M"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4UKRIJD)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(73-TA-181(N,G)73-TA-182,,SIG,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(73-TA-181(N,G)73-TA-182,,SIG,,SPA)",
+        "children": [
+          {
             "code": [
               "73-TA-181",
               [
@@ -138,11 +136,46 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(73-TA-181(N,G)73-TA-182,,SIG,,SPA)",
+        "children": [
+          {
+            "code": [
+              "73-TA-181",
+              [
+                "N,G"
+              ],
+              "73-TA-182,,SIG,,SPA"
+            ],
+            "type": null,
+            "target": "73-TA-181",
+            "process": "N,G",
+            "sf49": "73-TA-182,,SIG,,SPA",
+            "sf4": "73-TA-182",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-1",
@@ -216,32 +249,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(73-TA-181(N,G)73-TA-182,,SIG,,SPA)",
-          "0": {
-            "code": [
-              "73-TA-181",
-              [
-                "N,G"
-              ],
-              "73-TA-182,,SIG,,SPA"
-            ],
-            "type": null,
-            "target": "73-TA-181",
-            "process": "N,G",
-            "sf49": "73-TA-182,,SIG,,SPA",
-            "sf4": "73-TA-182",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "ERR-1",
@@ -317,8 +324,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -334,18 +341,14 @@
               "MCNP-4C for real irradiation conditions."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(73-TA-182-G,114.74D,DG,152.43,0.0693,                     DG,179.39,0.0308,                     DG,222.1096,0.0749,                     DG,229.322,0.0363,                     DG,264.0752,0.036,                     DG,1121.3008,0.349,                     DG,1189.05,0.1623,                     DG,1221.41,0.2698,                     DG,1231.0157,0.1144)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -377,20 +380,16 @@
               "each 2600 s of the total exposition."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4UKRIJD)",
             "free_txt": [
               " Reactor WWR-M"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -398,10 +397,8 @@
               "of the reactor."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(FNB,ACTIV)",
             "free_txt": [
@@ -411,10 +408,8 @@
               "further measurements."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(5-B-10(N,A)3-LI-7,PAR,SIG,G)",
             "free_txt": [
@@ -428,10 +423,8 @@
               "JEF-3.0."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": "(73-TA-181,ENR=0.99988)",
             "free_txt": [
@@ -454,8 +447,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -504,10 +497,8 @@
               "the output collimator 0.3%"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -521,10 +512,8 @@
               "was 302400 s."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -532,10 +521,8 @@
               "used."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -552,8 +539,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -602,10 +589,8 @@
               "the output collimator 3.7%"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -619,10 +604,8 @@
               "irradiation was 527040 s."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -630,10 +613,8 @@
               "used."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

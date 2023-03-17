@@ -46,42 +46,38 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,236,1,1974)",
-          "free_txt": [],
-          "publication_year": "1974"
-        },
-        {
-          "x4_code": "(R,IEA-297,1973)",
-          "free_txt": [
-            " - primary reference for 238U(n,2n)."
-          ],
-          "publication_year": "1973"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,3BZLIPE)",
-          "free_txt": [],
-          "facility_type": "(REAC)",
-          "institute": "(3BZLIPE)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,236,1,1974)",
+        "free_txt": [],
+        "publication_year": "1974",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,IEA-297,1973)",
+        "free_txt": [
+          " - primary reference for 238U(n,2n)."
+        ],
+        "publication_year": "1973",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,3BZLIPE)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(3BZLIPE)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(90-TH-232(G,N)90-TH-231,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(90-TH-232(G,N)90-TH-231,,SIG)",
+        "children": [
+          {
             "code": [
               "90-TH-232",
               [
@@ -99,11 +95,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-238(G,N)92-U-237,,SIG)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "G,N"
+              ],
+              "92-U-237,,SIG"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "G,N",
+            "sf49": "92-U-237,,SIG",
+            "sf4": "92-U-237",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -151,32 +182,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(G,N)92-U-237,,SIG)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "G,N"
-              ],
-              "92-U-237,,SIG"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "G,N",
-            "sf49": "92-U-237,,SIG",
-            "sf4": "92-U-237",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -232,8 +237,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -242,10 +247,8 @@
               " that can be formed, to decay."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -260,10 +263,8 @@
               " a function of the excitation energy."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -274,18 +275,14 @@
               " data of both types for U-238 are presented."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI,TRD)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -293,18 +290,14 @@
               "statistic and calibration."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,3BZLIPE)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(MPH=(7-N-14(N,G)7-N-15))",
             "free_txt": [
@@ -383,26 +376,20 @@
               ".    Eg =  6.07 MeV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(DG)",
             "free_txt": []
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(M,,J.T.Caldwell+,P,LA-UR-968,1973)",
             "free_txt": [
@@ -410,10 +397,8 @@
               " system."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -424,16 +409,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(90-TH-231,25.52HR,DG,26.,0.02,DG,84.,0.10)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -450,8 +433,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -29,35 +29,30 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,RCA,57,1,1992)",
-          "free_txt": [],
-          "publication_year": "1992"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(CYCLO)",
-          "free_txt": [
-            " CV 28"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,RCA,57,1,1992)",
+        "free_txt": [],
+        "publication_year": "1992",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(CYCLO)",
+        "free_txt": [
+          " CV 28"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-62(P,N)29-CU-62,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(28-NI-62(P,N)29-CU-62,,SIG)",
+        "children": [
+          {
             "code": [
               "28-NI-62",
               [
@@ -75,11 +70,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(28-NI-62(P,2N)29-CU-61,,SIG)",
+        "children": [
+          {
+            "code": [
+              "28-NI-62",
+              [
+                "P,2N"
+              ],
+              "29-CU-61,,SIG"
+            ],
+            "type": null,
+            "target": "28-NI-62",
+            "process": "P,2N",
+            "sf49": "29-CU-61,,SIG",
+            "sf4": "29-CU-61",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -183,32 +213,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(28-NI-62(P,2N)29-CU-61,,SIG)",
-          "0": {
-            "code": [
-              "28-NI-62",
-              [
-                "P,2N"
-              ],
-              "29-CU-61,,SIG"
-            ],
-            "type": null,
-            "target": "28-NI-62",
-            "process": "P,2N",
-            "sf49": "29-CU-61,,SIG",
-            "sf4": "29-CU-61",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -274,8 +278,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -283,10 +287,8 @@
               "ACE) 4K MCA Plug-in-card."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
@@ -305,39 +307,22 @@
               "since only annihilation radiation was measured."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(CYCLO)",
             "free_txt": [
               " CV 28"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(GSPEC,ACTIV,STTA)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "2": [
-          {
-            "x4_code": "(29-CU-63(P,2N)30-ZN-62,,SIG)",
-            "free_txt": [
-              "Data were taken from Browne, etc. Tables of radioactive",
-              "Isotopes (Shirley, V.S., ed.), Wiley, London, 1986."
-            ]
-          }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -347,10 +332,8 @@
               "used as beam monitors and degraders."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -358,11 +341,30 @@
             ]
           }
         ]
+      },
+      "1": {
+        "monitor": [
+          {
+            "x4_code": "(29-CU-63(P,N)30-ZN-63,,SIG)",
+            "free_txt": []
+          }
+        ]
+      },
+      "2": {
+        "monitor": [
+          {
+            "x4_code": "(29-CU-63(P,2N)30-ZN-62,,SIG)",
+            "free_txt": [
+              "Data were taken from Browne, etc. Tables of radioactive",
+              "Isotopes (Shirley, V.S., ed.), Wiley, London, 1986."
+            ]
+          }
+        ]
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(29-CU-62,9.7MIN,AR,511.,1.94)",
             "free_txt": []
@@ -371,8 +373,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(29-CU-61,3.4HR,DG,283.,0.125,DG,656.,0.107)",
             "free_txt": []

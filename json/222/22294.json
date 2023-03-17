@@ -60,30 +60,27 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,573,291,1994)",
-          "free_txt": [],
-          "publication_year": "1994"
-        },
-        {
-          "x4_code": "(C,91JUELIC,,638,199105)",
-          "free_txt": [],
-          "publication_year": "1991"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,573,291,1994)",
+        "free_txt": [],
+        "publication_year": "1994",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,91JUELIC,,638,199105)",
+        "free_txt": [],
+        "publication_year": "1991",
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(17-CL-35(N,P)16-S-35,,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(17-CL-35(N,P)16-S-35,,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "17-CL-35",
               [
@@ -101,11 +98,74 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(17-CL-35(N,P),,WID/STR)",
+        "children": [
+          {
+            "code": [
+              "17-CL-35",
+              [
+                "N,P"
+              ],
+              ",,WID/STR"
+            ],
+            "type": null,
+            "target": "17-CL-35",
+            "process": "N,P",
+            "sf49": ",,WID/STR",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID/STR",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  RESONANCE STRENTTH =                      g*(N-WID)*(P-WID)/(TOT-WID)"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(17-CL-35(N,P),,WID)",
+        "children": [
+          {
+            "code": [
+              "17-CL-35",
+              [
+                "N,P"
+              ],
+              ",,WID"
+            ],
+            "type": null,
+            "target": "17-CL-35",
+            "process": "N,P",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  PROTON WIDTH"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MONIT",
@@ -149,32 +209,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(17-CL-35(N,P),,WID/STR)",
-          "0": {
-            "code": [
-              "17-CL-35",
-              [
-                "N,P"
-              ],
-              ",,WID/STR"
-            ],
-            "type": null,
-            "target": "17-CL-35",
-            "process": "N,P",
-            "sf49": ",,WID/STR",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID/STR",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  RESONANCE STRENTTH =                      g*(N-WID)*(P-WID)/(TOT-WID)"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -228,32 +262,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(17-CL-35(N,P),,WID)",
-          "0": {
-            "code": [
-              "17-CL-35",
-              [
-                "N,P"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "17-CL-35",
-            "process": "N,P",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "  PROTON WIDTH"
-        }
-      },
       "common": {
         "heads": [
           "ASSUM1",
@@ -374,8 +382,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(AREA )",
             "free_txt": [
@@ -383,10 +391,8 @@
               " CROSS SECTION."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -395,38 +401,30 @@
               " IN THE TARGET."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T   )",
             "free_txt": [
               " TOTAL ERROR."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               ".GIVEN IN PROPER SUBENTS IF RELEVANT"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -439,10 +437,8 @@
               " CHLORIDE WAS VACUUM DEPOSITED."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -453,8 +449,8 @@
       }
     },
     "002": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SOLST)",
             "free_txt": [
@@ -463,28 +459,22 @@
               " USED."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2FR ILL)",
             "free_txt": [
               " THE ILL HIGH-FLUX REACTOR"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC )",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -492,10 +482,8 @@
               " THERMAL NEUTRON FLUX OF 5E+8 NEUTRONS/CM2/SEC."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -503,10 +491,8 @@
               " DETECTORS."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F),TER,SIG)",
             "free_txt": [
@@ -517,18 +503,16 @@
       }
     },
     "003": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
               "  .GRIDDED IONIZATION CHAMBER FILLED WITH METHANE"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
@@ -542,8 +526,8 @@
       }
     },
     "004": {
-      "assumed": {
-        "0": [
+      "0": {
+        "assumed": [
           {
             "x4_code": "(ASSUM1,17-CL-35(N,P)16-S-35,,SIG)",
             "free_txt": []
@@ -560,20 +544,16 @@
             "x4_code": "(ASSUM4,(17-CL-35(N,G),,WID)/(17-CL-35(N,P),,WID))",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
               "  .GRIDDED IONIZATION CHAMBER FILLED WITH METHANE"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
@@ -583,10 +563,8 @@
               "          REPETITION RATE 800 HZ"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,22294002)",
             "free_txt": []

@@ -35,37 +35,32 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,14,456,1976)",
-          "free_txt": [],
-          "publication_year": "1976"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2BLGGHT)",
-          "free_txt": [
-            " Beam of 40 MeV electrons"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2BLGGHT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,14,456,1976)",
+        "free_txt": [],
+        "publication_year": "1976",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2BLGGHT)",
+        "free_txt": [
+          " Beam of 40 MeV electrons"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2BLGGHT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(G,P)5-B-11,,DA,,BRS)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(G,P)5-B-11,,DA,,BRS)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -83,11 +78,46 @@
             "sf7": null,
             "sf8": "BRS",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-12(G,P)5-B-11,,SIG,,BRS)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "G,P"
+              ],
+              "5-B-11,,SIG,,BRS"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "G,P",
+            "sf49": "5-B-11,,SIG,,BRS",
+            "sf4": "5-B-11",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-SYS"
@@ -2115,32 +2145,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(G,P)5-B-11,,SIG,,BRS)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "G,P"
-              ],
-              "5-B-11,,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "G,P",
-            "sf49": "5-B-11,,SIG,,BRS",
-            "sf4": "5-B-11",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -2364,8 +2368,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2374,10 +2378,8 @@
               "Correction for background"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
@@ -2385,38 +2387,30 @@
               " area of 200 mm2 and a thickness of 3 mm"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2BLGGHT)",
             "free_txt": [
               " Beam of 40 MeV electrons"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": [
               " Bremsstrahlung"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -2427,8 +2421,8 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -2441,10 +2435,8 @@
               " Systematic uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -2455,18 +2447,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
               " Total uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

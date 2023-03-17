@@ -57,35 +57,30 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ZP/A,324,271,1986)",
-          "free_txt": [],
-          "publication_year": "1986"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC)",
-          "free_txt": [
-            " No additional information in the article."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ZP/A,324,271,1986)",
+        "free_txt": [],
+        "publication_year": "1986",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC)",
+        "free_txt": [
+          " No additional information in the article."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-10(N,G)5-B-11,,SIG,,SPA)",
-          "0": {
+      "0": {
+        "x4_code": "(5-B-10(N,G)5-B-11,,SIG,,SPA)",
+        "children": [
+          {
             "code": [
               "5-B-10",
               [
@@ -103,11 +98,74 @@
             "sf7": null,
             "sf8": "SPA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Peak area 1868+-69 counts"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Peak area 1868+-69 counts"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(5-B-10(N,G)5-B-11,,SPC,,SPA)",
+        "children": [
+          {
+            "code": [
+              "5-B-10",
+              [
+                "N,G"
+              ],
+              "5-B-11,,SPC,,SPA"
+            ],
+            "type": null,
+            "target": "5-B-10",
+            "process": "N,G",
+            "sf49": "5-B-11,,SPC,,SPA",
+            "sf4": "5-B-11",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(5-B-10(N,A)3-LI-7,LON,POL,,DSP/ASY/MSC)",
+        "children": [
+          {
+            "code": [
+              "5-B-10",
+              [
+                "N,A"
+              ],
+              "3-LI-7,LON,POL,,DSP/ASY/MSC"
+            ],
+            "type": null,
+            "target": "5-B-10",
+            "process": "N,A",
+            "sf49": "3-LI-7,LON,POL,,DSP/ASY/MSC",
+            "sf4": "3-LI-7",
+            "sf5": "LON",
+            "sf6": "POL",
+            "sf7": null,
+            "sf8": "DSP/ASY/MSC",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Spin-spin asymmetry for longitudinal spin states at 0 and 90 deg for (n,a) reaction"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "MONIT",
@@ -151,32 +209,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-10(N,G)5-B-11,,SPC,,SPA)",
-          "0": {
-            "code": [
-              "5-B-10",
-              [
-                "N,G"
-              ],
-              "5-B-11,,SPC,,SPA"
-            ],
-            "type": null,
-            "target": "5-B-10",
-            "process": "N,G",
-            "sf49": "5-B-11,,SPC,,SPA",
-            "sf4": "5-B-11",
-            "sf5": null,
-            "sf6": "SPC",
-            "sf7": null,
-            "sf8": "SPA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -248,32 +280,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-10(N,A)3-LI-7,LON,POL,,DSP/ASY/MSC)",
-          "0": {
-            "code": [
-              "5-B-10",
-              [
-                "N,A"
-              ],
-              "3-LI-7,LON,POL,,DSP/ASY/MSC"
-            ],
-            "type": null,
-            "target": "5-B-10",
-            "process": "N,A",
-            "sf49": "3-LI-7,LON,POL,,DSP/ASY/MSC",
-            "sf4": "3-LI-7",
-            "sf5": "LON",
-            "sf6": "POL",
-            "sf7": null,
-            "sf8": "DSP/ASY/MSC",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Spin-spin asymmetry for longitudinal spin states at 0 and 90 deg for (n,a) reaction"
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -329,8 +335,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -338,10 +344,8 @@
               "in the article, assumed by compiler to be thermal."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -352,8 +356,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -363,10 +367,8 @@
               "intensities, respectively."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -375,10 +377,8 @@
               ". B-11 decay scheme on fig.2"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -389,10 +389,8 @@
               " 13.(1) % ."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -400,10 +398,8 @@
               "in the article, assumed by compiler to be thermal."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -428,20 +424,16 @@
               " 9148.62           6.81(73)           6.00"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Quadrratically compounded errors."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -453,18 +445,14 @@
               "Fe(2)Cl(3) crystal as sample."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,S.F.Mughabghab+,B,NEUT.CS 1A,,,1981)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(7-N-14(N,G)7-N-15,,SIG,,SPA)",
             "free_txt": [
@@ -472,10 +460,8 @@
               " Peak area 4950+-118 counts ."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,B.Krusche+,J,NP/A,386,245,1982)",
             "free_txt": [
@@ -488,10 +474,8 @@
               "4444. keV B-10(N,G) transition intensity"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -500,10 +484,8 @@
               "small amounts of chlorine and carbon."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -520,8 +502,8 @@
       }
     },
     "003": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -532,10 +514,8 @@
               " 13.(1) % ."
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -543,10 +523,8 @@
               "in the article, assumed by compiler to be thermal."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -571,20 +549,16 @@
               " 9148.62           6.81(73)           6.00"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Type of error is not explained in article"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -592,10 +566,8 @@
               "Measuring time up to 1300 hr ."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(7-N-14(N,G)7-N-15,,SPC,,SPA)",
             "free_txt": [
@@ -603,10 +575,8 @@
               " Peak area 4950+-118 counts ."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,B.Krusche+,J,NP/A,386,245,1982)",
             "free_txt": [
@@ -619,10 +589,8 @@
               "4444. keV B-10(N,G) transition intensity"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -631,10 +599,8 @@
               "small amounts of chlorine and carbon."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -645,8 +611,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -659,10 +625,8 @@
               "area of the 478 keV transition."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -671,10 +635,8 @@
               "neutron-scattering in the target."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
@@ -700,20 +662,16 @@
               "behind the target, - to determine neutron polarization."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Type of error is not explained in article"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(POLNS)",
             "free_txt": [
@@ -728,10 +686,8 @@
               " Polarized by cryogenity, temperature ~ 15 mK ."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -739,20 +695,16 @@
               "were measured at two angles."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(N,,J.F.A.G.Ruyl+,J,NP/A,419,439,1984)",
             "free_txt": [
               " Ti-49 measurement."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -762,10 +714,8 @@
               " Ti-49 target was mounted against the Al(B) target."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -47,47 +47,43 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,AUJ,30,379,197708)",
-          "free_txt": [
-            " 80m+200m TOF.   Transmission exp."
-          ],
-          "publication_year": "1977"
-        },
-        {
-          "x4_code": "(J,NP/A,246,1,197507)",
-          "free_txt": [
-            " 40m TOF,diff.result. Exfor30329.",
-            " Capture experiment"
-          ],
-          "publication_year": "1975"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USAORL)",
-          "free_txt": [
-            " Oak Ridge electron linear accelerator."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USAORL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,AUJ,30,379,197708)",
+        "free_txt": [
+          " 80m+200m TOF.   Transmission exp."
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,246,1,197507)",
+        "free_txt": [
+          " 40m TOF,diff.result. Exfor30329.",
+          " Capture experiment"
+        ],
+        "publication_year": "1975",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USAORL)",
+        "free_txt": [
+          " Oak Ridge electron linear accelerator."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(40-ZR-90(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(40-ZR-90(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "40-ZR-90",
               [
@@ -105,13 +101,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(40-ZR-90(N,0),,L)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "2": {
+        "x4_code": "(40-ZR-90(N,0),,L)",
+        "children": [
+          {
             "code": [
               "40-ZR-90",
               [
@@ -129,13 +127,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "3": {
-          "x4_code": "(40-ZR-90(N,EL),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "3": {
+        "x4_code": "(40-ZR-90(N,EL),,WID)",
+        "children": [
+          {
             "code": [
               "40-ZR-90",
               [
@@ -153,13 +153,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "4": {
-          "x4_code": "(40-ZR-90(N,EL),,WID,,G)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      },
+      "4": {
+        "x4_code": "(40-ZR-90(N,EL),,WID,,G)",
+        "children": [
+          {
             "code": [
               "40-ZR-90",
               [
@@ -177,11 +179,72 @@
             "sf7": null,
             "sf8": "G",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(40-ZR-90(N,EL),,STF)",
+        "children": [
+          {
+            "code": [
+              "40-ZR-90",
+              [
+                "N,EL"
+              ],
+              ",,STF"
+            ],
+            "type": null,
+            "target": "40-ZR-90",
+            "process": "N,EL",
+            "sf49": ",,STF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "STF",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
       },
+      "2": {
+        "x4_code": "(40-ZR-90(N,0),,D)",
+        "children": [
+          {
+            "code": [
+              "40-ZR-90",
+              [
+                "N,0"
+              ],
+              ",,D"
+            ],
+            "type": null,
+            "target": "40-ZR-90",
+            "process": "N,0",
+            "sf49": ",,D",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "D",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -1612,56 +1675,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(40-ZR-90(N,EL),,STF)",
-          "0": {
-            "code": [
-              "40-ZR-90",
-              [
-                "N,EL"
-              ],
-              ",,STF"
-            ],
-            "type": null,
-            "target": "40-ZR-90",
-            "process": "N,EL",
-            "sf49": ",,STF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "STF",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        },
-        "2": {
-          "x4_code": "(40-ZR-90(N,0),,D)",
-          "0": {
-            "code": [
-              "40-ZR-90",
-              [
-                "N,0"
-              ],
-              ",,D"
-            ],
-            "type": null,
-            "target": "40-ZR-90",
-            "process": "N,0",
-            "sf49": ",,D",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "D",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-RES-MIN",
@@ -1748,8 +1761,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(SLA)",
             "free_txt": [
@@ -1761,10 +1774,8 @@
               "resonances."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1774,10 +1785,8 @@
               "Larson et al."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -1786,28 +1795,22 @@
               "200 m station."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USAORL)",
             "free_txt": [
               " Oak Ridge electron linear accelerator."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1817,10 +1820,8 @@
               "bursts."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF,TRN)",
             "free_txt": [
@@ -1828,18 +1829,14 @@
               "Transmission experiment."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(N)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1847,10 +1844,8 @@
               "thickness 0.0827 atoms/b in Zr-90."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -1861,30 +1856,27 @@
       }
     },
     "002": {
-      "comment": {
-        "4": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
-              "When the value of neutron-width and the statistical",
-              "weight factor (g) are given in data-section, this",
-              "information is redundant."
+              "The following resonances were not observed in",
+              "transmission measurement,",
+              " 16.965, 81.18, 85.5, 118.5, 122.4, 128.0, 130.1, 130.6",
+              "133.4, 146.9, 188.0 keV."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               "No further information."
             ]
           }
-        ]
-      },
-      "flag": {
-        "0": [
+        ],
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -1897,10 +1889,8 @@
               " Uncertain assignment of momentum."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -1908,21 +1898,31 @@
             ]
           }
         ]
+      },
+      "4": {
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "When the value of neutron-width and the statistical",
+              "weight factor (g) are given in data-section, this",
+              "information is redundant."
+            ]
+          }
+        ]
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No further information."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

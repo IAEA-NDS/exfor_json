@@ -29,42 +29,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ZET,40,1257,1961)",
-          "free_txt": [],
-          "publication_year": "1961"
-        },
-        {
-          "x4_code": "(J,JET,13,886,1961)",
-          "free_txt": [
-            " English translation"
-          ],
-          "publication_year": "1961"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDG,4UKRKFT)",
-          "free_txt": [],
-          "facility_type": "(VDG)",
-          "institute": "(4UKRKFT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ZET,40,1257,1961)",
+        "free_txt": [],
+        "publication_year": "1961",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JET,13,886,1961)",
+        "free_txt": [
+          " English translation"
+        ],
+        "publication_year": "1961",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,4UKRKFT)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(4UKRKFT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(T,N)7-N-14,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-12(T,N)7-N-14,,DA)",
+        "children": [
+          {
             "code": [
               "6-C-12",
               [
@@ -82,11 +78,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-12(T,N)7-N-14,,DA)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "T,N"
+              ],
+              "7-N-14,,DA"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "T,N",
+            "sf49": "7-N-14,,DA",
+            "sf4": "7-N-14",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(6-C-12(T,N)7-N-14,,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-12",
+              [
+                "T,N"
+              ],
+              "7-N-14,,SIG"
+            ],
+            "type": null,
+            "target": "6-C-12",
+            "process": "T,N",
+            "sf49": "7-N-14,,SIG",
+            "sf4": "7-N-14",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ANG"
@@ -410,32 +469,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(T,N)7-N-14,,DA)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "T,N"
-              ],
-              "7-N-14,,DA"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "T,N",
-            "sf49": "7-N-14,,DA",
-            "sf4": "7-N-14",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -659,32 +692,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-12(T,N)7-N-14,,SIG)",
-          "0": {
-            "code": [
-              "6-C-12",
-              [
-                "T,N"
-              ],
-              "7-N-14,,SIG"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "T,N",
-            "sf49": "7-N-14,,SIG",
-            "sf4": "7-N-14",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -725,8 +732,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": "(STRUC)",
             "free_txt": [
@@ -738,20 +745,16 @@
               "            16.77+-0.05  MeV."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Corrected for background neutrons"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(LONGC,PROPC)",
             "free_txt": [
@@ -761,10 +764,8 @@
               "J,JET,13,(5),871,1961."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -785,18 +786,14 @@
               "the C-13(t, n) reaction."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDG,4UKRKFT)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -811,8 +808,8 @@
       }
     },
     "002": {
-      "flag": {
-        "0": [
+      "0": {
+        "flag": [
           {
             "x4_code": "(1.)",
             "free_txt": [
@@ -837,10 +834,8 @@
               " Thickness of target 0.24  mg/cm2"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -851,8 +846,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -863,8 +858,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

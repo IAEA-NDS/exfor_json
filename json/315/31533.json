@@ -29,36 +29,31 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,68,044608,2003)",
-          "free_txt": [],
-          "publication_year": "2003"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC)",
-          "free_txt": [
-            " Pakistan Research reactor-1 at PINSTECH.",
-            "The reactor core contains 20% LEU fuel."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,68,044608,2003)",
+        "free_txt": [],
+        "publication_year": "2003",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC)",
+        "free_txt": [
+          " Pakistan Research reactor-1 at PINSTECH.",
+          "The reactor core contains 20% LEU fuel."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(65-TB-159(N,G)65-TB-160,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(65-TB-159(N,G)65-TB-160,,SIG)",
+        "children": [
+          {
             "code": [
               "65-TB-159",
               [
@@ -76,11 +71,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Cross section is thethermal neutron capture cross section at 2200 m/sec"
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Cross section is thethermal neutron capture cross section at 2200 m/sec"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(65-TB-159(N,G)65-TB-160,,RI)",
+        "children": [
+          {
+            "code": [
+              "65-TB-159",
+              [
+                "N,G"
+              ],
+              "65-TB-160,,RI"
+            ],
+            "type": null,
+            "target": "65-TB-159",
+            "process": "N,G",
+            "sf49": "65-TB-160,,RI",
+            "sf4": "65-TB-160",
+            "sf5": null,
+            "sf6": "RI",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -107,32 +137,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(65-TB-159(N,G)65-TB-160,,RI)",
-          "0": {
-            "code": [
-              "65-TB-159",
-              [
-                "N,G"
-              ],
-              "65-TB-160,,RI"
-            ],
-            "type": null,
-            "target": "65-TB-159",
-            "process": "N,G",
-            "sf49": "65-TB-160,,RI",
-            "sf4": "65-TB-160",
-            "sf5": null,
-            "sf6": "RI",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -161,8 +165,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -181,10 +185,8 @@
               "was measured as alpha = -0.1623+-0.0055"
             ]
           }
-        ]
-      },
-      "comment": {
-        "0": [
+        ],
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -195,10 +197,8 @@
               "processed by RADLIST, IAEA NuDat Retrieval."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(65-TB-160,72.3D,DG,298.58,0.261,                 DG,879.383,0.301,                 DG,1177.962,0.149)",
             "free_txt": [
@@ -217,10 +217,8 @@
               "    in probability (1177.962) : +-0.003"
             ]
           }
-        ]
-      },
-      "decay-mon": {
-        "0": [
+        ],
+        "decay-mon": [
           {
             "x4_code": "(25-MN-56,0.107454D,DG,846.7715,0.989,                    DG,1173.237,0.999736)",
             "free_txt": [
@@ -258,10 +256,8 @@
               "    in probability (411.80203) : +-0.0.0012"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -277,10 +273,8 @@
               "distances of 25 and 15 cm."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -293,10 +287,8 @@
               "  (iv) target weighing errors."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
@@ -304,10 +296,8 @@
               "The reactor core contains 20% LEU fuel."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -333,10 +323,8 @@
               "ratios."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(25-MN-55(N,G)25-MN-56,,RI)",
             "free_txt": [
@@ -369,10 +357,8 @@
               "cross section monitor. Cross sections are not given."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -387,10 +373,8 @@
               "Sartorius semimicro electrical balance."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

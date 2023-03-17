@@ -71,43 +71,38 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,NEANDC(E)-209L,53,197912)",
-          "free_txt": [
-            " Proceedings of the",
-            " specialists' meeting on neutron cross sections",
-            " of fission product nuclei, held at bologna,",
-            " december 12-14, 1979."
-          ],
-          "publication_year": "1979"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,2ZZZGEL)",
-          "free_txt": [
-            " Gelina, 150 MeV, operated at 4",
-            " nsec beam burst."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(2ZZZGEL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,NEANDC(E)-209L,53,197912)",
+        "free_txt": [
+          " Proceedings of the",
+          " specialists' meeting on neutron cross sections",
+          " of fission product nuclei, held at bologna,",
+          " december 12-14, 1979."
+        ],
+        "publication_year": "1979",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,2ZZZGEL)",
+        "free_txt": [
+          " Gelina, 150 MeV, operated at 4",
+          " nsec beam burst."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(2ZZZGEL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(46-PD-105(N,0),,EN)",
-          "0": {
+      "1": {
+        "x4_code": "(46-PD-105(N,0),,EN)",
+        "children": [
+          {
             "code": [
               "46-PD-105",
               [
@@ -125,13 +120,15 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Resonance energy."
-        },
-        "2": {
-          "x4_code": "(46-PD-105(N,EL),,WID,,2G)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": " Resonance energy."
+      },
+      "2": {
+        "x4_code": "(46-PD-105(N,EL),,WID,,2G)",
+        "children": [
+          {
             "code": [
               "46-PD-105",
               [
@@ -149,13 +146,15 @@
             "sf7": null,
             "sf8": "2G",
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Elastic scattering width * 2g."
-        },
-        "3": {
-          "x4_code": "(46-PD-105(N,G),,WID)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": " Elastic scattering width * 2g."
+      },
+      "3": {
+        "x4_code": "(46-PD-105(N,G),,WID)",
+        "children": [
+          {
             "code": [
               "46-PD-105",
               [
@@ -173,11 +172,102 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": " Capture width."
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": " Capture width."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(46-PD-105(N,G),,WID,,AV)",
+        "children": [
+          {
+            "code": [
+              "46-PD-105",
+              [
+                "N,G"
+              ],
+              ",,WID,,AV"
+            ],
+            "type": null,
+            "target": "46-PD-105",
+            "process": "N,G",
+            "sf49": ",,WID,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "AV",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Average capture width."
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(46-PD-105(N,0),,STF)",
+        "children": [
+          {
+            "code": [
+              "46-PD-105",
+              [
+                "N,0"
+              ],
+              ",,STF"
+            ],
+            "type": null,
+            "target": "46-PD-105",
+            "process": "N,0",
+            "sf49": ",,STF",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "STF",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " S-wave strength function"
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(46-PD-105(N,0),,D)",
+        "children": [
+          {
+            "code": [
+              "46-PD-105",
+              [
+                "N,0"
+              ],
+              ",,D"
+            ],
+            "type": null,
+            "target": "46-PD-105",
+            "process": "N,0",
+            "sf49": ",,D",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "D",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Average level spacing."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -1401,32 +1491,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(46-PD-105(N,G),,WID,,AV)",
-          "0": {
-            "code": [
-              "46-PD-105",
-              [
-                "N,G"
-              ],
-              ",,WID,,AV"
-            ],
-            "type": null,
-            "target": "46-PD-105",
-            "process": "N,G",
-            "sf49": ",,WID,,AV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Average capture width."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1463,32 +1527,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(46-PD-105(N,0),,STF)",
-          "0": {
-            "code": [
-              "46-PD-105",
-              [
-                "N,0"
-              ],
-              ",,STF"
-            ],
-            "type": null,
-            "target": "46-PD-105",
-            "process": "N,0",
-            "sf49": ",,STF",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "STF",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " S-wave strength function"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1525,32 +1563,6 @@
       }
     },
     "005": {
-      "reaction": {
-        "0": {
-          "x4_code": "(46-PD-105(N,0),,D)",
-          "0": {
-            "code": [
-              "46-PD-105",
-              [
-                "N,0"
-              ],
-              ",,D"
-            ],
-            "type": null,
-            "target": "46-PD-105",
-            "process": "N,0",
-            "sf49": ",,D",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "D",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Average level spacing."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1584,8 +1596,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(AREA )",
             "free_txt": [
@@ -1600,10 +1612,8 @@
               " routine siob for transmission measurementsc"
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1615,10 +1625,8 @@
               " multiple scattering for the capture measurements."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN )",
             "free_txt": [
@@ -1645,10 +1653,8 @@
               " transmission measurements."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,2ZZZGEL)",
             "free_txt": [
@@ -1656,18 +1662,14 @@
               " nsec beam burst."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(PHOTO)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF  )",
             "free_txt": [
@@ -1677,10 +1679,8 @@
               "                      60 m for other transmission exp."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(5-B-10(N,A)3-LI-7,PAR,SIG,G)",
             "free_txt": [
@@ -1702,10 +1702,8 @@
               " measurements. No values given."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(G)",
             "free_txt": [
@@ -1718,10 +1716,8 @@
               "     Neutrons in transmission and scattering."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1729,10 +1725,8 @@
               " on loan from oak ridge national laboratory."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1749,18 +1743,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               ".No details given."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1770,10 +1762,8 @@
               " 1.096e-02 atoms/barn, (97.38 perc enrichments)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1784,8 +1774,8 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -1800,10 +1790,8 @@
               " normalization."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1813,10 +1801,8 @@
               " 1.096e-02 atoms/barn, (97.38 perc enrichments)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1827,28 +1813,24 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
               " Determined from 200 resonances below 2051 eV."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               ".No details given."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1858,10 +1840,8 @@
               " 1.096e-02 atoms/barn, (97.38 perc enrichments)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1872,8 +1852,8 @@
       }
     },
     "005": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1886,20 +1866,16 @@
               " thomas distribution of the reduced neutron widths."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               ".No details given."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1909,10 +1885,8 @@
               " 1.096e-02 atoms/barn, (97.38 perc enrichments)."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": null,
             "free_txt": [

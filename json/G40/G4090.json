@@ -32,39 +32,35 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,YFE,21,302,2020)",
-          "free_txt": [
-            "#doi:10.15407/jnpae2020.04.302"
-          ],
-          "publication_year": "2020"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,4UKRKFT)",
-          "free_txt": [
-            " Linear electron accelerator LU-40"
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(4UKRKFT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,YFE,21,302,2020)",
+        "free_txt": [
+          "#doi:10.15407/jnpae2020.04.302"
+        ],
+        "publication_year": "2020",
+        "pointer": "0",
+        "doi": "10.15407/jnpae2020.04.302"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,4UKRKFT)",
+        "free_txt": [
+          " Linear electron accelerator LU-40"
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(4UKRKFT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-10(G,T)4-BE-7,,SIG,,BRA)",
-          "0": {
+      "0": {
+        "x4_code": "(5-B-10(G,T)4-BE-7,,SIG,,BRA)",
+        "children": [
+          {
             "code": [
               "5-B-10",
               [
@@ -82,11 +78,74 @@
             "sf7": null,
             "sf8": "BRA",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(5-B-0(G,X)4-BE-7,,SIG,,BRA)",
+        "children": [
+          {
+            "code": [
+              "5-B-0",
+              [
+                "G,X"
+              ],
+              "4-BE-7,,SIG,,BRA"
+            ],
+            "type": null,
+            "target": "5-B-0",
+            "process": "G,X",
+            "sf49": "4-BE-7,,SIG,,BRA",
+            "sf4": "4-BE-7",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(4-BE-9(G,2N)4-BE-7,,SIG,,BRA)",
+        "children": [
+          {
+            "code": [
+              "4-BE-9",
+              [
+                "G,2N"
+              ],
+              "4-BE-7,,SIG,,BRA"
+            ],
+            "type": null,
+            "target": "4-BE-9",
+            "process": "G,2N",
+            "sf49": "4-BE-7,,SIG,,BRA",
+            "sf4": "4-BE-7",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -113,32 +172,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(5-B-0(G,X)4-BE-7,,SIG,,BRA)",
-          "0": {
-            "code": [
-              "5-B-0",
-              [
-                "G,X"
-              ],
-              "4-BE-7,,SIG,,BRA"
-            ],
-            "type": null,
-            "target": "5-B-0",
-            "process": "G,X",
-            "sf49": "4-BE-7,,SIG,,BRA",
-            "sf4": "4-BE-7",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -168,32 +201,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(G,2N)4-BE-7,,SIG,,BRA)",
-          "0": {
-            "code": [
-              "4-BE-9",
-              [
-                "G,2N"
-              ],
-              "4-BE-7,,SIG,,BRA"
-            ],
-            "type": null,
-            "target": "4-BE-9",
-            "process": "G,2N",
-            "sf49": "4-BE-7,,SIG,,BRA",
-            "sf4": "4-BE-7",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRA",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -225,8 +232,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "add-res": {
-        "0": [
+      "0": {
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -235,10 +242,8 @@
               "codes."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(HPGE)",
             "free_txt": [
@@ -247,56 +252,44 @@
               "gamma lines 1.173 and 1.332 MeV."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on sources of uncertainties."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,4UKRKFT)",
             "free_txt": [
               " Linear electron accelerator LU-40"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
               " Induced gamma-activity was measured."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "0": [
+        ],
+        "monit-ref": [
           {
             "x4_code": "(,V.V.Varlamov+,J,PAN,76,1403,2013)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(73-TA-181(G,N)73-TA-180,,SIG,,BRA)",
             "free_txt": [
@@ -307,10 +300,8 @@
               "Geant4."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -324,8 +315,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -336,8 +327,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -348,8 +339,8 @@
       }
     },
     "004": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -65,39 +65,34 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,80,044605,2009)",
-          "free_txt": [],
-          "publication_year": "2009"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,1USANOT)",
-          "free_txt": [
-            " Experiment performed using TwinSol",
-            "radioactive nuclear beam facility at the University",
-            "of Notre Dame"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(1USANOT)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,80,044605,2009)",
+        "free_txt": [],
+        "publication_year": "2009",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,1USANOT)",
+        "free_txt": [
+          " Experiment performed using TwinSol",
+          "radioactive nuclear beam facility at the University",
+          "of Notre Dame"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(1USANOT)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-208(3-LI-8,X)85-AT-211,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(82-PB-208(3-LI-8,X)85-AT-211,,SIG)",
+        "children": [
+          {
             "code": [
               "82-PB-208",
               [
@@ -115,11 +110,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(82-PB-208(3-LI-8,X)85-AT-212,,SIG)",
+        "children": [
+          {
+            "code": [
+              "82-PB-208",
+              [
+                "3-LI-8,X"
+              ],
+              "85-AT-212,,SIG"
+            ],
+            "type": null,
+            "target": "82-PB-208",
+            "process": "3-LI-8,X",
+            "sf49": "85-AT-212,,SIG",
+            "sf4": "85-AT-212",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(82-PB-208(3-LI-8,FUS),,SIG,ER,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "82-PB-208",
+              [
+                "3-LI-8,FUS"
+              ],
+              ",,SIG,ER,,DERIV"
+            ],
+            "type": null,
+            "target": "82-PB-208",
+            "process": "3-LI-8,FUS",
+            "sf49": ",,SIG,ER,,DERIV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": "ER",
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -164,32 +222,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-208(3-LI-8,X)85-AT-212,,SIG)",
-          "0": {
-            "code": [
-              "82-PB-208",
-              [
-                "3-LI-8,X"
-              ],
-              "85-AT-212,,SIG"
-            ],
-            "type": null,
-            "target": "82-PB-208",
-            "process": "3-LI-8,X",
-            "sf49": "85-AT-212,,SIG",
-            "sf4": "85-AT-212",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -234,32 +266,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(82-PB-208(3-LI-8,FUS),,SIG,ER,,DERIV)",
-          "0": {
-            "code": [
-              "82-PB-208",
-              [
-                "3-LI-8,FUS"
-              ],
-              ",,SIG,ER,,DERIV"
-            ],
-            "type": null,
-            "target": "82-PB-208",
-            "process": "3-LI-8,FUS",
-            "sf49": ",,SIG,ER,,DERIV",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": "ER",
-            "sf8": null,
-            "sf9": "DERIV"
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -306,8 +312,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SI)",
             "free_txt": [
@@ -318,20 +324,16 @@
               "box was (21 +- 1)%."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information given"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,1USANOT)",
             "free_txt": [
@@ -340,10 +342,8 @@
               "of Notre Dame"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -354,18 +354,14 @@
               "MeV in 1-MeV steps"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -377,16 +373,14 @@
       }
     },
     "002": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(85-AT-211,7.2HR,A,5870.0,0.42)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -397,8 +391,8 @@
       }
     },
     "003": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(85-AT-212,0.314SEC,A,7662.0)",
             "free_txt": []
@@ -407,10 +401,8 @@
             "x4_code": "(85-AT-212-M,0.119SEC,A,7848.0)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -421,8 +413,8 @@
       }
     },
     "004": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -432,10 +424,8 @@
               "channels."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

@@ -35,38 +35,33 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,186,438,1972)",
-          "free_txt": [],
-          "publication_year": "1972"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(BETAT,4RUSMOS)",
-          "free_txt": [
-            " the Moscow State University 35 MeV",
-            " betatron."
-          ],
-          "facility_type": "(BETAT)",
-          "institute": "(4RUSMOS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,NP/A,186,438,1972)",
+        "free_txt": [],
+        "publication_year": "1972",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(BETAT,4RUSMOS)",
+        "free_txt": [
+          " the Moscow State University 35 MeV",
+          " betatron."
+        ],
+        "pointer": "0",
+        "facility_type": "(BETAT)",
+        "institute": "(4RUSMOS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((12-MG-24(G,N)12-MG-23,,SIG,,BRS)+(12-MG-24(G,N+P)11-NA-22,,SIG,,BRS))",
-          "0": {
+      "0": {
+        "x4_code": "((12-MG-24(G,N)12-MG-23,,SIG,,BRS)+(12-MG-24(G,N+P)11-NA-22,,SIG,,BRS))",
+        "children": [
+          {
             "code": [
               "12-MG-24",
               [
@@ -85,7 +80,7 @@
             "sf8": "BRS",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "12-MG-24",
               [
@@ -103,11 +98,46 @@
             "sf7": null,
             "sf8": "BRS",
             "sf9": null
-          },
-          "type": "+",
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": "+",
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(12-MG-26(G,X)0-NN-1,,SIG,,BRS)",
+        "children": [
+          {
+            "code": [
+              "12-MG-26",
+              [
+                "G,X"
+              ],
+              "0-NN-1,,SIG,,BRS"
+            ],
+            "type": null,
+            "target": "12-MG-26",
+            "process": "G,X",
+            "sf49": "0-NN-1,,SIG,,BRS",
+            "sf4": "0-NN-1",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -845,32 +875,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(12-MG-26(G,X)0-NN-1,,SIG,,BRS)",
-          "0": {
-            "code": [
-              "12-MG-26",
-              [
-                "G,X"
-              ],
-              "0-NN-1,,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "12-MG-26",
-            "process": "G,X",
-            "sf49": "0-NN-1,,SIG,,BRS",
-            "sf4": "0-NN-1",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1742,8 +1746,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -1751,10 +1755,8 @@
               " made of paraffin and BF3 counters."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(BETAT,4RUSMOS)",
             "free_txt": [
@@ -1762,10 +1764,8 @@
               " betatron."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": [
@@ -1773,10 +1773,8 @@
               " from threshold to 30 MeV in steps of 50 keV."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1784,10 +1782,8 @@
               " curves smoothed following the Leiss-Penfold method."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1801,18 +1797,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -1823,18 +1817,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [

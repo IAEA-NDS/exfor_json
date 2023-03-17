@@ -55,41 +55,36 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,27,1117,198303)",
-          "free_txt": [
-            "  Main reference"
-          ],
-          "publication_year": "1983"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2BLGMOL)",
-          "free_txt": [
-            " For Pu-241(N-Th,F) calibration runs",
-            "               a collimated N-beam of the reactor BR1",
-            "               of SCK/CEN was used"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2BLGMOL)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,27,1117,198303)",
+        "free_txt": [
+          "  Main reference"
+        ],
+        "publication_year": "1983",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2BLGMOL)",
+        "free_txt": [
+          " For Pu-241(N-Th,F) calibration runs",
+          "               a collimated N-beam of the reactor BR1",
+          "               of SCK/CEN was used"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2BLGMOL)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "1": {
-          "x4_code": "(94-PU-244(0,F),PRE,AKE,LF+HF)",
-          "0": {
+      "1": {
+        "x4_code": "(94-PU-244(0,F),PRE,AKE,LF+HF)",
+        "children": [
+          {
             "code": [
               "94-PU-244",
               [
@@ -107,13 +102,15 @@
             "sf7": "LF+HF",
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": "  Aver.Kin.Energy"
-        },
-        "2": {
-          "x4_code": "(94-PU-244(0,F),SEC,AKE,LF+HF)",
-          "0": {
+          }
+        ],
+        "type": null,
+        "free_text": "  Aver.Kin.Energy"
+      },
+      "2": {
+        "x4_code": "(94-PU-244(0,F),SEC,AKE,LF+HF)",
+        "children": [
+          {
             "code": [
               "94-PU-244",
               [
@@ -131,11 +128,124 @@
             "sf7": "LF+HF",
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "1": {
+        "x4_code": "(94-PU-244(0,F),PRV,AP,LF)",
+        "children": [
+          {
+            "code": [
+              "94-PU-244",
+              [
+                "0,F"
+              ],
+              ",PRV,AP,LF"
+            ],
+            "type": null,
+            "target": "94-PU-244",
+            "process": "0,F",
+            "sf49": ",PRV,AP,LF",
+            "sf4": null,
+            "sf5": "PRV",
+            "sf6": "AP",
+            "sf7": "LF",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Provisional aver. light mass"
       },
+      "2": {
+        "x4_code": "(94-PU-244(0,F),PRV,AP,HF)",
+        "children": [
+          {
+            "code": [
+              "94-PU-244",
+              [
+                "0,F"
+              ],
+              ",PRV,AP,HF"
+            ],
+            "type": null,
+            "target": "94-PU-244",
+            "process": "0,F",
+            "sf49": ",PRV,AP,HF",
+            "sf4": null,
+            "sf5": "PRV",
+            "sf6": "AP",
+            "sf7": "HF",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Provisional aver. heavy mass"
+      },
+      "3": {
+        "x4_code": "(94-PU-244(0,F),PRE,AP,LF)",
+        "children": [
+          {
+            "code": [
+              "94-PU-244",
+              [
+                "0,F"
+              ],
+              ",PRE,AP,LF"
+            ],
+            "type": null,
+            "target": "94-PU-244",
+            "process": "0,F",
+            "sf49": ",PRE,AP,LF",
+            "sf4": null,
+            "sf5": "PRE",
+            "sf6": "AP",
+            "sf7": "LF",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "     Pre-N aver. light mass"
+      },
+      "4": {
+        "x4_code": "(94-PU-244(0,F),PRE,AP,HF)",
+        "children": [
+          {
+            "code": [
+              "94-PU-244",
+              [
+                "0,F"
+              ],
+              ",PRE,AP,HF"
+            ],
+            "type": null,
+            "target": "94-PU-244",
+            "process": "0,F",
+            "sf49": ",PRE,AP,HF",
+            "sf4": null,
+            "sf5": "PRE",
+            "sf6": "AP",
+            "sf7": "HF",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "     Pre-N aver. heavy mass"
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -167,104 +277,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "1": {
-          "x4_code": "(94-PU-244(0,F),PRV,AP,LF)",
-          "0": {
-            "code": [
-              "94-PU-244",
-              [
-                "0,F"
-              ],
-              ",PRV,AP,LF"
-            ],
-            "type": null,
-            "target": "94-PU-244",
-            "process": "0,F",
-            "sf49": ",PRV,AP,LF",
-            "sf4": null,
-            "sf5": "PRV",
-            "sf6": "AP",
-            "sf7": "LF",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Provisional aver. light mass"
-        },
-        "2": {
-          "x4_code": "(94-PU-244(0,F),PRV,AP,HF)",
-          "0": {
-            "code": [
-              "94-PU-244",
-              [
-                "0,F"
-              ],
-              ",PRV,AP,HF"
-            ],
-            "type": null,
-            "target": "94-PU-244",
-            "process": "0,F",
-            "sf49": ",PRV,AP,HF",
-            "sf4": null,
-            "sf5": "PRV",
-            "sf6": "AP",
-            "sf7": "HF",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Provisional aver. heavy mass"
-        },
-        "3": {
-          "x4_code": "(94-PU-244(0,F),PRE,AP,LF)",
-          "0": {
-            "code": [
-              "94-PU-244",
-              [
-                "0,F"
-              ],
-              ",PRE,AP,LF"
-            ],
-            "type": null,
-            "target": "94-PU-244",
-            "process": "0,F",
-            "sf49": ",PRE,AP,LF",
-            "sf4": null,
-            "sf5": "PRE",
-            "sf6": "AP",
-            "sf7": "LF",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "     Pre-N aver. light mass"
-        },
-        "4": {
-          "x4_code": "(94-PU-244(0,F),PRE,AP,HF)",
-          "0": {
-            "code": [
-              "94-PU-244",
-              [
-                "0,F"
-              ],
-              ",PRE,AP,HF"
-            ],
-            "type": null,
-            "target": "94-PU-244",
-            "process": "0,F",
-            "sf49": ",PRE,AP,HF",
-            "sf4": null,
-            "sf5": "PRE",
-            "sf6": "AP",
-            "sf7": "HF",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "     Pre-N aver. heavy mass"
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -318,8 +330,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -330,10 +342,8 @@
               " of emitted neutrons was used."
             ]
           }
-        ]
-      },
-      "add-res": {
-        "0": [
+        ],
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -342,10 +352,8 @@
               ".Comparison with the fissioning system Pu-240."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -354,20 +362,16 @@
               ".Calculated to be 0.5% and 3.4%, respectively."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
               " Surface barrier detectors"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -375,10 +379,8 @@
               " square deviations for at least five experimental runs."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,2BLGMOL)",
             "free_txt": [
@@ -387,10 +389,8 @@
               "               of SCK/CEN was used"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(COINC)",
             "free_txt": [
@@ -401,10 +401,8 @@
               " (J,Pr,149,894,66)"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": null,
             "free_txt": [
@@ -413,18 +411,14 @@
               " calibrated with Pu-241(N-Th,F) data."
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(FF)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -438,10 +432,8 @@
               " of Pu-acetate."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

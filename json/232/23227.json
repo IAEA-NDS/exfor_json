@@ -30,37 +30,32 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JRN,120,185,1988)",
-          "free_txt": [],
-          "publication_year": "1988"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,2JPNKTO)",
-          "free_txt": [
-            " Kyoto University reactor (KUR)"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(2JPNKTO)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JRN,120,185,1988)",
+        "free_txt": [],
+        "publication_year": "1988",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2JPNKTO)",
+        "free_txt": [
+          " Kyoto University reactor (KUR)"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2JPNKTO)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(91-PA-231(N,G)91-PA-232,,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(91-PA-231(N,G)91-PA-232,,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "91-PA-231",
               [
@@ -78,11 +73,74 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(91-PA-231(N,2N)91-PA-230,,SIG,,FIS)",
+        "children": [
+          {
+            "code": [
+              "91-PA-231",
+              [
+                "N,2N"
+              ],
+              "91-PA-230,,SIG,,FIS"
+            ],
+            "type": null,
+            "target": "91-PA-231",
+            "process": "N,2N",
+            "sf49": "91-PA-230,,SIG,,FIS",
+            "sf4": "91-PA-230",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "FIS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(91-PA-231(N,2N)91-PA-230,,SIG,,FIS)",
+        "children": [
+          {
+            "code": [
+              "91-PA-231",
+              [
+                "N,2N"
+              ],
+              "91-PA-230,,SIG,,FIS"
+            ],
+            "type": null,
+            "target": "91-PA-231",
+            "process": "N,2N",
+            "sf49": "91-PA-230,,SIG,,FIS",
+            "sf4": "91-PA-230",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "FIS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -109,32 +167,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(91-PA-231(N,2N)91-PA-230,,SIG,,FIS)",
-          "0": {
-            "code": [
-              "91-PA-231",
-              [
-                "N,2N"
-              ],
-              "91-PA-230,,SIG,,FIS"
-            ],
-            "type": null,
-            "target": "91-PA-231",
-            "process": "N,2N",
-            "sf49": "91-PA-230,,SIG,,FIS",
-            "sf4": "91-PA-230",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "FIS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -176,32 +208,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(91-PA-231(N,2N)91-PA-230,,SIG,,FIS)",
-          "0": {
-            "code": [
-              "91-PA-231",
-              [
-                "N,2N"
-              ],
-              "91-PA-230,,SIG,,FIS"
-            ],
-            "type": null,
-            "target": "91-PA-231",
-            "process": "N,2N",
-            "sf49": "91-PA-230,,SIG,,FIS",
-            "sf4": "91-PA-230",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "FIS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -230,18 +236,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(REAC,2JPNKTO)",
             "free_txt": [
               " Kyoto University reactor (KUR)"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(CHSEP)",
             "free_txt": [
@@ -249,10 +253,8 @@
               " irradiation"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -262,10 +264,8 @@
               " 2 mm in inner diameter)"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -276,58 +276,48 @@
       }
     },
     "002": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(GE)",
             "free_txt": [
               " Pure Ge detector (~47 cc)"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " No information on source of uncertainty"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(THCOL)",
             "free_txt": [
               " KUR D2O facility (1.4 m D2O layer as modulator)"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Almost pure thermal neutron spectrum"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,GSPEC)",
             "free_txt": [
               " Irradiated for 30 hours"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
@@ -336,10 +326,8 @@
             "x4_code": "(27-CO-59(N,G)27-CO-60,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -350,18 +338,16 @@
       }
     },
     "003": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SIBAR)",
             "free_txt": [
               " Si(Au) surface barrier detector"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
@@ -386,40 +372,32 @@
               " Uncertainty in quantity of 231Pa   (4.8%)"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               " KUR reactor core (hydraulic conveyor facility)"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Close to fission neutrons above approximately 1 MeV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,ASPEC)",
             "free_txt": [
               " Irradiated for 10 hours"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(22-TI-0(N,X)21-SC-46,,SIG)",
             "free_txt": []
@@ -432,10 +410,8 @@
             "x4_code": "(28-NI-0(N,X)27-CO-58,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -452,66 +428,54 @@
       }
     },
     "004": {
-      "decay-data": {
-        "0": [
+      "0": {
+        "decay-data": [
           {
             "x4_code": "(91-PA-230,,DG,952.8,0.278)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(GE)",
             "free_txt": [
               " Pure Ge detector (~47 cc)"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Large error due to weaker peak of 230Pa"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
               " KUR reactor core (hydraulic conveyor facility)"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Close to fission neutrons above approximately 1 MeV"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,GSPEC)",
             "free_txt": [
               " Irradiated for 10 hours"
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(22-TI-0(N,X)21-SC-46,,SIG)",
             "free_txt": []
@@ -524,10 +488,8 @@
             "x4_code": "(28-NI-0(N,X)27-CO-58,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

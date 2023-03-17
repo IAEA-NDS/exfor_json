@@ -25,42 +25,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(R,AERE-NP/R-2104,4,5703)",
-          "free_txt": [
-            " ABSTRACT."
-          ],
-          "publication_year": "1957"
-        },
-        {
-          "x4_code": "(R,AERE-N/R-890,,5203)",
-          "free_txt": [],
-          "publication_year": "1952"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC )",
-          "free_txt": [
-            " BEPO REACTOR."
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(R,AERE-NP/R-2104,4,5703)",
+        "free_txt": [
+          " ABSTRACT."
+        ],
+        "publication_year": "1957",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,AERE-N/R-890,,5203)",
+        "free_txt": [],
+        "publication_year": "1952",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC )",
+        "free_txt": [
+          " BEPO REACTOR."
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-239(N,F),,SIG,,MXW)/(92-U-235(N,F),,SIG,,MXW))",
-          "0": {
+      "0": {
+        "x4_code": "((94-PU-239(N,F),,SIG,,MXW)/(92-U-235(N,F),,SIG,,MXW))",
+        "children": [
+          {
             "code": [
               "94-PU-239",
               [
@@ -79,7 +75,7 @@
             "sf8": "MXW",
             "sf9": null
           },
-          "1": {
+          {
             "code": [
               "92-U-235",
               [
@@ -97,11 +93,65 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": " RATIO OF PU-239 TO U-235."
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((94-PU-239(N,F),,SIG)/(92-U-235(N,F),,SIG))",
+        "children": [
+          {
+            "code": [
+              "94-PU-239",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "94-PU-239",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           },
-          "type": "/",
-          "free_text": " RATIO OF PU-239 TO U-235."
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": " RATIO OF FISSION CROSS SECTIONS CORRECTED TO 2200 M/SEC."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -128,51 +178,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((94-PU-239(N,F),,SIG)/(92-U-235(N,F),,SIG))",
-          "0": {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "94-PU-239",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "/",
-          "free_text": " RATIO OF FISSION CROSS SECTIONS CORRECTED TO 2200 M/SEC."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -201,48 +206,40 @@
   },
   "experimental_conditions": {
     "001": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
               ".ONE STANDARD DEVIATION, NO DETAILS."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC )",
             "free_txt": [
               " BEPO REACTOR."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(THCOL)",
             "free_txt": [
               " THERMAL BEAM FROM REACTOR."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
               ".NO DETAILS."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -253,10 +250,8 @@
               " ESTIMATED BY ALPHA COUNTING."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(NDD  )",
             "free_txt": [
@@ -267,18 +262,16 @@
       }
     },
     "002": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "MAXWELLIAN NEUTRON SPECTRUM."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(NDD  )",
             "free_txt": []
@@ -287,8 +280,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(NDD  )",
             "free_txt": []

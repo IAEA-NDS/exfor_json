@@ -61,42 +61,38 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,ZET,45,38,1963)",
-          "free_txt": [],
-          "publication_year": "1963"
-        },
-        {
-          "x4_code": "(J,JET,18,29,1964)",
-          "free_txt": [
-            " English translation of ZET,45,38,1963."
-          ],
-          "publication_year": "1964"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(BETAT,4RUSMOS)",
-          "free_txt": [],
-          "facility_type": "(BETAT)",
-          "institute": "(4RUSMOS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,ZET,45,38,1963)",
+        "free_txt": [],
+        "publication_year": "1963",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JET,18,29,1964)",
+        "free_txt": [
+          " English translation of ZET,45,38,1963."
+        ],
+        "publication_year": "1964",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(BETAT,4RUSMOS)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(BETAT)",
+        "institute": "(4RUSMOS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(45-RH-103(G,P)44-RU-102,,SIG,,BRA/REL)",
-          "0": {
+      "0": {
+        "x4_code": "(45-RH-103(G,P)44-RU-102,,SIG,,BRA/REL)",
+        "children": [
+          {
             "code": [
               "45-RH-103",
               [
@@ -114,11 +110,74 @@
             "sf7": null,
             "sf8": "BRA/REL",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(45-RH-103(G,P)44-RU-102,,SIG,,BRS)",
+        "children": [
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "G,P"
+              ],
+              "44-RU-102,,SIG,,BRS"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "G,P",
+            "sf49": "44-RU-102,,SIG,,BRS",
+            "sf4": "44-RU-102",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(45-RH-103(G,P)44-RU-102,,INT,,BRS)",
+        "children": [
+          {
+            "code": [
+              "45-RH-103",
+              [
+                "G,P"
+              ],
+              "44-RU-102,,INT,,BRS"
+            ],
+            "type": null,
+            "target": "45-RH-103",
+            "process": "G,P",
+            "sf49": "44-RU-102,,INT,,BRS",
+            "sf4": "44-RU-102",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": "BRS",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "ERR-S"
@@ -188,32 +247,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(45-RH-103(G,P)44-RU-102,,SIG,,BRS)",
-          "0": {
-            "code": [
-              "45-RH-103",
-              [
-                "G,P"
-              ],
-              "44-RU-102,,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "G,P",
-            "sf49": "44-RU-102,,SIG,,BRS",
-            "sf4": "44-RU-102",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "DATA-ERR"
@@ -283,32 +316,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(45-RH-103(G,P)44-RU-102,,INT,,BRS)",
-          "0": {
-            "code": [
-              "45-RH-103",
-              [
-                "G,P"
-              ],
-              "44-RU-102,,INT,,BRS"
-            ],
-            "type": null,
-            "target": "45-RH-103",
-            "process": "G,P",
-            "sf49": "44-RU-102,,INT,,BRS",
-            "sf4": "44-RU-102",
-            "sf5": null,
-            "sf6": "INT",
-            "sf7": null,
-            "sf8": "BRS",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -337,8 +344,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -355,36 +362,28 @@
               " reaction is 85+-15 MeV*mb."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
               " Scintillation spectrometers."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(BETAT,4RUSMOS)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(BRST)",
             "free_txt": []
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB,SITA)",
             "free_txt": []
@@ -393,18 +392,16 @@
       }
     },
     "002": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical errors given."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": null,
             "free_txt": [
@@ -414,10 +411,8 @@
               " used."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(E,,V.G.Shevchenko+,J,ZET,41,1421,1961)",
             "free_txt": [
@@ -425,10 +420,8 @@
               " Angular distribution of protons."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -440,8 +433,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(PLA)",
             "free_txt": [
@@ -449,20 +442,16 @@
               " method."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Mean-root-squared errors."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -474,18 +463,16 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Mean-root-squared errors."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(DEP,M0166003)",
             "free_txt": [

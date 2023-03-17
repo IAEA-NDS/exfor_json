@@ -1,17 +1,23 @@
 {
   "entry": "S0053",
-  "last_updated": "2009-10-29",
-  "number_of_revisions": "1",
+  "last_updated": "2023-01-18",
+  "number_of_revisions": "2",
   "histories": [
     {
       "x4_code": "(20090809C)",
       "free_txt": [
         " Compiled by Yu Hongwei"
       ]
+    },
+    {
+      "x4_code": "(20220831U)",
+      "free_txt": [
+        " Jimin WANG: J,CST,39,118,2005 added"
+      ]
     }
   ],
   "bib_record": {
-    "title": " Determination of 11C(p,gamma)12N astrophysical S- factor via measurement of 11C(d,n)12N reaction",
+    "title": " Determination of 11C(p,g)12N astrophysical S-factor  via measurement of 11C(d,n)12N reaction",
     "authors": [
       {
         "name": "Weiping Liu"
@@ -56,27 +62,84 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,NP/A,728,275,2003)",
-          "free_txt": [],
-          "publication_year": "2003"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(VDGT,3CPRAEP)",
-          "free_txt": [
-            " Secondary beam facility of the HI-13",
-            " tandem accelerator"
-          ],
-          "facility_type": "(VDGT)",
-          "institute": "(3CPRAEP)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,NP/A,728,275,2003)",
+        "free_txt": [
+          " DA in table"
+        ],
+        "publication_year": "2003",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,CST,39,118,2005)",
+        "free_txt": [
+          "   DA in figure"
+        ],
+        "publication_year": "2005",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDGT,3CPRAEP)",
+        "free_txt": [
+          " Secondary beam facility of the HI-13",
+          " tandem accelerator"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(3CPRAEP)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "((1-H-2(6-C-11,N)7-N-12,PAR,DA,RSD)=(6-C-11(D,N)7-N-12,PAR,DA))",
+        "children": [
+          {
+            "code": [
+              "1-H-2",
+              [
+                "6-C-11,N"
+              ],
+              "7-N-12,PAR,DA,RSD"
+            ],
+            "type": null,
+            "target": "1-H-2",
+            "process": "6-C-11,N",
+            "sf49": "7-N-12,PAR,DA,RSD",
+            "sf4": "7-N-12",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "RSD",
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "6-C-11",
+              [
+                "D,N"
+              ],
+              "7-N-12,PAR,DA"
+            ],
+            "type": null,
+            "target": "6-C-11",
+            "process": "D,N",
+            "sf49": "7-N-12,PAR,DA",
+            "sf4": "7-N-12",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "=",
+        "free_text": ""
+      }
     }
   },
   "data_tables": {
@@ -96,51 +159,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "((1-H-2(6-C-11,N)7-N-12,PAR,DA,RSD)=(6-C-11(D,N)7-N-12,PAR,DA))",
-          "0": {
-            "code": [
-              "1-H-2",
-              [
-                "6-C-11,N"
-              ],
-              "7-N-12,PAR,DA,RSD"
-            ],
-            "type": null,
-            "target": "1-H-2",
-            "process": "6-C-11,N",
-            "sf49": "7-N-12,PAR,DA,RSD",
-            "sf4": "7-N-12",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": "RSD",
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "6-C-11",
-              [
-                "D,N"
-              ],
-              "7-N-12,PAR,DA"
-            ],
-            "type": null,
-            "target": "6-C-11",
-            "process": "D,N",
-            "sf49": "7-N-12,PAR,DA",
-            "sf4": "7-N-12",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "=",
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN-CM"
@@ -222,27 +240,26 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
-              " Background subtraction and dead area correction for",
+              "Background subtraction and dead area correction for",
               " the center and 10-annular detectors"
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
-            "x4_code": "(TELES,SI)",
-            "free_txt": []
+            "x4_code": "(TELES,SI,SI)",
+            "free_txt": [
+              " 21.7 um thick dE detector and 300 um",
+              " thick E detector"
+            ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -261,10 +278,8 @@
               " respectively."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(VDGT,3CPRAEP)",
             "free_txt": [
@@ -272,38 +287,30 @@
               " tandem accelerator"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
-              " 11C ions produced through the 1H(11B,11C)n reaction"
+              "1H(11B,11C)n reaction"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              " 1.5 mg/cm2 thick (CD2)n target in diameter of 12 mm"
+              "1.5 mg/cm2 thick (CD2)n target in diameter of 12 mm"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
@@ -314,8 +321,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

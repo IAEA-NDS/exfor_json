@@ -53,49 +53,74 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,SJA,36,75,1974)",
-          "free_txt": [
-            " Eng.transl.of AE,36,66,1974"
-          ],
-          "publication_year": "1974"
-        },
-        {
-          "x4_code": "(J,AE,36,(1),66,197401)",
-          "free_txt": [],
-          "publication_year": "1974"
-        },
-        {
-          "x4_code": "(C,73KIEV,3,315,197305)",
-          "free_txt": [],
-          "publication_year": "1973"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,4RUSMIF)",
-          "free_txt": [
-            "    Reactor IRT-2000."
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(4RUSMIF)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,SJA,36,75,1974)",
+        "free_txt": [
+          " Eng.transl.of AE,36,66,1974"
+        ],
+        "publication_year": "1974",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,AE,36,(1),66,197401)",
+        "free_txt": [],
+        "publication_year": "1974",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,73KIEV,3,315,197305)",
+        "free_txt": [],
+        "publication_year": "1973",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,4RUSMIF)",
+        "free_txt": [
+          "    Reactor IRT-2000."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4RUSMIF)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,CUM,FY"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,CUM,FY",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((92-U-238(N,F)ELEM/MASS,CUM,FY)//(92-U-235(N,F)ELEM/MASS,CUM,FY))",
+        "children": [
+          {
             "code": [
               "92-U-238",
               [
@@ -114,10 +139,36 @@
             "sf8": null,
             "sf9": null
           },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              "ELEM/MASS,CUM,FY"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": "ELEM/MASS,CUM,FY",
+            "sf4": "ELEM/MASS",
+            "sf5": "CUM",
+            "sf6": "FY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "//",
+        "free_text": "Ratio of yield at U-238 reactor neutrons fission toyield at U-235 thermal neutrons fission."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-NRM",
@@ -286,51 +337,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "((92-U-238(N,F)ELEM/MASS,CUM,FY)//(92-U-235(N,F)ELEM/MASS,CUM,FY))",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,CUM,FY",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "1": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": "ELEM/MASS,CUM,FY",
-            "sf4": "ELEM/MASS",
-            "sf5": "CUM",
-            "sf6": "FY",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": "//",
-          "free_text": "Ratio of yield at U-238 reactor neutrons fission toyield at U-235 thermal neutrons fission."
-        }
-      },
       "common": {
         "heads": [
           "EN-DUM-NM",
@@ -484,18 +490,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "For gamma-rays self-absorption."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "((1.)41-NB-95,,DG,764.)",
             "free_txt": []
@@ -540,10 +544,8 @@
             "x4_code": "(57-LA-140,,DG,1597.)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
@@ -558,28 +560,22 @@
               "2.9 keV for 662 keV gamma of Cs-137"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,4RUSMIF)",
             "free_txt": [
               "    Reactor IRT-2000."
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
@@ -589,10 +585,8 @@
               "spectrum with Cd ratio 45 for U-235 fission."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
@@ -610,10 +604,8 @@
               "for long irradiated foils."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,,M.A.Wakat,J,ND/A,8,(4-6),445,1971)",
             "free_txt": []
@@ -624,10 +616,8 @@
               " Two refs. for decay data ."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -638,8 +628,8 @@
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -658,10 +648,8 @@
               "           and enriched sample."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -687,20 +675,16 @@
               "      Total error"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               "     Absolute total error."
             ]
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY)",
             "free_txt": [
@@ -708,10 +692,8 @@
               "  W.Walker,R,IAEA-CN-26/3,1970"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -729,8 +711,8 @@
       }
     },
     "003": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -742,10 +724,8 @@
               " U-235 fission."
             ]
           }
-        ]
-      },
-      "assumed": {
-        "0": [
+        ],
+        "assumed": [
           {
             "x4_code": "(ASSUM1,92-U-238(N,F)57-LA-140,IND,FY)",
             "free_txt": [
@@ -761,10 +741,8 @@
               "                for thermal neutrons ."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
@@ -783,20 +761,16 @@
               "      Total error (relative)"
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
               "     Absolute total uncertainty."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

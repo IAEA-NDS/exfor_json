@@ -56,42 +56,72 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(C,77KIEV,3,26,197704)",
-          "free_txt": [
-            "  Contribution paper in Russian"
-          ],
-          "publication_year": "1977"
-        },
-        {
-          "x4_code": "(R,INDC(HUN)-14,197802)",
-          "free_txt": [
-            " English translation by IAEA"
-          ],
-          "publication_year": "1978"
-        },
-        {
-          "x4_code": "(C,75KIEV,5,146,197504)",
-          "free_txt": [
-            " Preliminary result"
-          ],
-          "publication_year": "1975"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(REAC,3HUNKFI)",
-          "free_txt": [
-            " VVR-S reactor"
-          ],
-          "facility_type": "(REAC)",
-          "institute": "(3HUNKFI)"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(C,77KIEV,3,26,197704)",
+        "free_txt": [
+          "  Contribution paper in Russian"
+        ],
+        "publication_year": "1977",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,INDC(HUN)-14,197802)",
+        "free_txt": [
+          " English translation by IAEA"
+        ],
+        "publication_year": "1978",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,75KIEV,5,146,197504)",
+        "free_txt": [
+          " Preliminary result"
+        ],
+        "publication_year": "1975",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,3HUNKFI)",
+        "free_txt": [
+          " VVR-S reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(3HUNKFI)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(92-U-235(N,F),PR,NU/DE,,MXW/FCT)",
+        "children": [
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",PR,NU/DE,,MXW/FCT"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",PR,NU/DE,,MXW/FCT",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU/DE",
+            "sf7": null,
+            "sf8": "MXW/FCT",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": " Units in Fig. 4 are \"neutrons/MeV*steradian\" though no angle and no angular dependence given."
+      }
     }
   },
   "data_tables": {
@@ -116,32 +146,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-235(N,F),PR,NU/DE,,MXW/FCT)",
-          "0": {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",PR,NU/DE,,MXW/FCT"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",PR,NU/DE,,MXW/FCT",
-            "sf4": null,
-            "sf5": "PR",
-            "sf6": "NU/DE",
-            "sf7": null,
-            "sf8": "MXW/FCT",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": " Units in Fig. 4 are \"neutrons/MeV*steradian\" though no angle and no angular dependence given."
-        }
-      },
       "common": {
         "heads": [
           "EN-DUMMY"
@@ -299,18 +303,16 @@
   },
   "experimental_conditions": {
     "001": {
-      "correction": {
-        "0": [
+      "0": {
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
               "Scattered neutrons are corrected."
             ]
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -322,38 +324,30 @@
               " delayed gamma-ray background."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(REAC,3HUNKFI)",
             "free_txt": [
               " VVR-S reactor"
             ]
           }
-        ]
-      },
-      "inc-source": {
-        "0": [
+        ],
+        "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": []
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "Thermal neutrons"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
@@ -368,18 +362,36 @@
               "Cf-252 was used as reference source."
             ]
           }
-        ]
-      },
-      "monit-ref": {
-        "1": [
+        ],
+        "monitor": [
           {
-            "x4_code": "(,P.P.D'yachenko+,J,AE,42,25,1977)",
+            "x4_code": "((MONIT1)98-CF-252(0,F),PR,NU)",
+            "free_txt": [
+              " = 3.74"
+            ]
+          },
+          {
+            "x4_code": "((MONIT2)92-U-235(N,F),PR,NU)",
+            "free_txt": [
+              "  = 2.40"
+            ]
+          }
+        ],
+        "part-det": [
+          {
+            "x4_code": "(N,FF)",
             "free_txt": []
           }
         ]
       },
-      "monitor": {
-        "1": [
+      "1": {
+        "monit-ref": [
+          {
+            "x4_code": "(,P.P.D'yachenko+,J,AE,42,25,1977)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
           {
             "x4_code": "(98-CF-252(0,F),PR,DE,N)",
             "free_txt": [
@@ -387,19 +399,11 @@
             ]
           }
         ]
-      },
-      "part-det": {
-        "0": [
-          {
-            "x4_code": "(N,FF)",
-            "free_txt": []
-          }
-        ]
       }
     },
     "002": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
@@ -407,28 +411,22 @@
               "and solid angle."
             ]
           }
-        ]
-      },
-      "en-sec": {
-        "0": [
+        ],
+        "en-sec": [
           {
             "x4_code": "(E,N)",
             "free_txt": []
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

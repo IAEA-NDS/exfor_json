@@ -65,37 +65,32 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JPJ,19,2004,1964)",
-          "free_txt": [],
-          "publication_year": "1964"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCY,2JPNTOK)",
-          "free_txt": [
-            " Institute for Nuclear Study"
-          ],
-          "facility_type": "(SYNCY)",
-          "institute": "(2JPNTOK)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JPJ,19,2004,1964)",
+        "free_txt": [],
+        "publication_year": "1964",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCY,2JPNTOK)",
+        "free_txt": [
+          " Institute for Nuclear Study"
+        ],
+        "pointer": "0",
+        "facility_type": "(SYNCY)",
+        "institute": "(2JPNTOK)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(P,EL)2-HE-4,,DA)",
-          "0": {
+      "0": {
+        "x4_code": "(2-HE-4(P,EL)2-HE-4,,DA)",
+        "children": [
+          {
             "code": [
               "2-HE-4",
               [
@@ -113,11 +108,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(2-HE-4(P,D)2-HE-3,,DA)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "P,D"
+              ],
+              "2-HE-3,,DA"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "P,D",
+            "sf49": "2-HE-3,,DA",
+            "sf4": "2-HE-3",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(2-HE-4(P,D)2-HE-3,,SIG)",
+        "children": [
+          {
+            "code": [
+              "2-HE-4",
+              [
+                "P,D"
+              ],
+              "2-HE-3,,SIG"
+            ],
+            "type": null,
+            "target": "2-HE-4",
+            "process": "P,D",
+            "sf49": "2-HE-3,,SIG",
+            "sf4": "2-HE-3",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN",
@@ -255,32 +313,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(P,D)2-HE-3,,DA)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "P,D"
-              ],
-              "2-HE-3,,DA"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "P,D",
-            "sf49": "2-HE-3,,DA",
-            "sf4": "2-HE-3",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": {
         "heads": [
           "EN",
@@ -423,32 +455,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(2-HE-4(P,D)2-HE-3,,SIG)",
-          "0": {
-            "code": [
-              "2-HE-4",
-              [
-                "P,D"
-              ],
-              "2-HE-3,,SIG"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "P,D",
-            "sf49": "2-HE-3,,SIG",
-            "sf4": "2-HE-3",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -487,8 +493,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(TELES,NAICR,NAICR)",
             "free_txt": [
@@ -503,28 +509,22 @@
               "        backward angles (>70 deg)"
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCY,2JPNTOK)",
             "free_txt": [
               " Institute for Nuclear Study"
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EDE)",
             "free_txt": []
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -537,18 +537,16 @@
       }
     },
     "002": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": null,
             "free_txt": [
               "ANG-CM is polar angle (c.m.) between beam and proton"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -567,28 +565,22 @@
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "[EN-RSL] Half width at half maximum"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(P)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -599,46 +591,38 @@
       }
     },
     "003": {
-      "en-sec": {
-        "0": [
+      "0": {
+        "en-sec": [
           {
             "x4_code": null,
             "free_txt": [
               "ANG-CM is polar angle (c.m.) between beam and deuteron"
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainty"
             ]
           }
-        ]
-      },
-      "inc-spect": {
-        "0": [
+        ],
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               "[EN-RSL] Half width at half maximum"
             ]
           }
-        ]
-      },
-      "part-det": {
-        "0": [
+        ],
+        "part-det": [
           {
             "x4_code": "(D,HE3)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -649,8 +633,8 @@
       }
     },
     "004": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
@@ -663,10 +647,8 @@
               " Due to extrapolation to 0 and 180 deg"
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

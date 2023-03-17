@@ -102,36 +102,93 @@
         ]
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,73,014607,2006)",
-          "free_txt": [],
-          "publication_year": "2006"
-        }
-      ]
+    "references": [
+      {
+        "x4_code": "(J,PR/C,73,014607,2006)",
+        "free_txt": [],
+        "publication_year": "2006",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(SYNCH,2GERGSI)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(SYNCH)",
+        "institute": "(2GERGSI)"
+      },
+      {
+        "x4_code": "(FRS,2GERGSI)",
+        "free_txt": [
+          " The FRS is a two-stage magnetic",
+          "spectrometer, achromatic at the exit and dispersive in",
+          "the central image plane. It has a momentum acceptance",
+          "of 3% and an angular acceptance of 15 mrad around the",
+          "beam axis."
+        ],
+        "pointer": "0",
+        "facility_type": "(FRS)",
+        "institute": "(2GERGSI)"
+      }
+    ]
+  },
+  "reactions": {
+    "002": {
+      "0": {
+        "x4_code": "(1-H-1(92-U-238,X)ELEM/MASS,,SIG)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "92-U-238,X"
+              ],
+              "ELEM/MASS,,SIG"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "92-U-238,X",
+            "sf49": "ELEM/MASS,,SIG",
+            "sf4": "ELEM/MASS",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
     },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(SYNCH,2GERGSI)",
-          "free_txt": [],
-          "facility_type": "(SYNCH)",
-          "institute": "(2GERGSI)"
-        },
-        {
-          "x4_code": "(FRS,2GERGSI)",
-          "free_txt": [
-            " The FRS is a two-stage magnetic",
-            "spectrometer, achromatic at the exit and dispersive in",
-            "the central image plane. It has a momentum acceptance",
-            "of 3% and an angular acceptance of 15 mrad around the",
-            "beam axis."
-          ],
-          "facility_type": "(FRS)",
-          "institute": "(2GERGSI)"
-        }
-      ]
+    "003": {
+      "0": {
+        "x4_code": "(1-H-1(92-U-238,F)ELEM,,AKE,FF)",
+        "children": [
+          {
+            "code": [
+              "1-H-1",
+              [
+                "92-U-238,F"
+              ],
+              "ELEM,,AKE,FF"
+            ],
+            "type": null,
+            "target": "1-H-1",
+            "process": "92-U-238,F",
+            "sf49": "ELEM,,AKE,FF",
+            "sf4": "ELEM",
+            "sf5": null,
+            "sf6": "AKE",
+            "sf7": "FF",
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "Measured mean kinetic energy of fission fragment in themother nucleus frame."
+      }
     }
   },
   "data_tables": {
@@ -151,32 +208,6 @@
       }
     },
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(92-U-238,X)ELEM/MASS,,SIG)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "92-U-238,X"
-              ],
-              "ELEM/MASS,,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "92-U-238,X",
-            "sf49": "ELEM/MASS,,SIG",
-            "sf4": "ELEM/MASS",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1478,32 +1509,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(1-H-1(92-U-238,F)ELEM,,AKE,FF)",
-          "0": {
-            "code": [
-              "1-H-1",
-              [
-                "92-U-238,F"
-              ],
-              "ELEM,,AKE,FF"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "92-U-238,F",
-            "sf49": "ELEM,,AKE,FF",
-            "sf4": "ELEM",
-            "sf5": null,
-            "sf6": "AKE",
-            "sf7": "FF",
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "Measured mean kinetic energy of fission fragment in themother nucleus frame."
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -1706,8 +1711,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
@@ -1729,10 +1734,8 @@
               "rigidity and the velocity."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(SYNCH,2GERGSI)",
             "free_txt": []
@@ -1747,10 +1750,8 @@
               "beam axis."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(EXTB)",
             "free_txt": []
@@ -1778,10 +1779,8 @@
               " See SAMPLE."
             ]
           }
-        ]
-      },
-      "rel-ref": {
-        "0": [
+        ],
+        "rel-ref": [
           {
             "x4_code": "(R,O1069001,M.BERNAS+,J,NP/A,725,213,2003)",
             "free_txt": [
@@ -1802,10 +1801,8 @@
               " FRS."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1817,8 +1814,8 @@
       }
     },
     "002": {
-      "comment": {
-        "0": [
+      "0": {
+        "comment": [
           {
             "x4_code": null,
             "free_txt": [
@@ -1830,10 +1827,8 @@
               "prior to its radioactive decay."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR1)",
             "free_txt": [
@@ -1852,18 +1847,16 @@
       }
     },
     "003": {
-      "err-analys": {
-        "0": [
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " The uncertainty of kinetic energy."
             ]
           }
-        ]
-      },
-      "misc-col": {
-        "0": [
+        ],
+        "misc-col": [
           {
             "x4_code": "(MISC1)",
             "free_txt": [

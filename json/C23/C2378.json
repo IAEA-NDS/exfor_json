@@ -49,41 +49,37 @@
         "free_txt": ""
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,PR/C,20,1844,1979)",
-          "free_txt": [
-            "#doi:10.1103/PhysRevC.20.1844"
-          ],
-          "publication_year": "1979"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(LINAC,1USALAS)",
-          "free_txt": [
-            " Two different channels at LAMPF: LEP",
-            " (Low Energy Pion channel) and P3 (Particle and Pion",
-            "Physics channel) for high-energy pions."
-          ],
-          "facility_type": "(LINAC)",
-          "institute": "(1USALAS)"
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,PR/C,20,1844,1979)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.20.1844"
+        ],
+        "publication_year": "1979",
+        "pointer": "0",
+        "doi": "10.1103/PhysRevC.20.1844"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(LINAC,1USALAS)",
+        "free_txt": [
+          " Two different channels at LAMPF: LEP",
+          " (Low Energy Pion channel) and P3 (Particle and Pion",
+          "Physics channel) for high-energy pions."
+        ],
+        "pointer": "0",
+        "facility_type": "(LINAC)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-0(PIP,X)6-C-11,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(6-C-0(PIP,X)6-C-11,,SIG)",
+        "children": [
+          {
             "code": [
               "6-C-0",
               [
@@ -101,11 +97,46 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(6-C-0(PIN,X)6-C-11,,SIG)",
+        "children": [
+          {
+            "code": [
+              "6-C-0",
+              [
+                "PIN,X"
+              ],
+              "6-C-11,,SIG"
+            ],
+            "type": null,
+            "target": "6-C-0",
+            "process": "PIN,X",
+            "sf49": "6-C-11,,SIG",
+            "sf4": "6-C-11",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -249,32 +280,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(6-C-0(PIN,X)6-C-11,,SIG)",
-          "0": {
-            "code": [
-              "6-C-0",
-              [
-                "PIN,X"
-              ],
-              "6-C-11,,SIG"
-            ],
-            "type": null,
-            "target": "6-C-0",
-            "process": "PIN,X",
-            "sf49": "6-C-11,,SIG",
-            "sf4": "6-C-11",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -408,8 +413,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "analysis": {
-        "0": [
+      "0": {
+        "analysis": [
           {
             "x4_code": "(DECAY)",
             "free_txt": [
@@ -419,10 +424,8 @@
               "from the 20.4-min half-life."
             ]
           }
-        ]
-      },
-      "correction": {
-        "0": [
+        ],
+        "correction": [
           {
             "x4_code": null,
             "free_txt": [
@@ -430,18 +433,14 @@
               "structured beam."
             ]
           }
-        ]
-      },
-      "decay-data": {
-        "0": [
+        ],
+        "decay-data": [
           {
             "x4_code": "(6-C-11,20.4MIN,B+)",
             "free_txt": []
           }
-        ]
-      },
-      "detector": {
-        "0": [
+        ],
+        "detector": [
           {
             "x4_code": "(NAICR,SCIN)",
             "free_txt": [
@@ -449,10 +448,8 @@
               "scintillator."
             ]
           }
-        ]
-      },
-      "err-analys": {
-        "0": [
+        ],
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
@@ -462,10 +459,8 @@
               "quadratures."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": "(LINAC,1USALAS)",
             "free_txt": [
@@ -474,10 +469,8 @@
               "Physics channel) for high-energy pions."
             ]
           }
-        ]
-      },
-      "method": {
-        "0": [
+        ],
+        "method": [
           {
             "x4_code": "(ACTIV,COINC)",
             "free_txt": [
@@ -491,10 +484,8 @@
               "standard beta-gamma coincidence circuitry."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -510,8 +501,8 @@
       }
     },
     "002": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -522,8 +513,8 @@
       }
     },
     "003": {
-      "status": {
-        "0": [
+      "0": {
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [

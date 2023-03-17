@@ -29,38 +29,34 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(P,ORNL-CF-51-12,151,5112)",
-          "free_txt": [],
-          "publication_year": "1951"
-        },
-        {
-          "x4_code": "(R,ORNL-CF-52-4-15,5204)",
-          "free_txt": [],
-          "publication_year": "1952"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": "(OSCIP)",
-          "free_txt": []
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(P,ORNL-CF-51-12,151,5112)",
+        "free_txt": [],
+        "publication_year": "1951",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,ORNL-CF-52-4-15,5204)",
+        "free_txt": [],
+        "publication_year": "1952",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(OSCIP)",
+        "free_txt": [],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-234(N,G)92-U-235,,SIG,,MXW)",
-          "0": {
+      "0": {
+        "x4_code": "(92-U-234(N,G)92-U-235,,SIG,,MXW)",
+        "children": [
+          {
             "code": [
               "92-U-234",
               [
@@ -78,11 +74,74 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(92-U-236(N,G)92-U-237,,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "92-U-236",
+              [
+                "N,G"
+              ],
+              "92-U-237,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "92-U-236",
+            "process": "N,G",
+            "sf49": "92-U-237,,SIG,,MXW",
+            "sf4": "92-U-237",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(92-U-238(N,G)92-U-239,,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "92-U-238",
+              [
+                "N,G"
+              ],
+              "92-U-239,,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "92-U-238",
+            "process": "N,G",
+            "sf49": "92-U-239,,SIG,,MXW",
+            "sf4": "92-U-239",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": null,
       "data": {
         "heads": [
@@ -114,32 +173,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-236(N,G)92-U-237,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "92-U-236",
-              [
-                "N,G"
-              ],
-              "92-U-237,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "92-U-236",
-            "process": "N,G",
-            "sf49": "92-U-237,,SIG,,MXW",
-            "sf4": "92-U-237",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -171,32 +204,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(92-U-238(N,G)92-U-239,,SIG,,MXW)",
-          "0": {
-            "code": [
-              "92-U-238",
-              [
-                "N,G"
-              ],
-              "92-U-239,,SIG,,MXW"
-            ],
-            "type": null,
-            "target": "92-U-238",
-            "process": "N,G",
-            "sf49": "92-U-239,,SIG,,MXW",
-            "sf4": "92-U-239",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -230,24 +237,20 @@
   },
   "experimental_conditions": {
     "001": {
-      "facility": {
-        "0": [
+      "0": {
+        "facility": [
           {
             "x4_code": "(OSCIP)",
             "free_txt": []
           }
-        ]
-      },
-      "monitor": {
-        "0": [
+        ],
+        "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(SCSRS)",
             "free_txt": []
@@ -256,18 +259,16 @@
       }
     },
     "002": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " THERMAL SPECTRUM"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -278,18 +279,16 @@
       }
     },
     "003": {
-      "inc-spect": {
-        "0": [
+      "0": {
+        "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
               " THERMAL SPECTRUM"
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [

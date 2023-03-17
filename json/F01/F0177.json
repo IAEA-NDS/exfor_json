@@ -46,43 +46,39 @@
         "free_txt": []
       }
     ],
-    "references": {
-      "0": [
-        {
-          "x4_code": "(J,JJAP,3,(1),36,1964)",
-          "free_txt": [],
-          "publication_year": "1964"
-        },
-        {
-          "x4_code": "(J,PL,9,157,1964)",
-          "free_txt": [
-            " 4-pi neutron detector described in",
-            "main reference was used."
-          ],
-          "publication_year": "1964"
-        }
-      ]
-    },
-    "facilities": {
-      "0": [
-        {
-          "x4_code": null,
-          "free_txt": [
-            "No information"
-          ]
-        }
-      ]
-    }
+    "references": [
+      {
+        "x4_code": "(J,JJAP,3,(1),36,1964)",
+        "free_txt": [],
+        "publication_year": "1964",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PL,9,157,1964)",
+        "free_txt": [
+          " 4-pi neutron detector described in",
+          "main reference was used."
+        ],
+        "publication_year": "1964",
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": null,
+        "free_txt": [
+          "No information"
+        ],
+        "pointer": "0"
+      }
+    ]
   },
-  "data_tables": {
-    "001": {
-      "common": null
-    },
+  "reactions": {
     "002": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(P,N)5-B-9,,SIG)",
-          "0": {
+      "0": {
+        "x4_code": "(4-BE-9(P,N)5-B-9,,SIG)",
+        "children": [
+          {
             "code": [
               "4-BE-9",
               [
@@ -100,11 +96,74 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(4-BE-9(P,N)5-B-9,,SIG)",
+        "children": [
+          {
+            "code": [
+              "4-BE-9",
+              [
+                "P,N"
+              ],
+              "5-B-9,,SIG"
+            ],
+            "type": null,
+            "target": "4-BE-9",
+            "process": "P,N",
+            "sf49": "5-B-9,,SIG",
+            "sf4": "5-B-9",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(24-CR-53(P,N)25-MN-53,,SIG,,REL)",
+        "children": [
+          {
+            "code": [
+              "24-CR-53",
+              [
+                "P,N"
+              ],
+              "25-MN-53,,SIG,,REL"
+            ],
+            "type": null,
+            "target": "24-CR-53",
+            "process": "P,N",
+            "sf49": "25-MN-53,,SIG,,REL",
+            "sf4": "25-MN-53",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "REL",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "No explanation of arbitrary units is given."
+      }
+    }
+  },
+  "data_tables": {
+    "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -247,32 +306,6 @@
       }
     },
     "003": {
-      "reaction": {
-        "0": {
-          "x4_code": "(4-BE-9(P,N)5-B-9,,SIG)",
-          "0": {
-            "code": [
-              "4-BE-9",
-              [
-                "P,N"
-              ],
-              "5-B-9,,SIG"
-            ],
-            "type": null,
-            "target": "4-BE-9",
-            "process": "P,N",
-            "sf49": "5-B-9,,SIG",
-            "sf4": "5-B-9",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          "type": null,
-          "free_text": ""
-        }
-      },
       "common": null,
       "data": {
         "heads": [
@@ -309,32 +342,6 @@
       }
     },
     "004": {
-      "reaction": {
-        "0": {
-          "x4_code": "(24-CR-53(P,N)25-MN-53,,SIG,,REL)",
-          "0": {
-            "code": [
-              "24-CR-53",
-              [
-                "P,N"
-              ],
-              "25-MN-53,,SIG,,REL"
-            ],
-            "type": null,
-            "target": "24-CR-53",
-            "process": "P,N",
-            "sf49": "25-MN-53,,SIG,,REL",
-            "sf4": "25-MN-53",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "REL",
-            "sf9": null
-          },
-          "type": null,
-          "free_text": "No explanation of arbitrary units is given."
-        }
-      },
       "common": {
         "heads": [
           "EN-ERR-DIG",
@@ -575,8 +582,8 @@
   },
   "experimental_conditions": {
     "001": {
-      "detector": {
-        "0": [
+      "0": {
+        "detector": [
           {
             "x4_code": "(BF3,D4PI)",
             "free_txt": [
@@ -587,10 +594,8 @@
               "40 cm-Hg, B-10 was enriched to 96%."
             ]
           }
-        ]
-      },
-      "facility": {
-        "0": [
+        ],
+        "facility": [
           {
             "x4_code": null,
             "free_txt": [
@@ -601,8 +606,8 @@
       }
     },
     "002": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -611,10 +616,8 @@
               "thickness was 4 keV for 2 MeV protons."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
@@ -625,8 +628,8 @@
       }
     },
     "003": {
-      "misc-col": {
-        "0": [
+      "0": {
+        "misc-col": [
           {
             "x4_code": null,
             "free_txt": [
@@ -635,10 +638,8 @@
               "part."
             ]
           }
-        ]
-      },
-      "sample": {
-        "0": [
+        ],
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -647,10 +648,8 @@
               "thickness was 4 keV for 2 MeV protons."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
@@ -661,8 +660,8 @@
       }
     },
     "004": {
-      "sample": {
-        "0": [
+      "0": {
+        "sample": [
           {
             "x4_code": null,
             "free_txt": [
@@ -672,10 +671,8 @@
               "keV energy loss for 1.8 MeV protons."
             ]
           }
-        ]
-      },
-      "status": {
-        "0": [
+        ],
+        "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
