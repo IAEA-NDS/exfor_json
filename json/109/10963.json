@@ -161,93 +161,47 @@
       },
       "3": {
         "x4_code": "(((30-ZN-64(N,EL),,WID,,G)*((30-ZN-64(N,G),,WID)+(30-ZN-64(N,EL),,WID,,FCT)))/(30-ZN-64(N,TOT),,WID))",
-        "children": [
-          {
-            "code": [
-              "30-ZN-64",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
-            "target": "30-ZN-64",
-            "process": "N,EL",
-            "sf49": ",,WID,,G",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "G",
-            "sf9": null
-          },
-          {
-            "code": [
-              [
-                "30-ZN-64",
-                [
-                  "N,G"
-                ],
-                ",,WID"
-              ],
-              "+",
+        "children": {
+          "code": [
+            [
               [
                 "30-ZN-64",
                 [
                   "N,EL"
                 ],
-                ",,WID,,FCT"
+                ",,WID,,G"
+              ],
+              "*",
+              [
+                [
+                  "30-ZN-64",
+                  [
+                    "N,G"
+                  ],
+                  ",,WID"
+                ],
+                "+",
+                [
+                  "30-ZN-64",
+                  [
+                    "N,EL"
+                  ],
+                  ",,WID,,FCT"
+                ]
               ]
             ],
-            "type": "*",
-            "target": [
+            "/",
+            [
               "30-ZN-64",
               [
-                "N,G"
+                "N,TOT"
               ],
               ",,WID"
-            ],
-            "process": "+",
-            "sf49": "(30-ZN-64)",
-            "sf4": "(30-ZN-64)",
-            "sf5": null,
-            "sf6": null,
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": "30-ZN-64",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "3",
-            "process": "0",
-            "sf49": "-,Z,N,-,6,4",
-            "sf4": "-",
-            "sf5": "Z",
-            "sf6": "N",
-            "sf7": "-",
-            "sf8": "6",
-            "sf9": "4"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          }
-        ],
-        "type": "/",
+            ]
+          ],
+          "type": null
+        },
+        "type": "?",
         "free_text": "Factor in elastic widths is neutron sensitivity factor."
       },
       "4": {

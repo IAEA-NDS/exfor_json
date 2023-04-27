@@ -1,7 +1,7 @@
 {
   "entry": "20272",
-  "last_updated": "2019-04-24",
-  "number_of_revisions": "4",
+  "last_updated": "2023-03-31",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19711010C)",
@@ -16,27 +16,33 @@
     {
       "x4_code": "(19840106U)",
       "free_txt": [
-        " A.P.T. Japan code changed to jpn"
+        " A.P.T. Japan code changed to JPN"
       ]
     },
     {
       "x4_code": "(19900823A)",
       "free_txt": [
-        " S.W. n-source replaced, flag added to",
-        "          Subent 003."
+        " S.W. N-SOURCE replaced, flag added to",
+        " Subent 003."
       ]
     },
     {
       "x4_code": "(20181012U)",
       "free_txt": [
         " SD:Updated to new date formats,lower case.",
-        "Ref. KURRI-AR-3 treated as the primary reference.",
-        "ERR-ANALYS updated. MONITOR moved to Subent 002."
+        " Ref. KURRI-AR-3 treated as the primary reference.",
+        " ERR-ANALYS updated. MONITOR moved to Subent 002."
+      ]
+    },
+    {
+      "x4_code": "(20221206A)",
+      "free_txt": [
+        " On. Recompiled."
       ]
     }
   ],
   "bib_record": {
-    "title": " Measurement of the average cross-section for the Th-232(n,f) reaction for the fission-type reactor spectrum",
+    "title": "Measurement of average cross section for the 232Th(n,f) reaction for the fission-type reactor spectrum",
     "authors": [
       {
         "name": "K.Kobayashi"
@@ -63,9 +69,7 @@
       {
         "x4_code": "(REAC,2JPNKTO)",
         "free_txt": [
-          "    KUR-reactor (fast),   fission type",
-          " spectrum. Fast neutron flux about 10.**12 n/cm2/sec",
-          " for 30 min."
+          " KUR"
         ],
         "pointer": "0",
         "facility_type": "(REAC)",
@@ -133,47 +137,45 @@
   },
   "data_tables": {
     "001": {
-      "common": {
-        "heads": [
-          "EN-DUMMY",
-          "ERR-1"
-        ],
-        "units": [
-          "MEV",
-          "PER-CENT"
-        ],
-        "data": [
-          [
-            1.5
-          ],
-          [
-            2.0
-          ]
-        ]
-      }
+      "common": null
     },
     "002": {
       "common": null,
       "data": {
         "heads": [
+          "KT-DUMMY",
           "DATA",
-          "ERR-SYS",
-          "ERR-T"
+          "ERR-T",
+          "ERR-1",
+          "ERR-2",
+          "ASSUM"
         ],
         "units": [
+          "MEV",
+          "MB",
           "MB",
           "PER-CENT",
-          "MB"
+          "PER-CENT",
+          "PC/FIS"
         ],
         "data": [
           [
+            1.32
+          ],
+          [
             67.0
+          ],
+          [
+            6.0
           ],
           [
             2.0
           ],
           [
-            6.0
+            2.0
+          ],
+          [
+            7.64
           ]
         ]
       }
@@ -181,12 +183,17 @@
     "003": {
       "common": {
         "heads": [
+          "KT-DUMMY",
           "MONIT"
         ],
         "units": [
+          "MEV",
           "PC/FIS"
         ],
         "data": [
+          [
+            1.32
+          ],
           [
             7.64
           ]
@@ -197,7 +204,7 @@
           "ELEMENT",
           "MASS",
           "DATA",
-          "ERR-T",
+          "DATA-ERR",
           "FLAG"
         ],
         "units": [
@@ -249,15 +256,7 @@
           {
             "x4_code": "(GELI)",
             "free_txt": [
-              "    Planar-type Ge(Li) of 2 cm3."
-            ]
-          }
-        ],
-        "err-analys": [
-          {
-            "x4_code": "(ERR-1)",
-            "free_txt": [
-              " Uncertainty in neutron flux"
+              "  Planar-type Ge(Li) of 2 cm3."
             ]
           }
         ],
@@ -265,49 +264,41 @@
           {
             "x4_code": "(REAC,2JPNKTO)",
             "free_txt": [
-              "    KUR-reactor (fast),   fission type",
-              " spectrum. Fast neutron flux about 10.**12 n/cm2/sec",
-              " for 30 min."
+              " KUR"
             ]
           }
         ],
         "inc-source": [
           {
             "x4_code": "(REAC)",
-            "free_txt": []
+            "free_txt": [
+              " Core of KUR"
+            ]
           }
         ],
         "inc-spect": [
           {
-            "x4_code": null,
-            "free_txt": [
-              ".Fission spectrum approximated by fast spectrum",
-              " above 1.5 MeV"
-            ]
+            "x4_code": "(confirmed by multiple foil activation, 6Li sandwich counter and nuclear emulsion plates)",
+            "free_txt": []
           }
         ],
         "method": [
           {
             "x4_code": "(ACTIV)",
-            "free_txt": [
-              "    Reactivity measurement."
-            ]
+            "free_txt": []
           }
         ],
         "part-det": [
           {
             "x4_code": "(DG)",
-            "free_txt": [
-              "    Gammas"
-            ]
+            "free_txt": []
           }
         ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              " 1/2 inch in diam., 0.004 inch thick.",
-              " Chemical purity 99.95%"
+              "99.95% pure, 1/2 inch diam., 0.004 inch thick"
             ]
           }
         ]
@@ -315,19 +306,30 @@
     },
     "002": {
       "0": {
-        "err-analys": [
+        "assumed": [
           {
-            "x4_code": "(ERR-SYS)",
-            "free_txt": [
-              " Systematic error"
-            ]
-          },
+            "x4_code": "(ASSUM,90-TH-232(N,F)56-BA-140,CUM,FY,,FIS)",
+            "free_txt": []
+          }
+        ],
+        "err-analys": [
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
-              " Total error includes:",
-              "  * Statistical error in counting activities of",
-              "    five fission products + ERR-1 + ERR-SYS."
+              " Including counting statistics of five fission",
+              " products and"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Uncertainty in neutron flux"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Systematic errors"
             ]
           }
         ],
@@ -349,12 +351,32 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 3 from KURRI-AR-3,84,1970"
+              " Table 3 of KURRI-AR-3,84,1970"
             ]
           },
           {
             "x4_code": "(DEP,20272003)",
-            "free_txt": []
+            "free_txt": [
+              " Fission product yields"
+            ]
+          },
+          {
+            "x4_code": "(SPSDD,20693014)",
+            "free_txt": [
+              " New measurement relative to 140Ba FPY"
+            ]
+          },
+          {
+            "x4_code": "(SPSDD,20792002)",
+            "free_txt": [
+              " New measurement with online detection"
+            ]
+          },
+          {
+            "x4_code": "(SPSDD,20792003)",
+            "free_txt": [
+              " New measurement relative to 140Ba FPY"
+            ]
           }
         ]
       }
@@ -381,9 +403,9 @@
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Total error"
+              " No information on the source of uncertainty"
             ]
           }
         ],
@@ -391,20 +413,17 @@
           {
             "x4_code": "(1.)",
             "free_txt": [
+              " Comment by T.R.England and  B.F.Rider (1994):",
               " Mass 132 yield is here assumed to be for the chain",
               " yield because Cs is shielded and has an independent",
-              " and cumulative yield of < 9.0E-12 %. see Rider",
-              " references (70KOB1) in NEDO-12154-3C ENDF-322."
+              " and cumulative yield of less than (9E-12)%."
             ]
           }
         ],
         "monit-ref": [
           {
             "x4_code": "(22791001,M.Bresesti+,J,JIN,29,1189,1967)",
-            "free_txt": [
-              " - value from",
-              "  the abstract (value preferred by M.Bresesti+)."
-            ]
+            "free_txt": []
           }
         ],
         "monitor": [
@@ -413,12 +432,19 @@
             "free_txt": []
           }
         ],
+        "rel-ref": [
+          {
+            "x4_code": "(C,,T.R.England+,R,LA-UR-94-3106,1994)",
+            "free_txt": [
+              " Comment on 70KOB1"
+            ]
+          }
+        ],
         "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 from KURRI-AR-3,84,1970; values of",
-              " decay data were taken from fig.6."
+              " Table 2 of KURRI-AR-3,84,1970"
             ]
           }
         ]

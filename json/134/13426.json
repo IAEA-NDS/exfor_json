@@ -1,17 +1,27 @@
 {
   "entry": "13426",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-04-11",
+  "number_of_revisions": "4",
   "histories": [
     {
-      "x4_code": "(900111C)",
+      "x4_code": "(19900111C)",
       "free_txt": [
         " VM"
+      ]
+    },
+    {
+      "x4_code": "(20220317A)",
+      "free_txt": [
+        " BP: Updated to new date formats, lower",
+        "case. Corrections according last EXFOR rules and",
+        "Dict. Replaced RIDER's data with the original",
+        "publication, updated METHOD, added FACILITY, INC-SPECT,",
+        " REL-REF."
       ]
     }
   ],
   "bib_record": {
-    "title": "YIELD OF KR85 AND XE133 IN THE THERMAL NEUTRON FISSION OF U235 AND YIELD OF KR85 IN THE THERMAL NEUTRON FISSION OF PU239",
+    "title": "Yield of Kr85 and Xe133 in the thermal neutron fission of U235 and yield of Kr85 in the thermal neutron fission of Pu239",
     "authors": [
       {
         "name": "S.Katcoff"
@@ -28,17 +38,40 @@
     ],
     "references": [
       {
-        "x4_code": "(R,BNL-1652,53)",
-        "free_txt": [],
+        "x4_code": "(R,BNL-1652,1953)",
+        "free_txt": [
+          " Original publication."
+        ],
         "publication_year": "1953",
         "pointer": "0"
+      },
+      {
+        "x4_code": "(J,JIN,27,1447,1965)",
+        "free_txt": [
+          " Journal publication.",
+          "#doi:10.1016/0022-1902(65)80001-x"
+        ],
+        "publication_year": "1965",
+        "pointer": "0",
+        "doi": "10.1016/0022-1902(65)80001-x"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USABNL)",
+        "free_txt": [
+          " Brookhaven pile."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USABNL)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(92-U-235(N,F)36-KR-85,CUM,FY,,SPA)",
+        "x4_code": "(92-U-235(N,F)36-KR-85-G,CUM,FY,,SPA)",
         "children": [
           {
             "code": [
@@ -46,13 +79,13 @@
               [
                 "N,F"
               ],
-              "36-KR-85,CUM,FY,,SPA"
+              "36-KR-85-G,CUM,FY,,SPA"
             ],
             "type": null,
             "target": "92-U-235",
             "process": "N,F",
-            "sf49": "36-KR-85,CUM,FY,,SPA",
-            "sf4": "36-KR-85",
+            "sf49": "36-KR-85-G,CUM,FY,,SPA",
+            "sf4": "36-KR-85-G",
             "sf5": "CUM",
             "sf6": "FY",
             "sf7": null,
@@ -66,7 +99,7 @@
     },
     "003": {
       "0": {
-        "x4_code": "(94-PU-239(N,F)36-KR-85,CUM,FY,,SPA)",
+        "x4_code": "(94-PU-239(N,F)36-KR-85-G,CUM,FY,,SPA)",
         "children": [
           {
             "code": [
@@ -74,13 +107,13 @@
               [
                 "N,F"
               ],
-              "36-KR-85,CUM,FY,,SPA"
+              "36-KR-85-G,CUM,FY,,SPA"
             ],
             "type": null,
             "target": "94-PU-239",
             "process": "N,F",
-            "sf49": "36-KR-85,CUM,FY,,SPA",
-            "sf4": "36-KR-85",
+            "sf49": "36-KR-85-G,CUM,FY,,SPA",
+            "sf4": "36-KR-85-G",
             "sf5": "CUM",
             "sf6": "FY",
             "sf7": null,
@@ -94,7 +127,7 @@
     },
     "004": {
       "0": {
-        "x4_code": "((92-U-235(N,F)54-XE-133,CUM,FY,,SPA)/(92-U-235(N,F)36-KR-85,CUM,FY,,SPA))",
+        "x4_code": "((92-U-235(N,F)54-XE-133,CUM,FY,,SPA)/(92-U-235(N,F)36-KR-85-G,CUM,FY,,SPA))",
         "children": [
           {
             "code": [
@@ -121,13 +154,13 @@
               [
                 "N,F"
               ],
-              "36-KR-85,CUM,FY,,SPA"
+              "36-KR-85-G,CUM,FY,,SPA"
             ],
             "type": null,
             "target": "92-U-235",
             "process": "N,F",
-            "sf49": "36-KR-85,CUM,FY,,SPA",
-            "sf4": "36-KR-85",
+            "sf49": "36-KR-85-G,CUM,FY,,SPA",
+            "sf4": "36-KR-85-G",
             "sf5": "CUM",
             "sf6": "FY",
             "sf7": null,
@@ -157,22 +190,47 @@
       }
     },
     "002": {
-      "common": null,
-      "data": {
+      "common": {
         "heads": [
-          "DATA",
-          "DATA-ERR"
+          "ERR-1",
+          "ERR-2"
         ],
         "units": [
-          "PC/FIS",
+          "PER-CENT",
           "PER-CENT"
         ],
         "data": [
           [
+            1.0
+          ],
+          [
+            2.0
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "DATA",
+          "DATA-ERR",
+          "DECAY-FLAG"
+        ],
+        "units": [
+          "PC/FIS",
+          "PER-CENT",
+          "NO-DIM"
+        ],
+        "data": [
+          [
+            0.26,
             0.273
           ],
           [
-            5.0
+            2.36,
+            1.9
+          ],
+          [
+            1.0,
+            2.0
           ]
         ]
       }
@@ -182,18 +240,26 @@
       "data": {
         "heads": [
           "DATA",
-          "DATA-ERR"
+          "DATA-ERR",
+          "DECAY-FLAG"
         ],
         "units": [
           "PC/FIS",
-          "PER-CENT"
+          "PER-CENT",
+          "NO-DIM"
         ],
         "data": [
           [
+            0.094,
             0.0994
           ],
           [
+            4.8,
             4.4
+          ],
+          [
+            1.0,
+            2.0
           ]
         ]
       }
@@ -218,45 +284,65 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "decay-data": [
-          {
-            "x4_code": "(36-KR-85,10.8YR)",
-            "free_txt": []
-          }
-        ],
         "detector": [
           {
-            "x4_code": "(IOCH)",
+            "x4_code": "(PROPC,FISCH)",
             "free_txt": [
-              " FOR FISSION COUNTING"
+              " Two gas proportional counters with",
+              "silver cathodes, 2 cm dia. and 30 cm long. The",
+              "krypton pressure was about 300 mm and methane was",
+              "added to bring the total pressure to 1 atm."
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(REAC,1USABNL)",
+            "free_txt": [
+              " Brookhaven pile."
+            ]
+          }
+        ],
+        "inc-spect": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "2x10**11 n/cm**2/sec, the flux was constant to +- 2%",
+              "after reaching its full value."
             ]
           }
         ],
         "method": [
           {
-            "x4_code": "(RCHEM)",
-            "free_txt": []
-          }
-        ],
-        "status": [
-          {
-            "x4_code": "(RIDER)",
+            "x4_code": "(CHSEP,FISCT)",
             "free_txt": [
-              "133XE YIELD IN 235U FISSION PUBLISHED IN PHYS.REV. 91,",
-              " 1458 (1953)"
+              " Absolute radiochemical methods, fission",
+              "yields to half life (Y/T). Foils were mounted on",
+              "platinum in each of the two chambers of fission",
+              "counting apparatus. The entire assembly was then",
+              "irradiated in the brookhaven graphite reactor for",
+              "6-12 hr, and the fission counting rates of the foils",
+              "were recorded continuously. After irradiation the",
+              "85Kr was radiochemically separated from the slug,",
+              "purified, and its activity measured by internal gas",
+              "phase proportional counting. From these values of the",
+              "85Kr activity and the measured number of fissions the",
+              "fission yield was calculated."
             ]
           }
-        ]
-      }
-    },
-    "002": {
-      "0": {
-        "err-analys": [
+        ],
+        "rel-ref": [
           {
-            "x4_code": "(DATA-ERR)",
+            "x4_code": "(O,13371001,S.Katcoff+,J,PR,91,1458,1953)",
             "free_txt": [
-              " ACCURACY ESTIMATED DERIVED FROM ACCURACIES",
-              " OF 3% IN YIELD/HALF-LIFE VALUE AND 4% IN HALF-LIFE"
+              " Independent",
+              "and cumulative yields ratios from the same experiment."
+            ]
+          },
+          {
+            "x4_code": "(I,13371001,S.Katcoff+,J,PR,91,1458,1953)",
+            "free_txt": [
+              "the double-chamber fission counting apparatus."
             ]
           }
         ],
@@ -264,24 +350,129 @@
           {
             "x4_code": null,
             "free_txt": [
-              "ENRICHED TO 93.72% 235U"
+              "The fission foils, which consist of 0.01 microg of",
+              "235U or 239Pu deposited on a Pt disk 0.002 inch thick",
+              "and 1 inch in diameter."
             ]
+          }
+        ]
+      }
+    },
+    "002": {
+      "0": {
+        "decay-data": [
+          {
+            "x4_code": "((1.)36-KR-85-G,10.27YR)",
+            "free_txt": [
+              "  10.27+-0.18 years"
+            ]
+          },
+          {
+            "x4_code": "((2.)36-KR-85-G,10.8YR)",
+            "free_txt": []
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " The standard deviation is 1.59% of Y/T. As",
+              "concern for possible systematic errors. We feel that",
+              "is unlikely that measured Y/T values differ from true",
+              "more than 3%. Which we adopt as our accuracy estimate."
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " 1% per slug fissions."
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " 2% for 85Kr activity."
+            ]
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": "(92-U-235,ENR=0.9372)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " page 49 of R,BNL-1652,1953."
+            ]
+          },
+          {
+            "x4_code": "(SPSDD,13215002)",
+            "free_txt": []
           }
         ]
       }
     },
     "003": {
       "0": {
+        "decay-data": [
+          {
+            "x4_code": "((1.)36-KR-85-G,10.27YR)",
+            "free_txt": [
+              " 10.27+-0.18 years"
+            ]
+          },
+          {
+            "x4_code": "((2.)36-KR-85-G,10.8YR)",
+            "free_txt": []
+          }
+        ],
         "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " STANDARD DEVIATION"
+              " Standard deviation per determination of Y/T",
+              "is 4.3%."
             ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " page 49 of R,BNL-1652,1953."
+            ]
+          },
+          {
+            "x4_code": "(SPSDD,13215003)",
+            "free_txt": []
           }
         ]
       }
     },
-    "004": {}
+    "004": {
+      "0": {
+        "decay-data": [
+          {
+            "x4_code": "(54-XE-133-G,5.27D)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(36-KR-85-G,10.8YR)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table XIII, page 54 of R,BNL-1652,1953."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

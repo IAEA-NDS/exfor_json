@@ -1,7 +1,7 @@
 {
   "entry": "41118",
-  "last_updated": "2020-01-13",
-  "number_of_revisions": "5",
+  "last_updated": "2023-04-19",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19930618C)",
@@ -36,10 +36,16 @@
         " Minor correction in YK ref.",
         " INDC-CCP-169 , INDC-CCP-235 were added."
       ]
+    },
+    {
+      "x4_code": "(20221205A)",
+      "free_txt": [
+        " Subents 034-046 were added."
+      ]
     }
   ],
   "bib_record": {
-    "title": " Investigation of the reactions (n,p) and (n,n'p) on Al-27, Si-28, Cr-50, Fe-54, Fe-56, Ni-58 and Ni at 14.1 MeV neutron energy",
+    "title": " Investigation of the reactions (n,p) and (n,n'p) on 27Al, 28Si, 50Cr, 54Fe, 56Fe, 58Ni and Ni at 14.1 MeV neutron energy",
     "authors": [
       {
         "name": "L.I.Klochkova"
@@ -67,19 +73,11 @@
         "pointer": "0"
       },
       {
-        "x4_code": "(R,INDC(CCP)-376,1994)",
-        "free_txt": [
-          " Engl.transl.of YK,,(1),27,1992"
-        ],
-        "publication_year": "1994",
-        "pointer": "0"
-      },
-      {
         "x4_code": "((C,83KIEV,4,381,1983)=(R,INDC(CCP)-235,(4),381,1984))",
         "free_txt": [
-          "Vol. IV",
+          "Vol. IV.",
           "Details of analysis.",
-          "  Fe-54, Cr-50 spectra on figures."
+          "  Fe-54, Cr-50 DA/DE spectra on figures."
         ],
         "publication_year": "1984",
         "pointer": "0"
@@ -87,9 +85,9 @@
       {
         "x4_code": "((C,83KIEV,4,381,1983)=(R,INDC(CCP)-235,(4),381,1984))",
         "free_txt": [
-          "Vol. IV",
+          "Vol. IV.",
           "Details of analysis.",
-          "  Fe-54, Cr-50 spectra on figures."
+          "  Fe-54, Cr-50 DA/DE spectra on figures."
         ],
         "publication_year": "1984",
         "pointer": "0"
@@ -97,12 +95,12 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG,4RUSTIL)",
+        "x4_code": "(NGEN,4RUSTIL)",
         "free_txt": [
           " NG-200"
         ],
         "pointer": "0",
-        "facility_type": "(VDG)",
+        "facility_type": "(NGEN)",
         "institute": "(4RUSTIL)"
       }
     ]
@@ -110,7 +108,7 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(13-AL-27(N,P)12-MG-27,,SIG)",
+        "x4_code": "(13-AL-27(N,P)12-MG-27,,SIG,,,DERIV)",
         "children": [
           {
             "code": [
@@ -118,18 +116,18 @@
               [
                 "N,P"
               ],
-              "12-MG-27,,SIG"
+              "12-MG-27,,SIG,,,DERIV"
             ],
             "type": null,
             "target": "13-AL-27",
             "process": "N,P",
-            "sf49": "12-MG-27,,SIG",
+            "sf49": "12-MG-27,,SIG,,,DERIV",
             "sf4": "12-MG-27",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -138,7 +136,7 @@
     },
     "003": {
       "0": {
-        "x4_code": "(13-AL-27(N,N+P)12-MG-26,,SIG)",
+        "x4_code": "(13-AL-27(N,N+P)12-MG-26,,SIG,,,DERIV)",
         "children": [
           {
             "code": [
@@ -146,18 +144,18 @@
               [
                 "N,N+P"
               ],
-              "12-MG-26,,SIG"
+              "12-MG-26,,SIG,,,DERIV"
             ],
             "type": null,
             "target": "13-AL-27",
             "process": "N,N+P",
-            "sf49": "12-MG-26,,SIG",
+            "sf49": "12-MG-26,,SIG,,,DERIV",
             "sf4": "12-MG-26",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -166,40 +164,21 @@
     },
     "004": {
       "0": {
-        "x4_code": "((13-AL-27(N,P)12-MG-27,,SIG)+(13-AL-27(N,N+P)12-MG-26,,SIG))",
+        "x4_code": "(13-AL-27(N,X)1-H-1,,SIG)",
         "children": [
           {
             "code": [
               "13-AL-27",
               [
-                "N,P"
+                "N,X"
               ],
-              "12-MG-27,,SIG"
+              "1-H-1,,SIG"
             ],
             "type": null,
             "target": "13-AL-27",
-            "process": "N,P",
-            "sf49": "12-MG-27,,SIG",
-            "sf4": "12-MG-27",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": [
-              "13-AL-27",
-              [
-                "N,N+P"
-              ],
-              "12-MG-26,,SIG"
-            ],
-            "type": null,
-            "target": "13-AL-27",
-            "process": "N,N+P",
-            "sf49": "12-MG-26,,SIG",
-            "sf4": "12-MG-26",
+            "process": "N,X",
+            "sf49": "1-H-1,,SIG",
+            "sf4": "1-H-1",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
@@ -207,7 +186,7 @@
             "sf9": null
           }
         ],
-        "type": "+",
+        "type": null,
         "free_text": ""
       }
     },
@@ -241,7 +220,7 @@
     },
     "006": {
       "0": {
-        "x4_code": "(24-CR-50(N,P)23-V-50,,SIG)",
+        "x4_code": "(24-CR-50(N,P)23-V-50,,SIG,,,DERIV)",
         "children": [
           {
             "code": [
@@ -249,18 +228,18 @@
               [
                 "N,P"
               ],
-              "23-V-50,,SIG"
+              "23-V-50,,SIG,,,DERIV"
             ],
             "type": null,
             "target": "24-CR-50",
             "process": "N,P",
-            "sf49": "23-V-50,,SIG",
+            "sf49": "23-V-50,,SIG,,,DERIV",
             "sf4": "23-V-50",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -269,7 +248,7 @@
     },
     "007": {
       "0": {
-        "x4_code": "(24-CR-50(N,N+P)23-V-49,,SIG)",
+        "x4_code": "(24-CR-50(N,N+P)23-V-49,,SIG,,,DERIV)",
         "children": [
           {
             "code": [
@@ -277,18 +256,18 @@
               [
                 "N,N+P"
               ],
-              "23-V-49,,SIG"
+              "23-V-49,,SIG,,,DERIV"
             ],
             "type": null,
             "target": "24-CR-50",
             "process": "N,N+P",
-            "sf49": "23-V-49,,SIG",
+            "sf49": "23-V-49,,SIG,,,DERIV",
             "sf4": "23-V-49",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -297,40 +276,21 @@
     },
     "008": {
       "0": {
-        "x4_code": "((24-CR-50(N,P)23-V-50,,SIG)+(24-CR-50(N,N+P)23-V-49,,SIG))",
+        "x4_code": "(24-CR-50(N,X)1-H-1,,SIG)",
         "children": [
           {
             "code": [
               "24-CR-50",
               [
-                "N,P"
+                "N,X"
               ],
-              "23-V-50,,SIG"
+              "1-H-1,,SIG"
             ],
             "type": null,
             "target": "24-CR-50",
-            "process": "N,P",
-            "sf49": "23-V-50,,SIG",
-            "sf4": "23-V-50",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": [
-              "24-CR-50",
-              [
-                "N,N+P"
-              ],
-              "23-V-49,,SIG"
-            ],
-            "type": null,
-            "target": "24-CR-50",
-            "process": "N,N+P",
-            "sf49": "23-V-49,,SIG",
-            "sf4": "23-V-49",
+            "process": "N,X",
+            "sf49": "1-H-1,,SIG",
+            "sf4": "1-H-1",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
@@ -338,13 +298,13 @@
             "sf9": null
           }
         ],
-        "type": "+",
+        "type": null,
         "free_text": ""
       }
     },
     "009": {
       "0": {
-        "x4_code": "(26-FE-54(N,P)25-MN-54,,SIG)",
+        "x4_code": "(26-FE-54(N,P)25-MN-54,,SIG,,,DERIV)",
         "children": [
           {
             "code": [
@@ -352,18 +312,18 @@
               [
                 "N,P"
               ],
-              "25-MN-54,,SIG"
+              "25-MN-54,,SIG,,,DERIV"
             ],
             "type": null,
             "target": "26-FE-54",
             "process": "N,P",
-            "sf49": "25-MN-54,,SIG",
+            "sf49": "25-MN-54,,SIG,,,DERIV",
             "sf4": "25-MN-54",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -372,7 +332,7 @@
     },
     "010": {
       "0": {
-        "x4_code": "(26-FE-54(N,N+P)25-MN-53,,SIG)",
+        "x4_code": "(26-FE-54(N,N+P)25-MN-53,,SIG,,,DERIV)",
         "children": [
           {
             "code": [
@@ -380,18 +340,18 @@
               [
                 "N,N+P"
               ],
-              "25-MN-53,,SIG"
+              "25-MN-53,,SIG,,,DERIV"
             ],
             "type": null,
             "target": "26-FE-54",
             "process": "N,N+P",
-            "sf49": "25-MN-53,,SIG",
+            "sf49": "25-MN-53,,SIG,,,DERIV",
             "sf4": "25-MN-53",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -400,40 +360,21 @@
     },
     "011": {
       "0": {
-        "x4_code": "((26-FE-54(N,P)25-MN-54,,SIG)+(26-FE-54(N,N+P)25-MN-53,,SIG))",
+        "x4_code": "(26-FE-54(N,X)1-H-1,,SIG)",
         "children": [
           {
             "code": [
               "26-FE-54",
               [
-                "N,P"
+                "N,X"
               ],
-              "25-MN-54,,SIG"
+              "1-H-1,,SIG"
             ],
             "type": null,
             "target": "26-FE-54",
-            "process": "N,P",
-            "sf49": "25-MN-54,,SIG",
-            "sf4": "25-MN-54",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": [
-              "26-FE-54",
-              [
-                "N,N+P"
-              ],
-              "25-MN-53,,SIG"
-            ],
-            "type": null,
-            "target": "26-FE-54",
-            "process": "N,N+P",
-            "sf49": "25-MN-53,,SIG",
-            "sf4": "25-MN-53",
+            "process": "N,X",
+            "sf49": "1-H-1,,SIG",
+            "sf4": "1-H-1",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
@@ -441,13 +382,13 @@
             "sf9": null
           }
         ],
-        "type": "+",
+        "type": null,
         "free_text": ""
       }
     },
     "012": {
       "0": {
-        "x4_code": "(26-FE-56(N,P)25-MN-56,,SIG)",
+        "x4_code": "(26-FE-56(N,P)25-MN-56,,SIG,,,DERIV)",
         "children": [
           {
             "code": [
@@ -455,18 +396,18 @@
               [
                 "N,P"
               ],
-              "25-MN-56,,SIG"
+              "25-MN-56,,SIG,,,DERIV"
             ],
             "type": null,
             "target": "26-FE-56",
             "process": "N,P",
-            "sf49": "25-MN-56,,SIG",
+            "sf49": "25-MN-56,,SIG,,,DERIV",
             "sf4": "25-MN-56",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -475,7 +416,7 @@
     },
     "013": {
       "0": {
-        "x4_code": "(26-FE-56(N,N+P)25-MN-55,,SIG)",
+        "x4_code": "(26-FE-56(N,N+P)25-MN-55,,SIG,,,DERIV)",
         "children": [
           {
             "code": [
@@ -483,18 +424,18 @@
               [
                 "N,N+P"
               ],
-              "25-MN-55,,SIG"
+              "25-MN-55,,SIG,,,DERIV"
             ],
             "type": null,
             "target": "26-FE-56",
             "process": "N,N+P",
-            "sf49": "25-MN-55,,SIG",
+            "sf49": "25-MN-55,,SIG,,,DERIV",
             "sf4": "25-MN-55",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -503,40 +444,21 @@
     },
     "014": {
       "0": {
-        "x4_code": "((26-FE-56(N,P)25-MN-56,,SIG)+(26-FE-56(N,N+P)25-MN-55,,SIG))",
+        "x4_code": "(26-FE-56(N,X)1-H-1,,SIG)",
         "children": [
           {
             "code": [
               "26-FE-56",
               [
-                "N,P"
+                "N,X"
               ],
-              "25-MN-56,,SIG"
+              "1-H-1,,SIG"
             ],
             "type": null,
             "target": "26-FE-56",
-            "process": "N,P",
-            "sf49": "25-MN-56,,SIG",
-            "sf4": "25-MN-56",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": [
-              "26-FE-56",
-              [
-                "N,N+P"
-              ],
-              "25-MN-55,,SIG"
-            ],
-            "type": null,
-            "target": "26-FE-56",
-            "process": "N,N+P",
-            "sf49": "25-MN-55,,SIG",
-            "sf4": "25-MN-55",
+            "process": "N,X",
+            "sf49": "1-H-1,,SIG",
+            "sf4": "1-H-1",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
@@ -544,13 +466,13 @@
             "sf9": null
           }
         ],
-        "type": "+",
+        "type": null,
         "free_text": ""
       }
     },
     "015": {
       "0": {
-        "x4_code": "(28-NI-58(N,P)27-CO-58,,SIG)",
+        "x4_code": "(28-NI-58(N,P)27-CO-58,,SIG,,,DERIV)",
         "children": [
           {
             "code": [
@@ -558,18 +480,18 @@
               [
                 "N,P"
               ],
-              "27-CO-58,,SIG"
+              "27-CO-58,,SIG,,,DERIV"
             ],
             "type": null,
             "target": "28-NI-58",
             "process": "N,P",
-            "sf49": "27-CO-58,,SIG",
+            "sf49": "27-CO-58,,SIG,,,DERIV",
             "sf4": "27-CO-58",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -578,7 +500,7 @@
     },
     "016": {
       "0": {
-        "x4_code": "(28-NI-58(N,N+P)27-CO-57,,SIG)",
+        "x4_code": "(28-NI-58(N,N+P)27-CO-57,,SIG,,,DERIV)",
         "children": [
           {
             "code": [
@@ -586,18 +508,18 @@
               [
                 "N,N+P"
               ],
-              "27-CO-57,,SIG"
+              "27-CO-57,,SIG,,,DERIV"
             ],
             "type": null,
             "target": "28-NI-58",
             "process": "N,N+P",
-            "sf49": "27-CO-57,,SIG",
+            "sf49": "27-CO-57,,SIG,,,DERIV",
             "sf4": "27-CO-57",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -606,40 +528,21 @@
     },
     "017": {
       "0": {
-        "x4_code": "((28-NI-58(N,P)27-CO-58,,SIG)+(28-NI-58(N,N+P)27-CO-57,,SIG))",
+        "x4_code": "(28-NI-58(N,X)1-H-1,,SIG)",
         "children": [
           {
             "code": [
               "28-NI-58",
               [
-                "N,P"
+                "N,X"
               ],
-              "27-CO-58,,SIG"
+              "1-H-1,,SIG"
             ],
             "type": null,
             "target": "28-NI-58",
-            "process": "N,P",
-            "sf49": "27-CO-58,,SIG",
-            "sf4": "27-CO-58",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": [
-              "28-NI-58",
-              [
-                "N,N+P"
-              ],
-              "27-CO-57,,SIG"
-            ],
-            "type": null,
-            "target": "28-NI-58",
-            "process": "N,N+P",
-            "sf49": "27-CO-57,,SIG",
-            "sf4": "27-CO-57",
+            "process": "N,X",
+            "sf49": "1-H-1,,SIG",
+            "sf4": "1-H-1",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
@@ -647,13 +550,13 @@
             "sf9": null
           }
         ],
-        "type": "+",
+        "type": null,
         "free_text": ""
       }
     },
     "018": {
       "0": {
-        "x4_code": "(28-NI-0(N,P),,SIG)",
+        "x4_code": "(28-NI-0(N,P),,SIG,,,DERIV)",
         "children": [
           {
             "code": [
@@ -661,18 +564,18 @@
               [
                 "N,P"
               ],
-              ",,SIG"
+              ",,SIG,,,DERIV"
             ],
             "type": null,
             "target": "28-NI-0",
             "process": "N,P",
-            "sf49": ",,SIG",
+            "sf49": ",,SIG,,,DERIV",
             "sf4": null,
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -681,7 +584,7 @@
     },
     "019": {
       "0": {
-        "x4_code": "(28-NI-0(N,N+P),,SIG)",
+        "x4_code": "(28-NI-0(N,N+P),,SIG,,,DERIV)",
         "children": [
           {
             "code": [
@@ -689,18 +592,18 @@
               [
                 "N,N+P"
               ],
-              ",,SIG"
+              ",,SIG,,,DERIV"
             ],
             "type": null,
             "target": "28-NI-0",
             "process": "N,N+P",
-            "sf49": ",,SIG",
+            "sf49": ",,SIG,,,DERIV",
             "sf4": null,
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -709,40 +612,21 @@
     },
     "020": {
       "0": {
-        "x4_code": "((28-NI-0(N,P),,SIG)+(28-NI-0(N,N+P),,SIG))",
+        "x4_code": "(28-NI-0(N,X)1-H-1,,SIG)",
         "children": [
           {
             "code": [
               "28-NI-0",
               [
-                "N,P"
+                "N,X"
               ],
-              ",,SIG"
+              "1-H-1,,SIG"
             ],
             "type": null,
             "target": "28-NI-0",
-            "process": "N,P",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": [
-              "28-NI-0",
-              [
-                "N,N+P"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "28-NI-0",
-            "process": "N,N+P",
-            "sf49": ",,SIG",
-            "sf4": null,
+            "process": "N,X",
+            "sf49": "1-H-1,,SIG",
+            "sf4": "1-H-1",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
@@ -750,7 +634,7 @@
             "sf9": null
           }
         ],
-        "type": "+",
+        "type": null,
         "free_text": ""
       }
     },
@@ -1084,6 +968,370 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "034": {
+      "0": {
+        "x4_code": "(24-CR-50(N,X)1-H-1,,DA/DE)",
+        "children": [
+          {
+            "code": [
+              "24-CR-50",
+              [
+                "N,X"
+              ],
+              "1-H-1,,DA/DE"
+            ],
+            "type": null,
+            "target": "24-CR-50",
+            "process": "N,X",
+            "sf49": "1-H-1,,DA/DE",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DA/DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  (n,p)+(n,np)"
+      }
+    },
+    "035": {
+      "0": {
+        "x4_code": "(26-FE-54(N,X)1-H-1,,DA/DE)",
+        "children": [
+          {
+            "code": [
+              "26-FE-54",
+              [
+                "N,X"
+              ],
+              "1-H-1,,DA/DE"
+            ],
+            "type": null,
+            "target": "26-FE-54",
+            "process": "N,X",
+            "sf49": "1-H-1,,DA/DE",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DA/DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  (n,p)+(n,np)"
+      }
+    },
+    "036": {
+      "0": {
+        "x4_code": "(14-SI-28(N,X)1-H-1,,DA/DE)",
+        "children": [
+          {
+            "code": [
+              "14-SI-28",
+              [
+                "N,X"
+              ],
+              "1-H-1,,DA/DE"
+            ],
+            "type": null,
+            "target": "14-SI-28",
+            "process": "N,X",
+            "sf49": "1-H-1,,DA/DE",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DA/DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  (n,p)+(n,np)"
+      }
+    },
+    "037": {
+      "0": {
+        "x4_code": "(28-NI-58(N,X)1-H-1,,DA/DE)",
+        "children": [
+          {
+            "code": [
+              "28-NI-58",
+              [
+                "N,X"
+              ],
+              "1-H-1,,DA/DE"
+            ],
+            "type": null,
+            "target": "28-NI-58",
+            "process": "N,X",
+            "sf49": "1-H-1,,DA/DE",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DA/DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  (n,p)+(n,np)"
+      }
+    },
+    "038": {
+      "0": {
+        "x4_code": "(28-NI-0(N,X)1-H-1,,DA/DE)",
+        "children": [
+          {
+            "code": [
+              "28-NI-0",
+              [
+                "N,X"
+              ],
+              "1-H-1,,DA/DE"
+            ],
+            "type": null,
+            "target": "28-NI-0",
+            "process": "N,X",
+            "sf49": "1-H-1,,DA/DE",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DA/DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  (n,p)+(n,np)"
+      }
+    },
+    "039": {
+      "0": {
+        "x4_code": "(13-AL-27(N,X)1-H-1,,DE)",
+        "children": [
+          {
+            "code": [
+              "13-AL-27",
+              [
+                "N,X"
+              ],
+              "1-H-1,,DE"
+            ],
+            "type": null,
+            "target": "13-AL-27",
+            "process": "N,X",
+            "sf49": "1-H-1,,DE",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  (n,p)+(n,np)"
+      }
+    },
+    "040": {
+      "0": {
+        "x4_code": "(24-CR-50(N,X)1-H-1,,DE)",
+        "children": [
+          {
+            "code": [
+              "24-CR-50",
+              [
+                "N,X"
+              ],
+              "1-H-1,,DE"
+            ],
+            "type": null,
+            "target": "24-CR-50",
+            "process": "N,X",
+            "sf49": "1-H-1,,DE",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  (n,p)+(n,np)"
+      }
+    },
+    "041": {
+      "0": {
+        "x4_code": "(26-FE-54(N,X)1-H-1,,DE)",
+        "children": [
+          {
+            "code": [
+              "26-FE-54",
+              [
+                "N,X"
+              ],
+              "1-H-1,,DE"
+            ],
+            "type": null,
+            "target": "26-FE-54",
+            "process": "N,X",
+            "sf49": "1-H-1,,DE",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  (n,p)+(n,np)"
+      }
+    },
+    "042": {
+      "0": {
+        "x4_code": "(26-FE-56(N,X)1-H-1,,DE)",
+        "children": [
+          {
+            "code": [
+              "26-FE-56",
+              [
+                "N,X"
+              ],
+              "1-H-1,,DE"
+            ],
+            "type": null,
+            "target": "26-FE-56",
+            "process": "N,X",
+            "sf49": "1-H-1,,DE",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "DE",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "  (n,p)+(n,np)"
+      }
+    },
+    "043": {
+      "0": {
+        "x4_code": "(13-AL-27(N,P)12-MG-27,,DA,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "13-AL-27",
+              [
+                "N,P"
+              ],
+              "12-MG-27,,DA,,,DERIV"
+            ],
+            "type": null,
+            "target": "13-AL-27",
+            "process": "N,P",
+            "sf49": "12-MG-27,,DA,,,DERIV",
+            "sf4": "12-MG-27",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "044": {
+      "0": {
+        "x4_code": "(24-CR-50(N,P)23-V-50,,DA,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "24-CR-50",
+              [
+                "N,P"
+              ],
+              "23-V-50,,DA,,,DERIV"
+            ],
+            "type": null,
+            "target": "24-CR-50",
+            "process": "N,P",
+            "sf49": "23-V-50,,DA,,,DERIV",
+            "sf4": "23-V-50",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "045": {
+      "0": {
+        "x4_code": "(26-FE-54(N,P)25-MN-54,,DA,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "26-FE-54",
+              [
+                "N,P"
+              ],
+              "25-MN-54,,DA,,,DERIV"
+            ],
+            "type": null,
+            "target": "26-FE-54",
+            "process": "N,P",
+            "sf49": "25-MN-54,,DA,,,DERIV",
+            "sf4": "25-MN-54",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "type": null,
+        "free_text": ""
+      }
+    },
+    "046": {
+      "0": {
+        "x4_code": "(26-FE-56(N,P)25-MN-56,,DA,,,DERIV)",
+        "children": [
+          {
+            "code": [
+              "26-FE-56",
+              [
+                "N,P"
+              ],
+              "25-MN-56,,DA,,,DERIV"
+            ],
+            "type": null,
+            "target": "26-FE-56",
+            "process": "N,P",
+            "sf49": "25-MN-56,,DA,,,DERIV",
+            "sf4": "25-MN-56",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -1840,11 +2088,2022 @@
           ]
         ]
       }
+    },
+    "034": {
+      "common": {
+        "heads": [
+          "EN",
+          "E-ERR-DIG",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "MEV",
+          "MB/SR/MEV"
+        ],
+        "data": [
+          [
+            14.1
+          ],
+          [
+            0.026
+          ],
+          [
+            0.022
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "ANG-CM",
+          "E-CM",
+          "DATA-CM"
+        ],
+        "units": [
+          "ADEG",
+          "MEV",
+          "MB/SR/MEV"
+        ],
+        "data": [
+          [
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0
+          ],
+          [
+            2.67,
+            2.853,
+            3.173,
+            3.371,
+            3.691,
+            3.92,
+            4.179,
+            4.436,
+            4.754,
+            4.94,
+            5.247,
+            5.541,
+            5.743,
+            5.977,
+            6.274,
+            6.534,
+            6.758,
+            7.051,
+            7.26,
+            7.499,
+            7.763,
+            7.997,
+            8.256,
+            8.548,
+            8.817,
+            9.044,
+            9.274,
+            9.509,
+            10.27,
+            10.798,
+            11.003,
+            11.237,
+            11.501,
+            11.769,
+            12.001,
+            12.262,
+            12.498,
+            12.789,
+            13.024,
+            13.523,
+            13.787,
+            14.022,
+            2.788,
+            2.996,
+            3.252,
+            3.49,
+            3.718,
+            3.951,
+            4.273,
+            4.472,
+            4.792,
+            5.266,
+            5.528,
+            5.761,
+            5.944,
+            6.234,
+            6.501,
+            6.734,
+            7.025,
+            7.292,
+            7.5,
+            7.792,
+            7.999,
+            8.263,
+            8.501,
+            8.737,
+            8.968,
+            9.205,
+            9.467,
+            9.705,
+            9.971,
+            10.204,
+            10.441,
+            10.734,
+            10.969,
+            11.237,
+            11.502,
+            11.71,
+            11.945,
+            12.21,
+            12.415,
+            12.71,
+            12.946,
+            13.212,
+            13.448,
+            13.684
+          ],
+          [
+            9.745,
+            10.674,
+            10.251,
+            9.289,
+            8.806,
+            8.083,
+            7.42,
+            6.397,
+            5.794,
+            6.964,
+            4.949,
+            4.977,
+            4.495,
+            4.343,
+            4.791,
+            4.248,
+            2.835,
+            2.682,
+            3.161,
+            3.64,
+            3.668,
+            3.425,
+            2.763,
+            2.55,
+            3.119,
+            2.186,
+            1.433,
+            1.521,
+            1.185,
+            0.97,
+            0.969,
+            0.847,
+            0.754,
+            1.173,
+            0.84,
+            0.448,
+            0.506,
+            0.173,
+            0.111,
+            0.077,
+            0.075,
+            0.073,
+            12.386,
+            12.596,
+            10.366,
+            10.968,
+            9.129,
+            8.285,
+            7.681,
+            6.114,
+            4.968,
+            5.478,
+            4.663,
+            3.759,
+            5.083,
+            3.937,
+            4.297,
+            3.573,
+            2.578,
+            2.968,
+            3.208,
+            2.484,
+            2.784,
+            2.331,
+            2.722,
+            2.811,
+            1.515,
+            1.634,
+            1.031,
+            1.421,
+            1.39,
+            0.726,
+            0.845,
+            0.332,
+            0.271,
+            0.751,
+            0.539,
+            0.9,
+            0.718,
+            0.506,
+            0.144,
+            0.052,
+            0.081,
+            0.08,
+            0.079,
+            0.078
+          ]
+        ]
+      }
+    },
+    "035": {
+      "common": {
+        "heads": [
+          "EN",
+          "E-ERR-DIG",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "MEV",
+          "MB/SR/MEV"
+        ],
+        "data": [
+          [
+            14.1
+          ],
+          [
+            0.021
+          ],
+          [
+            0.051
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "ANG-CM",
+          "E-CM",
+          "DATA-CM"
+        ],
+        "units": [
+          "ADEG",
+          "MEV",
+          "MB/SR/MEV"
+        ],
+        "data": [
+          [
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            40.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0
+          ],
+          [
+            2.873,
+            3.056,
+            3.355,
+            3.557,
+            3.788,
+            4.078,
+            4.337,
+            4.565,
+            4.792,
+            4.995,
+            5.05,
+            5.284,
+            5.545,
+            5.777,
+            6.039,
+            6.301,
+            6.503,
+            6.765,
+            6.997,
+            7.23,
+            7.491,
+            7.782,
+            8.015,
+            8.248,
+            8.479,
+            8.714,
+            9.005,
+            9.237,
+            9.471,
+            9.704,
+            9.966,
+            10.258,
+            10.491,
+            10.724,
+            11.016,
+            11.279,
+            11.512,
+            11.746,
+            11.98,
+            12.214,
+            12.476,
+            12.739,
+            13.002,
+            13.236,
+            13.44,
+            13.703,
+            13.936,
+            2.995,
+            3.289,
+            3.496,
+            3.761,
+            3.966,
+            4.261,
+            4.494,
+            4.727,
+            4.963,
+            5.051,
+            5.229,
+            5.464,
+            5.73,
+            5.965,
+            6.201,
+            6.467,
+            6.732,
+            6.938,
+            7.233,
+            7.498,
+            7.705,
+            7.97,
+            8.236,
+            8.472,
+            8.708,
+            8.974,
+            9.24,
+            9.477,
+            9.742,
+            9.978,
+            10.214,
+            10.48,
+            10.717,
+            11.012,
+            11.249,
+            11.544,
+            11.751,
+            11.988,
+            12.254,
+            12.49,
+            12.727,
+            12.993,
+            13.259,
+            13.407,
+            13.702,
+            13.998
+          ],
+          [
+            13.988,
+            16.576,
+            18.861,
+            17.835,
+            16.928,
+            16.202,
+            14.933,
+            13.003,
+            10.53,
+            10.106,
+            9.021,
+            9.078,
+            8.472,
+            7.867,
+            7.442,
+            6.957,
+            6.292,
+            5.807,
+            5.261,
+            5.018,
+            4.532,
+            4.047,
+            3.682,
+            3.318,
+            2.652,
+            2.891,
+            2.405,
+            1.98,
+            1.917,
+            1.673,
+            1.549,
+            1.486,
+            1.061,
+            0.817,
+            0.633,
+            0.69,
+            0.626,
+            0.623,
+            0.62,
+            0.618,
+            0.313,
+            0.31,
+            0.246,
+            0.364,
+            0.18,
+            0.117,
+            0.114,
+            17.502,
+            16.179,
+            16.357,
+            15.515,
+            14.193,
+            13.41,
+            11.607,
+            9.263,
+            8.901,
+            8.48,
+            8.299,
+            7.877,
+            7.395,
+            6.493,
+            6.371,
+            6.07,
+            5.527,
+            4.805,
+            4.323,
+            3.781,
+            3.539,
+            2.877,
+            2.695,
+            2.033,
+            1.732,
+            1.85,
+            2.088,
+            1.847,
+            1.485,
+            1.003,
+            0.761,
+            0.82,
+            0.758,
+            0.636,
+            0.635,
+            0.393,
+            0.451,
+            0.63,
+            0.448,
+            0.507,
+            0.325,
+            0.383,
+            0.622,
+            0.381,
+            0.259,
+            0.197
+          ]
+        ]
+      }
+    },
+    "036": {
+      "common": {
+        "heads": [
+          "EN",
+          "ANG-CM",
+          "E-ERR-DIG",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "ADEG",
+          "MEV",
+          "MB/SR/MEV"
+        ],
+        "data": [
+          [
+            14.1
+          ],
+          [
+            80.0
+          ],
+          [
+            0.011
+          ],
+          [
+            0.0051
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "E-CM",
+          "DATA-CM"
+        ],
+        "units": [
+          "MEV",
+          "MB/SR/MEV"
+        ],
+        "data": [
+          [
+            2.484,
+            2.722,
+            2.941,
+            3.259,
+            3.471,
+            3.74,
+            3.909,
+            4.223,
+            4.455,
+            4.714,
+            4.976,
+            5.249,
+            5.471,
+            5.732,
+            5.989,
+            6.254,
+            6.441,
+            6.712,
+            6.935,
+            7.196,
+            7.501,
+            7.679,
+            7.95,
+            8.174,
+            8.482,
+            8.659,
+            8.927,
+            9.149,
+            9.453,
+            9.628,
+            9.898,
+            10.255,
+            10.477,
+            10.653,
+            11.181,
+            11.401,
+            11.62,
+            11.93,
+            12.107,
+            12.46,
+            12.813,
+            13.21,
+            13.651,
+            13.915
+          ],
+          [
+            1.652,
+            5.225,
+            5.439,
+            4.195,
+            5.279,
+            4.764,
+            5.76,
+            4.943,
+            3.396,
+            4.179,
+            4.57,
+            3.415,
+            3.184,
+            3.7,
+            4.749,
+            4.643,
+            3.185,
+            2.208,
+            1.942,
+            2.369,
+            2.902,
+            2.671,
+            1.765,
+            1.25,
+            1.464,
+            1.375,
+            0.789,
+            0.575,
+            1.322,
+            1.447,
+            0.701,
+            0.043,
+            -0.045,
+            -0.098,
+            0.062,
+            0.205,
+            0.294,
+            0.117,
+            0.01,
+            0.064,
+            0.029,
+            0.0,
+            0.03,
+            0.012
+          ]
+        ]
+      }
+    },
+    "037": {
+      "common": {
+        "heads": [
+          "EN",
+          "ANG-CM",
+          "E-ERR-DIG",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "ADEG",
+          "MEV",
+          "MB/SR/MEV"
+        ],
+        "data": [
+          [
+            14.1
+          ],
+          [
+            80.0
+          ],
+          [
+            0.041
+          ],
+          [
+            0.023
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "E-CM",
+          "DATA-CM"
+        ],
+        "units": [
+          "MEV",
+          "MB/SR/MEV"
+        ],
+        "data": [
+          [
+            2.768,
+            3.017,
+            3.239,
+            3.489,
+            3.795,
+            4.239,
+            4.535,
+            4.733,
+            5.025,
+            5.207,
+            5.506,
+            5.744,
+            5.987,
+            6.229,
+            6.473,
+            6.724,
+            7.016,
+            7.26,
+            7.506,
+            7.75,
+            7.997,
+            8.242,
+            8.538,
+            8.785,
+            8.981,
+            9.277,
+            9.524,
+            9.771,
+            10.019,
+            10.268,
+            10.515,
+            10.762,
+            11.01,
+            11.26,
+            11.558,
+            11.755,
+            12.051,
+            12.3,
+            12.499,
+            12.747,
+            12.995,
+            13.243,
+            13.542,
+            13.791,
+            14.091,
+            14.388,
+            14.586,
+            14.785,
+            15.033
+          ],
+          [
+            3.948,
+            12.247,
+            16.175,
+            16.419,
+            17.596,
+            17.053,
+            16.56,
+            16.461,
+            15.28,
+            12.48,
+            12.625,
+            10.758,
+            9.872,
+            8.692,
+            7.806,
+            8.198,
+            7.116,
+            6.377,
+            5.885,
+            5.196,
+            4.752,
+            4.211,
+            3.816,
+            3.569,
+            2.929,
+            2.535,
+            2.288,
+            2.041,
+            1.941,
+            1.841,
+            1.643,
+            1.347,
+            1.198,
+            1.344,
+            1.343,
+            0.948,
+            0.554,
+            0.602,
+            0.649,
+            0.501,
+            0.401,
+            0.301,
+            0.25,
+            0.396,
+            0.542,
+            0.393,
+            0.244,
+            0.145,
+            0.144
+          ]
+        ]
+      }
+    },
+    "038": {
+      "common": {
+        "heads": [
+          "EN",
+          "ANG-CM",
+          "E-ERR-DIG",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "ADEG",
+          "MEV",
+          "MB/SR/MEV"
+        ],
+        "data": [
+          [
+            14.1
+          ],
+          [
+            80.0
+          ],
+          [
+            0.036
+          ],
+          [
+            0.027
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "E-CM",
+          "DATA-CM"
+        ],
+        "units": [
+          "MEV",
+          "MB/SR/MEV"
+        ],
+        "data": [
+          [
+            2.661,
+            2.924,
+            3.155,
+            3.454,
+            3.687,
+            3.921,
+            4.22,
+            4.419,
+            4.653,
+            4.886,
+            5.152,
+            5.451,
+            5.652,
+            5.951,
+            6.184,
+            6.45,
+            6.683,
+            6.982,
+            7.216,
+            7.449,
+            7.748,
+            7.914,
+            8.213,
+            8.446,
+            8.712,
+            8.979,
+            9.178,
+            9.444,
+            9.711,
+            9.943,
+            10.243,
+            10.442,
+            10.741,
+            10.974,
+            11.24,
+            11.472,
+            11.705,
+            11.971,
+            12.237,
+            12.57,
+            12.769,
+            13.002,
+            13.301,
+            13.534,
+            13.8,
+            14.032,
+            14.265,
+            14.465,
+            14.697
+          ],
+          [
+            4.027,
+            10.406,
+            13.163,
+            13.329,
+            13.097,
+            11.602,
+            11.868,
+            12.333,
+            10.174,
+            9.476,
+            9.942,
+            8.845,
+            6.52,
+            6.487,
+            5.391,
+            5.125,
+            6.188,
+            5.889,
+            3.896,
+            3.132,
+            2.933,
+            2.734,
+            2.833,
+            2.734,
+            2.103,
+            1.837,
+            1.671,
+            0.94,
+            0.508,
+            0.708,
+            0.309,
+            0.143,
+            0.21,
+            0.343,
+            0.542,
+            0.609,
+            0.509,
+            0.31,
+            0.277,
+            0.244,
+            0.244,
+            0.178,
+            0.078,
+            0.078,
+            0.079,
+            0.245,
+            0.345,
+            0.179,
+            0.013
+          ]
+        ]
+      }
+    },
+    "039": {
+      "common": {
+        "heads": [
+          "EN",
+          "E-ERR-DIG",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "MEV",
+          "MB/MEV"
+        ],
+        "data": [
+          [
+            14.1
+          ],
+          [
+            0.017
+          ],
+          [
+            0.099
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "E-CM",
+          "DATA-CM",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB/MEV",
+          "MB/MEV"
+        ],
+        "data": [
+          [
+            2.985,
+            3.232,
+            3.502,
+            3.772,
+            3.997,
+            4.267,
+            4.491,
+            4.761,
+            5.008,
+            5.277,
+            5.479,
+            5.771,
+            5.995,
+            6.287,
+            6.489,
+            6.691,
+            6.759,
+            7.028,
+            7.23,
+            7.499,
+            7.723,
+            7.992,
+            8.238,
+            8.508,
+            8.755,
+            9.002,
+            9.249,
+            9.472,
+            9.741,
+            9.988,
+            10.212,
+            10.481,
+            10.75,
+            10.997,
+            11.244,
+            11.49,
+            11.737,
+            11.984
+          ],
+          [
+            31.257,
+            29.965,
+            25.732,
+            23.145,
+            19.029,
+            17.149,
+            16.68,
+            13.27,
+            11.625,
+            10.921,
+            10.217,
+            9.748,
+            9.044,
+            8.811,
+            7.283,
+            6.343,
+            4.462,
+            3.875,
+            3.641,
+            4.585,
+            5.88,
+            6.353,
+            6.002,
+            4.356,
+            2.358,
+            1.184,
+            0.95,
+            2.364,
+            3.307,
+            2.956,
+            2.016,
+            1.43,
+            1.549,
+            1.081,
+            1.318,
+            1.672,
+            1.674,
+            0.735
+          ],
+          [
+            2.353,
+            null,
+            null,
+            null,
+            1.882,
+            null,
+            null,
+            null,
+            1.059,
+            null,
+            null,
+            null,
+            1.294,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0.824,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0.824,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    },
+    "040": {
+      "common": {
+        "heads": [
+          "EN",
+          "E-ERR-DIG",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "MEV",
+          "MB/MEV"
+        ],
+        "data": [
+          [
+            14.1
+          ],
+          [
+            0.0089
+          ],
+          [
+            0.073
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "E-CM",
+          "DATA-CM",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB/MEV",
+          "MB/MEV"
+        ],
+        "data": [
+          [
+            2.856,
+            3.112,
+            3.336,
+            3.574,
+            3.841,
+            4.068,
+            4.33,
+            4.574,
+            4.772,
+            5.039,
+            5.321,
+            5.587,
+            5.784,
+            6.035,
+            6.264,
+            6.547,
+            6.778,
+            7.03,
+            7.298,
+            7.544,
+            7.791,
+            8.041,
+            8.291,
+            8.523,
+            8.772,
+            9.021,
+            9.268,
+            9.517,
+            9.769,
+            10.004,
+            10.272,
+            10.503,
+            10.753,
+            11.005,
+            11.24,
+            11.511,
+            11.728,
+            11.978,
+            12.227,
+            12.478,
+            12.748,
+            13.0,
+            13.234,
+            13.522,
+            13.738,
+            13.973
+          ],
+          [
+            59.317,
+            60.898,
+            56.302,
+            49.726,
+            47.845,
+            44.732,
+            40.626,
+            37.14,
+            36.749,
+            35.486,
+            32.614,
+            30.486,
+            29.848,
+            29.451,
+            27.079,
+            24.578,
+            23.072,
+            23.046,
+            22.03,
+            19.038,
+            16.665,
+            15.527,
+            14.389,
+            13.129,
+            11.868,
+            10.236,
+            7.862,
+            6.353,
+            6.328,
+            6.551,
+            5.658,
+            4.028,
+            3.137,
+            3.112,
+            3.212,
+            3.802,
+            3.78,
+            3.013,
+            1.504,
+            0.985,
+            0.71,
+            0.684,
+            0.537,
+            0.508,
+            0.486,
+            0.462
+          ],
+          [
+            null,
+            2.226,
+            null,
+            null,
+            null,
+            2.101,
+            null,
+            null,
+            null,
+            1.728,
+            null,
+            null,
+            null,
+            null,
+            1.483,
+            null,
+            null,
+            null,
+            1.485,
+            null,
+            null,
+            1.236,
+            null,
+            null,
+            null,
+            0.991,
+            null,
+            null,
+            null,
+            1.236,
+            null,
+            null,
+            null,
+            1.238,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    },
+    "041": {
+      "common": {
+        "heads": [
+          "EN",
+          "E-ERR-DIG",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "MEV",
+          "MB/MEV"
+        ],
+        "data": [
+          [
+            14.1
+          ],
+          [
+            0.017
+          ],
+          [
+            0.077
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "E-CM",
+          "DATA-CM",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB/MEV",
+          "MB/MEV"
+        ],
+        "data": [
+          [
+            2.812,
+            3.027,
+            3.273,
+            3.514,
+            3.777,
+            4.039,
+            4.282,
+            4.521,
+            4.795,
+            5.034,
+            5.276,
+            5.519,
+            5.761,
+            6.003,
+            6.265,
+            6.489,
+            6.732,
+            6.992,
+            7.254,
+            7.477,
+            7.72,
+            7.98,
+            8.204,
+            8.428,
+            8.69,
+            8.97,
+            9.213,
+            9.456,
+            9.7,
+            9.98,
+            10.204,
+            10.41,
+            10.71,
+            10.934,
+            11.196,
+            11.44,
+            11.721,
+            11.964,
+            12.208,
+            12.452,
+            12.714,
+            12.976,
+            13.22,
+            13.501,
+            13.726,
+            13.951
+          ],
+          [
+            60.726,
+            74.915,
+            77.348,
+            73.827,
+            73.358,
+            73.805,
+            72.421,
+            65.083,
+            53.316,
+            44.909,
+            42.609,
+            40.92,
+            37.704,
+            35.099,
+            34.63,
+            33.552,
+            31.405,
+            28.188,
+            26.04,
+            24.351,
+            21.899,
+            18.987,
+            16.993,
+            15.457,
+            13.615,
+            12.076,
+            11.303,
+            10.53,
+            9.604,
+            8.066,
+            7.14,
+            6.369,
+            5.593,
+            4.973,
+            4.199,
+            3.884,
+            3.414,
+            3.404,
+            3.394,
+            3.079,
+            2.763,
+            2.294,
+            2.131,
+            2.12,
+            1.805,
+            1.185
+          ],
+          [
+            null,
+            1.833,
+            null,
+            null,
+            null,
+            1.68,
+            null,
+            null,
+            null,
+            1.832,
+            null,
+            null,
+            null,
+            1.527,
+            null,
+            null,
+            null,
+            1.374,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    },
+    "042": {
+      "common": {
+        "heads": [
+          "EN",
+          "E-ERR-DIG",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "MEV",
+          "MB/MEV"
+        ],
+        "data": [
+          [
+            14.1
+          ],
+          [
+            0.013
+          ],
+          [
+            0.0082
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "E-CM",
+          "DATA-CM",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB/MEV",
+          "MB/MEV"
+        ],
+        "data": [
+          [
+            2.794,
+            3.011,
+            3.283,
+            3.534,
+            3.788,
+            4.025,
+            4.283,
+            4.55,
+            4.798,
+            5.045,
+            5.309,
+            5.555,
+            5.798,
+            6.033,
+            6.298,
+            6.556,
+            6.803,
+            7.049,
+            7.307,
+            7.527,
+            7.756,
+            8.014,
+            8.286,
+            8.525,
+            8.769,
+            9.008,
+            9.242,
+            9.499,
+            9.757,
+            9.987,
+            10.257,
+            10.514,
+            10.763,
+            10.997,
+            11.243,
+            11.502,
+            11.746,
+            11.989,
+            12.246,
+            12.492,
+            12.751
+          ],
+          [
+            1.814,
+            5.891,
+            5.932,
+            3.827,
+            4.234,
+            6.312,
+            6.316,
+            5.513,
+            6.508,
+            7.521,
+            7.03,
+            6.777,
+            6.836,
+            6.363,
+            5.634,
+            5.675,
+            5.33,
+            5.151,
+            5.155,
+            4.682,
+            3.309,
+            1.919,
+            1.96,
+            2.441,
+            2.354,
+            1.44,
+            1.04,
+            1.118,
+            1.104,
+            1.108,
+            1.277,
+            1.392,
+            0.901,
+            0.464,
+            0.23,
+            0.216,
+            0.201,
+            0.242,
+            0.338,
+            0.14,
+            0.071
+          ],
+          [
+            null,
+            1.358,
+            1.174,
+            null,
+            null,
+            1.248,
+            null,
+            null,
+            null,
+            1.082,
+            null,
+            null,
+            null,
+            1.028,
+            null,
+            null,
+            null,
+            0.715,
+            null,
+            null,
+            null,
+            0.569,
+            null,
+            null,
+            null,
+            0.569,
+            null,
+            null,
+            null,
+            0.716,
+            null,
+            null,
+            null,
+            0.477,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    },
+    "043": {
+      "common": {
+        "heads": [
+          "EN",
+          "ANG-ERR-D",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "ADEG",
+          "MB/SR"
+        ],
+        "data": [
+          [
+            14.1
+          ],
+          [
+            0.37
+          ],
+          [
+            0.036
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "ANG-CM",
+          "DATA-CM",
+          "DATA-ERR"
+        ],
+        "units": [
+          "ADEG",
+          "MB/SR",
+          "MB/SR"
+        ],
+        "data": [
+          [
+            9.42,
+            16.0,
+            32.43,
+            49.99,
+            61.6,
+            75.7,
+            90.28,
+            106.33,
+            121.85,
+            135.61
+          ],
+          [
+            11.211,
+            10.83,
+            9.751,
+            10.816,
+            8.604,
+            7.873,
+            7.299,
+            7.262,
+            6.53,
+            7.345
+          ],
+          [
+            2.461,
+            1.262,
+            1.388,
+            2.05,
+            1.766,
+            1.167,
+            0.694,
+            0.6,
+            0.599,
+            0.473
+          ]
+        ]
+      }
+    },
+    "044": {
+      "common": {
+        "heads": [
+          "EN",
+          "ANG-ERR-D",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "ADEG",
+          "MB/SR"
+        ],
+        "data": [
+          [
+            14.1
+          ],
+          [
+            0.27
+          ],
+          [
+            0.043
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "ANG-CM",
+          "DATA-CM",
+          "DATA-ERR"
+        ],
+        "units": [
+          "ADEG",
+          "MB/SR",
+          "MB/SR"
+        ],
+        "data": [
+          [
+            20.45,
+            42.09,
+            62.21,
+            81.98,
+            100.79,
+            121.44
+          ],
+          [
+            35.695,
+            34.328,
+            30.758,
+            29.866,
+            28.66,
+            26.507
+          ],
+          [
+            5.195,
+            2.52,
+            2.047,
+            1.417,
+            3.307,
+            4.094
+          ]
+        ]
+      }
+    },
+    "045": {
+      "common": {
+        "heads": [
+          "EN",
+          "ANG-ERR-D",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "ADEG",
+          "MB/SR"
+        ],
+        "data": [
+          [
+            14.1
+          ],
+          [
+            0.46
+          ],
+          [
+            0.15
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "ANG-CM",
+          "DATA-CM",
+          "DATA-ERR"
+        ],
+        "units": [
+          "ADEG",
+          "MB/SR",
+          "MB/SR"
+        ],
+        "data": [
+          [
+            8.14,
+            23.26,
+            42.68,
+            60.65,
+            80.96,
+            100.82,
+            120.16
+          ],
+          [
+            35.44,
+            35.45,
+            32.69,
+            31.71,
+            32.13,
+            30.95,
+            32.16
+          ],
+          [
+            1.19,
+            1.19,
+            1.19,
+            1.19,
+            1.09,
+            0.99,
+            1.39
+          ]
+        ]
+      }
+    },
+    "046": {
+      "common": {
+        "heads": [
+          "EN",
+          "ANG-ERR-D",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "ADEG",
+          "MB/SR"
+        ],
+        "data": [
+          [
+            14.1
+          ],
+          [
+            0.26
+          ],
+          [
+            0.016
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "ANG-CM",
+          "DATA-CM",
+          "DATA-ERR"
+        ],
+        "units": [
+          "ADEG",
+          "MB/SR",
+          "MB/SR"
+        ],
+        "data": [
+          [
+            5.43,
+            38.62,
+            60.0,
+            81.84
+          ],
+          [
+            13.108,
+            10.248,
+            11.556,
+            12.189
+          ],
+          [
+            2.341,
+            1.071,
+            0.952,
+            0.952
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
     "001": {
       "0": {
+        "correction": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Background was measured without sample."
+            ]
+          }
+        ],
         "comment": [
           {
             "x4_code": null,
@@ -1866,14 +4125,14 @@
             "free_txt": [
               " Error at the probability level 0.68.",
               "Sources of uncertainties are not mentioned;",
-              "probably statistical only - see Conclusions 2.(c) in",
+              "probably statistical only - see Conclusion 2.(c) in",
               "INDC(CCP)-376,1994 ."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDG,4RUSTIL)",
+            "x4_code": "(NGEN,4RUSTIL)",
             "free_txt": [
               " NG-200"
             ]
@@ -1943,7 +4202,16 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)",
+              "= Table of C,87KIEV,3,315,1987",
+              ". This Subent supersedes Subent 40699008."
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118043)",
+            "free_txt": [
+              " Angular distribution."
             ]
           }
         ]
@@ -1951,6 +4219,16 @@
     },
     "003": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED)",
+            "free_txt": [
+              " DE spectrum was approximated by sum of two",
+              "components - (n,p) and (n,np) and then each was",
+              "integrated."
+            ]
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
@@ -1964,7 +4242,10 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)",
+              "= Table of C,87KIEV,3,315,1987",
+              ". This Subent supersedes Subent 40699008."
             ]
           }
         ]
@@ -1972,6 +4253,12 @@
     },
     "004": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED)",
+            "free_txt": []
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
@@ -1985,7 +4272,16 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)",
+              "= Table of C,87KIEV,3,315,1987",
+              ". This Subent supersedes Subent 40699008."
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118039)",
+            "free_txt": [
+              " Energy spectrum"
             ]
           }
         ]
@@ -2014,7 +4310,14 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)"
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118036)",
+            "free_txt": [
+              " DA/DE at 80 deg angle"
             ]
           }
         ]
@@ -2044,7 +4347,16 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)",
+              "= Table of C,87KIEV,3,315,1987",
+              ". This Subent supersedes Subent 40699009."
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118044)",
+            "free_txt": [
+              " Angular distribution."
             ]
           }
         ]
@@ -2052,6 +4364,16 @@
     },
     "007": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED)",
+            "free_txt": [
+              " DE spectrum was approximated by sum of two",
+              "components - (n,p) and (n,np) and then each was",
+              "integrated."
+            ]
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
@@ -2065,7 +4387,16 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)",
+              "= Table of C,87KIEV,3,315,1987",
+              ". This Subent supersedes Subent 40699009."
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118040)",
+            "free_txt": [
+              " Energy spectrum"
             ]
           }
         ]
@@ -2073,6 +4404,12 @@
     },
     "008": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED)",
+            "free_txt": []
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
@@ -2086,7 +4423,16 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)",
+              "= Table of C,87KIEV,3,315,1987",
+              ". This Subent supersedes Subent 40699009."
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118040)",
+            "free_txt": [
+              " Energy spectrum"
             ]
           }
         ]
@@ -2116,7 +4462,16 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)",
+              "= Table of C,87KIEV,3,315,1987",
+              ". This Subent supersedes Subent 40699010."
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118045)",
+            "free_txt": [
+              " Angular distribution."
             ]
           }
         ]
@@ -2124,6 +4479,16 @@
     },
     "010": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED)",
+            "free_txt": [
+              " DE spectrum was approximated by sum of two",
+              "components - (n,p) and (n,np) and then each was",
+              "integrated."
+            ]
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
@@ -2137,7 +4502,16 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)",
+              "= Table of C,87KIEV,3,315,1987",
+              ". This Subent supersedes Subent 40699010."
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118041)",
+            "free_txt": [
+              " Energy spectrum."
             ]
           }
         ]
@@ -2145,6 +4519,12 @@
     },
     "011": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED)",
+            "free_txt": []
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
@@ -2158,7 +4538,16 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)",
+              "= Table of C,87KIEV,3,315,1987",
+              ". This Subent supersedes Subent 40699010."
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118041)",
+            "free_txt": [
+              " Energy spectrum"
             ]
           }
         ]
@@ -2188,7 +4577,15 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)",
+              "= Table of C,87KIEV,3,315,1987"
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118046)",
+            "free_txt": [
+              " Angular distribution."
             ]
           }
         ]
@@ -2196,6 +4593,16 @@
     },
     "013": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED)",
+            "free_txt": [
+              " DE spectrum was approximated by sum of two",
+              "components - (n,p) and (n,np) and then each was",
+              "integrated."
+            ]
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
@@ -2209,7 +4616,15 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)",
+              "= Table of C,87KIEV,3,315,1987"
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118042)",
+            "free_txt": [
+              " Energy spectrum."
             ]
           }
         ]
@@ -2217,6 +4632,12 @@
     },
     "014": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED)",
+            "free_txt": []
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
@@ -2230,7 +4651,15 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)",
+              "= Table of C,87KIEV,3,315,1987"
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118042)",
+            "free_txt": [
+              " Energy spectrum."
             ]
           }
         ]
@@ -2259,7 +4688,8 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)"
             ]
           }
         ]
@@ -2267,6 +4697,16 @@
     },
     "016": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED,INTAD)",
+            "free_txt": [
+              " DE spectrum was approximated by sum of tw",
+              "components - (n,p) and (n,np) and then each was",
+              "integrated."
+            ]
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
@@ -2280,7 +4720,14 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)"
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118037)",
+            "free_txt": [
+              " DA/DE"
             ]
           }
         ]
@@ -2288,6 +4735,12 @@
     },
     "017": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED,INTAD)",
+            "free_txt": []
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
@@ -2301,7 +4754,14 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)"
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118037)",
+            "free_txt": [
+              " DA/DE"
             ]
           }
         ]
@@ -2311,17 +4771,12 @@
       "0": {
         "analysis": [
           {
-            "x4_code": "(4PI1A)",
+            "x4_code": "(INTED,4PI1A)",
             "free_txt": [
-              "  4PI*SIG(80deg)"
-            ]
-          }
-        ],
-        "comment": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              " Residual nucleus is given arbitrarily"
+              "  4PI*SIG(80deg)",
+              "       Spectrum was approximated by sum of two",
+              "components - (n,p) and (n,np) and then each was",
+              "integrated."
             ]
           }
         ],
@@ -2338,7 +4793,14 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)"
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118038)",
+            "free_txt": [
+              " DA/DE"
             ]
           }
         ]
@@ -2346,11 +4808,13 @@
     },
     "019": {
       "0": {
-        "comment": [
+        "analysis": [
           {
-            "x4_code": null,
+            "x4_code": "(INTAD,INTED)",
             "free_txt": [
-              " Residual nucleus is given arbitrarily"
+              " Spectrum was approximated by sum of two",
+              "components - (n,p) and (n,np) and then each was",
+              "integrated."
             ]
           }
         ],
@@ -2367,7 +4831,14 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)"
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118038)",
+            "free_txt": [
+              " DA/DE"
             ]
           }
         ]
@@ -2375,12 +4846,10 @@
     },
     "020": {
       "0": {
-        "comment": [
+        "analysis": [
           {
-            "x4_code": null,
-            "free_txt": [
-              " Residual nucleus is given arbitrarily"
-            ]
+            "x4_code": "(INTAD,INTED)",
+            "free_txt": []
           }
         ],
         "sample": [
@@ -2396,7 +4865,14 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 1 of INDC(CCP)-376,1994"
+              " Table 1 of INDC(CCP)-376,1994 (English)",
+              "= Table 1 of INDC(CCP)-349,27,1992 (Russian)"
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118038)",
+            "free_txt": [
+              " DA/DE"
             ]
           }
         ]
@@ -2408,7 +4884,8 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 of INDC(CCP)-376,1994"
+              " Table 2 of INDC(CCP)-376,1994 (English)",
+              "= Table 2 of INDC(CCP)-349,27,1992 (Russian)"
             ]
           }
         ]
@@ -2420,7 +4897,8 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 of INDC(CCP)-376,1994"
+              " Table 2 of INDC(CCP)-376,1994 (English)",
+              "= Table 2 of INDC(CCP)-349,27,1992 (Russian)"
             ]
           }
         ]
@@ -2432,7 +4910,8 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 of INDC(CCP)-376,1994"
+              " Table 2 of INDC(CCP)-376,1994 (English)",
+              "= Table 2 of INDC(CCP)-349,27,1992 (Russian)"
             ]
           }
         ]
@@ -2444,7 +4923,8 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 of INDC(CCP)-376,1994"
+              " Table 2 of INDC(CCP)-376,1994 (English)",
+              "= Table 2 of INDC(CCP)-349,27,1992 (Russian)"
             ]
           }
         ]
@@ -2456,7 +4936,8 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 of INDC(CCP)-376,1994"
+              " Table 2 of INDC(CCP)-376,1994 (English)",
+              "= Table 2 of INDC(CCP)-349,27,1992 (Russian)"
             ]
           }
         ]
@@ -2468,7 +4949,8 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 of INDC(CCP)-376,1994"
+              " Table 2 of INDC(CCP)-376,1994 (English)",
+              "= Table 2 of INDC(CCP)-349,27,1992 (Russian)"
             ]
           }
         ]
@@ -2480,7 +4962,8 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 of INDC(CCP)-376,1994"
+              " Table 2 of INDC(CCP)-376,1994 (English)",
+              "= Table 2 of INDC(CCP)-349,27,1992 (Russian)"
             ]
           }
         ]
@@ -2492,7 +4975,8 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 of INDC(CCP)-376,1994"
+              " Table 2 of INDC(CCP)-376,1994 (English)",
+              "= Table 2 of INDC(CCP)-349,27,1992 (Russian)"
             ]
           }
         ]
@@ -2504,7 +4988,8 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 of INDC(CCP)-376,1994"
+              " Table 2 of INDC(CCP)-376,1994 (English)",
+              "= Table 2 of INDC(CCP)-349,27,1992 (Russian)"
             ]
           }
         ]
@@ -2516,7 +5001,8 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 of INDC(CCP)-376,1994"
+              " Table 2 of INDC(CCP)-376,1994 (English)",
+              "= Table 2 of INDC(CCP)-349,27,1992 (Russian)"
             ]
           }
         ]
@@ -2528,7 +5014,8 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 of INDC(CCP)-376,1994"
+              " Table 2 of INDC(CCP)-376,1994 (English)",
+              "= Table 2 of INDC(CCP)-349,27,1992 (Russian)"
             ]
           }
         ]
@@ -2540,7 +5027,441 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Table 2 of INDC(CCP)-376,1994"
+              " Table 2 of INDC(CCP)-376,1994 (English)",
+              "= Table 2 of INDC(CCP)-349,27,1992 (Russian)"
+            ]
+          }
+        ]
+      }
+    },
+    "034": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.015 MeV, scale Y - 0.015 mb/sr/MeV."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Figures (upper) in INDC(CCP)-235,(4),381,1984.",
+              ". This Subent supersedes Subent 40699003."
+            ]
+          }
+        ]
+      }
+    },
+    "035": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.015 MeV, scale Y - 0.030 mb/sr/MeV."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Figures (lower) in INDC(CCP)-235,(4),381,1984",
+              ". This Subent supersedes Subent 40699004."
+            ]
+          }
+        ]
+      }
+    },
+    "036": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.022 MeV, scale Y - 0.0090 mb/sr/MeV."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig.2 of INDC(CCP)-376,1994 (English),",
+              " = Fig.2 of INDC(CCP)-349,27,1992 (Russian)."
+            ]
+          }
+        ]
+      }
+    },
+    "037": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.025 MeV, scale Y - 0.025 mb/sr/MeV."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig.6 of INDC(CCP)-376,1994 (English),",
+              " = Fig.6 of INDC(CCP)-349,27,1992 (Russian)."
+            ]
+          }
+        ]
+      }
+    },
+    "038": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.017 MeV, scale Y - 0.017 mb/sr/MeV."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig.7 of INDC(CCP)-376,1994 (English),",
+              " = Fig.7 of INDC(CCP)-349,27,1992 (Russian)."
+            ]
+          }
+        ]
+      }
+    },
+    "039": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.011 MeV, scale Y - 0.059 mb/MeV."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig.1 of INDC(CCP)-376,1994 (English),",
+              " = Fig.1 of INDC(CCP)-349,27,1992 (Russian)."
+            ]
+          }
+        ]
+      }
+    },
+    "040": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTAD)",
+            "free_txt": []
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.010 MeV, scale Y - 0.062 mb/MeV."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig.3 of INDC(CCP)-376,1994 (English),",
+              " = Fig.3 of INDC(CCP)-349,27,1992 (Russian)."
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118034)",
+            "free_txt": [
+              " DA/DE"
+            ]
+          }
+        ]
+      }
+    },
+    "041": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTAD)",
+            "free_txt": []
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.009 MeV, scale Y - 0.076 mb/MeV."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig.4 of INDC(CCP)-376,1994 (English),",
+              " = Fig.4 of INDC(CCP)-349,27,1992 (Russian)."
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118035)",
+            "free_txt": [
+              " DA/DE"
+            ]
+          }
+        ]
+      }
+    },
+    "042": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTAD)",
+            "free_txt": [
+              " Spectrum DA/DE is not presented on figures."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.007 MeV, scale Y - 0.009 mb/MeV."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig.5 of INDC(CCP)-376,1994 (English),",
+              " = Fig.5 of INDC(CCP)-349,27,1992 (Russian)."
+            ]
+          }
+        ]
+      }
+    },
+    "043": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED)",
+            "free_txt": [
+              " Spectrum DA/DE (not presented on figures) was",
+              " fitted as sum of (n,p) and (n,n'p) reactions ( see",
+              " an example on Figs.6 for Ni-58 at 80 deg angle) for",
+              " each angle and then integrated by energy to get",
+              " angular distribution for (n,p) reaction."
+            ]
+          }
+        ],
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Of compiler M.M.",
+              " On Fig.8 reaction is mentioned as \"(n,p)\" as on the",
+              " figre as in the title of figure.",
+              " When data are for sum of (n,p) and (n,n'p) then",
+              " authors write \"(n,p)+(n,np)\", see for example",
+              " Figs.3,5 and titles of Figs.1,4,6,7."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.24 deg, scale Y - 0.016 mb/sr."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig.8 upper left of INDC(CCP)-376,1994 (Engl.),",
+              " = Fig.8 upper left of INDC(CCP)-349,27,1992 (Russian).",
+              ". This Subent supersedes Subent 40699005."
+            ]
+          }
+        ]
+      }
+    },
+    "044": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED)",
+            "free_txt": [
+              " Spectrum DA/DE ( see Subent 036 ) was",
+              " fitted as sum of (n,p) and (n,n'p) reactions ( see",
+              " an example on Figs.6 for Ni-58 at 80 deg angle) for",
+              " each angle and then integrated by energy to get",
+              " angular distribution for (n,p) reaction."
+            ]
+          }
+        ],
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Of compiler M.M.",
+              " On Fig.8 reaction is mentioned as \"(n,p)\" as on the",
+              " figre as in the title of figure.",
+              " When data are for sum of (n,p) and (n,n'p) then",
+              " authors write \"(n,p)+(n,np)\", see for example",
+              " Figs.3,5 and titles of Figs.1,4,6,7."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.24 deg, scale Y - 0.039 mb/sr."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig.8 upper right of INDC(CCP)-376,1994 (Engl.)",
+              " = Fig.8 upper right of INDC(CCP)-349,27,1992 (Russian)",
+              ". This Subent supersedes Subent 40699006."
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118034)",
+            "free_txt": [
+              " DA/DE"
+            ]
+          }
+        ]
+      }
+    },
+    "045": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED)",
+            "free_txt": [
+              " Spectrum DA/DE ( see Subent 035) was",
+              " fitted as sum of (n,p) and (n,n'p) reactions ( see",
+              " an example on Figs.6 for Ni-58 at 80 deg angle) for",
+              " each angle and then integrated by energy to get",
+              " angular distribution for (n,p) reaction."
+            ]
+          }
+        ],
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Of compiler M.M.",
+              " On Fig.8 reaction is mentioned as \"(n,p)\" as on the",
+              " figre as in the title of figure.",
+              " When data are for sum of (n,p) and (n,n'p) then",
+              " authors write \"(n,p)+(n,np)\", see for example",
+              " Figs.3,5 and titles of Figs.1,4,6,7."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.24 deg, scale Y - 0.050 mb/sr."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig.8 lower left of INDC(CCP)-376,1994 (Engl.),",
+              " = Fig.4 lower left of INDC(CCP)-349,27,1992 (Russian).",
+              ". This Subent supersedes Subent 40699007."
+            ]
+          },
+          {
+            "x4_code": "(DEP,41118035)",
+            "free_txt": [
+              " DA/DE"
+            ]
+          }
+        ]
+      }
+    },
+    "046": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED)",
+            "free_txt": [
+              " Spectrum DA/DE (not presented on figures) was",
+              " fitted as sum of (n,p) and (n,n'p) reactions ( see",
+              " an example on Figs.6 for Ni-58 at 80 deg angle) for",
+              " each angle and then integrated by energy to get",
+              " angular distribution for (n,p) reaction."
+            ]
+          }
+        ],
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Of compiler M.M.",
+              " On Fig.8 reaction is mentioned as \"(n,p)\" as on the",
+              " figre as in the title of figure.",
+              " When data are for sum of (n,p) and (n,n'p) then",
+              " authors write \"(n,p)+(n,np)\", see for example",
+              " Figs.3,5 and titles of Figs.1,4,6,7."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.24 deg, scale Y - 0.020 mb/sr."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig.8 lower right of INDC(CCP)-376,1994 (Engl.)",
+              " = Fig.8 lower right of INDC(CCP)-349,27,1992 (Russian)"
             ]
           }
         ]
