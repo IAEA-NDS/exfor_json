@@ -1,7 +1,7 @@
 {
   "entry": "D4400",
-  "last_updated": "2023-01-16",
-  "number_of_revisions": "2",
+  "last_updated": "2023-05-29",
+  "number_of_revisions": "3",
   "histories": [
     {
       "x4_code": "(20200203C)",
@@ -12,7 +12,13 @@
     {
       "x4_code": "(20220907A)",
       "free_txt": [
-        " VT. Revision in 002"
+        " VT. Revision in 002. 003 added."
+      ]
+    },
+    {
+      "x4_code": "(20221025A)",
+      "free_txt": [
+        " On. Major revision in 002-003."
       ]
     }
   ],
@@ -47,15 +53,19 @@
     "references": [
       {
         "x4_code": "(J,PR/C,99,055804,2019)",
-        "free_txt": [
-          "#doi:10.1103/PhysRevC.99.055804",
-          "Erratum (J,PR/C,105,069901,2022)",
-          "Correction in gamma-detection efficiency in the",
-          "counting geometry."
-        ],
+        "free_txt": [],
         "publication_year": "2019",
-        "pointer": "0",
-        "doi": "10.1103/PhysRevC.99.055804"
+        "doi": null,
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PR/C,105,069901,2022)",
+        "free_txt": [
+          " Revised data in table"
+        ],
+        "publication_year": "2022",
+        "doi": null,
+        "pointer": "0"
       }
     ],
     "facilities": [
@@ -94,7 +104,8 @@
           }
         ],
         "type": null,
-        "free_text": ""
+        "free_text": "",
+        "pointer": "0"
       }
     },
     "003": {
@@ -122,24 +133,35 @@
           }
         ],
         "type": null,
-        "free_text": ""
+        "free_text": "",
+        "pointer": "0"
       }
     }
   },
   "data_tables": {
     "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
+          "ERR-1",
           "ERR-2",
           "ERR-3",
-          "ERR-4"
+          "ERR-4",
+          "ERR-SYS"
         ],
         "units": [
+          "PER-CENT",
+          "PER-CENT",
           "PER-CENT",
           "PER-CENT",
           "PER-CENT"
         ],
         "data": [
+          [
+            2.0
+          ],
           [
             0.4
           ],
@@ -148,23 +170,6 @@
           ],
           [
             2.4
-          ]
-        ]
-      }
-    },
-    "002": {
-      "common": {
-        "heads": [
-          "ERR-1",
-          "ERR-SYS"
-        ],
-        "units": [
-          "PER-CENT",
-          "PER-CENT"
-        ],
-        "data": [
-          [
-            2.0
           ],
           [
             4.3
@@ -182,8 +187,8 @@
         "units": [
           "KEV",
           "KEV",
-          "MB",
-          "MB",
+          "MICRO-B",
+          "MICRO-B",
           "MEV"
         ],
         "data": [
@@ -259,15 +264,30 @@
       "common": {
         "heads": [
           "ERR-1",
+          "ERR-2",
+          "ERR-3",
+          "ERR-4",
           "ERR-SYS"
         ],
         "units": [
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT",
           "PER-CENT",
           "PER-CENT"
         ],
         "data": [
           [
             2.5
+          ],
+          [
+            0.4
+          ],
+          [
+            3.0
+          ],
+          [
+            2.4
           ],
           [
             4.6
@@ -285,8 +305,8 @@
         "units": [
           "KEV",
           "KEV",
-          "MB",
-          "MB",
+          "MICRO-B",
+          "MICRO-B",
           "MEV"
         ],
         "data": [
@@ -374,47 +394,52 @@
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
-              "The mid-energy of the beam energy in the cell",
-              "was estimated by SRIM code. Uncertainty of 0.3% initial",
-              "and uncertainty due to the entrance foil stopping",
-              "power and the target gas stopping power.",
-              "The uncertainty of the mid-energy was 0.46-0.52%."
+              " Uncertainty propagated from uncertainties in",
+              "  - cyclotron beam energy uncertainty      (0.3%)",
+              "  - entrance Al foil thickness         (0.2-1.0%)",
+              "  - energy loss in Al                (0.34-0.41%)",
+              "  - energy loss in target gas             (0.02%)"
             ]
           },
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
-              "   statistical uncertainty  (1.9-2.8%)"
-            ]
-          },
-          {
-            "x4_code": "(ERR-SYS)",
-            "free_txt": [
-              " total systematic uncertainty"
+              " statistical uncertainty        (1.9-2.8%)",
+              "        due to",
+              "         counting statistics (1.6-2.3%)",
+              "         temperature             (0.7%)",
+              "         pressure                (0.3%)",
+              "         beam heating        (0.7-1.4%)"
             ]
           },
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
-              "   detector efficiency"
+              " detector efficiency                (2.5%)"
             ]
           },
           {
             "x4_code": "(ERR-2)",
             "free_txt": [
-              "   gamma intensity (0.4%)"
+              " gamma intensity                    (0.4%)"
             ]
           },
           {
             "x4_code": "(ERR-3)",
             "free_txt": [
-              "   beam current (3.0%)"
+              " beam current                       (3.0%)"
             ]
           },
           {
             "x4_code": "(ERR-4)",
             "free_txt": [
-              "   gas volume (2.4%)"
+              " gas volume                         (2.4%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-SYS)",
+            "free_txt": [
+              " Total systematic uncertainty     (4.6%)"
             ]
           }
         ],
@@ -424,20 +449,23 @@
             "free_txt": []
           }
         ],
+        "inc-spect": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Mid-energy of beam energy in the cell was estimated by",
+              " SRIM code."
+            ]
+          }
+        ],
         "method": [
           {
-            "x4_code": "(ACTIV,EXTB,EDEG,GSPEC)",
+            "x4_code": "(BCINT,ACTIV)",
             "free_txt": [
-              " Gas cell closed by 10.5um Al",
-              "windows was irradiated with alpha beam of different",
-              "energies to measure the 7Be activation product",
-              "implanted into the exit window.",
-              "Irradiation were done in a Faraday-cup like target",
-              "holder with average beam intensity of 0.5-1.4 uA,",
-              "for 16-23h duration.",
-              "Several series of gamma-spectra were recorded to",
-              "be able to follow the decay of 7Be.",
-              "Decay data were taken from NUDAT online data library."
+              "Irradiated in a Faraday-cup like target holder with",
+              " average beam intensity of 0.5-1.4 uA for 16-23 h",
+              " duration.",
+              "Activity of 7Be implanted into exit foil was measured."
             ]
           }
         ],
@@ -445,8 +473,9 @@
           {
             "x4_code": null,
             "free_txt": [
-              "High purity 3He gas (99.999%),  in a ~42mm long",
-              "gascell, 23+-2C, ~100mbar."
+              "High purity (99.999%) 3He gas in a ~42 mm long gas",
+              " cell at 23+/-2 deg-C and ~100 mbar and closed by",
+              " 10.5 um Al windows"
             ]
           }
         ]
@@ -457,16 +486,14 @@
         "decay-data": [
           {
             "x4_code": "(4-BE-7,53.22D,DG,477.6,0.1044)",
-            "free_txt": [
-              " Decay data are from the text of J,PR/C,99,055804,2019"
-            ]
+            "free_txt": []
           }
         ],
         "misc-col": [
           {
             "x4_code": "(MISC)",
             "free_txt": [
-              " Energy in laboratory frame."
+              " Energy in laboratory frame"
             ]
           }
         ],
@@ -498,7 +525,7 @@
           {
             "x4_code": "(MISC)",
             "free_txt": [
-              " Energy in laboratory frame."
+              " Energy in laboratory frame"
             ]
           }
         ],
@@ -506,7 +533,7 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              "Table II of Phys.Rev.C105(2022)069901(E)"
+              " Table II of Phys.Rev.C105(2022)069901(E)"
             ]
           }
         ]

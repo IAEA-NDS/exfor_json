@@ -1,19 +1,22 @@
 {
   "entry": "21730",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-09-28",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(810130C)",
+      "x4_code": "(19810130C)",
       "free_txt": []
     },
     {
-      "x4_code": "(810213E)",
-      "free_txt": []
+      "x4_code": "(20230403A)",
+      "free_txt": [
+        " SD:Updated to new date formats,lower case.",
+        "Corrections in all Subents."
+      ]
     }
   ],
   "bib_record": {
-    "title": "-PRECISE DETERMINATION OF THE BRANCHING RATIO AND Q-VALUE OF THE B-10(N,A) REACTION AND OF THE Q-VALUE OF THE LI-6(N,T) REACTION -.",
+    "title": " Precise determination of the branching ratio and Q-value of the B-10(n,alpha)Li-7 reaction and of the Q-value of the Li-6(n,alpha)H-3 reaction",
     "authors": [
       {
         "name": "A.J.Deruytter"
@@ -26,44 +29,46 @@
       {
         "x4_code": "(2ZZZGEL)",
         "free_txt": [
-          " C.B.N.M. GEEL."
+          " C.B.N.M. Geel."
         ]
       }
     ],
     "references": [
       {
-        "x4_code": "(J,JNE,21,833,6711)",
+        "x4_code": "(J,JNE,21,833,1967)",
         "free_txt": [
-          " FULL REPORT."
+          " Full report."
         ],
         "publication_year": "1967",
+        "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(P,EANDC(E)-76,140,6701)",
+        "x4_code": "(P,EANDC(E)-76,140,1967)",
         "free_txt": [
-          " PROGRESS REPT, SUPERSEDED."
+          " Progress rept, superseded."
         ],
         "publication_year": "1967",
+        "doi": null,
         "pointer": "0"
       }
     ],
     "facilities": [
       {
-        "x4_code": "(REAC )",
+        "x4_code": "(REAC,2ZZZGEL)",
         "free_txt": [
-          " BR-1 REACTOR, MOL."
+          " BR-1 reactor"
         ],
         "pointer": "0",
-        "facility_type": "(REAC )",
-        "institute": null
+        "facility_type": "(REAC)",
+        "institute": "(2ZZZGEL)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(5-B-10(N,A)3-LI-7,PAR,SIG,,MXW/REL)",
+        "x4_code": "((5-B-10(N,A)3-LI-7,PAR,SIG)//(5-B-10(N,A)3-LI-7,PAR,SIG))",
         "children": [
           {
             "code": [
@@ -71,57 +76,75 @@
               [
                 "N,A"
               ],
-              "3-LI-7,PAR,SIG,,MXW/REL"
+              "3-LI-7,PAR,SIG"
             ],
             "type": null,
             "target": "5-B-10",
             "process": "N,A",
-            "sf49": "3-LI-7,PAR,SIG,,MXW/REL",
+            "sf49": "3-LI-7,PAR,SIG",
             "sf4": "3-LI-7",
             "sf5": "PAR",
             "sf6": "SIG",
             "sf7": null,
-            "sf8": "MXW/REL",
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "5-B-10",
+              [
+                "N,A"
+              ],
+              "3-LI-7,PAR,SIG"
+            ],
+            "type": null,
+            "target": "5-B-10",
+            "process": "N,A",
+            "sf49": "3-LI-7,PAR,SIG",
+            "sf4": "3-LI-7",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
             "sf9": null
           }
         ],
-        "type": null,
-        "free_text": " THE BRANCHING RATIO DEFINED AS SIG(N,A(0))/SIG(N,A(1)) GIVEN IN THE TEXT AS PERCENT, BUT CONVERTED HERE INTO AN ABSOLUTE RATIO."
+        "type": "//",
+        "free_text": " the branching ratio defined as sig(n,a(0))/sig(n,a(1)) given in the text as percent, but converted here into an absolute ratio.",
+        "pointer": "0"
       }
     }
   },
   "data_tables": {
     "001": {
-      "common": {
-        "heads": [
-          "EN-DUMMY"
-        ],
-        "units": [
-          "EV"
-        ],
-        "data": [
-          [
-            0.0253
-          ]
-        ]
-      }
+      "common": null
     },
     "002": {
       "common": null,
       "data": {
         "heads": [
-          "E-LVL",
+          "EN",
+          "LVL-NUM-NM",
+          "LVL-NUM-DN",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
-          "KEV",
-          "ARB-UNITS",
-          "ARB-UNITS"
+          "EV",
+          "NO-DIM",
+          "NO-DIM",
+          "NO-DIM",
+          "NO-DIM"
         ],
         "data": [
           [
-            478.0
+            0.0253
+          ],
+          [
+            0.0
+          ],
+          [
+            1.0
           ],
           [
             0.06733
@@ -138,34 +161,34 @@
       "0": {
         "detector": [
           {
-            "x4_code": "(SOLST)",
+            "x4_code": "(SIBAR)",
             "free_txt": [
-              " GOLD SILICON SURFACE BARRIER DETECTOR, 400 MM2",
-              " IN AREA AND 600 OHM.CM RESISTIVITY. THE DETECTOR WAS",
-              " OUTSIDE THE DIRECT BEAM BUT PARALLEL TO THE SOURCE.",
-              " THE DETECTOR WAS OPERATED AT A REVERSE BIAS OF 20 V,",
-              " GIVING A DEPLETION DEPTH OF 55 MICRO-M, SUFFICIENT TO",
-              " STOP ALL REACTION PRODUCTS OF B-10(N,A) BUT THIN",
-              " ENOUGH TO LIMIT PILE UP OF BACKGROUND PULSES."
+              " Gold silicon surface barrier detector, 400 mm2",
+              " in area. The detector was outside the direct beam but",
+              " parallel to the source.",
+              " The detector was operated at a reverse bias of 20 V,",
+              " giving a depletion depth of 55 um, sufficient to",
+              " stop all reaction products of B-10(n,alpha) but thin",
+              " enough to limit pile up of background pulses."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(REAC )",
+            "x4_code": "(REAC,2ZZZGEL)",
             "free_txt": [
-              " BR-1 REACTOR, MOL."
+              " BR-1 reactor"
             ]
           }
         ],
         "inc-source": [
           {
-            "x4_code": "(REAC )",
+            "x4_code": "(REAC)",
             "free_txt": [
-              " THERMAL NEUTRON BEAM EXTRACTED FROM THE",
-              " GRAPHITE REFLECTOR, INTENSITY 10*6 N/CM2/SEC.",
-              " CADMIUM RATIO VALUES WERE DETERMINED WITH AND WITHOUT",
-              " A 0.4 MM THICK CADMIUM FOIL."
+              " Thermal neutron beam extracted from the",
+              " graphite reflector, intensity 10*6 n/cm2/sec.",
+              " Cadmium ratio values were determined with and without",
+              " a 0.4 mm thick cadmium foil."
             ]
           }
         ],
@@ -173,10 +196,9 @@
           {
             "x4_code": null,
             "free_txt": [
-              ".THERMAL MAXWELLIAN NEUTRON SPECTRUM, WITH",
-              " CORRECTION MADE FOR AN EPI-CADMIUM PLUS ROOM",
-              " BACKGROUND INTENSITY EQUAL TO 2.80+-0.02 PERCENT",
-              " OF THE INCIDENT BEAM."
+              " Thermal Maxwellian neutron spectrum, with correction",
+              " made for an epi-cadmium plus room background",
+              " intensity equal to 2.80+-0.02% of the incident beam."
             ]
           }
         ],
@@ -184,11 +206,11 @@
           {
             "x4_code": "(ASSOP)",
             "free_txt": [
-              " DETECTION OF EMITTED ALPHAS. GOOD SEPERATION",
-              " OF THE TWO ALPHA PEAKS ALLOWS THE SUM OF COUNTS UNDER",
-              " EACH PEAK TO BE CONSIDERED PROPORTIONAL TO THE TWO",
-              " PARTIAL CROSS SECTIONS TO THE LI-7 GROUND AND FIRST",
-              " EXCITED STATES."
+              " Detection of emitted alphas. Good separation",
+              " of the two alpha peaks allows the sum of counts under",
+              " each peak to be considered proportional to the two",
+              " partial cross sections to the Li-7 ground and first",
+              " excited states."
             ]
           }
         ],
@@ -196,18 +218,18 @@
           {
             "x4_code": null,
             "free_txt": [
-              ".A THIN ELEMENTAL LAYER OF B-10, 15 MICRO-GM/CM2, WITH",
-              " A DIAMETER OF 38 MM, PREPARED BY EVAPORATION ON A GOLD",
-              " COATED QUARTZ DISK, AND MOUNTED IN A VACUUM CHAMBER A",
-              " AT 30 MM FROM THE SENSITIVE SURFACE OF THE DETECTOR."
+              " A thin elemental layer of B-10, 15 ug/cm2, with",
+              " a diameter of 38 mm, prepared by evaporation on a gold",
+              " coated quartz disk, and mounted in a vacuum chamber a",
+              " at 30 mm from the sensitive surface of the detector."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE)",
             "free_txt": [
-              ".VALUE IN TEXT, PAGE 838."
+              " Text on p.838 from J.Nucl.Energy,21(1967)833"
             ]
           }
         ]
@@ -219,31 +241,22 @@
           {
             "x4_code": null,
             "free_txt": [
-              ".CORRECTED FOR EPITHERMAL NEUTRONS. THE MEASURED",
-              " REACTOR SPECTRUM VALUE WAS 6.741+-0.006 PERCENT, AND",
-              " THE EPICADMIUM VALUE WAS 7.02+-0.08 PERCENT. WITH",
-              " THE MEASURED CADMIUM RATIO OF THE SPECTRUM THE VALUE",
-              " FOR EPITHERMAL NEUTRONS AND ROOM BACKGROUND NEUTRONS",
-              " IS GIVEN."
+              " Corrected for epithermal neutrons. The measured",
+              " reactor spectrum value was 6.741+-0.006%, and the",
+              " epicadmium value was 7.02+-0.08%. With the measured",
+              " cadmium ratio of the spectrum the value for epithermal",
+              " neutrons and room background neutrons is given."
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " THE UNCERTAINTY IS ONE STANDARD DEVIATION,",
-              " PRIMARILY FROM STATISTICAL COUNTING UNCERTAINTIES.",
-              " THE SUPPLEMENTARY ERROR FROM BACKGROUND WAS AN ORDER",
-              " OF MAGNITUDE SMALLER."
-            ]
-          }
-        ],
-        "status": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              ".TEXT, PAGE 838."
+              " The uncertainty is one standard deviation,",
+              " primarily from statistical counting uncertainties.",
+              " The supplementary error from background was an order",
+              " of magnitude smaller."
             ]
           }
         ]

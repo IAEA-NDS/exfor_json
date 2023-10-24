@@ -1,12 +1,21 @@
 {
   "entry": "C0907",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-06-23",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20030415C)",
       "free_txt": [
         " VM"
+      ]
+    },
+    {
+      "x4_code": "(20220629A)",
+      "free_txt": [
+        " BP: Updated entry, corrected FACILITY,",
+        "added doi, digitized data (unobtainable data) per an",
+        "NRDC decision for data sets that were published",
+        "before 2000 (C32 of WP2022-01) for subentries 4-5."
       ]
     }
   ],
@@ -52,19 +61,23 @@
     "references": [
       {
         "x4_code": "(J,PR/C,37,1884,1988)",
-        "free_txt": [],
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.37.1884"
+        ],
         "publication_year": "1988",
+        "doi": "10.1103/PhysRevC.37.1884",
         "pointer": "0"
       }
     ],
     "facilities": [
       {
-        "x4_code": "(ACCEL,1USANOT)",
+        "x4_code": "(VDGT,1USANOT)",
         "free_txt": [
-          " FN Tandem accelerator."
+          " The University of Notre Dame tandem",
+          "accelerator."
         ],
         "pointer": "0",
-        "facility_type": "(ACCEL)",
+        "facility_type": "(VDGT)",
         "institute": "(1USANOT)"
       }
     ]
@@ -95,7 +108,8 @@
           }
         ],
         "type": null,
-        "free_text": " Relative to total counts in reaction peak."
+        "free_text": " Relative to totalcounts in reaction peak.",
+        "pointer": "0"
       }
     },
     "003": {
@@ -123,63 +137,66 @@
           }
         ],
         "type": null,
-        "free_text": " Relative to total counts in reaction peak."
+        "free_text": " Relative to totalcounts in reaction peak.",
+        "pointer": "0"
       }
     },
     "004": {
       "0": {
-        "x4_code": "(14-SI-0(D,ABS),,SIG,,REL)",
+        "x4_code": "(14-SI-0(D,NON),,SIG,,MSC)",
         "children": [
           {
             "code": [
               "14-SI-0",
               [
-                "D,ABS"
+                "D,NON"
               ],
-              ",,SIG,,REL"
+              ",,SIG,,MSC"
             ],
             "type": null,
             "target": "14-SI-0",
-            "process": "D,ABS",
-            "sf49": ",,SIG,,REL",
+            "process": "D,NON",
+            "sf49": ",,SIG,,MSC",
             "sf4": null,
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
-            "sf8": "REL",
+            "sf8": "MSC",
             "sf9": null
           }
         ],
         "type": null,
-        "free_text": " Relative to total counts in reaction peak."
+        "free_text": " Relative to total countsin reaction peak.",
+        "pointer": "0"
       }
     },
     "005": {
       "0": {
-        "x4_code": "(14-SI-0(HE3,ABS),,SIG,,REL)",
+        "x4_code": "(14-SI-0(HE3,NON),,SIG,,MSC)",
         "children": [
           {
             "code": [
               "14-SI-0",
               [
-                "HE3,ABS"
+                "HE3,NON"
               ],
-              ",,SIG,,REL"
+              ",,SIG,,MSC"
             ],
             "type": null,
             "target": "14-SI-0",
-            "process": "HE3,ABS",
-            "sf49": ",,SIG,,REL",
+            "process": "HE3,NON",
+            "sf49": ",,SIG,,MSC",
             "sf4": null,
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
-            "sf8": "REL",
+            "sf8": "MSC",
             "sf9": null
           }
         ],
         "type": null,
-        "free_text": " Relative to total counts in reaction peak."
+        "free_text": " Relative to total countsin reaction peak.",
+        "pointer": "0"
       }
     }
   },
@@ -271,11 +288,70 @@
     },
     "004": {
       "common": null,
-      "data": null
+      "data": {
+        "heads": [
+          "EN",
+          "DATA",
+          "ERR-S"
+        ],
+        "units": [
+          "MEV",
+          "ARB-UNITS",
+          "ARB-UNITS"
+        ],
+        "data": [
+          [
+            3.946,
+            6.347,
+            9.342,
+            12.765
+          ],
+          [
+            0.0002396,
+            0.0005794,
+            0.001699,
+            0.003246
+          ],
+          [
+            2.558e-05,
+            7.34e-05,
+            0.000129,
+            0.0002802
+          ]
+        ]
+      }
     },
     "005": {
       "common": null,
-      "data": null
+      "data": {
+        "heads": [
+          "EN",
+          "DATA",
+          "ERR-S"
+        ],
+        "units": [
+          "MEV",
+          "ARB-UNITS",
+          "ARB-UNITS"
+        ],
+        "data": [
+          [
+            4.595,
+            12.5,
+            18.071
+          ],
+          [
+            3.648e-05,
+            0.0003176,
+            0.0007854
+          ],
+          [
+            1.188e-05,
+            4.013e-05,
+            7.565e-05
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
@@ -283,18 +359,19 @@
       "0": {
         "detector": [
           {
-            "x4_code": "(TELES)",
+            "x4_code": "(TELES,SI,SI)",
             "free_txt": [
               " Recoil telescope consisting of silicon",
-              " transmission and stopping counters."
+              "transmission and stopping counters."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(ACCEL,1USANOT)",
+            "x4_code": "(VDGT,1USANOT)",
             "free_txt": [
-              " FN Tandem accelerator."
+              " The University of Notre Dame tandem",
+              "accelerator."
             ]
           }
         ],
@@ -303,7 +380,7 @@
             "x4_code": null,
             "free_txt": [
               "3He projectiles on a CD2 target; 3He energy 24.0 MeV",
-              " at center of target."
+              "at center of target."
             ]
           }
         ],
@@ -312,14 +389,6 @@
             "x4_code": null,
             "free_txt": [
               "Energy incident on stopping counter."
-            ]
-          }
-        ],
-        "status": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "No reply from R. Warner to author proof."
             ]
           }
         ]
@@ -332,17 +401,17 @@
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Statistical uncertainty, increased to",
-              " encompass possibility that value is as large as",
-              " average value below, or as small as average value",
-              " above, the peak."
+              "encompass possibility that value is as large as",
+              "average value below, or as small as average value",
+              "above, the peak."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE)",
             "free_txt": [
-              "Data taken from table in article."
+              " Table I, page 1886 of J,PR/C,37,1884,1988."
             ]
           }
         ]
@@ -355,17 +424,17 @@
             "x4_code": "(DATA-ERR)",
             "free_txt": [
               " Statistical uncertainty, increased to",
-              " encompass possibility that value is as large as",
-              " average value below, or as small as average value",
-              " above, the peak."
+              "encompass possibility that value is as large as",
+              "average value below, or as small as average value",
+              "above, the peak."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE)",
             "free_txt": [
-              "Data taken from table in article."
+              " Table I, page 1886 of J,PR/C,37,1884,1988."
             ]
           }
         ]
@@ -373,16 +442,47 @@
     },
     "004": {
       "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-S)",
+            "free_txt": [
+              " Systematic errors are negligible in this",
+              "experiment, compared with the statistical",
+              "uncertainties of about 10%."
+            ]
+          }
+        ],
         "status": [
           {
-            "x4_code": "(UNOBT)",
+            "x4_code": "(CURVE)",
             "free_txt": [
-              " Data given in Fig. 2."
+              " Fig.2 top, page 1887 of J,PR/C,37,1884,1988."
             ]
           }
         ]
       }
     },
-    "005": {}
+    "005": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-S)",
+            "free_txt": [
+              " Systematic errors are negligible in this",
+              "experiment, compared with the statistical",
+              "uncertainties of about 10%."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE)",
+            "free_txt": [
+              " Fig.2 bottom, page 1887 of J,PR/C,37,1884,1988."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

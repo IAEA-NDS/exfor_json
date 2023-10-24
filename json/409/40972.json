@@ -1,7 +1,7 @@
 {
   "entry": "40972",
-  "last_updated": "2018-05-25",
-  "number_of_revisions": "4",
+  "last_updated": "2023-06-16",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19890424C)",
@@ -35,10 +35,17 @@
         " M.M. Upper -> lower case correction.",
         "Ref.SNP,45,761,1987 was added."
       ]
+    },
+    {
+      "x4_code": "(20230215A)",
+      "free_txt": [
+        " Update for current rules and dictionaries.",
+        "Ref. R,FEI-1771,1985 (misprinted) -> R,FEI-1722,1985."
+      ]
     }
   ],
   "bib_record": {
-    "title": " Study of the Fe-56(n,n'gamma) reaction with 14.1-MeV neutrons",
+    "title": " Study of reaction Fe-56(n,n'gamma) with 14.1-MeV neutrons",
     "authors": [
       {
         "name": "A.A.Lychagin"
@@ -50,7 +57,7 @@
         "name": "B.V.Devkin"
       },
       {
-        "name": "O.A.Sal'Nikov"
+        "name": "O.A.Salnikov"
       },
       {
         "name": "A.A.Androsenko"
@@ -86,30 +93,34 @@
     ],
     "references": [
       {
-        "x4_code": "(J,YF,45,1226,1987)",
-        "free_txt": [
-          "  Data curve is given. Issue 5."
-        ],
-        "publication_year": "1987",
-        "pointer": "0"
-      },
-      {
         "x4_code": "(J,SNP,45,761,1987)",
         "free_txt": [
           " Engl.trans.of J,YF,45,(5),1226,1987"
         ],
         "publication_year": "1987",
+        "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(R,FEI-1771,1985)",
+        "x4_code": "((C,86DUBROV,,272,1986)=(R,INDC(YUG)-010,272,1986))",
         "free_txt": [
-          " Experimental details"
+          " Preliminary results"
+        ],
+        "publication_year": "1986",
+        "doi": null,
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(R,FEI-1722,1985)",
+        "free_txt": [
+          "        Experimental details"
         ],
         "publication_year": "1985",
+        "doi": null,
         "pointer": "0"
       }
-    ]
+    ],
+    "facilities": []
   },
   "reactions": {
     "002": {
@@ -137,7 +148,8 @@
           }
         ],
         "type": null,
-        "free_text": ""
+        "free_text": "",
+        "pointer": "0"
       }
     }
   },
@@ -298,10 +310,27 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "correction": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Background was measured without sample.",
+              "For random coincidences.",
+              "For contribution of 57Fe(n,2n)56Fe (calculated",
+              "theoretically) and 2H(d,n)3He (measured) reactions."
+            ]
+          }
+        ],
         "detector": [
           {
             "x4_code": "(COIN,GELI,SCIN)",
-            "free_txt": []
+            "free_txt": [
+              " Scintillator NE-127 100 mm diameter",
+              "           and 50 mm thickness and coaxial Ge(Li) of",
+              "           50 cm3 volume, time resolution ~6 nsec.",
+              "Neutron detector efficiency was measured by neutron",
+              "spectrum of Cf-252 spontaneous fission."
+            ]
           }
         ],
         "inc-source": [
@@ -314,8 +343,12 @@
           {
             "x4_code": "(COINC)",
             "free_txt": [
-              " Coincidence of neutrons and 0.846MeV gammas"
+              " Coincidence of neutrons and 0.846 MeV gammas"
             ]
+          },
+          {
+            "x4_code": "(TOF)",
+            "free_txt": []
           }
         ],
         "part-det": [
@@ -336,11 +369,32 @@
     },
     "002": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Up to 96% of all gamma transitions from the excited",
+              "states of Fe-56 go through the low-lying 2+ state of",
+              "energy 0.846 MeV therefore this coincidence spectrum",
+              "descibes just Fe-56(n,n'gamma) reaction."
+            ]
+          }
+        ],
+        "add-res": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "  Integral of exp. dif. C-S from 0.1 to 0.9 MeV is",
+              " 55 +- 29 mb (Table 1 of INDC(YUG)-010,,272,1986,",
+              "Table of J,SNP,45,761,1987)"
+            ]
+          }
+        ],
         "en-sec": [
           {
             "x4_code": "(E,N)",
             "free_txt": [
-              " Energy resolution ~6keV  for 1.17 MeV gamma",
+              " Energy resolution ~6 keV for 1.17 MeV gamma",
               "      energy"
             ]
           }
@@ -353,11 +407,19 @@
             ]
           }
         ],
+        "monit-ref": [
+          {
+            "x4_code": "(,A.A.Lychagin+,R,FEI-923,1973)",
+            "free_txt": []
+          }
+        ],
         "monitor": [
           {
             "x4_code": null,
             "free_txt": [
-              " No information"
+              " Normalization to angle-average double-differential C-S",
+              "of neutron inelastic scattering at energy range from",
+              "3.5 to 5 MeV."
             ]
           }
         ],
@@ -365,7 +427,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              " Natural iron"
+              " Natural iron, metallic hollow cylinder, inner",
+              " diameter 15 mm, outer diameter 35 mm, height 10 mm"
             ]
           }
         ],
@@ -373,7 +436,11 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " From author A.A.Lychagin"
+              " From author A.A.Lychagin",
+              ". This Subent 40972.002 ( data from A.Lychagin)",
+              " supersedes Subent 40936.002 ( data from S.Simakov)",
+              ". Fig.2 of INDC(YUG)-010,,272,1986;",
+              "  Fig.2 of J,SNP,45,761,1987"
             ]
           }
         ]

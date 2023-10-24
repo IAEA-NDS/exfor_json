@@ -1,7 +1,7 @@
 {
   "entry": "12849",
-  "last_updated": "2009-11-27",
-  "number_of_revisions": "4",
+  "last_updated": "2023-05-31",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19840723C)",
@@ -16,13 +16,19 @@
     {
       "x4_code": "(20091105A)",
       "free_txt": [
-        " VM:Updated to new date formats,lower case.",
+        " VM: Updated to new date formats,lower case.",
         "            BIB updates"
+      ]
+    },
+    {
+      "x4_code": "(20221021U)",
+      "free_txt": [
+        " VT+On. Major revision in 002."
       ]
     }
   ],
   "bib_record": {
-    "title": "Treatment of the 232Th(n,f) suthreshold and near-subthreshold cross section",
+    "title": "Measurement of the 232Th(n,f) subthreshold and near-subthreshold cross section",
     "authors": [
       {
         "name": "R.B.Perez"
@@ -42,15 +48,26 @@
     ],
     "institutes": [
       {
+        "x4_code": "(3CHFCHF)",
+        "free_txt": [
+          " Institute of Nuclear Research, Taiwan"
+        ]
+      },
+      {
         "x4_code": "(1USAORL)",
-        "free_txt": []
+        "free_txt": ""
+      },
+      {
+        "x4_code": "(1USALAS)",
+        "free_txt": ""
       }
     ],
     "references": [
       {
-        "x4_code": "(J,PR/C,28,1635,198310)",
+        "x4_code": "(J,PR/C,28,1635,1983)",
         "free_txt": [],
         "publication_year": "1983",
+        "doi": null,
         "pointer": "0"
       }
     ],
@@ -92,7 +109,8 @@
           }
         ],
         "type": null,
-        "free_text": ""
+        "free_text": "",
+        "pointer": "0"
       }
     }
   },
@@ -104,11 +122,17 @@
       "common": {
         "heads": [
           "EN-RSL",
-          "ERR-SYS"
+          "ERR-SYS",
+          "EN-NRM-MIN",
+          "EN-NRM-MAX",
+          "MONIT"
         ],
         "units": [
           "NSEC/M",
-          "PER-CENT"
+          "PER-CENT",
+          "MEV",
+          "MEV",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -116,6 +140,15 @@
           ],
           [
             5.0
+          ],
+          [
+            1.4
+          ],
+          [
+            1.5
+          ],
+          [
+            0.0519
           ]
         ]
       },
@@ -124,13 +157,15 @@
           "EN-MIN",
           "EN-MAX",
           "DATA",
-          "ERR-S"
+          "ERR-S",
+          "FLAG"
         ],
         "units": [
           "KEV",
           "KEV",
           "MICRO-B",
-          "MICRO-B"
+          "MICRO-B",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -204,11 +239,11 @@
           ],
           [
             0.0,
-            5.0,
-            5.0,
-            4.0,
-            2.4,
+            2.5,
+            2.5,
             2.0,
+            1.2,
+            1.0,
             0.6,
             0.5,
             0.6,
@@ -224,6 +259,29 @@
             720.0,
             1290.0,
             2200.0
+          ],
+          [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
           ]
         ]
       }
@@ -232,15 +290,27 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "add-res": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Additional cross section averaged over energy intervals",
+              " where averaged cross sections with thinner bins are",
+              " compiled in 002:",
+              "    Energy interval          Cross section",
+              "        (keV)                    (ub)",
+              "       1   -  20              1.4 +/- 2.8",
+              "      20   - 100              2.3 +/- 2.0",
+              "       0.1 - 100              2.0 +/- 1.4"
+            ]
+          }
+        ],
         "detector": [
           {
             "x4_code": "(FISCH)",
             "free_txt": [
               " Fission-fragment detector consisted of 10",
-              "  electronically independent sections.",
-              "  A total of 5831 mg thorium in the fist and last four",
-              "  sections. The middle sections contained 649 mg of",
-              "  235U"
+              " electronically independent sections."
             ]
           }
         ],
@@ -255,37 +325,43 @@
         "inc-source": [
           {
             "x4_code": "(PHOTO)",
-            "free_txt": []
+            "free_txt": [
+              " Photoneutrons from water-cooled Ta target"
+            ]
           }
         ],
         "method": [
           {
             "x4_code": "(TOF)",
-            "free_txt": []
+            "free_txt": [
+              " 24.874 m flight path length"
+            ]
           }
         ],
-        "monitor": [
+        "sample": [
           {
-            "x4_code": "(92-U-235(N,F),,SIG)",
+            "x4_code": null,
             "free_txt": [
-              "232Th/235U cross section ratio normalized in the",
-              " 1.4-1.5 MeV interval to 0.0519 obtained from",
-              " ENDF/B-V. 232Th fission cross section obtained",
-              " using ENDF/B-V 235U fission cross sections."
+              " Th (5831 mg in total) in the first and last four",
+              "  sections; each section consisted of eight deposits",
+              "  of ~1.2 mg/cm2.",
+              " 235U (649 mg in total) in the two central sections;",
+              "  each section consisted of four deposits of 1 mg/cm2."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
-            "free_txt": [
-              "Ratio and fission cross section data not available."
-            ]
-          },
-          {
             "x4_code": "(APRVD)",
             "free_txt": [
               " R.B.Perez, 1984/10/15."
+            ]
+          },
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table II-III of Phys.Rev.C28(1983)1635",
+              " Ratio and fission cross section data not available."
             ]
           }
         ]
@@ -297,10 +373,10 @@
           {
             "x4_code": null,
             "free_txt": [
-              "Corrections were made for neutron scattering from",
-              " the structural material in the fission chamber.",
-              "Negative averaged cross sections in the low energy",
-              "  region are due to background subtraction."
+              "Corrected for",
+              "- neutron scattering from structural material in detect",
+              "- background which makes cross section negative in low",
+              "  energy"
             ]
           }
         ],
@@ -308,27 +384,43 @@
           {
             "x4_code": "(ERR-SYS)",
             "free_txt": [
-              " Systematic uncertainty consists of",
-              " uncertainties due to:",
-              " . normalization",
-              " . background subtraction",
-              " . corrections for structural material neutron",
-              "   scatterng"
+              " Systematic uncertainty (5%) due to",
+              " - normalization",
+              " - background subtraction",
+              " - corrections for structural material neutron",
+              "   scattering"
             ]
           },
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical uncertainties based on two",
-              "           two standard deviations."
+              " standard deviations."
             ]
           }
         ],
-        "status": [
+        "flag": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(1.)",
             "free_txt": [
-              " Data taken from Tables II & III in reference."
+              " Two standard deviation in the article converted",
+              " to one standard deviation by the compiler."
+            ]
+          }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(,,3,ENDF/B-V,,1978)",
+            "free_txt": [
+              " En**(-0.81) shape assumed below 100 keV"
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "((90-TH-232(N,F),,SIG,,AV)/(90-TH-232(N,F),,SIG,,AV))",
+            "free_txt": [
+              " Measured shape ratio normalized to absolute ratio"
             ]
           }
         ]

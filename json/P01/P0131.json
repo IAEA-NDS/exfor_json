@@ -1,7 +1,7 @@
 {
   "entry": "P0131",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-06-26",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19830620T)",
@@ -14,10 +14,17 @@
       "free_txt": [
         " Converted to new date formats; BIB updated."
       ]
+    },
+    {
+      "x4_code": "(20221004A)",
+      "free_txt": [
+        " BP: added DETECTOR, doi, APS meeting",
+        "reference. Updated METHOD and STATUS."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Tritium Production from Lithium by Deuterium Bombardment",
+    "title": "Tritium Production from Lithium by Deuteron Bombardment",
     "authors": [
       {
         "name": "R.L.Macklin"
@@ -35,15 +42,30 @@
     "references": [
       {
         "x4_code": "(J,PR,97,753,1955)",
-        "free_txt": [],
+        "free_txt": [
+          "#doi:10.1103/PhysRev.97.753"
+        ],
         "publication_year": "1955",
+        "doi": "10.1103/PhysRev.97.753",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PR,93,924(K7),1954)",
+        "free_txt": [
+          " APS meeting reference.",
+          "#doi:10.1103/PhysRev.93.909"
+        ],
+        "publication_year": "1954",
+        "doi": "10.1103/PhysRev.93.909",
         "pointer": "0"
       }
     ],
     "facilities": [
       {
         "x4_code": "(VDG,1USAORL)",
-        "free_txt": [],
+        "free_txt": [
+          " The ORNL 2.5-MeV Van de Graaff."
+        ],
         "pointer": "0",
         "facility_type": "(VDG)",
         "institute": "(1USAORL)"
@@ -76,7 +98,8 @@
           }
         ],
         "type": null,
-        "free_text": ""
+        "free_text": "",
+        "pointer": "0"
       }
     },
     "003": {
@@ -104,7 +127,8 @@
           }
         ],
         "type": null,
-        "free_text": ""
+        "free_text": "",
+        "pointer": "0"
       }
     }
   },
@@ -196,7 +220,19 @@
       }
     },
     "003": {
-      "common": null,
+      "common": {
+        "heads": [
+          "DATA-ERR"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            5.0
+          ]
+        ]
+      },
       "data": {
         "heads": [
           "EN",
@@ -268,24 +304,32 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "detector": [
+          {
+            "x4_code": "(PROPC)",
+            "free_txt": []
+          }
+        ],
         "facility": [
           {
             "x4_code": "(VDG,1USAORL)",
-            "free_txt": []
+            "free_txt": [
+              " The ORNL 2.5-MeV Van de Graaff."
+            ]
           }
         ],
         "method": [
           {
-            "x4_code": "(RCHEM)",
-            "free_txt": []
-          }
-        ],
-        "status": [
-          {
-            "x4_code": "(CPX)",
+            "x4_code": "(CHSEP)",
             "free_txt": [
-              " Data from CPX compiled in 1964/67 by",
-              " F.K. McGowan et al."
+              " The tritium production cross section has been",
+              "measured for Li bombarded by deuterons from 0.4 MeV",
+              "to 4.0 MeV. The tritium was quantitatively recovered",
+              "by cooking the sample twice at 1100 degree C in an",
+              "atmosphere of argon containing 1% hydrogen. The gas",
+              "was transferred to a beta proportional counter tube",
+              "after cooling to 300 degree C and argon containing 10",
+              "percent methane added for counting."
             ]
           }
         ]
@@ -295,12 +339,19 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(DATA-ERR,5.,15.)",
             "free_txt": [
-              "Data uncertainties are:",
-              ". above 2.3 Mev: 15%.",
-              ", below 2.3 MeV: values above 10 mb are correct to 5%."
+              " Experimental errors. Data",
+              "uncertainties are:",
+              ". above 2.3 MeV: 15%.",
+              ". below 2.3 MeV: values above 10 mb are correct to 5%."
             ]
+          }
+        ],
+        "rad-det": [
+          {
+            "x4_code": "(1-H-3,B)",
+            "free_txt": []
           }
         ],
         "sample": [
@@ -308,7 +359,17 @@
             "x4_code": null,
             "free_txt": [
               "LiF, enriched in 7Li, evaporated onto aluminum disks.",
-              " Sample contained 55 ppm 6Li."
+              "Sample contained 55 ppm 6Li."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CPX)",
+            "free_txt": [
+              " Data from CPX compiled in 1964/67 by",
+              "F.K. McGowan et al. Also shown in Fig. 2, page 755 of",
+              "J,PR,97,753,1955."
             ]
           }
         ]
@@ -318,18 +379,38 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              "Data uncertainty estimated at 5%."
+              " Experimental errors. Data uncertainty",
+              "estimated at 5%."
             ]
+          }
+        ],
+        "rad-det": [
+          {
+            "x4_code": "(1-H-3,B)",
+            "free_txt": []
           }
         ],
         "sample": [
           {
-            "x4_code": null,
+            "x4_code": "(3-LI-6,ENR=0.7631)",
             "free_txt": [
-              "LiF, enriched to 76.31% 6Li, evaporated onto aluminum",
-              " disks."
+              " The target material was lithium",
+              "Fluoride enriched in either isotope. The enriched Li",
+              "contained 76.31+-0.04 atom percent Li6 as determined",
+              "by mass spectrometry. It was evaporated evaporated",
+              "onto aluminum disks."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CPX)",
+            "free_txt": [
+              " Data from CPX compiled in 1964/67 by",
+              "F.K. McGowan et al. Also shown in Fig. 3, page 756 of",
+              "J,PR,97,753,1955."
             ]
           }
         ]

@@ -1,29 +1,35 @@
 {
   "entry": "11105",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-09-13",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(760924T)",
+      "x4_code": "(19760924T)",
       "free_txt": [
-        " TRANSLATED FROM SCISRS"
+        " Translated from SCISRS"
       ]
     },
     {
-      "x4_code": "(800814A)",
+      "x4_code": "(19800814A)",
       "free_txt": [
-        " CONVERTED TO REACTION FORMALISM"
+        " Converted to REACTION formalism"
       ]
     },
     {
-      "x4_code": "(840517A)",
+      "x4_code": "(19840517A)",
       "free_txt": [
-        " BIB, DATA HEADINGS CORRECTED."
+        " BIB, data headings corrected"
+      ]
+    },
+    {
+      "x4_code": "(20230420A)",
+      "free_txt": [
+        " On. Major alterations in 002-004."
       ]
     }
   ],
   "bib_record": {
-    "title": "CROSS SECTION FOR THE LI6(N,ALPHA)H3 REACTION FOR E(N) BETWEEN 1.2 AND 8.0 MEV.",
+    "title": "Cross section for the Li6(n,aL)H3 reaction for 1.2<En<8.0 MeV",
     "authors": [
       {
         "name": "R.B.Murray"
@@ -40,10 +46,22 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,115,1707,59)",
+        "x4_code": "(J,PR,115,1707,1959)",
         "free_txt": [],
         "publication_year": "1959",
+        "doi": null,
         "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG,1USAORL)",
+        "free_txt": [
+          " ORNL 5.5-Mv Van de Graaff"
+        ],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(1USAORL)"
       }
     ]
   },
@@ -92,7 +110,8 @@
           }
         ],
         "type": "/",
-        "free_text": ""
+        "free_text": "",
+        "pointer": "1"
       },
       "2": {
         "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
@@ -118,7 +137,8 @@
           }
         ],
         "type": null,
-        "free_text": ""
+        "free_text": "",
+        "pointer": "2"
       }
     },
     "003": {
@@ -165,7 +185,8 @@
           }
         ],
         "type": "/",
-        "free_text": ""
+        "free_text": "",
+        "pointer": "1"
       },
       "2": {
         "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
@@ -191,7 +212,8 @@
           }
         ],
         "type": null,
-        "free_text": ""
+        "free_text": "",
+        "pointer": "2"
       }
     },
     "004": {
@@ -238,7 +260,8 @@
           }
         ],
         "type": "/",
-        "free_text": ""
+        "free_text": "",
+        "pointer": "1"
       },
       "2": {
         "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
@@ -264,20 +287,33 @@
           }
         ],
         "type": null,
-        "free_text": ""
+        "free_text": "",
+        "pointer": "2"
       }
     }
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-SYS"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            7.0
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
       "data": {
         "heads": [
           "EN",
-          "RATIO     1",
+          "DATA      1",
           "DATA      2",
           "DATA-ERR  2",
           "MONIT     2"
@@ -378,7 +414,7 @@
       "data": {
         "heads": [
           "EN",
-          "RATIO     1",
+          "DATA      1",
           "DATA      2",
           "DATA-ERR  2",
           "MONIT     2"
@@ -459,17 +495,19 @@
       "data": {
         "heads": [
           "EN",
-          "RATIO     1",
+          "DATA      1",
           "DATA      2",
           "DATA-ERR  2",
-          "MONIT     2"
+          "MONIT     2",
+          "FLAG"
         ],
         "units": [
           "MEV",
           "NO-DIM",
           "B",
           "B",
-          "B"
+          "B",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -525,7 +563,7 @@
             0.005
           ],
           [
-            0.463,
+            0.465,
             0.535,
             0.545,
             0.545,
@@ -536,6 +574,19 @@
             0.535,
             0.54,
             0.54
+          ],
+          [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
           ]
         ]
       }
@@ -548,14 +599,39 @@
           {
             "x4_code": "(SCIN)",
             "free_txt": [
-              " SCINTILLATION CRYSTAL"
+              " LiI(Eu) scintillation crystal"
+            ]
+          },
+          {
+            "x4_code": "(IOCH)",
+            "free_txt": [
+              " thin-walled ionization chamber for fission",
+              " event counts"
             ]
           }
         ],
-        "status": [
+        "err-analys": [
           {
-            "x4_code": "(SCSRS)",
-            "free_txt": []
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Standard errors from counting statistics",
+              " and other uncertainties varying from point-to-point."
+            ]
+          },
+          {
+            "x4_code": "(ERR-SYS)",
+            "free_txt": [
+              " Energy independent uncertainties such as",
+              " 238U mass, 238U(n,f) cross section scale (7%)"
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(VDG,1USAORL)",
+            "free_txt": [
+              " ORNL 5.5-Mv Van de Graaff"
+            ]
           }
         ]
       }
@@ -565,8 +641,28 @@
         "inc-source": [
           {
             "x4_code": "(P-T)",
+            "free_txt": []
+          }
+        ],
+        "method": [
+          {
+            "x4_code": null,
             "free_txt": [
-              " T(P,N) SOURCE"
+              "Experiment No.3"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,R.B.Murray+,J,PR,115,1707,1959)",
+            "free_txt": [
+              " Table II of Phys.Rev.115(1959)1707"
+            ]
+          },
+          {
+            "x4_code": "(COREL,11105003)",
+            "free_txt": [
+              " Data taken with D(d,n) source"
             ]
           }
         ]
@@ -575,7 +671,9 @@
         "monitor": [
           {
             "x4_code": "(93-NP-237(N,F),,SIG)",
-            "free_txt": []
+            "free_txt": [
+              " H.W.Schmitt and R.B.Murray, to be published"
+            ]
           }
         ]
       }
@@ -585,8 +683,28 @@
         "inc-source": [
           {
             "x4_code": "(D-D)",
+            "free_txt": []
+          }
+        ],
+        "method": [
+          {
+            "x4_code": null,
             "free_txt": [
-              " D(D,N) SOURCE"
+              "Experiment No.3"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,R.B.Murray+,J,PR,115,1707,1959)",
+            "free_txt": [
+              " Table II of Phys.Rev.115(1959)1707"
+            ]
+          },
+          {
+            "x4_code": "(COREL,11105002)",
+            "free_txt": [
+              " Data taken with T(p,n) source"
             ]
           }
         ]
@@ -595,23 +713,51 @@
         "monitor": [
           {
             "x4_code": "(93-NP-237(N,F),,SIG)",
-            "free_txt": []
+            "free_txt": [
+              " H.W.Schmitt and R.B.Murray, to be published"
+            ]
           }
         ]
       }
     },
     "004": {
       "0": {
+        "flag": [
+          {
+            "x4_code": "(1.)",
+            "free_txt": [
+              " Experiment No.1"
+            ]
+          },
+          {
+            "x4_code": "(2.)",
+            "free_txt": [
+              " Experiment No.2"
+            ]
+          }
+        ],
         "inc-source": [
           {
             "x4_code": "(P-T)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,R.B.Murray+,J,PR,115,1707,1959)",
             "free_txt": [
-              " T(P,N) SOURCE"
+              " Table I of Phys.Rev.115(1959)1707"
             ]
           }
         ]
       },
       "2": {
+        "monit-ref": [
+          {
+            "x4_code": "(,R.L.Henkel,R,LA-2114,1957)",
+            "free_txt": []
+          }
+        ],
         "monitor": [
           {
             "x4_code": "(92-U-238(N,F),,SIG)",

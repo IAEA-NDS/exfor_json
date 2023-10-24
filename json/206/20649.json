@@ -1,19 +1,22 @@
 {
   "entry": "20649",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-05-23",
+  "number_of_revisions": "4",
   "histories": [
     {
-      "x4_code": "(760903C)",
+      "x4_code": "(19760903C)",
       "free_txt": []
     },
     {
-      "x4_code": "(770331E)",
-      "free_txt": []
+      "x4_code": "(20230130A)",
+      "free_txt": [
+        " SD:Updated to new date formats,lower case.",
+        "Corrections in all Subents."
+      ]
     }
   ],
   "bib_record": {
-    "title": "-THERMAL ACTIVATION CROSS SECTIONS AND RESONANCE INTEGRALS OF IN-115.-",
+    "title": " Thermal activation cross sections and resonance integrals of In-115",
     "authors": [
       {
         "name": "K.H.Beckurts"
@@ -42,17 +45,38 @@
     ],
     "references": [
       {
-        "x4_code": "(J,NSE,17,329,6311)",
+        "x4_code": "(J,NSE,17,329,1963)",
         "free_txt": [],
         "publication_year": "1963",
+        "doi": null,
         "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(REAC,2GERKFK)",
+        "free_txt": [
+          " Karlsruhe Argonaut Reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2GERKFK)"
+      },
+      {
+        "x4_code": "(REAC,2GERMUN)",
+        "free_txt": [
+          " FRM (Munich) reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(2GERMUN)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(49-IN-115(N,G)49-IN-116-M,,SIG,,MXW)",
+        "x4_code": "(49-IN-115(N,G)49-IN-116-M1+M2,,SIG,,MXW)",
         "children": [
           {
             "code": [
@@ -60,13 +84,13 @@
               [
                 "N,G"
               ],
-              "49-IN-116-M,,SIG,,MXW"
+              "49-IN-116-M1+M2,,SIG,,MXW"
             ],
             "type": null,
             "target": "49-IN-115",
             "process": "N,G",
-            "sf49": "49-IN-116-M,,SIG,,MXW",
-            "sf4": "49-IN-116-M",
+            "sf49": "49-IN-116-M1+M2,,SIG,,MXW",
+            "sf4": "49-IN-116-M1+M2",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
@@ -75,7 +99,8 @@
           }
         ],
         "type": null,
-        "free_text": " THERMAL CROSS SECTION FOR THE BUILDING OF THE 54.12 MIN METASTABLE STATE."
+        "free_text": "",
+        "pointer": "0"
       }
     },
     "003": {
@@ -103,7 +128,8 @@
           }
         ],
         "type": null,
-        "free_text": " THERMAL CROSS SECTION FOR THE BUILDING OF THE GROUND STATE (14.12 SEC)."
+        "free_text": "",
+        "pointer": "0"
       }
     },
     "004": {
@@ -131,12 +157,13 @@
           }
         ],
         "type": null,
-        "free_text": " THERMAL CROSS SECTION."
+        "free_text": "",
+        "pointer": "0"
       }
     },
     "005": {
       "0": {
-        "x4_code": "(49-IN-115(N,G)49-IN-116-M,,RI)",
+        "x4_code": "(49-IN-115(N,G)49-IN-116-M1+M2,,RI)",
         "children": [
           {
             "code": [
@@ -144,13 +171,13 @@
               [
                 "N,G"
               ],
-              "49-IN-116-M,,RI"
+              "49-IN-116-M1+M2,,RI"
             ],
             "type": null,
             "target": "49-IN-115",
             "process": "N,G",
-            "sf49": "49-IN-116-M,,RI",
-            "sf4": "49-IN-116-M",
+            "sf49": "49-IN-116-M1+M2,,RI",
+            "sf4": "49-IN-116-M1+M2",
             "sf5": null,
             "sf6": "RI",
             "sf7": null,
@@ -159,7 +186,8 @@
           }
         ],
         "type": null,
-        "free_text": " RESONANCE INTEGRAL FOR THE BUILDING OF THE 54.12 MIN METASTABLE STATE INCLUDING THE 1/V-CONTRIBUTION."
+        "free_text": "",
+        "pointer": "0"
       }
     },
     "006": {
@@ -187,7 +215,8 @@
           }
         ],
         "type": null,
-        "free_text": " RESONANCE INTEGRAL FOR THE BUILDING OF THE GROUND STATE (14.12 SEC) INCLUDING THE 1/V-CONTRIBUTION."
+        "free_text": "",
+        "pointer": "0"
       }
     },
     "007": {
@@ -215,13 +244,31 @@
           }
         ],
         "type": null,
-        "free_text": " RESONANCE INTEGRAL INCLUDING THE 1/V-CONTRIBUTION."
+        "free_text": "",
+        "pointer": "0"
       }
     }
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "MONIT",
+          "MONIT-ERR"
+        ],
+        "units": [
+          "B",
+          "B"
+        ],
+        "data": [
+          [
+            98.8
+          ],
+          [
+            0.3
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -230,14 +277,12 @@
           "EN-DUMMY",
           "DATA",
           "DATA-ERR",
-          "HL",
           "HL-ERR"
         ],
         "units": [
           "EV",
           "B",
           "B",
-          "MIN",
           "MIN"
         ],
         "data": [
@@ -249,9 +294,6 @@
           ],
           [
             3.0
-          ],
-          [
-            54.12
           ],
           [
             0.05
@@ -266,14 +308,12 @@
           "EN-DUMMY",
           "DATA",
           "DATA-ERR",
-          "HL",
           "HL-ERR"
         ],
         "units": [
           "EV",
           "B",
           "B",
-          "SEC",
           "SEC"
         ],
         "data": [
@@ -285,9 +325,6 @@
           ],
           [
             1.0
-          ],
-          [
-            14.12
           ],
           [
             0.03
@@ -328,14 +365,12 @@
           "EN-MIN",
           "DATA",
           "DATA-ERR",
-          "HL",
           "HL-ERR"
         ],
         "units": [
           "EV",
           "B",
           "B",
-          "MIN",
           "MIN"
         ],
         "data": [
@@ -347,9 +382,6 @@
           ],
           [
             85.0
-          ],
-          [
-            54.12
           ],
           [
             0.05
@@ -364,14 +396,12 @@
           "EN-MIN",
           "DATA",
           "DATA-ERR",
-          "HL",
           "HL-ERR"
         ],
         "units": [
           "EV",
           "B",
           "B",
-          "SEC",
           "SEC"
         ],
         "data": [
@@ -383,9 +413,6 @@
           ],
           [
             45.0
-          ],
-          [
-            14.12
           ],
           [
             0.03
@@ -427,10 +454,10 @@
           {
             "x4_code": null,
             "free_txt": [
-              ".THE THERMAL CROSS SECTIONS WERE MEASURED IN A",
-              " THERMAL COLUMN OF FR2-REACTOR.",
-              ".THE RESONANCE INTEGRALS WERE DETERMINED THROUGH",
-              " CADMIUM RATIOS MEASUREMENTS IN FRM-REACTOR."
+              " The thermal cross sections were measured in a",
+              " thermal column of FR2-reactor.",
+              " The resonance integrals were determined through",
+              " cadmium ratios measurements in FRM-reactor."
             ]
           }
         ],
@@ -438,9 +465,9 @@
           {
             "x4_code": null,
             "free_txt": [
-              ".FOR NEUTRON SELF-SHIELDING.",
-              ".BACKGROUND, DEAD TIME, RANDOM COINCIDENCES, GAMMA",
-              " SENSITIVITY OF THE COUNTER AND SELF ABSORPTION."
+              " For neutron self-shielding.",
+              " Background, dead time, random coincidences, gamma",
+              " sensitivity of the counter and self absorption."
             ]
           }
         ],
@@ -448,66 +475,72 @@
           {
             "x4_code": null,
             "free_txt": [
-              ".CURVES FOR BETA SELF ABSORPTION OF IN-116M (T1/2=",
-              " 14 SEC) AND FOR SELF SHIELDING IN INDIUM AND GOLD",
-              " FOILS ARE GIVEN."
+              " Curves for beta self absorption of In-116m (t1/2=",
+              " 14 sec) and for self shielding in indium and gold",
+              " foils are given."
             ]
           }
         ],
         "detector": [
           {
-            "x4_code": "(COIN )",
+            "x4_code": "(COIN)",
             "free_txt": [
-              " 4PI-BETA-GAMMA COINCIDENCE COUNTER."
+              " 4Pi-beta-gamma coincidence counter."
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              ".STANDARD DEVIATION.",
-              ".UNCERTAINTY IN THE THERMAL CROSS SECTION OF GOLD."
+              " Standard deviation."
+            ]
+          },
+          {
+            "x4_code": "(MONIT-ERR)",
+            "free_txt": [
+              " Uncertainty in the monitor reaction"
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(REAC,2GERKFK)",
+            "free_txt": [
+              " Karlsruhe Argonaut Reactor"
+            ]
+          },
+          {
+            "x4_code": "(REAC,2GERMUN)",
+            "free_txt": [
+              " FRM (Munich) reactor"
             ]
           }
         ],
         "inc-source": [
           {
-            "x4_code": "(REAC )",
-            "free_txt": [
-              " FR2 (KARLSRUHE) AND FRM (MUNICH) REACTORS."
-            ]
+            "x4_code": "(REAC)",
+            "free_txt": []
           }
         ],
         "method": [
           {
-            "x4_code": "(ACTIV)",
-            "free_txt": [
-              " ACTIVATION."
-            ]
+            "x4_code": "(ACTIV,STTA)",
+            "free_txt": []
           }
         ],
         "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
-            "free_txt": [
-              " THERMAL CROSS SECTION = 98.8+-0.3 B."
-            ]
+            "free_txt": []
           }
         ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              ".INDIUM AND GOLD FOILS."
-            ]
-          }
-        ],
-        "status": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              ".TAKEN FROM NUCL.SCI.ENGINEERING, 17(1963)329."
+              "Indium foils of thicknesses ranging from 8.82 to",
+              "37.63 mg/cm2"
             ]
           }
         ]
@@ -515,11 +548,19 @@
     },
     "002": {
       "0": {
-        "half-life": [
+        "decay-data": [
           {
-            "x4_code": "(HL,49-IN-116-M2)",
+            "x4_code": "(49-IN-116-M1,54.12MIN)",
             "free_txt": [
-              "  HALF LIFE USED IN THE EXPERIMENT."
+              " +-0.005 min"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Text on p.330 Nucl.Sci.Engin., 17(1963)329."
             ]
           }
         ]
@@ -527,11 +568,19 @@
     },
     "003": {
       "0": {
-        "half-life": [
+        "decay-data": [
           {
-            "x4_code": "(HL,49-IN-116-G)",
+            "x4_code": "(49-IN-116-G,14.10SEC)",
             "free_txt": [
-              "  HALF LIFE USED IN THE EXPERIMENT."
+              " +-0.003 sec"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Text on p.331 Nucl.Sci.Engin., 17(1963)329."
             ]
           }
         ]
@@ -541,10 +590,22 @@
       "0": {
         "status": [
           {
-            "x4_code": "(DEP  )",
+            "x4_code": "(TABLE)",
             "free_txt": [
-              " ARITHMETICAL SUM OF THE THERMAL CROSS SECTIONS",
-              " FOR THE BUILDING OF THE METASTABLE AND GROUND STATE."
+              " Text on p.334 Nucl.Sci.Engin., 17(1963)329."
+            ]
+          },
+          {
+            "x4_code": "(DEP,20649002)",
+            "free_txt": [
+              " Arithmetical sum of the thermal"
+            ]
+          },
+          {
+            "x4_code": "(DEP,20649003)",
+            "free_txt": [
+              " cross sections for the building of",
+              " the metastable and ground state."
             ]
           }
         ]
@@ -552,11 +613,19 @@
     },
     "005": {
       "0": {
-        "half-life": [
+        "decay-data": [
           {
-            "x4_code": "(HL,49-IN-116-M2)",
+            "x4_code": "(49-IN-116-M1,54.12MIN)",
             "free_txt": [
-              "  HALF LIFE USED IN THE EXPERIMENT."
+              " +-0.005 min"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Text on p.334 Nucl.Sci.Engin., 17(1963)329."
             ]
           }
         ]
@@ -564,11 +633,19 @@
     },
     "006": {
       "0": {
-        "half-life": [
+        "decay-data": [
           {
-            "x4_code": "(HL,49-IN-116-G)",
+            "x4_code": "(49-IN-116-G,14.10SEC)",
             "free_txt": [
-              "  HALF LIFE USED IN THE EXPERIMENT."
+              " +-0.003 sec"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Text on p.334 Nucl.Sci.Engin., 17(1963)329."
             ]
           }
         ]
@@ -578,10 +655,22 @@
       "0": {
         "status": [
           {
-            "x4_code": "(DEP  )",
+            "x4_code": "(TABLE)",
             "free_txt": [
-              " ARITHMETICAL SUM OF THE RESONANCE INTEGRALS",
-              " FOR THE BUILDING OF THE METASTABLE AND GROUND STATE."
+              " Text on p.334 Nucl.Sci.Engin., 17(1963)329."
+            ]
+          },
+          {
+            "x4_code": "(DEP,20649005)",
+            "free_txt": [
+              " Arithmetical sum of the thermal"
+            ]
+          },
+          {
+            "x4_code": "(DEP,20649006)",
+            "free_txt": [
+              " cross sections for the building of",
+              " the metastable and ground state."
             ]
           }
         ]

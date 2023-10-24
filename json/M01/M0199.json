@@ -1,7 +1,7 @@
 {
   "entry": "M0199",
-  "last_updated": "2011-10-03",
-  "number_of_revisions": "4",
+  "last_updated": "2023-06-12",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19870807C)",
@@ -19,6 +19,13 @@
         " Corrected   by   V.Varlamov:   REFERENCE,",
         " INSTITUTE, FACILITY, BRS -> BRA, ELEMENT,  DATA-ERR,",
         " dates, lowercase."
+      ]
+    },
+    {
+      "x4_code": "(20230410A)",
+      "free_txt": [
+        " Corrected by V.Varlamov: REFERENCE,",
+        " PART-DET, ANALYSIS, ERR-ANALYS, STATUS, REACTION."
       ]
     }
   ],
@@ -43,17 +50,19 @@
     ],
     "references": [
       {
-        "x4_code": "(J,AE,35,214,1973)",
-        "free_txt": [],
-        "publication_year": "1973",
-        "pointer": "0"
-      },
-      {
         "x4_code": "(J,SJA,35,866,1973)",
         "free_txt": [
           " English translation of AE,35,214,1973."
         ],
         "publication_year": "1973",
+        "doi": null,
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,AE,35,214,1973)",
+        "free_txt": [],
+        "publication_year": "1973",
+        "doi": null,
         "pointer": "0"
       }
     ],
@@ -70,7 +79,7 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(92-U-235(G,F)ELEM/MASS,CHN,FY,,BRA)",
+        "x4_code": "(92-U-235(G,F)MASS,CHN,FY,,BRA)",
         "children": [
           {
             "code": [
@@ -78,13 +87,13 @@
               [
                 "G,F"
               ],
-              "ELEM/MASS,CHN,FY,,BRA"
+              "MASS,CHN,FY,,BRA"
             ],
             "type": null,
             "target": "92-U-235",
             "process": "G,F",
-            "sf49": "ELEM/MASS,CHN,FY,,BRA",
-            "sf4": "ELEM/MASS",
+            "sf49": "MASS,CHN,FY,,BRA",
+            "sf4": "MASS",
             "sf5": "CHN",
             "sf6": "FY",
             "sf7": null,
@@ -93,7 +102,8 @@
           }
         ],
         "type": null,
-        "free_text": ""
+        "free_text": "",
+        "pointer": "0"
       }
     }
   },
@@ -117,38 +127,28 @@
       "common": null,
       "data": {
         "heads": [
-          "ELEMENT",
           "MASS",
           "DATA",
-          "DATA-ERR"
+          "DATA-ERR",
+          "MISC"
         ],
         "units": [
           "NO-DIM",
-          "NO-DIM",
           "PC/FIS",
-          "PC/FIS"
+          "PC/FIS",
+          "NO-DIM"
         ],
         "data": [
           [
             46.0,
             46.0,
             47.0,
-            47.0,
             48.0,
             48.0
           ],
           [
-            109.0,
-            112.0,
-            111.0,
-            113.0,
-            115.0,
-            117.0
-          ],
-          [
             0.292,
             0.142,
-            0.189,
             0.17,
             0.224,
             0.218
@@ -158,8 +158,14 @@
             0.013,
             0.02,
             0.02,
-            0.02,
             0.021
+          ],
+          [
+            109.0,
+            112.0,
+            113.0,
+            115.0,
+            117.0
           ]
         ]
       }
@@ -178,7 +184,7 @@
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " No information."
+              " No information on source of data."
             ]
           }
         ],
@@ -199,23 +205,38 @@
             "x4_code": "(EXTB,SITA,CHSEP)",
             "free_txt": []
           }
-        ],
-        "part-det": [
+        ]
+      }
+    },
+    "002": {
+      "0": {
+        "analysis": [
           {
-            "x4_code": "(FF)",
-            "free_txt": []
+            "x4_code": null,
+            "free_txt": [
+              "Measured results were converted to the value of the",
+              " total yields."
+            ]
+          }
+        ],
+        "misc-col": [
+          {
+            "x4_code": "(MISC)",
+            "free_txt": [
+              " Atomic number of the product measured."
+            ]
           }
         ],
         "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Data from Table."
+              " Data from Table",
+              " of AE,35,214,1973."
             ]
           }
         ]
       }
-    },
-    "002": {}
+    }
   }
 }

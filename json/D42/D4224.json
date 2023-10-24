@@ -1,12 +1,18 @@
 {
   "entry": "D4224",
-  "last_updated": "2009-12-24",
-  "number_of_revisions": "1",
+  "last_updated": "2023-05-29",
+  "number_of_revisions": "2",
   "histories": [
     {
       "x4_code": "(20090701C)",
       "free_txt": [
         " KB"
+      ]
+    },
+    {
+      "x4_code": "(20221004A)",
+      "free_txt": [
+        " On. Major revisions in 002."
       ]
     }
   ],
@@ -31,6 +37,7 @@
         "x4_code": "(J,PR,129,1709,1963)",
         "free_txt": [],
         "publication_year": "1963",
+        "doi": null,
         "pointer": "0"
       }
     ],
@@ -70,7 +77,8 @@
           }
         ],
         "type": null,
-        "free_text": ""
+        "free_text": "",
+        "pointer": "M"
       },
       "G": {
         "x4_code": "(55-CS-133(P,3N)56-BA-131-G,,SIG)",
@@ -96,59 +104,8 @@
           }
         ],
         "type": null,
-        "free_text": ""
-      },
-      "N": {
-        "x4_code": "(55-CS-133(P,3N)56-BA-131-M,,SIG)",
-        "children": [
-          {
-            "code": [
-              "55-CS-133",
-              [
-                "P,3N"
-              ],
-              "56-BA-131-M,,SIG"
-            ],
-            "type": null,
-            "target": "55-CS-133",
-            "process": "P,3N",
-            "sf49": "56-BA-131-M,,SIG",
-            "sf4": "56-BA-131-M",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          }
-        ],
-        "type": null,
-        "free_text": " Corrected data."
-      },
-      "H": {
-        "x4_code": "(55-CS-133(P,3N)56-BA-131-G,,SIG)",
-        "children": [
-          {
-            "code": [
-              "55-CS-133",
-              [
-                "P,3N"
-              ],
-              "56-BA-131-G,,SIG"
-            ],
-            "type": null,
-            "target": "55-CS-133",
-            "process": "P,3N",
-            "sf49": "56-BA-131-G,,SIG",
-            "sf4": "56-BA-131-G",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          }
-        ],
-        "type": null,
-        "free_text": " Corrected data."
+        "free_text": "",
+        "pointer": "G"
       }
     }
   },
@@ -162,14 +119,10 @@
         "heads": [
           "EN",
           "DATA      M",
-          "DATA      G",
-          "DATA      N",
-          "DATA      H"
+          "DATA      G"
         ],
         "units": [
           "MEV",
-          "MB",
-          "MB",
           "MB",
           "MB"
         ],
@@ -194,20 +147,6 @@
             450.0,
             230.0,
             120.0
-          ],
-          [
-            150.0,
-            343.0,
-            308.0,
-            153.0,
-            69.0
-          ],
-          [
-            275.0,
-            458.0,
-            375.0,
-            192.0,
-            100.0
           ]
         ]
       }
@@ -216,12 +155,18 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "decay-mon": [
+          {
+            "x4_code": "(6-C-11,21.MIN,AR,510.)",
+            "free_txt": []
+          }
+        ],
         "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
               " NaI(Tl) crystal (3in. x 3in.) coupled to a",
-              "100-channel pulse-height analyzer."
+              " 100-channel pulse-height analyzer."
             ]
           }
         ],
@@ -234,9 +179,12 @@
         "method": [
           {
             "x4_code": "(ACTIV,INTB,GSPEC)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(CHSEP)",
             "free_txt": [
-              "Internal proton beam, various energies.",
-              "Chemical process after irradiation."
+              " Chemical process after irradiation"
             ]
           }
         ],
@@ -249,10 +197,7 @@
         "monitor": [
           {
             "x4_code": "(6-C-12(P,X)6-C-11,,SIG)",
-            "free_txt": [
-              " 510 keV annihilation",
-              "radiation."
-            ]
+            "free_txt": []
           }
         ],
         "sample": [
@@ -267,22 +212,13 @@
     },
     "002": {
       "0": {
-        "correction": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "Original data given by the authors (M and G) were",
-              "corrected by the compiler on the basis of the recent",
-              "decay data (N and H)."
-            ]
-          }
-        ],
         "comment": [
           {
             "x4_code": null,
             "free_txt": [
-              "By the authors: The absolute cross section values seem",
-              "rather high. This may be due to dissociation of the",
+              "By the authors:",
+              " The absolute cross section values seem rather high.",
+              "This may be due to dissociation of the",
               "cesium-carbonate under the irradiation with consequent",
               "loss of 11C activity."
             ]
@@ -292,14 +228,7 @@
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              " Data were taken from Table 1 of the Ref."
-            ]
-          },
-          {
-            "x4_code": "(RNORM,D4224002)",
-            "free_txt": [
-              " Data at REACTION labeled N,H are",
-              "                 corrected by compiler"
+              " Table 1 of Phys.Rev.129(1963)1709"
             ]
           }
         ]
@@ -307,11 +236,10 @@
       "M": {
         "decay-data": [
           {
-            "x4_code": "(56-BA-131-M,14.5MIN,DG,106.,0.10)",
+            "x4_code": "(56-BA-131-M,14.5MIN,DG,106.)",
             "free_txt": [
-              " The 106-keV gamma",
-              "ray was assumed to be 100% abundant and its internal",
-              "conversion coefficient alphaK to be 0.90."
+              "The 106-keV gamma ray was assumed to be 100% abundant",
+              " and its internal conversion coefficient alphaK=0.90."
             ]
           }
         ]
@@ -320,22 +248,6 @@
         "decay-data": [
           {
             "x4_code": "(56-BA-131-G,12.D,DG,495.,0.40)",
-            "free_txt": []
-          }
-        ]
-      },
-      "N": {
-        "decay-data": [
-          {
-            "x4_code": "(56-BA-131-M,,DG,108.45,0.5544)",
-            "free_txt": []
-          }
-        ]
-      },
-      "H": {
-        "decay-data": [
-          {
-            "x4_code": "(56-BA-131-G,,DG,496.321,0.480)",
             "free_txt": []
           }
         ]
