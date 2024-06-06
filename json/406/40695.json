@@ -1,17 +1,28 @@
 {
   "entry": "40695",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-02-02",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(840213T)",
+      "x4_code": "(19840213T)",
       "free_txt": [
-        " CONVERTED FROM ENTRY 80091"
+        " Converted from ENTRY 80091"
+      ]
+    },
+    {
+      "x4_code": "(20231016A)",
+      "free_txt": [
+        " BIB information was updated.",
+        " Upper -> lower case correction.",
+        " Dates were corrected for 4-digits year.",
+        " 4CCPCCP -> 4RUSMIF.",
+        " EN-DUMMY : 0.0253 eV -> 1.MeV (fast neutrons of BR-1),",
+        " MXW -> FST."
       ]
     }
   ],
   "bib_record": {
-    "title": "USE OF GAMMA SPECTROMETRY TO MEASURE THE RATIO BETWEEN THE CAPTURE AND FISSION CROSS SECTIONS OF U238.",
+    "title": "Use of gamma spectrometry to measure the ratio between the capture and fission cross sections of U238",
     "authors": [
       {
         "name": "L.N.Yurova"
@@ -22,21 +33,29 @@
     ],
     "institutes": [
       {
-        "x4_code": "(4CCPCCP)",
-        "free_txt": []
+        "x4_code": "(4RUSMIF)",
+        "free_txt": ""
+      },
+      {
+        "x4_code": "(4RUSFEI)",
+        "free_txt": ""
       }
     ],
     "references": [
       {
-        "x4_code": "(J,AE,20,60,66)",
-        "free_txt": [],
+        "x4_code": "(J,SJA,20,75,1966)",
+        "free_txt": [
+          " Engl.translation of AE,20,60,1966"
+        ],
         "publication_year": "1966",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,SJA,20,75,66)",
-        "free_txt": [],
+        "x4_code": "(J,AE,20,60,1966)",
+        "free_txt": [
+          " Issue 1."
+        ],
         "publication_year": "1966",
         "doi": null,
         "pointer": "0"
@@ -44,20 +63,20 @@
     ],
     "facilities": [
       {
-        "x4_code": "(REAC)",
+        "x4_code": "(REAC,4RUSFEI)",
         "free_txt": [
-          " REACTOR BR-1"
+          " Reactor BR-1"
         ],
         "pointer": "0",
         "facility_type": "(REAC)",
-        "institute": null
+        "institute": "(4RUSFEI)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(92-U-238(N,ABS),,ALF,,MXW)",
+        "x4_code": "(92-U-238(N,ABS),,ALF,,FST)",
         "children": [
           {
             "code": [
@@ -65,17 +84,17 @@
               [
                 "N,ABS"
               ],
-              ",,ALF,,MXW"
+              ",,ALF,,FST"
             ],
             "type": null,
             "target": "92-U-238",
             "process": "N,ABS",
-            "sf49": ",,ALF,,MXW",
+            "sf49": ",,ALF,,FST",
             "sf4": null,
             "sf5": null,
             "sf6": "ALF",
             "sf7": null,
-            "sf8": "MXW",
+            "sf8": "FST",
             "sf9": null
           }
         ],
@@ -86,7 +105,7 @@
     },
     "003": {
       "0": {
-        "x4_code": "(92-U-238(N,ABS),,ALF,,MXW)",
+        "x4_code": "(92-U-238(N,ABS),,ALF,,FST)",
         "children": [
           {
             "code": [
@@ -94,17 +113,17 @@
               [
                 "N,ABS"
               ],
-              ",,ALF,,MXW"
+              ",,ALF,,FST"
             ],
             "type": null,
             "target": "92-U-238",
             "process": "N,ABS",
-            "sf49": ",,ALF,,MXW",
+            "sf49": ",,ALF,,FST",
             "sf4": null,
             "sf5": null,
             "sf6": "ALF",
             "sf7": null,
-            "sf8": "MXW",
+            "sf8": "FST",
             "sf9": null
           }
         ],
@@ -116,7 +135,19 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-S"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.5
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -133,11 +164,11 @@
           "NO-DIM",
           "NO-DIM",
           "PC/FIS",
-          "PER-CENT"
+          "PC/FIS"
         ],
         "data": [
           [
-            2.53e-08
+            1.0
           ],
           [
             0.44
@@ -155,7 +186,19 @@
       }
     },
     "003": {
-      "common": null,
+      "common": {
+        "heads": [
+          "EN-NRM"
+        ],
+        "units": [
+          "EV"
+        ],
+        "data": [
+          [
+            0.0253
+          ]
+        ]
+      },
       "data": {
         "heads": [
           "EN-DUMMY",
@@ -169,7 +212,7 @@
         ],
         "data": [
           [
-            2.53e-08
+            1.0
           ],
           [
             0.42
@@ -184,28 +227,63 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "facility": [
+        "correction": [
           {
-            "x4_code": "(REAC)",
+            "x4_code": null,
             "free_txt": [
-              " REACTOR BR-1"
+              " For backgrounds.",
+              " For spectrometer detection efficiency.",
+              " For gamma-ray absorption in samples."
             ]
           }
         ],
-        "status": [
+        "err-analys": [
           {
-            "x4_code": "(SCSRS)",
-            "free_txt": []
+            "x4_code": "(ERR-S)",
+            "free_txt": [
+              " Statistical uncertainty - 0.5 % ."
+            ]
+          },
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              "article."
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(REAC,4RUSFEI)",
+            "free_txt": [
+              " Reactor BR-1"
+            ]
           }
         ]
       }
     },
     "002": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " See formula (1) in the article"
+            ]
+          }
+        ],
         "decay-data": [
           {
             "x4_code": "(92-U-239,,DG,74.,0.435)",
-            "free_txt": []
+            "free_txt": [
+              " 43.5 +- 3.0 %"
+            ]
+          },
+          {
+            "x4_code": "(93-NP-239,,DG,106.,0.504)",
+            "free_txt": [
+              " 50.4 +- 2.5 %"
+            ]
           }
         ],
         "decay-mon": [
@@ -218,7 +296,11 @@
           {
             "x4_code": "(SCIN)",
             "free_txt": [
-              "     GAS SCINTILLATION COUNTER"
+              " Scintillation spectrometer with NaI(Tl) crystal",
+              "and 100-channel pulse amplitude analyzer.",
+              "Cs-137,Au-198,Hg-203, Ce-144+Pr-144, Na-22 sources were",
+              "used for calibration - photo-efficiency versus",
+              "gamma-energy."
             ]
           }
         ],
@@ -226,7 +308,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              " THERMAL SPECTRUM"
+              " Fast neutrons of BR-1 reactor."
             ]
           }
         ],
@@ -235,16 +317,53 @@
             "x4_code": "(92-U-238(N,F)57-LA-140,CUM,FY)",
             "free_txt": []
           }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " 4.7 mg/mm2 thickness."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.N.Yurova+,J,SJA,20,75,1966)",
+            "free_txt": [
+              " Table of page 76"
+            ]
+          }
         ]
       }
     },
     "003": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " See formula (2) in the article.",
+              " La-140 yields for fission of U-235 and U-238 by",
+              "neutrons with energies up to 10 MeV are practically",
+              "constant."
+            ]
+          }
+        ],
+        "decay-mon": [
+          {
+            "x4_code": "(57-LA-140,,DG,1600.,0.94)",
+            "free_txt": []
+          }
+        ],
         "detector": [
           {
             "x4_code": "(SCIN)",
             "free_txt": [
-              "     GAS SCINTILLATION COUNTER"
+              " Scintillation spectrometer with NaI(Tl) crystal",
+              "and 100-channel pulse amplitude analyzer.",
+              "Cs-137,Au-198,Hg-203, Ce-144+Pr-144, Na-22 sources were",
+              "used for calibration - photo-efficiency versus",
+              "gamma-energy."
             ]
           }
         ],
@@ -252,14 +371,54 @@
           {
             "x4_code": null,
             "free_txt": [
-              " THERMAL SPECTRUM"
+              " Fast neutron flux of BR-1 reactor.",
+              " Thermal spectrum - for normalization."
             ]
           }
         ],
         "monitor": [
           {
-            "x4_code": "(92-U-235(N,F),,SIG)",
-            "free_txt": []
+            "x4_code": "(92-U-235(N,F),,SIG,,MXW)",
+            "free_txt": [
+              " Averaged over Maxwellian",
+              "velocity spectrum of thermal neutrons."
+            ]
+          },
+          {
+            "x4_code": "(92-U-238(N,G)92-U-239,,SIG,,MXW)",
+            "free_txt": [
+              " Averaged over",
+              "Maxwellian velocity spectrum of thermal neutrons."
+            ]
+          },
+          {
+            "x4_code": "(92-U-238(N,F)57-LA-140,CUM,FY,,MXW)",
+            "free_txt": [
+              "For thermal neutrons."
+            ]
+          },
+          {
+            "x4_code": "(92-U-235(N,F)57-LA-140,CUM,FY,,MXW)",
+            "free_txt": [
+              "For thermal neutrons.",
+              ". Monitor values are not given in the article."
+            ]
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Natural. U-235 content 0.726 %."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.N.Yurova+,J,SJA,20,75,1966)",
+            "free_txt": [
+              " Table of page 76"
+            ]
           }
         ]
       }

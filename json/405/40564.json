@@ -1,12 +1,12 @@
 {
   "entry": "40564",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-11-09",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19771202C)",
       "free_txt": [
-        " Compiled at the Centre"
+        " Compiled at the centre"
       ]
     },
     {
@@ -17,6 +17,12 @@
       "x4_code": "(20010130U)",
       "free_txt": [
         " Last checking has been done."
+      ]
+    },
+    {
+      "x4_code": "(20230724U)",
+      "free_txt": [
+        " Upper -> lower case correction."
       ]
     }
   ],
@@ -33,7 +39,7 @@
         "name": "S.M.Kalebin"
       },
       {
-        "name": "G.V.Rukolajne"
+        "name": "G.V.Rukolayne"
       },
       {
         "name": "V.A.Anufriev"
@@ -51,7 +57,7 @@
         "name": "A.G.Kolesov"
       },
       {
-        "name": "S.N.Nikol'Skij"
+        "name": "S.N.Nikol'Skiy"
       },
       {
         "name": "V.N.Nefedov"
@@ -69,16 +75,23 @@
     "institutes": [
       {
         "x4_code": "(4RUSITE)",
-        "free_txt": []
+        "free_txt": [
+          " V.S.Artamonov,R.N.Ivanov,S.M.Kalebin,",
+          " G.V.Rukolayne."
+        ]
       },
       {
         "x4_code": "(4RUSNIR)",
-        "free_txt": []
+        "free_txt": [
+          " V.A.Anufriev,S.I.Babich,T.S.Belanova,",
+          "N.G.Kocherygin,A.G.Kolesov,S.N.Nikol'skiy,V.N.Nefedov,",
+          "V.A.Poruchikov,V.A.Safonov,V.V.Tikhomirov."
+        ]
       }
     ],
     "references": [
       {
-        "x4_code": "(C,77KIEV,2,257,197704)",
+        "x4_code": "((C,77KIEV,2,257,1977)=(R,INDC(CCP)-118,(2),257,1977))",
         "free_txt": [],
         "publication_year": "1977",
         "doi": null,
@@ -89,7 +102,7 @@
       {
         "x4_code": "(REAC,4RUSNIR)",
         "free_txt": [
-          "  Reactor Sm-2"
+          "  Reactor SM-2"
         ],
         "pointer": "0",
         "facility_type": "(REAC)",
@@ -270,7 +283,19 @@
       "common": null
     },
     "002": {
-      "common": null,
+      "common": {
+        "heads": [
+          "ASSUM"
+        ],
+        "units": [
+          "MILLI-EV"
+        ],
+        "data": [
+          [
+            40.0
+          ]
+        ]
+      },
       "data": {
         "heads": [
           "DATA      1",
@@ -379,8 +404,8 @@
     "003": {
       "common": {
         "heads": [
-          "EN-MIN",
-          "EN-MAX"
+          "EN-RES-MIN",
+          "EN-RES-MAX"
         ],
         "units": [
           "EV",
@@ -438,31 +463,28 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "analysis": [
+        "add-res": [
           {
-            "x4_code": "(AREA)",
+            "x4_code": null,
             "free_txt": [
-              ". Assumed Radiation Width = 40 Milli-EV."
+              " Resonance integral was determined by resonance",
+              "parameters to be 115 +- 53 barn."
             ]
-          },
-          {
-            "x4_code": "(SHAPE)",
-            "free_txt": []
           }
         ],
         "detector": [
           {
             "x4_code": null,
             "free_txt": [
-              "No Information"
+              "No information"
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              "No Information"
+              " No information"
             ]
           }
         ],
@@ -470,7 +492,7 @@
           {
             "x4_code": "(REAC,4RUSNIR)",
             "free_txt": [
-              "  Reactor Sm-2"
+              "  Reactor SM-2"
             ]
           }
         ],
@@ -484,42 +506,78 @@
         ],
         "method": [
           {
-            "x4_code": null,
+            "x4_code": "(TOF,TRN)",
             "free_txt": [
-              "Neutron Transmission"
+              " Transmission was measured twice, 208 days",
+              "between measurements."
             ]
           }
         ],
         "part-det": [
           {
             "x4_code": "(N)",
-            "free_txt": [
-              " Neutrons"
-            ]
-          }
-        ],
-        "status": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "From  Nejtronnaja Fizika ,2,257, Moskva-1977"
-            ]
+            "free_txt": []
           }
         ]
       }
     },
     "002": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(AREA)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(SHAPE)",
+            "free_txt": []
+          }
+        ],
+        "assumed": [
+          {
+            "x4_code": "(ASSUM,96-CM-242(N,G),,WID)",
+            "free_txt": [
+              " Used in area analysis."
+            ]
+          }
+        ],
+        "decay-data": [
+          {
+            "x4_code": "(96-CM-242,162.5D)",
+            "free_txt": []
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "Curium-Oxide, Cm-242 Content 7.52E20 Atoms/Cm2"
+              "Oxide Cm(2)O(3), Cm-242 initial thickness",
+              "7.52E20 atoms/cm2"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.S.Artamonov+,R,INDC(CCP)-118,(2),257,1977)",
+            "free_txt": [
+              " This Subent 40564.002 supersedes Subent 40432.003,",
+              " data are the same."
             ]
           }
         ]
       }
     },
-    "003": {}
+    "003": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.S.Artamonov+,R,INDC(CCP)-118,(2),257,1977)",
+            "free_txt": [
+              " Text page 257."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

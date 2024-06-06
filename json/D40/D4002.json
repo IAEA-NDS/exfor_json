@@ -1,7 +1,7 @@
 {
   "entry": "D4002",
-  "last_updated": "2006-11-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-03-13",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19951025C)",
@@ -16,6 +16,13 @@
       "free_txt": [
         " BIB section updated. Data from D4002002 are",
         "superseded."
+      ]
+    },
+    {
+      "x4_code": "(20230720A)",
+      "free_txt": [
+        " VT+On. Revision in 003-005. ERR-ANALYS",
+        "updated in 001"
       ]
     }
   ],
@@ -35,11 +42,11 @@
     "institutes": [
       {
         "x4_code": "(3HUNDEB)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(3CZRUJV)",
-        "free_txt": []
+        "free_txt": ""
       }
     ],
     "references": [
@@ -102,7 +109,7 @@
     },
     "003": {
       "0": {
-        "x4_code": "(28-NI-0(P,X)27-CO-57,,SIG)",
+        "x4_code": "(28-NI-0(P,X)27-CO-57,CUM,SIG)",
         "children": [
           {
             "code": [
@@ -110,14 +117,14 @@
               [
                 "P,X"
               ],
-              "27-CO-57,,SIG"
+              "27-CO-57,CUM,SIG"
             ],
             "type": null,
             "target": "28-NI-0",
             "process": "P,X",
-            "sf49": "27-CO-57,,SIG",
+            "sf49": "27-CO-57,CUM,SIG",
             "sf4": "27-CO-57",
-            "sf5": null,
+            "sf5": "CUM",
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
@@ -131,7 +138,7 @@
     },
     "004": {
       "0": {
-        "x4_code": "(28-NI-0(P,X)27-CO-56,,SIG)",
+        "x4_code": "(28-NI-0(P,X)27-CO-56,CUM,SIG)",
         "children": [
           {
             "code": [
@@ -139,14 +146,14 @@
               [
                 "P,X"
               ],
-              "27-CO-56,,SIG"
+              "27-CO-56,CUM,SIG"
             ],
             "type": null,
             "target": "28-NI-0",
             "process": "P,X",
-            "sf49": "27-CO-56,,SIG",
+            "sf49": "27-CO-56,CUM,SIG",
             "sf4": "27-CO-56",
-            "sf5": null,
+            "sf5": "CUM",
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
@@ -190,7 +197,29 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-1",
+          "ERR-2",
+          "ERR-3"
+        ],
+        "units": [
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            5.0
+          ],
+          [
+            3.0
+          ],
+          [
+            1.0
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -203,7 +232,7 @@
           "EN",
           "EN-ERR",
           "DATA",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "MEV",
@@ -390,7 +419,7 @@
           "EN",
           "EN-ERR",
           "DATA",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "MEV",
@@ -521,7 +550,7 @@
           "EN",
           "EN-ERR",
           "DATA",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "MEV",
@@ -767,21 +796,9 @@
             "free_txt": []
           }
         ],
-        "add-res": [
-          {
-            "x4_code": "(COMP)",
-            "free_txt": []
-          }
-        ],
         "detector": [
           {
             "x4_code": "(GELI,HPGE)",
-            "free_txt": []
-          }
-        ],
-        "exp-year": [
-          {
-            "x4_code": "(1991)",
             "free_txt": []
           }
         ],
@@ -789,23 +806,48 @@
           {
             "x4_code": "(EN-ERR)",
             "free_txt": [
-              ".The incident proton energy was defined by",
+              " The incident proton energy was defined by",
               "operating condition of the cyclotron and measured by",
-              "analysing magnet with an accuracy of 0.2 MeV.",
-              "uncertainty of the proton energy along the stack",
-              "includes errors in the thicknesses of target foil",
-              "and energy stragling and was determined relative to",
-              "monitor reactions."
+              "analyzing magnet with an accuracy of 0.2 MeV."
             ]
           },
           {
-            "x4_code": "(DATA-ERR)",
+            "x4_code": "(ERR-T)",
             "free_txt": [
-              ".The overall uncertainties of the cross",
-              "section were obtained by summing quadratically the",
-              "individual relative errors in current integration,",
-              "counting statistics of photopeak integration, detector",
-              "efficiency, number of target nuclei and decay data."
+              " The total estimated errors in cross sections",
+              "are (9-12%) obtained by summing quadratically the",
+              "individual relative errors:"
+            ]
+          },
+          {
+            "x4_code": "(ERR-S,1.,6.)",
+            "free_txt": [
+              " Counting statistics (1-6%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Detector efficiency  (5%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Decay-data  (3%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3)",
+            "free_txt": [
+              " Number of target nuclei (1%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-4,7.,9.)",
+            "free_txt": [
+              " Incident bombarding particle intensity",
+              "                                         (7-9%)"
             ]
           }
         ],
@@ -866,8 +908,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "metallic foils of high purity nat-Ni",
-              "thickneses of 10, 20 and 30 microns"
+              "metallic foils of high purity nat-Ni thickness of 10,",
+              "20 and 30 microns"
             ]
           }
         ],
@@ -876,6 +918,12 @@
             "x4_code": "(APRVD)",
             "free_txt": [
               ".By Tarkanyi"
+            ]
+          },
+          {
+            "x4_code": "(TABLE,,F.Tarkanyi+,J,ARI,42,513,1991)",
+            "free_txt": [
+              " Table 2"
             ]
           }
         ]
@@ -932,12 +980,6 @@
             "free_txt": []
           }
         ],
-        "rad-det": [
-          {
-            "x4_code": "(27-CO-57,DG)",
-            "free_txt": []
-          }
-        ],
         "rel-ref": [
           {
             "x4_code": "(A,B0055001,S.KAUFMAN,J,PR,117,1532,1960)",
@@ -962,12 +1004,6 @@
             "free_txt": []
           }
         ],
-        "rad-det": [
-          {
-            "x4_code": "(27-CO-56,DG)",
-            "free_txt": []
-          }
-        ],
         "rel-ref": [
           {
             "x4_code": "(A,B0020008,S.TANAKA+,J,JIN,34,2419,1972)",
@@ -988,13 +1024,7 @@
       "0": {
         "decay-data": [
           {
-            "x4_code": "(27-CO-55,17.5HR,DG,477.2,0.202,                DG,931.2,0.750,                DG,1408.4,0.169)",
-            "free_txt": []
-          }
-        ],
-        "rad-det": [
-          {
-            "x4_code": "(27-CO-55,DG)",
+            "x4_code": "(27-CO-55,17.5HR,DG,477.2,0.202,                 DG,931.2,0.750,                 DG,1408.4,0.169)",
             "free_txt": []
           }
         ],

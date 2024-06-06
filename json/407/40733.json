@@ -1,21 +1,30 @@
 {
   "entry": "40733",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-03-31",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(840612C)",
+      "x4_code": "(19840612C)",
       "free_txt": []
+    },
+    {
+      "x4_code": "(20231113A)",
+      "free_txt": [
+        " Upper -> lower case correction.",
+        " Dates were corrected for 4-digits year.",
+        " STATUS, SPIN J were added in data Subents.",
+        " BIB information was updated."
+      ]
     }
   ],
   "bib_record": {
-    "title": ".(N,A) REACTION ON YB-171,HF-177 AND EU-151 DEFORMED .NUCLEI",
+    "title": " (n,alpha) reaction on Yb-171,Hf-177 and Eu-151 deformed nuclei",
     "authors": [
       {
         "name": "A.Antonov"
       },
       {
-        "name": "Ju.M.Gledenov"
+        "name": "Yu.M.Gledenov"
       },
       {
         "name": "S.Marinova"
@@ -32,14 +41,24 @@
     ],
     "references": [
       {
-        "x4_code": "(R,JINR-P3-83-242,83)",
+        "x4_code": "(R,JINR-P3-83-242,1983)",
         "free_txt": [],
         "publication_year": "1983",
         "doi": null,
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          " Reactor IBR-30 in pulsed mode."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
   "reactions": {
     "002": {
@@ -244,13 +263,17 @@
           "DATA      1",
           "DATA      2",
           "DATA-ERR  2",
-          "DATA-MAX  2"
+          "DATA-MAX  2",
+          "SPIN J",
+          "FLAG"
         ],
         "units": [
           "EV",
           "EV",
           "EV",
-          "EV"
+          "EV",
+          "NO-DIM",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -312,6 +335,36 @@
             3e-08,
             null,
             null
+          ],
+          [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            1.0,
+            1.0
           ]
         ]
       }
@@ -323,13 +376,15 @@
           "DATA      1",
           "DATA      2",
           "DATA-ERR  2",
-          "DATA-MAX  2"
+          "DATA-MAX  2",
+          "SPIN J"
         ],
         "units": [
           "EV",
           "EV",
           "EV",
-          "EV"
+          "EV",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -379,6 +434,18 @@
             1.5e-08,
             3.1e-08,
             1.4e-08
+          ],
+          [
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0
           ]
         ]
       }
@@ -388,11 +455,13 @@
       "data": {
         "heads": [
           "DATA      1",
-          "DATA-MAX  2"
+          "DATA-MAX  2",
+          "SPIN J"
         ],
         "units": [
           "EV",
-          "EV"
+          "EV",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -404,6 +473,11 @@
             4.8e-09,
             1.5e-09,
             4.5e-09
+          ],
+          [
+            3.0,
+            3.0,
+            3.0
           ]
         ]
       }
@@ -412,24 +486,68 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "add-res": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Average alpha widths, calculated (by different model",
+              "of nuclei - spherical, deformed, \"black\") strength",
+              "functions are given in Table 3 of",
+              "R,JINR-P3-83-242,1983.",
+              ". Experimental values ( A.Emsallem, see REL-REF ) of",
+              " cross-sections are compared with values calculated",
+              " by resonance parameters - in Table 4 of",
+              " R,JINR-P3-83-242,1983."
+            ]
+          }
+        ],
         "assumed": [
           {
             "x4_code": "(ASSUM,62-SM-147(N,A),,WID)",
             "free_txt": []
           }
         ],
+        "detector": [
+          {
+            "x4_code": "(IOCH)",
+            "free_txt": [
+              " Six double chambers."
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(REAC,4ZZZDUB)",
+            "free_txt": [
+              " Reactor IBR-30 in pulsed mode."
+            ]
+          }
+        ],
         "inc-source": [
           {
             "x4_code": "(REAC)",
-            "free_txt": [
-              " REACTOR IBR-30"
-            ]
+            "free_txt": []
           }
         ],
         "method": [
           {
             "x4_code": "(TOF)",
+            "free_txt": [
+              " Neutron time-of-flight."
+            ]
+          }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(,V.A.Vtyurin+,J,YF,23,1165,1976)",
             "free_txt": []
+          },
+          {
+            "x4_code": "(,,R,BNL-325,(1),1973)",
+            "free_txt": [
+              " Third edition.",
+              " Parameters of neutron resonances."
+            ]
           }
         ],
         "monitor": [
@@ -440,20 +558,60 @@
         ],
         "part-det": [
           {
-            "x4_code": "(A)",
+            "x4_code": "(A,N)",
             "free_txt": []
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(N,,A.Emsallem,T,EMSALLEM,1979)",
+            "free_txt": [
+              " Theses, Lyon.",
+              " Yb-171 C-S in Subent 20564.007",
+              " Hf-177 partial C-S in Subent 21714.004",
+              " Eu-151 C-S in Subent 20564.003"
+            ]
           }
         ]
       }
     },
     "002": {
       "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              "article."
+            ]
+          }
+        ],
+        "flag": [
+          {
+            "x4_code": "(1.)",
+            "free_txt": [
+              " Sum of widths for two un-resolved resonances."
+            ]
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              " YB-2 O-3,THICKNESS 8.86MILLIGRAMM/CM**2,ENRICHMENT",
-              "86.2PC OF YB-171"
+              " Yb(2)O(3),thickness 8.86 milligram/cm**2,enrichment",
+              "86.2 % of Yb-171"
+            ]
+          },
+          {
+            "x4_code": "(70-YB-171,ENR=0.862)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.Antonov+,R,JINR-P3-83-242,1983)",
+            "free_txt": [
+              " Table 2."
             ]
           }
         ]
@@ -461,12 +619,33 @@
     },
     "003": {
       "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              "article."
+            ]
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              " HF(O)2,THICKNESS 4.86MG/CM**2,ENRICHMENT 82.2PC OF",
-              " HF-177"
+              " HfO(2),thickness 4.86mg/cm**2,enrichment 82.2 % of",
+              " Hf-177"
+            ]
+          },
+          {
+            "x4_code": "(72-HF-177,ENR=0.822)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.Antonov+,R,JINR-P3-83-242,1983)",
+            "free_txt": [
+              " Table 2."
             ]
           }
         ]
@@ -478,7 +657,15 @@
           {
             "x4_code": null,
             "free_txt": [
-              "  EU2(O)3,THICKNESS 3.97MG/CM**2,NATURAL MIXTURE"
+              "  Eu(2)O(3),thickness 3.97mg/cm**2,natural mixture"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.Antonov+,R,JINR-P3-83-242,1983)",
+            "free_txt": [
+              " Table 2."
             ]
           }
         ]

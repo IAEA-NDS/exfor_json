@@ -1,23 +1,31 @@
 {
   "entry": "11635",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-03-15",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(760730T)",
+      "x4_code": "(19760730T)",
       "free_txt": [
-        " TRANSLATED FROM SCISRS"
+        " Translated from SCISRS"
       ]
     },
     {
-      "x4_code": "(830829A)",
+      "x4_code": "(19830829A)",
       "free_txt": [
-        " CONVERTED TO REACTION FORMALISM"
+        " Converted to REACTION formalism"
+      ]
+    },
+    {
+      "x4_code": "(20230701A)",
+      "free_txt": [
+        " OS. Data correction in sub.9, converted to",
+        " lower and upper case, corrected STATUS, added",
+        " ERR-ANALYS, updated FACILITY, added METHOD"
       ]
     }
   ],
   "bib_record": {
-    "title": "TOTAL SLOW NEUTRON CROSS SECTION MEASUREMENTS OF TITANIUM, ZIRCONIUM AND HAFNIUM.",
+    "title": "Total slow neutron cross section measurements of titanium, zirconium and hafnium.",
     "authors": [
       {
         "name": "E.G.Joki"
@@ -37,25 +45,27 @@
     ],
     "references": [
       {
-        "x4_code": "(J,NSE,11,298,61)",
-        "free_txt": [],
+        "x4_code": "(J,NSE,11,298,1961)",
+        "free_txt": [
+          "#doi:10.13182/NSE61-A26007"
+        ],
         "publication_year": "1961",
-        "doi": null,
+        "doi": "10.13182/NSE61-A26007",
         "pointer": "0"
       },
       {
-        "x4_code": "(W,EVANS,5401)",
+        "x4_code": "(W,EVANS,195401)",
         "free_txt": [
-          " TABULATED DATA FOR TI, ZR"
+          " Tabulated data for Ti, Zr"
         ],
         "publication_year": "1954",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(W,EVANS,5412)",
+        "x4_code": "(W,EVANS,195412)",
         "free_txt": [
-          " TABULATED DATA FOR HF."
+          " Tabulated data for Hf."
         ],
         "publication_year": "1954",
         "doi": null,
@@ -64,20 +74,29 @@
     ],
     "facilities": [
       {
-        "x4_code": "(SPECC)",
+        "x4_code": "(SPECC,1USAMTR)",
         "free_txt": [
-          " CRYSTAL SPECTROMETER"
+          " Crystal spectrometer                  1"
         ],
         "pointer": "0",
         "facility_type": "(SPECC)",
-        "institute": null
+        "institute": "(1USAMTR)"
+      },
+      {
+        "x4_code": "(REAC,1USAMTR)",
+        "free_txt": [
+          " Materials Testing Reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USAMTR)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(22-TI-0(N,THS),BA,SIG)",
+        "x4_code": "(22-TI-0(N,THS)22-TI-0,BA,SIG)",
         "children": [
           {
             "code": [
@@ -85,13 +104,13 @@
               [
                 "N,THS"
               ],
-              ",BA,SIG"
+              "22-TI-0,BA,SIG"
             ],
             "type": null,
             "target": "22-TI-0",
             "process": "N,THS",
-            "sf49": ",BA,SIG",
-            "sf4": null,
+            "sf49": "22-TI-0,BA,SIG",
+            "sf4": "22-TI-0",
             "sf5": "BA",
             "sf6": "SIG",
             "sf7": null,
@@ -164,7 +183,7 @@
     },
     "005": {
       "0": {
-        "x4_code": "(40-ZR-0(N,THS),BA,SIG)",
+        "x4_code": "(40-ZR-0(N,THS)40-ZR-0,BA,SIG)",
         "children": [
           {
             "code": [
@@ -172,13 +191,13 @@
               [
                 "N,THS"
               ],
-              ",BA,SIG"
+              "40-ZR-0,BA,SIG"
             ],
             "type": null,
             "target": "40-ZR-0",
             "process": "N,THS",
-            "sf49": ",BA,SIG",
-            "sf4": null,
+            "sf49": "40-ZR-0,BA,SIG",
+            "sf4": "40-ZR-0",
             "sf5": "BA",
             "sf6": "SIG",
             "sf7": null,
@@ -3883,19 +3902,7 @@
       }
     },
     "009": {
-      "common": {
-        "heads": [
-          "STAT-W G"
-        ],
-        "units": [
-          "NO-DIM"
-        ],
-        "data": [
-          [
-            0.5
-          ]
-        ]
-      },
+      "common": null,
       "data": {
         "heads": [
           "DATA      1",
@@ -3965,33 +3972,141 @@
       "0": {
         "facility": [
           {
-            "x4_code": "(SPECC)",
+            "x4_code": "(SPECC,1USAMTR)",
             "free_txt": [
-              " CRYSTAL SPECTROMETER"
+              " Crystal spectrometer                  1"
+            ]
+          },
+          {
+            "x4_code": "(REAC,1USAMTR)",
+            "free_txt": [
+              " Materials Testing Reactor"
             ]
           }
         ],
-        "status": [
+        "method": [
           {
-            "x4_code": "(SCSRS)",
+            "x4_code": "(TRN)",
             "free_txt": []
           }
         ]
       }
     },
-    "002": {},
-    "003": {},
-    "004": {},
-    "005": {},
-    "006": {},
-    "007": {},
+    "002": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Standard deviation including deviation of",
+              " points from fitted line and effects of impurities in",
+              " the sample"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,E.G.Joki+,J,NSE,11,298,1961)",
+            "free_txt": [
+              " Text on p.299"
+            ]
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Standard deviation including deviation of",
+              " points from fitted line and effects of impurities in",
+              " the sample"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,E.G.Joki+,J,NSE,11,298,1961)",
+            "free_txt": [
+              " Text on p.299"
+            ]
+          }
+        ]
+      }
+    },
+    "004": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Tabulated data received from Evans, 01/1954"
+            ]
+          }
+        ]
+      }
+    },
+    "005": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No information on sources of uncertainty"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,E.G.Joki+,J,NSE,11,298,1961)",
+            "free_txt": [
+              " Text on p.301"
+            ]
+          }
+        ]
+      }
+    },
+    "006": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Tabulated data received from Evans, 01/1954"
+            ]
+          }
+        ]
+      }
+    },
+    "007": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Tabulated data received from Evans, 12/1954"
+            ]
+          }
+        ]
+      }
+    },
     "008": {
       "0": {
         "analysis": [
           {
             "x4_code": null,
             "free_txt": [
-              "EXTRAPOLATION FROM MEASUREMENT AT 0.04 - 3.5 EV"
+              "Extrapolation from measurement at 0.04 - 3.5 eV"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No information on sources of uncertainty"
             ]
           }
         ],
@@ -3999,6 +4114,12 @@
           {
             "x4_code": "(DEP,11635007)",
             "free_txt": []
+          },
+          {
+            "x4_code": "(TABLE,,E.G.Joki+,J,NSE,11,298,1961)",
+            "free_txt": [
+              " Text on p.301"
+            ]
           }
         ]
       }
@@ -4009,8 +4130,27 @@
           {
             "x4_code": null,
             "free_txt": [
-              "ISOTOPIC ASSIGNMENT TAKEN FROM BOLLINGER, PHYS.REV.92,",
+              "Isotopic assignment taken from BOLLINGER, phys.Rev.92,",
               " 1527 (1953)."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Standard deviations including counting",
+              " statistics and uncertainties of curve fitting,",
+              " excluding uncertainties in corrections for instrument",
+              " resolution and in Hf177 abundance"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,E.G.Joki+,J,NSE,11,298,1961)",
+            "free_txt": [
+              " Text on p.302"
             ]
           }
         ]

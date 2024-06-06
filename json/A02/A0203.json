@@ -1,7 +1,7 @@
 {
   "entry": "A0203",
-  "last_updated": "2011-06-21",
-  "number_of_revisions": "5",
+  "last_updated": "2024-04-11",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19831214C)",
@@ -11,18 +11,25 @@
       "x4_code": "(20080616A)",
       "free_txt": [
         " BIB section updated",
-        " Corrections were made according new exfor rules."
+        " Corrections were made according to new EXFOR rules."
       ]
     },
     {
       "x4_code": "(20100817A)",
       "free_txt": [
-        ".Subent 004 was deleted-it is in A0207002."
+        " Subent 004 was deleted-it is in A0207002."
+      ]
+    },
+    {
+      "x4_code": "(20240206A)",
+      "free_txt": [
+        " SD: Ref. corrected. Small corrections in",
+        "all Subents."
       ]
     }
   ],
   "bib_record": {
-    "title": "Excitation functions (p,n) and (a,xn) reactions with formation of Te-119-m,g and Te-121-m,g isomeric pairs.",
+    "title": "Excitation functions of (p,n) and (a,xn) reactions with formation of Te-119-m,g and Te-121-m,g isomeric pairs.",
     "authors": [
       {
         "name": "V.G.Batij"
@@ -49,23 +56,31 @@
     "institutes": [
       {
         "x4_code": "(4UKRKFT)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(4RUSMOS)",
-        "free_txt": []
+        "free_txt": ""
       }
     ],
     "references": [
       {
-        "x4_code": "(C,82KIEV,,134,1983)",
+        "x4_code": "(C,82KHARKIV,2,134,1982)",
         "free_txt": [],
-        "publication_year": "1983",
+        "publication_year": "1982",
         "doi": null,
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,4RUSMOS)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(4RUSMOS)"
+      }
+    ]
   },
   "reactions": {
     "002": {
@@ -327,9 +342,11 @@
       "common": {
         "heads": [
           "ERR-2",
-          "ERR-3"
+          "ERR-3",
+          "ERR-1"
         ],
         "units": [
+          "PER-CENT",
           "PER-CENT",
           "PER-CENT"
         ],
@@ -339,6 +356,9 @@
           ],
           [
             5.0
+          ],
+          [
+            15.0
           ]
         ]
       }
@@ -703,7 +723,7 @@
         "heads": [
           "EN",
           "DATA",
-          "DATA-ERR"
+          "ERR-S"
         ],
         "units": [
           "MEV",
@@ -740,45 +760,45 @@
           {
             "x4_code": null,
             "free_txt": [
-              "*By compiler*.The authors don't give information",
+              "*By compiler* The authors don't give information",
               "about monitor reaction."
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-1,15.)",
+            "x4_code": "(ERR-1)",
             "free_txt": [
-              ".Error in the bombarded particle beam",
+              " Error in the bombarded particle beam",
               "current with monitor reaction about 15%."
             ]
           },
           {
             "x4_code": "(ERR-2)",
             "free_txt": [
-              ".The error of measurement of target foils",
+              " The error of measurement of target foils",
               "thickness is 3%."
             ]
           },
           {
             "x4_code": "(ERR-3)",
             "free_txt": [
-              ".The error of determination of Ge(Li) detector",
+              " The error of determination of Ge(Li) detector",
               "efficiency is 5%."
             ]
           }
         ],
-        "status": [
+        "facility": [
           {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              ".Table 1 of C,82KIEV,,134,1983"
-            ]
-          },
+            "x4_code": "(CYCLO,4RUSMOS)",
+            "free_txt": []
+          }
+        ],
+        "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
-              ".By K.A.Baskova."
+              " By K.A.Baskova. + Additional information."
             ]
           }
         ]
@@ -791,24 +811,12 @@
             "x4_code": "(52-TE-119-M,4.7D,DG,270.)",
             "free_txt": []
           }
-        ],
-        "rad-det": [
-          {
-            "x4_code": "(52-TE-119-M,DG)",
-            "free_txt": []
-          }
         ]
       },
       "B": {
         "decay-data": [
           {
             "x4_code": "(52-TE-119-G,12.HR,DG,644.)",
-            "free_txt": []
-          }
-        ],
-        "rad-det": [
-          {
-            "x4_code": "(52-TE-119-G,DG)",
             "free_txt": []
           }
         ]
@@ -824,14 +832,8 @@
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              ".The uncertainties is reported by authors."
+              " No information about source of uncertainty"
             ]
-          }
-        ],
-        "facility": [
-          {
-            "x4_code": "(CYCLO,4RUSMOS)",
-            "free_txt": []
           }
         ],
         "method": [
@@ -842,9 +844,15 @@
         ],
         "sample": [
           {
-            "x4_code": null,
+            "x4_code": "(50-SN-116,ENR=0.928)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.G.Batij+,C,82KHARKIV,2,134,1982)",
             "free_txt": [
-              "Enriched target Sn-116, enrichment 92.8%."
+              " Table 1"
             ]
           }
         ]
@@ -857,24 +865,12 @@
             "x4_code": "(52-TE-119-G,12.HR,DG,644.)",
             "free_txt": []
           }
-        ],
-        "rad-det": [
-          {
-            "x4_code": "(52-TE-119-G,DG)",
-            "free_txt": []
-          }
         ]
       },
       "B": {
         "decay-data": [
           {
             "x4_code": "(52-TE-119-M,4.7D,DG,270.)",
-            "free_txt": []
-          }
-        ],
-        "rad-det": [
-          {
-            "x4_code": "(52-TE-119-M,DG)",
             "free_txt": []
           }
         ]
@@ -890,14 +886,8 @@
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              ".The uncertainties is reported by authors."
+              " No information about source of uncertainty"
             ]
-          }
-        ],
-        "facility": [
-          {
-            "x4_code": "(CYCLO,4RUSMOS)",
-            "free_txt": []
           }
         ],
         "method": [
@@ -908,9 +898,15 @@
         ],
         "sample": [
           {
-            "x4_code": null,
+            "x4_code": "(50-SN-117,ENR=0.848)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.G.Batij+,C,82KHARKIV,2,134,1982)",
             "free_txt": [
-              "Enriched target Sn-117, enrichment 84.8%"
+              " Table 2"
             ]
           }
         ]
@@ -918,16 +914,6 @@
     },
     "005": {
       "0": {
-        "comment": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "*By authors*.In the data table under 'Data-Err' was",
-              "given the statistical error only. The systematical",
-              "error due to the decay schemes is 5%."
-            ]
-          }
-        ],
         "decay-data": [
           {
             "x4_code": "(52-TE-121-M,154.D,DG,212.)",
@@ -948,21 +934,15 @@
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
-              ".The uncertainties is reported by authors."
+              " Statistical uncertainty"
             ]
           },
           {
             "x4_code": "(ERR-4)",
             "free_txt": [
-              ". The systematical error due to the decay",
+              " The systematical error due to the decay",
               "schemes is 5%."
             ]
-          }
-        ],
-        "facility": [
-          {
-            "x4_code": "(CYCLO,4RUSMOS)",
-            "free_txt": []
           }
         ],
         "method": [
@@ -971,21 +951,18 @@
             "free_txt": []
           }
         ],
-        "rad-det": [
+        "sample": [
           {
-            "x4_code": "(52-TE-121-M,DG)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(52-TE-121-G,DG)",
+            "x4_code": "(50-SN-118,ENR=0.837)",
             "free_txt": []
           }
         ],
-        "sample": [
+        "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE)",
             "free_txt": [
-              "Enriched target Sn-118, enrichment 83.7%."
+              " Tabulated data received from the author",
+              " (presented on fig.2 in publ.)"
             ]
           }
         ]
@@ -993,16 +970,6 @@
     },
     "006": {
       "0": {
-        "comment": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "*By authors*.In the data table under 'Data-err'",
-              "was given the statistical error only. The systematical",
-              "error due to the decay schemes is 5%."
-            ]
-          }
-        ],
         "decay-data": [
           {
             "x4_code": "(52-TE-121-M,154.D,DG,212.)",
@@ -1023,21 +990,15 @@
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
-              ".The uncertainties is reported by authors."
+              " Statistical uncetrainty"
             ]
           },
           {
             "x4_code": "(ERR-4)",
             "free_txt": [
-              ". The systematical error due to the decay",
+              " The systematical error due to the decay",
               "schemes is 5%."
             ]
-          }
-        ],
-        "facility": [
-          {
-            "x4_code": "(CYCLO,4RUSMOS)",
-            "free_txt": []
           }
         ],
         "method": [
@@ -1046,21 +1007,18 @@
             "free_txt": []
           }
         ],
-        "rad-det": [
+        "sample": [
           {
-            "x4_code": "(52-TE-121-M,DG)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(52-TE-121-G,DG)",
+            "x4_code": "(50-SN-119,ENR=0.748)",
             "free_txt": []
           }
         ],
-        "sample": [
+        "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE)",
             "free_txt": [
-              "Enriched terget Sn-119, enrichment 74.8%."
+              " Tabulated data received from the author",
+              " (presented on fig.2 in publ.)"
             ]
           }
         ]
@@ -1068,16 +1026,6 @@
     },
     "007": {
       "0": {
-        "comment": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "*By authors*.In the data table under 'Data-err'",
-              "was given the statistical error only. The systematical",
-              "error due to the decay schemes is 5 per cent."
-            ]
-          }
-        ],
         "decay-data": [
           {
             "x4_code": "(52-TE-121-M,154.D,DG,212.)",
@@ -1098,21 +1046,15 @@
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
-              ".The uncertainties is reported by authors."
+              " Statistical uncertainty"
             ]
           },
           {
             "x4_code": "(ERR-4)",
             "free_txt": [
-              ". The systematical error due to the decay",
+              " The systematical error due to the decay",
               "schemes is 5%."
             ]
-          }
-        ],
-        "facility": [
-          {
-            "x4_code": "(CYCLO,4RUSMOS)",
-            "free_txt": []
           }
         ],
         "method": [
@@ -1121,21 +1063,12 @@
             "free_txt": []
           }
         ],
-        "rad-det": [
+        "status": [
           {
-            "x4_code": "(52-TE-121-M,DG)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(52-TE-121-G,DG)",
-            "free_txt": []
-          }
-        ],
-        "sample": [
-          {
-            "x4_code": null,
+            "x4_code": "(TABLE)",
             "free_txt": [
-              "Enriched target Sn-120, enrichment 96.5%."
+              " Tabulated data received from the author",
+              " (presented on fig.2 in publ.)"
             ]
           }
         ]

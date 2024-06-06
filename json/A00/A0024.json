@@ -1,26 +1,29 @@
 {
   "entry": "A0024",
-  "last_updated": "2008-09-18",
-  "number_of_revisions": "4",
+  "last_updated": "2024-03-13",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19780904C)",
       "free_txt": []
     },
     {
-      "x4_code": "(19790327U)",
-      "free_txt": []
-    },
-    {
       "x4_code": "(20080608A)",
       "free_txt": [
         " BIB section updated",
-        " Corrections were made according new exfor rules."
+        " Corrections were made according to new EXFOR rules."
+      ]
+    },
+    {
+      "x4_code": "(20231220A)",
+      "free_txt": [
+        " SD:Corrections in all Subents. FLAG deleted",
+        "EN-NRM added. ERR-ANALYS updated."
       ]
     }
   ],
   "bib_record": {
-    "title": "Fission cross-section at bombardment of U-238 and Th-232 by protons.",
+    "title": "Fission cross-section of U-238 and Th-232 on bombardment by protons",
     "authors": [
       {
         "name": "V.N.Kononov"
@@ -40,17 +43,17 @@
     ],
     "references": [
       {
-        "x4_code": "(J,YF,27,298,197802)",
-        "free_txt": [],
+        "x4_code": "(J,SNP,27,162,1978)",
+        "free_txt": [
+          " English translation"
+        ],
         "publication_year": "1978",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,SNP,27,162,1978)",
-        "free_txt": [
-          " english translation"
-        ],
+        "x4_code": "(J,YF,27,298,1978)",
+        "free_txt": [],
         "publication_year": "1978",
         "doi": null,
         "pointer": "0"
@@ -69,7 +72,7 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(92-U-238(P,F),IND,SIG)",
+        "x4_code": "(92-U-238(P,F),,SIG)",
         "children": [
           {
             "code": [
@@ -77,14 +80,14 @@
               [
                 "P,F"
               ],
-              ",IND,SIG"
+              ",,SIG"
             ],
             "type": null,
             "target": "92-U-238",
             "process": "P,F",
-            "sf49": ",IND,SIG",
+            "sf49": ",,SIG",
             "sf4": null,
-            "sf5": "IND",
+            "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
@@ -98,7 +101,7 @@
     },
     "003": {
       "0": {
-        "x4_code": "(90-TH-232(P,F),IND,SIG)",
+        "x4_code": "(90-TH-232(P,F),,SIG)",
         "children": [
           {
             "code": [
@@ -106,14 +109,14 @@
               [
                 "P,F"
               ],
-              ",IND,SIG"
+              ",,SIG"
             ],
             "type": null,
             "target": "90-TH-232",
             "process": "P,F",
-            "sf49": ",IND,SIG",
+            "sf49": ",,SIG",
             "sf4": null,
-            "sf5": "IND",
+            "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
@@ -128,7 +131,24 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "EN-NRM",
+          "ERR-2"
+        ],
+        "units": [
+          "MEV",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            7.0
+          ],
+          [
+            1.0
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -136,14 +156,12 @@
         "heads": [
           "EN",
           "DATA",
-          "FLAG",
           "DATA-MAX",
-          "DATA-ERR"
+          "ERR-1"
         ],
         "units": [
           "MEV",
           "MICRO-B",
-          "NO-DIM",
           "MICRO-B",
           "MICRO-B"
         ],
@@ -161,13 +179,6 @@
             2.06,
             50.0,
             500.0
-          ],
-          [
-            null,
-            null,
-            null,
-            null,
-            1.0
           ],
           [
             0.009,
@@ -192,14 +203,12 @@
         "heads": [
           "EN",
           "DATA",
-          "FLAG",
           "DATA-MAX",
-          "DATA-ERR"
+          "ERR-1"
         ],
         "units": [
           "MEV",
           "MICRO-B",
-          "NO-DIM",
           "MICRO-B",
           "MICRO-B"
         ],
@@ -217,13 +226,6 @@
             2.1,
             51.4,
             500.0
-          ],
-          [
-            null,
-            null,
-            null,
-            null,
-            1.0
           ],
           [
             0.008,
@@ -246,36 +248,29 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "analysis": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "An information is absent."
-            ]
-          }
-        ],
         "detector": [
           {
-            "x4_code": "(SOLST)",
+            "x4_code": "(SIBAR)",
             "free_txt": [
-              ".Detector is ring with the hole for beam of",
-              "protons. Resolution time of detector system and setup",
-              "about 10 nsec. Area 15 cm**2, efficiency 15%."
+              " Si-Au detector is ring with the hole for beam",
+              "of protons. Resolution time of detector system and",
+              "setup about 10 nsec. Area 15 cm2, efficiency 15%."
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(ERR-1)",
             "free_txt": [
-              "Uncertainties include error of current integrator-1%",
-              "and statistical error of number of fission measurement."
+              " Uncertainties include error of current",
+              "integrator (ERR-2) and statistical error of number of",
+              "fission measurement."
             ]
           },
           {
-            "x4_code": "(DATA-ERR)",
+            "x4_code": "(ERR-2)",
             "free_txt": [
-              ".See above."
+              " Error of current integrator"
             ]
           }
         ],
@@ -285,33 +280,21 @@
             "free_txt": []
           }
         ],
-        "flag": [
-          {
-            "x4_code": "(1.)",
-            "free_txt": [
-              ".Cross-section at 7 MeV was accepted exactly equal",
-              "to 500.0 Micro-B."
-            ]
-          }
-        ],
         "method": [
           {
             "x4_code": "(SITA,BCINT)",
-            "free_txt": []
-          }
-        ],
-        "part-det": [
-          {
-            "x4_code": "(FF)",
-            "free_txt": []
+            "free_txt": [
+              "Absolute normalization of the fission cross section",
+              "was made at 7 -MeV proton energy to a value 5 x 10-4 b."
+            ]
           }
         ],
         "rel-ref": [
           {
-            "x4_code": "(D,,G.R.CHOPIN+,J,PR,131,2149,1963)",
+            "x4_code": "(D,,G.R.Chopin+,J,PR,131,2149,1963)",
             "free_txt": [
-              ".This is",
-              "dissagreement with the results of Kononov+."
+              " This is",
+              "disagreement with the results of Kononov+."
             ]
           }
         ],
@@ -320,22 +303,22 @@
             "x4_code": null,
             "free_txt": [
               "The layers of U-238 or Th-232 (0.5E-3 g/cm**2)",
-              "on nickel foils 2.7E-3 g/cm**2."
+              "on nickel foils 2.7E-3 g/cm2."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(TABLE,,V.N.Kononov,W,KONONOV,19780904)",
             "free_txt": [
-              ".By Cajad"
+              "  The data in",
+              "form of the tables were received from the authors."
             ]
           },
           {
             "x4_code": "(APRVD)",
             "free_txt": [
-              ".By V.N.Kononov. The data in form of the",
-              "tables were received from the authors."
+              " By V.N.Kononov."
             ]
           }
         ]

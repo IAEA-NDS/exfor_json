@@ -1,7 +1,7 @@
 {
   "entry": "A1024",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-05-02",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810220C)",
@@ -13,6 +13,12 @@
       "x4_code": "(19990115U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20240318A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -40,7 +46,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,88,(3),433,195211)",
+        "x4_code": "(J,PR,88,433,1952)",
         "free_txt": [],
         "publication_year": "1952",
         "doi": null,
@@ -49,20 +55,20 @@
     ],
     "facilities": [
       {
-        "x4_code": "(CYCLO)",
+        "x4_code": "(CYCLO,1USALAS)",
         "free_txt": [
           " 9.7 MeV"
         ],
         "pointer": "0",
         "facility_type": "(CYCLO)",
-        "institute": null
+        "institute": "(1USALAS)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-2(P,EL)1-H-2,,DA,,,EXP)",
+        "x4_code": "(1-H-2(P,EL)1-H-2,,DA)",
         "children": [
           {
             "code": [
@@ -70,18 +76,18 @@
               [
                 "P,EL"
               ],
-              "1-H-2,,DA,,,EXP"
+              "1-H-2,,DA"
             ],
             "type": null,
             "target": "1-H-2",
             "process": "P,EL",
-            "sf49": "1-H-2,,DA,,,EXP",
+            "sf49": "1-H-2,,DA",
             "sf4": "1-H-2",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null
           }
         ],
         "type": null,
@@ -91,7 +97,7 @@
     },
     "003": {
       "0": {
-        "x4_code": "(1-H-1(P,EL)1-H-1,,DA,,,EXP)",
+        "x4_code": "(1-H-1(P,EL)1-H-1,,DA)",
         "children": [
           {
             "code": [
@@ -99,18 +105,18 @@
               [
                 "P,EL"
               ],
-              "1-H-1,,DA,,,EXP"
+              "1-H-1,,DA"
             ],
             "type": null,
             "target": "1-H-1",
             "process": "P,EL",
-            "sf49": "1-H-1,,DA,,,EXP",
+            "sf49": "1-H-1,,DA",
             "sf4": "1-H-1",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null
           }
         ],
         "type": null,
@@ -124,11 +130,17 @@
       "common": {
         "heads": [
           "EN-ERR",
-          "DATA-ERR1",
-          "DATA-ERR"
+          "ERR-1",
+          "ERR-2",
+          "ERR-3",
+          "ERR-4",
+          "ERR-5"
         ],
         "units": [
           "MEV",
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT",
           "PER-CENT",
           "PER-CENT"
         ],
@@ -137,10 +149,19 @@
             0.15
           ],
           [
-            5.0
+            1.0
           ],
           [
-            3.5
+            0.5
+          ],
+          [
+            2.5
+          ],
+          [
+            1.0
+          ],
+          [
+            2.0
           ]
         ]
       }
@@ -524,23 +545,43 @@
         ],
         "err-analys": [
           {
-            "x4_code": "(EN-ERR)",
+            "x4_code": "(ERR-1)",
             "free_txt": [
-              " Scale error"
+              " Uncertainty in the geometry of slit system of",
+              "multiplate camera,"
             ]
           },
           {
-            "x4_code": "(DATA-ERR)",
+            "x4_code": "(ERR-2)",
             "free_txt": [
-              " The absolute error at angles where back-",
-              "ground correction is unnecessary;"
+              " Uncertainty in the measurements of temperature",
+              "and pressure,"
             ]
           },
           {
-            "x4_code": "(DATA-ERR1)",
+            "x4_code": "(ERR-3)",
             "free_txt": [
-              " Absolute data error at the angles where",
-              "background correction is unnecessary;"
+              " Uncertainty in the current integration,"
+            ]
+          },
+          {
+            "x4_code": "(ERR-4)",
+            "free_txt": [
+              " Uncertainty in the microscope calibration and",
+              "personal factors,"
+            ]
+          },
+          {
+            "x4_code": "(ERR-5)",
+            "free_txt": [
+              " The average uncertainty in the background",
+              "corrections,"
+            ]
+          },
+          {
+            "x4_code": "(ERR-S,,2.)",
+            "free_txt": [
+              " Statistical error"
             ]
           },
           {
@@ -552,7 +593,7 @@
         ],
         "facility": [
           {
-            "x4_code": "(CYCLO)",
+            "x4_code": "(CYCLO,1USALAS)",
             "free_txt": [
               " 9.7 MeV"
             ]
@@ -560,7 +601,7 @@
         ],
         "method": [
           {
-            "x4_code": "(EXTB)",
+            "x4_code": "(EXTB,BCINT)",
             "free_txt": []
           }
         ],
@@ -578,7 +619,7 @@
       "0": {
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,J.C.Allred+,J,PR,88,433,1952)",
             "free_txt": [
               " Table 1"
             ]
@@ -590,7 +631,7 @@
       "0": {
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,J.C.Allred+,J,PR,88,433,1952)",
             "free_txt": [
               " Table 2"
             ]

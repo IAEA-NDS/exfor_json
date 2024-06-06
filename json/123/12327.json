@@ -1,29 +1,37 @@
 {
   "entry": "12327",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-03-15",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(760804T)",
+      "x4_code": "(19760804T)",
       "free_txt": [
-        " TRANSLATED FROM SCISRS"
+        " Translated from SCISRS"
       ]
     },
     {
-      "x4_code": "(841005A)",
+      "x4_code": "(19841005A)",
       "free_txt": [
-        " CONVERTED TO REACTION FORMALISM"
+        " Converted to reaction formalism"
       ]
     },
     {
-      "x4_code": "(860603A)",
+      "x4_code": "(19860603A)",
       "free_txt": [
-        " BIB UPDATE."
+        " BIB update."
+      ]
+    },
+    {
+      "x4_code": "(20230705A)",
+      "free_txt": [
+        " OS. Data units and STATUS corrected,",
+        " added SAMPLE, ERR-ANALYS, converted to lower and upper",
+        " case"
       ]
     }
   ],
   "bib_record": {
-    "title": "SUBCADMIUM IN-PILE ETAS AND ABSORPTION CROSS SECTIONS OF U233, PU239 AND PU241.",
+    "title": "Subcadmium in-pile etas and absorption cross sections of U233, Pu239 and Pu241",
     "authors": [
       {
         "name": "E.Gaerttner"
@@ -49,14 +57,26 @@
     ],
     "references": [
       {
-        "x4_code": "(J,NSE,3,758,58)",
-        "free_txt": [],
+        "x4_code": "(J,NSE,3,758,1958)",
+        "free_txt": [
+          "#doi:10.13182/NSE58-A25509"
+        ],
         "publication_year": "1958",
-        "doi": null,
+        "doi": "10.13182/NSE58-A25509",
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USAKAP)",
+        "free_txt": [
+          " U235-graphite reactor, TTR."
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USAKAP)"
+      }
+    ]
   },
   "reactions": {
     "002": {
@@ -332,8 +352,8 @@
           "MEV",
           "NO-DIM",
           "PER-CENT",
-          "NO-DIM",
-          "NO-DIM"
+          "PRT/REAC",
+          "PRT/REAC"
         ],
         "data": [
           [
@@ -366,10 +386,10 @@
         ],
         "units": [
           "MEV",
-          "NO-DIM",
-          "NO-DIM",
-          "NO-DIM",
-          "NO-DIM"
+          "PRT/REAC",
+          "PRT/REAC",
+          "PRT/REAC",
+          "PRT/REAC"
         ],
         "data": [
           [
@@ -404,8 +424,8 @@
           "MEV",
           "NO-DIM",
           "PER-CENT",
-          "NO-DIM",
-          "NO-DIM"
+          "PRT/REAC",
+          "PRT/REAC"
         ],
         "data": [
           [
@@ -440,8 +460,8 @@
           "MEV",
           "NO-DIM",
           "PER-CENT",
-          "NO-DIM",
-          "NO-DIM"
+          "PRT/REAC",
+          "PRT/REAC"
         ],
         "data": [
           [
@@ -466,11 +486,22 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "inc-source": [
+        "err-analys": [
           {
-            "x4_code": "(REAC)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " U235-GRAPHITE REACTOR, TTR."
+              " Indicated errors do not include:",
+              "- Suppression of the 0.3 eV resonance in the Pu",
+              "isotopes due to the flux dip effect, and",
+              "- variation of self-shielding in the fission material"
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(REAC,1USAKAP)",
+            "free_txt": [
+              " U235-graphite reactor, TTR."
             ]
           }
         ],
@@ -478,7 +509,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "SUBCADMIUM REACTOR SPECTRUM."
+              "Subcadmium reactor spectrum."
             ]
           }
         ],
@@ -488,15 +519,42 @@
             "free_txt": []
           }
         ],
-        "status": [
+        "sample": [
           {
-            "x4_code": "(SCSRS)",
-            "free_txt": []
+            "x4_code": null,
+            "free_txt": [
+              "Samples of U and Pu were deposited on ceramic disks,",
+              "1.96 inches in diam. and 0.035 inches thick."
+            ]
           }
         ]
       }
     },
-    "002": {},
+    "002": {
+      "0": {
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Composition in no.of atoms/cm2 (x 10**19):",
+              "U233 sample:  U-233   4.37",
+              "              U-234   0.030",
+              "              U-238   0.017",
+              "              U-235   0.004",
+              "U-235 sample: U-235   3.68"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,E.Gaerttner+,J,NSE,3,758,1958)",
+            "free_txt": [
+              " Table IV"
+            ]
+          }
+        ]
+      }
+    },
     "003": {
       "0": {
         "monitor": [
@@ -505,18 +563,84 @@
             "free_txt": []
           }
         ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Composition in no.of atoms/cm2 (x 10**19):",
+              "Pu239 sample:  Pu-239   2.104",
+              "               Pu-240   0.117",
+              "               Pu-241   0.0085",
+              "               Pu-242   0.0023",
+              "U-235 sample:  U-235    3.68"
+            ]
+          }
+        ],
         "status": [
           {
             "x4_code": "(DEP,12327004)",
             "free_txt": [
-              " FROM MEASURED RATIO TO U-235 IN THERMAL",
-              "               SPECTRUM"
+              " From measured ratio to U-235 in thermal",
+              "               spectrum"
+            ]
+          },
+          {
+            "x4_code": "(TABLE,,E.Gaerttner+,J,NSE,3,758,1958)",
+            "free_txt": [
+              " Text on p.768"
             ]
           }
         ]
       }
     },
-    "004": {},
-    "005": {}
+    "004": {
+      "0": {
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Composition in no.of atoms/cm2 (x 10**19):",
+              "Pu239 sample:  Pu-239   2.104",
+              "               Pu-240   0.117",
+              "               Pu-241   0.0085",
+              "               Pu-242   0.0023",
+              "U-235 sample:  U-235    3.68"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,E.Gaerttner+,J,NSE,3,758,1958)",
+            "free_txt": [
+              " Table IV"
+            ]
+          }
+        ]
+      }
+    },
+    "005": {
+      "0": {
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Composition in no.of atoms/cm2 (x 10**19):",
+              "Pu239 sample:  Pu-241   0.8807",
+              "               Pu-239   0.4207",
+              "               Pu-240   0.02808",
+              "U-235 sample:  U-235    3.68"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,E.Gaerttner+,J,NSE,3,758,1958)",
+            "free_txt": [
+              " Table IV"
+            ]
+          }
+        ]
+      }
+    }
   }
 }

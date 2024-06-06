@@ -1,26 +1,30 @@
 {
   "entry": "32541",
-  "last_updated": "2011-02-16",
-  "number_of_revisions": "4",
+  "last_updated": "2024-03-31",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19910612C)",
       "free_txt": [
-        "Compiled by authors,corrected and checked by",
-        "Liang Qichang and Yu Hongwei"
+        " Compiled by authors, corrected and checked",
+        " by Liang Qichang and Yu Hongwei"
       ]
     },
     {
-      "x4_code": "(20100328A)",
+      "x4_code": "(20100328U)",
       "free_txt": [
-        " SD:Updated to new date formats,lower case.",
-        "           Cosmetic changes and corrections",
-        "  Author's name corrected: Jinfu => Jingfu"
+        " SD: AUTHOR: Yang Jinfu -> Yang Jingfu"
+      ]
+    },
+    {
+      "x4_code": "(20240216A)",
+      "free_txt": [
+        " On. Major revision in 002."
       ]
     }
   ],
   "bib_record": {
-    "title": "Measurement of neutron capture cross section for natural hafnium.",
+    "title": "Measurement of neutron capture cross section for natural hafnium",
     "authors": [
       {
         "name": "Wang Chunhao"
@@ -46,7 +50,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,CNP,12,(1),89,199001)",
+        "x4_code": "(J,CNP,12,89,1990)",
         "free_txt": [],
         "publication_year": "1990",
         "doi": null,
@@ -57,7 +61,7 @@
       {
         "x4_code": "(VDG,3CPRSIU)",
         "free_txt": [
-          " Pulsed 2.5MeV Van de Graaff"
+          " Pulsed 2.5 MeV Van de Graaff"
         ],
         "pointer": "0",
         "facility_type": "(VDG)",
@@ -67,7 +71,53 @@
   },
   "reactions": {
     "002": {
-      "0": {
+      "1": {
+        "x4_code": "((72-HF-0(N,G),,SIG)/(79-AU-197(N,G)79-AU-198,,SIG))",
+        "children": [
+          {
+            "code": [
+              "72-HF-0",
+              [
+                "N,G"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "72-HF-0",
+            "process": "N,G",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "79-AU-197",
+              [
+                "N,G"
+              ],
+              "79-AU-198,,SIG"
+            ],
+            "type": null,
+            "target": "79-AU-197",
+            "process": "N,G",
+            "sf49": "79-AU-198,,SIG",
+            "sf4": "79-AU-198",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": "",
+        "pointer": "1"
+      },
+      "2": {
         "x4_code": "(72-HF-0(N,G),,SIG)",
         "children": [
           {
@@ -92,7 +142,7 @@
         ],
         "type": null,
         "free_text": "",
-        "pointer": "0"
+        "pointer": "2"
       }
     }
   },
@@ -106,9 +156,9 @@
         "heads": [
           "EN",
           "EN-RSL",
-          "MONIT",
-          "DATA",
-          "ERR-T"
+          "DATA      1",
+          "DATA      2",
+          "DATA-ERR  2"
         ],
         "units": [
           "KEV",
@@ -239,34 +289,43 @@
           {
             "x4_code": null,
             "free_txt": [
-              "Correction applied for gamma self-absorption,neutron",
-              "multi-scattering and self-shielding"
+              "Corrected for",
+              " . gamma self-absorption",
+              " . neutron multiscattering and self-shielding"
             ]
           }
         ],
         "detector": [
           {
-            "x4_code": "(MOXR,SCIN)",
+            "x4_code": "(MOXR)",
             "free_txt": [
-              "Two MOXON-Rae detectors for gamma detection,",
-              "incident neutron energy spectrum detected by TOF",
-              "method plus a Li-6 glass scintillation detector."
+              " Two Moxon-Rae detectors for gamma detection"
+            ]
+          },
+          {
+            "x4_code": "(GLASD)",
+            "free_txt": [
+              " Li-6 glass scintillation detector to measure",
+              " transmitted neutron spectrum"
             ]
           },
           {
             "x4_code": "(LONGC)",
             "free_txt": [
-              " Neutron flux monitored by long counter."
+              " for neutron fluence monitoring and",
+              " normalization"
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Total error was given, it includes the error",
-              "from flight path,background subtraction,Au standard",
-              "cross section, detector efficiency."
+              " Total error including errors due to",
+              " . flight path,",
+              " . background subtraction,",
+              " . Au standard cross section,",
+              " . detector efficiency."
             ]
           }
         ],
@@ -274,45 +333,23 @@
           {
             "x4_code": "(VDG,3CPRSIU)",
             "free_txt": [
-              " Pulsed 2.5MeV Van de Graaff"
+              " Pulsed 2.5 MeV Van de Graaff"
             ]
           }
         ],
         "inc-source": [
           {
             "x4_code": "(P-LI7)",
-            "free_txt": []
+            "free_txt": [
+              " Ep=1.901 MeV, 2.5-3.0 uA on Li (1 mg/cm2)"
+            ]
           }
         ],
         "method": [
           {
             "x4_code": "(TOF)",
             "free_txt": [
-              " Flight path 7 cm,resolution 22 ns/m"
-            ]
-          }
-        ],
-        "monit-ref": [
-          {
-            "x4_code": "(,Jiang+,R,HSJ-77141,197805)",
-            "free_txt": []
-          }
-        ],
-        "monitor": [
-          {
-            "x4_code": "((72-HF-0(N,G),,SIG)/(79-AU-197(N,G)79-AU-198,,SIG))",
-            "free_txt": [
-              "he numeral given in",
-              "data Table are the ratio of measured Hf cross section",
-              "to Au standard cross section."
-            ]
-          },
-          {
-            "x4_code": "((72-HF-0(N,G),,SIG)/(79-AU-197(N,G)79-AU-198,,SIG))",
-            "free_txt": [
-              "he numeral given in",
-              "data Table are the ratio of measured Hf cross section",
-              "to Au standard cross section."
+              " Flight path 7 cm, resolution 22 ns/m"
             ]
           }
         ],
@@ -320,8 +357,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "The Hf sample made of HfO2 , 40 mm diam. and 20 mm",
-              "thickness"
+              "HfO2, 40 mm diameter and 20 mm thickness"
             ]
           }
         ],
@@ -335,12 +371,27 @@
           {
             "x4_code": "(APRVD)",
             "free_txt": [
-              "Proof-copy was approved by authors"
+              " Proof-copy approved by authors"
             ]
           }
         ]
       }
     },
-    "002": {}
+    "002": {
+      "2": {
+        "monit-ref": [
+          {
+            "x4_code": "(,Jiang Songsheng+,R,HSJ-77141,197805)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
+            "free_txt": []
+          }
+        ]
+      }
+    }
   }
 }

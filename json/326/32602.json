@@ -1,23 +1,35 @@
 {
   "entry": "32602",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-03-31",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(930105C)",
+      "x4_code": "(19930105C)",
       "free_txt": [
-        " COMPILED BY LIANG QICHANG (CNDC)"
+        " Compiled by Liang Qichang (CNDC)"
       ]
     },
     {
-      "x4_code": "(931125U)",
+      "x4_code": "(19931125U)",
       "free_txt": [
-        " HW.- REFERENCE ADDED.-"
+        " HW.- REFERENCE added.-"
+      ]
+    },
+    {
+      "x4_code": "(20230216A)",
+      "free_txt": [
+        " On. ERR-ANALYS updated."
+      ]
+    },
+    {
+      "x4_code": "(20240216U)",
+      "free_txt": [
+        " On. REFERENCE(CNP): Issue number deleted."
       ]
     }
   ],
   "bib_record": {
-    "title": "THE SMALL ANGLE SCATTERING CROSS SECTIONS OF 14.8 MEV NEUTRONS FROM AL-27 AND O-16",
+    "title": "The small angle scattering cross sections of 14.8 MeV neutrons from 27Al and 16O",
     "authors": [
       {
         "name": "Qi Huiquan"
@@ -46,23 +58,30 @@
     ],
     "references": [
       {
-        "x4_code": "(J,CNP,14,(1),15,9203)",
+        "x4_code": "(J,CNP,14,15,1992)",
         "free_txt": [],
         "publication_year": "1992",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(C,91BEIJIN,,13,9109)",
+        "x4_code": "(R,INDC(CPR)-030,1,1993)",
         "free_txt": [
-          " ONLY EXP.DETAILS"
+          " Same 27Al data in table"
         ],
+        "publication_year": "1993",
+        "doi": null,
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,91BEIJIN,,13,1991)",
+        "free_txt": [],
         "publication_year": "1991",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(R,CNIC-412,5,90)",
+        "x4_code": "(R,CNIC-412,5,1990)",
         "free_txt": [],
         "publication_year": "1990",
         "doi": null,
@@ -71,11 +90,11 @@
     ],
     "facilities": [
       {
-        "x4_code": "(CCW)",
+        "x4_code": "(CCW,3CPRTSI)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(CCW)",
-        "institute": null
+        "institute": "(3CPRTSI)"
       }
     ]
   },
@@ -143,14 +162,19 @@
     "001": {
       "common": {
         "heads": [
-          "EN"
+          "EN",
+          "ERR-2"
         ],
         "units": [
-          "MEV"
+          "MEV",
+          "PER-CENT"
         ],
         "data": [
           [
             14.8
+          ],
+          [
+            3.0
           ]
         ]
       }
@@ -160,10 +184,12 @@
       "data": {
         "heads": [
           "ANG",
-          "DATA"
+          "DATA",
+          "ERR-T"
         ],
         "units": [
           "ADEG",
+          "B/SR",
           "B/SR"
         ],
         "data": [
@@ -180,6 +206,13 @@
             1.36,
             1.31,
             1.2
+          ],
+          [
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1
           ]
         ]
       }
@@ -230,46 +263,58 @@
           {
             "x4_code": null,
             "free_txt": [
-              "CORRECTIONS WERE MADE FOR",
-              "NEUTRON FLUENCE ATTENUATION,",
-              "MULTIPLE SCATTERING,",
-              "FINITE GEOMETRY"
+              "Corrected for",
+              " . neutron fluence attenuation,",
+              " . multiple scattering,",
+              " . finite geometry"
             ]
           }
         ],
         "detector": [
           {
-            "x4_code": "(PSSCN)",
+            "x4_code": "(SCIN)",
             "free_txt": [
-              " POSITION SENSITIVE NEUTRON DETECTOR CONSISTING",
-              "OF A LONG CYLINDRIC LIQUID SCINTILLATOR OF 55 CM IN",
-              "LENGTH AND 3.8 CM IN DIAMETER AND TWO PHOTOMULTIPLIERS",
-              "AT BOTH ENDS OF THE SCINTILLATOR."
+              " Position sensitive neutron detector consisting",
+              " of a long cylindrical liquid scintillator of 55 cm in",
+              " length and 3.8 cm in diameter and two",
+              " photomultipliers at both ends of the scintillator"
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(ERR-T)",
             "free_txt": [
-              "MAIN ERROR SOURCES WERE AS FOLLOWS:",
-              "4 AND 11 PER-CENT    STATISTICAL ERROR FOR AL-27 AND",
-              "                     O-16, RESPECTIVELY.",
-              "LESS THAN 4 PER-CENT NON-UNIFORM DISTRUBUTION OF THE",
-              "                     COLLIMATED NEUTRON BEAM, ETC.",
-              "ABOUT 3 PER-CENT     NEUTRONS SMALL ANGLE SCATTERED",
-              "                     FROM THE SURFACE OF THE COLLIMATO",
-              "LESS THAN 3 PER-CENT THE SUM OF THE ERROR CAUSED BY TH",
-              "                     MONTE-CARLO CORRECTION, CORRECTIO",
-              "                     FOR DEAD TIME OF ALPHA PARTICLE",
-              "                     COUNTING, AND THE UNCERTAINTY OF",
-              "                     THE NUMBER OF NUCLEI IN SAMPLE."
+              " Main error sources were as follows:",
+              " . statistical error 4% for 27Al and 11% for 16O"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1,,4.)",
+            "free_txt": [
+              " non-uniform distribution of neutron beam",
+              " and uncertainty of matching between its centre and",
+              " middle point of liquid scintillator (<4%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              "     neutrons scattered by collimator (~3%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3,,3.)",
+            "free_txt": [
+              " Monte Carlo correction and for dead time",
+              " correction of alpha particle counting and the",
+              " number of nuclei in sample (<3%)"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(CCW)",
+            "x4_code": "(CCW,3CPRTSI)",
             "free_txt": []
           }
         ],
@@ -289,22 +334,15 @@
           {
             "x4_code": null,
             "free_txt": [
-              "ABSOLUTE"
+              "Absolute"
             ]
-          }
-        ],
-        "part-det": [
-          {
-            "x4_code": "(N)",
-            "free_txt": []
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,Qi Huiquan+,J,CNP,14,15,1992)",
             "free_txt": [
-              "DATA TAKEN FROM TABLE 2 OF CHINESE J. OF NUCLEAR",
-              "PHYSICS, 14(1),15, 9203."
+              " Table 2"
             ]
           }
         ]
@@ -316,8 +354,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "METAL ALUMINUM DISK,PURITY 99.5 PER-CENT,DIAMETER=4CM,",
-              "THICKNESS=3.0 CM, DENSITY=2.7 G/CM3."
+              "Metal Al disk (Purity 99.5%) 4 cm in diameter, 3.0 cm",
+              " in thickness, 2.7 g/cm3"
             ]
           }
         ]
@@ -329,9 +367,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "THE SAMPLE WAS MADE BY PRESSING AL2O3 POWDER, PURITY",
-              "99.5 PER-CENT, DIAMETER 4 CM, THICKNESS 4.4 CM, DENSITY",
-              "1.18 G/CM3."
+              "Al2O3 powder (purity 99.5%) pressed in to disk, 4 cm",
+              " in diameter, 4.4 cm in thickness, 1.18 g/cm3"
             ]
           }
         ]

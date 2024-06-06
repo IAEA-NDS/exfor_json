@@ -1,32 +1,43 @@
 {
   "entry": "40703",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-03-31",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19840410C)",
       "free_txt": [
-        "  COMPILED AT THE CJD"
+        " Compiled at the CJD"
       ]
     },
     {
       "x4_code": "(19870506U)",
       "free_txt": [
-        "  ONE REFERENCE ADDED REPORT JINR-P3-82-303"
+        " One reference added -report JINR-P3-82-303"
       ]
     },
     {
       "x4_code": "(20010319A)",
       "free_txt": [
-        " DATE is corrected"
+        " Date is corrected"
+      ]
+    },
+    {
+      "x4_code": "(20231113A)",
+      "free_txt": [
+        " EN-MAX=1000.eV was deleted from COMMON",
+        " block of Subent 001.",
+        " Upper -> lower case correction.",
+        " BIB information was updated.",
+        " Reaction was corrected in Subent 002.",
+        " Subent 003 was added."
       ]
     }
   ],
   "bib_record": {
-    "title": " THE INVESTIGATION OF THE NA-22(N,P)NE-22 REACTION FOR A NEUTRON ENERGY UP TO 1 KEV",
+    "title": " The investigation of the reaction Na-22(n,p)Ne-22 for a neutron energy to 1,000 eV",
     "authors": [
       {
-        "name": "Ju.M.Gledenov"
+        "name": "Yu.M.Gledenov"
       },
       {
         "name": "J.Kvitek"
@@ -35,7 +46,7 @@
         "name": "S.Marinova"
       },
       {
-        "name": "Ju.P.Popov"
+        "name": "Yu.P.Popov"
       },
       {
         "name": "J.Rigol"
@@ -59,14 +70,14 @@
         "pointer": "0"
       },
       {
-        "x4_code": "(C,82ANTWER,,150,198209)",
+        "x4_code": "(C,82ANTWER,,150,1982)",
         "free_txt": [],
         "publication_year": "1982",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(C,83KIEV,2,388,198310)",
+        "x4_code": "(C,83KIEV,2,388,1983)",
         "free_txt": [],
         "publication_year": "1983",
         "doi": null,
@@ -82,11 +93,13 @@
     ],
     "facilities": [
       {
-        "x4_code": "(REAC)",
-        "free_txt": [],
+        "x4_code": "(REAC,4ZZZDUB)",
+        "free_txt": [
+          " IBR-30 pulsed reactor."
+        ],
         "pointer": "0",
         "facility_type": "(REAC)",
-        "institute": null
+        "institute": "(4ZZZDUB)"
       }
     ]
   },
@@ -147,7 +160,7 @@
         "pointer": "2"
       },
       "3": {
-        "x4_code": "(11-NA-22(N,P),,WID)",
+        "x4_code": "(11-NA-22(N,P),PAR,WID)",
         "children": [
           {
             "code": [
@@ -155,14 +168,14 @@
               [
                 "N,P"
               ],
-              ",,WID"
+              ",PAR,WID"
             ],
             "type": null,
             "target": "11-NA-22",
             "process": "N,P",
-            "sf49": ",,WID",
+            "sf49": ",PAR,WID",
             "sf4": null,
-            "sf5": null,
+            "sf5": "PAR",
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
@@ -173,26 +186,60 @@
         "free_text": "",
         "pointer": "3"
       }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(11-NA-22(N,P)10-NE-22,,SIG)",
+        "children": [
+          {
+            "code": [
+              "11-NA-22",
+              [
+                "N,P"
+              ],
+              "10-NE-22,,SIG"
+            ],
+            "type": null,
+            "target": "11-NA-22",
+            "process": "N,P",
+            "sf49": "10-NE-22,,SIG",
+            "sf4": "10-NE-22",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "",
+        "pointer": "0"
+      }
     }
   },
   "data_tables": {
     "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
-          "EN-MAX"
+          "MOMENTUM L2",
+          "E         3"
         ],
         "units": [
-          "EV"
+          "NO-DIM",
+          "MEV"
         ],
         "data": [
           [
-            1000.0
+            0.0
+          ],
+          [
+            2.25
           ]
         ]
-      }
-    },
-    "002": {
-      "common": null,
+      },
       "data": {
         "heads": [
           "DATA      1",
@@ -231,6 +278,109 @@
           ]
         ]
       }
+    },
+    "003": {
+      "common": {
+        "heads": [
+          "EN-NRM",
+          "MONIT",
+          "MONIT-ERR",
+          "EN-ERR-DIG",
+          "ERR-DIG"
+        ],
+        "units": [
+          "EV",
+          "B",
+          "B",
+          "PER-CENT",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.0253
+          ],
+          [
+            30600.0
+          ],
+          [
+            2600.0
+          ],
+          [
+            3.96
+          ],
+          [
+            2.5
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "EN",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "EV",
+          "B",
+          "B"
+        ],
+        "data": [
+          [
+            0.78,
+            2.98,
+            3.9,
+            6.0,
+            8.09,
+            17.3,
+            24.0,
+            37.0,
+            42.9,
+            93.1,
+            120.0,
+            162.0,
+            202.0,
+            238.0,
+            301.0,
+            371.0
+          ],
+          [
+            5500.0,
+            2820.0,
+            2210.0,
+            2140.0,
+            1960.0,
+            1760.0,
+            1220.0,
+            1310.0,
+            1200.0,
+            695.0,
+            1290.0,
+            2360.0,
+            1330.0,
+            782.0,
+            103.0,
+            210.0
+          ],
+          [
+            432.0,
+            315.0,
+            174.0,
+            388.0,
+            154.0,
+            256.0,
+            178.0,
+            125.0,
+            375.0,
+            1030.0,
+            680.0,
+            513.0,
+            364.0,
+            672.0,
+            511.0,
+            504.0
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
@@ -240,20 +390,115 @@
           {
             "x4_code": "(SOLST)",
             "free_txt": [
-              " SILICON SEMICONDUCTOR DETECTOR"
+              " Silicon semiconductor detector of 8 cm2 area,",
+              "202 micrometer thick sensitive layer, placed at 40 mm",
+              "from samples. Registered protons up to ~ 5.2 MeV."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              " article."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(REAC)",
-            "free_txt": []
+            "x4_code": "(REAC,4ZZZDUB)",
+            "free_txt": [
+              " IBR-30 pulsed reactor."
+            ]
           }
         ],
         "method": [
           {
             "x4_code": "(TOF)",
-            "free_txt": []
+            "free_txt": [
+              "Run number  Resolution,microsec  Measuring time,hr",
+              " 1            4.5                  48.",
+              " 2            0.2                  91.",
+              " 3            3.0                  47."
+            ]
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Na-22 sample on polycarbon layer of 500 microCurie on",
+              " a polycarbon film of 4 micrometer thickness.",
+              " Li-6 or B-10 was place on inverse side."
+            ]
+          }
+        ]
+      }
+    },
+    "002": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Breit-Wigner formula was used to calculate resonance",
+              " parameters at fitting of measured cross-section."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,Yu.M.Gledenov+,J,ZP/A,308,57,1982)",
+            "free_txt": [
+              " Text on page 59.",
+              " DATA 3 (GAMMAp1) in Abstract of article - 114+-20 eV."
+            ]
+          },
+          {
+            "x4_code": "(DEP,40703002)",
+            "free_txt": [
+              " Cross-section measured."
+            ]
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ". Quantization errors:",
+              " scale X - 0.324 %, scale Y - 0.328 %."
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(TOF)",
+            "free_txt": [
+              "Run number  Resolution,microsec  Measuring time,hr",
+              " 1            4.5                  48.",
+              " 2            0.2                  91.",
+              " 3            3.0                  47."
+            ]
+          }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(,S.F.Mughabghab+,R,BNL-325,1973)",
+            "free_txt": [
+              " 3rd edition.",
+              " Li cross section."
+            ]
+          },
+          {
+            "x4_code": "((MONIT)30586002,J.Kvitek+,J,ZP/A,299,187,1981)",
+            "free_txt": [
+              " at thermal energy."
+            ]
           }
         ],
         "monitor": [
@@ -263,19 +508,28 @@
           },
           {
             "x4_code": "(5-B-10(N,A)3-LI-7,,SIG)",
-            "free_txt": []
+            "free_txt": [
+              " Li-6 and B-10 were used for determination of the",
+              "energy dependence and absolute value of neutron flux",
+              "and for the energy calibration of spectrometer."
+            ]
+          },
+          {
+            "x4_code": "((MONIT)11-NA-22(N,P)10-NE-22,,SIG)",
+            "free_txt": [
+              " At thermal energy."
+            ]
           }
         ],
-        "sample": [
+        "status": [
           {
-            "x4_code": null,
+            "x4_code": "(CURVE,,Yu.M.Gledenov+,J,ZP/A,308,57,1982)",
             "free_txt": [
-              " NA FILM ON POLYCARBON LAYER 500 MICROCURIE"
+              " Fig.3"
             ]
           }
         ]
       }
-    },
-    "002": {}
+    }
   }
 }

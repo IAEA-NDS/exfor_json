@@ -1,7 +1,7 @@
 {
   "entry": "M0529",
-  "last_updated": "2011-10-03",
-  "number_of_revisions": "4",
+  "last_updated": "2024-03-12",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19980319C)",
@@ -12,6 +12,14 @@
       "free_txt": [
         " Corrected   by   V.Varlamov:   REFERENCE,",
         " ERR-S, dates, lowercase, typos."
+      ]
+    },
+    {
+      "x4_code": "(20231127A)",
+      "free_txt": [
+        " Corrected by V.Varlamov: REFERENCE,",
+        " FACILITY, DETECTOR, SAMPLE, STATUS, REACTION,",
+        " DECAY-DATA, SUBENT 3 added."
       ]
     }
   ],
@@ -42,17 +50,17 @@
     ],
     "references": [
       {
-        "x4_code": "(J,AE,75,75,1993)",
-        "free_txt": [],
+        "x4_code": "(J,AE/T,75,584,1993)",
+        "free_txt": [
+          " English translation of AE,75,75,1993."
+        ],
         "publication_year": "1993",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,AE/T,75,584,1993)",
-        "free_txt": [
-          " English translation of AE,75,75,1993."
-        ],
+        "x4_code": "(J,AE,75,75,1993)",
+        "free_txt": [],
         "publication_year": "1993",
         "doi": null,
         "pointer": "0"
@@ -61,7 +69,9 @@
     "facilities": [
       {
         "x4_code": "(BETAT,4RUSRGU)",
-        "free_txt": [],
+        "free_txt": [
+          " B23/30 betatron."
+        ],
         "pointer": "0",
         "facility_type": "(BETAT)",
         "institute": "(4RUSRGU)"
@@ -86,6 +96,35 @@
             "process": "G,N",
             "sf49": "37-RB-86-M/G,,SIG/RAT,,BRA",
             "sf4": "37-RB-86-M/G",
+            "sf5": null,
+            "sf6": "SIG/RAT",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(37-RB-85(G,N)37-RB-84-M/G,,SIG/RAT,,BRA)",
+        "children": [
+          {
+            "code": [
+              "37-RB-85",
+              [
+                "G,N"
+              ],
+              "37-RB-84-M/G,,SIG/RAT,,BRA"
+            ],
+            "type": null,
+            "target": "37-RB-85",
+            "process": "G,N",
+            "sf49": "37-RB-84-M/G,,SIG/RAT,,BRA",
+            "sf4": "37-RB-84-M/G",
             "sf5": null,
             "sf6": "SIG/RAT",
             "sf7": null,
@@ -158,6 +197,44 @@
           ]
         ]
       }
+    },
+    "003": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN-MAX",
+          "DATA",
+          "ERR-S"
+        ],
+        "units": [
+          "MEV",
+          "NO-DIM",
+          "NO-DIM"
+        ],
+        "data": [
+          [
+            22.0,
+            24.0,
+            25.0,
+            60.0,
+            70.0
+          ],
+          [
+            0.34,
+            0.34,
+            0.34,
+            0.27,
+            0.24
+          ],
+          [
+            0.01,
+            0.01,
+            0.01,
+            0.04,
+            0.04
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
@@ -187,7 +264,7 @@
           {
             "x4_code": "(GELI)",
             "free_txt": [
-              " GE(LI)-DETECTOR."
+              " DGDK-80 GE(LI)-detector."
             ]
           }
         ],
@@ -202,7 +279,9 @@
         "facility": [
           {
             "x4_code": "(BETAT,4RUSRGU)",
-            "free_txt": []
+            "free_txt": [
+              " B23/30 betatron."
+            ]
           }
         ],
         "inc-source": [
@@ -223,21 +302,58 @@
           {
             "x4_code": null,
             "free_txt": [
-              "The samples  of natural rubidium."
+              "The samples of rubidium sulfate of natural isotopic",
+              " composition, 6 g."
             ]
+          }
+        ]
+      }
+    },
+    "002": {
+      "0": {
+        "decay-data": [
+          {
+            "x4_code": "(37-RB-86-M,1.02MIN,DG,1077.2)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(37-RB-86-G,16.6D,DG,556.0)",
+            "free_txt": []
           }
         ],
         "status": [
           {
             "x4_code": "(TABLE)",
             "free_txt": [
-              "  Data  from  Table 2  were compiled  at the",
-              " Russia  MSU SINP  CDFE by V.Varlamov."
+              "  Data  from  Table 2 of",
+              " Atom.Energ.,75,75,1993."
             ]
           }
         ]
       }
     },
-    "002": {}
+    "003": {
+      "0": {
+        "decay-data": [
+          {
+            "x4_code": "(37-RB-84-M,20.5MIN,DG,216.0,,                    DG,248.0)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(37-RB-84-G,32.9D,DG,886.1)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              "  Data  from  Table 1 of",
+              " Atom.Energ.,75,75,1993."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

@@ -1,23 +1,31 @@
 {
   "entry": "40609",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-02-02",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810602C)",
       "free_txt": [
-        " COMPILED AT CJD"
+        " Compiled at CJD"
       ]
     },
     {
       "x4_code": "(20021127A)",
       "free_txt": [
-        " CORRECTED AT CJD. Date corrected to Y2K"
+        " Corrected at CJD. Date corrected ."
+      ]
+    },
+    {
+      "x4_code": "(20230919A)",
+      "free_txt": [
+        " M.M. Upper -> lower case correction.",
+        " Ref. INDC(CCP) was added.",
+        "STATUS was added in data Subents."
       ]
     }
   ],
   "bib_record": {
-    "title": " DETERMINATION OF TOTAL CROSS-SECTION AND SCATTERING CROSS-SECTION OF U-235 FOR NEUTRON ENERGIES 2. AND 24.5 KEV",
+    "title": " Determination of total cross-section and scattering cross-section of U-235 for neutron energies 2. and 24.5 keV",
     "authors": [
       {
         "name": "V.P.Vertebnyy"
@@ -40,20 +48,28 @@
     ],
     "institutes": [
       {
-        "x4_code": "(4UKRIJI)",
+        "x4_code": "(4UKRIJD)",
         "free_txt": []
       }
     ],
     "references": [
       {
-        "x4_code": "(C,80KIEV,2,254,198009)",
+        "x4_code": "((C,80KIEV,2,254,1980)=(R,INDC(CCP)-169,(3),254,1980))",
         "free_txt": [],
         "publication_year": "1980",
         "doi": null,
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(REAC,4UKRIJD)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4UKRIJD)"
+      }
+    ]
   },
   "reactions": {
     "002": {
@@ -116,7 +132,7 @@
     },
     "004": {
       "0": {
-        "x4_code": "(92-U-235(N,ABS),,ALF)",
+        "x4_code": "(92-U-235(N,ABS),,ALF,,,DERIV)",
         "children": [
           {
             "code": [
@@ -124,18 +140,18 @@
               [
                 "N,ABS"
               ],
-              ",,ALF"
+              ",,ALF,,,DERIV"
             ],
             "type": null,
             "target": "92-U-235",
             "process": "N,ABS",
-            "sf49": ",,ALF",
+            "sf49": ",,ALF,,,DERIV",
             "sf4": null,
             "sf5": null,
             "sf6": "ALF",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
         "type": null,
@@ -174,7 +190,7 @@
     },
     "006": {
       "0": {
-        "x4_code": "(92-U-235(N,EL)92-U-235,POT,RAD)",
+        "x4_code": "(92-U-235(N,EL)92-U-235,,RAD)",
         "children": [
           {
             "code": [
@@ -182,14 +198,14 @@
               [
                 "N,EL"
               ],
-              "92-U-235,POT,RAD"
+              "92-U-235,,RAD"
             ],
             "type": null,
             "target": "92-U-235",
             "process": "N,EL",
-            "sf49": "92-U-235,POT,RAD",
+            "sf49": "92-U-235,,RAD",
             "sf4": "92-U-235",
-            "sf5": "POT",
+            "sf5": null,
             "sf6": "RAD",
             "sf7": null,
             "sf8": null,
@@ -240,49 +256,27 @@
       "data": {
         "heads": [
           "EN",
+          "EN-RSL-FW",
           "DATA",
-          "DATA-ERR",
-          "MONIT1",
-          "MONIT1-ERR",
-          "MONIT2",
-          "MONIT2-ERR"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
-          "B",
-          "B",
-          "B",
-          "B",
+          "KEV",
           "B",
           "B"
         ],
         "data": [
           [
-            2.0,
             24.5
           ],
           [
-            19.9,
+            2.1
+          ],
+          [
             14.04
           ],
           [
-            0.1,
-            0.02
-          ],
-          [
-            11.41,
-            null
-          ],
-          [
-            0.07,
-            null
-          ],
-          [
-            null,
-            10.77
-          ],
-          [
-            null,
             0.02
           ]
         ]
@@ -347,12 +341,16 @@
         "heads": [
           "EN",
           "DATA",
-          "DATA-ERR"
+          "DATA-ERR",
+          "ASSUM",
+          "ASSUM-ERR"
         ],
         "units": [
           "KEV",
           "NO-DIM",
-          "NO-DIM"
+          "NO-DIM",
+          "B",
+          "B"
         ],
         "data": [
           [
@@ -366,6 +364,14 @@
           [
             0.04,
             0.09
+          ],
+          [
+            6.27,
+            1.964
+          ],
+          [
+            0.13,
+            0.06
           ]
         ]
       }
@@ -373,8 +379,8 @@
     "005": {
       "common": {
         "heads": [
-          "EN-MIN",
-          "EN-MAX"
+          "EN-RES-MIN",
+          "EN-RES-MAX"
         ],
         "units": [
           "KEV",
@@ -512,8 +518,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "CORRECTIONS ARE ON THE DEPOSIT OF U-238,EFFECT OF SELF-",
-              " SHIEDING,MULTIPLE SCATTERING"
+              "Corrections are on the deposit of U-238, effect of",
+              "self-shielding, multiple scattering ."
             ]
           }
         ],
@@ -521,7 +527,8 @@
           {
             "x4_code": "(HE3SP)",
             "free_txt": [
-              " HE-3"
+              " He-3 counters SNM-52, SNM-53.",
+              " Methane counter SNM-38."
             ]
           }
         ],
@@ -529,23 +536,31 @@
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " NOT SPECIFIED"
+              " Not specified"
             ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(REAC,4UKRIJD)",
+            "free_txt": []
           }
         ],
         "inc-source": [
           {
             "x4_code": "(REAC)",
             "free_txt": [
-              " REACTOR WWR-M"
+              " Reactor WWR-M"
             ]
           }
         ],
         "method": [
           {
-            "x4_code": null,
+            "x4_code": "(FNB)",
             "free_txt": [
-              " SCANDIUM AND IRON FILTER METHOD"
+              " Scandium ( thickness 96 cm, diameter 11 mm ) and",
+              "iron (content: Fe- 234 g/cm2, Al- 108 g/cm2,",
+              "S - 15.5 g/cm2, B - 0.164 g/cm2) filters"
             ]
           }
         ],
@@ -559,8 +574,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              " THICKNESS IS 0.00238NUCLEI/B AND .00981NUCLEI/B",
-              " FOR EN=2.KEV,AND0 .00981NUCLEI/B FOR EN=24.5KEV"
+              " Thickness is 0.00238nuclei/b and .00981nuclei/b",
+              " for En=2.keV,and 0.00981nuclei/b for En=24.5keV"
             ]
           }
         ]
@@ -568,14 +583,26 @@
     },
     "002": {
       "0": {
-        "monitor": [
+        "method": [
           {
-            "x4_code": "((MONIT1)82-PB-0(N,TOT),,SIG)",
+            "x4_code": "(TRN)",
             "free_txt": []
-          },
+          }
+        ],
+        "rel-ref": [
           {
-            "x4_code": "((MONIT2)83-BI-209(N,TOT),,SIG)",
-            "free_txt": []
+            "x4_code": "(R,40562002,N.L.Gnidak+,R,INDC(CCP)-118,(2),223,1977)",
+            "free_txt": [
+              " DATA at 2 keV."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.P.Vertebnyy+,R,INDC(CCP)-169,(3),254,1980)",
+            "free_txt": [
+              " Table on page 256."
+            ]
           }
         ]
       }
@@ -585,18 +612,168 @@
         "monitor": [
           {
             "x4_code": "((MONIT1)82-PB-0(N,TOT),,SIG)",
-            "free_txt": []
+            "free_txt": [
+              "  at 2.keV"
+            ]
           },
           {
             "x4_code": "((MONIT2)83-BI-209(N,TOT),,SIG)",
+            "free_txt": [
+              " at 24.5 keV"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(A,21088001,C.A.Uttley+,C,66PARIS,1,165,1966)",
             "free_txt": []
+          },
+          {
+            "x4_code": "(A,20145001,F.Poortmans+,C,70HELSINKI,1,449,1970)",
+            "free_txt": []
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ".2 samples of 0.00238 and 0.00981 nucl/barn thickness.",
+              " Measurement relative Pb.",
+              ".Sample of 0.00981 nucl/barn thickness,",
+              " Measurement relative Bi."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.P.Vertebnyy+,R,INDC(CCP)-169,(3),254,1980)",
+            "free_txt": [
+              " Table on page 256."
+            ]
           }
         ]
       }
     },
-    "004": {},
-    "005": {},
-    "006": {},
-    "007": {}
+    "004": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " ALF = (SIGtotal-SIGscattering-SIGfission)/SIGfission"
+            ]
+          }
+        ],
+        "assumed": [
+          {
+            "x4_code": "(ASSUM,92-U-235(N,F),,SIG)",
+            "free_txt": [
+              " From REL-REFs"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(R,40588003,A.V.Murzin+,C,77KIEV,2,252,1977)",
+            "free_txt": [
+              " Fission cross section 6.27+-0.13 b at 2.0 keV."
+            ]
+          },
+          {
+            "x4_code": "(R,40587003,A.V.Murzin+,C,80KIEV,2,257,1980)",
+            "free_txt": [
+              " Fission cross section 1.964+-0.06 b at 24.5 keV."
+            ]
+          },
+          {
+            "x4_code": "(N,40562004,N.L.Gnidak+,R,INDC(CCP)-118,(2),223,1977)",
+            "free_txt": [
+              " Previous measurement.",
+              " Method was improved in 40609."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.P.Vertebnyy+,R,INDC(CCP)-169,(3),254,1980)",
+            "free_txt": [
+              " Table on page 256."
+            ]
+          },
+          {
+            "x4_code": "(DEP,40609002)",
+            "free_txt": [
+              " Total cross section at 24.5 keV."
+            ]
+          },
+          {
+            "x4_code": "(DEP,40562002)",
+            "free_txt": [
+              " Total cross section at 2. keV."
+            ]
+          },
+          {
+            "x4_code": "(DEP,40609003)",
+            "free_txt": [
+              " Scattering cross section."
+            ]
+          }
+        ]
+      }
+    },
+    "005": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Calculated from formulas for SIGtotal and SIGscattering",
+              "given on page 256 of INDC(CCP)-169,(3),254,1980"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.P.Vertebnyy+,R,INDC(CCP)-169,(3),254,1980)",
+            "free_txt": [
+              " Text on page 256."
+            ]
+          }
+        ]
+      }
+    },
+    "006": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Calculated from formulas for SIGtotal and SIGscattering",
+              "given on page 256 of INDC(CCP)-169,(3),254,1980"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.P.Vertebnyy+,R,INDC(CCP)-169,(3),254,1980)",
+            "free_txt": [
+              " Text on page 256."
+            ]
+          }
+        ]
+      }
+    },
+    "007": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.P.Vertebnyy+,R,INDC(CCP)-169,(3),254,1980)",
+            "free_txt": [
+              " Text on page 256."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

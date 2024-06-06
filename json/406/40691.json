@@ -1,23 +1,31 @@
 {
   "entry": "40691",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-02-02",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(840127T)",
+      "x4_code": "(19840127T)",
       "free_txt": [
-        " CONVERTED FROM ENTRY 80084"
+        " Converted from ENTRY 80084"
+      ]
+    },
+    {
+      "x4_code": "(20231012U)",
+      "free_txt": [
+        " BIB information was updated.",
+        " Upper -> lower case correction.",
+        " Dates were corrected for 4-digits year."
       ]
     }
   ],
   "bib_record": {
-    "title": "FAST NEUTRON CAPTURE CROSS SECTIONS FOR RE.",
+    "title": " Fast neutron capture cross sections for rhenium",
     "authors": [
       {
         "name": "Yu.Ya.Stavisskii"
       },
       {
-        "name": "A.V.Shapar"
+        "name": "A.V.Shapar'"
       },
       {
         "name": "R.N.Krasnokutskii"
@@ -25,21 +33,23 @@
     ],
     "institutes": [
       {
-        "x4_code": "(4CCPFEI)",
+        "x4_code": "(4RUSFEI)",
         "free_txt": []
       }
     ],
     "references": [
       {
-        "x4_code": "(J,AE,19,(1),42,6507)",
+        "x4_code": "(J,SJA,19,905,1965)",
         "free_txt": [],
         "publication_year": "1965",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,SJA,19,905,65)",
-        "free_txt": [],
+        "x4_code": "(J,AE,19,42,1965)",
+        "free_txt": [
+          " Issue 1."
+        ],
         "publication_year": "1965",
         "doi": null,
         "pointer": "0"
@@ -47,16 +57,45 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG)",
+        "x4_code": "(VDG,4RUSFEI)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": null
+        "institute": "(4RUSFEI)"
       }
     ]
   },
   "reactions": {
     "002": {
+      "0": {
+        "x4_code": "(75-RE-0(N,G),,SIG)",
+        "children": [
+          {
+            "code": [
+              "75-RE-0",
+              [
+                "N,G"
+              ],
+              ",,SIG"
+            ],
+            "type": null,
+            "target": "75-RE-0",
+            "process": "N,G",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "003": {
       "0": {
         "x4_code": "(75-RE-0(N,G),,SIG)",
         "children": [
@@ -94,11 +133,19 @@
       "common": {
         "heads": [
           "EN-ERR",
-          "EN-NRM"
+          "EN-NRM",
+          "MONIT",
+          "MONIT-ERR",
+          "DATA-ERR",
+          "ERR-1"
         ],
         "units": [
           "KEV",
-          "KEV"
+          "KEV",
+          "MB",
+          "MB",
+          "PER-CENT",
+          "PER-CENT"
         ],
         "data": [
           [
@@ -106,19 +153,29 @@
           ],
           [
             600.0
+          ],
+          [
+            325.0
+          ],
+          [
+            60.0
+          ],
+          [
+            22.0
+          ],
+          [
+            7.0
           ]
         ]
       },
       "data": {
         "heads": [
           "EN",
-          "DATA",
-          "DATA-ERR"
+          "DATA"
         ],
         "units": [
           "MEV",
-          "B",
-          "MB"
+          "B"
         ],
         "data": [
           [
@@ -133,7 +190,6 @@
             0.295,
             0.32,
             0.43,
-            0.6,
             0.81,
             1.01
           ],
@@ -149,25 +205,46 @@
             0.47,
             0.42,
             0.35,
-            0.325,
             0.29,
             0.275
+          ]
+        ]
+      }
+    },
+    "003": {
+      "common": {
+        "heads": [
+          "EN-RSL"
+        ],
+        "units": [
+          "KEV"
+        ],
+        "data": [
+          [
+            100.0
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "EN",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "KEV",
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            600.0
           ],
           [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            60.0,
-            null,
-            null
+            325.0
+          ],
+          [
+            60.0
           ]
         ]
       }
@@ -176,17 +253,9 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "detector": [
-          {
-            "x4_code": "(SCIN)",
-            "free_txt": [
-              " SCINTILLATION COUNTER WITH CA-F2 CRYSTAL"
-            ]
-          }
-        ],
         "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,4RUSFEI)",
             "free_txt": []
           }
         ],
@@ -195,35 +264,158 @@
             "x4_code": "(P-T)",
             "free_txt": []
           }
-        ],
-        "monitor": [
-          {
-            "x4_code": "(92-U-235(N,F),,SIG)",
-            "free_txt": []
-          }
         ]
       }
     },
     "002": {
       "0": {
+        "detector": [
+          {
+            "x4_code": "(SCIN)",
+            "free_txt": [
+              " Scintillation counter with CaF(2) crystal"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              "article."
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Uncertainty of energy dependence determination",
+              "relative to U-235."
+            ]
+          }
+        ],
         "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
         ],
+        "monit-ref": [
+          {
+            "x4_code": "((MONIT)40691003,Yu.Ya.Stavisskii+,J,SJA,19,905,1965)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(92-U-235(N,F),,SIG)",
+            "free_txt": [
+              " For energy dependence.",
+              " From J.Hughes,R.Schwartz, Atlas of Neutron Cross",
+              "Sections, Russian translation, Moscow, Atomizdat,1959."
+            ]
+          },
+          {
+            "x4_code": "((MONIT)75-RE-0(N,G),,SIG)",
+            "free_txt": [
+              " For absolute normalization a",
+              "600 keV - from additional measurement, Subent 003."
+            ]
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              " SAMPLE THICKNESS IS 6.0E22 ATOMS/CM-SQ"
+              " Sample thickness is 6.0E22 atoms/cm2"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(SCSRS,CURVE)",
+            "x4_code": "(CURVE,,Yu.Ya.Stavisskii+,J,SJA,19,905,1965)",
             "free_txt": []
+          },
+          {
+            "x4_code": "(DEP,40691003)",
+            "free_txt": [
+              " C-S at 600 keV measured at additional",
+              " experiment."
+            ]
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "detector": [
+          {
+            "x4_code": "(PROPC)",
+            "free_txt": [
+              " End-window beta-counters."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              "article."
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(REAC,4RUSFEI)",
+            "free_txt": [
+              " BR-5 reactor"
+            ]
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(THCOL)",
+            "free_txt": [
+              " Horizontal channel of thermal column of BR-5",
+              "reactor - for thermal neutrons irradiation."
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(ACTIV)",
+            "free_txt": [
+              "Irradiation by thermal and fast neutrons -",
+              "2 hr and 20 hr, respectively."
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(53-I-127(N,G)53-I-128,,SIG)",
+            "free_txt": [
+              " for thermal and 600 keV neutrons.",
+              " Re isotopes absorption cross sections for thermal",
+              " neutrons - from J.Hughes,R.Schwartz, Atlas of Neutron",
+              " Cross Sections, Russian translation, Moscow, A",
+              " Atomizdat,1959."
+            ]
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Relatively thick target."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,Yu.Ya.Stavisskii+,J,SJA,19,905,1965)",
+            "free_txt": [
+              " Text on page 905."
+            ]
           }
         ]
       }

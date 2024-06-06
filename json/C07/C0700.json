@@ -1,12 +1,25 @@
 {
   "entry": "C0700",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-04-05",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20000809C)",
       "free_txt": [
         " Converted from data set P0049 and updated."
+      ]
+    },
+    {
+      "x4_code": "(20230721A)",
+      "free_txt": [
+        " OS. REACTIONs corrected in subs.2-5,",
+        " several BIB updates"
+      ]
+    },
+    {
+      "x4_code": "(20240405A)",
+      "free_txt": [
+        " On. ERR-ANALYS added."
       ]
     }
   ],
@@ -28,10 +41,12 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,118,1591,196006)",
-        "free_txt": [],
+        "x4_code": "(J,PR,118,1591,1960)",
+        "free_txt": [
+          "#doi:10.1103/PhysRev.118.1591"
+        ],
         "publication_year": "1960",
-        "doi": null,
+        "doi": "10.1103/PhysRev.118.1591",
         "pointer": "0"
       }
     ],
@@ -48,19 +63,19 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(9-F-19(P,N+P)9-F-18,,SIG)",
+        "x4_code": "(9-F-19(P,X)9-F-18,,SIG)",
         "children": [
           {
             "code": [
               "9-F-19",
               [
-                "P,N+P"
+                "P,X"
               ],
               "9-F-18,,SIG"
             ],
             "type": null,
             "target": "9-F-19",
-            "process": "P,N+P",
+            "process": "P,X",
             "sf49": "9-F-18,,SIG",
             "sf4": "9-F-18",
             "sf5": null,
@@ -77,19 +92,19 @@
     },
     "003": {
       "0": {
-        "x4_code": "(29-CU-65(P,N+P)29-CU-64,,SIG)",
+        "x4_code": "(29-CU-65(P,X)29-CU-64,,SIG)",
         "children": [
           {
             "code": [
               "29-CU-65",
               [
-                "P,N+P"
+                "P,X"
               ],
               "29-CU-64,,SIG"
             ],
             "type": null,
             "target": "29-CU-65",
-            "process": "P,N+P",
+            "process": "P,X",
             "sf49": "29-CU-64,,SIG",
             "sf4": "29-CU-64",
             "sf5": null,
@@ -106,19 +121,19 @@
     },
     "004": {
       "0": {
-        "x4_code": "(79-AU-197(P,N+P)79-AU-196,,SIG)",
+        "x4_code": "(79-AU-197(P,X)79-AU-196,,SIG)",
         "children": [
           {
             "code": [
               "79-AU-197",
               [
-                "P,N+P"
+                "P,X"
               ],
               "79-AU-196,,SIG"
             ],
             "type": null,
             "target": "79-AU-197",
-            "process": "P,N+P",
+            "process": "P,X",
             "sf49": "79-AU-196,,SIG",
             "sf4": "79-AU-196",
             "sf5": null,
@@ -135,21 +150,21 @@
     },
     "005": {
       "0": {
-        "x4_code": "(13-AL-27(P,N+3P)11-NA-24-G,,SIG)",
+        "x4_code": "(13-AL-27(P,X)11-NA-24,,SIG)",
         "children": [
           {
             "code": [
               "13-AL-27",
               [
-                "P,N+3P"
+                "P,X"
               ],
-              "11-NA-24-G,,SIG"
+              "11-NA-24,,SIG"
             ],
             "type": null,
             "target": "13-AL-27",
-            "process": "P,N+3P",
-            "sf49": "11-NA-24-G,,SIG",
-            "sf4": "11-NA-24-G",
+            "process": "P,X",
+            "sf49": "11-NA-24,,SIG",
+            "sf4": "11-NA-24",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
@@ -359,6 +374,17 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Statistical combinations of the",
+              " standard deviations of the errors in the individual",
+              " factors excluding the error in the 12C(p,x)11C cross",
+              " section"
+            ]
+          }
+        ],
         "facility": [
           {
             "x4_code": "(SYNCY,1USACHI)",
@@ -367,21 +393,23 @@
         ],
         "method": [
           {
-            "x4_code": "(RCHEM)",
+            "x4_code": "(ACTIV,CHSEP)",
             "free_txt": []
           }
         ],
         "monitor": [
           {
-            "x4_code": "(6-C-12(P,N+P)6-C-11,,SIG)",
-            "free_txt": []
+            "x4_code": "(6-C-12(P,X)6-C-11,,SIG)",
+            "free_txt": [
+              " Average of several experiments from literature"
+            ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,H.P.Yule+,J,PR,118,1591,1960)",
             "free_txt": [
-              "Data taken from Table II in reference."
+              " Table II"
             ]
           }
         ]
@@ -391,7 +419,7 @@
       "0": {
         "decay-data": [
           {
-            "x4_code": "(9-F-18,110.2MIN,AR,0.97)",
+            "x4_code": "(9-F-18,110.2MIN,AR,,0.97)",
             "free_txt": []
           }
         ],
@@ -415,7 +443,7 @@
       "0": {
         "decay-data": [
           {
-            "x4_code": "(29-CU-64,,AR,0.19)",
+            "x4_code": "(29-CU-64,,AR,,0.19)",
             "free_txt": []
           }
         ],

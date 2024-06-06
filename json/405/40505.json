@@ -1,7 +1,7 @@
 {
   "entry": "40505",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-11-09",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19821115C)",
@@ -10,13 +10,26 @@
     {
       "x4_code": "(20020822A)",
       "free_txt": [
-        " DATE is corrected. SAN 004, 005 RESTORED",
-        "            SAN 006, 007 ADDED"
+        " Date is corrected. SAN 004, 005 restored,",
+        "            SAN 006, 007 added"
+      ]
+    },
+    {
+      "x4_code": "(20230724A)",
+      "free_txt": [
+        " Ref. R,INDC(CCP)-118,(2),57,1977 was added.",
+        " Upper -> lower case correction.",
+        " STATUS was added in data Subents.",
+        " ERR-T -> DATA-ERR, ERR-ANALYS, ANALYSIS were added.",
+        "  \"MONITOR    (11-NA-23(N,A)9-F-20,,SIG)\" was deleted -",
+        " no such information in the article.",
+        " EN-SEC (E,G) was deleted according to a comment of",
+        " N.Otsuka (NDS, IAEA)."
       ]
     }
   ],
   "bib_record": {
-    "title": " GAMMA-RAYS CONNECTED WITH THE NONELASTIC PROCESSED OF THE DEUTERIUM-TRITIUM NEUTRONS ON THE NUCLEI NA,FE",
+    "title": " Gamma-rays connected with the nonelastic processes of the deuterium-tritium neutrons on the nuclei Na,Fe",
     "authors": [
       {
         "name": "A.P.Degtyarev"
@@ -36,9 +49,20 @@
     ],
     "references": [
       {
-        "x4_code": "(C,77KIEV,2,57,197704)",
+        "x4_code": "((C,77KIEV,2,57,1977)=(R,INDC(CCP)-118,(2),57,1977))",
         "free_txt": [
-          " DATA ARE GIVEN"
+          " Data are given.",
+          " Engl.translation is absent in INDC(CCP)-113."
+        ],
+        "publication_year": "1977",
+        "doi": null,
+        "pointer": "0"
+      },
+      {
+        "x4_code": "((C,77KIEV,2,57,1977)=(R,INDC(CCP)-118,(2),57,1977))",
+        "free_txt": [
+          " Data are given.",
+          " Engl.translation is absent in INDC(CCP)-113."
         ],
         "publication_year": "1977",
         "doi": null,
@@ -47,11 +71,11 @@
     ],
     "facilities": [
       {
-        "x4_code": "(SELVE)",
+        "x4_code": "(SELVE,4UKRKGU)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(SELVE)",
-        "institute": null
+        "institute": "(4UKRKGU)"
       }
     ]
   },
@@ -265,7 +289,7 @@
         "heads": [
           "E",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
@@ -315,7 +339,7 @@
         "heads": [
           "E",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
@@ -361,7 +385,7 @@
         "heads": [
           "E",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
@@ -404,7 +428,7 @@
         "heads": [
           "E",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
@@ -513,7 +537,7 @@
         "heads": [
           "E",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
@@ -556,7 +580,7 @@
         "heads": [
           "E",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
@@ -592,21 +616,49 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(4PI1A)",
+            "free_txt": [
+              " Cross section was determined as dif. angular",
+              "cross section at 90 deg ( = average in angular range",
+              "45 - 135 degrees) multiplied by 4*PI."
+            ]
+          }
+        ],
+        "correction": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " For registration efficiency.",
+              " For self-absorption."
+            ]
+          }
+        ],
         "detector": [
           {
             "x4_code": "(GELI)",
-            "free_txt": []
+            "free_txt": [
+              " Resolution ~ 4 keV for Co-60 gamma peak.",
+              " Diameter ~10 cm."
+            ]
           }
         ],
-        "en-sec": [
+        "err-analys": [
           {
-            "x4_code": "(E,G)",
-            "free_txt": []
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              "  Total error ( 10 - 30 %),",
+              " main sources:",
+              " - uncertainty of neutron flux on the sample,",
+              " - gamma-quanta self-absorption value,",
+              " - uncertainty of photo-peaks area determination."
+            ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(SELVE)",
+            "x4_code": "(SELVE,4UKRKGU)",
             "free_txt": []
           }
         ],
@@ -616,10 +668,12 @@
             "free_txt": []
           }
         ],
-        "monitor": [
+        "method": [
           {
-            "x4_code": "(11-NA-23(N,A)9-F-20,,SIG)",
-            "free_txt": []
+            "x4_code": "(ASSOP)",
+            "free_txt": [
+              " For neutron flux."
+            ]
           }
         ],
         "part-det": [
@@ -632,13 +686,24 @@
           {
             "x4_code": null,
             "free_txt": [
-              " HOLLOW SPHERICAL,METALLIC"
+              " Metallic spherical and ball natural samples."
             ]
           }
         ]
       }
     },
-    "002": {},
+    "002": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.P.Degtyarev+,R,INDC(CCP)-118,(2),57,1977)",
+            "free_txt": [
+              " Table 1."
+            ]
+          }
+        ]
+      }
+    },
     "003": {
       "0": {
         "analysis": [
@@ -646,12 +711,64 @@
             "x4_code": "(4PI1A)",
             "free_txt": []
           }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.P.Degtyarev+,R,INDC(CCP)-118,(2),57,1977)",
+            "free_txt": [
+              " Table 1."
+            ]
+          }
         ]
       }
     },
-    "004": {},
-    "005": {},
-    "006": {},
-    "007": {}
+    "004": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.P.Degtyarev+,R,INDC(CCP)-118,(2),57,1977)",
+            "free_txt": [
+              " Table 2."
+            ]
+          }
+        ]
+      }
+    },
+    "005": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.P.Degtyarev+,R,INDC(CCP)-118,(2),57,1977)",
+            "free_txt": [
+              " Table 2."
+            ]
+          }
+        ]
+      }
+    },
+    "006": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.P.Degtyarev+,R,INDC(CCP)-118,(2),57,1977)",
+            "free_txt": [
+              " Table 2."
+            ]
+          }
+        ]
+      }
+    },
+    "007": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.P.Degtyarev+,R,INDC(CCP)-118,(2),57,1977)",
+            "free_txt": [
+              " Table 2."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

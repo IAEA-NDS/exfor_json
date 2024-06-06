@@ -1,7 +1,7 @@
 {
   "entry": "40588",
-  "last_updated": "2006-11-23",
-  "number_of_revisions": "4",
+  "last_updated": "2023-11-09",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19821214C)",
@@ -14,10 +14,18 @@
         " Dates were corrected for 4-digits year.",
         " Samples description was added."
       ]
+    },
+    {
+      "x4_code": "(20230724U)",
+      "free_txt": [
+        " Upper -> lower case correction.",
+        " Ref. INDC(CCP)-118,(2),252,1977 was added.",
+        " ERR-T -> DATA-ERR."
+      ]
     }
   ],
   "bib_record": {
-    "title": " Fission Cross-section Measurement For U-233 And U-235 At The Neutron Energy 2. keV",
+    "title": " Fission cross-section measurement for u-233 and U-235 at the neutron energy 2. keV",
     "authors": [
       {
         "name": "A.V.Murzin"
@@ -31,20 +39,30 @@
     ],
     "institutes": [
       {
-        "x4_code": "(4UKRIJI)",
+        "x4_code": "(4UKRIJD)",
         "free_txt": []
       }
     ],
     "references": [
       {
-        "x4_code": "(C,77KIEV,2,252,197704)",
+        "x4_code": "((C,77KIEV,2,252,1977)=(R,INDC(CCP)-118,(2),252,1977))",
         "free_txt": [],
         "publication_year": "1977",
         "doi": null,
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(REAC,4UKRIJD)",
+        "free_txt": [
+          " WWR-M reactor"
+        ],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(4UKRIJD)"
+      }
+    ]
   },
   "reactions": {
     "002": {
@@ -72,7 +90,7 @@
           }
         ],
         "type": null,
-        "free_text": "  Averaged Over Scandium                          Filter Energy Range",
+        "free_text": "Averaged over scandium filter neutrons energy range",
         "pointer": "0"
       }
     },
@@ -101,7 +119,7 @@
           }
         ],
         "type": null,
-        "free_text": "",
+        "free_text": "Averaged over scandium filter neutrons energy range",
         "pointer": "0"
       }
     }
@@ -142,7 +160,7 @@
       "data": {
         "heads": [
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "B",
@@ -163,7 +181,7 @@
       "data": {
         "heads": [
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "B",
@@ -187,8 +205,9 @@
           {
             "x4_code": null,
             "free_txt": [
-              " Corrections On Multiple Scattering And Background",
-              " Were Made"
+              " Corrections on multiple scattering and background",
+              " were made",
+              " For neutron attenuation in sample."
             ]
           }
         ],
@@ -196,11 +215,17 @@
           {
             "x4_code": null,
             "free_txt": [
-              " Of compiler.M.M. 2006.06.06.",
-              " In Text of reference the c-s data values are",
+              " Of compiler. M.M. 2006.06.06.",
+              " - In text of reference the c-s data values are",
               "  7.54 +- 0.17 b for U-233,",
               "  6.19 +- 0.12 b for U-235.",
-              " But STATUS is APRVD of author. 1982.12.09."
+              " But STATUS is APRVD of author 1982.12.09.",
+              " Probably, data were revised by the author.",
+              "- There are values of systematical uncertainties in",
+              "INDC(CCP)-118,(2),252,1977, Table 1, 2 ;",
+              "they were not inserted in this Entry, because data were",
+              "probably revised by authors and uncertainties values",
+              "could been changed after revision."
             ]
           }
         ],
@@ -208,50 +233,68 @@
           {
             "x4_code": "(SOLST)",
             "free_txt": [
-              "  Stilbene Detector For Neutron Detection"
+              " Stilbene detector for fission neutrons",
+              "detection"
             ]
           },
           {
             "x4_code": "(GELI)",
             "free_txt": [
-              "   GE-LI Detector For Gamma, 25 cm3 volume"
+              "   Ge(Li) detector for gamma, 25 cm3 volume"
             ]
           },
           {
             "x4_code": "(PROPC)",
             "free_txt": [
-              "  Recoil Proton Counter"
+              "  Recoil proton counter"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Total uncertainty"
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(REAC,4UKRIJD)",
+            "free_txt": [
+              " WWR-M reactor"
             ]
           }
         ],
         "inc-source": [
           {
             "x4_code": "(REAC)",
-            "free_txt": [
-              " WWR-M Reactor"
-            ]
+            "free_txt": []
           }
         ],
         "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
-              " 2 keV neutron beam - 3.E+05 neutrons/(sec*cm2)"
+              " 2 keV neutron beam - 3.E+05 neutrons/(sec*cm2) at",
+              "sample position."
             ]
           }
         ],
         "method": [
           {
-            "x4_code": null,
+            "x4_code": "(FNB)",
             "free_txt": [
-              " Scandium Filter Method.Scandium filter lenght 960 mm."
+              " Scandium filter length 960 mm."
             ]
           }
         ],
         "monitor": [
           {
             "x4_code": "((MONIT)5-B-10(N,A)3-LI-7,,SIG)",
-            "free_txt": []
+            "free_txt": [
+              " 478.keV gamma were registered."
+            ]
           }
         ],
         "part-det": [
@@ -268,7 +311,7 @@
           {
             "x4_code": "(APRVD)",
             "free_txt": [
-              " Murzin, 19821209"
+              " Murzin, 1982-12-09"
             ]
           }
         ]
@@ -285,6 +328,10 @@
               " B-10 sample of 0.11 g/cm2 thickness and",
               " 85.8% enrichment"
             ]
+          },
+          {
+            "x4_code": "(92-U-233,ENR=0.989)",
+            "free_txt": []
           }
         ]
       }
@@ -300,6 +347,10 @@
               "B-10 sample of 0.11 g/cm2 thickness and",
               " 85.8% enrichment"
             ]
+          },
+          {
+            "x4_code": "(92-U-235,ENR=0.858)",
+            "free_txt": []
           }
         ]
       }

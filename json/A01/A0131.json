@@ -1,7 +1,7 @@
 {
   "entry": "A0131",
-  "last_updated": "2019-10-08",
-  "number_of_revisions": "6",
+  "last_updated": "2024-04-15",
+  "number_of_revisions": "7",
   "histories": [
     {
       "x4_code": "(19820715C)",
@@ -17,7 +17,7 @@
     {
       "x4_code": "(20120409U)",
       "free_txt": [
-        ".English translation of 'YF' was added."
+        " English translation of 'YF' was added."
       ]
     },
     {
@@ -25,10 +25,16 @@
       "free_txt": [
         " SD: Major corrections in all Subents."
       ]
+    },
+    {
+      "x4_code": "(20240304A)",
+      "free_txt": [
+        " SD: Correction in Subent 002."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Cross sections of production of 81-Kr in the reactions (A>81)Kr(p,pXn)81Kr and 80Kr(n,gamma)81Kr.",
+    "title": "Cross sections of production of 81-Kr in the reactions (A>81)Kr(p,pXn)81Kr and 80Kr(n,gamma)81Kr",
     "authors": [
       {
         "name": "V.V.Kuzminov"
@@ -45,17 +51,17 @@
     ],
     "references": [
       {
-        "x4_code": "(J,YF,35,1092,1982)",
-        "free_txt": [],
+        "x4_code": "(J,SNP,35,638,1982)",
+        "free_txt": [
+          " English translation"
+        ],
         "publication_year": "1982",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,SNP,35,638,1982)",
-        "free_txt": [
-          " English translation"
-        ],
+        "x4_code": "(J,YF,35,1092,1982)",
+        "free_txt": [],
         "publication_year": "1982",
         "doi": null,
         "pointer": "0"
@@ -74,7 +80,7 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(36-KR-0(P,X)36-KR-81-G,CUM,SIG)",
+        "x4_code": "(36-KR-0(P,X)36-KR-81,,SIG)",
         "children": [
           {
             "code": [
@@ -82,14 +88,14 @@
               [
                 "P,X"
               ],
-              "36-KR-81-G,CUM,SIG"
+              "36-KR-81,,SIG"
             ],
             "type": null,
             "target": "36-KR-0",
             "process": "P,X",
-            "sf49": "36-KR-81-G,CUM,SIG",
-            "sf4": "36-KR-81-G",
-            "sf5": "CUM",
+            "sf49": "36-KR-81,,SIG",
+            "sf4": "36-KR-81",
+            "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
@@ -99,8 +105,10 @@
         "type": null,
         "free_text": "",
         "pointer": "0"
-      },
-      "5": {
+      }
+    },
+    "004": {
+      "0": {
         "x4_code": "(36-KR-86(P,X)36-KR-85-G,CUM,SIG)",
         "children": [
           {
@@ -125,7 +133,7 @@
         ],
         "type": null,
         "free_text": "",
-        "pointer": "5"
+        "pointer": "0"
       }
     }
   },
@@ -138,15 +146,11 @@
       "data": {
         "heads": [
           "EN",
-          "DATA      0",
-          "DATA-ERR  0",
-          "DATA      5",
-          "DATA-ERR  5"
+          "DATA",
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
-          "MB",
-          "MB",
           "MB",
           "MB"
         ],
@@ -159,6 +163,26 @@
           ],
           [
             3.0
+          ]
+        ]
+      }
+    },
+    "004": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            600.0
           ],
           [
             36.7
@@ -216,9 +240,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,V.V.Kuzminov+,J,SNP,35,638,1982)",
             "free_txt": [
-              ".Table 1 of Yad.Fiz.,35(1982)1092"
+              " Table 1"
             ]
           }
         ]
@@ -259,8 +283,10 @@
             "free_txt": []
           }
         ]
-      },
-      "5": {
+      }
+    },
+    "004": {
+      "0": {
         "decay-data": [
           {
             "x4_code": "(36-KR-85-G,10.76YR,B-,,1.)",
@@ -274,6 +300,15 @@
               " Geiger-Mueller counter of volume 101.6 cm3",
               "filled with irradiated krypton to measure the",
               "rate of decay of 85Kr."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Main source of uncertainties is statistical",
+              "error."
             ]
           }
         ],

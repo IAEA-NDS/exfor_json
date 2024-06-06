@@ -1,7 +1,7 @@
 {
   "entry": "M0627",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "4",
+  "last_updated": "2024-05-29",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(20020404C)",
@@ -13,10 +13,19 @@
         " Energy added to subentry 1 COMMON. Angle",
         " headings corrected. ERR-ANALYS moved to subentry 2."
       ]
+    },
+    {
+      "x4_code": "(20240329A)",
+      "free_txt": [
+        " Corrected by V.Varlamov: TITLE, lowercase,",
+        " INSTITUTE, INC-SOURCE, PART-DET, DETECTOR, ERR-ANALYS,",
+        " REACTION, DATA-UNITS in SUBENTs 003 and 004, DATA,",
+        " STATUS."
+      ]
     }
   ],
   "bib_record": {
-    "title": "High Resolution Measurement of the 16O(g,pn)14N(0,1,2,...) Reaction.",
+    "title": "High Resolution Measurement of the 16O(gamma,pn)14N(0,1,2,...) Reaction.",
     "authors": [
       {
         "name": "K.R.Garrow"
@@ -55,15 +64,18 @@
     "institutes": [
       {
         "x4_code": "(1CANSAS)",
-        "free_txt": ",TRENT UNIVERSITY, PETERBOROUGH, ONTARIO, CANADA"
+        "free_txt": [
+          " Trent University, Peterborough, Ontario,",
+          " Canada."
+        ]
       },
       {
         "x4_code": "(3AULAML)",
-        "free_txt": ",TRENT UNIVERSITY, PETERBOROUGH, ONTARIO, CANADA"
+        "free_txt": ""
       },
       {
-        "x4_code": "(2BLGBLG)",
-        "free_txt": ",TRENT UNIVERSITY, PETERBOROUGH, ONTARIO, CANADA"
+        "x4_code": "(2BLGGHT)",
+        "free_txt": ""
       }
     ],
     "references": [
@@ -120,7 +132,7 @@
     },
     "003": {
       "0": {
-        "x4_code": "(8-O-16(G,N+P)7-N-14,PAR,DA/DA,N/P,REL)",
+        "x4_code": "(8-O-16(G,N+P)7-N-14,PAR,DA/DA,N/P)",
         "children": [
           {
             "code": [
@@ -128,46 +140,17 @@
               [
                 "G,N+P"
               ],
-              "7-N-14,PAR,DA/DA,N/P,REL"
+              "7-N-14,PAR,DA/DA,N/P"
             ],
             "type": null,
             "target": "8-O-16",
             "process": "G,N+P",
-            "sf49": "7-N-14,PAR,DA/DA,N/P,REL",
+            "sf49": "7-N-14,PAR,DA/DA,N/P",
             "sf4": "7-N-14",
             "sf5": "PAR",
             "sf6": "DA/DA",
             "sf7": "N/P",
-            "sf8": "REL",
-            "sf9": null
-          }
-        ],
-        "type": null,
-        "free_text": "",
-        "pointer": "0"
-      }
-    },
-    "004": {
-      "0": {
-        "x4_code": "(8-O-16(G,N+P)7-N-14,PAR,DA/DA,N/P,REL)",
-        "children": [
-          {
-            "code": [
-              "8-O-16",
-              [
-                "G,N+P"
-              ],
-              "7-N-14,PAR,DA/DA,N/P,REL"
-            ],
-            "type": null,
-            "target": "8-O-16",
-            "process": "G,N+P",
-            "sf49": "7-N-14,PAR,DA/DA,N/P,REL",
-            "sf4": "7-N-14",
-            "sf5": "PAR",
-            "sf6": "DA/DA",
-            "sf7": "N/P",
-            "sf8": "REL",
+            "sf8": null,
             "sf9": null
           }
         ],
@@ -206,7 +189,7 @@
     "002": {
       "common": {
         "heads": [
-          "E-EXC"
+          "E-LVL"
         ],
         "units": [
           "MEV"
@@ -219,25 +202,27 @@
       },
       "data": {
         "heads": [
-          "ANG2",
           "ANG1",
+          "ANG2",
           "DATA",
-          "DATA-ERR"
+          "DATA-ERR",
+          "FLAG"
         ],
         "units": [
           "ADEG",
           "ADEG",
-          "MB/SR2",
-          "MB/SR2"
+          "MUB/SR2",
+          "MUB/SR2",
+          "NO-DIM"
         ],
         "data": [
           [
-            76.0,
-            82.0
+            77.0,
+            83.0
           ],
           [
-            83.0,
-            77.0
+            82.0,
+            76.0
           ],
           [
             6.89,
@@ -246,104 +231,81 @@
           [
             0.64,
             0.74
+          ],
+          [
+            1.0,
+            2.0
           ]
         ]
       }
     },
     "003": {
-      "common": {
+      "common": null,
+      "data": {
         "heads": [
+          "E-EXC-MIN",
+          "E-EXC-MAX",
+          "ANG1",
           "ANG2",
-          "ANG1"
+          "DATA",
+          "FLAG"
         ],
         "units": [
+          "MEV",
+          "MEV",
           "ADEG",
-          "ADEG"
+          "ADEG",
+          "MUB/SR2",
+          "NO-DIM"
         ],
         "data": [
           [
+            0.0,
+            0.0,
+            20.0,
+            20.0,
+            45.0,
+            45.0
+          ],
+          [
+            20.0,
+            20.0,
+            45.0,
+            45.0,
+            70.0,
+            70.0
+          ],
+          [
+            77.0,
+            83.0,
+            77.0,
+            83.0,
+            77.0,
+            83.0
+          ],
+          [
+            82.0,
+            76.0,
+            82.0,
+            76.0,
+            82.0,
             76.0
           ],
           [
-            83.0
-          ]
-        ]
-      },
-      "data": {
-        "heads": [
-          "E-EXC-MIN",
-          "E-EXC-MAX",
-          "DATA"
-        ],
-        "units": [
-          "MEV",
-          "MEV",
-          "ARB-UNITS"
-        ],
-        "data": [
-          [
-            0.0,
-            20.0,
-            45.0
-          ],
-          [
-            20.0,
-            45.0,
-            70.0
-          ],
-          [
-            563.0,
-            2143.0,
-            1648.0
-          ]
-        ]
-      }
-    },
-    "004": {
-      "common": {
-        "heads": [
-          "ANG2",
-          "ANG1"
-        ],
-        "units": [
-          "ADEG",
-          "ADEG"
-        ],
-        "data": [
-          [
-            82.0
-          ],
-          [
-            77.0
-          ]
-        ]
-      },
-      "data": {
-        "heads": [
-          "E-EXC-MIN",
-          "E-EXC-MAX",
-          "DATA"
-        ],
-        "units": [
-          "MEV",
-          "MEV",
-          "ARB-UNITS"
-        ],
-        "data": [
-          [
-            0.0,
-            20.0,
-            45.0
-          ],
-          [
-            20.0,
-            45.0,
-            70.0
-          ],
-          [
             682.0,
+            563.0,
             2329.0,
-            1601.0
+            2143.0,
+            1601.0,
+            1648.0
+          ],
+          [
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
           ]
         ]
       }
@@ -390,11 +352,20 @@
               " to discrete states in the residual 14N nucleus are",
               " compared to microscopic calculations which include",
               " contributions above that the mean field due to the",
-              " short range and tensor parts of the nuclear potential.",
-              " Clear separation in the contribution of (1p)**-2  and",
-              " (1p)**-1 (1s)**-1 continuum above 20 MeV indicates",
-              " that absorption on l = 1 nucleon pairs is also",
-              " important near quasifree kinematics."
+              " short range and tensor parts of the nuclear",
+              " potential. Clear separation in the contribution of",
+              " (1p)**-2 and (1p)**-1 (1s)**-1 continuum above 20 MeV",
+              " indicates that absorption on l = 1 nucleon pairs is",
+              " also important near quasifree kinematics."
+            ]
+          }
+        ],
+        "critique": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Data for ANG1 and ANG2 are slightly different in",
+              " Table 2 and Table in Fig. 1 (insert)."
             ]
           }
         ],
@@ -402,13 +373,16 @@
           {
             "x4_code": "(SCIN,CSICR)",
             "free_txt": [
-              " 2 mm thick NE102A plastic scintillator",
-              " used as a proton dE-detector, 7.61 cm in diameter and",
-              " 7.61 cm in length CsI(Tl) scintillator as  proton",
-              " E-detector.  Neutron detector 10 BC400 plastic",
-              " scintillator bars.",
-              " ANG1 is angle of proton E-dE detector.",
-              " ANG2 is angle of neutron TOF detector."
+              " Protons were detected in high resolution E-dE",
+              "  telescopes. The dE detectors consisted of 2.0 mm",
+              "  thick NE102A plastic scintillators. The E detectors",
+              "  were CsI(Tl) scintillation crystals 7.61 cm in",
+              "  diameter and 7.61 cm in length.",
+              "The neutron energy was measured by a time-of-flight",
+              " (TOF) method where the typical flight distances were",
+              " about 7 m. The neutron detector consisted of an array",
+              " of ten BC400 plastic scintillator bars, with",
+              " dimensions 1.5 m x 0.15 m x 76 mm (thick), which were"
             ]
           }
         ],
@@ -423,9 +397,9 @@
         ],
         "inc-source": [
           {
-            "x4_code": "(MPH)",
+            "x4_code": "(TAGD)",
             "free_txt": [
-              " Tagged photon spectrometer: E(G) = 98.5 141.0",
+              " Tagged photon spectrometer: E(G) = 98.5 - 141.0",
               " MeV, efficiency about 53%."
             ]
           }
@@ -433,6 +407,12 @@
         "method": [
           {
             "x4_code": "(COINC,EDE,TOF)",
+            "free_txt": []
+          }
+        ],
+        "part-det": [
+          {
+            "x4_code": "(N,P)",
             "free_txt": []
           }
         ],
@@ -444,19 +424,55 @@
               " contained heavy water (93% D2O, 7% DO."
             ]
           }
+        ]
+      }
+    },
+    "002": {
+      "0": {
+        "en-sec": [
+          {
+            "x4_code": "(E-LVL,7-N-14)",
+            "free_txt": []
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " The errors stated with the measured cross",
+              " sections are statistical in nature and are also meant",
+              " to reflect the error in the peak fitting procedure",
+              " and the error in the random background subtraction."
+            ]
+          }
+        ],
+        "flag": [
+          {
+            "x4_code": "(1.)",
+            "free_txt": [
+              " Angle of neutron TOF detector is 77 degree and",
+              "     that of proton E-dE detector is 82 degree."
+            ]
+          },
+          {
+            "x4_code": "(2.)",
+            "free_txt": [
+              " Angle of neutron TOF detector is 83 degree and",
+              "     that of proton E-dE detector is 76 degree."
+            ]
+          }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,K.R.Garrow+,J,PR/C,64,064602,2001)",
             "free_txt": [
-              " DATA FROM THE TABLE 2 HAVE  BEEN  COMPILED  AT",
-              " THE RUSSIA MSU INP CDFE BY V.VARLAMOV."
+              " Data from the Table 2."
             ]
           }
         ]
       }
     },
-    "002": {
+    "003": {
       "0": {
         "en-sec": [
           {
@@ -466,35 +482,33 @@
         ],
         "err-analys": [
           {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " Includes statistical errors, error in peak",
-              " fitting procedures and in random background",
-              " subtraction."
-            ]
-          }
-        ]
-      }
-    },
-    "003": {
-      "0": {
-        "err-analys": [
-          {
             "x4_code": null,
             "free_txt": [
               "No information."
             ]
           }
-        ]
-      }
-    },
-    "004": {
-      "0": {
-        "err-analys": [
+        ],
+        "flag": [
           {
-            "x4_code": null,
+            "x4_code": "(1.)",
             "free_txt": [
-              "No information."
+              " Angle of neutron TOF detector is 77 degree and",
+              "     that of proton E-dE detector is 82 degree."
+            ]
+          },
+          {
+            "x4_code": "(2.)",
+            "free_txt": [
+              " Angle of neutron TOF detector is 83 degree and",
+              "     that of proton E-dE detector is 76 degree."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,K.R.Garrow+,J,PR/C,64,064602,2001)",
+            "free_txt": [
+              " Data from the Table 2."
             ]
           }
         ]

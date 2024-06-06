@@ -1,7 +1,7 @@
 {
   "entry": "12797",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "5",
+  "last_updated": "2024-05-06",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19830128C)",
@@ -10,21 +10,28 @@
     {
       "x4_code": "(19840416A)",
       "free_txt": [
-        " REFERENCE ADDED."
+        " Reference added."
       ]
     },
     {
       "x4_code": "(19860604A)",
       "free_txt": [
-        " BIB UPDATES."
+        " Bib updates."
       ]
     },
     {
       "x4_code": "(20070717A)",
       "free_txt": [
-        " DR Data at E-EXC=1.697 MeV and En=4 MeV",
-        "               and at E-EXC=1.971 MeV and En =2.6 MeV",
+        " DR. Data at E-exc=1.697 MeV and En=4 MeV",
+        "               and at E-exc=1.971 MeV and En =2.6 MeV",
         "               corrected according to publication"
+      ]
+    },
+    {
+      "x4_code": "(20240209A)",
+      "free_txt": [
+        " OS. 2nd REFERENCE moved to sub.1,",
+        " REACTION corrected in subs.3,4, ERR-ANALYS updated"
       ]
     }
   ],
@@ -50,19 +57,32 @@
     "references": [
       {
         "x4_code": "(R,ANL-NDM-70,1982)",
-        "free_txt": [],
+        "free_txt": [
+          " Description of Nb experiment,",
+          " graphs"
+        ],
         "publication_year": "1982",
         "doi": null,
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,NP/A,415,1,1984)",
+        "free_txt": [
+          " Graphs for Nb and other targets",
+          "#doi:10.1016/0375-9474(84)90596-7"
+        ],
+        "publication_year": "1984",
+        "doi": "10.1016/0375-9474(84)90596-7",
         "pointer": "0"
       }
     ],
     "facilities": [
       {
-        "x4_code": "(DYNAM)",
+        "x4_code": "(DYNAM,1USAANL)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(DYNAM)",
-        "institute": null
+        "institute": "(1USAANL)"
       }
     ]
   },
@@ -98,38 +118,19 @@
     },
     "003": {
       "0": {
-        "x4_code": "((41-NB-93(N,EL)41-NB-93,,DA,,AV)+(41-NB-93(N,INL)41-NB-93,PAR,DA,,AV))",
+        "x4_code": "(41-NB-93(N,SCT)41-NB-93,PAR,DA,,AV)",
         "children": [
           {
             "code": [
               "41-NB-93",
               [
-                "N,EL"
-              ],
-              "41-NB-93,,DA,,AV"
-            ],
-            "type": null,
-            "target": "41-NB-93",
-            "process": "N,EL",
-            "sf49": "41-NB-93,,DA,,AV",
-            "sf4": "41-NB-93",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": "AV",
-            "sf9": null
-          },
-          {
-            "code": [
-              "41-NB-93",
-              [
-                "N,INL"
+                "N,SCT"
               ],
               "41-NB-93,PAR,DA,,AV"
             ],
             "type": null,
             "target": "41-NB-93",
-            "process": "N,INL",
+            "process": "N,SCT",
             "sf49": "41-NB-93,PAR,DA,,AV",
             "sf4": "41-NB-93",
             "sf5": "PAR",
@@ -139,45 +140,26 @@
             "sf9": null
           }
         ],
-        "type": "+",
+        "type": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "004": {
       "0": {
-        "x4_code": "((41-NB-93(N,EL)41-NB-93,,DA)+(41-NB-93(N,INL)41-NB-93,PAR,DA))",
+        "x4_code": "(41-NB-93(N,SCT)41-NB-93,PAR,DA)",
         "children": [
           {
             "code": [
               "41-NB-93",
               [
-                "N,EL"
-              ],
-              "41-NB-93,,DA"
-            ],
-            "type": null,
-            "target": "41-NB-93",
-            "process": "N,EL",
-            "sf49": "41-NB-93,,DA",
-            "sf4": "41-NB-93",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": [
-              "41-NB-93",
-              [
-                "N,INL"
+                "N,SCT"
               ],
               "41-NB-93,PAR,DA"
             ],
             "type": null,
             "target": "41-NB-93",
-            "process": "N,INL",
+            "process": "N,SCT",
             "sf49": "41-NB-93,PAR,DA",
             "sf4": "41-NB-93",
             "sf5": "PAR",
@@ -187,7 +169,7 @@
             "sf9": null
           }
         ],
-        "type": "+",
+        "type": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -227,12 +209,24 @@
       "common": null
     },
     "002": {
-      "common": null,
+      "common": {
+        "heads": [
+          "ERR-S"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            1.0
+          ]
+        ]
+      },
       "data": {
         "heads": [
           "EN-MEAN",
           "DATA",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "MEV",
@@ -367,11 +361,15 @@
       "common": {
         "heads": [
           "E-EXC-MAX",
-          "ANG-RSL"
+          "ANG-RSL",
+          "ERR-1",
+          "ERR-2"
         ],
         "units": [
           "KEV",
-          "ADEG"
+          "ADEG",
+          "PER-CENT",
+          "PER-CENT"
         ],
         "data": [
           [
@@ -379,6 +377,12 @@
           ],
           [
             0.5
+          ],
+          [
+            3.0
+          ],
+          [
+            1.0
           ]
         ]
       },
@@ -387,7 +391,7 @@
           "EN-MEAN",
           "ANG",
           "DATA",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "MEV",
@@ -967,11 +971,15 @@
       "common": {
         "heads": [
           "E-EXC-MAX",
-          "ANG-RSL"
+          "ANG-RSL",
+          "ERR-1",
+          "ERR-2"
         ],
         "units": [
           "KEV",
-          "ADEG"
+          "ADEG",
+          "PER-CENT",
+          "PER-CENT"
         ],
         "data": [
           [
@@ -979,6 +987,12 @@
           ],
           [
             0.5
+          ],
+          [
+            3.0
+          ],
+          [
+            1.0
           ]
         ]
       },
@@ -987,7 +1001,7 @@
           "EN",
           "ANG",
           "DATA",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "MEV",
@@ -1488,14 +1502,31 @@
       }
     },
     "005": {
-      "common": null,
+      "common": {
+        "heads": [
+          "ERR-1",
+          "ERR-2"
+        ],
+        "units": [
+          "PER-CENT",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            3.0
+          ],
+          [
+            1.0
+          ]
+        ]
+      },
       "data": {
         "heads": [
           "E-EXC",
           "E-EXC-ERR",
           "EN",
           "DATA",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "KEV",
@@ -1989,7 +2020,7 @@
       "0": {
         "facility": [
           {
-            "x4_code": "(DYNAM)",
+            "x4_code": "(DYNAM,1USAANL)",
             "free_txt": []
           }
         ],
@@ -2011,8 +2042,13 @@
           {
             "x4_code": "(APRVD)",
             "free_txt": [
-              " A.B.Smith, 83/3/7.",
-              "Data received in private communication 1/3/83"
+              " A.B.Smith, 83/3/7."
+            ]
+          },
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Data received in private communication 1/3/83"
             ]
           }
         ]
@@ -2024,7 +2060,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "DATA WERE AVERAGED OVER 100 KEV INTERVALS"
+              "Data were averaged over 100 keV intervals"
             ]
           }
         ],
@@ -2032,16 +2068,21 @@
           {
             "x4_code": null,
             "free_txt": [
-              "DATA WERE CORRECTED FOR DEAD-TIME"
+              "Data were corrected for dead-time"
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(DATA-ERR)",
+            "x4_code": "(ERR-T)",
             "free_txt": [
-              " TOTAL UNCERTAINTY. THE STATISTICAL",
-              " UNCERTAINTY IS ABOUT 1 PERCENT."
+              " Total uncertainty."
+            ]
+          },
+          {
+            "x4_code": "(ERR-S)",
+            "free_txt": [
+              " Statistical uncertainty (~1%)"
             ]
           }
         ],
@@ -2049,7 +2090,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "BEAM RESOLUTION APPROXIMATELY 50 KEV"
+              "Beam resolution approximately 50 keV"
             ]
           }
         ],
@@ -2057,8 +2098,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "METALLIC NIOBIUM CYLINDER, 2.5 CM DIAMETER AND 1.25",
-              " CM LONG."
+              "Metallic niobium cylinder, 2.5 cm diameter and 1.25",
+              " cm long."
             ]
           }
         ]
@@ -2070,124 +2111,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "DATA WERE AVERAGED OVER 50 KEV INTERVALS"
-            ]
-          }
-        ],
-        "correction": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "DATA WERE CORRECTED FOR MULTIPLE-SCATTERING, BEAM-",
-              " ATTENUATION AND ANGULAR-RESOLUTION."
-            ]
-          }
-        ],
-        "detector": [
-          {
-            "x4_code": "(SCIN)",
-            "free_txt": [
-              " PROTON RECOIL SCINTILLATORS"
-            ]
-          }
-        ],
-        "err-analys": [
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " OVERALL UNCERTAINTY LESS THAN 5 PERCENT",
-              "   STATISTICAL UNCERTAINTY     LESS THAN 2 PERCENT",
-              "   DETECTOR NORMALIZATION                3 PERCENT",
-              "   CORRECTIONS                           1 PERCENT"
-            ]
-          }
-        ],
-        "inc-spect": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "BEAM RESOLUTION 50 TO 75 KEV"
-            ]
-          }
-        ],
-        "monitor": [
-          {
-            "x4_code": "(6-C-0(N,TOT),,SIG)",
-            "free_txt": []
-          }
-        ],
-        "sample": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "METALLIC NIOBIUM CYLINDER, 2 CM DIAMETER AND 2 CM LONG"
-            ]
-          }
-        ]
-      }
-    },
-    "004": {
-      "0": {
-        "correction": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "DATA WERE CORRECTED FOR MULTIPLE-SCATTERING, BEAM-",
-              " ATTENUATION AND ANGULAR-RESOLUTION."
-            ]
-          }
-        ],
-        "detector": [
-          {
-            "x4_code": "(SCIN)",
-            "free_txt": [
-              " PROTON RECOIL SCINTILLATORS"
-            ]
-          }
-        ],
-        "err-analys": [
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " OVERALL UNCERTAINTY LESS THAN 5 PERCENT",
-              "   STATISTICAL UNCERTAINTY     LESS THAN 2 PERCENT",
-              "   DETECTOR NORMALIZATION                3 PERCENT",
-              "   CORRECTIONS                           1 PERCENT"
-            ]
-          }
-        ],
-        "inc-spect": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "BEAM RESOLUTION 50 TO 75 KEV"
-            ]
-          }
-        ],
-        "monitor": [
-          {
-            "x4_code": "(6-C-0(N,TOT),,SIG)",
-            "free_txt": []
-          }
-        ],
-        "sample": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "METALLIC NIOBIUM CYLINDER, 2 CM DIAMETER AND 2 CM LONG"
-            ]
-          }
-        ]
-      }
-    },
-    "005": {
-      "0": {
-        "analysis": [
-          {
-            "x4_code": "(INTAD)",
-            "free_txt": [
-              " Obtained from integrating a second order",
-              " Legendre fit to differential data."
+              "Data were averaged over 50 keV intervals"
             ]
           }
         ],
@@ -2210,11 +2134,168 @@
         ],
         "err-analys": [
           {
-            "x4_code": "(DATA-ERR)",
+            "x4_code": "(ERR-T)",
             "free_txt": [
-              " Overall uncertainty from 10 to 30 percent",
-              "   detector normalization                3 percent",
-              "   corrections                           1 percent"
+              " Overall uncertainty"
+            ]
+          },
+          {
+            "x4_code": "(ERR-S,,2.)",
+            "free_txt": [
+              "  Statistical uncertainty less than 2%"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Detector normalization 3%"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Corrections 1%"
+            ]
+          }
+        ],
+        "inc-spect": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Beam resolution 50 to 75 keV"
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(6-C-0(N,TOT),,SIG)",
+            "free_txt": []
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Metallic niobium cylinder, 2 cm diameter and 2 cm long"
+            ]
+          }
+        ]
+      }
+    },
+    "004": {
+      "0": {
+        "correction": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Data were corrected for multiple-scattering, beam-",
+              " attenuation and angular-resolution."
+            ]
+          }
+        ],
+        "detector": [
+          {
+            "x4_code": "(SCIN)",
+            "free_txt": [
+              " Proton recoil scintillators"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Overall uncertainty"
+            ]
+          },
+          {
+            "x4_code": "(ERR-S,,2.)",
+            "free_txt": [
+              "  Statistical uncertainty less than 2%"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Detector normalization 3%"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Corrections 1%"
+            ]
+          }
+        ],
+        "inc-spect": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Beam resolution 50 to 75 keV"
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(6-C-0(N,TOT),,SIG)",
+            "free_txt": []
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Metallic niobium cylinder, 2 cm diameter and 2 cm long"
+            ]
+          }
+        ]
+      }
+    },
+    "005": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTAD)",
+            "free_txt": [
+              " Obtained from integrating a second order",
+              " LEGENDRE fit to differential data."
+            ]
+          }
+        ],
+        "correction": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Data were corrected for multiple-scattering, beam-",
+              " attenuation and angular-resolution."
+            ]
+          }
+        ],
+        "detector": [
+          {
+            "x4_code": "(SCIN)",
+            "free_txt": [
+              " Proton recoil scintillators"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Overall uncertainty (from 10 to 30%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Detector normalization                3%"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Corrections                           1%"
             ]
           }
         ],

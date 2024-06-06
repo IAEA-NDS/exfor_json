@@ -1,18 +1,18 @@
 {
   "entry": "40638",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "5",
+  "last_updated": "2024-02-02",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19831012T)",
       "free_txt": [
-        " CONVERTED FROM ENTRY 80042"
+        " Converted from ENTRY 80042"
       ]
     },
     {
       "x4_code": "(19870612U)",
       "free_txt": [
-        " INSTITUTE CODE CORRECTED-KUR INSTEAD OF CCP"
+        " INSTITUTE Code corrected-KUR instead of CCP"
       ]
     },
     {
@@ -21,10 +21,17 @@
         " Correction according to Memo CP-E/70,",
         "             dates were corrected"
       ]
+    },
+    {
+      "x4_code": "(20231006A)",
+      "free_txt": [
+        " BIB information was updated.",
+        " Upper -> lower case correction."
+      ]
     }
   ],
   "bib_record": {
-    "title": "CROSS SECTIONS FOR THE FISSION OF TH232, U235 AND U238 INDUCED BY 10-22 MEV NEUTRONS.",
+    "title": "Cross sections for the fission of Th232, U235, and U238 induced by 10-22 MeV neutrons",
     "authors": [
       {
         "name": "V.M.Pankratov"
@@ -44,6 +51,15 @@
     ],
     "references": [
       {
+        "x4_code": "(J,SJA,9,939,1961)",
+        "free_txt": [
+          " Engl.translation of AE,9,399,1960"
+        ],
+        "publication_year": "1961",
+        "doi": null,
+        "pointer": "0"
+      },
+      {
         "x4_code": "(J,AE,9,399,1960)",
         "free_txt": [],
         "publication_year": "1960",
@@ -51,15 +67,10 @@
         "pointer": "0"
       },
       {
-        "x4_code": "(J,SJA,9,939,1961)",
-        "free_txt": [],
-        "publication_year": "1961",
-        "doi": null,
-        "pointer": "0"
-      },
-      {
         "x4_code": "(J,JNE/AB,16,494,1962)",
-        "free_txt": [],
+        "free_txt": [
+          " Engl.translation of AE,9,399,1960"
+        ],
         "publication_year": "1962",
         "doi": null,
         "pointer": "0"
@@ -187,24 +198,7 @@
   },
   "data_tables": {
     "001": {
-      "common": {
-        "heads": [
-          "EN-ERR1",
-          "EN-ERR2"
-        ],
-        "units": [
-          "KEV",
-          "KEV"
-        ],
-        "data": [
-          [
-            250.0
-          ],
-          [
-            750.0
-          ]
-        ]
-      }
+      "common": null
     },
     "002": {
       "common": {
@@ -270,7 +264,19 @@
       }
     },
     "003": {
-      "common": null,
+      "common": {
+        "heads": [
+          "EN-NRM"
+        ],
+        "units": [
+          "MEV"
+        ],
+        "data": [
+          [
+            14.0
+          ]
+        ]
+      },
       "data": {
         "heads": [
           "EN",
@@ -390,11 +396,13 @@
       "data": {
         "heads": [
           "EN",
-          "DATA"
+          "DATA",
+          "FLAG"
         ],
         "units": [
           "MEV",
-          "B"
+          "B",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -432,6 +440,24 @@
             1.39,
             1.54,
             1.57
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            1.0,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
           ]
         ]
       }
@@ -444,27 +470,30 @@
           {
             "x4_code": "(FISCH)",
             "free_txt": [
-              " GASEOUS SCINTILLATION FISSION CHAMBER"
+              " Gaseous scintillation fission chamber"
             ]
           },
           {
             "x4_code": "(SCIN)",
             "free_txt": [
-              "  FOR NEUTRON FLUX MONITORING"
+              " 8 cm diameter, 3 cm high tolane crystal",
+              " For neutron flux monitoring."
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(EN-ERR1)",
+            "x4_code": "(ERR-S,,3.)",
             "free_txt": [
-              " ENERGY RESOLUTION AT 19.5 MEV  D-ENERGY"
+              " Statistical uncertainty < 3.%."
             ]
           },
           {
-            "x4_code": "(EN-ERR2)",
+            "x4_code": "(DATA-ERR1,,5.)",
             "free_txt": [
-              " ENERGY RESOLUTION AT 6.5 MEV D-ENERGY"
+              " Uncertainty of relative shape of cross",
+              "section curve < +-5.%, mainly due to incident neutron",
+              "flux uncertainty."
             ]
           }
         ],
@@ -472,8 +501,18 @@
           {
             "x4_code": "(D-D)",
             "free_txt": [
-              " DEUTRON ENERGIES 6.5 TO 19.6 MEV, GASEOUS",
-              "      DEUTERIUM TARGET"
+              " Deuteron energies 6.5 to 19.6 MeV, gaseous",
+              "      deuterium target"
+            ]
+          }
+        ],
+        "inc-spect": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Neutron energy spread due to gas target thickness:",
+              " 250 keV at 19.5 MeV d-energy, neutron energy 9.7 MeV.",
+              " 700 keV at 6.5 MeV d-energy, neutron energy 21.7 MeV."
             ]
           }
         ],
@@ -482,48 +521,149 @@
             "x4_code": "(TOF)",
             "free_txt": []
           }
-        ],
-        "status": [
-          {
-            "x4_code": "(SCSRS)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(CURVE)",
-            "free_txt": []
-          }
         ]
       }
     },
     "002": {
       "0": {
-        "comment": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "READ FROM GRAPH."
-            ]
-          }
-        ],
         "monitor": [
           {
             "x4_code": "(90-TH-232(N,F),,SIG)",
+            "free_txt": [
+              " Normalization to C-S value at 14 MeV using data",
+              " from REL-REFs"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(R,,D.Hughes+,R,BNL-325,1958)",
+            "free_txt": [
+              " 2nd edition."
+            ]
+          },
+          {
+            "x4_code": "(R,40390002,A.N.Protopov+,J,AE,4,(2),190,1958)",
             "free_txt": []
+          },
+          {
+            "x4_code": "(R,41203002,A.A.Berezin+,J,AE,5,(6),659,1958)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE,,V.M.Pankratov+,J,SJA,9,939,1961)",
+            "free_txt": [
+              " Fig.2"
+            ]
           }
         ]
       }
     },
-    "003": {},
+    "003": {
+      "0": {
+        "monitor": [
+          {
+            "x4_code": "(93-NP-237(N,F),,SIG)",
+            "free_txt": [
+              " Normalization to C-S value at 14 MeV using data",
+              " from REL-REFs"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(R,,D.Hughes+,R,BNL-325,1958)",
+            "free_txt": [
+              " 2nd edition."
+            ]
+          },
+          {
+            "x4_code": "(R,40390003,A.N.Protopov+,J,AE,4,(2),190,1958)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE,,V.M.Pankratov+,J,SJA,9,939,1961)",
+            "free_txt": [
+              " Fig.2"
+            ]
+          }
+        ]
+      }
+    },
     "004": {
       "0": {
         "monitor": [
           {
             "x4_code": "(92-U-235(N,F),,SIG)",
+            "free_txt": [
+              " Normalization to C-S value at 14 MeV using data",
+              "from REL-REFs"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(R,,D.Hughes+,R,BNL-325,1958)",
+            "free_txt": [
+              " 2nd edition."
+            ]
+          },
+          {
+            "x4_code": "(R,41203003,A.A.Berezin+,J,AE,5,(6),659,1958)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE,,V.M.Pankratov+,J,SJA,9,939,1961)",
+            "free_txt": [
+              " Fig.2"
+            ]
           }
         ]
       }
     },
-    "005": {}
+    "005": {
+      "0": {
+        "flag": [
+          {
+            "x4_code": "(1.)",
+            "free_txt": [
+              " This value was used for normalization,",
+              "open square on Fig.2, from REL-REF of D.Hughes."
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(92-U-238(N,F),,SIG)",
+            "free_txt": [
+              " Normalization to C-S value at 14 MeV using data",
+              " from REL-REFs"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(R,,D.Hughes+,R,BNL-325,1958)",
+            "free_txt": [
+              " 2nd edition."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE,,V.M.Pankratov+,J,SJA,9,939,1961)",
+            "free_txt": [
+              " Fig.2"
+            ]
+          }
+        ]
+      }
+    }
   }
 }

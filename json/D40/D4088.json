@@ -1,15 +1,22 @@
 {
   "entry": "D4088",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-03-13",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20010423C)",
       "free_txt": []
+    },
+    {
+      "x4_code": "(20231023A)",
+      "free_txt": [
+        " VT+On. Revision in 002. ERR-ANALYS and",
+        "COMMON section updated in 001."
+      ]
     }
   ],
   "bib_record": {
-    "title": "New Cross Section Data on 68Zn(p,2n)67Ga and natZn(p,xn)67Ga Nuclear Reactions for the Development of a Reference Data Base",
+    "title": "New cross section data on 68Zn(p,2n)67Ga and natZn(p,xn)67Ga nuclear reactions for the development of a reference data base",
     "authors": [
       {
         "name": "A.Hermanne"
@@ -53,7 +60,7 @@
       {
         "x4_code": "(CYCLO,2BLGVUB)",
         "free_txt": [
-          ", CGR 560 Cyclotron in Brussels"
+          " CGR 560 Cyclotron"
         ],
         "pointer": "0",
         "facility_type": "(CYCLO)",
@@ -64,7 +71,7 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(30-ZN-0(P,X)29-CU-61,,SIG)",
+        "x4_code": "(30-ZN-0(P,X)29-CU-61,(CUM),SIG)",
         "children": [
           {
             "code": [
@@ -72,14 +79,18 @@
               [
                 "P,X"
               ],
-              "29-CU-61,,SIG"
+              "29-CU-61,",
+              [
+                "CUM"
+              ],
+              ",SIG"
             ],
             "type": null,
             "target": "30-ZN-0",
             "process": "P,X",
-            "sf49": "29-CU-61,,SIG",
+            "sf49": "29-CU-61,(CUM),SIG",
             "sf4": "29-CU-61",
-            "sf5": null,
+            "sf5": "(CUM)",
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
@@ -264,7 +275,29 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-1",
+          "ERR-2",
+          "ERR-4"
+        ],
+        "units": [
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            5.0
+          ],
+          [
+            2.0
+          ],
+          [
+            7.0
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -742,7 +775,7 @@
             "x4_code": "(EN-ERR)",
             "free_txt": [
               " Energy uncertainty of the incident proton beam",
-              "was +-0.5 MeV and +-0.4 MeV at 35 MeV and 33.7 MeV",
+              "was +/-0.5 MeV and +/-0.4 MeV at 35 MeV and 33.7 MeV",
               "respectively."
             ]
           },
@@ -751,12 +784,37 @@
             "free_txt": [
               " The estimated uncertainties on cross",
               "sections was 9%-12% and were calculated by summing up",
-              "quadratically the possible individual relative errors:",
-              "         Counting statistics       1-5%",
-              "         Detector efficiency       5%",
-              "         Decay data                2%",
-              "         Number of target nuclei   3-5%",
-              "         Beam current              7%"
+              "quadratically the possible individual relative errors:"
+            ]
+          },
+          {
+            "x4_code": "(ERR-S,1.,5.)",
+            "free_txt": [
+              " Counting statistics (1-5%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Detector efficiency      (5%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Decay data               (2%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3,3.,5.)",
+            "free_txt": [
+              " Number of target nuclei  (3-5%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-4)",
+            "free_txt": [
+              " Beam current             (7%)"
             ]
           }
         ],
@@ -764,7 +822,7 @@
           {
             "x4_code": "(CYCLO,2BLGVUB)",
             "free_txt": [
-              ", CGR 560 Cyclotron in Brussels"
+              " CGR 560 Cyclotron"
             ]
           }
         ],
@@ -793,21 +851,26 @@
               "composition and enriched 68Zn targets made by constant",
               "current electrolysis on high purity 49.4 micrometer Cu",
               "backing. Target thickness was 47.8-48.8 micrometer.",
-              "Izotopic composition of the target material:",
-              "       64Zn      0.65 +-0.02 %",
-              "       66Zn      0.54 +-0.01 %",
-              "       67Zn      0.32 +-0.01 %",
-              "       68Zn      96.95 +-0.05 %",
-              "       70Zn      1.54 +- 0.02 %"
+              "Isotopic composition of the target material:",
+              "       64Zn      0.65 +/-0.02 %",
+              "       66Zn      0.54 +/-0.01 %",
+              "       67Zn      0.32 +/-0.01 %",
+              "       68Zn      96.95 +/-0.05 %",
+              "       70Zn      1.54 +/- 0.02 %"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(APRVD)",
             "free_txt": [
-              "Data were taken from Table 2 of the original paper",
-              "Approved by S. Takacs 23/02/2001."
+              " Approved by S. Takacs (2001-02-23)"
+            ]
+          },
+          {
+            "x4_code": "(TABLE,,A.Hermanne+,J,JRN,240,623,1999)",
+            "free_txt": [
+              " Table 2"
             ]
           }
         ]

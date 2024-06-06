@@ -1,7 +1,7 @@
 {
   "entry": "A1034",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-05-02",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19840301C)",
@@ -13,6 +13,12 @@
       "x4_code": "(19990115U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20240321A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -37,7 +43,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,82,(6),782,195106)",
+        "x4_code": "(J,PR,82,782,1951)",
         "free_txt": [],
         "publication_year": "1951",
         "doi": null,
@@ -46,20 +52,20 @@
     ],
     "facilities": [
       {
-        "x4_code": "(CYCLO)",
+        "x4_code": "(CYCLO,1USALAS)",
         "free_txt": [
           " Los-Alamos 42-inch cyclotron"
         ],
         "pointer": "0",
         "facility_type": "(CYCLO)",
-        "institute": null
+        "institute": "(1USALAS)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-2(D,P)1-H-3,,DA,,,EXP)",
+        "x4_code": "(1-H-2(D,P)1-H-3,,DA)",
         "children": [
           {
             "code": [
@@ -67,18 +73,18 @@
               [
                 "D,P"
               ],
-              "1-H-3,,DA,,,EXP"
+              "1-H-3,,DA"
             ],
             "type": null,
             "target": "1-H-2",
             "process": "D,P",
-            "sf49": "1-H-3,,DA,,,EXP",
+            "sf49": "1-H-3,,DA",
             "sf4": "1-H-3",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null
           }
         ],
         "type": null,
@@ -96,12 +102,24 @@
         "heads": [
           "EN",
           "EN-ERR",
-          "ANG-ERR"
+          "ANG-ERR",
+          "ERR-S",
+          "ERR-1",
+          "ERR-2",
+          "ERR-3",
+          "ERR-4",
+          "ERR-5"
         ],
         "units": [
           "MEV",
           "PER-CENT",
-          "ADEG"
+          "ADEG",
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT"
         ],
         "data": [
           [
@@ -112,13 +130,31 @@
           ],
           [
             0.2
+          ],
+          [
+            2.3
+          ],
+          [
+            1.7
+          ],
+          [
+            0.5
+          ],
+          [
+            1.0
+          ],
+          [
+            1.0
+          ],
+          [
+            2.0
           ]
         ]
       },
       "data": {
         "heads": [
           "ANG-CM",
-          "DATA",
+          "DATA-CM",
           "ERR-T"
         ],
         "units": [
@@ -340,7 +376,7 @@
         ],
         "facility": [
           {
-            "x4_code": "(CYCLO)",
+            "x4_code": "(CYCLO,1USALAS)",
             "free_txt": [
               " Los-Alamos 42-inch cyclotron"
             ]
@@ -354,19 +390,14 @@
         ],
         "rel-ref": [
           {
-            "x4_code": "(A,A1079001,BLAIR+,J,PR,74,(11),1599,194812)",
+            "x4_code": "(A,A1079001,J.M.Blair+,J,PR,74,1599,1948)",
             "free_txt": []
           },
           {
-            "x4_code": "(A,A1070001,ERICKSON+,J,PR,76,(8),1141,194910)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(A,A1200001,ROSEN+,J,PR,82,(6),777,1951)",
+            "x4_code": "(M,A1200001,L.Rosen+,J,PR,82,777,1951)",
             "free_txt": [
-              " The apparatus",
-              "and techniques in the present experiment are the same",
-              "as those described by rosen and et.el."
+              " Same apparatus",
+              "and techniques"
             ]
           }
         ],
@@ -384,27 +415,53 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": "(EN-ERR)",
-            "free_txt": [
-              " Energy error"
-            ]
-          },
-          {
-            "x4_code": "(ANG-ERR)",
-            "free_txt": [
-              " Angle error"
-            ]
-          },
-          {
             "x4_code": "(ERR-T)",
             "free_txt": [
               " Total error"
+            ]
+          },
+          {
+            "x4_code": "(ERR-S)",
+            "free_txt": [
+              " Statistical standard error for each angle",
+              "        investigated"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Uncertainty in current integrator"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Uncertainty in gas pressure and temperature"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3)",
+            "free_txt": [
+              " Uncertainty in geometrical factors"
+            ]
+          },
+          {
+            "x4_code": "(ERR-4)",
+            "free_txt": [
+              " Uncertainty due to microscope calibration and",
+              "        personal factors"
+            ]
+          },
+          {
+            "x4_code": "(ERR-5)",
+            "free_txt": [
+              " Uncertainty in background and discrimination"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,J.C.Allred+,J,PR,82,782,1951)",
             "free_txt": [
               " Table 1"
             ]

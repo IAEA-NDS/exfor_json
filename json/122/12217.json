@@ -1,23 +1,38 @@
 {
   "entry": "12217",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-03-15",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(760803T)",
+      "x4_code": "(19760803T)",
       "free_txt": [
-        " TRANSLATED FROM SCISRS"
+        " Translated from SCISRS"
       ]
     },
     {
-      "x4_code": "(821012A)",
+      "x4_code": "(19821012A)",
       "free_txt": [
-        " CONVERTED TO REACTION FORMALISM"
+        " Converted to reaction formalism"
+      ]
+    },
+    {
+      "x4_code": "(20230701A)",
+      "free_txt": [
+        " OS. Data added in sub.3, converted to",
+        " lower and upper case, added FACILITY, INC-SOURCE,",
+        " SAMPLE, ERR-ANALYS, CORRECTION (sub.2),",
+        " corrected STATUS"
+      ]
+    },
+    {
+      "x4_code": "(20240314A)",
+      "free_txt": [
+        " On. Major alterations in 002."
       ]
     }
   ],
   "bib_record": {
-    "title": "DIFFERTIAL SCATTERING OF NEUTRONS FROM PB208 AT RESONANT ENERGIES.",
+    "title": "Differential scattering of neutrons from Pb208 at resonant energies.",
     "authors": [
       {
         "name": "J.L.Fowler"
@@ -31,14 +46,24 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,147,870,66)",
-        "free_txt": [],
+        "x4_code": "(J,PR,147,870,1966)",
+        "free_txt": [
+          "#doi:10.1103/PhysRev.147.870"
+        ],
         "publication_year": "1966",
-        "doi": null,
+        "doi": "10.1103/PhysRev.147.870",
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(VDG,1USAORL)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(1USAORL)"
+      }
+    ]
   },
   "reactions": {
     "002": {
@@ -126,6 +151,33 @@
         "pointer": "2"
       },
       "3": {
+        "x4_code": "(82-PB-208(N,0),,PTY)",
+        "children": [
+          {
+            "code": [
+              "82-PB-208",
+              [
+                "N,0"
+              ],
+              ",,PTY"
+            ],
+            "type": null,
+            "target": "82-PB-208",
+            "process": "N,0",
+            "sf49": ",,PTY",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "PTY",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "",
+        "pointer": "3"
+      },
+      "4": {
         "x4_code": "(82-PB-208(N,TOT),,WID)",
         "children": [
           {
@@ -150,7 +202,7 @@
         ],
         "type": null,
         "free_text": "",
-        "pointer": "3"
+        "pointer": "4"
       }
     }
   },
@@ -165,7 +217,7 @@
           "EN",
           "EN-RSL",
           "COS-CM",
-          "DATA",
+          "DATA-CM",
           "DATA-ERR"
         ],
         "units": [
@@ -1726,10 +1778,12 @@
           "DATA      1",
           "DATA      2",
           "DATA      3",
-          "DATA-ERR  3"
+          "DATA      4",
+          "DATA-ERR  4"
         ],
         "units": [
           "MEV",
+          "NO-DIM",
           "NO-DIM",
           "KEV",
           "KEV"
@@ -1780,6 +1834,29 @@
             0.5,
             3.5,
             3.5
+          ],
+          [
+            1.0,
+            -1.0,
+            1.0,
+            1.0,
+            1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            1.0,
+            1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            1.0,
+            -1.0,
+            -1.0
           ],
           [
             4.6,
@@ -1838,7 +1915,57 @@
           {
             "x4_code": "(SCIN)",
             "free_txt": [
-              " STILBENE CRYSTAL"
+              " Stilbene crystal"
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(VDG,1USAORL)",
+            "free_txt": []
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(P-LI7)",
+            "free_txt": []
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": "(82-PB-208,ENR=0.9975)",
+            "free_txt": [
+              "For about 80% of measurements:",
+              " cylinder 1.27 cm diam., 9.0 cm long, 128.4 g",
+              "For about 20% of measurements:",
+              " about 10% longer, 138.5 g"
+            ]
+          }
+        ]
+      }
+    },
+    "002": {
+      "0": {
+        "correction": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Differential cross sections were corrected for",
+              " - the effect of the second group of neutrons of the",
+              "   Li(p,n) reaction,",
+              " - the finite angular resolution of the counting",
+              "   geometry, and",
+              " - multiple scattering"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Errors given include errors of counting",
+              " combined statistically with estimates of the errors",
+              " in the corrections"
             ]
           }
         ],
@@ -1850,7 +1977,27 @@
         ]
       }
     },
-    "002": {},
-    "003": {}
+    "003": {
+      "4": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No information on sources of uncertainties"
+            ]
+          }
+        ]
+      },
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,J.L.Fowler,J,PR,147,870,1966)",
+            "free_txt": [
+              " Table I"
+            ]
+          }
+        ]
+      }
+    }
   }
 }

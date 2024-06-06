@@ -1,7 +1,7 @@
 {
   "entry": "E1967",
-  "last_updated": "2020-01-21",
-  "number_of_revisions": "2",
+  "last_updated": "2024-05-05",
+  "number_of_revisions": "3",
   "histories": [
     {
       "x4_code": "(20060418C)",
@@ -14,6 +14,14 @@
       "free_txt": [
         " Tada. 010-013: REACTION corrected,",
         "            ANALYSIS: INTEF added. REFERENCE modified."
+      ]
+    },
+    {
+      "x4_code": "(20240320A)",
+      "free_txt": [
+        " MA: moved COMMON/EN-ERR -> ERR-ANALYS in",
+        "            001; modified REACTION in 005-006, 009,",
+        "            013, typos in 002, 007."
       ]
     }
   ],
@@ -30,9 +38,7 @@
     "institutes": [
       {
         "x4_code": "(2JPNKYO)",
-        "free_txt": [
-          " Laboratory for Radiopharmaceutical Chemistry"
-        ]
+        "free_txt": []
       }
     ],
     "references": [
@@ -146,7 +152,7 @@
     },
     "005": {
       "0": {
-        "x4_code": "(35-BR-81(A,N)37-RB-84-G,M+,SIG)",
+        "x4_code": "(35-BR-81(A,N)37-RB-84,,SIG)",
         "children": [
           {
             "code": [
@@ -154,14 +160,14 @@
               [
                 "A,N"
               ],
-              "37-RB-84-G,M+,SIG"
+              "37-RB-84,,SIG"
             ],
             "type": null,
             "target": "35-BR-81",
             "process": "A,N",
-            "sf49": "37-RB-84-G,M+,SIG",
-            "sf4": "37-RB-84-G",
-            "sf5": "M+",
+            "sf49": "37-RB-84,,SIG",
+            "sf4": "37-RB-84",
+            "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
@@ -175,7 +181,7 @@
     },
     "006": {
       "0": {
-        "x4_code": "(35-BR-79(A,X)35-BR-77-G,M+,SIG)",
+        "x4_code": "(35-BR-79(A,X)35-BR-77,,SIG)",
         "children": [
           {
             "code": [
@@ -183,14 +189,14 @@
               [
                 "A,X"
               ],
-              "35-BR-77-G,M+,SIG"
+              "35-BR-77,,SIG"
             ],
             "type": null,
             "target": "35-BR-79",
             "process": "A,X",
-            "sf49": "35-BR-77-G,M+,SIG",
-            "sf4": "35-BR-77-G",
-            "sf5": "M+",
+            "sf49": "35-BR-77,,SIG",
+            "sf4": "35-BR-77",
+            "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
@@ -262,7 +268,7 @@
     },
     "009": {
       "0": {
-        "x4_code": "(35-BR-0(HE3,X)36-KR-79-G,CUM,SIG)",
+        "x4_code": "(35-BR-0(HE3,X)36-KR-79,CUM,SIG)",
         "children": [
           {
             "code": [
@@ -270,13 +276,13 @@
               [
                 "HE3,X"
               ],
-              "36-KR-79-G,CUM,SIG"
+              "36-KR-79,CUM,SIG"
             ],
             "type": null,
             "target": "35-BR-0",
             "process": "HE3,X",
-            "sf49": "36-KR-79-G,CUM,SIG",
-            "sf4": "36-KR-79-G",
+            "sf49": "36-KR-79,CUM,SIG",
+            "sf4": "36-KR-79",
             "sf5": "CUM",
             "sf6": "SIG",
             "sf7": null,
@@ -378,7 +384,7 @@
     },
     "013": {
       "0": {
-        "x4_code": "(35-BR-0(HE3,X)36-KR-79-G,CUM,TTY,,EOB/MSC,DERIV)",
+        "x4_code": "(35-BR-0(HE3,X)36-KR-79,CUM,TTY,,EOB/MSC,DERIV)",
         "children": [
           {
             "code": [
@@ -386,13 +392,13 @@
               [
                 "HE3,X"
               ],
-              "36-KR-79-G,CUM,TTY,,EOB/MSC,DERIV"
+              "36-KR-79,CUM,TTY,,EOB/MSC,DERIV"
             ],
             "type": null,
             "target": "35-BR-0",
             "process": "HE3,X",
-            "sf49": "36-KR-79-G,CUM,TTY,,EOB/MSC,DERIV",
-            "sf4": "36-KR-79-G",
+            "sf49": "36-KR-79,CUM,TTY,,EOB/MSC,DERIV",
+            "sf4": "36-KR-79",
             "sf5": "CUM",
             "sf6": "TTY",
             "sf7": null,
@@ -408,19 +414,7 @@
   },
   "data_tables": {
     "001": {
-      "common": {
-        "heads": [
-          "EN-ERR"
-        ],
-        "units": [
-          "PER-CENT"
-        ],
-        "data": [
-          [
-            2.0
-          ]
-        ]
-      }
+      "common": null
     },
     "002": {
       "common": null,
@@ -950,6 +944,14 @@
             ]
           }
         ],
+        "err-analys": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "The uncertainty of the incident beam energy is +-2%."
+            ]
+          }
+        ],
         "facility": [
           {
             "x4_code": "(CYCLO,2JPNIPC)",
@@ -1011,7 +1013,7 @@
             "x4_code": "(37-RB-81-G,,DG,190.4,0.645)",
             "free_txt": [
               "Symbol (81mRb) in decay data in reference is probably",
-              "missprint and probably should be read as 81Rb (g.s.)."
+              "misprint and probably should be read as 81Rb (g.s.)."
             ]
           }
         ],
@@ -1025,9 +1027,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,Y.Homma+,J,ARI,30,345,1979)",
             "free_txt": [
-              " Data scanned from Fig.1, p346 in reference"
+              " Fig. 1"
             ]
           }
         ]
@@ -1043,9 +1045,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,Y.Homma+,J,ARI,30,345,1979)",
             "free_txt": [
-              " Data scanned from Fig.1, p346 in reference"
+              " Fig. 1"
             ]
           }
         ]
@@ -1069,9 +1071,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,Y.Homma+,J,ARI,30,345,1979)",
             "free_txt": [
-              " Data scanned from Fig.1, p346 in reference"
+              " Fig. 1"
             ]
           }
         ]
@@ -1095,9 +1097,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,Y.Homma+,J,ARI,30,345,1979)",
             "free_txt": [
-              " Data scanned from Fig.1, p346 in reference"
+              " Fig. 1"
             ]
           }
         ]
@@ -1129,9 +1131,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,Y.Homma+,J,ARI,30,345,1979)",
             "free_txt": [
-              " Data scanned from Fig.1, p346 in reference"
+              " Fig. 1"
             ]
           }
         ]
@@ -1144,7 +1146,7 @@
             "x4_code": "(37-RB-81-G,,DG,190.4,0.645)",
             "free_txt": [
               "Symbol (81mRb) in decay data in reference is probably",
-              "missprint and probably should be read as 81Rb (g.s.)."
+              "misprint and probably should be read as 81Rb (g.s.)."
             ]
           }
         ],
@@ -1158,9 +1160,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,Y.Homma+,J,ARI,30,345,1979)",
             "free_txt": [
-              " Data scanned from Fig.2, p346 in reference"
+              " Fig. 2"
             ]
           }
         ]
@@ -1184,9 +1186,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,Y.Homma+,J,ARI,30,345,1979)",
             "free_txt": [
-              " Data scanned from Fig.2, p346 in reference"
+              " Fig. 2"
             ]
           }
         ]
@@ -1210,9 +1212,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,Y.Homma+,J,ARI,30,345,1979)",
             "free_txt": [
-              " Data scanned from Fig.2, p346 in reference"
+              " Fig. 2"
             ]
           }
         ]
@@ -1228,9 +1230,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,Y.Homma+,J,ARI,30,345,1979)",
             "free_txt": [
-              " Taken from text, p347 in reference"
+              " Text"
             ]
           }
         ]
@@ -1246,9 +1248,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,Y.Homma+,J,ARI,30,345,1979)",
             "free_txt": [
-              " Taken from text, p347 in reference"
+              " Text"
             ]
           }
         ]
@@ -1264,9 +1266,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,Y.Homma+,J,ARI,30,345,1979)",
             "free_txt": [
-              " Taken from text, p347 in reference"
+              " Text"
             ]
           }
         ]
@@ -1282,9 +1284,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,Y.Homma+,J,ARI,30,345,1979)",
             "free_txt": [
-              " Taken from text, p347 in reference"
+              " Text"
             ]
           }
         ]

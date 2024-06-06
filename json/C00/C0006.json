@@ -1,24 +1,24 @@
 {
   "entry": "C0006",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2023-12-18",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19780522C)",
       "free_txt": [
-        "TWB"
+        " TWB"
       ]
     },
     {
       "x4_code": "(19800303A)",
       "free_txt": [
-        "TWB"
+        " TWB"
       ]
     },
     {
       "x4_code": "(19880304A)",
       "free_txt": [
-        " REACTION sequence corrected."
+        " reaction sequence corrected."
       ]
     },
     {
@@ -44,10 +44,17 @@
       "free_txt": [
         " BIB update."
       ]
+    },
+    {
+      "x4_code": "(20230116A)",
+      "free_txt": [
+        " BP: Updated entry, ERR-ANALYS and STATUS,",
+        "added doi and FACILITY."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Low energy cross section of the d-t reaction and angular distribution of alpha particles emitted",
+    "title": "Low Energy Cross Section of the D-T Reaction and Angular Distribution of the Alpha-Particles Emitted",
     "authors": [
       {
         "name": "E.Bretscher"
@@ -64,14 +71,24 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,75,1154,194904)",
-        "free_txt": [],
+        "x4_code": "(J,PR,75,1154,1949)",
+        "free_txt": [
+          "#doi:10.1103/PhysRev.75.1154"
+        ],
         "publication_year": "1949",
-        "doi": null,
+        "doi": "10.1103/PhysRev.75.1154",
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(ACCEL,1USALAS)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": "(1USALAS)"
+      }
+    ]
   },
   "reactions": {
     "002": {
@@ -105,7 +122,7 @@
     },
     "003": {
       "0": {
-        "x4_code": "(1-H-2(T,N)2-HE-4,,TTY/PY)",
+        "x4_code": "(1-H-2(T,N)2-HE-4,,PY,,TT/CH)",
         "children": [
           {
             "code": [
@@ -113,17 +130,17 @@
               [
                 "T,N"
               ],
-              "2-HE-4,,TTY/PY"
+              "2-HE-4,,PY,,TT/CH"
             ],
             "type": null,
             "target": "1-H-2",
             "process": "T,N",
-            "sf49": "2-HE-4,,TTY/PY",
+            "sf49": "2-HE-4,,PY,,TT/CH",
             "sf4": "2-HE-4",
             "sf5": null,
-            "sf6": "TTY/PY",
+            "sf6": "PY",
             "sf7": null,
-            "sf8": null,
+            "sf8": "TT/CH",
             "sf9": null
           }
         ],
@@ -399,6 +416,12 @@
             "free_txt": []
           }
         ],
+        "facility": [
+          {
+            "x4_code": "(ACCEL,1USALAS)",
+            "free_txt": []
+          }
+        ],
         "method": [
           {
             "x4_code": "(BCINT)",
@@ -417,11 +440,33 @@
     },
     "002": {
       "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR,3.5,10.)",
+            "free_txt": [
+              " The counting errors at the lowest",
+              "energies are about three percent, and at the higher",
+              "energies are negligible, The geometry of the counter",
+              "used at low energies is known within about nine",
+              "percent; for the other counter it is better known to",
+              "about two percent. The current measurements with the",
+              "integrator are probably good to two percent. The",
+              "error due to the presence of neutral particles in the",
+              "beam is, in general, not more than one percent; any",
+              "errors due to target contamination or secondary",
+              "electron emission were together not more than one",
+              "percent. The bombarding voltage is known within one",
+              "percent. The combination of these factors leads to an",
+              "aggregate error in the thick-target yield amounting",
+              "to 3.5% at high energies and about 10% at low energies."
+            ]
+          }
+        ],
         "status": [
           {
             "x4_code": "(CURVE)",
             "free_txt": [
-              " Read from Fig.2 in reference."
+              " Fig. 2, page 1157 of J,PR,75,1154,1949."
             ]
           }
         ]
@@ -442,7 +487,7 @@
             "x4_code": null,
             "free_txt": [
               "Measured with 2 different detector geometries (below",
-              " and above 40 keV."
+              "and above 40 keV)."
             ]
           }
         ],
@@ -450,15 +495,29 @@
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Quadratic combination of uncertainties."
+              " The counting errors at the lowest",
+              "energies are about three percent, and at the higher",
+              "energies are negligible, The geometry of the counter",
+              "used at low energies is known within about nine",
+              "percent; for the other counter it is better known to",
+              "about two percent. The current measurements with the",
+              "integrator are probably good to two percent. The",
+              "error due to the presence of neutral particles in the",
+              "beam is, in general, not more than one percent; any",
+              "errors due to target contamination or secondary",
+              "electron emission were together not more than one",
+              "percent. The bombarding voltage is known within one",
+              "percent. The combination of these factors leads to an",
+              "aggregate error in the thick-target yield amounting",
+              "to 3.5% at high energies and about 10% at low energies."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE)",
             "free_txt": [
-              "Data taken from Table II of of reference."
+              " Table II, page 1158 of J,PR,75,1154,1949."
             ]
           }
         ]
@@ -468,11 +527,11 @@
       "0": {
         "analysis": [
           {
-            "x4_code": null,
+            "x4_code": "(TTUNF)",
             "free_txt": [
-              "Calculated from fit to measured thick-target yields",
-              " using stopping powers taken from Bretscher, et al.,",
-              " Phys. Rev. 73, 815 (1948)."
+              " Calculated from fit to measured thick-target",
+              "yields using stopping powers taken from Bretscher",
+              "et al., Phys. Rev. 73, 815 (1948)."
             ]
           }
         ],
@@ -484,16 +543,22 @@
             ]
           }
         ],
-        "status": [
+        "rel-ref": [
           {
-            "x4_code": null,
-            "free_txt": [
-              "Data taken from Table III of article."
-            ]
-          },
+            "x4_code": "(R,A1143002,E.Bretscher+,J,PR,73,815,1948)",
+            "free_txt": []
+          }
+        ],
+        "status": [
           {
             "x4_code": "(DEP,C0006003)",
             "free_txt": []
+          },
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              " Table III, page 1158 of J,PR,75,1154,1949."
+            ]
           }
         ]
       }

@@ -1,17 +1,27 @@
 {
   "entry": "40878",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-03-31",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(851112C)",
+      "x4_code": "(19851112C)",
       "free_txt": [
-        " COMPILED AT THE CENTER BY MAJEV S.A."
+        " Compiled at the center by Maev S.A."
+      ]
+    },
+    {
+      "x4_code": "(20231226A)",
+      "free_txt": [
+        " Ref. INDC(CCP)-235,(2),259,1983 was added.",
+        " EN value was corrected in Subent 002.",
+        " Upper -> lower case correction .",
+        " Dates were corrected for 4-digits year.",
+        "  ERR-T -> DATA-ERR ( no partial uncertainties given)."
       ]
     }
   ],
   "bib_record": {
-    "title": " FISSION PRODUCT YIELD MEASUREMENT BY THE METHOD OF SEMICONDUCTOR GAMMA-SPECTROSCOPY FOR U-236 AND U-238 FISSION BY THE MONOENERGETIC NEUTRONS",
+    "title": " Fission product yields measurement by the method of semiconductor gamma-spectroscopy for U-236 and U-238 fission by the monoenergetic neutrons",
     "authors": [
       {
         "name": "A.N.Gudkov"
@@ -29,10 +39,10 @@
         "name": "V.V.Kovalenko"
       },
       {
-        "name": "A.B.Koldobskij"
+        "name": "A.B.Koldobskiy"
       },
       {
-        "name": "Ju.F.Koleganov"
+        "name": "Yu.F.Koleganov"
       },
       {
         "name": "V.M.Kolobashkin"
@@ -55,17 +65,17 @@
     ],
     "institutes": [
       {
-        "x4_code": "(4CCPFEI)",
+        "x4_code": "(4RUSFEI)",
         "free_txt": []
       },
       {
-        "x4_code": "(4CCPMIF)",
+        "x4_code": "(4RUSMIF)",
         "free_txt": []
       }
     ],
     "references": [
       {
-        "x4_code": "(C,83KIEV,2,259,8310)",
+        "x4_code": "((C,83KIEV,2,259,1983)=(R,INDC(CCP)-235,(2),259,1983))",
         "free_txt": [],
         "publication_year": "1983",
         "doi": null,
@@ -74,13 +84,13 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG,4CCPFEI)",
+        "x4_code": "(VDG,4RUSFEI)",
         "free_txt": [
-          " ACCELERATOR KG-2.5"
+          " Accelerator KG-2.5"
         ],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": "(4CCPFEI)"
+        "institute": "(4RUSFEI)"
       }
     ]
   },
@@ -189,7 +199,7 @@
         ],
         "data": [
           [
-            1010.0
+            1050.0
           ],
           [
             1.5
@@ -201,7 +211,7 @@
           "MASS",
           "ELEMENT",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "NO-DIM",
@@ -286,8 +296,8 @@
           "ELEMENT",
           "ISOMER",
           "DATA",
-          "ERR-T",
-          "FLAG"
+          "DATA-ERR",
+          "DECAY-FLAG"
         ],
         "units": [
           "NO-DIM",
@@ -440,7 +450,7 @@
             null,
             null,
             null,
-            2.0,
+            null,
             null,
             null,
             null,
@@ -467,11 +477,15 @@
       "common": {
         "heads": [
           "EN",
-          "EN-ERR"
+          "EN-ERR",
+          "MONIT",
+          "MONIT-ERR"
         ],
         "units": [
           "KEV",
-          "PER-CENT"
+          "PER-CENT",
+          "PC/FIS",
+          "PC/FIS"
         ],
         "data": [
           [
@@ -479,6 +493,12 @@
           ],
           [
             6.0
+          ],
+          [
+            5.34
+          ],
+          [
+            0.27
           ]
         ]
       },
@@ -488,8 +508,8 @@
           "ELEMENT",
           "ISOMER",
           "DATA",
-          "ERR-T",
-          "FLAG"
+          "DATA-ERR",
+          "DECAY-FLAG"
         ],
         "units": [
           "NO-DIM",
@@ -631,7 +651,7 @@
             null,
             null,
             null,
-            2.0,
+            null,
             null,
             null,
             null,
@@ -660,14 +680,27 @@
         "detector": [
           {
             "x4_code": "(GELI)",
-            "free_txt": []
+            "free_txt": [
+              " Detector calibration was done by gamma lines of",
+              "Kr-85m, Sr-91, Zr-97, Ba-139 yields from",
+              "U-235 thermal neutron fission and by standard sources",
+              "of Mn-54, Cs-137, Zn-65, Na-22, Hg-203."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Total uncertainty ."
+            ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDG,4CCPFEI)",
+            "x4_code": "(VDG,4RUSFEI)",
             "free_txt": [
-              " ACCELERATOR KG-2.5"
+              " Accelerator KG-2.5"
             ]
           }
         ],
@@ -677,30 +710,47 @@
             "free_txt": []
           }
         ],
-        "monitor": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              " ABSOLUTE MEASUREMENTS"
-            ]
-          }
-        ],
         "part-det": [
           {
-            "x4_code": "(G)",
+            "x4_code": "(DG)",
             "free_txt": []
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(R,,W.Reus+,R,GSI-79-2,1979)",
+            "free_txt": [
+              " Data for fission products",
+              " identification."
+            ]
           }
         ]
       }
     },
     "002": {
       "0": {
+        "monitor": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Gold foils were used to measure fluence."
+            ]
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              " OXIDE U3-08 DISK FOLDED IN THE NICKEL FOIL 0.1 MM",
-              " THICKNESS, WEIGHT 1110 +- 1 MILLIGRAM, DIAMETER 13 MM"
+              " Oxide u3-08 disk folded in the nickel foil 0.1 mm",
+              " thickness, weight 1110 +- 1 milligram, diameter 13 mm"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.N.Gudkov+,R,INDC(CCP)-235,(2),259,1983)",
+            "free_txt": [
+              "  Table 2."
             ]
           }
         ]
@@ -708,17 +758,17 @@
     },
     "003": {
       "0": {
-        "flag": [
+        "decay-data": [
           {
-            "x4_code": "(1.)",
-            "free_txt": [
-              " ISOMER HAS HALF-LIFE 40.0 MIN"
-            ]
-          },
+            "x4_code": "((1.)51-SB-130-G,40.0MIN)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
           {
-            "x4_code": "(2.)",
+            "x4_code": null,
             "free_txt": [
-              " NORMALIZATION VALUE"
+              " Gold foils were used to measure fluence."
             ]
           }
         ],
@@ -726,9 +776,17 @@
           {
             "x4_code": null,
             "free_txt": [
-              " OXID U3-08 DISK FOLDED IN THE NICKEL FOIL 0.1 MM",
-              " THICKNESS, SAMPLE WEIGHT IS 995.8 +- 0.9 MILLIGRAM,",
-              " DIAMETER 12 MM"
+              " Oxide U3-08 disk folded in the nickel foil 0.1 mm",
+              " thickness, sample weight is 995.8 +- 0.9 milligram,",
+              " diameter 12 mm"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.N.Gudkov+,R,INDC(CCP)-235,(2),259,1983)",
+            "free_txt": [
+              "  Table 2."
             ]
           }
         ]
@@ -736,17 +794,18 @@
     },
     "004": {
       "0": {
-        "flag": [
+        "decay-data": [
           {
-            "x4_code": "(1.)",
-            "free_txt": [
-              " ISOMER HAS HALF-LIFE 40.0 MIN"
-            ]
-          },
+            "x4_code": "((1.)51-SB-130-G,40.0MIN)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
           {
-            "x4_code": "(2.)",
+            "x4_code": "((MONIT)92-U-236(N,F)40-ZR-97,CUM,FY)",
             "free_txt": [
-              " NORMALIZATION VALUE"
+              " Zr-97 yield (measured at 959 keV) was used for",
+              " normalization."
             ]
           }
         ],
@@ -754,9 +813,17 @@
           {
             "x4_code": null,
             "free_txt": [
-              " OXIDE U3-08 DISK FOLDED IN THE NICKEL FOIL 0.1 MM",
-              " THICKNESS, SAMPLE WEIGHT IS 995.8 +- 0.9 MILLIGRAM,",
-              " SAMPLE DIAMETER 14.62 MM"
+              " Oxide u3-08 disk folded in the nickel foil 0.1 mm",
+              " thickness, sample weight is 995.8 +- 0.9 milligram,",
+              " sample diameter 14.62 mm"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.N.Gudkov+,R,INDC(CCP)-235,(2),259,1983)",
+            "free_txt": [
+              "  Table 2."
             ]
           }
         ]

@@ -1,21 +1,30 @@
 {
   "entry": "40633",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-02-02",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(840515C)",
+      "x4_code": "(19840515C)",
       "free_txt": []
     },
     {
-      "x4_code": "(850615U)",
+      "x4_code": "(19850615U)",
       "free_txt": [
-        " SOME CORRECTIONS INTRODUCED"
+        " Some corrections introduced"
+      ]
+    },
+    {
+      "x4_code": "(20231003A)",
+      "free_txt": [
+        " BIB information was updated.",
+        " Upper -> lower case correction.",
+        " Dates were corrected for 4-digits year.",
+        " E-NRM was deleted from Subent 001."
       ]
     }
   ],
   "bib_record": {
-    "title": "THE ANGULAR DISTRIBUTION OF G-RADIATION FROM (N,N'G) REACTION ON BA-135 NUCLEI",
+    "title": "The angular distribution of gamma-radiation from (n,n'gamma) reaction on Ba-135 nuclei",
     "authors": [
       {
         "name": "V.A.Bondarenko"
@@ -27,7 +36,7 @@
         "name": "P.T.Prokof'Ev"
       },
       {
-        "name": "G.L.Rezvaja"
+        "name": "G.L.Rezvaya"
       },
       {
         "name": "T.L.Solomonova"
@@ -35,13 +44,13 @@
     ],
     "institutes": [
       {
-        "x4_code": "(4CCPIFL)",
+        "x4_code": "(4LATIFL)",
         "free_txt": []
       }
     ],
     "references": [
       {
-        "x4_code": "(C,83MOSCOW,,95,8304)",
+        "x4_code": "(C,83MOSCOW,,95,1983)",
         "free_txt": [],
         "publication_year": "1983",
         "doi": null,
@@ -50,18 +59,18 @@
     ],
     "facilities": [
       {
-        "x4_code": "(REAC)",
+        "x4_code": "(REAC,4LATIFL)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(REAC)",
-        "institute": null
+        "institute": "(4LATIFL)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(56-BA-135(N,INL)56-BA-135,,SPC,,REL)",
+        "x4_code": "((56-BA-135(N,INL)56-BA-135,,SPC/DA)//(56-BA-135(N,INL)56-BA-135,,SPC/DA))",
         "children": [
           {
             "code": [
@@ -69,28 +78,47 @@
               [
                 "N,INL"
               ],
-              "56-BA-135,,SPC,,REL"
+              "56-BA-135,,SPC/DA"
             ],
             "type": null,
             "target": "56-BA-135",
             "process": "N,INL",
-            "sf49": "56-BA-135,,SPC,,REL",
+            "sf49": "56-BA-135,,SPC/DA",
             "sf4": "56-BA-135",
             "sf5": null,
-            "sf6": "SPC",
+            "sf6": "SPC/DA",
             "sf7": null,
-            "sf8": "REL",
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "code": [
+              "56-BA-135",
+              [
+                "N,INL"
+              ],
+              "56-BA-135,,SPC/DA"
+            ],
+            "type": null,
+            "target": "56-BA-135",
+            "process": "N,INL",
+            "sf49": "56-BA-135,,SPC/DA",
+            "sf4": "56-BA-135",
+            "sf5": null,
+            "sf6": "SPC/DA",
+            "sf7": null,
+            "sf8": null,
             "sf9": null
           }
         ],
-        "type": null,
-        "free_text": " RELATIVE TO SPC  FOR E=220.85KEV",
+        "type": "//",
+        "free_text": "Relative to SPC for E=220.85keV",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(56-BA-135(N,INL)56-BA-135,PAR,DA,G,LEG)",
+        "x4_code": "(56-BA-135(N,INL)56-BA-135,PAR,DA,G,LEG/REL)",
         "children": [
           {
             "code": [
@@ -98,22 +126,22 @@
               [
                 "N,INL"
               ],
-              "56-BA-135,PAR,DA,G,LEG"
+              "56-BA-135,PAR,DA,G,LEG/REL"
             ],
             "type": null,
             "target": "56-BA-135",
             "process": "N,INL",
-            "sf49": "56-BA-135,PAR,DA,G,LEG",
+            "sf49": "56-BA-135,PAR,DA,G,LEG/REL",
             "sf4": "56-BA-135",
             "sf5": "PAR",
             "sf6": "DA",
             "sf7": "G",
-            "sf8": "LEG",
+            "sf8": "LEG/REL",
             "sf9": null
           }
         ],
         "type": null,
-        "free_text": "",
+        "free_text": "  Legendre coefficients A2 and A4 ,units and approximation formula are not given in thearticle.",
         "pointer": "0"
       }
     }
@@ -123,20 +151,15 @@
       "common": {
         "heads": [
           "EN-DUMMY",
-          "E-NRM",
           "ANG"
         ],
         "units": [
           "MEV",
-          "KEV",
           "ADEG"
         ],
         "data": [
           [
             1.0
-          ],
-          [
-            220.85
           ],
           [
             90.0
@@ -145,19 +168,36 @@
       }
     },
     "002": {
-      "common": null,
+      "common": {
+        "heads": [
+          "E-DN",
+          "E-DN-ERR"
+        ],
+        "units": [
+          "KEV",
+          "KEV"
+        ],
+        "data": [
+          [
+            220.85
+          ],
+          [
+            0.03
+          ]
+        ]
+      },
       "data": {
         "heads": [
-          "E",
-          "E-ERR",
+          "E-NM",
+          "E-NM-ERR",
           "DATA",
           "ERR-S"
         ],
         "units": [
           "KEV",
           "KEV",
-          "ARB-UNITS",
-          "ARB-UNITS"
+          "NO-DIM",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -179,7 +219,7 @@
             965.88,
             979.97,
             1066.7,
-            1213.7
+            1213.74
           ],
           [
             0.03,
@@ -203,46 +243,46 @@
             0.09
           ],
           [
-            100.0,
-            3.6,
-            13.2,
-            8.4,
-            37.1,
-            87.9,
-            28.7,
-            7.0,
-            1.89,
-            4.5,
-            4.0,
-            22.0,
-            4.66,
-            2.8,
-            3.4,
-            2.32,
-            9.9,
-            1.2,
-            4.06
+            1.0,
+            0.036,
+            0.132,
+            0.084,
+            0.371,
+            0.879,
+            0.287,
+            0.07,
+            0.0189,
+            0.045,
+            0.04,
+            0.22,
+            0.0466,
+            0.028,
+            0.034,
+            0.0232,
+            0.099,
+            0.012,
+            0.0406
           ],
           [
-            16.0,
-            0.2,
-            0.3,
-            0.2,
-            0.9,
-            1.9,
-            0.7,
-            0.7,
-            0.07,
-            0.1,
-            0.2,
-            0.5,
-            0.13,
-            0.1,
-            0.1,
-            0.09,
-            0.2,
-            0.1,
-            0.13
+            0.16,
+            0.002,
+            0.003,
+            0.002,
+            0.009,
+            0.019,
+            0.007,
+            0.007,
+            0.0007,
+            0.001,
+            0.002,
+            0.005,
+            0.0013,
+            0.001,
+            0.001,
+            0.0009,
+            0.002,
+            0.001,
+            0.0013
           ]
         ]
       }
@@ -255,14 +295,14 @@
           "E",
           "E-ERR",
           "DATA",
-          "DATA-ERR"
+          "ERR-S"
         ],
         "units": [
           "NO-DIM",
           "KEV",
           "KEV",
-          "NO-DIM",
-          "NO-DIM"
+          "ARB-UNITS",
+          "ARB-UNITS"
         ],
         "data": [
           [
@@ -324,7 +364,7 @@
             965.88,
             979.97,
             1066.7,
-            1213.7,
+            1213.74,
             220.85,
             245.44,
             366.82,
@@ -343,7 +383,7 @@
             965.88,
             979.97,
             1066.7,
-            1213.7
+            1213.74
           ],
           [
             0.03,
@@ -445,7 +485,7 @@
             0.12,
             0.35,
             0.18,
-            0.0,
+            null,
             0.25,
             0.09,
             0.1,
@@ -476,13 +516,21 @@
           {
             "x4_code": null,
             "free_txt": [
-              "NO INFORMATION"
+              " No information"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-S)",
+            "free_txt": [
+              " Statistical uncertainty"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(REAC)",
+            "x4_code": "(REAC,4LATIFL)",
             "free_txt": []
           }
         ],
@@ -496,7 +544,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              " REACTOR NEUTRON SPECTRUM"
+              " Reactor neutron spectrum"
             ]
           }
         ],
@@ -510,7 +558,25 @@
         ]
       }
     },
-    "002": {},
-    "003": {}
+    "002": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.A.Bondarenko,C,83MOSCOW,,95,1983)",
+            "free_txt": []
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.A.Bondarenko,C,83MOSCOW,,95,1983)",
+            "free_txt": []
+          }
+        ]
+      }
+    }
   }
 }

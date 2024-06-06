@@ -1,12 +1,12 @@
 {
   "entry": "40803",
-  "last_updated": "2007-09-26",
-  "number_of_revisions": "5",
+  "last_updated": "2024-03-31",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19840904T)",
       "free_txt": [
-        " Converted From ENTRY 80258"
+        " Converted from ENTRY 80258"
       ]
     },
     {
@@ -21,10 +21,17 @@
       "free_txt": [
         " Year of 2nd Reference was corrected. M.M."
       ]
+    },
+    {
+      "x4_code": "(20231226A)",
+      "free_txt": [
+        " BIB information was updated.",
+        " Upper -> lower case correction"
+      ]
     }
   ],
   "bib_record": {
-    "title": " A Measurement Of The Capture Cross Sections Of U-238 And Th-232 For 5-200 keV Neutrons.",
+    "title": " Measurement of the 238U and 232Th capture cross sections for neutrons of 5-200 keV",
     "authors": [
       {
         "name": "V.A.Tolstikov"
@@ -33,7 +40,7 @@
         "name": "L.E.Sherman"
       },
       {
-        "name": "Ju.Ja.Stavisskii"
+        "name": "Yu.Ya.Stavisskii"
       }
     ],
     "institutes": [
@@ -44,36 +51,41 @@
     ],
     "references": [
       {
-        "x4_code": "(J,AE,15,(5),414,1963)",
-        "free_txt": [],
-        "publication_year": "1963",
-        "doi": null,
-        "pointer": "0"
-      },
-      {
         "x4_code": "(J,SJA,15,1170,1963)",
-        "free_txt": [],
+        "free_txt": [
+          " Engl.translation of AE,15,414,1963"
+        ],
         "publication_year": "1963",
         "doi": null,
         "pointer": "0"
       },
       {
         "x4_code": "(J,JNE/AB,18,599,1964)",
-        "free_txt": [],
+        "free_txt": [
+          " Engl.translation of",
+          "  AE,15,414,1963"
+        ],
         "publication_year": "1964",
+        "doi": null,
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,AE,15,414,1963)",
+        "free_txt": [
+          " Issue 5."
+        ],
+        "publication_year": "1963",
         "doi": null,
         "pointer": "0"
       }
     ],
     "facilities": [
       {
-        "x4_code": "(VDG)",
-        "free_txt": [
-          "   Van-de-Graaf Generator"
-        ],
+        "x4_code": "(VDG,4RUSFEI)",
+        "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": null
+        "institute": "(4RUSFEI)"
       }
     ]
   },
@@ -145,10 +157,12 @@
       "common": {
         "heads": [
           "EN-NRM",
-          "MONIT"
+          "MONIT",
+          "MONIT-ERR"
         ],
         "units": [
           "KEV",
+          "MB",
           "MB"
         ],
         "data": [
@@ -157,6 +171,9 @@
           ],
           [
             390.0
+          ],
+          [
+            59.0
           ]
         ]
       },
@@ -198,7 +215,29 @@
       }
     },
     "003": {
-      "common": null,
+      "common": {
+        "heads": [
+          "EN-NRM",
+          "MONIT",
+          "MONIT-ERR"
+        ],
+        "units": [
+          "KEV",
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            24.0
+          ],
+          [
+            568.0
+          ],
+          [
+            57.0
+          ]
+        ]
+      },
       "data": {
         "heads": [
           "EN",
@@ -244,29 +283,43 @@
           {
             "x4_code": "(PROPC)",
             "free_txt": [
-              " For Fission Detection"
+              " Beta - counter to measure induced activity of",
+              "uranium and thorium."
             ]
           },
           {
             "x4_code": "(LONGC)",
             "free_txt": [
-              " For Sample Thickness Measurement"
+              " For neutron flux"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,4RUSFEI)",
+            "free_txt": []
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(P-LI7)",
             "free_txt": [
-              "   Van-de-Graaf Generator"
+              " LiF layer."
             ]
           }
         ],
         "method": [
           {
             "x4_code": "(ACTIV)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(5-B-10(N,X)2-HE-4,,SIG)",
             "free_txt": [
-              " Activation"
+              " For shape,",
+              " assuming 1/v law in the 1-200 keV energy region."
             ]
           }
         ]
@@ -274,60 +327,60 @@
     },
     "002": {
       "0": {
-        "monitor": [
+        "monit-ref": [
           {
-            "x4_code": "(90-TH-232(N,G)90-TH-233,,SIG)",
-            "free_txt": [
-              " RELATIVE TO U-235 FISSION AT 71.5 KEV."
-            ]
+            "x4_code": "(40642005,Yu.Ya.Stavisskii+,J,AE,10,508,1961)",
+            "free_txt": []
           }
         ],
-        "part-det": [
+        "monitor": [
           {
-            "x4_code": "(B-)",
-            "free_txt": [
-              "    COUNTED TH-233 DECAY BETAS"
-            ]
+            "x4_code": "((MONIT)90-TH-232(N,G)90-TH-233,,SIG)",
+            "free_txt": []
+          }
+        ],
+        "rad-det": [
+          {
+            "x4_code": "(90-TH-232,B-)",
+            "free_txt": []
           }
         ],
         "status": [
           {
-            "x4_code": "(SCSRS,CURVE)",
-            "free_txt": []
+            "x4_code": "(CURVE,,V.A.Tolstikov+,J,SJA,15,1170,1963)",
+            "free_txt": [
+              " Fig. a on page 1171"
+            ]
           }
         ]
       }
     },
     "003": {
       "0": {
-        "comment": [
+        "monit-ref": [
           {
-            "x4_code": null,
-            "free_txt": [
-              "READ FROM CURVE."
-            ]
+            "x4_code": "(40374021,T.S.Belanova,J,AE,8,549,1960)",
+            "free_txt": []
           }
         ],
         "monitor": [
           {
-            "x4_code": "(92-U-238(N,G)92-U-239,,SIG)",
-            "free_txt": [
-              " NORMALIZED TO DATA OF BELANOVA AT 24 KEV."
-            ]
+            "x4_code": "((MONIT)92-U-238(N,G)92-U-239,,SIG)",
+            "free_txt": []
           }
         ],
-        "part-det": [
+        "rad-det": [
           {
-            "x4_code": "(B)",
-            "free_txt": [
-              "     COUNTED U-239 DECAY BETAS."
-            ]
+            "x4_code": "(92-U-239,B)",
+            "free_txt": []
           }
         ],
         "status": [
           {
-            "x4_code": "(SCSRS,CURVE)",
-            "free_txt": []
+            "x4_code": "(CURVE,,V.A.Tolstikov+,J,SJA,15,1170,1963)",
+            "free_txt": [
+              " Fig. b on page 1171"
+            ]
           }
         ]
       }

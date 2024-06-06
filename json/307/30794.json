@@ -1,12 +1,12 @@
 {
   "entry": "30794",
-  "last_updated": "2009-12-24",
-  "number_of_revisions": "4",
+  "last_updated": "2024-03-13",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19880531C)",
       "free_txt": [
-        " DG.-"
+        " DG"
       ]
     },
     {
@@ -15,10 +15,16 @@
         " SD:Updated to new date formats,lower case.",
         " OS. Added ASSUMED and subentry 3."
       ]
+    },
+    {
+      "x4_code": "(20230305A)",
+      "free_txt": [
+        " On. Recompiled."
+      ]
     }
   ],
   "bib_record": {
-    "title": "A determination of the Te-130 thermal neutron capture cross section",
+    "title": "A determination of the 130Te thermal neutron capture cross section",
     "authors": [
       {
         "name": "J.Honzatko"
@@ -44,7 +50,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,CZJ/B,34,520,198406)",
+        "x4_code": "(J,CZJ/B,34,520,1984)",
         "free_txt": [],
         "publication_year": "1984",
         "doi": null,
@@ -53,13 +59,13 @@
     ],
     "facilities": [
       {
-        "x4_code": "(REAC,3CSRUJF)",
+        "x4_code": "(REAC,3CZRUJV)",
         "free_txt": [
-          "  VVR-S reactor"
+          " VVR-S reactor"
         ],
         "pointer": "0",
         "facility_type": "(REAC)",
-        "institute": "(3CSRUJF)"
+        "institute": "(3CZRUJV)"
       }
     ]
   },
@@ -121,40 +127,49 @@
         "free_text": "",
         "pointer": "0"
       }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(52-TE-130(N,G)52-TE-131,PAR,SIG,,MXW)",
+        "children": [
+          {
+            "code": [
+              "52-TE-130",
+              [
+                "N,G"
+              ],
+              "52-TE-131,PAR,SIG,,MXW"
+            ],
+            "type": null,
+            "target": "52-TE-130",
+            "process": "N,G",
+            "sf49": "52-TE-131,PAR,SIG,,MXW",
+            "sf4": "52-TE-131",
+            "sf5": "PAR",
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          }
+        ],
+        "type": null,
+        "free_text": "",
+        "pointer": "0"
+      }
     }
   },
   "data_tables": {
     "001": {
       "common": {
         "heads": [
-          "EN-DUMMY",
-          "MONIT1",
-          "MONIT1-ERR",
-          "MONIT2",
-          "MONIT2-ERR"
+          "EN-DUMMY"
         ],
         "units": [
-          "EV",
-          "MB",
-          "MB",
-          "B",
-          "B"
+          "EV"
         ],
         "data": [
           [
             0.0253
-          ],
-          [
-            230.0
-          ],
-          [
-            3.0
-          ],
-          [
-            43.0
-          ],
-          [
-            2.0
           ]
         ]
       }
@@ -164,15 +179,11 @@
       "data": {
         "heads": [
           "DATA",
-          "DATA-ERR",
-          "ASSUM",
-          "ASSUM-ERR"
+          "DATA-ERR"
         ],
         "units": [
           "MB",
-          "MB",
-          "NO-DIM",
-          "NO-DIM"
+          "MB"
         ],
         "data": [
           [
@@ -180,30 +191,43 @@
           ],
           [
             20.0
-          ],
-          [
-            0.059
-          ],
-          [
-            0.03
           ]
         ]
       }
     },
     "003": {
-      "common": null,
+      "common": {
+        "heads": [
+          "MONIT",
+          "MONIT-ERR"
+        ],
+        "units": [
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            230.0
+          ],
+          [
+            3.0
+          ]
+        ]
+      },
       "data": {
         "heads": [
           "E",
           "DATA",
           "DATA-ERR",
-          "FLAG"
+          "MISC",
+          "MISC-ERR"
         ],
         "units": [
           "KEV",
           "MB",
           "MB",
-          "NO-DIM"
+          "MB",
+          "MB"
         ],
         "data": [
           [
@@ -222,9 +246,77 @@
             2.8
           ],
           [
-            1.0,
-            null,
-            null
+            184.0,
+            187.0,
+            176.0
+          ],
+          [
+            13.0,
+            13.0,
+            11.0
+          ]
+        ]
+      }
+    },
+    "004": {
+      "common": {
+        "heads": [
+          "MONIT",
+          "MONIT-ERR"
+        ],
+        "units": [
+          "B",
+          "B"
+        ],
+        "data": [
+          [
+            43.0
+          ],
+          [
+            2.0
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "E",
+          "DATA",
+          "DATA-ERR",
+          "MISC",
+          "MISC-ERR"
+        ],
+        "units": [
+          "KEV",
+          "MB",
+          "MB",
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            2286.0,
+            2927.0,
+            3346.0
+          ],
+          [
+            52.6,
+            23.5,
+            54.7
+          ],
+          [
+            1.6,
+            1.9,
+            2.2
+          ],
+          [
+            199.0,
+            183.0,
+            194.0
+          ],
+          [
+            9.0,
+            15.0,
+            9.0
           ]
         ]
       }
@@ -233,11 +325,24 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "add-res": [
+          {
+            "x4_code": "(DECAY)",
+            "free_txt": [
+              " Prompt capture gamma intensities were",
+              " determined to be 26.4(8)% for 2286 keV, 12.9(3)% for",
+              " 2927 keV and 28.2(7)% for 3346 keV prompt gammas by",
+              " detections of 452, 948, 997 and 1147 keV delayed",
+              " gammas from 131gTe with g/(g+m)=0.059(3) reported by",
+              " Namboodiri (1966)."
+            ]
+          }
+        ],
         "detector": [
           {
             "x4_code": "(GELI)",
             "free_txt": [
-              "  23 cm3 Ge(Li) detector"
+              " 23 cm3 Ge(Li) detector"
             ]
           }
         ],
@@ -251,57 +356,23 @@
         ],
         "facility": [
           {
-            "x4_code": "(REAC,3CSRUJF)",
+            "x4_code": "(REAC,3CZRUJV)",
             "free_txt": [
-              "  VVR-S reactor"
+              " VVR-S reactor"
             ]
           }
         ],
-        "inc-spect": [
+        "rel-ref": [
           {
-            "x4_code": null,
-            "free_txt": [
-              " Thermal reactor spectrum"
-            ]
-          }
-        ],
-        "method": [
-          {
-            "x4_code": "(ACTIV)",
-            "free_txt": [
-              "  Using gamma transitions in I-131,following the",
-              " beta-decay of Te-131-g  and the isomeric ratio",
-              " sigma-m/(sigma-g + sigma-m) = 0.059 +- 0.003 taken",
-              " from Namboodiri et.al,J.Inorg.Nucl.Chem.28(1981)1,",
-              " Exfor 31078."
-            ]
-          }
-        ],
-        "monitor": [
-          {
-            "x4_code": "((MONIT1)13-AL-27(N,G)13-AL-28,,SIG)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "((MONIT2)17-CL-35(N,G)17-CL-36,,SIG)",
+            "x4_code": "(R,31078003,M.Namboodiri+,J,JIN,28,1,1966)",
             "free_txt": []
           }
         ],
         "sample": [
           {
-            "x4_code": null,
+            "x4_code": "(52-TE-130,ENR=0.993)",
             "free_txt": [
-              " 3 g of metallic tellurium powder,enriched to 99.3 %",
-              "in the Te-130 isotope"
-            ]
-          }
-        ],
-        "status": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              " Data taken from Czech.J.Phys. B 34(1984)520,",
-              "                                            from text."
+              " 3 g of 130Te metallic powder (3g)"
             ]
           }
         ]
@@ -309,59 +380,91 @@
     },
     "002": {
       "0": {
-        "assumed": [
+        "status": [
           {
-            "x4_code": "(ASSUM,52-TE-130(N,G)52-TE-131-M/T,,SIG,,MXW)",
+            "x4_code": "(TABLE,,J.Honzatko+,J,CZJ/B,34,520,1984)",
             "free_txt": [
-              " taken from Namboodiri et.al,",
-              " J.Inorg.Nucl.Chem.28(1981)1, Exfor 31078."
+              " Table 2"
             ]
-          }
-        ],
-        "decay-data": [
+          },
           {
-            "x4_code": "(52-TE-131-G,25.MIN,DG,452.,,                    DG,948.,,                    DG,997.)",
-            "free_txt": []
+            "x4_code": "(DEP,30794003)",
+            "free_txt": [
+              " Partial cross section with Cl standard"
+            ]
+          },
+          {
+            "x4_code": "(DEP,30794004)",
+            "free_txt": [
+              " Partial Cross section with Al standard"
+            ]
           }
         ]
       }
     },
     "003": {
       "0": {
-        "en-sec": [
+        "misc-col": [
           {
-            "x4_code": "(E,G)",
+            "x4_code": "(MISC)",
             "free_txt": [
-              " Gammas from transitions in Te-131"
+              " 130Te(n,g)131Te total cross sections",
+              " which average is 181+/-11 mb."
             ]
           }
         ],
-        "flag": [
+        "monitor": [
           {
-            "x4_code": "(1.)",
-            "free_txt": [
-              " Secondary transition. According to author's",
-              " definition, only the data for the primary transitions",
-              " (all others in this table) are proper partial",
-              " cross sections."
-            ]
-          }
-        ],
-        "method": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "Partial cross sections determined indirectly",
-              "through comparison with gammas from decay of",
-              "shortlived beta-unstable product nucleus Te-131"
-            ]
+            "x4_code": "(17-CL-35(N,G)17-CL-36,,SIG)",
+            "free_txt": []
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,J.Honzatko+,J,CZJ/B,34,520,1984)",
             "free_txt": [
-              " Data from Table 1 of reference"
+              " Table 1"
+            ]
+          },
+          {
+            "x4_code": "(COREL,30794004)",
+            "free_txt": [
+              " Data measured relative to",
+              "  27Al(n,g)28Al reaction."
+            ]
+          }
+        ]
+      }
+    },
+    "004": {
+      "0": {
+        "misc-col": [
+          {
+            "x4_code": "(MISC)",
+            "free_txt": [
+              " 130Te(n,g)131Te total cross sections",
+              " which average is 195+/-6 mb"
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(13-AL-27(N,G)13-AL-28,,SIG)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,J.Honzatko+,J,CZJ/B,34,520,1984)",
+            "free_txt": [
+              " Table 1"
+            ]
+          },
+          {
+            "x4_code": "(COREL,30794003)",
+            "free_txt": [
+              " Data measured relative to",
+              "    35Cl(n,g)36Cl reaction."
             ]
           }
         ]

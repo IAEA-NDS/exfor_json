@@ -1,17 +1,26 @@
 {
   "entry": "40783",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-03-31",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(840806T)",
+      "x4_code": "(19840806T)",
       "free_txt": [
         " CONVERTED FROM ENTRY 80229"
+      ]
+    },
+    {
+      "x4_code": "(20231113A)",
+      "free_txt": [
+        " 4CCPCCP -> 4RUSKUR ( as in CINDA).",
+        " Upper -> lower case correction.",
+        " Dates were corrected for 4-digits year.",
+        "  Units were corrected: NO-DIM -> PRT/FIS"
       ]
     }
   ],
   "bib_record": {
-    "title": " AVERAGE NUMBER OF NEUTRONS EMITTED IN THE FISSION OF TH229 BY THERMAL NEUTRONS.",
+    "title": " Average number of neutrons emitted in the fission of Th229 by thermal neutrons",
     "authors": [
       {
         "name": "V.I.Lebedev"
@@ -22,39 +31,45 @@
     ],
     "institutes": [
       {
-        "x4_code": "(4CCPCCP)",
+        "x4_code": "(4RUSKUR)",
         "free_txt": []
       }
     ],
     "references": [
       {
-        "x4_code": "(J,ZET,35,(2),535,58)",
-        "free_txt": [],
-        "publication_year": "1958",
+        "x4_code": "(J,JET,8,370,1959)",
+        "free_txt": [
+          " Engl.translation of ZET,35,535,1958"
+        ],
+        "publication_year": "1959",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,JET,8,370,59)",
-        "free_txt": [],
-        "publication_year": "1959",
+        "x4_code": "(J,ZET,35,535,1958)",
+        "free_txt": [
+          " Issue 2."
+        ],
+        "publication_year": "1958",
         "doi": null,
         "pointer": "0"
       }
     ],
     "facilities": [
       {
-        "x4_code": "(REAC)",
-        "free_txt": [],
+        "x4_code": "(REAC,4RUSKUR)",
+        "free_txt": [
+          " RFT reactor"
+        ],
         "pointer": "0",
         "facility_type": "(REAC)",
-        "institute": null
+        "institute": "(4RUSKUR)"
       }
     ]
   },
   "reactions": {
     "002": {
-      "0": {
+      "1": {
         "x4_code": "(90-TH-229(N,F),PR,NU,,MXW)",
         "children": [
           {
@@ -79,7 +94,53 @@
         ],
         "type": null,
         "free_text": "",
-        "pointer": "0"
+        "pointer": "1"
+      },
+      "2": {
+        "x4_code": "((90-TH-229(N,F),PR,NU,,MXW)/(92-U-235(N,F),,NU))",
+        "children": [
+          {
+            "code": [
+              "90-TH-229",
+              [
+                "N,F"
+              ],
+              ",PR,NU,,MXW"
+            ],
+            "type": null,
+            "target": "90-TH-229",
+            "process": "N,F",
+            "sf49": ",PR,NU,,MXW",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": "MXW",
+            "sf9": null
+          },
+          {
+            "code": [
+              "92-U-235",
+              [
+                "N,F"
+              ],
+              ",,NU"
+            ],
+            "type": null,
+            "target": "92-U-235",
+            "process": "N,F",
+            "sf49": ",,NU",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "type": "/",
+        "free_text": "",
+        "pointer": "2"
       }
     }
   },
@@ -92,21 +153,25 @@
       "data": {
         "heads": [
           "EN-DUMMY",
-          "DATA",
-          "DATA-ERR",
-          "MONIT",
-          "MONIT-ERR"
+          "DATA      1",
+          "DATA-ERR  1",
+          "MONIT     1",
+          "MONIT-ERR 1",
+          "DATA      2",
+          "DATA-ERR  2"
         ],
         "units": [
-          "MEV",
-          "NO-DIM",
-          "NO-DIM",
+          "EV",
+          "PRT/FIS",
+          "PRT/FIS",
+          "PRT/FIS",
+          "PRT/FIS",
           "NO-DIM",
           "NO-DIM"
         ],
         "data": [
           [
-            2.53e-08
+            0.0253
           ],
           [
             2.13
@@ -119,6 +184,12 @@
           ],
           [
             0.03
+          ],
+          [
+            0.864
+          ],
+          [
+            0.008
           ]
         ]
       }
@@ -131,31 +202,42 @@
           {
             "x4_code": "(FISCH)",
             "free_txt": [
-              " FOR FISSION FRAGMENTS"
+              " For fission fragments"
             ]
           },
           {
             "x4_code": "(BF3)",
             "free_txt": [
-              "   FOR NEUTRON DETECTION"
+              "   For neutron detection"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(REAC)",
-            "free_txt": []
+            "x4_code": "(REAC,4RUSKUR)",
+            "free_txt": [
+              " RFT reactor"
+            ]
           }
         ]
       }
     },
     "002": {
       "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              "article."
+            ]
+          }
+        ],
         "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
-              " THERMAL SPECTRUM"
+              " Thermal spectrum"
             ]
           }
         ],
@@ -163,19 +245,40 @@
           {
             "x4_code": "(COINC)",
             "free_txt": [
-              "    COINCIDENCE OF PARTICLES"
+              "    Coincidence of particles"
             ]
           }
         ],
-        "monitor": [
+        "monit-ref": [
           {
-            "x4_code": "(92-U-235(N,F),,NU)",
-            "free_txt": []
+            "x4_code": "(,D.J.Hughes+,R,BNL-325,(1),1957)",
+            "free_txt": [
+              " Suppl.1."
+            ]
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " 1.5 mg weight, Th-229 ~ 10.% as spot of 20 mm diameter",
+              " 0.5 mg/cm2 thickness, on thin platinum foil."
+            ]
           }
         ],
         "status": [
           {
-            "x4_code": "(SCSRS)",
+            "x4_code": "(TABLE,,V.I.Lebedev+,J,JET,8,370,1959)",
+            "free_txt": [
+              " Text on page 370"
+            ]
+          }
+        ]
+      },
+      "1": {
+        "monitor": [
+          {
+            "x4_code": "(92-U-235(N,F),,NU)",
             "free_txt": []
           }
         ]
