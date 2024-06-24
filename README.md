@@ -1,12 +1,6 @@
 
-                           Nuclear Data Section
-                     International Atomic Energy Agency
-
-                                2005-2022
-
-
-## EXFOR converted to JSON
-This repository contains all EXFOR entries converted to JSON. The latest EXFOR master files are in [exfor_master repository](https://github.com/IAEA-NDS/exfor_master/). Note that this is still a working version, and it may change without any notifications. Current data is created using v20230315.0 in [exfor_master](https://github.com/IAEA-NDS/exfor_master/).
+# EXFOR in JSON by the EXFOR Parser
+This repository contains all EXFOR entries converted to JSON. The latest EXFOR master files are in [exfor_master repository](https://github.com/IAEA-NDS/exfor_master/). Note that this is still a working version, and it may change without any notifications. Current data is created using v20240611.0 in [exfor_master](https://github.com/IAEA-NDS/exfor_master/releases/tag/Backup-2024-06-11). (Automatic update will be implemented soon.)
 
 
 ### Download
@@ -62,7 +56,7 @@ The JSON format (Schema) is not the final version and still under discussions. T
 
 
 ### Use EXFOR_to_JSON format
-A symple example of plotting the data in Entry #12898, Subentry #002 is as follows:
+A simple example of plotting the data in Entry #12898, Subentry #002 is as follows:
 ```
 import json
 import pandas as pd
@@ -89,5 +83,4 @@ print(df)
 df.plot(x ="EN", y="DATA      2", yerr='dy', kind="scatter")
 plt.show()
 ```
-
 
