@@ -1,6 +1,6 @@
 
 # EXFOR in JSON by the EXFOR Parser
-This repository contains all EXFOR entries converted to JSON. The latest EXFOR master files are in [exfor_master repository](https://github.com/IAEA-NDS/exfor_master/). Note that this is still a working version, and it may change without any notifications. Current data is created using v20240611.0 in [exfor_master](https://github.com/IAEA-NDS/exfor_master/releases/tag/Backup-2024-06-11). (Automatic update will be implemented soon.)
+This repository contains all EXFOR entries converted to JSON by the [EXFOR Parser](https://github.com/IAEA-NDS/exforparser). The latest EXFOR master files are in [exfor_master repository](https://github.com/IAEA-NDS/exfor_master/). Note that this is still a working version, and it may change without any notifications. The current data is created using [v20240611.0](https://github.com/IAEA-NDS/exfor_master/releases/tag/Backup-2024-06-11) in [exfor_master](https://github.com/IAEA-NDS/exfor_master). (Automatic update will be implemented soon.)
 
 
 ### Download
@@ -65,7 +65,7 @@ import matplotlib.pyplot as plt
 f = open("json/128/12898.json")
 data = json.load(f)
 
-entry_data = data["12898-002"]["data"]
+entry_data = data["data_tables"]["002"]["data"]
 
 ## Header
 print("data headers:   ", entry_data["heads"])
