@@ -1,7 +1,7 @@
 {
   "entry": "41502",
-  "last_updated": "2021-03-20",
-  "number_of_revisions": "4",
+  "last_updated": "2025-03-11",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(20070831C)",
@@ -30,6 +30,12 @@
       "x4_code": "(20201010A)",
       "free_txt": [
         " Subents 008,009,010 were corrected."
+      ]
+    },
+    {
+      "x4_code": "(20250128U)",
+      "free_txt": [
+        " Subent 002 was corrected."
       ]
     }
   ],
@@ -127,14 +133,7 @@
         "x4_code": "((92-U-235(N,F),PR,NU/DE,,MSC)/(98-CF-252(0,F),PR,NU/DE,,MSC))",
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",PR,NU/DE,,MSC"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F),PR,NU/DE,,MSC)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": ",PR,NU/DE,,MSC",
@@ -146,14 +145,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              ",PR,NU/DE,,MSC"
-            ],
-            "type": null,
+            "x4_code": "(98-CF-252(0,F),PR,NU/DE,,MSC)",
             "target": "98-CF-252",
             "process": "0,F",
             "sf49": ",PR,NU/DE,,MSC",
@@ -165,7 +157,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((92-U-235(N,F),PR,NU/DE,,MSC)",
+          "(98-CF-252(0,F),PR,NU/DE,,MSC))"
+        ],
+        "operator": "Divide",
         "free_text": "Dependence from E -prompt neutron energy in lab.system.See COMMENT for explanation of MSC.",
         "pointer": "0"
       }
@@ -175,14 +172,7 @@
         "x4_code": "((94-PU-239(N,F),PR,NU/DE,,MSC)/(98-CF-252(0,F),PR,NU/DE,,MSC))",
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",PR,NU/DE,,MSC"
-            ],
-            "type": null,
+            "x4_code": "(94-PU-239(N,F),PR,NU/DE,,MSC)",
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": ",PR,NU/DE,,MSC",
@@ -194,14 +184,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              ",PR,NU/DE,,MSC"
-            ],
-            "type": null,
+            "x4_code": "(98-CF-252(0,F),PR,NU/DE,,MSC)",
             "target": "98-CF-252",
             "process": "0,F",
             "sf49": ",PR,NU/DE,,MSC",
@@ -213,7 +196,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((94-PU-239(N,F),PR,NU/DE,,MSC)",
+          "(98-CF-252(0,F),PR,NU/DE,,MSC))"
+        ],
+        "operator": "Divide",
         "free_text": "Dependence from E -prompt neutron energy in lab.system.See COMMENT for explanation of MSC.",
         "pointer": "0"
       }
@@ -223,14 +211,7 @@
         "x4_code": "((94-PU-239(N,F),PR,NU/DE,,MSC)/(98-CF-252(0,F),PR,NU/DE,,MSC))",
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",PR,NU/DE,,MSC"
-            ],
-            "type": null,
+            "x4_code": "(94-PU-239(N,F),PR,NU/DE,,MSC)",
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": ",PR,NU/DE,,MSC",
@@ -242,14 +223,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              ",PR,NU/DE,,MSC"
-            ],
-            "type": null,
+            "x4_code": "(98-CF-252(0,F),PR,NU/DE,,MSC)",
             "target": "98-CF-252",
             "process": "0,F",
             "sf49": ",PR,NU/DE,,MSC",
@@ -261,7 +235,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((94-PU-239(N,F),PR,NU/DE,,MSC)",
+          "(98-CF-252(0,F),PR,NU/DE,,MSC))"
+        ],
+        "operator": "Divide",
         "free_text": "Dependence from E -prompt neutron energy in lab.system.See COMMENT for explanation of MSC.",
         "pointer": "0"
       }
@@ -269,16 +248,9 @@
     "005": {
       "0": {
         "x4_code": "(92-U-235(N,F)MASS,PR,NU)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "MASS,PR,NU"
-            ],
-            "type": null,
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "MASS,PR,NU",
@@ -287,10 +259,12 @@
             "sf6": "NU",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-235(N,F)MASS,PR,NU)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "  Average neutron multiplicity as dependence from  preneutron fragment mass",
         "pointer": "0"
       }
@@ -298,16 +272,9 @@
     "006": {
       "0": {
         "x4_code": "(94-PU-239(N,F)MASS,PR,NU)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "MASS,PR,NU"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": "MASS,PR,NU",
@@ -316,10 +283,12 @@
             "sf6": "NU",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,F)MASS,PR,NU)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "  Average neutron multiplicity as dependence from  preneutron fragment mass",
         "pointer": "0"
       }
@@ -327,16 +296,9 @@
     "007": {
       "0": {
         "x4_code": "(94-PU-239(N,F)MASS,PR,NU)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "MASS,PR,NU"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": "MASS,PR,NU",
@@ -345,10 +307,12 @@
             "sf6": "NU",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,F)MASS,PR,NU)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "  Average neutron multiplicity as dependence from  preneutron fragment mass.",
         "pointer": "0"
       }
@@ -356,16 +320,9 @@
     "008": {
       "0": {
         "x4_code": "(92-U-235(N,F)MASS,PR,KE,N)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "MASS,PR,KE,N"
-            ],
-            "type": null,
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "MASS,PR,KE,N",
@@ -374,10 +331,12 @@
             "sf6": "KE",
             "sf7": "N",
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-235(N,F)MASS,PR,KE,N)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "  Average prompt neutron energy as dependence from  preneutron fragment mass in fragment center of mass  system.",
         "pointer": "0"
       }
@@ -385,16 +344,9 @@
     "009": {
       "0": {
         "x4_code": "(94-PU-239(N,F)MASS,PR,KE,N)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "MASS,PR,KE,N"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": "MASS,PR,KE,N",
@@ -403,10 +355,12 @@
             "sf6": "KE",
             "sf7": "N",
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,F)MASS,PR,KE,N)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "  Average prompt neutron energy as dependence from  preneutron fragment mass in fragment center of mass  system.",
         "pointer": "0"
       }
@@ -414,16 +368,9 @@
     "010": {
       "0": {
         "x4_code": "(94-PU-239(N,F)MASS,PR,KE,N)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "MASS,PR,KE,N"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": "MASS,PR,KE,N",
@@ -432,10 +379,12 @@
             "sf6": "KE",
             "sf7": "N",
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,F)MASS,PR,KE,N)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "  Average prompt neutron energy as dependence from  preneutron fragment mass in fragment center of mass  system.",
         "pointer": "0"
       }
@@ -1714,6 +1663,7 @@
               "angles relative to normal of fission chamber cathode",
               "plane:  0, 22, 57, 79, 79, 87, 95, 101, 101, 106, 146,",
               "       180 degrees.",
+              "       Resolution of COS of angle about 0.07.",
               " For prompt neutrons accompanying fission detection.",
               " Neutron registration threshold about 200 keV.",
               " Neuron detection efficiency was determined in test",
@@ -1732,8 +1682,7 @@
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
-              " Statistical error",
-              "     Resolution of COS of angle about 0.07."
+              " Statistical error"
             ]
           }
         ],
@@ -1810,9 +1759,7 @@
         "status": [
           {
             "x4_code": "(PRELM)",
-            "free_txt": [
-              " Preliminary data."
-            ]
+            "free_txt": []
           },
           {
             "x4_code": "(TABLE)",
@@ -1844,13 +1791,8 @@
             "free_txt": [
               " Of Roberto Capote (2014-10-23):",
               "The temperature quoted in the article (1.31 MeV for",
-              "235U) does not reproduce the calculated ratio in Fig.5"
-            ]
-          },
-          {
-            "x4_code": "(top)",
-            "free_txt": [
-              " well.",
+              "235U) does not reproduce the calculated ratio in Fig.5",
+              " (top) well.",
               "Better agreement is seen by changing it to 1.29 MeV.",
               "Best fitting was obtained by formula:",
               " -E/1.2876+E/1.42+0.70598 ,",
@@ -1858,7 +1800,7 @@
               "- Of author A.S.Vorobyev 06.11.2014",
               "Subents 002-004: plots were prepared in RI institute,",
               "probably log (or ln) was implemented for scale Y.",
-              "Futher analysis could be applied."
+              "Further analysis could be applied."
             ]
           }
         ],

@@ -129,16 +129,9 @@
     "002": {
       "0": {
         "x4_code": "(92-U-235(N,F)0-NN-1,PR,KE)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "0-NN-1,PR,KE"
-            ],
-            "type": null,
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "0-NN-1,PR,KE",
@@ -147,10 +140,12 @@
             "sf6": "KE",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-235(N,F)0-NN-1,PR,KE)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -158,16 +153,9 @@
     "003": {
       "0": {
         "x4_code": "(92-U-235(N,F),PR,NU/DE,,NPD)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",PR,NU/DE,,NPD"
-            ],
-            "type": null,
             "target": "92-U-235",
             "process": "N,F",
             "sf49": ",PR,NU/DE,,NPD",
@@ -176,10 +164,12 @@
             "sf6": "NU/DE",
             "sf7": null,
             "sf8": "NPD",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-235(N,F),PR,NU/DE,,NPD)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": " Spectrum normalized to 1. .",
         "pointer": "0"
       }
@@ -189,14 +179,7 @@
         "x4_code": "((92-U-235(N,F),PR,NU/DE,,NPD)//(98-CF-252(0,F),PR,NU/DE,,NPD))",
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",PR,NU/DE,,NPD"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F),PR,NU/DE,,NPD)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": ",PR,NU/DE,,NPD",
@@ -208,14 +191,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "98-CF-252",
-              [
-                "0,F"
-              ],
-              ",PR,NU/DE,,NPD"
-            ],
-            "type": null,
+            "x4_code": "(98-CF-252(0,F),PR,NU/DE,,NPD)",
             "target": "98-CF-252",
             "process": "0,F",
             "sf49": ",PR,NU/DE,,NPD",
@@ -227,7 +203,12 @@
             "sf9": null
           }
         ],
-        "type": "//",
+        "math_expression": [
+          "Ratio",
+          "((92-U-235(N,F),PR,NU/DE,,NPD)",
+          "(98-CF-252(0,F),PR,NU/DE,,NPD))"
+        ],
+        "operator": "Ratio",
         "free_text": "  Ratio to standard Cf-252 SF spectrum",
         "pointer": "0"
       }

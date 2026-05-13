@@ -91,14 +91,7 @@
         "x4_code": "((92-U-235(N,F)ELEM/MASS,IND,FY,,MXW)/(92-U-235(N,F)MASS,CHN,FY,,MXW))",
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,IND,FY,,MXW"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,IND,FY,,MXW)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,IND,FY,,MXW",
@@ -110,14 +103,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "MASS,CHN,FY,,MXW"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F)MASS,CHN,FY,,MXW)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "MASS,CHN,FY,,MXW",
@@ -129,7 +115,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((92-U-235(N,F)ELEM/MASS,IND,FY,,MXW)",
+          "(92-U-235(N,F)MASS,CHN,FY,,MXW))"
+        ],
+        "operator": "Divide",
         "free_text": " FRACTIONAL INDEPENDENT THERMAL FISSION YIELDS.",
         "pointer": "0"
       }
@@ -137,16 +128,9 @@
     "003": {
       "0": {
         "x4_code": "(92-U-235(N,F)MASS,,ZP,,MXW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "MASS,,ZP,,MXW"
-            ],
-            "type": null,
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "MASS,,ZP,,MXW",
@@ -155,10 +139,12 @@
             "sf6": "ZP",
             "sf7": null,
             "sf8": "MXW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-235(N,F)MASS,,ZP,,MXW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": " AVERAGE NUCLEAR CHARGE.",
         "pointer": "0"
       }

@@ -115,16 +115,9 @@
     "002": {
       "0": {
         "x4_code": "(98-CF-251(N,F)ELEM/MASS,TER,KE,FF,MXW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "98-CF-251",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,TER,KE,FF,MXW"
-            ],
-            "type": null,
             "target": "98-CF-251",
             "process": "N,F",
             "sf49": "ELEM/MASS,TER,KE,FF,MXW",
@@ -133,10 +126,12 @@
             "sf6": "KE",
             "sf7": "FF",
             "sf8": "MXW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(98-CF-251(N,F)ELEM/MASS,TER,KE,FF,MXW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "  FF kin.energy",
         "pointer": "0"
       }
@@ -146,14 +141,7 @@
         "x4_code": "((98-CF-251(N,F)ELEM/MASS,TER,FY,,MXW)/(98-CF-251(N,F)4-BE-10,TER,FY,,MXW))",
         "children": [
           {
-            "code": [
-              "98-CF-251",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,TER,FY,,MXW"
-            ],
-            "type": null,
+            "x4_code": "(98-CF-251(N,F)ELEM/MASS,TER,FY,,MXW)",
             "target": "98-CF-251",
             "process": "N,F",
             "sf49": "ELEM/MASS,TER,FY,,MXW",
@@ -165,14 +153,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "98-CF-251",
-              [
-                "N,F"
-              ],
-              "4-BE-10,TER,FY,,MXW"
-            ],
-            "type": null,
+            "x4_code": "(98-CF-251(N,F)4-BE-10,TER,FY,,MXW)",
             "target": "98-CF-251",
             "process": "N,F",
             "sf49": "4-BE-10,TER,FY,,MXW",
@@ -184,7 +165,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((98-CF-251(N,F)ELEM/MASS,TER,FY,,MXW)",
+          "(98-CF-251(N,F)4-BE-10,TER,FY,,MXW))"
+        ],
+        "operator": "Divide",
         "free_text": "   Relative yield",
         "pointer": "0"
       }

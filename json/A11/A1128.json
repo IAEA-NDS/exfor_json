@@ -1,7 +1,7 @@
 {
   "entry": "A1128",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-10-24",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810610C)",
@@ -13,6 +13,12 @@
       "x4_code": "(19990214U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20240709A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -37,7 +43,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,NP/A,128,(1),325,196904)",
+        "x4_code": "(J,NP/A,128,325,1969)",
         "free_txt": [],
         "publication_year": "1969",
         "doi": null,
@@ -46,40 +52,35 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG)",
+        "x4_code": "(VDG,1USACAL)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": null
+        "institute": "(1USACAL)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(2-HE-3(A,G)4-BE-7,,SIG,,,EXP)",
+        "x4_code": "(2-HE-3(A,G)4-BE-7,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "2-HE-3",
-              [
-                "A,G"
-              ],
-              "4-BE-7,,SIG,,,EXP"
-            ],
-            "type": null,
             "target": "2-HE-3",
             "process": "A,G",
-            "sf49": "4-BE-7,,SIG,,,EXP",
+            "sf49": "4-BE-7,,SIG",
             "sf4": "4-BE-7",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(2-HE-3(A,G)4-BE-7,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -89,19 +90,14 @@
     "001": {
       "common": {
         "heads": [
-          "ERR-1",
-          "ERR-2"
+          "ERR-S"
         ],
         "units": [
-          "PER-CENT",
           "PER-CENT"
         ],
         "data": [
           [
-            5.0
-          ],
-          [
-            10.0
+            12.0
           ]
         ]
       }
@@ -109,7 +105,7 @@
     "002": {
       "common": {
         "heads": [
-          "EN-ERR"
+          "EN-ERR-DIG"
         ],
         "units": [
           "MEV"
@@ -123,8 +119,8 @@
       "data": {
         "heads": [
           "EN-CM",
-          "DATA-CM",
-          "DATA-ERR"
+          "DATA",
+          "ERR-T"
         ],
         "units": [
           "MEV",
@@ -166,6 +162,14 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "add-res": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " S-factor on figure was given."
+            ]
+          }
+        ],
         "detector": [
           {
             "x4_code": "(NAICR)",
@@ -176,27 +180,27 @@
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-1)",
+            "x4_code": "(ERR-S)",
             "free_txt": [
-              " Accurancy of the intensity of the Y-88 source"
+              " Statistical error"
             ]
           },
           {
-            "x4_code": "(ERR-2)",
+            "x4_code": "(ERR-T)",
             "free_txt": [
-              " Accurancy of the used Na-22 source"
+              " Total error"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,1USACAL)",
             "free_txt": []
           }
         ],
         "method": [
           {
-            "x4_code": "(PHD)",
+            "x4_code": "(PHD,BCINT)",
             "free_txt": []
           }
         ],
@@ -212,20 +216,6 @@
     },
     "002": {
       "0": {
-        "err-analys": [
-          {
-            "x4_code": "(EN-ERR)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          },
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " From graphic bars (total) and digitizing"
-            ]
-          }
-        ],
         "rel-ref": [
           {
             "x4_code": "(A,A1312002,,W,PARKER,1969)",
@@ -236,9 +226,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,K.Nagatani+,J,NP/A,128,325,1969)",
             "free_txt": [
-              " FIG 2"
+              " Fig. 2"
             ]
           }
         ]

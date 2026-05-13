@@ -1,7 +1,7 @@
 {
   "entry": "M0922",
-  "last_updated": "2019-03-18",
-  "number_of_revisions": "2",
+  "last_updated": "2024-09-17",
+  "number_of_revisions": "3",
   "histories": [
     {
       "x4_code": "(20160808C)",
@@ -14,6 +14,13 @@
       "x4_code": "(20190110A)",
       "free_txt": [
         " Corrected by V.Varlamov: STATUS."
+      ]
+    },
+    {
+      "x4_code": "(20240508A)",
+      "free_txt": [
+        " Corrected by V. Varlamov: REFERENCE,",
+        " STATUS, REACTION (free text) in SUBENT 006."
       ]
     }
   ],
@@ -41,22 +48,22 @@
     ],
     "references": [
       {
-        "x4_code": "(J,YF,79,(4),315,2016)",
-        "free_txt": [
-          "#doi:10.7868/S004400271604022X"
-        ],
-        "publication_year": "2016",
-        "doi": "10.7868/S004400271604022X",
-        "pointer": "0"
-      },
-      {
-        "x4_code": "(J,PAN,79,(4),501,2016)",
+        "x4_code": "(J,PAN,79,501,2016)",
         "free_txt": [
           "#doi:10.1134/S1063778816040219",
           "English translation of YF,79,(4),315,2016."
         ],
         "publication_year": "2016",
         "doi": "10.1134/S1063778816040219",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,YF,79,315,2016)",
+        "free_txt": [
+          "#doi:10.7868/S004400271604022X"
+        ],
+        "publication_year": "2016",
+        "doi": "10.7868/S004400271604022X",
         "pointer": "0"
       }
     ],
@@ -66,16 +73,9 @@
     "002": {
       "0": {
         "x4_code": "(55-CS-133(G,X)0-NN-1,UNW,SIG,,,EVAL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,X"
-              ],
-              "0-NN-1,UNW,SIG,,,EVAL"
-            ],
-            "type": null,
             "target": "55-CS-133",
             "process": "G,X",
             "sf49": "0-NN-1,UNW,SIG,,,EVAL",
@@ -84,10 +84,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EVAL"
+            "sf9": "EVAL",
+            "operator": null,
+            "x4_code": "(55-CS-133(G,X)0-NN-1,UNW,SIG,,,EVAL)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -97,14 +99,7 @@
         "x4_code": "((55-CS-133(G,N)55-CS-132,,SIG,,,EVAL)+(55-CS-133(G,N+P)54-XE-131,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,N"
-              ],
-              "55-CS-132,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(55-CS-133(G,N)55-CS-132,,SIG,,,EVAL)",
             "target": "55-CS-133",
             "process": "G,N",
             "sf49": "55-CS-132,,SIG,,,EVAL",
@@ -116,14 +111,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,N+P"
-              ],
-              "54-XE-131,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(55-CS-133(G,N+P)54-XE-131,,SIG,,,EVAL)",
             "target": "55-CS-133",
             "process": "G,N+P",
             "sf49": "54-XE-131,,SIG,,,EVAL",
@@ -135,7 +123,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((55-CS-133(G,N)55-CS-132,,SIG,,,EVAL)",
+          "(55-CS-133(G,N+P)54-XE-131,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -145,14 +138,7 @@
         "x4_code": "((55-CS-133(G,2N)55-CS-131,,SIG,,,EVAL)+(55-CS-133(G,2N+P)54-XE-130,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,2N"
-              ],
-              "55-CS-131,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(55-CS-133(G,2N)55-CS-131,,SIG,,,EVAL)",
             "target": "55-CS-133",
             "process": "G,2N",
             "sf49": "55-CS-131,,SIG,,,EVAL",
@@ -164,14 +150,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,2N+P"
-              ],
-              "54-XE-130,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(55-CS-133(G,2N+P)54-XE-130,,SIG,,,EVAL)",
             "target": "55-CS-133",
             "process": "G,2N+P",
             "sf49": "54-XE-130,,SIG,,,EVAL",
@@ -183,7 +162,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((55-CS-133(G,2N)55-CS-131,,SIG,,,EVAL)",
+          "(55-CS-133(G,2N+P)54-XE-130,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -193,14 +177,7 @@
         "x4_code": "((55-CS-133(G,3N)55-CS-130,,SIG,,,EVAL)+(55-CS-133(G,3N+P)54-XE-129,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,3N"
-              ],
-              "55-CS-130,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(55-CS-133(G,3N)55-CS-130,,SIG,,,EVAL)",
             "target": "55-CS-133",
             "process": "G,3N",
             "sf49": "55-CS-130,,SIG,,,EVAL",
@@ -212,14 +189,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,3N+P"
-              ],
-              "54-XE-129,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(55-CS-133(G,3N+P)54-XE-129,,SIG,,,EVAL)",
             "target": "55-CS-133",
             "process": "G,3N+P",
             "sf49": "54-XE-129,,SIG,,,EVAL",
@@ -231,7 +201,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((55-CS-133(G,3N)55-CS-130,,SIG,,,EVAL)",
+          "(55-CS-133(G,3N+P)54-XE-129,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -239,16 +214,9 @@
     "006": {
       "0": {
         "x4_code": "(56-BA-138(G,X)0-NN-1,UNW,SIG,,,EVAL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,X"
-              ],
-              "0-NN-1,UNW,SIG,,,EVAL"
-            ],
-            "type": null,
             "target": "56-BA-138",
             "process": "G,X",
             "sf49": "0-NN-1,UNW,SIG,,,EVAL",
@@ -257,10 +225,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EVAL"
+            "sf9": "EVAL",
+            "operator": null,
+            "x4_code": "(56-BA-138(G,X)0-NN-1,UNW,SIG,,,EVAL)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -270,14 +240,7 @@
         "x4_code": "((56-BA-138(G,N)56-BA-137,,SIG,,,EVAL)+(56-BA-138(G,N+P)55-CS-136,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,N"
-              ],
-              "56-BA-137,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(56-BA-138(G,N)56-BA-137,,SIG,,,EVAL)",
             "target": "56-BA-138",
             "process": "G,N",
             "sf49": "56-BA-137,,SIG,,,EVAL",
@@ -289,14 +252,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,N+P"
-              ],
-              "55-CS-136,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(56-BA-138(G,N+P)55-CS-136,,SIG,,,EVAL)",
             "target": "56-BA-138",
             "process": "G,N+P",
             "sf49": "55-CS-136,,SIG,,,EVAL",
@@ -308,7 +264,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((56-BA-138(G,N)56-BA-137,,SIG,,,EVAL)",
+          "(56-BA-138(G,N+P)55-CS-136,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -318,14 +279,7 @@
         "x4_code": "((56-BA-138(G,2N)56-BA-136,,SIG,,,EVAL)+(56-BA-138(G,2N+P)55-CS-135,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,2N"
-              ],
-              "56-BA-136,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(56-BA-138(G,2N)56-BA-136,,SIG,,,EVAL)",
             "target": "56-BA-138",
             "process": "G,2N",
             "sf49": "56-BA-136,,SIG,,,EVAL",
@@ -337,14 +291,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,2N+P"
-              ],
-              "55-CS-135,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(56-BA-138(G,2N+P)55-CS-135,,SIG,,,EVAL)",
             "target": "56-BA-138",
             "process": "G,2N+P",
             "sf49": "55-CS-135,,SIG,,,EVAL",
@@ -356,7 +303,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((56-BA-138(G,2N)56-BA-136,,SIG,,,EVAL)",
+          "(56-BA-138(G,2N+P)55-CS-135,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -366,14 +318,7 @@
         "x4_code": "((56-BA-138(G,3N)56-BA-135,,SIG,,,EVAL)+(56-BA-138(G,3N+P)55-CS-134,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,3N"
-              ],
-              "56-BA-135,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(56-BA-138(G,3N)56-BA-135,,SIG,,,EVAL)",
             "target": "56-BA-138",
             "process": "G,3N",
             "sf49": "56-BA-135,,SIG,,,EVAL",
@@ -385,14 +330,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,3N+P"
-              ],
-              "55-CS-134,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(56-BA-138(G,3N+P)55-CS-134,,SIG,,,EVAL)",
             "target": "56-BA-138",
             "process": "G,3N+P",
             "sf49": "55-CS-134,,SIG,,,EVAL",
@@ -404,7 +342,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((56-BA-138(G,3N)56-BA-135,,SIG,,,EVAL)",
+          "(56-BA-138(G,3N+P)55-CS-134,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -412,16 +355,9 @@
     "010": {
       "0": {
         "x4_code": "(83-BI-209(G,X)0-NN-1,UNW,SIG,,,EVAL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,X"
-              ],
-              "0-NN-1,UNW,SIG,,,EVAL"
-            ],
-            "type": null,
             "target": "83-BI-209",
             "process": "G,X",
             "sf49": "0-NN-1,UNW,SIG,,,EVAL",
@@ -430,10 +366,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EVAL"
+            "sf9": "EVAL",
+            "operator": null,
+            "x4_code": "(83-BI-209(G,X)0-NN-1,UNW,SIG,,,EVAL)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -443,14 +381,7 @@
         "x4_code": "((83-BI-209(G,N)83-BI-208,,SIG,,,EVAL)+(83-BI-209(G,N+P)82-PB-207,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,N"
-              ],
-              "83-BI-208,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(83-BI-209(G,N)83-BI-208,,SIG,,,EVAL)",
             "target": "83-BI-209",
             "process": "G,N",
             "sf49": "83-BI-208,,SIG,,,EVAL",
@@ -462,14 +393,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,N+P"
-              ],
-              "82-PB-207,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(83-BI-209(G,N+P)82-PB-207,,SIG,,,EVAL)",
             "target": "83-BI-209",
             "process": "G,N+P",
             "sf49": "82-PB-207,,SIG,,,EVAL",
@@ -481,7 +405,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((83-BI-209(G,N)83-BI-208,,SIG,,,EVAL)",
+          "(83-BI-209(G,N+P)82-PB-207,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -491,14 +420,7 @@
         "x4_code": "((83-BI-209(G,2N)83-BI-207,,SIG,,,EVAL)+(83-BI-209(G,2N+P)82-PB-206,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,2N"
-              ],
-              "83-BI-207,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(83-BI-209(G,2N)83-BI-207,,SIG,,,EVAL)",
             "target": "83-BI-209",
             "process": "G,2N",
             "sf49": "83-BI-207,,SIG,,,EVAL",
@@ -510,14 +432,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,2N+P"
-              ],
-              "82-PB-206,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(83-BI-209(G,2N+P)82-PB-206,,SIG,,,EVAL)",
             "target": "83-BI-209",
             "process": "G,2N+P",
             "sf49": "82-PB-206,,SIG,,,EVAL",
@@ -529,7 +444,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((83-BI-209(G,2N)83-BI-207,,SIG,,,EVAL)",
+          "(83-BI-209(G,2N+P)82-PB-206,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -539,14 +459,7 @@
         "x4_code": "((83-BI-209(G,3N)83-BI-206,,SIG,,,EVAL)+(83-BI-209(G,3N+P)82-PB-205,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,3N"
-              ],
-              "83-BI-206,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(83-BI-209(G,3N)83-BI-206,,SIG,,,EVAL)",
             "target": "83-BI-209",
             "process": "G,3N",
             "sf49": "83-BI-206,,SIG,,,EVAL",
@@ -558,14 +471,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,3N+P"
-              ],
-              "82-PB-205,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(83-BI-209(G,3N+P)82-PB-205,,SIG,,,EVAL)",
             "target": "83-BI-209",
             "process": "G,3N+P",
             "sf49": "82-PB-205,,SIG,,,EVAL",
@@ -577,7 +483,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((83-BI-209(G,3N)83-BI-206,,SIG,,,EVAL)",
+          "(83-BI-209(G,3N+P)82-PB-205,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -585,16 +496,9 @@
     "014": {
       "0": {
         "x4_code": "(55-CS-133(G,X)0-NN-1,UNW,INT,,,EVAL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,X"
-              ],
-              "0-NN-1,UNW,INT,,,EVAL"
-            ],
-            "type": null,
             "target": "55-CS-133",
             "process": "G,X",
             "sf49": "0-NN-1,UNW,INT,,,EVAL",
@@ -603,10 +507,12 @@
             "sf6": "INT",
             "sf7": null,
             "sf8": null,
-            "sf9": "EVAL"
+            "sf9": "EVAL",
+            "operator": null,
+            "x4_code": "(55-CS-133(G,X)0-NN-1,UNW,INT,,,EVAL)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -616,14 +522,7 @@
         "x4_code": "((55-CS-133(G,N)55-CS-132,,INT,,,EVAL)+(55-CS-133(G,N+P)54-XE-131,,INT,,,EVAL))",
         "children": [
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,N"
-              ],
-              "55-CS-132,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(55-CS-133(G,N)55-CS-132,,INT,,,EVAL)",
             "target": "55-CS-133",
             "process": "G,N",
             "sf49": "55-CS-132,,INT,,,EVAL",
@@ -635,14 +534,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,N+P"
-              ],
-              "54-XE-131,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(55-CS-133(G,N+P)54-XE-131,,INT,,,EVAL)",
             "target": "55-CS-133",
             "process": "G,N+P",
             "sf49": "54-XE-131,,INT,,,EVAL",
@@ -654,7 +546,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((55-CS-133(G,N)55-CS-132,,INT,,,EVAL)",
+          "(55-CS-133(G,N+P)54-XE-131,,INT,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -664,14 +561,7 @@
         "x4_code": "((55-CS-133(G,2N)55-CS-131,,INT,,,EVAL)+(55-CS-133(G,2N+P)54-XE-130,,INT,,,EVAL))",
         "children": [
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,2N"
-              ],
-              "55-CS-131,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(55-CS-133(G,2N)55-CS-131,,INT,,,EVAL)",
             "target": "55-CS-133",
             "process": "G,2N",
             "sf49": "55-CS-131,,INT,,,EVAL",
@@ -683,14 +573,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,2N+P"
-              ],
-              "54-XE-130,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(55-CS-133(G,2N+P)54-XE-130,,INT,,,EVAL)",
             "target": "55-CS-133",
             "process": "G,2N+P",
             "sf49": "54-XE-130,,INT,,,EVAL",
@@ -702,7 +585,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((55-CS-133(G,2N)55-CS-131,,INT,,,EVAL)",
+          "(55-CS-133(G,2N+P)54-XE-130,,INT,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -712,14 +600,7 @@
         "x4_code": "((55-CS-133(G,3N)55-CS-130,,INT,,,EVAL)+(55-CS-133(G,3N+P)54-XE-129,,INT,,,EVAL))",
         "children": [
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,3N"
-              ],
-              "55-CS-130,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(55-CS-133(G,3N)55-CS-130,,INT,,,EVAL)",
             "target": "55-CS-133",
             "process": "G,3N",
             "sf49": "55-CS-130,,INT,,,EVAL",
@@ -731,14 +612,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "55-CS-133",
-              [
-                "G,3N+P"
-              ],
-              "54-XE-129,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(55-CS-133(G,3N+P)54-XE-129,,INT,,,EVAL)",
             "target": "55-CS-133",
             "process": "G,3N+P",
             "sf49": "54-XE-129,,INT,,,EVAL",
@@ -750,7 +624,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((55-CS-133(G,3N)55-CS-130,,INT,,,EVAL)",
+          "(55-CS-133(G,3N+P)54-XE-129,,INT,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -758,16 +637,9 @@
     "018": {
       "0": {
         "x4_code": "(56-BA-138(G,X)0-NN-1,UNW,INT,,,EVAL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,X"
-              ],
-              "0-NN-1,UNW,INT,,,EVAL"
-            ],
-            "type": null,
             "target": "56-BA-138",
             "process": "G,X",
             "sf49": "0-NN-1,UNW,INT,,,EVAL",
@@ -776,10 +648,12 @@
             "sf6": "INT",
             "sf7": null,
             "sf8": null,
-            "sf9": "EVAL"
+            "sf9": "EVAL",
+            "operator": null,
+            "x4_code": "(56-BA-138(G,X)0-NN-1,UNW,INT,,,EVAL)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -789,14 +663,7 @@
         "x4_code": "((56-BA-138(G,N)56-BA-137,,INT,,,EVAL)+(56-BA-138(G,N+P)55-CS-136,,INT,,,EVAL))",
         "children": [
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,N"
-              ],
-              "56-BA-137,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(56-BA-138(G,N)56-BA-137,,INT,,,EVAL)",
             "target": "56-BA-138",
             "process": "G,N",
             "sf49": "56-BA-137,,INT,,,EVAL",
@@ -808,14 +675,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,N+P"
-              ],
-              "55-CS-136,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(56-BA-138(G,N+P)55-CS-136,,INT,,,EVAL)",
             "target": "56-BA-138",
             "process": "G,N+P",
             "sf49": "55-CS-136,,INT,,,EVAL",
@@ -827,7 +687,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((56-BA-138(G,N)56-BA-137,,INT,,,EVAL)",
+          "(56-BA-138(G,N+P)55-CS-136,,INT,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -837,14 +702,7 @@
         "x4_code": "((56-BA-138(G,2N)56-BA-136,,INT,,,EVAL)+(56-BA-138(G,2N+P)55-CS-135,,INT,,,EVAL))",
         "children": [
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,2N"
-              ],
-              "56-BA-136,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(56-BA-138(G,2N)56-BA-136,,INT,,,EVAL)",
             "target": "56-BA-138",
             "process": "G,2N",
             "sf49": "56-BA-136,,INT,,,EVAL",
@@ -856,14 +714,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,2N+P"
-              ],
-              "55-CS-135,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(56-BA-138(G,2N+P)55-CS-135,,INT,,,EVAL)",
             "target": "56-BA-138",
             "process": "G,2N+P",
             "sf49": "55-CS-135,,INT,,,EVAL",
@@ -875,7 +726,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((56-BA-138(G,2N)56-BA-136,,INT,,,EVAL)",
+          "(56-BA-138(G,2N+P)55-CS-135,,INT,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -885,14 +741,7 @@
         "x4_code": "((56-BA-138(G,3N)56-BA-135,,INT,,,EVAL)+(56-BA-138(G,3N+P)55-CS-134,,INT,,,EVAL))",
         "children": [
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,3N"
-              ],
-              "56-BA-135,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(56-BA-138(G,3N)56-BA-135,,INT,,,EVAL)",
             "target": "56-BA-138",
             "process": "G,3N",
             "sf49": "56-BA-135,,INT,,,EVAL",
@@ -904,14 +753,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "56-BA-138",
-              [
-                "G,3N+P"
-              ],
-              "55-CS-134,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(56-BA-138(G,3N+P)55-CS-134,,INT,,,EVAL)",
             "target": "56-BA-138",
             "process": "G,3N+P",
             "sf49": "55-CS-134,,INT,,,EVAL",
@@ -923,7 +765,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((56-BA-138(G,3N)56-BA-135,,INT,,,EVAL)",
+          "(56-BA-138(G,3N+P)55-CS-134,,INT,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -931,16 +778,9 @@
     "022": {
       "0": {
         "x4_code": "(83-BI-209(G,X)0-NN-1,UNW,INT,,,EVAL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,X"
-              ],
-              "0-NN-1,UNW,INT,,,EVAL"
-            ],
-            "type": null,
             "target": "83-BI-209",
             "process": "G,X",
             "sf49": "0-NN-1,UNW,INT,,,EVAL",
@@ -949,10 +789,12 @@
             "sf6": "INT",
             "sf7": null,
             "sf8": null,
-            "sf9": "EVAL"
+            "sf9": "EVAL",
+            "operator": null,
+            "x4_code": "(83-BI-209(G,X)0-NN-1,UNW,INT,,,EVAL)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -962,14 +804,7 @@
         "x4_code": "((83-BI-209(G,N)83-BI-208,,INT,,,EVAL)+(83-BI-209(G,N+P)82-PB-207,,INT,,,EVAL))",
         "children": [
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,N"
-              ],
-              "83-BI-208,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(83-BI-209(G,N)83-BI-208,,INT,,,EVAL)",
             "target": "83-BI-209",
             "process": "G,N",
             "sf49": "83-BI-208,,INT,,,EVAL",
@@ -981,14 +816,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,N+P"
-              ],
-              "82-PB-207,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(83-BI-209(G,N+P)82-PB-207,,INT,,,EVAL)",
             "target": "83-BI-209",
             "process": "G,N+P",
             "sf49": "82-PB-207,,INT,,,EVAL",
@@ -1000,7 +828,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((83-BI-209(G,N)83-BI-208,,INT,,,EVAL)",
+          "(83-BI-209(G,N+P)82-PB-207,,INT,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -1010,14 +843,7 @@
         "x4_code": "((83-BI-209(G,2N)83-BI-207,,INT,,,EVAL)+(83-BI-209(G,2N+P)82-PB-206,,INT,,,EVAL))",
         "children": [
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,2N"
-              ],
-              "83-BI-207,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(83-BI-209(G,2N)83-BI-207,,INT,,,EVAL)",
             "target": "83-BI-209",
             "process": "G,2N",
             "sf49": "83-BI-207,,INT,,,EVAL",
@@ -1029,14 +855,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,2N+P"
-              ],
-              "82-PB-206,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(83-BI-209(G,2N+P)82-PB-206,,INT,,,EVAL)",
             "target": "83-BI-209",
             "process": "G,2N+P",
             "sf49": "82-PB-206,,INT,,,EVAL",
@@ -1048,7 +867,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((83-BI-209(G,2N)83-BI-207,,INT,,,EVAL)",
+          "(83-BI-209(G,2N+P)82-PB-206,,INT,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -1058,14 +882,7 @@
         "x4_code": "((83-BI-209(G,3N)83-BI-206,,INT,,,EVAL)+(83-BI-209(G,3N+P)82-PB-205,,INT,,,EVAL))",
         "children": [
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,3N"
-              ],
-              "83-BI-206,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(83-BI-209(G,3N)83-BI-206,,INT,,,EVAL)",
             "target": "83-BI-209",
             "process": "G,3N",
             "sf49": "83-BI-206,,INT,,,EVAL",
@@ -1077,14 +894,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "83-BI-209",
-              [
-                "G,3N+P"
-              ],
-              "82-PB-205,,INT,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(83-BI-209(G,3N+P)82-PB-205,,INT,,,EVAL)",
             "target": "83-BI-209",
             "process": "G,3N+P",
             "sf49": "82-PB-205,,INT,,,EVAL",
@@ -1096,7 +906,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((83-BI-209(G,3N)83-BI-206,,INT,,,EVAL)",
+          "(83-BI-209(G,3N+P)82-PB-205,,INT,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -3784,7 +3599,7 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
             "free_txt": [
               "Data plotted in Fig. 3."
             ]
@@ -3848,7 +3663,7 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
             "free_txt": [
               "Data plotted in Fig. 3."
             ]
@@ -3900,7 +3715,7 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
             "free_txt": [
               "Data plotted in Fig. 3."
             ]
@@ -3952,7 +3767,7 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
             "free_txt": [
               "Data plotted in Fig. 3."
             ]
@@ -3974,13 +3789,13 @@
             "x4_code": null,
             "free_txt": [
               "The total neutron reaction cross section obtained  as",
-              " sum: SIG(g,sn) = SIG(g,n) + SIG(g,2n) + SIG(g,2n)."
+              " sum: SIG(g,sn) = SIG(g,n) + SIG(g,2n) + SIG(g,3n)."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
             "free_txt": [
               "Data plotted in Fig. 5."
             ]
@@ -4043,9 +3858,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
             "free_txt": [
-              "Data plotted in Fig. 5."
+              " Data plotted in Fig. 5."
             ]
           },
           {
@@ -4095,9 +3910,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
             "free_txt": [
-              "Data plotted in Fig. 5."
+              " Data plotted in Fig. 5."
             ]
           },
           {
@@ -4147,9 +3962,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
             "free_txt": [
-              "Data plotted in Fig. 5."
+              " Data plotted in Fig. 5."
             ]
           },
           {
@@ -4175,9 +3990,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
             "free_txt": [
-              "Data plotted in Fig. 7."
+              " Data plotted in Fig. 7."
             ]
           },
           {
@@ -4239,7 +4054,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
             "free_txt": [
               " Data plotted in Fig. 7."
             ]
@@ -4296,7 +4111,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
             "free_txt": [
               " Data plotted in Fig. 7."
             ]
@@ -4353,9 +4168,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
             "free_txt": [
-              "Data plotted in Fig. 7."
+              " Data plotted in Fig. 7."
             ]
           },
           {
@@ -4380,10 +4195,15 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,(4),501,2016)",
+            "free_txt": [
+              " Data from the Table 1."
+            ]
+          },
+          {
             "x4_code": "(DEP,M0922002)",
             "free_txt": [
-              " Evaluated cross section.",
-              "Data from the Table 1."
+              " Evaluated cross section."
             ]
           }
         ]
@@ -4401,10 +4221,15 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
+            "free_txt": [
+              " Data from the Table 1."
+            ]
+          },
+          {
             "x4_code": "(DEP,M0922003)",
             "free_txt": [
-              " Evaluated cross section.",
-              "Data from the Table 1."
+              " Evaluated cross section."
             ]
           }
         ]
@@ -4422,10 +4247,15 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
+            "free_txt": [
+              " Data from the Table 1."
+            ]
+          },
+          {
             "x4_code": "(DEP,M0922004)",
             "free_txt": [
-              " Evaluated cross section.",
-              "Data from the Table 1."
+              " Evaluated cross section."
             ]
           }
         ]
@@ -4443,10 +4273,15 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
+            "free_txt": [
+              " Data from the Table 1."
+            ]
+          },
+          {
             "x4_code": "(DEP,M0922004)",
             "free_txt": [
-              " Evaluated cross section.",
-              "Data from the Table 1."
+              " Evaluated cross section."
             ]
           }
         ]
@@ -4464,10 +4299,15 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
             "x4_code": "(DEP,M0922006)",
             "free_txt": [
-              " Evaluated cross section.",
-              "Data from the Table 2."
+              " Evaluated cross section."
             ]
           }
         ]
@@ -4485,10 +4325,15 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
             "x4_code": "(DEP,M0922007)",
             "free_txt": [
-              " Evaluated cross section.",
-              "Data from the Table 2."
+              " Evaluated cross section."
             ]
           }
         ]
@@ -4506,10 +4351,15 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
             "x4_code": "(DEP,M0922008)",
             "free_txt": [
-              " Evaluated cross section.",
-              "Data from the Table 2."
+              " Evaluated cross section."
             ]
           }
         ]
@@ -4527,10 +4377,15 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
             "x4_code": "(DEP,M0922009)",
             "free_txt": [
-              " Evaluated cross section.",
-              "Data from the Table 2."
+              " Evaluated cross section."
             ]
           }
         ]
@@ -4558,10 +4413,15 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
+            "free_txt": [
+              " Data from the Table 3."
+            ]
+          },
+          {
             "x4_code": "(DEP,M0922010)",
             "free_txt": [
-              " Evaluated cross section.",
-              "Data from the Table 3."
+              " Evaluated cross section."
             ]
           }
         ]
@@ -4579,10 +4439,15 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
+            "free_txt": [
+              "Data from the Table 3."
+            ]
+          },
+          {
             "x4_code": "(DEP,M0922011)",
             "free_txt": [
-              " Evaluated cross section.",
-              "Data from the Table 3."
+              " Evaluated cross section."
             ]
           }
         ]
@@ -4600,10 +4465,15 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
+            "free_txt": [
+              " Data from the Table 3."
+            ]
+          },
+          {
             "x4_code": "(DEP,M0922012)",
             "free_txt": [
-              " Evaluated cross section.",
-              "Data from the Table 3."
+              " Evaluated cross section."
             ]
           }
         ]
@@ -4621,10 +4491,15 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,79,501,2016)",
+            "free_txt": [
+              " Data from the Table 3."
+            ]
+          },
+          {
             "x4_code": "(DEP,M0922013)",
             "free_txt": [
-              " Evaluated cross section.",
-              "Data from the Table 3."
+              " Evaluated cross section."
             ]
           }
         ]

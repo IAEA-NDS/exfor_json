@@ -1,7 +1,7 @@
 {
   "entry": "A0245",
-  "last_updated": "2022-09-27",
-  "number_of_revisions": "6",
+  "last_updated": "2026-03-27",
+  "number_of_revisions": "7",
   "histories": [
     {
       "x4_code": "(20000813C)",
@@ -19,10 +19,16 @@
         " SD: Corrections in all Subents.",
         "Ref. ZP/A,356,107 added."
       ]
+    },
+    {
+      "x4_code": "(20260126U)",
+      "free_txt": [
+        " SD: Small corrections in Subent 001."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Absolute cross section of p(Be-7,g)B-8 using a novel approach",
+    "title": "Absolute cross section of p(7Be,gamma)8B using a novel approach",
     "authors": [
       {
         "name": "L.Gialanella"
@@ -125,14 +131,7 @@
         "x4_code": "((1-H-1(4-BE-7,G)5-B-8,,SIG)=(4-BE-7(P,G)5-B-8,,SIG))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "4-BE-7,G"
-              ],
-              "5-B-8,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(4-BE-7,G)5-B-8,,SIG)",
             "target": "1-H-1",
             "process": "4-BE-7,G",
             "sf49": "5-B-8,,SIG",
@@ -144,14 +143,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "4-BE-7",
-              [
-                "P,G"
-              ],
-              "5-B-8,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(4-BE-7(P,G)5-B-8,,SIG)",
             "target": "4-BE-7",
             "process": "P,G",
             "sf49": "5-B-8,,SIG",
@@ -163,7 +155,12 @@
             "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-1(4-BE-7,G)5-B-8,,SIG)",
+          "(4-BE-7(P,G)5-B-8,,SIG))"
+        ],
+        "operator": "Equal",
         "free_text": "",
         "pointer": "0"
       }
@@ -235,7 +232,7 @@
             "x4_code": "(EDE,OLMS)",
             "free_txt": [
               " The recoil separator includes a magnetic",
-              "quadrupole triplet, a 30-degree switching magnet, a",
+              "quadrupole triplet, a 30 degrees switching magnet, a",
               "magnetic quadrupole doublet, a Wien filter, and a",
               "conventional delta-E-E ionization chamber."
             ]
@@ -249,15 +246,16 @@
         ],
         "monitor": [
           {
-            "x4_code": "(4-BE-7(P,EL)4-BE-7,,DA,,,EVAL)",
+            "x4_code": "(4-BE-7(P,EL)4-BE-7,,DA)",
             "free_txt": []
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,L.Gialanella+,J,EPJ/A,7,303,2000)",
             "free_txt": [
-              " Abstract of Eur.Phys.J.,A7(2000)303"
+              " Value from",
+              "the Abstract"
             ]
           }
         ]

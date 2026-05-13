@@ -73,16 +73,9 @@
     "002": {
       "0": {
         "x4_code": "(6-C-12(P,X)ELEM/MASS,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "6-C-12",
-              [
-                "P,X"
-              ],
-              "ELEM/MASS,,SIG"
-            ],
-            "type": null,
             "target": "6-C-12",
             "process": "P,X",
             "sf49": "ELEM/MASS,,SIG",
@@ -91,10 +84,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(6-C-12(P,X)ELEM/MASS,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -102,16 +97,9 @@
     "003": {
       "0": {
         "x4_code": "(7-N-14(P,X)ELEM/MASS,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "7-N-14",
-              [
-                "P,X"
-              ],
-              "ELEM/MASS,,SIG"
-            ],
-            "type": null,
             "target": "7-N-14",
             "process": "P,X",
             "sf49": "ELEM/MASS,,SIG",
@@ -120,10 +108,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(7-N-14(P,X)ELEM/MASS,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -133,14 +123,7 @@
         "x4_code": "((6-C-12(P,X)3-LI-7,,SIG)/(6-C-12(P,X)3-LI-6,,SIG))",
         "children": [
           {
-            "code": [
-              "6-C-12",
-              [
-                "P,X"
-              ],
-              "3-LI-7,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(6-C-12(P,X)3-LI-7,,SIG)",
             "target": "6-C-12",
             "process": "P,X",
             "sf49": "3-LI-7,,SIG",
@@ -152,14 +135,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "6-C-12",
-              [
-                "P,X"
-              ],
-              "3-LI-6,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(6-C-12(P,X)3-LI-6,,SIG)",
             "target": "6-C-12",
             "process": "P,X",
             "sf49": "3-LI-6,,SIG",
@@ -171,7 +147,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((6-C-12(P,X)3-LI-7,,SIG)",
+          "(6-C-12(P,X)3-LI-6,,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "1"
       },
@@ -179,14 +160,7 @@
         "x4_code": "(((6-C-12(P,X)3-LI-7,,SIG)+(6-C-12(P,X)4-BE-7,,SIG))/(6-C-12(P,X)3-LI-6,,SIG))",
         "children": [
           {
-            "code": [
-              "6-C-12",
-              [
-                "P,X"
-              ],
-              "3-LI-7,,SIG"
-            ],
-            "type": "+",
+            "x4_code": "(6-C-12(P,X)3-LI-7,,SIG)",
             "target": "6-C-12",
             "process": "P,X",
             "sf49": "3-LI-7,,SIG",
@@ -198,14 +172,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "6-C-12",
-              [
-                "P,X"
-              ],
-              "4-BE-7,,SIG"
-            ],
-            "type": "+",
+            "x4_code": "(6-C-12(P,X)4-BE-7,,SIG)",
             "target": "6-C-12",
             "process": "P,X",
             "sf49": "4-BE-7,,SIG",
@@ -217,37 +184,28 @@
             "sf9": null
           },
           {
-            "code": "6-C-12",
-            "type": [
-              "P,X"
-            ],
-            "target": "6",
-            "process": "-",
-            "sf49": "C,-,1,2",
-            "sf4": "C",
-            "sf5": "-",
-            "sf6": "1",
-            "sf7": "2",
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": "3-LI-6,,SIG",
-            "type": [
-              "P,X"
-            ],
-            "target": "3",
-            "process": "-",
-            "sf49": "L,I,-,6,,,S,I,G",
-            "sf4": "L",
-            "sf5": "I",
-            "sf6": "-",
-            "sf7": "6",
+            "x4_code": "(6-C-12(P,X)3-LI-6,,SIG)",
+            "target": "6-C-12",
+            "process": "P,X",
+            "sf49": "3-LI-6,,SIG",
+            "sf4": "3-LI-6",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          [
+            "Add",
+            "(((6-C-12(P,X)3-LI-7,,SIG)",
+            "(6-C-12(P,X)4-BE-7,,SIG))"
+          ],
+          "(6-C-12(P,X)3-LI-6,,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "2"
       },
@@ -255,14 +213,7 @@
         "x4_code": "(((6-C-12(P,X)3-LI-7,,SIG)+(6-C-12(P,X)4-BE-7,,SIG))/((6-C-12(P,X)3-LI-6,,SIG)+(6-C-12(P,X)2-HE-6,,SIG)))",
         "children": [
           {
-            "code": [
-              "6-C-12",
-              [
-                "P,X"
-              ],
-              "3-LI-7,,SIG"
-            ],
-            "type": "+",
+            "x4_code": "(6-C-12(P,X)3-LI-7,,SIG)",
             "target": "6-C-12",
             "process": "P,X",
             "sf49": "3-LI-7,,SIG",
@@ -274,14 +225,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "6-C-12",
-              [
-                "P,X"
-              ],
-              "4-BE-7,,SIG"
-            ],
-            "type": "+",
+            "x4_code": "(6-C-12(P,X)4-BE-7,,SIG)",
             "target": "6-C-12",
             "process": "P,X",
             "sf49": "4-BE-7,,SIG",
@@ -293,14 +237,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "6-C-12",
-              [
-                "P,X"
-              ],
-              "3-LI-6,,SIG"
-            ],
-            "type": "+",
+            "x4_code": "(6-C-12(P,X)3-LI-6,,SIG)",
             "target": "6-C-12",
             "process": "P,X",
             "sf49": "3-LI-6,,SIG",
@@ -312,14 +249,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "6-C-12",
-              [
-                "P,X"
-              ],
-              "2-HE-6,,SIG"
-            ],
-            "type": "+",
+            "x4_code": "(6-C-12(P,X)2-HE-6,,SIG)",
             "target": "6-C-12",
             "process": "P,X",
             "sf49": "2-HE-6,,SIG",
@@ -331,7 +261,20 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          [
+            "Add",
+            "(((6-C-12(P,X)3-LI-7,,SIG)",
+            "(6-C-12(P,X)4-BE-7,,SIG))"
+          ],
+          [
+            "Add",
+            "((6-C-12(P,X)3-LI-6,,SIG)",
+            "(6-C-12(P,X)2-HE-6,,SIG)))"
+          ]
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "3"
       }
@@ -341,14 +284,7 @@
         "x4_code": "((7-N-14(P,X)3-LI-7,,SIG)/(7-N-14(P,X)3-LI-6,,SIG))",
         "children": [
           {
-            "code": [
-              "7-N-14",
-              [
-                "P,X"
-              ],
-              "3-LI-7,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(7-N-14(P,X)3-LI-7,,SIG)",
             "target": "7-N-14",
             "process": "P,X",
             "sf49": "3-LI-7,,SIG",
@@ -360,14 +296,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "7-N-14",
-              [
-                "P,X"
-              ],
-              "3-LI-6,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(7-N-14(P,X)3-LI-6,,SIG)",
             "target": "7-N-14",
             "process": "P,X",
             "sf49": "3-LI-6,,SIG",
@@ -379,7 +308,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((7-N-14(P,X)3-LI-7,,SIG)",
+          "(7-N-14(P,X)3-LI-6,,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "1"
       },
@@ -387,14 +321,7 @@
         "x4_code": "(((7-N-14(P,X)3-LI-7,,SIG)+(7-N-14(P,X)4-BE-7,,SIG))/(7-N-14(P,X)3-LI-6,,SIG))",
         "children": [
           {
-            "code": [
-              "7-N-14",
-              [
-                "P,X"
-              ],
-              "3-LI-7,,SIG"
-            ],
-            "type": "+",
+            "x4_code": "(7-N-14(P,X)3-LI-7,,SIG)",
             "target": "7-N-14",
             "process": "P,X",
             "sf49": "3-LI-7,,SIG",
@@ -406,14 +333,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "7-N-14",
-              [
-                "P,X"
-              ],
-              "4-BE-7,,SIG"
-            ],
-            "type": "+",
+            "x4_code": "(7-N-14(P,X)4-BE-7,,SIG)",
             "target": "7-N-14",
             "process": "P,X",
             "sf49": "4-BE-7,,SIG",
@@ -425,37 +345,28 @@
             "sf9": null
           },
           {
-            "code": "7-N-14",
-            "type": [
-              "P,X"
-            ],
-            "target": "7",
-            "process": "-",
-            "sf49": "N,-,1,4",
-            "sf4": "N",
-            "sf5": "-",
-            "sf6": "1",
-            "sf7": "4",
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": "3-LI-6,,SIG",
-            "type": [
-              "P,X"
-            ],
-            "target": "3",
-            "process": "-",
-            "sf49": "L,I,-,6,,,S,I,G",
-            "sf4": "L",
-            "sf5": "I",
-            "sf6": "-",
-            "sf7": "6",
+            "x4_code": "(7-N-14(P,X)3-LI-6,,SIG)",
+            "target": "7-N-14",
+            "process": "P,X",
+            "sf49": "3-LI-6,,SIG",
+            "sf4": "3-LI-6",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          [
+            "Add",
+            "(((7-N-14(P,X)3-LI-7,,SIG)",
+            "(7-N-14(P,X)4-BE-7,,SIG))"
+          ],
+          "(7-N-14(P,X)3-LI-6,,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "2"
       },
@@ -463,14 +374,7 @@
         "x4_code": "(((7-N-14(P,X)3-LI-7,,SIG)+(7-N-14(P,X)4-BE-7,,SIG))/((7-N-14(P,X)3-LI-6,,SIG)+(7-N-14(P,X)2-HE-6,,SIG)))",
         "children": [
           {
-            "code": [
-              "7-N-14",
-              [
-                "P,X"
-              ],
-              "3-LI-7,,SIG"
-            ],
-            "type": "+",
+            "x4_code": "(7-N-14(P,X)3-LI-7,,SIG)",
             "target": "7-N-14",
             "process": "P,X",
             "sf49": "3-LI-7,,SIG",
@@ -482,14 +386,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "7-N-14",
-              [
-                "P,X"
-              ],
-              "4-BE-7,,SIG"
-            ],
-            "type": "+",
+            "x4_code": "(7-N-14(P,X)4-BE-7,,SIG)",
             "target": "7-N-14",
             "process": "P,X",
             "sf49": "4-BE-7,,SIG",
@@ -501,14 +398,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "7-N-14",
-              [
-                "P,X"
-              ],
-              "3-LI-6,,SIG"
-            ],
-            "type": "+",
+            "x4_code": "(7-N-14(P,X)3-LI-6,,SIG)",
             "target": "7-N-14",
             "process": "P,X",
             "sf49": "3-LI-6,,SIG",
@@ -520,14 +410,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "7-N-14",
-              [
-                "P,X"
-              ],
-              "2-HE-6,,SIG"
-            ],
-            "type": "+",
+            "x4_code": "(7-N-14(P,X)2-HE-6,,SIG)",
             "target": "7-N-14",
             "process": "P,X",
             "sf49": "2-HE-6,,SIG",
@@ -539,7 +422,20 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          [
+            "Add",
+            "(((7-N-14(P,X)3-LI-7,,SIG)",
+            "(7-N-14(P,X)4-BE-7,,SIG))"
+          ],
+          [
+            "Add",
+            "((7-N-14(P,X)3-LI-6,,SIG)",
+            "(7-N-14(P,X)2-HE-6,,SIG)))"
+          ]
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "3"
       }

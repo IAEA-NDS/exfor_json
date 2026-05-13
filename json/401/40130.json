@@ -1,7 +1,7 @@
 {
   "entry": "40130",
-  "last_updated": "2016-03-02",
-  "number_of_revisions": "4",
+  "last_updated": "2025-03-11",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19730202C)",
@@ -24,10 +24,23 @@
         "was updated in AUTHOR,TITLE,MONITOR.",
         "FF -> LF+HF in SF7. COMMENT, EN-RSL were added."
       ]
+    },
+    {
+      "x4_code": "(20240828U)",
+      "free_txt": [
+        " Data format was corrected :",
+        " floating point -> fixed point."
+      ]
+    },
+    {
+      "x4_code": "(20241224A)",
+      "free_txt": [
+        " Subent 003 was corrected."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Value of nu-bar from energy balance in U-233 and Pu-239 fission .",
+    "title": "Value of nu-bar from energy balance in U233 and Pu239 fission",
     "authors": [
       {
         "name": "N.P.Kolosov"
@@ -59,8 +72,10 @@
         "pointer": "0"
       },
       {
-        "x4_code": "(J,AE,32,(1),83,197201)",
-        "free_txt": [],
+        "x4_code": "(J,AE,32,83,1972)",
+        "free_txt": [
+          " Issue 1."
+        ],
         "publication_year": "1972",
         "doi": null,
         "pointer": "0"
@@ -70,7 +85,7 @@
       {
         "x4_code": "(VDG,4RUSFEI)",
         "free_txt": [
-          "    Van de Graaff  EG-1, EG-2.5."
+          "    Van de Graaff EG-1, EG-2.5."
         ],
         "pointer": "0",
         "facility_type": "(VDG)",
@@ -81,58 +96,48 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(94-PU-239(N,F),,AKE,LF+HF)",
+        "x4_code": "(94-PU-239(N,F),PRE,AKE,LF+HF)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,AKE,LF+HF"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,F",
-            "sf49": ",,AKE,LF+HF",
+            "sf49": ",PRE,AKE,LF+HF",
             "sf4": null,
-            "sf5": null,
+            "sf5": "PRE",
             "sf6": "AKE",
             "sf7": "LF+HF",
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,F),PRE,AKE,LF+HF)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(92-U-233(N,F),,AKE,LF+HF)",
+        "x4_code": "(92-U-233(N,F),PRE,AKE,LF+HF)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,F"
-              ],
-              ",,AKE,LF+HF"
-            ],
-            "type": null,
             "target": "92-U-233",
             "process": "N,F",
-            "sf49": ",,AKE,LF+HF",
+            "sf49": ",PRE,AKE,LF+HF",
             "sf4": null,
-            "sf5": null,
+            "sf5": "PRE",
             "sf6": "AKE",
             "sf7": "LF+HF",
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-233(N,F),PRE,AKE,LF+HF)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -140,16 +145,9 @@
     "004": {
       "0": {
         "x4_code": "(94-PU-239(N,F),,NU)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,NU"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": ",,NU",
@@ -158,10 +156,12 @@
             "sf6": "NU",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,F),,NU)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -169,16 +169,9 @@
     "005": {
       "0": {
         "x4_code": "(92-U-233(N,F),,NU)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,F"
-              ],
-              ",,NU"
-            ],
-            "type": null,
             "target": "92-U-233",
             "process": "N,F",
             "sf49": ",,NU",
@@ -187,10 +180,12 @@
             "sf6": "NU",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-233(N,F),,NU)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -314,13 +309,15 @@
           "EN",
           "EN-ERR",
           "DATA",
-          "ERR-S"
+          "ERR-S",
+          "FLAG"
         ],
         "units": [
           "MEV",
           "MEV",
           "MEV",
-          "MEV"
+          "MEV",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -364,7 +361,7 @@
             172.02,
             172.25,
             172.25,
-            173.39,
+            172.39,
             172.46,
             172.35,
             172.42,
@@ -394,6 +391,24 @@
             0.1,
             0.1,
             0.1
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            1.0,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
           ]
         ]
       }
@@ -401,19 +416,19 @@
     "004": {
       "common": {
         "heads": [
-          "MONIT",
-          "EN-NRM"
+          "EN-NRM",
+          "MONIT"
         ],
         "units": [
-          "NO-DIM",
-          "EV"
+          "EV",
+          "NO-DIM"
         ],
         "data": [
           [
-            2.8738
+            0.0253
           ],
           [
-            0.0253
+            2.8738
           ]
         ]
       },
@@ -432,6 +447,7 @@
         ],
         "data": [
           [
+            2.53e-08,
             0.08,
             0.16,
             0.28,
@@ -451,6 +467,7 @@
           ],
           [
             null,
+            null,
             0.03,
             0.03,
             0.03,
@@ -468,40 +485,42 @@
             0.06
           ],
           [
-            2.883,
-            2.885,
-            2.902,
-            2.922,
-            2.938,
-            2.946,
-            2.975,
-            2.99,
-            2.998,
-            3.018,
-            3.022,
-            3.054,
-            3.074,
-            3.077,
-            3.088,
-            3.098
+            177.7,
+            177.67,
+            177.79,
+            177.79,
+            177.65,
+            177.62,
+            177.63,
+            177.44,
+            177.46,
+            177.48,
+            177.4,
+            177.46,
+            177.27,
+            177.23,
+            177.28,
+            177.28,
+            177.29
           ],
           [
-            0.015,
-            0.015,
-            0.015,
-            0.015,
-            0.015,
-            0.015,
-            0.015,
-            0.015,
-            0.015,
-            0.015,
-            0.015,
-            0.015,
-            0.015,
-            0.015,
-            0.015,
-            0.02
+            null,
+            0.08,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1
           ]
         ]
       }
@@ -509,19 +528,19 @@
     "005": {
       "common": {
         "heads": [
-          "MONIT",
-          "EN-NRM"
+          "EN-NRM",
+          "MONIT"
         ],
         "units": [
-          "NO-DIM",
-          "EV"
+          "EV",
+          "NO-DIM"
         ],
         "data": [
           [
-            2.48
+            0.0253
           ],
           [
-            0.0253
+            2.48
           ]
         ]
       },
@@ -626,7 +645,7 @@
           {
             "x4_code": "(VDG,4RUSFEI)",
             "free_txt": [
-              "    Van de Graaff  EG-1, EG-2.5."
+              "    Van de Graaff EG-1, EG-2.5."
             ]
           }
         ],
@@ -644,15 +663,7 @@
             "free_txt": [
               " -",
               "  Description of method of measuring mass and kinetic",
-              "  energy distributions of the fragments"
-            ]
-          }
-        ],
-        "status": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              "  Received from author"
+              "  energy distributions of the fragments."
             ]
           }
         ]
@@ -678,6 +689,15 @@
               "No information."
             ]
           }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              "  Received from author",
+              ".Data are presented on Fig.1c of J,SJA,32,92,1972"
+            ]
+          }
         ]
       }
     },
@@ -694,11 +714,32 @@
             ]
           }
         ],
+        "flag": [
+          {
+            "x4_code": "(1.)",
+            "free_txt": [
+              "This data point value was 173.39 MeV at initial",
+              "compilation ( data from author). Corrected as",
+              "172.39 MeV taking into account a comment of W.N.Fritsch",
+              "\"DATA=173.39 MeV at 0.29 MeV is too large\" and data",
+              "presented on Fig.1(d)."
+            ]
+          }
+        ],
         "monitor": [
           {
             "x4_code": null,
             "free_txt": [
               "No information."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              "  Received from author",
+              ".Data are presented on Fig.1d of J,SJA,32,92,1972"
             ]
           }
         ]
@@ -716,11 +757,18 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              "  Received from author"
+            ]
+          },
+          {
             "x4_code": "(DEP,40130002)",
             "free_txt": [
               " Dependent data. Nu-values were obtained",
               "from energetic balance. Analysis of fission data",
-              "from subent 40130002 were used"
+              "from subent 40130002 were used",
+              ".Data are presented on Fig.1a of J,SJA,32,92,1972"
             ]
           }
         ]
@@ -738,11 +786,18 @@
         ],
         "status": [
           {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              "  Received from author"
+            ]
+          },
+          {
             "x4_code": "(DEP,40130003)",
             "free_txt": [
               " Dependent data. Nu-values were obtained",
               "from energetic balance.  Analysis of fission",
-              "data from subent 40130003 were used"
+              "data from subent 40130003 were used",
+              ".On Fig.1b of J,SJA,32,92,1972 -only 2 points are given"
             ]
           }
         ]

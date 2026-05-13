@@ -77,16 +77,9 @@
     "002": {
       "0": {
         "x4_code": "(13-AL-27(N,G)13-AL-28,,SIG,,RAW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "13-AL-27",
-              [
-                "N,G"
-              ],
-              "13-AL-28,,SIG,,RAW"
-            ],
-            "type": null,
             "target": "13-AL-27",
             "process": "N,G",
             "sf49": "13-AL-28,,SIG,,RAW",
@@ -95,10 +88,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "RAW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(13-AL-27(N,G)13-AL-28,,SIG,,RAW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": " capture yield/sample thickness * 10,000",
         "pointer": "0"
       }
@@ -106,16 +101,9 @@
     "003": {
       "0": {
         "x4_code": "(26-FE-0(N,G),,SIG,,RAW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-0",
-              [
-                "N,G"
-              ],
-              ",,SIG,,RAW"
-            ],
-            "type": null,
             "target": "26-FE-0",
             "process": "N,G",
             "sf49": ",,SIG,,RAW",
@@ -124,10 +112,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "RAW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-0(N,G),,SIG,,RAW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": " capture yield/sample thickness * 10,000",
         "pointer": "0"
       }
@@ -135,16 +125,9 @@
     "004": {
       "0": {
         "x4_code": "(28-NI-0(N,G),,SIG,,RAW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-0",
-              [
-                "N,G"
-              ],
-              ",,SIG,,RAW"
-            ],
-            "type": null,
             "target": "28-NI-0",
             "process": "N,G",
             "sf49": ",,SIG,,RAW",
@@ -153,10 +136,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "RAW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-0(N,G),,SIG,,RAW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": " capture yield/sample thickness * 10,000",
         "pointer": "0"
       }
@@ -164,16 +149,9 @@
     "005": {
       "1": {
         "x4_code": "(26-FE-54(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-54",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "26-FE-54",
             "process": "N,0",
             "sf49": ",,EN",
@@ -182,10 +160,12 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-54(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
@@ -193,14 +173,7 @@
         "x4_code": "(((26-FE-54(N,EL),,WID,,G)*(26-FE-54(N,G),,WID))/(26-FE-54(N,TOT),,WID))",
         "children": [
           {
-            "code": [
-              "26-FE-54",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
+            "x4_code": "(26-FE-54(N,EL),,WID,,G)",
             "target": "26-FE-54",
             "process": "N,EL",
             "sf49": ",,WID,,G",
@@ -212,14 +185,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "26-FE-54",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
+            "x4_code": "(26-FE-54(N,G),,WID)",
             "target": "26-FE-54",
             "process": "N,G",
             "sf49": ",,WID",
@@ -231,52 +197,36 @@
             "sf9": null
           },
           {
-            "code": "26-FE-54",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "2",
-            "process": "6",
-            "sf49": "-,F,E,-,5,4",
-            "sf4": "-",
-            "sf5": "F",
-            "sf6": "E",
-            "sf7": "-",
-            "sf8": "5",
-            "sf9": "4"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
+            "x4_code": "(26-FE-54(N,TOT),,WID)",
+            "target": "26-FE-54",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
             "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Multiply",
+          "(((26-FE-54(N,EL),,WID,,G)",
+          [
+            "Divide",
+            "(26-FE-54(N,G),,WID))",
+            "(26-FE-54(N,TOT),,WID))"
+          ]
+        ],
+        "operator": "Multiply",
         "free_text": "",
         "pointer": "2"
       },
       "3": {
         "x4_code": "(26-FE-54(N,G),,WID,,S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-54",
-              [
-                "N,G"
-              ],
-              ",,WID,,S0"
-            ],
-            "type": null,
             "target": "26-FE-54",
             "process": "N,G",
             "sf49": ",,WID,,S0",
@@ -285,10 +235,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-54(N,G),,WID,,S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "3"
       }
@@ -296,16 +248,9 @@
     "006": {
       "1": {
         "x4_code": "(26-FE-56(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-56",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "26-FE-56",
             "process": "N,0",
             "sf49": ",,EN",
@@ -314,10 +259,12 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-56(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
@@ -325,14 +272,7 @@
         "x4_code": "(((26-FE-56(N,EL),,WID,,G)*(26-FE-56(N,G),,WID))/(26-FE-56(N,TOT),,WID))",
         "children": [
           {
-            "code": [
-              "26-FE-56",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
+            "x4_code": "(26-FE-56(N,EL),,WID,,G)",
             "target": "26-FE-56",
             "process": "N,EL",
             "sf49": ",,WID,,G",
@@ -344,14 +284,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "26-FE-56",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
+            "x4_code": "(26-FE-56(N,G),,WID)",
             "target": "26-FE-56",
             "process": "N,G",
             "sf49": ",,WID",
@@ -363,52 +296,36 @@
             "sf9": null
           },
           {
-            "code": "26-FE-56",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "2",
-            "process": "6",
-            "sf49": "-,F,E,-,5,6",
-            "sf4": "-",
-            "sf5": "F",
-            "sf6": "E",
-            "sf7": "-",
-            "sf8": "5",
-            "sf9": "6"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
+            "x4_code": "(26-FE-56(N,TOT),,WID)",
+            "target": "26-FE-56",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
             "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Multiply",
+          "(((26-FE-56(N,EL),,WID,,G)",
+          [
+            "Divide",
+            "(26-FE-56(N,G),,WID))",
+            "(26-FE-56(N,TOT),,WID))"
+          ]
+        ],
+        "operator": "Multiply",
         "free_text": "",
         "pointer": "2"
       },
       "3": {
         "x4_code": "(26-FE-56(N,G),,WID,,S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-56",
-              [
-                "N,G"
-              ],
-              ",,WID,,S0"
-            ],
-            "type": null,
             "target": "26-FE-56",
             "process": "N,G",
             "sf49": ",,WID,,S0",
@@ -417,10 +334,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-56(N,G),,WID,,S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "3"
       }
@@ -428,16 +347,9 @@
     "007": {
       "1": {
         "x4_code": "(26-FE-57(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-57",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "26-FE-57",
             "process": "N,0",
             "sf49": ",,EN",
@@ -446,10 +358,12 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-57(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
@@ -457,14 +371,7 @@
         "x4_code": "(((26-FE-57(N,EL),,WID,,G)*(26-FE-57(N,G),,WID))/(26-FE-57(N,TOT),,WID))",
         "children": [
           {
-            "code": [
-              "26-FE-57",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
+            "x4_code": "(26-FE-57(N,EL),,WID,,G)",
             "target": "26-FE-57",
             "process": "N,EL",
             "sf49": ",,WID,,G",
@@ -476,14 +383,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "26-FE-57",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
+            "x4_code": "(26-FE-57(N,G),,WID)",
             "target": "26-FE-57",
             "process": "N,G",
             "sf49": ",,WID",
@@ -495,52 +395,36 @@
             "sf9": null
           },
           {
-            "code": "26-FE-57",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "2",
-            "process": "6",
-            "sf49": "-,F,E,-,5,7",
-            "sf4": "-",
-            "sf5": "F",
-            "sf6": "E",
-            "sf7": "-",
-            "sf8": "5",
-            "sf9": "7"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
+            "x4_code": "(26-FE-57(N,TOT),,WID)",
+            "target": "26-FE-57",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
             "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Multiply",
+          "(((26-FE-57(N,EL),,WID,,G)",
+          [
+            "Divide",
+            "(26-FE-57(N,G),,WID))",
+            "(26-FE-57(N,TOT),,WID))"
+          ]
+        ],
+        "operator": "Multiply",
         "free_text": "",
         "pointer": "2"
       },
       "3": {
         "x4_code": "(26-FE-57(N,G),,WID,,S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-57",
-              [
-                "N,G"
-              ],
-              ",,WID,,S0"
-            ],
-            "type": null,
             "target": "26-FE-57",
             "process": "N,G",
             "sf49": ",,WID,,S0",
@@ -549,10 +433,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-57(N,G),,WID,,S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "3"
       }
@@ -560,16 +446,9 @@
     "008": {
       "1": {
         "x4_code": "(26-FE-58(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-58",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "26-FE-58",
             "process": "N,0",
             "sf49": ",,EN",
@@ -578,10 +457,12 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-58(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
@@ -589,14 +470,7 @@
         "x4_code": "(((26-FE-58(N,EL),,WID,,G)*(26-FE-58(N,G),,WID))/(26-FE-58(N,TOT),,WID))",
         "children": [
           {
-            "code": [
-              "26-FE-58",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
+            "x4_code": "(26-FE-58(N,EL),,WID,,G)",
             "target": "26-FE-58",
             "process": "N,EL",
             "sf49": ",,WID,,G",
@@ -608,14 +482,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "26-FE-58",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
+            "x4_code": "(26-FE-58(N,G),,WID)",
             "target": "26-FE-58",
             "process": "N,G",
             "sf49": ",,WID",
@@ -627,52 +494,36 @@
             "sf9": null
           },
           {
-            "code": "26-FE-58",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "2",
-            "process": "6",
-            "sf49": "-,F,E,-,5,8",
-            "sf4": "-",
-            "sf5": "F",
-            "sf6": "E",
-            "sf7": "-",
-            "sf8": "5",
-            "sf9": "8"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
+            "x4_code": "(26-FE-58(N,TOT),,WID)",
+            "target": "26-FE-58",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
             "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Multiply",
+          "(((26-FE-58(N,EL),,WID,,G)",
+          [
+            "Divide",
+            "(26-FE-58(N,G),,WID))",
+            "(26-FE-58(N,TOT),,WID))"
+          ]
+        ],
+        "operator": "Multiply",
         "free_text": "",
         "pointer": "2"
       },
       "3": {
         "x4_code": "(26-FE-58(N,G),,WID,,S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-58",
-              [
-                "N,G"
-              ],
-              ",,WID,,S0"
-            ],
-            "type": null,
             "target": "26-FE-58",
             "process": "N,G",
             "sf49": ",,WID,,S0",
@@ -681,10 +532,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-58(N,G),,WID,,S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "3"
       }
@@ -692,16 +545,9 @@
     "009": {
       "1": {
         "x4_code": "(28-NI-58(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-58",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "28-NI-58",
             "process": "N,0",
             "sf49": ",,EN",
@@ -710,10 +556,12 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-58(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
@@ -721,14 +569,7 @@
         "x4_code": "(((28-NI-58(N,EL),,WID,,G)*(28-NI-58(N,G),,WID))/(28-NI-58(N,TOT),,WID))",
         "children": [
           {
-            "code": [
-              "28-NI-58",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
+            "x4_code": "(28-NI-58(N,EL),,WID,,G)",
             "target": "28-NI-58",
             "process": "N,EL",
             "sf49": ",,WID,,G",
@@ -740,14 +581,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "28-NI-58",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
+            "x4_code": "(28-NI-58(N,G),,WID)",
             "target": "28-NI-58",
             "process": "N,G",
             "sf49": ",,WID",
@@ -759,52 +593,36 @@
             "sf9": null
           },
           {
-            "code": "28-NI-58",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "2",
-            "process": "8",
-            "sf49": "-,N,I,-,5,8",
-            "sf4": "-",
-            "sf5": "N",
-            "sf6": "I",
-            "sf7": "-",
-            "sf8": "5",
-            "sf9": "8"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
+            "x4_code": "(28-NI-58(N,TOT),,WID)",
+            "target": "28-NI-58",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
             "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Multiply",
+          "(((28-NI-58(N,EL),,WID,,G)",
+          [
+            "Divide",
+            "(28-NI-58(N,G),,WID))",
+            "(28-NI-58(N,TOT),,WID))"
+          ]
+        ],
+        "operator": "Multiply",
         "free_text": "",
         "pointer": "2"
       },
       "3": {
         "x4_code": "(28-NI-58(N,G),,WID,,S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-58",
-              [
-                "N,G"
-              ],
-              ",,WID,,S0"
-            ],
-            "type": null,
             "target": "28-NI-58",
             "process": "N,G",
             "sf49": ",,WID,,S0",
@@ -813,10 +631,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-58(N,G),,WID,,S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "3"
       }
@@ -824,16 +644,9 @@
     "010": {
       "1": {
         "x4_code": "(28-NI-60(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-60",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "28-NI-60",
             "process": "N,0",
             "sf49": ",,EN",
@@ -842,10 +655,12 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-60(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
@@ -853,14 +668,7 @@
         "x4_code": "(((28-NI-60(N,EL),,WID,,G)*(28-NI-60(N,G),,WID))/(28-NI-60(N,TOT),,WID))",
         "children": [
           {
-            "code": [
-              "28-NI-60",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
+            "x4_code": "(28-NI-60(N,EL),,WID,,G)",
             "target": "28-NI-60",
             "process": "N,EL",
             "sf49": ",,WID,,G",
@@ -872,14 +680,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "28-NI-60",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
+            "x4_code": "(28-NI-60(N,G),,WID)",
             "target": "28-NI-60",
             "process": "N,G",
             "sf49": ",,WID",
@@ -891,52 +692,36 @@
             "sf9": null
           },
           {
-            "code": "28-NI-60",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "2",
-            "process": "8",
-            "sf49": "-,N,I,-,6,0",
-            "sf4": "-",
-            "sf5": "N",
-            "sf6": "I",
-            "sf7": "-",
-            "sf8": "6",
-            "sf9": "0"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
+            "x4_code": "(28-NI-60(N,TOT),,WID)",
+            "target": "28-NI-60",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
             "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Multiply",
+          "(((28-NI-60(N,EL),,WID,,G)",
+          [
+            "Divide",
+            "(28-NI-60(N,G),,WID))",
+            "(28-NI-60(N,TOT),,WID))"
+          ]
+        ],
+        "operator": "Multiply",
         "free_text": "",
         "pointer": "2"
       },
       "3": {
         "x4_code": "(28-NI-60(N,G),,WID,,S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-60",
-              [
-                "N,G"
-              ],
-              ",,WID,,S0"
-            ],
-            "type": null,
             "target": "28-NI-60",
             "process": "N,G",
             "sf49": ",,WID,,S0",
@@ -945,10 +730,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-60(N,G),,WID,,S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "3"
       }
@@ -956,16 +743,9 @@
     "011": {
       "1": {
         "x4_code": "(28-NI-61(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-61",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "28-NI-61",
             "process": "N,0",
             "sf49": ",,EN",
@@ -974,10 +754,12 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-61(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
@@ -985,14 +767,7 @@
         "x4_code": "(((28-NI-61(N,EL),,WID,,G)*(28-NI-61(N,G),,WID))/(28-NI-61(N,TOT),,WID))",
         "children": [
           {
-            "code": [
-              "28-NI-61",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
+            "x4_code": "(28-NI-61(N,EL),,WID,,G)",
             "target": "28-NI-61",
             "process": "N,EL",
             "sf49": ",,WID,,G",
@@ -1004,14 +779,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "28-NI-61",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
+            "x4_code": "(28-NI-61(N,G),,WID)",
             "target": "28-NI-61",
             "process": "N,G",
             "sf49": ",,WID",
@@ -1023,52 +791,36 @@
             "sf9": null
           },
           {
-            "code": "28-NI-61",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "2",
-            "process": "8",
-            "sf49": "-,N,I,-,6,1",
-            "sf4": "-",
-            "sf5": "N",
-            "sf6": "I",
-            "sf7": "-",
-            "sf8": "6",
-            "sf9": "1"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
+            "x4_code": "(28-NI-61(N,TOT),,WID)",
+            "target": "28-NI-61",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
             "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Multiply",
+          "(((28-NI-61(N,EL),,WID,,G)",
+          [
+            "Divide",
+            "(28-NI-61(N,G),,WID))",
+            "(28-NI-61(N,TOT),,WID))"
+          ]
+        ],
+        "operator": "Multiply",
         "free_text": "",
         "pointer": "2"
       },
       "3": {
         "x4_code": "(28-NI-61(N,G),,WID,,S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-61",
-              [
-                "N,G"
-              ],
-              ",,WID,,S0"
-            ],
-            "type": null,
             "target": "28-NI-61",
             "process": "N,G",
             "sf49": ",,WID,,S0",
@@ -1077,10 +829,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-61(N,G),,WID,,S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "3"
       }
@@ -1088,16 +842,9 @@
     "012": {
       "1": {
         "x4_code": "(28-NI-62(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-62",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "28-NI-62",
             "process": "N,0",
             "sf49": ",,EN",
@@ -1106,25 +853,20 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-62(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
       "2": {
         "x4_code": "(28-NI-62(N,G),,WID)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-62",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": null,
             "target": "28-NI-62",
             "process": "N,G",
             "sf49": ",,WID",
@@ -1133,10 +875,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-62(N,G),,WID)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       }
@@ -1144,16 +888,9 @@
     "013": {
       "1": {
         "x4_code": "(28-NI-64(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-64",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "28-NI-64",
             "process": "N,0",
             "sf49": ",,EN",
@@ -1162,10 +899,12 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-64(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
@@ -1173,14 +912,7 @@
         "x4_code": "(((28-NI-64(N,EL),,WID,,G)*(28-NI-64(N,G),,WID))/(28-NI-64(N,TOT),,WID))",
         "children": [
           {
-            "code": [
-              "28-NI-64",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
+            "x4_code": "(28-NI-64(N,EL),,WID,,G)",
             "target": "28-NI-64",
             "process": "N,EL",
             "sf49": ",,WID,,G",
@@ -1192,14 +924,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "28-NI-64",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
+            "x4_code": "(28-NI-64(N,G),,WID)",
             "target": "28-NI-64",
             "process": "N,G",
             "sf49": ",,WID",
@@ -1211,52 +936,36 @@
             "sf9": null
           },
           {
-            "code": "28-NI-64",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "2",
-            "process": "8",
-            "sf49": "-,N,I,-,6,4",
-            "sf4": "-",
-            "sf5": "N",
-            "sf6": "I",
-            "sf7": "-",
-            "sf8": "6",
-            "sf9": "4"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
+            "x4_code": "(28-NI-64(N,TOT),,WID)",
+            "target": "28-NI-64",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
             "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Multiply",
+          "(((28-NI-64(N,EL),,WID,,G)",
+          [
+            "Divide",
+            "(28-NI-64(N,G),,WID))",
+            "(28-NI-64(N,TOT),,WID))"
+          ]
+        ],
+        "operator": "Multiply",
         "free_text": "",
         "pointer": "2"
       },
       "3": {
         "x4_code": "(28-NI-64(N,G),,WID,,S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-64",
-              [
-                "N,G"
-              ],
-              ",,WID,,S0"
-            ],
-            "type": null,
             "target": "28-NI-64",
             "process": "N,G",
             "sf49": ",,WID,,S0",
@@ -1265,10 +974,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-64(N,G),,WID,,S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "3"
       }
@@ -1276,16 +987,9 @@
     "014": {
       "1": {
         "x4_code": "(11-NA-23(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "11-NA-23",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "11-NA-23",
             "process": "N,0",
             "sf49": ",,EN",
@@ -1294,10 +998,12 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(11-NA-23(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
@@ -1305,14 +1011,7 @@
         "x4_code": "(((11-NA-23(N,EL),,WID,,G)*(11-NA-23(N,G),,WID))/(11-NA-23(N,TOT),,WID))",
         "children": [
           {
-            "code": [
-              "11-NA-23",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
+            "x4_code": "(11-NA-23(N,EL),,WID,,G)",
             "target": "11-NA-23",
             "process": "N,EL",
             "sf49": ",,WID,,G",
@@ -1324,14 +1023,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "11-NA-23",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
+            "x4_code": "(11-NA-23(N,G),,WID)",
             "target": "11-NA-23",
             "process": "N,G",
             "sf49": ",,WID",
@@ -1343,52 +1035,36 @@
             "sf9": null
           },
           {
-            "code": "11-NA-23",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "1",
-            "process": "1",
-            "sf49": "-,N,A,-,2,3",
-            "sf4": "-",
-            "sf5": "N",
-            "sf6": "A",
-            "sf7": "-",
-            "sf8": "2",
-            "sf9": "3"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
+            "x4_code": "(11-NA-23(N,TOT),,WID)",
+            "target": "11-NA-23",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
             "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Multiply",
+          "(((11-NA-23(N,EL),,WID,,G)",
+          [
+            "Divide",
+            "(11-NA-23(N,G),,WID))",
+            "(11-NA-23(N,TOT),,WID))"
+          ]
+        ],
+        "operator": "Multiply",
         "free_text": "",
         "pointer": "2"
       },
       "3": {
         "x4_code": "(11-NA-23(N,G),,WID,,S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "11-NA-23",
-              [
-                "N,G"
-              ],
-              ",,WID,,S0"
-            ],
-            "type": null,
             "target": "11-NA-23",
             "process": "N,G",
             "sf49": ",,WID,,S0",
@@ -1397,10 +1073,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(11-NA-23(N,G),,WID,,S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "3"
       }
@@ -1408,16 +1086,9 @@
     "015": {
       "1": {
         "x4_code": "(13-AL-27(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "13-AL-27",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "13-AL-27",
             "process": "N,0",
             "sf49": ",,EN",
@@ -1426,25 +1097,20 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(13-AL-27(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
       "2": {
         "x4_code": "(13-AL-27(N,G),,WID)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "13-AL-27",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": null,
             "target": "13-AL-27",
             "process": "N,G",
             "sf49": ",,WID",
@@ -1453,10 +1119,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(13-AL-27(N,G),,WID)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       }
@@ -1464,16 +1132,9 @@
     "016": {
       "1": {
         "x4_code": "(26-FE-56(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-56",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "26-FE-56",
             "process": "N,0",
             "sf49": ",,EN",
@@ -1482,25 +1143,20 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-56(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
       "2": {
         "x4_code": "(26-FE-56(N,EL),,WID,,G)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-56",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": null,
             "target": "26-FE-56",
             "process": "N,EL",
             "sf49": ",,WID,,G",
@@ -1509,25 +1165,20 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "G",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-56(N,EL),,WID,,G)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       },
       "3": {
         "x4_code": "(26-FE-56(N,G),,WID)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-56",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": null,
             "target": "26-FE-56",
             "process": "N,G",
             "sf49": ",,WID",
@@ -1536,10 +1187,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-56(N,G),,WID)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "3"
       }
@@ -1547,16 +1200,9 @@
     "017": {
       "1": {
         "x4_code": "(26-FE-57(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-57",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "26-FE-57",
             "process": "N,0",
             "sf49": ",,EN",
@@ -1565,25 +1211,20 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-57(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
       "2": {
         "x4_code": "(26-FE-57(N,G),,WID)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-57",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": null,
             "target": "26-FE-57",
             "process": "N,G",
             "sf49": ",,WID",
@@ -1592,10 +1233,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-57(N,G),,WID)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       }

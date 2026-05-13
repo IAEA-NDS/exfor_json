@@ -62,16 +62,9 @@
     "002": {
       "0": {
         "x4_code": "(92-U-236(N,ABS),,SIG,,AV)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-236",
-              [
-                "N,ABS"
-              ],
-              ",,SIG,,AV"
-            ],
-            "type": null,
             "target": "92-U-236",
             "process": "N,ABS",
             "sf49": ",,SIG,,AV",
@@ -80,10 +73,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "AV",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-236(N,ABS),,SIG,,AV)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": " Bin widths given under EN-RSL",
         "pointer": "0"
       }
@@ -91,16 +86,9 @@
     "003": {
       "1": {
         "x4_code": "(92-U-236(N,0),,EN)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-236",
-              [
-                "N,0"
-              ],
-              ",,EN"
-            ],
-            "type": null,
             "target": "92-U-236",
             "process": "N,0",
             "sf49": ",,EN",
@@ -109,10 +97,12 @@
             "sf6": "EN",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-236(N,0),,EN)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
@@ -120,14 +110,7 @@
         "x4_code": "(((92-U-236(N,EL),,WID,,G)*(92-U-236(N,G),,WID))/(92-U-236(N,TOT),,WID))",
         "children": [
           {
-            "code": [
-              "92-U-236",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
+            "x4_code": "(92-U-236(N,EL),,WID,,G)",
             "target": "92-U-236",
             "process": "N,EL",
             "sf49": ",,WID,,G",
@@ -139,14 +122,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-236",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
+            "x4_code": "(92-U-236(N,G),,WID)",
             "target": "92-U-236",
             "process": "N,G",
             "sf49": ",,WID",
@@ -158,106 +134,7 @@
             "sf9": null
           },
           {
-            "code": "92-U-236",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "9",
-            "process": "2",
-            "sf49": "-,U,-,2,3,6",
-            "sf4": "-",
-            "sf5": "U",
-            "sf6": "-",
-            "sf7": "2",
-            "sf8": "3",
-            "sf9": "6"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          }
-        ],
-        "type": "/",
-        "free_text": "",
-        "pointer": "2"
-      },
-      "3": {
-        "x4_code": "(92-U-236(N,EL),,WID,,G)",
-        "children": [
-          {
-            "code": [
-              "92-U-236",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": null,
-            "target": "92-U-236",
-            "process": "N,EL",
-            "sf49": ",,WID,,G",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": "G",
-            "sf9": null
-          }
-        ],
-        "type": null,
-        "free_text": "",
-        "pointer": "3"
-      },
-      "4": {
-        "x4_code": "(92-U-236(N,G),,WID)",
-        "children": [
-          {
-            "code": [
-              "92-U-236",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": null,
-            "target": "92-U-236",
-            "process": "N,G",
-            "sf49": ",,WID",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "WID",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          }
-        ],
-        "type": null,
-        "free_text": "",
-        "pointer": "4"
-      },
-      "5": {
-        "x4_code": "(92-U-236(N,TOT),,WID)",
-        "children": [
-          {
-            "code": [
-              "92-U-236",
-              [
-                "N,TOT"
-              ],
-              ",,WID"
-            ],
-            "type": null,
+            "x4_code": "(92-U-236(N,TOT),,WID)",
             "target": "92-U-236",
             "process": "N,TOT",
             "sf49": ",,WID",
@@ -269,7 +146,82 @@
             "sf9": null
           }
         ],
-        "type": null,
+        "math_expression": [
+          "Multiply",
+          "(((92-U-236(N,EL),,WID,,G)",
+          [
+            "Divide",
+            "(92-U-236(N,G),,WID))",
+            "(92-U-236(N,TOT),,WID))"
+          ]
+        ],
+        "operator": "Multiply",
+        "free_text": "",
+        "pointer": "2"
+      },
+      "3": {
+        "x4_code": "(92-U-236(N,EL),,WID,,G)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "92-U-236",
+            "process": "N,EL",
+            "sf49": ",,WID,,G",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": "G",
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-236(N,EL),,WID,,G)"
+          }
+        ],
+        "operator": null,
+        "free_text": "",
+        "pointer": "3"
+      },
+      "4": {
+        "x4_code": "(92-U-236(N,G),,WID)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "92-U-236",
+            "process": "N,G",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-236(N,G),,WID)"
+          }
+        ],
+        "operator": null,
+        "free_text": "",
+        "pointer": "4"
+      },
+      "5": {
+        "x4_code": "(92-U-236(N,TOT),,WID)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "92-U-236",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-236(N,TOT),,WID)"
+          }
+        ],
+        "operator": null,
         "free_text": "",
         "pointer": "5"
       }

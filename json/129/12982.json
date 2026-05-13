@@ -1,15 +1,28 @@
 {
   "entry": "12982",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2026-03-27",
+  "number_of_revisions": "6",
   "histories": [
     {
-      "x4_code": "(870217C)",
+      "x4_code": "(19870217C)",
       "free_txt": []
+    },
+    {
+      "x4_code": "(20250703A)",
+      "free_txt": [
+        " OS. Updated REFERENCE, FACILITY, STATUS,",
+        " ERR-ANALYS, converted to lower and upper case"
+      ]
+    },
+    {
+      "x4_code": "(20260209A)",
+      "free_txt": [
+        " OS. REFERENCE modified"
+      ]
     }
   ],
   "bib_record": {
-    "title": "HELIUM PRODUCTION IN COPPER BY A THERMAL THREE-STAGE REACTION",
+    "title": "Helium production in copper by a thermal three-stage reaction",
     "authors": [
       {
         "name": "D.W.Kneff"
@@ -35,22 +48,24 @@
     ],
     "references": [
       {
-        "x4_code": "(C,85SANTA,1,553(JA11),8505)",
-        "free_txt": [],
+        "x4_code": "((J,RE,93,217,1986)=(C,85SANTA,1,553,1985))",
+        "free_txt": [
+          "#doi:10.1080/00337578608207456"
+        ],
         "publication_year": "1985",
-        "doi": null,
+        "doi": "10.1080/00337578608207456",
         "pointer": "0"
       }
     ],
     "facilities": [
       {
-        "x4_code": "(REAC)",
+        "x4_code": "(REAC,1USAORL)",
         "free_txt": [
-          " 9 LOCATIONS IN HFIR."
+          " 9 locations in HFIR."
         ],
         "pointer": "0",
         "facility_type": "(REAC)",
-        "institute": null
+        "institute": "(1USAORL)"
       }
     ]
   },
@@ -58,16 +73,9 @@
     "002": {
       "0": {
         "x4_code": "(29-CU-64(N,G)29-CU-65,,SIG,,SPA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "29-CU-64",
-              [
-                "N,G"
-              ],
-              "29-CU-65,,SIG,,SPA"
-            ],
-            "type": null,
             "target": "29-CU-64",
             "process": "N,G",
             "sf49": "29-CU-65,,SIG,,SPA",
@@ -76,10 +84,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "SPA",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(29-CU-64(N,G)29-CU-65,,SIG,,SPA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -87,16 +97,9 @@
     "003": {
       "0": {
         "x4_code": "(30-ZN-65(N,ABS),,SIG,,SPA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "30-ZN-65",
-              [
-                "N,ABS"
-              ],
-              ",,SIG,,SPA"
-            ],
-            "type": null,
             "target": "30-ZN-65",
             "process": "N,ABS",
             "sf49": ",,SIG,,SPA",
@@ -105,10 +108,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "SPA",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(30-ZN-65(N,ABS),,SIG,,SPA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -116,16 +121,9 @@
     "004": {
       "0": {
         "x4_code": "(30-ZN-65(N,A)28-NI-62,,SIG,,SPA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "30-ZN-65",
-              [
-                "N,A"
-              ],
-              "28-NI-62,,SIG,,SPA"
-            ],
-            "type": null,
             "target": "30-ZN-65",
             "process": "N,A",
             "sf49": "28-NI-62,,SIG,,SPA",
@@ -134,10 +132,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "SPA",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(30-ZN-65(N,A)28-NI-62,,SIG,,SPA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -145,7 +145,19 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-1"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            1.5
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -153,7 +165,7 @@
         "heads": [
           "EN-DUMMY",
           "DATA",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "EV",
@@ -179,7 +191,7 @@
         "heads": [
           "EN-DUMMY",
           "DATA",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "EV",
@@ -205,7 +217,7 @@
         "heads": [
           "EN-DUMMY",
           "DATA",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "EV",
@@ -231,25 +243,45 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(ERR-T)",
             "free_txt": [
-              "UNCERTAINTIES GIVEN INCLUDE:",
-              "  - GAMMA COUNTING = 1.5%",
-              "  - HELIUM MEASUREMENTS = 1-2%",
-              "  - ISOTOPE RATIOS = <1%",
-              "  - SPECTRAL-ADJUSTED FLUXES = 5-10%",
-              "UNCERTAINTIES DO NOT INCLUDE UNCERTAINTIES IN",
-              " CALCULATED SPECTRUM-INTEGRATED (N,G) CROSS SECTIONS",
-              " FOR SEVERAL FAST-NEUTRON REACTION CHANNELS (DETERMINED",
-              " TO BE NEGLIGIBLE)."
+              " Uncertainties do not include uncertainties",
+              "in calculated spectrum-integrated (n,g) cross sections",
+              "for several fast-neutron reaction channels (determined",
+              "to be negligible).",
+              "Uncertainties given include:"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " - gamma counting = 1.5%"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2,1.,2.)",
+            "free_txt": [
+              "  - helium measurements = 1-2%"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3,,1.)",
+            "free_txt": [
+              "  - isotope ratios = <1%"
+            ]
+          },
+          {
+            "x4_code": "(ERR-4,5.,10.)",
+            "free_txt": [
+              "  - spectral-adjusted fluxes = 5-10%"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(REAC)",
+            "x4_code": "(REAC,1USAORL)",
             "free_txt": [
-              " 9 LOCATIONS IN HFIR."
+              " 9 locations in HFIR."
             ]
           }
         ],
@@ -257,8 +289,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "MIXED SPECTRUM FISSION REACTOR SPECTRUM (COMPARABLE",
-              " FLUXES OF THERMAL AND FISSION ENERGY NEUTRONS)."
+              "Mixed spectrum fission reactor spectrum (comparable",
+              " fluxes of thermal and fission energy neutrons)."
             ]
           }
         ],
@@ -266,10 +298,10 @@
           {
             "x4_code": null,
             "free_txt": [
-              "ISOTOPE-DILUTION GAS MASS SPECTROMETRY (HELIUM",
-              " MEASUREMENTS)",
-              "MULTIPLE ACTIVATION GAS DOSIMETRY",
-              "MASS SPECTROMETRY (SOLIDS)"
+              "Isotope-dilution gas mass spectrometry (helium",
+              " measurements)",
+              "Multiple activation gas dosimetry",
+              "Mass spectrometry (solids)"
             ]
           }
         ],
@@ -277,7 +309,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "COPPER SAMPLES"
+              "Copper samples"
             ]
           }
         ],
@@ -285,7 +317,13 @@
           {
             "x4_code": "(APRVD)",
             "free_txt": [
-              " D.W.KNEFF, 87/4/13."
+              " D.W.Kneff, 87/4/13."
+            ]
+          },
+          {
+            "x4_code": "(TABLE,,D.W.Kneff+,C,85SANTA,,553,1985)",
+            "free_txt": [
+              " Table I, 85SANTA,,553"
             ]
           }
         ]
@@ -297,7 +335,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "DETERMINED BY POST-IRRADIATION 65CU/63CU RATIOS"
+              "Determined by post-irradiation 65Cu/63Cu ratios"
             ]
           }
         ]
@@ -309,8 +347,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "DETERMINED BY FITTING THE MEASURED 65ZN REACTION",
-              " RATES OF 18 SAMPLES"
+              "Determined by fitting the measured 65Zn reaction",
+              " rates of 18 samples"
             ]
           }
         ]
@@ -322,7 +360,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "DETERMINED USING 65ZN ABSORPTION DATA"
+              "Determined using 65Zn absorption data"
             ]
           }
         ]

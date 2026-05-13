@@ -1,19 +1,25 @@
 {
   "entry": "30717",
-  "last_updated": "2009-11-27",
-  "number_of_revisions": "4",
+  "last_updated": "2024-09-17",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(20090725A)",
       "free_txt": [
         " SD:Updated to new date formats,lower case.",
-        "COMMON section and codes for uncertainties were",
-        "added in Subent 001"
+        " COMMON section and codes for uncertainties were",
+        " added in Subent 001"
+      ]
+    },
+    {
+      "x4_code": "(20240321A)",
+      "free_txt": [
+        " Wang Jimin+On. ERR-ANALYS updated."
       ]
     }
   ],
   "bib_record": {
-    "title": "Measurement of fission cross section for Np-237 induced by fast neutron",
+    "title": "Measurement of fission cross section for 237Np induced by fast neutron",
     "authors": [
       {
         "name": "Wu Jingxia"
@@ -42,10 +48,8 @@
     ],
     "references": [
       {
-        "x4_code": "(J,CNP,6,369,198411)",
-        "free_txt": [
-          "  in Chinese, English abstract"
-        ],
+        "x4_code": "(J,CNP,6,369,1984)",
+        "free_txt": [],
         "publication_year": "1984",
         "doi": null,
         "pointer": "0"
@@ -65,16 +69,9 @@
     "002": {
       "0": {
         "x4_code": "(93-NP-237(N,F),,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "93-NP-237",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
             "target": "93-NP-237",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -83,10 +80,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(93-NP-237(N,F),,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -96,20 +95,10 @@
     "001": {
       "common": {
         "heads": [
-          "ERR-1",
-          "ERR-S",
-          "ERR-2",
-          "ERR-3",
           "ERR-4",
-          "ERR-5",
-          "ERR-6"
+          "ERR-5"
         ],
         "units": [
-          "PER-CENT",
-          "PER-CENT",
-          "PER-CENT",
-          "PER-CENT",
-          "PER-CENT",
           "PER-CENT",
           "PER-CENT"
         ],
@@ -118,22 +107,7 @@
             0.5
           ],
           [
-            1.0
-          ],
-          [
-            0.5
-          ],
-          [
-            0.5
-          ],
-          [
-            0.5
-          ],
-          [
             0.1
-          ],
-          [
-            0.9
           ]
         ]
       }
@@ -185,6 +159,17 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "By compiler (2024-03-21):",
+              " The neutron scattering correction uncertainty is 10%",
+              " in the article but 0.1% in annotation on the article",
+              " copy used by the original compiler."
+            ]
+          }
+        ],
         "detector": [
           {
             "x4_code": "(FISCH)",
@@ -199,61 +184,54 @@
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
-              " Errors of the experimental data are mainly"
+              " Errors of the experimental data are mainly",
+              "              .Fission counting statistics        (~1%)"
             ]
           },
           {
-            "x4_code": "(ERR-1)",
+            "x4_code": "(ERR-1,,0.5)",
             "free_txt": [
-              " Uncertainty in cross section formula",
-              "approximation - 0.5%"
+              "  .Modelling of cross section",
+              "               determination by Eq.1            (<0.5%)"
             ]
           },
           {
-            "x4_code": "(ERR-S)",
+            "x4_code": "(ERR-2,,0.5)",
             "free_txt": [
-              " Fission counting statistics - 1%"
+              "  .Detector efficiency correction   (<0.5%)"
             ]
           },
           {
-            "x4_code": "(ERR-2)",
+            "x4_code": "(ERR-3,,1.)",
             "free_txt": [
-              " Uncertainty in detector efficiency",
-              "    correction - 0.5%"
-            ]
-          },
-          {
-            "x4_code": "(ERR-3)",
-            "free_txt": [
-              " Uncertainty in polythelene area",
-              "    density - 0.5%"
+              "   .Polyethylene average areal density (<1%)"
             ]
           },
           {
             "x4_code": "(ERR-4)",
             "free_txt": [
-              " Uncertainty in Np-237 quantity - 0.5%"
+              "       .237Np mass                        (0.5%)"
             ]
           },
           {
             "x4_code": "(ERR-5)",
             "free_txt": [
-              " Uncertainty in neutron scattering",
-              "    correction - 0.1%"
+              "       .Neutron scattering correction     (0.1%)"
             ]
           },
           {
-            "x4_code": "(ERR-6)",
+            "x4_code": "(ERR-6,,0.9)",
             "free_txt": [
-              " Sum uncertainty in geometry factor",
-              "    and (n,p) differential cross section - 0.9%"
+              "  .(n,p) differential cross section and",
+              "               telescope geometry factor        (<0.9%)"
             ]
           },
           {
             "x4_code": "(ERR-7,1.,1.5)",
             "free_txt": [
-              " Unstability in electronic system and d-d",
-              "    background neutron produced in beam line 1.-1.5%"
+              ".Instability of electronic system and",
+              "               neutron background produced by",
+              "               deuteron beam in line           (1-1.5%)"
             ]
           }
         ],
@@ -273,9 +251,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "Fission cross sections of Np-237 were measured using",
-              "a recoil proton semiconductor detector telescope and",
-              "fission ionization chamber placed back-to-back system."
+              "A recoil proton semiconductor detector telescope and",
+              " fission ionization chamber placed back-to-back"
             ]
           }
         ],
@@ -288,15 +265,25 @@
         "monitor": [
           {
             "x4_code": "(1-H-1(N,EL)1-H-1,,SIG)",
-            "free_txt": []
+            "free_txt": [
+              " polyethylene (5.33 mg/cm2)"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(M,,Li Jizhou+,J,CST,11,100,1977)",
+            "free_txt": [
+              " Neutron flux determination"
+            ]
           }
         ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "Electro-deposited foil of Np-237, 1.3cm in diameter,",
-              "0.546 Mg in weight."
+              "Electro-deposited foil of 237Np, 1.3 cm in diameter,",
+              " 0.546 mg in weight measured by alpha spectroscopy"
             ]
           }
         ]
@@ -306,11 +293,9 @@
       "0": {
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,Wu Jingxia+,J,CNP,6,369,1984)",
             "free_txt": [
-              " Numerical value received from priv.comm. from",
-              "author. It corresponds to fig.4 in",
-              "Chin.J.Nucl.Phys.,6,369,1984"
+              " Data corresponding to Fig.4 received from author"
             ]
           }
         ]

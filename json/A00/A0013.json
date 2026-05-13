@@ -1,7 +1,7 @@
 {
   "entry": "A0013",
-  "last_updated": "2008-09-18",
-  "number_of_revisions": "4",
+  "last_updated": "2024-08-20",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19780511C)",
@@ -10,13 +10,20 @@
     {
       "x4_code": "(20080608A)",
       "free_txt": [
-        " BIB section updated",
-        " Corrections were made according new exfor rules."
+        " BIB section updated. Corrections were",
+        " made according to new EXFOR rules."
+      ]
+    },
+    {
+      "x4_code": "(20240706A)",
+      "free_txt": [
+        " SD: Corrections in all Subents. Subents",
+        "002, 003 were split in several Subents."
       ]
     }
   ],
   "bib_record": {
-    "title": "Study of isotope dependence of the yield of N-17 nuclei from targets of Mg,S,Ca,Ni and Sn isotopes",
+    "title": "Isotope dependence of the yield of 17N nuclei from targets of the isotopes Mg, S, Ca, Ni and Sn",
     "authors": [
       {
         "name": "L.Kh.Batist"
@@ -39,17 +46,17 @@
     ],
     "references": [
       {
-        "x4_code": "(J,YF,25,1140,197706)",
-        "free_txt": [],
+        "x4_code": "(J,SNP,25,605,1977)",
+        "free_txt": [
+          " English translation"
+        ],
         "publication_year": "1977",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,SNP,25,605,1977)",
-        "free_txt": [
-          " english translation"
-        ],
+        "x4_code": "(J,YF,25,1140,1977)",
+        "free_txt": [],
         "publication_year": "1977",
         "doi": null,
         "pointer": "0"
@@ -67,18 +74,35 @@
   },
   "reactions": {
     "002": {
-      "A": {
+      "0": {
         "x4_code": "(12-MG-24(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "12-MG-24",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
+            "target": "12-MG-24",
+            "process": "P,X",
+            "sf49": "7-N-17,,SIG",
+            "sf4": "7-N-17",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(12-MG-24(P,X)7-N-17,,SIG)"
+          }
+        ],
+        "operator": null,
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "((12-MG-24(P,X)7-N-17,,SIG)/(12-MG-26(P,X)7-N-17,,SIG))",
+        "children": [
+          {
+            "x4_code": "(12-MG-24(P,X)7-N-17,,SIG)",
             "target": "12-MG-24",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -88,51 +112,9 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          }
-        ],
-        "type": null,
-        "free_text": "",
-        "pointer": "A"
-      },
-      "B": {
-        "x4_code": "(12-MG-25(P,X)7-N-17,,SIG)",
-        "children": [
+          },
           {
-            "code": [
-              "12-MG-25",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
-            "target": "12-MG-25",
-            "process": "P,X",
-            "sf49": "7-N-17,,SIG",
-            "sf4": "7-N-17",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          }
-        ],
-        "type": null,
-        "free_text": "",
-        "pointer": "B"
-      },
-      "C": {
-        "x4_code": "(12-MG-26(P,X)7-N-17,,SIG)",
-        "children": [
-          {
-            "code": [
-              "12-MG-26",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(12-MG-26(P,X)7-N-17,,SIG)",
             "target": "12-MG-26",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -144,22 +126,70 @@
             "sf9": null
           }
         ],
-        "type": null,
+        "math_expression": [
+          "Divide",
+          "((12-MG-24(P,X)7-N-17,,SIG)",
+          "(12-MG-26(P,X)7-N-17,,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
-        "pointer": "C"
-      },
-      "D": {
-        "x4_code": "(16-S-32(P,X)7-N-17,,SIG)",
+        "pointer": "0"
+      }
+    },
+    "004": {
+      "0": {
+        "x4_code": "(12-MG-25(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "16-S-32",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
+            "target": "12-MG-25",
+            "process": "P,X",
+            "sf49": "7-N-17,,SIG",
+            "sf4": "7-N-17",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(12-MG-25(P,X)7-N-17,,SIG)"
+          }
+        ],
+        "operator": null,
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "005": {
+      "0": {
+        "x4_code": "(12-MG-26(P,X)7-N-17,,SIG)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "12-MG-26",
+            "process": "P,X",
+            "sf49": "7-N-17,,SIG",
+            "sf4": "7-N-17",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(12-MG-26(P,X)7-N-17,,SIG)"
+          }
+        ],
+        "operator": null,
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(16-S-32(P,X)7-N-17,,SIG)",
+        "math_expression": null,
+        "children": [
+          {
             "target": "16-S-32",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -168,25 +198,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(16-S-32(P,X)7-N-17,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "D"
-      },
-      "E": {
+        "pointer": "0"
+      }
+    },
+    "007": {
+      "0": {
         "x4_code": "(16-S-34(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "16-S-34",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
             "target": "16-S-34",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -195,25 +222,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(16-S-34(P,X)7-N-17,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "E"
-      },
-      "F": {
+        "pointer": "0"
+      }
+    },
+    "008": {
+      "0": {
         "x4_code": "(20-CA-40(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "20-CA-40",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
             "target": "20-CA-40",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -222,25 +246,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(20-CA-40(P,X)7-N-17,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "F"
-      },
-      "G": {
+        "pointer": "0"
+      }
+    },
+    "009": {
+      "0": {
         "x4_code": "(20-CA-44(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "20-CA-44",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
             "target": "20-CA-44",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -249,25 +270,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(20-CA-44(P,X)7-N-17,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "G"
-      },
-      "H": {
+        "pointer": "0"
+      }
+    },
+    "010": {
+      "0": {
         "x4_code": "(28-NI-58(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-58",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
             "target": "28-NI-58",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -276,25 +294,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-58(P,X)7-N-17,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "H"
-      },
-      "I": {
+        "pointer": "0"
+      }
+    },
+    "011": {
+      "0": {
         "x4_code": "(28-NI-62(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-62",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
             "target": "28-NI-62",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -303,25 +318,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-62(P,X)7-N-17,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "I"
-      },
-      "K": {
+        "pointer": "0"
+      }
+    },
+    "012": {
+      "0": {
         "x4_code": "(28-NI-64(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "28-NI-64",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
             "target": "28-NI-64",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -330,25 +342,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(28-NI-64(P,X)7-N-17,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "K"
-      },
-      "L": {
+        "pointer": "0"
+      }
+    },
+    "013": {
+      "0": {
         "x4_code": "(50-SN-112(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "50-SN-112",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
             "target": "50-SN-112",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -357,25 +366,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(50-SN-112(P,X)7-N-17,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "L"
-      },
-      "M": {
+        "pointer": "0"
+      }
+    },
+    "014": {
+      "0": {
         "x4_code": "(50-SN-116(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "50-SN-116",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
             "target": "50-SN-116",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -384,25 +390,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(50-SN-116(P,X)7-N-17,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "M"
-      },
-      "N": {
+        "pointer": "0"
+      }
+    },
+    "015": {
+      "0": {
         "x4_code": "(50-SN-119(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "50-SN-119",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
             "target": "50-SN-119",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -411,25 +414,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(50-SN-119(P,X)7-N-17,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "N"
-      },
-      "W": {
+        "pointer": "0"
+      }
+    },
+    "016": {
+      "0": {
         "x4_code": "(50-SN-120(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "50-SN-120",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
             "target": "50-SN-120",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -438,25 +438,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(50-SN-120(P,X)7-N-17,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "W"
-      },
-      "P": {
+        "pointer": "0"
+      }
+    },
+    "017": {
+      "0": {
         "x4_code": "(50-SN-122(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "50-SN-122",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
             "target": "50-SN-122",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -465,25 +462,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(50-SN-122(P,X)7-N-17,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "P"
-      },
-      "Q": {
+        "pointer": "0"
+      }
+    },
+    "018": {
+      "0": {
         "x4_code": "(50-SN-124(P,X)7-N-17,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "50-SN-124",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
             "target": "50-SN-124",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -492,73 +486,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(50-SN-124(P,X)7-N-17,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "Q"
+        "pointer": "0"
       }
     },
-    "003": {
-      "S": {
-        "x4_code": "((12-MG-24(P,X)7-N-17,,SIG)/(12-MG-26(P,X)7-N-17,,SIG))",
-        "children": [
-          {
-            "code": [
-              "12-MG-24",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
-            "target": "12-MG-24",
-            "process": "P,X",
-            "sf49": "7-N-17,,SIG",
-            "sf4": "7-N-17",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": [
-              "12-MG-26",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
-            "target": "12-MG-26",
-            "process": "P,X",
-            "sf49": "7-N-17,,SIG",
-            "sf4": "7-N-17",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          }
-        ],
-        "type": "/",
-        "free_text": "",
-        "pointer": "S"
-      },
-      "T": {
+    "019": {
+      "0": {
         "x4_code": "((12-MG-24(P,X)7-N-17,,SIG)/(12-MG-25(P,X)7-N-17,,SIG))",
         "children": [
           {
-            "code": [
-              "12-MG-24",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(12-MG-24(P,X)7-N-17,,SIG)",
             "target": "12-MG-24",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -570,14 +513,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "12-MG-25",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(12-MG-25(P,X)7-N-17,,SIG)",
             "target": "12-MG-25",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -589,22 +525,22 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((12-MG-24(P,X)7-N-17,,SIG)",
+          "(12-MG-25(P,X)7-N-17,,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
-        "pointer": "T"
-      },
-      "V": {
+        "pointer": "0"
+      }
+    },
+    "020": {
+      "0": {
         "x4_code": "((16-S-32(P,X)7-N-17,,SIG)/(16-S-34(P,X)7-N-17,,SIG))",
         "children": [
           {
-            "code": [
-              "16-S-32",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(16-S-32(P,X)7-N-17,,SIG)",
             "target": "16-S-32",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -616,14 +552,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "16-S-34",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(16-S-34(P,X)7-N-17,,SIG)",
             "target": "16-S-34",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -635,22 +564,22 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((16-S-32(P,X)7-N-17,,SIG)",
+          "(16-S-34(P,X)7-N-17,,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
-        "pointer": "V"
-      },
-      "W": {
+        "pointer": "0"
+      }
+    },
+    "021": {
+      "0": {
         "x4_code": "((20-CA-40(P,X)7-N-17,,SIG)/(20-CA-44(P,X)7-N-17,,SIG))",
         "children": [
           {
-            "code": [
-              "20-CA-40",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(20-CA-40(P,X)7-N-17,,SIG)",
             "target": "20-CA-40",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -662,14 +591,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "20-CA-44",
-              [
-                "P,X"
-              ],
-              "7-N-17,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(20-CA-44(P,X)7-N-17,,SIG)",
             "target": "20-CA-44",
             "process": "P,X",
             "sf49": "7-N-17,,SIG",
@@ -681,120 +603,60 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((20-CA-40(P,X)7-N-17,,SIG)",
+          "(20-CA-44(P,X)7-N-17,,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
-        "pointer": "W"
+        "pointer": "0"
       }
     }
   },
   "data_tables": {
     "001": {
-      "common": null
-    },
-    "002": {
       "common": {
         "heads": [
-          "DATA-ERR"
-        ],
-        "units": [
-          "PER-CENT"
-        ],
-        "data": [
-          [
-            10.0
-          ]
-        ]
-      },
-      "data": {
-        "heads": [
           "EN",
-          "DATA      A",
-          "DATA      B",
-          "DATA      C",
-          "DATA      D",
-          "DATA      E",
-          "DATA      F",
-          "DATA      G",
-          "DATA      H",
-          "DATA      I",
-          "DATA      K",
-          "DATA      L",
-          "DATA      M",
-          "DATA      N",
-          "DATA      W",
-          "DATA      P",
-          "DATA      Q"
+          "MONIT",
+          "ERR-1"
         ],
         "units": [
           "GEV",
           "MB",
-          "MB",
-          "MB",
-          "MB",
-          "MB",
-          "MB",
-          "MB",
-          "MB",
-          "MB",
-          "MB",
-          "MB",
-          "MB",
-          "MB",
-          "MB",
-          "MB",
-          "MB"
+          "PER-CENT"
         ],
         "data": [
           [
             1.0
           ],
           [
+            0.66
+          ],
+          [
+            10.0
+          ]
+        ]
+      }
+    },
+    "002": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
             0.31
           ],
           [
-            0.74
-          ],
-          [
-            1.44
-          ],
-          [
-            0.26
-          ],
-          [
-            0.55
-          ],
-          [
-            0.16
-          ],
-          [
-            0.44
-          ],
-          [
-            0.08
-          ],
-          [
-            0.15
-          ],
-          [
-            0.2
-          ],
-          [
-            0.11
-          ],
-          [
-            0.14
-          ],
-          [
-            0.2
-          ],
-          [
-            0.18
-          ],
-          [
-            0.23
-          ],
-          [
-            0.26
+            15.0
           ]
         ]
       }
@@ -803,49 +665,392 @@
       "common": null,
       "data": {
         "heads": [
-          "EN",
-          "DATA      S",
-          "DATA-ERR  S",
-          "DATA      T",
-          "DATA-ERR  T",
-          "DATA      V",
-          "DATA-ERR  V",
-          "DATA      W",
-          "DATA-ERR  W"
+          "DATA",
+          "DATA-ERR"
         ],
         "units": [
-          "GEV",
-          "NO-DIM",
-          "NO-DIM",
-          "NO-DIM",
-          "NO-DIM",
-          "NO-DIM",
-          "NO-DIM",
           "NO-DIM",
           "NO-DIM"
         ],
         "data": [
           [
-            1.0
-          ],
-          [
             0.21
           ],
           [
             0.03
+          ]
+        ]
+      }
+    },
+    "004": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.74
           ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "005": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            1.44
+          ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "006": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.26
+          ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "007": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.55
+          ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "008": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.16
+          ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "009": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.44
+          ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "010": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.08
+          ],
+          [
+            10.0
+          ]
+        ]
+      }
+    },
+    "011": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.15
+          ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "012": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.2
+          ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "013": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.11
+          ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "014": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.14
+          ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "015": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.2
+          ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "016": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.18
+          ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "017": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.23
+          ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "018": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MB",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.26
+          ],
+          [
+            15.0
+          ]
+        ]
+      }
+    },
+    "019": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "NO-DIM",
+          "NO-DIM"
+        ],
+        "data": [
           [
             0.42
           ],
           [
             0.06
-          ],
+          ]
+        ]
+      }
+    },
+    "020": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "NO-DIM",
+          "NO-DIM"
+        ],
+        "data": [
           [
             0.47
           ],
           [
             0.07
-          ],
+          ]
+        ]
+      }
+    },
+    "021": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "NO-DIM",
+          "NO-DIM"
+        ],
+        "data": [
           [
             0.37
           ],
@@ -859,21 +1064,21 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "analysis": [
-          {
-            "x4_code": "(AREA)",
-            "free_txt": []
-          }
-        ],
         "add-res": [
           {
             "x4_code": "(THEO)",
             "free_txt": []
           }
         ],
+        "decay-data": [
+          {
+            "x4_code": "(7-N-17,4.1SEC,DN)",
+            "free_txt": []
+          }
+        ],
         "decay-mon": [
           {
-            "x4_code": "(7-N-17,4.1SEC,B-)",
+            "x4_code": "(7-N-17,4.1SEC,DN)",
             "free_txt": []
           }
         ],
@@ -881,24 +1086,17 @@
           {
             "x4_code": "(SCIN)",
             "free_txt": [
-              ".Loaded by boron. Detector was placed in",
+              " Loaded by boron. Detector was placed in",
               "paraffin moderator."
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(ERR-1)",
             "free_txt": [
-              "The error of experimental results is +-10%.",
-              "The given error, including that of normalization, is",
-              " +-15%."
-            ]
-          },
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              ".The error is reported by authors.See above."
+              " The error of experimental results excluding",
+              "normalization error"
             ]
           }
         ],
@@ -912,19 +1110,28 @@
           {
             "x4_code": "(EXTB,SITA,MOSEP)",
             "free_txt": [
-              ".Ep=1GeV."
+              " Ep = 1 GeV.",
+              "The target activity was measured for 16 sec, after",
+              "which the activity of an aluminum monitor bombarded",
+              "together with the target under study was measured."
             ]
           }
         ],
         "monit-ref": [
           {
-            "x4_code": "(,I.DOSTROVSKY+,J,PR,139,B1513,1965)",
+            "x4_code": "(C0236009,I.Dostrovsky+,J,PR,139,B1513,1965)",
             "free_txt": []
           }
         ],
         "monitor": [
           {
             "x4_code": "(13-AL-27(P,X)7-N-17,,SIG)",
+            "free_txt": []
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(R,,C.M.Lederer+,B,LEDERER-6,,,1967)",
             "free_txt": []
           }
         ],
@@ -937,31 +1144,32 @@
               "Sn-124."
             ]
           }
-        ]
-      }
-    },
-    "002": {
-      "0": {
-        "decay-data": [
-          {
-            "x4_code": "(7-N-17,4.1SEC,B-)",
-            "free_txt": [
-              ".From tables of isotopes, ed.",
-              "by C.M.Lederer et al., New York,1967."
-            ]
-          }
-        ],
-        "rad-det": [
-          {
-            "x4_code": "(7-N-17,DN)",
-            "free_txt": []
-          }
         ],
         "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
-              ".By I.Kh.Batist."
+              " By I.Kh.Batist."
+            ]
+          }
+        ]
+      }
+    },
+    "002": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
             ]
           }
         ]
@@ -969,28 +1177,416 @@
     },
     "003": {
       "0": {
-        "decay-data": [
+        "err-analys": [
           {
-            "x4_code": "(7-N-17,4.1SEC,B-)",
-            "free_txt": []
-          }
-        ],
-        "rad-det": [
-          {
-            "x4_code": "(7-N-17,DN)",
-            "free_txt": []
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No information about source of uncertainty"
+            ]
           }
         ],
         "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.II"
+            ]
+          },
           {
             "x4_code": "(DEP,A0013002)",
             "free_txt": []
           },
           {
-            "x4_code": "(APRVD)",
+            "x4_code": "(DEP,A0013004)",
+            "free_txt": []
+          }
+        ]
+      }
+    },
+    "004": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
             "free_txt": [
-              ".By l.Kh.Batist."
+              " Total error (ERR-1 + error in normalization)"
             ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "005": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "006": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "007": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "008": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "009": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "010": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "011": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "012": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "013": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "014": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "015": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "016": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "017": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "018": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error (ERR-1 + error in normalization)"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "019": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No information about source of uncertainty"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.II"
+            ]
+          },
+          {
+            "x4_code": "(DEP,A0013002)",
+            "free_txt": [
+              " 12-MG-24(P,X)7-N-17"
+            ]
+          },
+          {
+            "x4_code": "(DEP,A0013004)",
+            "free_txt": [
+              " 12-MG-25(P,X)7-N-17"
+            ]
+          }
+        ]
+      }
+    },
+    "020": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No information about source of uncertainty"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.II"
+            ]
+          },
+          {
+            "x4_code": "(DEP,A0013006)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(DEP,A0013007)",
+            "free_txt": []
+          }
+        ]
+      }
+    },
+    "021": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No information about source of uncertainty"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.Kh.Batist+,J,SNP,25,605,1977)",
+            "free_txt": [
+              " Tbl.II"
+            ]
+          },
+          {
+            "x4_code": "(DEP,A0013008)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(DEP,A0013009)",
+            "free_txt": []
           }
         ]
       }

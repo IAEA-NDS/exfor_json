@@ -1,12 +1,18 @@
 {
   "entry": "A0849",
-  "last_updated": "2010-06-10",
-  "number_of_revisions": "1",
+  "last_updated": "2026-04-01",
+  "number_of_revisions": "2",
   "histories": [
     {
       "x4_code": "(20100402C)",
       "free_txt": [
         " SB"
+      ]
+    },
+    {
+      "x4_code": "(20260205A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -47,11 +53,11 @@
     "institutes": [
       {
         "x4_code": "(4ZZZDUB)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(3POLIFJ)",
-        "free_txt": []
+        "free_txt": ""
       }
     ],
     "references": [
@@ -61,37 +67,18 @@
         "publication_year": "2004",
         "doi": null,
         "pointer": "0"
-      },
-      {
-        "x4_code": "(J,NP/A,701,29,2002)",
-        "free_txt": [
-          " Cross sectiions obtained for the",
-          "He-8+He-4 elastic scattering were reported in D0218002."
-        ],
-        "publication_year": "2002",
-        "doi": null,
-        "pointer": "0"
       }
     ],
     "facilities": [
       {
         "x4_code": "(CYCLO,4ZZZDUB)",
         "free_txt": [
-          "the U-400M cyclotron of FLNR"
+          "the U-400M cyclotron of FLNR",
+          "The selection of He-8 and He-6 ions was realized by",
+          "double achromatic magnetic separator ACCULINNA"
         ],
         "pointer": "0",
         "facility_type": "(CYCLO)",
-        "institute": "(4ZZZDUB)"
-      },
-      {
-        "x4_code": "(PRJFS,4ZZZDUB)",
-        "free_txt": [
-          " The selection of He-8 and He-6 ions was",
-          "realized by double achromatic magnetic separator",
-          "ACCULINNA"
-        ],
-        "pointer": "0",
-        "facility_type": "(PRJFS)",
         "institute": "(4ZZZDUB)"
       }
     ]
@@ -99,38 +86,12 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "((1-H-1(2-HE-8,T)2-HE-6,PAR,DA)=(2-HE-8(P,T)2-HE-6,PAR,DA,RSD))",
+        "x4_code": "((1-H-1(2-HE-8,T)2-HE-6,PAR,DA,RSD)=(2-HE-8(P,T)2-HE-6,PAR,DA))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "2-HE-8,T"
-              ],
-              "2-HE-6,PAR,DA"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(2-HE-8,T)2-HE-6,PAR,DA,RSD)",
             "target": "1-H-1",
             "process": "2-HE-8,T",
-            "sf49": "2-HE-6,PAR,DA",
-            "sf4": "2-HE-6",
-            "sf5": "PAR",
-            "sf6": "DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": [
-              "2-HE-8",
-              [
-                "P,T"
-              ],
-              "2-HE-6,PAR,DA,RSD"
-            ],
-            "type": null,
-            "target": "2-HE-8",
-            "process": "P,T",
             "sf49": "2-HE-6,PAR,DA,RSD",
             "sf4": "2-HE-6",
             "sf5": "PAR",
@@ -138,9 +99,26 @@
             "sf7": "RSD",
             "sf8": null,
             "sf9": null
+          },
+          {
+            "x4_code": "(2-HE-8(P,T)2-HE-6,PAR,DA)",
+            "target": "2-HE-8",
+            "process": "P,T",
+            "sf49": "2-HE-6,PAR,DA",
+            "sf4": "2-HE-6",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-1(2-HE-8,T)2-HE-6,PAR,DA,RSD)",
+          "(2-HE-8(P,T)2-HE-6,PAR,DA))"
+        ],
+        "operator": "Equal",
         "free_text": "",
         "pointer": "0"
       }
@@ -359,7 +337,7 @@
             "x4_code": "(MAGSP)",
             "free_txt": [
               " The spectrometer ACCULINNA was used to separate",
-              "He-8 from all other reaction products."
+              "8He from all other reaction products."
             ]
           },
           {
@@ -378,15 +356,9 @@
           {
             "x4_code": "(CYCLO,4ZZZDUB)",
             "free_txt": [
-              "the U-400M cyclotron of FLNR"
-            ]
-          },
-          {
-            "x4_code": "(PRJFS,4ZZZDUB)",
-            "free_txt": [
-              " The selection of He-8 and He-6 ions was",
-              "realized by double achromatic magnetic separator",
-              "ACCULINNA"
+              "the U-400M cyclotron of FLNR",
+              "The selection of He-8 and He-6 ions was realized by",
+              "double achromatic magnetic separator ACCULINNA"
             ]
           }
         ],
@@ -394,20 +366,26 @@
           {
             "x4_code": null,
             "free_txt": [
-              "The secondary beam of He-8 was obtained via the",
+              "The secondary beam of 8He was obtained via the",
               "bombardment of a beryllium target of a thickness of",
-              "350 mg/cm**2 by a 35 MeV/A primary beam of B-11."
+              "350 mg/cm2 by a 35 MeV/A primary beam of 11B."
             ]
           }
         ],
         "method": [
           {
-            "x4_code": "(EDE)",
+            "x4_code": "(EDE,TOF)",
             "free_txt": []
-          },
+          }
+        ],
+        "rel-ref": [
           {
-            "x4_code": "(TOF)",
-            "free_txt": []
+            "x4_code": "(O,D0218002,R.Wolski+,J,NP/A,701,29,2002)",
+            "free_txt": [
+              " Cross",
+              "sections obtained for the 8He + 4He elastic",
+              "scattering were reported in D0218002."
+            ]
           }
         ],
         "sample": [
@@ -418,42 +396,16 @@
               "25-30 K, were used."
             ]
           }
-        ],
-        "status": [
-          {
-            "x4_code": "(CURVE)",
-            "free_txt": [
-              ".By CAJAD."
-            ]
-          }
         ]
       }
     },
     "002": {
       "0": {
-        "en-sec": [
-          {
-            "x4_code": "(E-LVL,2-HE-6)",
-            "free_txt": []
-          }
-        ],
         "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              ".The error is reported by authors on fig."
-            ]
-          },
-          {
-            "x4_code": "(ANG-ERR-D)",
-            "free_txt": [
-              ".Digitizing error of angle."
-            ]
-          },
-          {
-            "x4_code": "(ERR-DIG)",
-            "free_txt": [
-              ".Digitizing error of DATA"
+              " No information about source of uncertainty"
             ]
           }
         ],
@@ -465,6 +417,14 @@
           {
             "x4_code": "(2-HE-6,E-LVL=1.797,SPIN=2.,PARITY=+1.)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE,,G.M.Ter-Akopian+,J,NP/A,734,295,2004)",
+            "free_txt": [
+              " Fig.2"
+            ]
           }
         ]
       }

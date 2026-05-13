@@ -1,7 +1,7 @@
 {
   "entry": "A0156",
-  "last_updated": "2009-12-24",
-  "number_of_revisions": "4",
+  "last_updated": "2026-03-17",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(20010526C)",
@@ -10,12 +10,18 @@
     {
       "x4_code": "(20090921A)",
       "free_txt": [
-        " BIB section upgrated"
+        " BIB section updated"
+      ]
+    },
+    {
+      "x4_code": "(20260126A)",
+      "free_txt": [
+        " SD: Corrections in both Subents."
       ]
     }
   ],
   "bib_record": {
-    "title": "Further measurement of the 7-Be(p,g)8-B cross section at low energies with the coulomb dissociation of 8-B.",
+    "title": "Further measurement of the 7Be(p,gamma)8B cross section at low energies with the coulomb dissociation of 8B",
     "authors": [
       {
         "name": "T.Kikuchi"
@@ -102,33 +108,27 @@
     "institutes": [
       {
         "x4_code": "(2JPNYOK)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(2JPNIPC)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(2JPNTOK)",
-        "free_txt": [
-          " Department of physics and centre of nuclear",
-          "study."
-        ]
+        "free_txt": ""
       },
       {
-        "x4_code": "(1USAUSA)",
-        "free_txt": [
-          " Department of physics, university of",
-          "Connecticut"
-        ]
+        "x4_code": "(1USAUCO)",
+        "free_txt": ""
       },
       {
         "x4_code": "(1USAYAL)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(2BLGLVN)",
-        "free_txt": []
+        "free_txt": ""
       }
     ],
     "references": [
@@ -142,13 +142,13 @@
     ],
     "facilities": [
       {
-        "x4_code": "(ISOCY,2JPNJCL)",
+        "x4_code": "(ISOCY,2JPNIPC)",
         "free_txt": [
           " radioactive beam line"
         ],
         "pointer": "0",
         "facility_type": "(ISOCY)",
-        "institute": "(2JPNJCL)"
+        "institute": "(2JPNIPC)"
       }
     ]
   },
@@ -156,16 +156,9 @@
     "002": {
       "0": {
         "x4_code": "(4-BE-7(P,G)5-B-8,,SIG,,SFC,DERIV)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "4-BE-7",
-              [
-                "P,G"
-              ],
-              "5-B-8,,SIG,,SFC,DERIV"
-            ],
-            "type": null,
             "target": "4-BE-7",
             "process": "P,G",
             "sf49": "5-B-8,,SIG,,SFC,DERIV",
@@ -174,10 +167,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "SFC",
-            "sf9": "DERIV"
+            "sf9": "DERIV",
+            "operator": null,
+            "x4_code": "(4-BE-7(P,G)5-B-8,,SIG,,SFC,DERIV)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -185,7 +180,19 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-1"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            2.0
+          ]
+        ]
+      }
     },
     "002": {
       "common": {
@@ -205,7 +212,7 @@
         "heads": [
           "EN-CM",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
@@ -275,57 +282,65 @@
               "are made for the loss of fragment due to the reactions",
               "in the detector material (7% of the total yield), the",
               "dissociation reaction feeding the 429 keV state of 7-Be",
-              " (5% on an average), and the pile-up rejection (2%).",
-              "these corrections have an overall systematic",
-              "uncertainty estimated to Be 2% of the total yield"
+              " (5% on an average), and the pile-up rejection (2%)."
             ]
           }
         ],
         "detector": [
           {
-            "x4_code": "(NAICR)",
-            "free_txt": [
-              " Na-I detector area"
-            ]
-          },
-          {
-            "x4_code": "(SCIN)",
+            "x4_code": "(NAICR,SCIN)",
             "free_txt": [
               " E-dE plastic detector hodoscope.",
-              "the detection efficiency is evaluated by Monte-Carlo",
-              "simulation."
+              "The detection efficiency is evaluated by Monte-Carlo",
+              "simulation.",
+              "The detection system consisted of a dE-E plastic",
+              "scintillator hodoscope and a NaI(Tl) detector",
+              "array DALI (see REL-REF)."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " An overall systematic uncertainty in",
+              "corrections"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(ISOCY,2JPNJCL)",
+            "x4_code": "(ISOCY,2JPNIPC)",
             "free_txt": [
               " radioactive beam line"
             ]
           }
         ],
-        "method": [
-          {
-            "x4_code": "(EXTB)",
-            "free_txt": [
-              " 8-B beam of 2.E+4 1/sec"
-            ]
-          },
-          {
-            "x4_code": "(SITA)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(EDE)",
-            "free_txt": []
-          }
-        ],
-        "sample": [
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
-              "50 milligramm/cm*2 208-Pb target"
+              "Secondary 8B beams of 2x10**4/s bombarded a 50 mg/cm2",
+              "208Pb target."
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(EXTB,SITA,EDE)",
+            "free_txt": [
+              "The dE-E system detected the reaction products, proton",
+              "and 7Be, in coincidence, and the NaI(Tl) was used for",
+              "measuring the gamma-rays from the first excited state",
+              "of 7Be at 429 keV."
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(I,,T.Nishio+,P,A-JCL-29,1996)",
+            "free_txt": [
+              " detector array DALI"
             ]
           }
         ],
@@ -333,14 +348,8 @@
           {
             "x4_code": "(UNOBT)",
             "free_txt": [
-              " 20-apr-2001 the letter has been sent to",
-              "T.Motobayashi.  A reply is absent."
-            ]
-          },
-          {
-            "x4_code": "(CURVE)",
-            "free_txt": [
-              ".By Cajad"
+              " 20-Apr-2001 the letter has been sent to",
+              "T.Motobayashi. A reply is absent."
             ]
           }
         ]
@@ -348,26 +357,27 @@
     },
     "002": {
       "0": {
-        "comment": [
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
-              "*By authors*.Derived from coulomb breakup",
-              "Pb-208(5-B-8,p+4-Be-7)"
+              "Derived from Coulomb breakup of Pb-208(8B,p+7B)."
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(EN-ERR-DIG)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              ".Digitizing error of energy beam."
+              " No information about source of uncertainty"
             ]
-          },
+          }
+        ],
+        "status": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(CURVE,,T.Kikuchi+,J,EPJ/A,3,213,1998)",
             "free_txt": [
-              ".The error is shown on figure"
+              " Fig. 1"
             ]
           }
         ]

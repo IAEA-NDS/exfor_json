@@ -1,7 +1,7 @@
 {
   "entry": "A1274",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-11-03",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19871110C)",
@@ -13,6 +13,13 @@
       "x4_code": "(19990315U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20250907A)",
+      "free_txt": [
+        " SD: Corrections in all Subents.",
+        "Subent 003 added."
       ]
     }
   ],
@@ -34,7 +41,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,CJP,58,(10),1496,198010)",
+        "x4_code": "(J,CJP,58,1496,1980)",
         "free_txt": [],
         "publication_year": "1980",
         "doi": null,
@@ -43,132 +50,238 @@
     ],
     "facilities": [
       {
-        "x4_code": "(DYNAM)",
+        "x4_code": "(DYNAM,1CANMON)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(DYNAM)",
-        "institute": null
+        "institute": "(1CANMON)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-3(P,G)2-HE-4,,DA,,CS2/REL,EXP)",
+        "x4_code": "(1-H-3(P,G)2-HE-4,,DA,,CS2/RSD)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-3",
-              [
-                "P,G"
-              ],
-              "2-HE-4,,DA,,CS2/REL,EXP"
-            ],
-            "type": null,
             "target": "1-H-3",
             "process": "P,G",
-            "sf49": "2-HE-4,,DA,,CS2/REL,EXP",
+            "sf49": "2-HE-4,,DA,,CS2/RSD",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
-            "sf8": "CS2/REL",
-            "sf9": "EXP"
+            "sf8": "CS2/RSD",
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-3(P,G)2-HE-4,,DA,,CS2/RSD)"
           }
         ],
-        "type": null,
-        "free_text": " Coefficients ofthe angular distribution of the forma1+a2*sin(theta)**2+a3*cos(theta)*sin**2(theta)",
+        "operator": null,
+        "free_text": " Coefficients ofthe angular distribution of the forma0+a1*sin(theta)**2+a2*cos(theta)*sin(theta)**2+a3*sin(theta)**2*cos(theta)**2. However, since theaccuracy of the data was not sufficient to drawdefinite conclusions for the coefficient a3, theleast-squares fits were repeated retaining only thefirst three terms.",
+        "pointer": "0"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-3(P,G)2-HE-4,,DA,,RSD)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "1-H-3",
+            "process": "P,G",
+            "sf49": "2-HE-4,,DA,,RSD",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": "RSD",
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-3(P,G)2-HE-4,,DA,,RSD)"
+          }
+        ],
+        "operator": null,
+        "free_text": "",
         "pointer": "0"
       }
     }
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-1"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            7.0
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
       "data": {
         "heads": [
-          "EN",
           "NUMBER",
+          "EN",
           "DATA-CM",
           "ERR-T"
         ],
         "units": [
-          "MEV",
           "NO-DIM",
+          "MEV",
           "NO-DIM",
           "NO-DIM"
         ],
         "data": [
           [
-            0.46,
-            0.46,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          [
             0.46,
             0.5,
-            0.5,
-            0.5,
             0.62,
-            0.62,
-            0.62,
-            0.77,
-            0.77,
             0.77,
             0.93,
+            0.46,
+            0.5,
+            0.62,
+            0.77,
             0.93,
+            0.46,
+            0.5,
+            0.62,
+            0.77,
             0.93
           ],
           [
-            1.0,
-            2.0,
-            3.0,
-            1.0,
-            2.0,
-            3.0,
-            1.0,
-            2.0,
-            3.0,
-            1.0,
-            2.0,
-            3.0,
-            1.0,
-            2.0,
-            3.0
-          ],
-          [
             0.0165,
-            0.97,
-            0.081,
             0.0135,
-            0.98,
-            0.064,
             0.012,
-            0.99,
-            0.074,
             0.0109,
-            1.01,
-            0.08,
             0.0078,
+            0.97,
+            0.98,
             0.99,
+            1.01,
+            0.99,
+            0.081,
+            0.064,
+            0.074,
+            0.08,
             0.102
           ],
           [
             0.0024,
-            0.02,
-            0.033,
             0.0015,
-            0.01,
-            0.018,
             0.0015,
-            0.01,
-            0.024,
             0.0015,
-            0.02,
-            0.036,
             0.0006,
+            0.02,
             0.01,
+            0.01,
+            0.02,
+            0.01,
+            0.033,
+            0.018,
+            0.024,
+            0.036,
             0.015
+          ]
+        ]
+      }
+    },
+    "003": {
+      "common": {
+        "heads": [
+          "EN",
+          "ANG-ERR-D",
+          "ERR-DIG"
+        ],
+        "units": [
+          "MEV",
+          "ADEG",
+          "NO-DIM"
+        ],
+        "data": [
+          [
+            0.46
+          ],
+          [
+            0.2
+          ],
+          [
+            0.002
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "ANG",
+          "DATA-CM",
+          "ERR-T"
+        ],
+        "units": [
+          "ADEG",
+          "NO-DIM",
+          "NO-DIM"
+        ],
+        "data": [
+          [
+            0.2,
+            15.1,
+            30.1,
+            45.4,
+            60.7,
+            81.0,
+            90.9,
+            105.8,
+            120.8,
+            136.0
+          ],
+          [
+            0.019,
+            0.092,
+            0.281,
+            0.532,
+            0.765,
+            0.957,
+            1.001,
+            0.894,
+            0.714,
+            0.461
+          ],
+          [
+            0.01,
+            0.015,
+            0.039,
+            0.067,
+            0.09,
+            0.057,
+            0.041,
+            0.049,
+            0.044,
+            0.031
           ]
         ]
       }
@@ -177,18 +290,63 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "The relative differential cross section of the",
+              "3H(p,gamma)4He reaction was determined by normalizing",
+              "at each angle, the gamma-ray yield of the moveable",
+              "NaI crystal to that recorded by the monitor crystal."
+            ]
+          }
+        ],
         "detector": [
           {
             "x4_code": "(NAICR)",
             "free_txt": [
               " Two 12.7 cm diam x 15.2 cm long crystal",
-              "rotating over the angular range from 0 to 135 degr."
+              "rotating over the angular range from 0 to 135 degr.",
+              "The monitor crystal was set at the fixed angle 90 degr.",
+              "with the direction of the proton beam."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " The error in the gamma-ray yield depended on",
+              "the angle: at backward angles it consisted mainly of",
+              "the statistical error (3-6%) ; at forward angles it",
+              "was the sum of ERR-1, ERR-2, ERR-S."
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " The error in the gamma-ray absorption in the",
+              "target holder (7%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-S,4.,10.)",
+            "free_txt": [
+              " statistical error (4-10%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2,2.,8.)",
+            "free_txt": [
+              " The uncertainty in the multiple",
+              "scattering correction at the angle 0. degr., estimated",
+              "to range from 2 to 8% depending on the proton energy."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(DYNAM)",
+            "x4_code": "(DYNAM,1CANMON)",
             "free_txt": []
           }
         ],
@@ -196,8 +354,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "The tritium targetconsisted of tritium gas absorbed in",
-              "a 0.94 mg/cm2 thick titanium layer,which had been",
+              "The tritium target consisted of tritium gas absorbed in",
+              "a 0.94 mg/cm2 thick titanium layer, which had been",
               "evaporated onto a gold backing"
             ]
           }
@@ -206,19 +364,23 @@
     },
     "002": {
       "0": {
-        "err-analys": [
-          {
-            "x4_code": "(ERR-T)",
-            "free_txt": [
-              " Total error"
-            ]
-          }
-        ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,W.Del Bianco+,J,CJP,58,1496,1980)",
             "free_txt": [
               " Table 1"
+            ]
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(CURVE,,W.Del Bianco+,J,CJP,58,1496,1980)",
+            "free_txt": [
+              " Fig.4"
             ]
           }
         ]

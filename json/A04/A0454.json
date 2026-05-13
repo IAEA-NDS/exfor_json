@@ -1,7 +1,7 @@
 {
   "entry": "A0454",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-08-19",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20021025C)",
@@ -17,6 +17,12 @@
       "x4_code": "(20031015U)",
       "free_txt": [
         " Last checking has been done."
+      ]
+    },
+    {
+      "x4_code": "(20250627A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -39,27 +45,27 @@
         "name": "Qjing Zhi"
       },
       {
-        "name": "Shizuko Ambe"
+        "name": "S.Ambe"
       },
       {
-        "name": "Yoshitaka Ohkubo"
+        "name": "Y.Ohkubo"
       },
       {
-        "name": "Fumitoshi Ambe"
+        "name": "F.Ambe"
       }
     ],
     "institutes": [
       {
         "x4_code": "(3CPRNRS)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(3CPRIMP)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
-        "x4_code": "(2JPNJCL)",
-        "free_txt": []
+        "x4_code": "(2JPNIPC)",
+        "free_txt": ""
       }
     ],
     "references": [
@@ -73,40 +79,35 @@
     ],
     "facilities": [
       {
-        "x4_code": "(CYCLO,2JPNJCL)",
+        "x4_code": "(CYCLO,2JPNIPC)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(CYCLO)",
-        "institute": "(2JPNJCL)"
+        "institute": "(2JPNIPC)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(29-CU-0(18-AR-40,X)ELEM/MASS,IND,SIG)",
+        "x4_code": "(29-CU-0(18-AR-40,X)ELEM/MASS,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "29-CU-0",
-              [
-                "18-AR-40,X"
-              ],
-              "ELEM/MASS,IND,SIG"
-            ],
-            "type": null,
             "target": "29-CU-0",
             "process": "18-AR-40,X",
-            "sf49": "ELEM/MASS,IND,SIG",
+            "sf49": "ELEM/MASS,,SIG",
             "sf4": "ELEM/MASS",
-            "sf5": "IND",
+            "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(29-CU-0(18-AR-40,X)ELEM/MASS,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -114,16 +115,9 @@
     "003": {
       "0": {
         "x4_code": "(29-CU-0(18-AR-40,X)ELEM/MASS,CUM,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "29-CU-0",
-              [
-                "18-AR-40,X"
-              ],
-              "ELEM/MASS,CUM,SIG"
-            ],
-            "type": null,
             "target": "29-CU-0",
             "process": "18-AR-40,X",
             "sf49": "ELEM/MASS,CUM,SIG",
@@ -132,10 +126,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(29-CU-0(18-AR-40,X)ELEM/MASS,CUM,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -145,14 +141,19 @@
     "001": {
       "common": {
         "heads": [
-          "EN"
+          "EN",
+          "ERR-2"
         ],
         "units": [
-          "MEV"
+          "MEV/A",
+          "PER-CENT"
         ],
         "data": [
           [
-            1540.0
+            40.0
+          ],
+          [
+            5.0
           ]
         ]
       }
@@ -165,7 +166,7 @@
           "MASS",
           "ISOMER",
           "DATA",
-          "ERR-T"
+          "ERR-1"
         ],
         "units": [
           "NO-DIM",
@@ -291,7 +292,7 @@
           "MASS",
           "ISOMER",
           "DATA",
-          "ERR-T"
+          "ERR-1"
         ],
         "units": [
           "NO-DIM",
@@ -435,17 +436,13 @@
       "0": {
         "analysis": [
           {
-            "x4_code": "(AREA,DECAY)",
+            "x4_code": "(DECAY)",
             "free_txt": []
           }
         ],
         "add-res": [
           {
-            "x4_code": "(RANGE)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(A-DIS)",
+            "x4_code": "(RANGE,A-DIS)",
             "free_txt": []
           }
         ],
@@ -464,10 +461,10 @@
               "not be produced due to Ca-38 decay. Therefore K-38 was",
               "moved to \"independent\" group too.",
               "3. Mn-52-m was moved to \"independent\" group because",
-              "production cross section of its pregnitor (Fe-52-g) is",
+              "production cross section of its progenitor (Fe-52g) is",
               "less than uncertainty of Mn-52-m production cross",
               "section.",
-              "4. Simirar reasons are base to move V-48 and Co-57",
+              "4. Similar reasons are base to move V-48 and Co-57",
               "production cross sections to \"independent\" group."
             ]
           }
@@ -480,49 +477,58 @@
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": null,
             "free_txt": [
-              " Data uncertainties are standard deviations,",
-              "including errors in analysis of gamma-ray spectra an in",
-              "resolution of the decay curves by the least-squares",
-              "method, and a 5% error in detector efficiencies."
+              "The uncertainty in the thickness of the copper target",
+              "is negligible, the uncertainty in beam current",
+              "measurement is not included."
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " The errors listed are standard deviations,",
+              "including errors from analysis of the gamma-ray",
+              "spectra, from resolution of the decay curves by",
+              "least-squared method, including"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Error from detector efficiency."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(CYCLO,2JPNJCL)",
+            "x4_code": "(CYCLO,2JPNIPC)",
             "free_txt": []
           }
         ],
         "method": [
           {
-            "x4_code": "(SITA)",
-            "free_txt": [
-              " The target stack consisted of an 18 milligramm/",
-              "cm**2 copper foil surrounded by two 14 milligramm/cm**2",
-              "aluminium catcher foils."
-            ]
+            "x4_code": "(STTA)",
+            "free_txt": []
           },
           {
             "x4_code": "(ACTIV)",
             "free_txt": [
-              " Two irradiations were performed, 5.2 and 60.2",
-              "minutes."
+              " Two irradiations were performed, 5.2 and",
+              "60.2 minutes."
             ]
           },
           {
             "x4_code": "(EXTB)",
             "free_txt": [
-              " The typical beam intensity was about 10",
-              "nano-ampere"
+              " The typical beam intensity was about 10 nA"
             ]
           },
           {
             "x4_code": "(GSPEC)",
             "free_txt": [
               " The samples from the short irradiation were",
-              "measured for approxmately 8 hours, commencing a few",
+              "measured for approximately 8 hours, commencing a few",
               "minutes after the end of bombardment. Those from the",
               "longer irradiation were measured for 4 weeks."
             ]
@@ -530,9 +536,26 @@
         ],
         "rel-ref": [
           {
-            "x4_code": "(R,,U.REUS+,J,AND,29,1,1983)",
+            "x4_code": "(R,,U.Reus+,J,AND,29,1,1983)",
             "free_txt": [
               " Decay data"
+            ]
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "The target stack consisted of an 18.0 mg/cm2 copper",
+              "foil surrounded by two 14.0 mg/cm2 Al catcher foils."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,Li Wenxin+,J,JRN,243,797,2000)",
+            "free_txt": [
+              " Tbl.1"
             ]
           }
         ]

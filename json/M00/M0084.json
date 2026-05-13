@@ -1,7 +1,7 @@
 {
   "entry": "M0084",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "5",
+  "last_updated": "2025-06-11",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19830610C)",
@@ -10,7 +10,7 @@
     {
       "x4_code": "(19910202A)",
       "free_txt": [
-        " Corrected by V.Varlamov, V.Mclane"
+        " Corrected by V.Varlamov, V.McLane"
       ]
     },
     {
@@ -27,6 +27,14 @@
       "free_txt": [
         " Corrected by V.Varlamov:  BRA substituted",
         " by BRS in line REACTION of SUBENTS 002 and 003."
+      ]
+    },
+    {
+      "x4_code": "(20250506A)",
+      "free_txt": [
+        " Corrected by V.Varlamov: INSTITUTE,",
+        " PART-DET, DETECTOR, ANALYSIS, STATUS, ERR-ANALYS,",
+        " AUTHOR lowercase."
       ]
     }
   ],
@@ -49,11 +57,11 @@
     "institutes": [
       {
         "x4_code": "(4RUSIFP)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(4RUSFEI)",
-        "free_txt": []
+        "free_txt": ""
       }
     ],
     "references": [
@@ -79,16 +87,9 @@
     "002": {
       "0": {
         "x4_code": "(92-U-235(G,F),,SIG,,BRS)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "G,F"
-              ],
-              ",,SIG,,BRS"
-            ],
-            "type": null,
             "target": "92-U-235",
             "process": "G,F",
             "sf49": ",,SIG,,BRS",
@@ -97,10 +98,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRS",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-235(G,F),,SIG,,BRS)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -108,16 +111,9 @@
     "003": {
       "0": {
         "x4_code": "(92-U-238(G,F),,SIG,,BRS)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "G,F"
-              ],
-              ",,SIG,,BRS"
-            ],
-            "type": null,
             "target": "92-U-238",
             "process": "G,F",
             "sf49": ",,SIG,,BRS",
@@ -126,10 +122,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRS",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-238(G,F),,SIG,,BRS)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -145,7 +143,7 @@
         "heads": [
           "EN",
           "DATA",
-          "ERR-S"
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
@@ -225,7 +223,7 @@
         "heads": [
           "EN",
           "DATA",
-          "ERR-S"
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
@@ -321,6 +319,17 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(UNFLD)",
+            "free_txt": [
+              " The unfolding of the reaction cross section",
+              " from  the  experimental reaction yield measured",
+              " using the direct fission fragment counting using",
+              " the Cook's method."
+            ]
+          }
+        ],
         "comment": [
           {
             "x4_code": null,
@@ -332,15 +341,17 @@
         ],
         "detector": [
           {
-            "x4_code": "(MAGSP)",
-            "free_txt": []
+            "x4_code": "(TRD)",
+            "free_txt": [
+              " Mica detectors."
+            ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-S)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Statistical errors only."
+              " Meam-root-squared uncertainties."
             ]
           }
         ],
@@ -362,23 +373,47 @@
             "free_txt": []
           }
         ],
-        "part-det": [
+        "rel-ref": [
           {
-            "x4_code": "(FF)",
-            "free_txt": []
+            "x4_code": "(M,,B.C.Cook,J,NIM,24,256,1963)",
+            "free_txt": [
+              " Method of cross section unfolding from the yield."
+            ]
           }
         ],
         "status": [
           {
             "x4_code": "(APRVD)",
             "free_txt": [
-              " by Yu.M.Tsipenyuk"
+              " By Yu.M.Tsipenyuk"
             ]
           }
         ]
       }
     },
-    "002": {},
-    "003": {}
+    "002": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.E.Zhuchko+,J,NIM,136,373,1976)",
+            "free_txt": [
+              " Data presented in Fig. 4."
+            ]
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.E.Zhuchko+,J,NIM,136,373,1976)",
+            "free_txt": [
+              " Data presented in Fig. 3."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

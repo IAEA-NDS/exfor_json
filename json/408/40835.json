@@ -1,7 +1,7 @@
 {
   "entry": "40835",
-  "last_updated": "2013-08-12",
-  "number_of_revisions": "4",
+  "last_updated": "2024-10-25",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19850219C)",
@@ -11,13 +11,19 @@
       "x4_code": "(20130225A)",
       "free_txt": [
         " M.M. Upper -> lower case correction.",
-        "Dates were corrected for 4-digits year.",
-        "BIB information was updated."
+        " Dates were corrected for 4-digits year.",
+        " BIB information was updated."
+      ]
+    },
+    {
+      "x4_code": "(20240809A)",
+      "free_txt": [
+        " On. ERR-ANALYS and COMMON section updated."
       ]
     }
   ],
   "bib_record": {
-    "title": " Measurement of the Np-237 and U-235 fission cross-sections ratio by the isotopic delution method",
+    "title": "Measurement of the 237Np7 and 235U fission cross-section ratio by the isotopic dilution method",
     "authors": [
       {
         "name": "A.A.Goverdovskij"
@@ -49,18 +55,18 @@
     ],
     "references": [
       {
-        "x4_code": "((J,YK,1984,(3/57),13,198409)=(R,INDC(CCP)-240,13,1984))",
-        "free_txt": [],
-        "publication_year": "1984",
+        "x4_code": "(R,INDC(CCP)-281,17,1988)",
+        "free_txt": [
+          " English translation of J,YK,,(3/57),13,1984"
+        ],
+        "publication_year": "1988",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(R,INDC(CCP)-281,17,1988)",
-        "free_txt": [
-          " Engl.translation of J,YK."
-        ],
-        "publication_year": "1988",
+        "x4_code": "((J,YK,,(3/57),13,1984)=(R,INDC(CCP)-240,13,1984))",
+        "free_txt": [],
+        "publication_year": "1984",
         "doi": null,
         "pointer": "0"
       }
@@ -73,14 +79,7 @@
         "x4_code": "((93-NP-237(N,F),,SIG)/(92-U-235(N,F),,SIG))",
         "children": [
           {
-            "code": [
-              "93-NP-237",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(93-NP-237(N,F),,SIG)",
             "target": "93-NP-237",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -92,14 +91,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F),,SIG)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -111,7 +103,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((93-NP-237(N,F),,SIG)",
+          "(92-U-235(N,F),,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -121,14 +118,7 @@
         "x4_code": "((93-NP-237(N,F),,SIG)/(92-U-235(N,F),,SIG))",
         "children": [
           {
-            "code": [
-              "93-NP-237",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(93-NP-237(N,F),,SIG)",
             "target": "93-NP-237",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -140,14 +130,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F),,SIG)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -159,7 +142,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((93-NP-237(N,F),,SIG)",
+          "(92-U-235(N,F),,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -169,19 +157,14 @@
     "001": {
       "common": {
         "heads": [
-          "ERR-1",
           "ERR-2",
-          "ERR-2"
+          "ERR-3"
         ],
         "units": [
-          "PER-CENT",
           "PER-CENT",
           "PER-CENT"
         ],
         "data": [
-          [
-            1.2
-          ],
           [
             0.2
           ],
@@ -251,7 +234,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              " Correction on fission fragment transmission 0.2-0.5%."
+              "Corrected for fission fragment transmission (0.2-0.5%)"
             ]
           }
         ],
@@ -260,49 +243,56 @@
             "x4_code": "(IOCH)",
             "free_txt": [
               " Double ionization chamber.",
-              "Registration efficiency for Np-237 91%, for U-235 98%."
+              "Registration efficiency for Np-237 91%, for U-235 98%"
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-S,0.3,1.0)",
+            "x4_code": "(ERR-T)",
             "free_txt": [
-              " Statistical error 0.3-1.0%"
+              " Total error                            (~2.5%)"
             ]
           },
           {
-            "x4_code": "(ERR-1)",
+            "x4_code": "(ERR-S,0.3,1.0)",
             "free_txt": [
-              " Error of detector efficiencies ratio for",
-              "        Np-237 and U-235"
+              " statistical error           (0.3-1.0%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1,,1.2)",
+            "free_txt": [
+              "    237Np/235U efficiency ratio    (<1.2%)"
             ]
           },
           {
             "x4_code": "(ERR-2)",
             "free_txt": [
-              " Error due to corrections"
+              "         corrections                     (0.2%)"
             ]
           },
           {
             "x4_code": "(ERR-3)",
             "free_txt": [
-              " Error of isotopic content."
+              "         isotopic composition              (1%)"
             ]
-          },
+          }
+        ],
+        "method": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": null,
             "free_txt": [
-              " Total error about 2.5 % ."
+              "Isotopic dilution method"
             ]
           }
         ],
         "rel-ref": [
           {
-            "x4_code": "(M,,A.A.Goverdovskij+,C,83KIEV,4,115,198310)",
+            "x4_code": "(M,,A.A.Goverdovskij+,C,83KIEV,4,115,1983)",
             "free_txt": [
-              "   =(R,INDC(CCP)-235,4,115)",
-              "  exp. details of method and corrections . In Russian."
+              "=(R,INDC(CCP)-235,4,115)",
+              " Details of method and corrections in Russian."
             ]
           }
         ],
@@ -322,7 +312,7 @@
           {
             "x4_code": "(VDGT)",
             "free_txt": [
-              " Tandem generator"
+              " EGP-10M tandem generator"
             ]
           }
         ],
@@ -330,7 +320,7 @@
           {
             "x4_code": "(D-D)",
             "free_txt": [
-              " Gas deuterium target."
+              " Gas deuterium target"
             ]
           }
         ],
@@ -338,19 +328,16 @@
           {
             "x4_code": null,
             "free_txt": [
-              " First sample U-235 content is 3.46 % ,",
-              "       Np-237 content 96.54 % , thickness",
-              "       300. microgram/cm2 .",
-              "  Second sample U-235 content is 99.992 % ,",
-              "       thickness 258 microgram/cm2"
+              "Sample #1 U-235/Np-237 =   3.46%/96.54%, 300 ug/cm2",
+              "Sample #7 U-235        = 99.992%,        258 ug/cm2"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,A.A.Goverdovskij+,R,INDC(CCP)-281,17,1988)",
             "free_txt": [
-              " Text, page 14 of J,YK,1984,(3/57),13,1984 ."
+              " Text in page 21"
             ]
           }
         ]
@@ -358,6 +345,23 @@
     },
     "003": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              ".Samples 8 and 9 were used to determine effective ratio",
+              "of sample nuclei numbers - Kef.",
+              "Value of Kef was determined as average for six samples:",
+              "Sample #    SIG(Np-237)/SIG(U-235)  Kef",
+              " 1           1.056                  1.354",
+              " 2           1.044                  1.339",
+              " 3           1.062                  1.361",
+              " 4           1.070                  1.372",
+              " 5           1.048                  1.344",
+              " 6           1.038                  1.331"
+            ]
+          }
+        ],
         "facility": [
           {
             "x4_code": "(VDG)",
@@ -370,7 +374,7 @@
           {
             "x4_code": "(D-T)",
             "free_txt": [
-              " Solid T-Ti target."
+              " Solid T-Ti target"
             ]
           }
         ],
@@ -378,33 +382,24 @@
           {
             "x4_code": null,
             "free_txt": [
-              " First sample U-235 content is 3.46 % ,Np-237",
-              "       content 96.54 % ,thickness 300.microg/cm2.",
-              "Second sample U-235 content IS 4.40 % ,Np-237 content",
-              "       is 95.60 % , thickness 300.microgram/cm2.",
-              "Third sample U-235 content is 6.50 % ,Np-237 content",
-              "      IS 93.50 % , thickness 300.microgram/cm2.",
-              "Forth sample U-235 content is 18.26 % ,Np-237 content",
-              "is 81.74 % , thickness 106. microgram/cm2.",
-              "Fifth sample U-235 content is 24.65 % ,Np-237 content",
-              "      is 75.35 % , thickness 100. microgram/cm2.",
-              "Sixth sample U-235 content is 34.75 % , Np-237 content",
-              "      is 65.25 % , thickness 98. microgram/cm2.",
-              "Seventh sample U-235 content is 99.992 %",
-              "      thickness 258. microgram/cm2.",
-              "Eighth sample Np-237 content is 99.05% , Am-241 content",
-              "      is 0.52 % , Pu-239 content is 0.43 % ,",
-              "      thickness 460. microgram/cm2.",
-              "  Ninth sample U-235 content is 99.992 % , thickness",
-              "        410. microgram/cm2."
+              "Sample #1 U-235/Np-237 =  3.46%/96.54%, 300 ug/cm2",
+              "Sample #2 U-235/Np-237 =  4.40%/95.60%, 300 ug/cm2",
+              "Sample #3 U-235/Np-237 =  6.50%/93.50%, 300 ug/cm2",
+              "Sample #4 U-235/Np-237 = 18.26%/81.74%, 106 ug/cm2",
+              "Sample #5 U-235/Np-237 = 24.65%/75.35%, 100 ug/cm2",
+              "Sample #6 U-235/Np-237 = 34.75%/65.25%,  98 ug/cm2",
+              "Sample #7 U-235        = 99.992%,       258 ug/cm2",
+              "Sample #8 Np-237/Am-241/Pu-239",
+              "                  = 99.05%/0.52%/0.43%, 460 ug/cm2",
+              "Sample #9 U-235        = 99.992%,       419 ug/cm2"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,A.A.Goverdovskij+,R,INDC(CCP)-281,17,1988)",
             "free_txt": [
-              " Text, page 14 of J,YK,1984,(3/57),13,1984 ."
+              " Text in page 21"
             ]
           }
         ]

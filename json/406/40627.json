@@ -1,7 +1,7 @@
 {
   "entry": "40627",
-  "last_updated": "2020-05-15",
-  "number_of_revisions": "5",
+  "last_updated": "2026-03-19",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19830630C)",
@@ -24,6 +24,13 @@
         " Rep. ZFK-491 is not available for checking.",
         "Subents 003-007 were merged into Subent 003 according",
         "to a comment of N.Otsuka (NDS,IAEA)"
+      ]
+    },
+    {
+      "x4_code": "(20260216A)",
+      "free_txt": [
+        " ANG-RSL was moved to Subent 003.",
+        " STATUS was corrected for new rules."
       ]
     }
   ],
@@ -86,58 +93,48 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(39-Y-89(N,INL)39-Y-89,,SIG)",
+        "x4_code": "(39-Y-89(N,X)0-NN-1,EM,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "39-Y-89",
-              [
-                "N,INL"
-              ],
-              "39-Y-89,,SIG"
-            ],
-            "type": null,
             "target": "39-Y-89",
-            "process": "N,INL",
-            "sf49": "39-Y-89,,SIG",
-            "sf4": "39-Y-89",
-            "sf5": null,
+            "process": "N,X",
+            "sf49": "0-NN-1,EM,SIG",
+            "sf4": "0-NN-1",
+            "sf5": "EM",
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(39-Y-89(N,X)0-NN-1,EM,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(39-Y-89(N,INL)39-Y-89,,DA/DE)",
+        "x4_code": "(39-Y-89(N,X)0-NN-1,EM,DA/DE)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "39-Y-89",
-              [
-                "N,INL"
-              ],
-              "39-Y-89,,DA/DE"
-            ],
-            "type": null,
             "target": "39-Y-89",
-            "process": "N,INL",
-            "sf49": "39-Y-89,,DA/DE",
-            "sf4": "39-Y-89",
-            "sf5": null,
+            "process": "N,X",
+            "sf49": "0-NN-1,EM,DA/DE",
+            "sf4": "0-NN-1",
+            "sf5": "EM",
             "sf6": "DA/DE",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(39-Y-89(N,X)0-NN-1,EM,DA/DE)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -147,17 +144,12 @@
     "001": {
       "common": {
         "heads": [
-          "ANG-RSL",
           "ERR-5"
         ],
         "units": [
-          "ADEG",
           "PER-CENT"
         ],
         "data": [
-          [
-            1.0
-          ],
           [
             4.0
           ]
@@ -171,13 +163,17 @@
           "EN",
           "EN-ERR",
           "DATA",
-          "ERR-T"
+          "ERR-T",
+          "MISC",
+          "MISC-ERR"
         ],
         "units": [
           "MEV",
           "MEV",
           "B",
-          "B"
+          "B",
+          "MEV",
+          "MEV"
         ],
         "data": [
           [
@@ -203,12 +199,36 @@
             0.15,
             0.16,
             0.14
+          ],
+          [
+            0.72,
+            0.56,
+            0.7,
+            1.8
+          ],
+          [
+            0.04,
+            0.03,
+            0.04,
+            0.14
           ]
         ]
       }
     },
     "003": {
-      "common": null,
+      "common": {
+        "heads": [
+          "ANG-RSL"
+        ],
+        "units": [
+          "ADEG"
+        ],
+        "data": [
+          [
+            1.0
+          ]
+        ]
+      },
       "data": {
         "heads": [
           "EN",
@@ -7972,8 +7992,15 @@
           {
             "x4_code": "(TOF)",
             "free_txt": [
-              " Flight base is 401 cm"
+              " Flight base is 200 cm (scattered neutron",
+              "registration), 401 cm (flux monitoring)."
             ]
+          }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(,A.Horsley,J,ND/A,2,243,1966)",
+            "free_txt": []
           }
         ],
         "monitor": [
@@ -8000,7 +8027,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              " Metallic yttrium"
+              "Metallic yttrium of 4.4 cm height, 3.0 cm inner",
+              "diameter, 4.5 cm outer diameter."
             ]
           }
         ],
@@ -8016,18 +8044,43 @@
     },
     "002": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTED,INTAD)",
+            "free_txt": [
+              "Exp. spectra were extrapolated in region below exp.",
+              "threshold 0.6 MeV using Maxwellian distributions with",
+              "parameter T determined in scattered neutrons energy",
+              "range 0.6 - 2.0 MeV."
+            ]
+          }
+        ],
+        "misc-col": [
+          {
+            "x4_code": "(MISC)",
+            "free_txt": [
+              " Parameter T, see ANALYSIS"
+            ]
+          }
+        ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.Simakov+,R,ZFK-491,206,1982)",
             "free_txt": [
-              " Table 5 of INDC(CCP)-358,74,1992"
+              " Table 1."
+            ]
+          },
+          {
+            "x4_code": "(DEP,40627003)",
+            "free_txt": [
+              " DA/DE"
             ]
           },
           {
             "x4_code": "(SPSDD,41155011)",
             "free_txt": [
               " Superseded according to a comment of",
-              "the author S.Simakov ( the same data)"
+              "the author S.Simakov ( almost the same data)"
             ]
           }
         ]

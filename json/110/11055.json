@@ -1,29 +1,36 @@
 {
   "entry": "11055",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "5",
+  "last_updated": "2024-11-29",
+  "number_of_revisions": "6",
   "histories": [
     {
-      "x4_code": "(760628T)",
+      "x4_code": "(19760628T)",
       "free_txt": [
-        " TRANSLATED FROM SCISRS"
+        " Translated from SCISRS"
       ]
     },
     {
-      "x4_code": "(820106A)",
+      "x4_code": "(19820106A)",
       "free_txt": [
-        " CONVERTED TO REACTION FORMALISM"
+        " Converted to reaction formalism"
       ]
     },
     {
-      "x4_code": "(830817A)",
+      "x4_code": "(19830817A)",
       "free_txt": [
-        " BIB CORRECTIONS. MONIT ADDED TO DATA."
+        " BIB corrections. Monit added to data."
+      ]
+    },
+    {
+      "x4_code": "(20240902A)",
+      "free_txt": [
+        " OS. Error headings changed, Data replaced",
+        "  in sub.3"
       ]
     }
   ],
   "bib_record": {
-    "title": "DIFFERENTIAL N-P SCATTERING CROSS SECTION FOR 220-MEV NEUTRONS.",
+    "title": "Differential n-p scattering cross section for 220-MeV neutrons.",
     "authors": [
       {
         "name": "G.Guernsey"
@@ -43,29 +50,32 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,88,15,52)",
-        "free_txt": [],
+        "x4_code": "(J,PR,88,15,1952)",
+        "free_txt": [
+          "#doi:10.1103/PhysRev.88.15"
+        ],
         "publication_year": "1952",
-        "doi": null,
+        "doi": "10.1103/PhysRev.88.15",
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,1USAROC)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(1USAROC)"
+      }
+    ]
   },
   "reactions": {
     "002": {
       "0": {
         "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "N,EL"
-              ],
-              "1-H-1,,DA"
-            ],
-            "type": null,
             "target": "1-H-1",
             "process": "N,EL",
             "sf49": "1-H-1,,DA",
@@ -74,10 +84,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-1(N,EL)1-H-1,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -85,16 +97,9 @@
     "003": {
       "0": {
         "x4_code": "(1-H-1(N,EL)1-H-1,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "N,EL"
-              ],
-              "1-H-1,,DA"
-            ],
-            "type": null,
             "target": "1-H-1",
             "process": "N,EL",
             "sf49": "1-H-1,,DA",
@@ -103,10 +108,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-1(N,EL)1-H-1,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -139,8 +146,8 @@
         "heads": [
           "EN",
           "COS-CM",
-          "DATA",
-          "DATA-ERR"
+          "DATA-CM",
+          "ERR-S"
         ],
         "units": [
           "MEV",
@@ -246,14 +253,16 @@
         "heads": [
           "EN",
           "COS-CM",
-          "DATA",
-          "DATA-ERR"
+          "DATA-CM",
+          "ERR-S",
+          "MONIT"
         ],
         "units": [
           "MEV",
           "NO-DIM",
           "MB/SR",
-          "MB/SR"
+          "MB/SR",
+          "MB"
         ],
         "data": [
           [
@@ -323,26 +332,48 @@
             13.4
           ],
           [
-            7.0,
-            4.0,
-            4.0,
-            9.0,
-            9.0,
-            8.0,
-            12.0,
-            15.0,
-            14.0,
-            68.0,
-            22.0,
-            12.0,
-            32.0,
-            37.0,
-            35.0,
-            47.0,
-            131.0,
-            75.0,
-            66.0,
-            28.0
+            0.7,
+            0.4,
+            0.6,
+            0.9,
+            0.9,
+            0.8,
+            1.2,
+            1.5,
+            1.4,
+            6.8,
+            0.22,
+            0.12,
+            0.32,
+            0.37,
+            0.35,
+            0.47,
+            1.31,
+            0.75,
+            0.66,
+            2.8
+          ],
+          [
+            44.0,
+            44.0,
+            44.0,
+            44.0,
+            44.0,
+            44.0,
+            44.0,
+            44.0,
+            44.0,
+            44.0,
+            41.3,
+            41.3,
+            41.3,
+            41.3,
+            41.3,
+            41.3,
+            41.3,
+            41.3,
+            41.3,
+            41.3
           ]
         ]
       }
@@ -351,9 +382,9 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "status": [
+        "facility": [
           {
-            "x4_code": "(SCSRS)",
+            "x4_code": "(CYCLO,1USAROC)",
             "free_txt": []
           }
         ]
@@ -365,15 +396,15 @@
           {
             "x4_code": "(TELES)",
             "free_txt": [
-              "    COUNTER TELESCOPE"
+              "    Counter telescope"
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(ERR-S)",
             "free_txt": [
-              " DATA-ERR GIVEN IS STATISTICAL ERROR ONLY"
+              " Error given is statistical error only"
             ]
           }
         ],
@@ -381,10 +412,21 @@
           {
             "x4_code": "(1-H-0(N,TOT),,SIG)",
             "free_txt": [
-              " RENORMALIZED BY HESS,",
-              " REV.MOD.PHYS.30,368(1958) TO ACCOUNT FOR ASYMMETRY.",
-              " ASYMMETRY."
+              " Renormalized by Hess,",
+              " Rev.Mod.Phys.30,368(1958) to account for asymmetry."
             ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(R,,W.N.Hess,J,RMP,30,368,1958)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(SCSRS)",
+            "free_txt": []
           }
         ]
       }
@@ -395,28 +437,37 @@
           {
             "x4_code": "(TELES)",
             "free_txt": [
-              "    COUNTER TELESCOPE"
+              "    Counter telescope"
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(ERR-S)",
             "free_txt": [
-              " DATA-ERR GIVEN IS STATISTICAL ERROR ONLY"
+              " Error given is statistical error only"
             ]
+          }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(13038002,G.R.Mott+,J,PR,88,9,1952)",
+            "free_txt": []
           }
         ],
         "monitor": [
           {
             "x4_code": "(1-H-0(N,TOT),,SIG)",
-            "free_txt": [
-              " NORMALIZED TO H TOTAL=41.3MB, ASSUMING",
-              " SYMMETRY ABOUT 90DEG."
-            ]
+            "free_txt": []
           }
         ],
         "status": [
+          {
+            "x4_code": "(TABLE,,G.Guernsey+,J,PR,88,15,1952)",
+            "free_txt": [
+              " Tables I, II"
+            ]
+          },
           {
             "x4_code": "(OUTDT,11055002)",
             "free_txt": []

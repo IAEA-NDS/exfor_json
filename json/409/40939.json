@@ -1,17 +1,25 @@
 {
   "entry": "40939",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-09-02",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(880222C)",
+      "x4_code": "(19880222C)",
       "free_txt": [
-        "  COMPILED AT THE CJD"
+        "  Compiled at the CJD"
+      ]
+    },
+    {
+      "x4_code": "(20240208A)",
+      "free_txt": [
+        " Upper -> lower case correction.",
+        " Dates were corrected for 4-digits year.",
+        " REACTION was corrected in Subent 002."
       ]
     }
   ],
   "bib_record": {
-    "title": " DECAY SCHEME FOR SE-78 EXCITED LEVELS ARISING FROM THE REACTION SE-78(N,N'GAMMA)SE-78",
+    "title": " Decay scheme for Se-78 excited levels arising from the reaction Se-78(n,n'gamma)Se-78",
     "authors": [
       {
         "name": "G.A.Dostemesova"
@@ -31,13 +39,13 @@
     ],
     "institutes": [
       {
-        "x4_code": "(4CCPKAZ)",
+        "x4_code": "(4KASKAZ)",
         "free_txt": []
       }
     ],
     "references": [
       {
-        "x4_code": "(C,86KHARKO,,63,8604)",
+        "x4_code": "(C,86KHARKO,,63,1986)",
         "free_txt": [],
         "publication_year": "1986",
         "doi": null,
@@ -46,41 +54,51 @@
     ],
     "facilities": [
       {
-        "x4_code": "(REAC)",
+        "x4_code": "(REAC,4KASKAZ)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(REAC)",
-        "institute": null
+        "institute": "(4KASKAZ)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(34-SE-78(N,INL)34-SE-78,,SPC,,REL)",
+        "x4_code": "((34-SE-78(N,INL)34-SE-78,,SPC)//(34-SE-78(N,INL)34-SE-78,,SPC))",
         "children": [
           {
-            "code": [
-              "34-SE-78",
-              [
-                "N,INL"
-              ],
-              "34-SE-78,,SPC,,REL"
-            ],
-            "type": null,
+            "x4_code": "(34-SE-78(N,INL)34-SE-78,,SPC)",
             "target": "34-SE-78",
             "process": "N,INL",
-            "sf49": "34-SE-78,,SPC,,REL",
+            "sf49": "34-SE-78,,SPC",
             "sf4": "34-SE-78",
             "sf5": null,
             "sf6": "SPC",
             "sf7": null,
-            "sf8": "REL",
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "x4_code": "(34-SE-78(N,INL)34-SE-78,,SPC)",
+            "target": "34-SE-78",
+            "process": "N,INL",
+            "sf49": "34-SE-78,,SPC",
+            "sf4": "34-SE-78",
+            "sf5": null,
+            "sf6": "SPC",
+            "sf7": null,
+            "sf8": null,
             "sf9": null
           }
         ],
-        "type": null,
-        "free_text": " REFFRENCE QUANTITY        FOR GAMMA-LINE AT 613.7 KEV TAKEN AS 100",
+        "math_expression": [
+          "Ratio",
+          "((34-SE-78(N,INL)34-SE-78,,SPC)",
+          "(34-SE-78(N,INL)34-SE-78,,SPC))"
+        ],
+        "operator": "Ratio",
+        "free_text": "Reference quantity for gamma-line at 613.7 keV takenas 100 in the article.",
         "pointer": "0"
       }
     }
@@ -102,23 +120,34 @@
       }
     },
     "002": {
-      "common": null,
+      "common": {
+        "heads": [
+          "E-DN"
+        ],
+        "units": [
+          "KEV"
+        ],
+        "data": [
+          [
+            613.7
+          ]
+        ]
+      },
       "data": {
         "heads": [
-          "E",
-          "E-LVL-INI",
+          "E-NM",
+          "LVL-INI",
           "DATA",
           "DATA-ERR"
         ],
         "units": [
           "KEV",
           "KEV",
-          "ARB-UNITS",
-          "ARB-UNITS"
+          "NO-DIM",
+          "NO-DIM"
         ],
         "data": [
           [
-            320.3,
             331.2,
             351.1,
             354.7,
@@ -127,17 +156,12 @@
             497.5,
             545.6,
             613.7,
-            686.3,
             687.5,
-            688.2,
             695.2,
             757.1,
             793.6,
             828.1,
             842.7,
-            881.7,
-            884.8,
-            888.9,
             1005.4,
             1018.6,
             1043.5,
@@ -167,7 +191,6 @@
             2327.3
           ],
           [
-            2647.3,
             2327.3,
             1854.0,
             2682.1,
@@ -176,17 +199,12 @@
             1995.9,
             1854.0,
             613.7,
-            2682.1,
             1995.9,
-            2190.3,
             1308.6,
             2753.8,
             2647.3,
             2682.1,
             2838.6,
-            2190.3,
-            1498.6,
-            1502.6,
             2507.6,
             2327.3,
             2546.1,
@@ -216,102 +234,90 @@
             2327.3
           ],
           [
-            0.0,
-            0.1,
-            0.1,
-            0.1,
-            0.1,
-            0.1,
-            0.1,
-            1.8,
-            100.0,
-            0.0,
-            1.5,
-            0.0,
-            15.2,
-            0.1,
-            0.1,
-            0.4,
-            0.7,
-            0.0,
-            0.0,
-            0.0,
-            0.7,
-            0.4,
-            0.3,
-            0.3,
-            2.7,
-            1.6,
-            0.3,
-            0.6,
-            4.5,
-            11.4,
-            0.7,
-            0.3,
-            1.4,
-            0.3,
-            0.4,
-            0.3,
-            0.3,
-            0.2,
-            2.5,
-            0.6,
-            0.8,
-            1.2,
-            2.6,
-            0.1,
-            0.1,
-            0.6,
-            0.1
+            0.001,
+            0.001,
+            0.001,
+            0.001,
+            0.001,
+            0.001,
+            0.018,
+            1.0,
+            0.015,
+            0.152,
+            0.001,
+            0.001,
+            0.004,
+            0.007,
+            0.007,
+            0.004,
+            0.003,
+            0.003,
+            0.027,
+            0.016,
+            0.003,
+            0.006,
+            0.045,
+            0.114,
+            0.007,
+            0.003,
+            0.014,
+            0.003,
+            0.004,
+            0.003,
+            0.003,
+            0.002,
+            0.025,
+            0.006,
+            0.008,
+            0.012,
+            0.026,
+            0.001,
+            0.001,
+            0.006,
+            0.001
           ],
           [
+            0.0001,
+            0.0002,
+            0.0003,
+            0.0001,
+            0.0001,
+            0.0002,
+            0.002,
             null,
-            0.01,
-            0.02,
-            0.03,
-            0.01,
-            0.01,
-            0.02,
-            0.2,
+            0.003,
+            0.003,
+            0.0002,
+            0.0002,
+            0.001,
+            0.002,
+            0.001,
+            0.001,
+            0.001,
+            0.001,
+            0.001,
+            0.002,
+            0.001,
+            0.002,
+            0.003,
+            0.001,
+            0.001,
+            0.001,
+            0.003,
+            0.001,
+            0.001,
+            0.001,
+            0.001,
             null,
-            null,
-            0.3,
-            null,
-            0.3,
-            0.02,
-            0.02,
-            0.1,
-            0.2,
-            null,
-            null,
-            null,
-            0.1,
-            0.1,
-            0.1,
-            0.1,
-            0.1,
-            0.2,
-            0.1,
-            0.2,
-            0.3,
-            0.1,
-            0.1,
-            0.1,
-            0.3,
-            0.1,
-            0.1,
-            0.1,
-            0.1,
-            null,
-            0.3,
-            0.2,
-            0.1,
-            0.1,
-            0.1,
-            0.03,
-            0.03,
-            0.1,
-            0.02
+            0.003,
+            0.002,
+            0.001,
+            0.001,
+            0.001,
+            0.0003,
+            0.0003,
+            0.001,
+            0.0002
           ]
         ]
       }
@@ -324,13 +330,21 @@
           {
             "x4_code": null,
             "free_txt": [
-              " HAUSER-FESHBACH-MOLDAUER FORMALIZM"
+              " Hauser-Feshbach-Moldauer formalism"
+            ]
+          }
+        ],
+        "add-res": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "  Population of energy levels are given in table."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(REAC)",
+            "x4_code": "(REAC,4KASKAZ)",
             "free_txt": []
           }
         ],
@@ -338,7 +352,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              " REACTOR FAST NEUTRON SPECTRUM"
+              " Reactor fast neutron spectrum"
             ]
           }
         ]
@@ -350,7 +364,15 @@
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " NOT SPECIFIED, PROBABLY STATISTICAL ERROR"
+              " Not specified."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,G.A.Dostemesova+,C,86KHARKO,,63,1986)",
+            "free_txt": [
+              "  Table on pages 63-64."
             ]
           }
         ]

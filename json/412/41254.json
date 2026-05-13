@@ -1,7 +1,7 @@
 {
   "entry": "41254",
-  "last_updated": "2007-09-26",
-  "number_of_revisions": "5",
+  "last_updated": "2025-03-11",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19830816C)",
@@ -12,13 +12,13 @@
     {
       "x4_code": "(19970620T)",
       "free_txt": [
-        "  + +  Converted at the Center - CJD"
+        "  + +  Converted at the center - CJD"
       ]
     },
     {
       "x4_code": "(19970724U)",
       "free_txt": [
-        "  * *  Institute Code Corrected"
+        "  * *  Institute code corrected"
       ]
     },
     {
@@ -44,10 +44,17 @@
       "free_txt": [
         " References year was corrected. M.M."
       ]
+    },
+    {
+      "x4_code": "(20241212U)",
+      "free_txt": [
+        " M.M. Upper -> lower case correction.",
+        " STATUS information was updated."
+      ]
     }
   ],
   "bib_record": {
-    "title": " Average Number of Neutrons Nu-Bar Arising at the 238-U Fission Event Under the Action of 14-MeV Neutrons",
+    "title": " Nu-bar, mean number of neutrons produced in fission of U238 by of 14-MeV neutrons",
     "authors": [
       {
         "name": "N.N.Flerov"
@@ -64,27 +71,27 @@
     ],
     "references": [
       {
-        "x4_code": "(J,AE,5,(6),654,195812)",
+        "x4_code": "(J,SJA,5,1596,1959)",
         "free_txt": [
-          "     Main Reference"
-        ],
-        "publication_year": "1958",
-        "doi": null,
-        "pointer": "0"
-      },
-      {
-        "x4_code": "(J,SJA,5,(6),1596,1959)",
-        "free_txt": [
-          "   English Translation"
+          "   English translation"
         ],
         "publication_year": "1959",
         "doi": null,
         "pointer": "0"
       },
       {
+        "x4_code": "(J,AE,5,654,1958)",
+        "free_txt": [
+          " Issue 6. Main reference"
+        ],
+        "publication_year": "1958",
+        "doi": null,
+        "pointer": "0"
+      },
+      {
         "x4_code": "(J,JNE/A,11,171,1960)",
         "free_txt": [
-          "   English Translation"
+          "   English translation"
         ],
         "publication_year": "1960",
         "doi": null,
@@ -95,7 +102,7 @@
       {
         "x4_code": "(VDG)",
         "free_txt": [
-          "  Ion Accelerating Tube"
+          "  Ion accelerating tube"
         ],
         "pointer": "0",
         "facility_type": "(VDG)",
@@ -107,16 +114,9 @@
     "002": {
       "0": {
         "x4_code": "(92-U-238(N,F),PR,NU)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              ",PR,NU"
-            ],
-            "type": null,
             "target": "92-U-238",
             "process": "N,F",
             "sf49": ",PR,NU",
@@ -125,39 +125,36 @@
             "sf6": "NU",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-238(N,F),PR,NU)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(92-U-238(N,INL)92-U-238,,SIG,,,EVAL)",
+        "x4_code": "(92-U-238(N,INL)92-U-238,,SIG,,,DERIV)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,INL"
-              ],
-              "92-U-238,,SIG,,,EVAL"
-            ],
-            "type": null,
             "target": "92-U-238",
             "process": "N,INL",
-            "sf49": "92-U-238,,SIG,,,EVAL",
+            "sf49": "92-U-238,,SIG,,,DERIV",
             "sf4": "92-U-238",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EVAL"
+            "sf9": "DERIV",
+            "operator": null,
+            "x4_code": "(92-U-238(N,INL)92-U-238,,SIG,,,DERIV)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -167,24 +164,14 @@
     "001": {
       "common": {
         "heads": [
-          "EN",
-          "MONIT",
-          "MONIT-ERR"
+          "EN"
         ],
         "units": [
-          "EV",
-          "B",
-          "B"
+          "EV"
         ],
         "data": [
           [
             14000000.0
-          ],
-          [
-            2.3
-          ],
-          [
-            0.19
           ]
         ]
       }
@@ -196,9 +183,11 @@
           "ASSUM1-ERR",
           "ASSUM2",
           "ASSUM2-ERR",
-          "ASSUM3"
+          "ASSUM3",
+          "ASSUM3-ERR"
         ],
         "units": [
+          "B",
           "B",
           "B",
           "B",
@@ -220,17 +209,24 @@
           ],
           [
             2.85
+          ],
+          [
+            0.1
           ]
         ]
       },
       "data": {
         "heads": [
           "DATA",
-          "DATA-ERR"
+          "DATA-ERR",
+          "MONIT",
+          "MONIT-ERR"
         ],
         "units": [
-          "PART/FIS",
-          "PART/FIS"
+          "PRT/FIS",
+          "PRT/FIS",
+          "B",
+          "B"
         ],
         "data": [
           [
@@ -238,6 +234,12 @@
           ],
           [
             0.35
+          ],
+          [
+            2.3
+          ],
+          [
+            0.19
           ]
         ]
       }
@@ -271,10 +273,10 @@
           {
             "x4_code": null,
             "free_txt": [
-              " .Corrections were Introduced on Coincidence Background",
-              " On the Whole Assembly Background, on the Spontaneous",
-              " Fission of U-238, on U-238 Fission Due to Scattered",
-              " Neutrons"
+              " .Corrections were introduced on coincidence background",
+              " on the whole assembly background, on the spontaneous",
+              " fission of U-238, on U-238 fission due to scattered",
+              " neutrons"
             ]
           }
         ],
@@ -282,8 +284,8 @@
           {
             "x4_code": "(BF3)",
             "free_txt": [
-              "  Battery of Six B-F3 Counters, B-10 Enrichment",
-              "       Is 71.6 %"
+              "  Battery of six B-F3 counters, B-10 enrichment",
+              "       is 71.6 %"
             ]
           }
         ],
@@ -293,11 +295,20 @@
             "free_txt": []
           }
         ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              " article."
+            ]
+          }
+        ],
         "facility": [
           {
             "x4_code": "(VDG)",
             "free_txt": [
-              "  Ion Accelerating Tube"
+              "  Ion accelerating tube"
             ]
           }
         ],
@@ -305,30 +316,18 @@
           {
             "x4_code": "(COINC)",
             "free_txt": [
-              " Two-Fold Coincidence Between Neutrons",
-              "       Emitted During a Single Fission Event."
+              " Two-fold coincidence between neutrons",
+              "       emitted during a single fission event."
             ]
-          }
-        ],
-        "monit-ref": [
-          {
-            "x4_code": "(40425001,N.N.FLEROV+,J,AE,5,(6),657,195811)",
-            "free_txt": []
-          }
-        ],
-        "monitor": [
-          {
-            "x4_code": "(82-PB-0(N,2N),,SIG)",
-            "free_txt": []
           }
         ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              ".Spherical Samples of Natural Uranium (6.4 cm Diameter)",
-              " Or Lead (8.5 cm Diameter) Placed In The Center",
-              " Of Water Cube"
+              ".Spherical samples of natural uranium (6.4 cm diameter)",
+              " or lead (8.5 cm diameter) placed in the center",
+              " of water cube"
             ]
           }
         ]
@@ -336,6 +335,14 @@
     },
     "002": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " See formula (6) in the article."
+            ]
+          }
+        ],
         "assumed": [
           {
             "x4_code": "(ASSUM1,82-PB-0(N,INL)82-PB-0,,SIG)",
@@ -348,21 +355,64 @@
           {
             "x4_code": "(ASSUM3,92-U-238(N,INL)92-U-238,,SIG)",
             "free_txt": [
-              "  See Subent",
-              "                                       41254003"
+              " SIG(n,2n) = SIGinl - SIGfis was assumed."
+            ]
+          }
+        ],
+        "correction": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " For effect from inelastic interactions.",
+              " For binomial distribution of NU  - 3.5 - 5 %."
+            ]
+          }
+        ],
+        "monit-ref": [
+          {
+            "x4_code": "(40425001,N.N.Flerov+,J,AE,5,657,195811)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(82-PB-0(N,2N),,SIG)",
+            "free_txt": []
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(R,,N.N.Flerov+,J,AE,4,155,1956)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(R,,N.N.Flerov+,J,AE,5,657,1958)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(R,41254003,N.N.Flerov+,J,AE,5,654,1958)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(A,40806005,N.N.Flerov+,J,AE,5,653,1958)",
+            "free_txt": [
+              " Previous measurement by different",
+              " method at 1954 year - 4.50+-0.32 n/fis."
+            ]
+          },
+          {
+            "x4_code": "(A,,S.Blaize+,S,TID-7547,1957)",
+            "free_txt": [
+              " =C,57COLUMBIA,,,1957"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(SCSRS)",
+            "x4_code": "(TABLE,,N.N.Flerov+,J,SJA,5,1596,1959)",
             "free_txt": [
-              "  Data are Checked with the Main Reference"
+              " Text page 1599"
             ]
-          },
-          {
-            "x4_code": "(COREL,40806005)",
-            "free_txt": []
           }
         ]
       }
@@ -373,15 +423,15 @@
           {
             "x4_code": null,
             "free_txt": [
-              " Extrapolation of Data from Ae, Vol.1,N.4, P.155,1956"
+              " Extrapolation of data from AE, vol.1,n.4, p.155,1956"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,N.N.Flerov+,J,SJA,5,1596,1959)",
             "free_txt": [
-              "         Data are Taken from the Main Reference"
+              " Text page 1599"
             ]
           }
         ]

@@ -1,7 +1,7 @@
 {
   "entry": "41300",
-  "last_updated": "2021-08-13",
-  "number_of_revisions": "8",
+  "last_updated": "2024-10-25",
+  "number_of_revisions": "9",
   "histories": [
     {
       "x4_code": "(19980925C)",
@@ -34,6 +34,13 @@
       "x4_code": "(20210414A)",
       "free_txt": [
         " REACTION in Subent 002 was corrected"
+      ]
+    },
+    {
+      "x4_code": "(20240724A)",
+      "free_txt": [
+        " Subent 002 was corrected.",
+        " STATUS was updated for new rules."
       ]
     }
   ],
@@ -73,13 +80,13 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG)",
+        "x4_code": "(VDG,4RUSFEI)",
         "free_txt": [
-          "    Electrostatic accelerator KG-2.5"
+          " Electrostatic accelerator KG-2.5"
         ],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": null
+        "institute": "(4RUSFEI)"
       }
     ]
   },
@@ -89,14 +96,7 @@
         "x4_code": "((93-NP-237(N,F),DL/GRP,NU)/(93-NP-237(N,F),DL,NU))",
         "children": [
           {
-            "code": [
-              "93-NP-237",
-              [
-                "N,F"
-              ],
-              ",DL/GRP,NU"
-            ],
-            "type": null,
+            "x4_code": "(93-NP-237(N,F),DL/GRP,NU)",
             "target": "93-NP-237",
             "process": "N,F",
             "sf49": ",DL/GRP,NU",
@@ -108,14 +108,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "93-NP-237",
-              [
-                "N,F"
-              ],
-              ",DL,NU"
-            ],
-            "type": null,
+            "x4_code": "(93-NP-237(N,F),DL,NU)",
             "target": "93-NP-237",
             "process": "N,F",
             "sf49": ",DL,NU",
@@ -127,7 +120,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((93-NP-237(N,F),DL/GRP,NU)",
+          "(93-NP-237(N,F),DL,NU))"
+        ],
+        "operator": "Divide",
         "free_text": "  Relative  delayed neutrons yield from 8 individual precursors  and 4 groups of precursors.",
         "pointer": "0"
       }
@@ -503,7 +501,7 @@
             0.02,
             0.004,
             0.003,
-            0.0,
+            0.001,
             0.011,
             0.012,
             0.007,
@@ -617,9 +615,9 @@
         ],
         "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,4RUSFEI)",
             "free_txt": [
-              "    Electrostatic accelerator KG-2.5"
+              " Electrostatic accelerator KG-2.5"
             ]
           }
         ],
@@ -748,6 +746,12 @@
             ]
           }
         ],
+        "result": [
+          {
+            "x4_code": "(DFRCT)",
+            "free_txt": []
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
@@ -760,15 +764,16 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.G.Isaev,J,YK,,(1),17,1998)",
             "free_txt": [
-              "  Data from Table 2 of YK,,(1),17,1998"
+              " Data from Table 2"
             ]
           },
           {
             "x4_code": "(COREL,41322002)",
             "free_txt": [
-              " 6-group data"
+              " 6-group expression of data from the",
+              " same measurement."
             ]
           }
         ]

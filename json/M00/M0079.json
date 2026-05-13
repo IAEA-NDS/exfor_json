@@ -1,7 +1,7 @@
 {
   "entry": "M0079",
-  "last_updated": "2013-03-28",
-  "number_of_revisions": "4",
+  "last_updated": "2025-06-11",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19830713C)",
@@ -10,7 +10,7 @@
     {
       "x4_code": "(19910202A)",
       "free_txt": [
-        " Corrected by V.Varlamov, V.Mclane"
+        " Corrected by V.Varlamov, V.McLane"
       ]
     },
     {
@@ -24,10 +24,18 @@
         "     deleted because A and/or Z of fission fragments",
         "     were not specified."
       ]
+    },
+    {
+      "x4_code": "(20250506A)",
+      "free_txt": [
+        " Corrected by V.Varlamov: TITLE, INSTITUTE,",
+        " REFERENCE, DETECTOR, PART-DET, ANALYSIS, REL-REF,",
+        " ERR-ANALYS, STATUS."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Experimental investigations of the effect of the 'isomer shelf' in photofission cross sections of heavy nuclei.",
+    "title": "Experimental investigations of the isomeric-shelf phenomenon in the photofission cross sections of heavy nuclei.",
     "authors": [
       {
         "name": "V.E.Zhuchko"
@@ -48,26 +56,26 @@
     "institutes": [
       {
         "x4_code": "(4RUSIFP)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(4RUSFEI)",
-        "free_txt": []
+        "free_txt": ""
       }
     ],
     "references": [
       {
-        "x4_code": "(J,YF,28,1185,1978)",
-        "free_txt": [],
+        "x4_code": "(J,SNP,28,611,1978)",
+        "free_txt": [
+          " English translation of YF,28,1185,1978"
+        ],
         "publication_year": "1978",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,SNP,28,611,1978)",
-        "free_txt": [
-          " - Eng.trans.of YF,28,1185,1978"
-        ],
+        "x4_code": "(J,YF,28,1185,1978)",
+        "free_txt": [],
         "publication_year": "1978",
         "doi": null,
         "pointer": "0"
@@ -87,16 +95,9 @@
     "007": {
       "0": {
         "x4_code": "(92-U-236(G,F),,SIG,,BRS)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-236",
-              [
-                "G,F"
-              ],
-              ",,SIG,,BRS"
-            ],
-            "type": null,
             "target": "92-U-236",
             "process": "G,F",
             "sf49": ",,SIG,,BRS",
@@ -105,10 +106,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRS",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-236(G,F),,SIG,,BRS)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -116,16 +119,9 @@
     "008": {
       "0": {
         "x4_code": "(92-U-238(G,F),,SIG,,BRS)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "G,F"
-              ],
-              ",,SIG,,BRS"
-            ],
-            "type": null,
             "target": "92-U-238",
             "process": "G,F",
             "sf49": ",,SIG,,BRS",
@@ -134,10 +130,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRS",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-238(G,F),,SIG,,BRS)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -153,7 +151,7 @@
         "heads": [
           "EN",
           "DATA",
-          "ERR-S"
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
@@ -266,7 +264,7 @@
         "heads": [
           "EN",
           "DATA",
-          "ERR-S"
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
@@ -383,27 +381,41 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(UNFLD)",
+            "free_txt": [
+              " The unfolding of the reaction cross section",
+              " from  the  experimental reaction yield measured using",
+              " the direct fission fragment counting using the",
+              " iterational method of minimization of directed",
+              " divergences."
+            ]
+          }
+        ],
         "comment": [
           {
             "x4_code": null,
             "free_txt": [
               "Yields of photofission fragments from the Th-232,U-236,",
-              "U-238,Np-237(g,F) reaction were measured in the energy",
-              "range 3.5-4. MeV."
+              " U-238,Np-237(g,F) reaction were measured in the energy",
+              " range 3.5-4. MeV."
             ]
           }
         ],
         "detector": [
           {
             "x4_code": "(TRD)",
-            "free_txt": []
+            "free_txt": [
+              " Mica detectors."
+            ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-S)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Statistical errors only."
+              " Mean-root-squared uncertainties."
             ]
           }
         ],
@@ -425,23 +437,47 @@
             "free_txt": []
           }
         ],
-        "part-det": [
+        "rel-ref": [
           {
-            "x4_code": "(FF)",
-            "free_txt": []
+            "x4_code": "(M,,V.E.Zhuchko,J,NIM,136,373,1976)",
+            "free_txt": [
+              " Method of cross section unfolding from the yield."
+            ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE,APRVD)",
+            "x4_code": "(APRVD)",
             "free_txt": [
-              " by Yu.M.Tsipenyuk"
+              " By Yu.M.Tsipenyuk"
             ]
           }
         ]
       }
     },
-    "007": {},
-    "008": {}
+    "007": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.E.Zhuchko+,J,SNP,28,611,1978)",
+            "free_txt": [
+              " Data presented in Fig. 3 (right part)."
+            ]
+          }
+        ]
+      }
+    },
+    "008": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.E.Zhuchko+,J,SNP,28,611,1978)",
+            "free_txt": [
+              " Data presented in Fig. 3 (left part)."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

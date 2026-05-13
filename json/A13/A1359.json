@@ -1,7 +1,7 @@
 {
   "entry": "A1359",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-11-07",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19800714C)",
@@ -12,14 +12,14 @@
     {
       "x4_code": "(19970319A)",
       "free_txt": [
-        " Compiler Replaced the Data from the",
+        " Compiler replaced the data from the",
         "Subent 002"
       ]
     },
     {
       "x4_code": "(19971023A)",
       "free_txt": [
-        " Data Unit in A1359002 is Corrected."
+        " Data unit in A1359002 is corrected."
       ]
     },
     {
@@ -33,10 +33,16 @@
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
       ]
+    },
+    {
+      "x4_code": "(20250914A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
+      ]
     }
   ],
   "bib_record": {
-    "title": "The D-6Li Reactions",
+    "title": "The d-6Li reactions",
     "authors": [
       {
         "name": "F.Hirst"
@@ -65,117 +71,98 @@
     ],
     "facilities": [
       {
-        "x4_code": "(CCW)",
+        "x4_code": "(CCW,2UK HAR)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(CCW)",
-        "institute": null
+        "institute": "(2UK HAR)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(3-LI-6(D,A)2-HE-4,,DA,,,EXP)",
+        "x4_code": "(3-LI-6(D,A)2-HE-4,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-6",
-              [
-                "D,A"
-              ],
-              "2-HE-4,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "3-LI-6",
             "process": "D,A",
-            "sf49": "2-HE-4,,DA,,,EXP",
+            "sf49": "2-HE-4,,DA",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-6(D,A)2-HE-4,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(3-LI-6(D,N)4-BE-7,,SIG,,,EXP)",
+        "x4_code": "(3-LI-6(D,N)4-BE-7,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-6",
-              [
-                "D,N"
-              ],
-              "4-BE-7,,SIG,,,EXP"
-            ],
-            "type": null,
             "target": "3-LI-6",
             "process": "D,N",
-            "sf49": "4-BE-7,,SIG,,,EXP",
+            "sf49": "4-BE-7,,SIG",
             "sf4": "4-BE-7",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-6(D,N)4-BE-7,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "004": {
       "0": {
-        "x4_code": "((3-LI-6(D,N)4-BE-7,,SIG,,,EXP)/(3-LI-6(D,A)2-HE-4,,SIG,,,EXP))",
+        "x4_code": "((3-LI-6(D,N)4-BE-7,,SIG)/(3-LI-6(D,A)2-HE-4,,SIG))",
         "children": [
           {
-            "code": [
-              "3-LI-6",
-              [
-                "D,N"
-              ],
-              "4-BE-7,,SIG,,,EXP"
-            ],
-            "type": null,
+            "x4_code": "(3-LI-6(D,N)4-BE-7,,SIG)",
             "target": "3-LI-6",
             "process": "D,N",
-            "sf49": "4-BE-7,,SIG,,,EXP",
+            "sf49": "4-BE-7,,SIG",
             "sf4": "4-BE-7",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null
           },
           {
-            "code": [
-              "3-LI-6",
-              [
-                "D,A"
-              ],
-              "2-HE-4,,SIG,,,EXP"
-            ],
-            "type": null,
+            "x4_code": "(3-LI-6(D,A)2-HE-4,,SIG)",
             "target": "3-LI-6",
             "process": "D,A",
-            "sf49": "2-HE-4,,SIG,,,EXP",
+            "sf49": "2-HE-4,,SIG",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((3-LI-6(D,N)4-BE-7,,SIG)",
+          "(3-LI-6(D,A)2-HE-4,,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -185,19 +172,14 @@
     "001": {
       "common": {
         "heads": [
-          "ERR-1",
-          "ERR-S"
+          "ERR-1"
         ],
         "units": [
-          "PER-CENT",
           "PER-CENT"
         ],
         "data": [
           [
             2.0
-          ],
-          [
-            3.0
           ]
         ]
       }
@@ -205,9 +187,9 @@
     "002": {
       "common": {
         "heads": [
-          "EN-ERR",
+          "EN-ERR-DIG",
           "ANG",
-          "DATA-ERR"
+          "ERR-DIG"
         ],
         "units": [
           "MEV",
@@ -239,72 +221,72 @@
         ],
         "data": [
           [
-            0.0546,
-            0.0654,
-            0.0683,
-            0.0717,
-            0.0782,
-            0.0886,
-            0.0897,
+            0.055,
+            0.065,
+            0.068,
+            0.072,
+            0.078,
+            0.089,
+            0.09,
             0.096,
-            0.0999,
-            0.1064,
+            0.1,
+            0.106,
             0.114,
-            0.1158,
-            0.1253,
-            0.1347,
-            0.1357,
-            0.1359,
-            0.1404,
-            0.1432,
-            0.1443,
+            0.116,
+            0.125,
+            0.135,
+            0.136,
+            0.136,
+            0.14,
+            0.143,
+            0.144,
             0.147,
-            0.1546,
-            0.1549,
-            0.1557,
-            0.1594,
-            0.1633,
-            0.1644,
-            0.1727,
+            0.155,
+            0.155,
+            0.156,
+            0.159,
+            0.163,
+            0.164,
             0.173,
-            0.1737,
-            0.1738,
-            0.1832,
-            0.1891,
-            0.1938,
-            0.1948,
-            0.2025,
-            0.2033,
-            0.2063,
-            0.2129,
-            0.2159,
-            0.2245,
-            0.2331,
-            0.2378,
-            0.2418,
-            0.2513,
+            0.173,
+            0.174,
+            0.174,
+            0.183,
+            0.189,
+            0.194,
+            0.195,
+            0.203,
+            0.203,
+            0.206,
+            0.213,
+            0.216,
+            0.225,
+            0.233,
+            0.238,
+            0.242,
+            0.251,
             0.26,
-            0.2706,
-            0.2802,
-            0.2804,
+            0.271,
+            0.28,
+            0.28,
             0.289,
-            0.2898,
-            0.2985,
-            0.3081,
-            0.3158,
-            0.3274,
-            0.3371,
-            0.3389,
-            0.3486,
-            0.3572,
-            0.3688,
-            0.3755,
-            0.3861,
-            0.3948,
-            0.4044,
+            0.29,
+            0.299,
+            0.308,
+            0.316,
+            0.327,
+            0.337,
+            0.339,
+            0.349,
+            0.357,
+            0.369,
+            0.376,
+            0.386,
+            0.395,
+            0.404,
             0.415,
-            0.4266,
-            0.4333,
+            0.427,
+            0.433,
             0.443
           ],
           [
@@ -451,7 +433,7 @@
     "003": {
       "common": {
         "heads": [
-          "EN-ERR"
+          "EN-ERR-DIG"
         ],
         "units": [
           "MEV"
@@ -466,7 +448,7 @@
         "heads": [
           "EN",
           "DATA",
-          "DATA-ERR"
+          "ERR-DIG"
         ],
         "units": [
           "MEV",
@@ -475,19 +457,19 @@
         ],
         "data": [
           [
-            0.1148,
+            0.115,
             0.133,
-            0.1571,
-            0.1728,
-            0.1905,
-            0.1914,
-            0.2249,
-            0.2388,
+            0.157,
+            0.173,
+            0.191,
+            0.191,
+            0.225,
             0.239,
-            0.2398,
-            0.2631,
-            0.2873,
-            0.3378
+            0.239,
+            0.24,
+            0.263,
+            0.287,
+            0.338
           ],
           [
             1.833,
@@ -525,8 +507,8 @@
     "004": {
       "common": {
         "heads": [
-          "EN-ERR",
-          "DATA-ERR1"
+          "EN-ERR-DIG",
+          "ERR-DIG"
         ],
         "units": [
           "MEV",
@@ -534,7 +516,7 @@
         ],
         "data": [
           [
-            0.0006
+            0.003
           ],
           [
             0.4
@@ -552,28 +534,28 @@
         ],
         "data": [
           [
-            0.1216,
-            0.1398,
-            0.1605,
-            0.1801,
-            0.2004,
-            0.2417,
+            0.122,
+            0.14,
+            0.161,
+            0.18,
+            0.2,
+            0.242,
             0.281,
-            0.2817,
-            0.3211,
-            0.3414
+            0.282,
+            0.321,
+            0.341
           ],
           [
-            3.181,
-            2.801,
-            2.421,
-            2.224,
-            2.152,
-            2.12,
-            2.145,
-            2.144,
-            2.207,
-            2.191
+            3.2,
+            2.8,
+            2.4,
+            2.2,
+            2.2,
+            2.1,
+            2.1,
+            2.1,
+            2.2,
+            2.2
           ]
         ]
       }
@@ -584,19 +566,13 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": "(EN-ERR)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          },
-          {
             "x4_code": "(ERR-1)",
             "free_txt": [
               " Error in current integrator calibrations"
             ]
           },
           {
-            "x4_code": "(ERR-S)",
+            "x4_code": "(ERR-S,1.,10.)",
             "free_txt": [
               " At the energies above 100 keV all counts",
               "were better than 3%.",
@@ -607,7 +583,13 @@
         ],
         "facility": [
           {
-            "x4_code": "(CCW)",
+            "x4_code": "(CCW,2UK HAR)",
+            "free_txt": []
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(BCINT)",
             "free_txt": []
           }
         ]
@@ -624,15 +606,6 @@
             "x4_code": "(PROPC)",
             "free_txt": [
               " Monitor"
-            ]
-          }
-        ],
-        "err-analys": [
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " Error from graphic bars (statistical) and",
-              "digitizing error"
             ]
           }
         ],
@@ -660,16 +633,16 @@
           {
             "x4_code": null,
             "free_txt": [
-              "Used targets: LiF and Li2O of 3.5 mu-g/cm**2 and",
-              "15 mu-g/cm**2 +-1 mu-g/Cm**2 thickness"
+              "Used targets: LiF and Li2O of 3.5 ug/cm2 and",
+              "15 ug/cm2 +-1 ug/cm2 thickness"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,F.Hirst+,J,PM,45,(366),762,1954)",
             "free_txt": [
-              " Fig 1"
+              " Figure 1"
             ]
           }
         ]
@@ -686,15 +659,6 @@
             ]
           }
         ],
-        "err-analys": [
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " Error from graphic bars (statistical) and",
-              "digitizing error"
-            ]
-          }
-        ],
         "method": [
           {
             "x4_code": "(ACTIV)",
@@ -707,15 +671,15 @@
           {
             "x4_code": null,
             "free_txt": [
-              "LiF of 15 mu-g/cm**2 +-1 mu-g/cm**3 thickness."
+              "LiF of 15 ug/cm2 +-1 ug/cm3 thickness."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,F.Hirst+,J,PM,45,(366),762,1954)",
             "free_txt": [
-              " Fig 2 upper"
+              " Fig. 2 (upper)"
             ]
           }
         ]
@@ -723,19 +687,11 @@
     },
     "004": {
       "0": {
-        "err-analys": [
-          {
-            "x4_code": "(DATA-ERR1)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          }
-        ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,F.Hirst+,J,PM,45,(366),762,1954)",
             "free_txt": [
-              " Fig 2,lower"
+              " Figure 2"
             ]
           }
         ]

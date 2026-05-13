@@ -1,7 +1,7 @@
 {
   "entry": "A1100",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-08-20",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810422C)",
@@ -12,7 +12,7 @@
     {
       "x4_code": "(19961027A)",
       "free_txt": [
-        " Err-Analys is Corrected by CAJAD."
+        " ERR-ANALYS is Corrected by CAJAD."
       ]
     },
     {
@@ -26,6 +26,13 @@
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
       ]
+    },
+    {
+      "x4_code": "(20240708A)",
+      "free_txt": [
+        " SD: Corrections in all Subents.",
+        "ERR-T -> DATA-ERR."
+      ]
     }
   ],
   "bib_record": {
@@ -37,14 +44,16 @@
     ],
     "institutes": [
       {
-        "x4_code": "(2BLGBLG)",
+        "x4_code": "(2ZZZGEL)",
         "free_txt": []
       }
     ],
     "references": [
       {
-        "x4_code": "(J,BSL,36,466,196809)",
-        "free_txt": [],
+        "x4_code": "(J,BSL,36,466,1968)",
+        "free_txt": [
+          " In French"
+        ],
         "publication_year": "1968",
         "doi": null,
         "pointer": "0"
@@ -52,48 +61,55 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG)",
+        "x4_code": "(VDG,2ZZZGEL)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": null
+        "institute": "(2ZZZGEL)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-3(P,N)2-HE-3,,DA,,REL,EXP)",
+        "x4_code": "(1-H-3(P,N)2-HE-3,,DA,,REL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-3",
-              [
-                "P,N"
-              ],
-              "2-HE-3,,DA,,REL,EXP"
-            ],
-            "type": null,
             "target": "1-H-3",
             "process": "P,N",
-            "sf49": "2-HE-3,,DA,,REL,EXP",
+            "sf49": "2-HE-3,,DA,,REL",
             "sf4": "2-HE-3",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": "REL",
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-3(P,N)2-HE-3,,DA,,REL)"
           }
         ],
-        "type": null,
-        "free_text": "",
+        "operator": null,
+        "free_text": "Experimental results normalized to 1 for angle = 0.",
         "pointer": "0"
       }
     }
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-1"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            1.7
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -102,7 +118,7 @@
           "EN",
           "ANG",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
@@ -272,17 +288,21 @@
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Total uncertainty.",
-              "The  experimental  results have estimated errors within",
-              "3-5%."
+              " Relative uncertainty"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Uncertainty in neutron flux"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,2ZZZGEL)",
             "free_txt": []
           }
         ],
@@ -296,7 +316,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "TiT (200 mu-g/cm2) on thick backing"
+              "TiT (200 mu-g/cm2) on a thin copper (0.3 mm)"
             ]
           }
         ]
@@ -306,7 +326,7 @@
       "0": {
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,A.Peetermans,J,BSL,36,466,1968)",
             "free_txt": [
               " Table 1"
             ]

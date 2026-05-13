@@ -1,13 +1,21 @@
 {
   "entry": "M0915",
-  "last_updated": "2015-10-06",
-  "number_of_revisions": "1",
+  "last_updated": "2024-11-29",
+  "number_of_revisions": "2",
   "histories": [
     {
       "x4_code": "(20150813C)",
       "free_txt": [
         " Data were compiled at the Russia MSU SINP",
         " CDFE by V.Varlamov."
+      ]
+    },
+    {
+      "x4_code": "(20241006A)",
+      "free_txt": [
+        " Data corrected by V. Varlamov: REFERENCE,",
+        " DATA in SUBENT 005, SUBENTS 012-023 added, ANALYSIS,",
+        " STATUS."
       ]
     }
   ],
@@ -35,7 +43,17 @@
     ],
     "references": [
       {
-        "x4_code": "(J,YF,78,(9),797,2015)",
+        "x4_code": "(J,PAN,78,746,2015)",
+        "free_txt": [
+          "#doi:10.1134/S1063778815060150",
+          " English translation of J,YF,78,746,2015."
+        ],
+        "publication_year": "2015",
+        "doi": "10.1134/S1063778815060150",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,YF,78,797,2015)",
         "free_txt": [
           "#doi:10.7868/S0044002715090160"
         ],
@@ -44,13 +62,22 @@
         "pointer": "0"
       },
       {
-        "x4_code": "(J,PAN,78,(6),746,2015)",
+        "x4_code": "(J,BAS,78,412,2014)",
         "free_txt": [
-          "#doi:10.1134/S1063778815060150",
-          "English translation of J,YF,78,(9),746,2015."
+          "#doi:10.3103/S1062873814050207",
+          " English translation of IZV,78,599,2014."
         ],
-        "publication_year": "2015",
-        "doi": "10.1134/S1063778815060150",
+        "publication_year": "2014",
+        "doi": "10.3103/S1062873814050207",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,IZV,78,599,2014)",
+        "free_txt": [
+          "#doi:10.7868/S0367676514050263"
+        ],
+        "publication_year": "2014",
+        "doi": "10.7868/S0367676514050263",
         "pointer": "0"
       },
       {
@@ -61,25 +88,6 @@
         "publication_year": "2013",
         "doi": null,
         "pointer": "0"
-      },
-      {
-        "x4_code": "(J,IZV,78,(5),599,2014)",
-        "free_txt": [
-          "#doi:10.7868/S0367676514050263"
-        ],
-        "publication_year": "2014",
-        "doi": "10.7868/S0367676514050263",
-        "pointer": "0"
-      },
-      {
-        "x4_code": "(J,BAS,78,(5),412,2014)",
-        "free_txt": [
-          "#doi:10.3103/S1062873814050207",
-          "English translation of IZV,78,(5),599,2014."
-        ],
-        "publication_year": "2014",
-        "doi": "10.3103/S1062873814050207",
-        "pointer": "0"
       }
     ],
     "facilities": []
@@ -88,16 +96,9 @@
     "002": {
       "0": {
         "x4_code": "(76-OS-186(G,X)0-NN-1,UNW,SIG,,,EVAL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "76-OS-186",
-              [
-                "G,X"
-              ],
-              "0-NN-1,UNW,SIG,,,EVAL"
-            ],
-            "type": null,
             "target": "76-OS-186",
             "process": "G,X",
             "sf49": "0-NN-1,UNW,SIG,,,EVAL",
@@ -106,10 +107,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EVAL"
+            "sf9": "EVAL",
+            "operator": null,
+            "x4_code": "(76-OS-186(G,X)0-NN-1,UNW,SIG,,,EVAL)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -119,14 +122,7 @@
         "x4_code": "((76-OS-186(G,N)76-OS-185,,SIG,,,EVAL)+(76-OS-186(G,N+P)75-RE-184,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "76-OS-186",
-              [
-                "G,N"
-              ],
-              "76-OS-185,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-186(G,N)76-OS-185,,SIG,,,EVAL)",
             "target": "76-OS-186",
             "process": "G,N",
             "sf49": "76-OS-185,,SIG,,,EVAL",
@@ -138,14 +134,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "76-OS-186",
-              [
-                "G,N+P"
-              ],
-              "75-RE-184,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-186(G,N+P)75-RE-184,,SIG,,,EVAL)",
             "target": "76-OS-186",
             "process": "G,N+P",
             "sf49": "75-RE-184,,SIG,,,EVAL",
@@ -157,7 +146,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((76-OS-186(G,N)76-OS-185,,SIG,,,EVAL)",
+          "(76-OS-186(G,N+P)75-RE-184,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -167,14 +161,7 @@
         "x4_code": "((76-OS-190(G,N)76-OS-189,,SIG,,,EVAL)+(76-OS-190(G,N+P)75-RE-188,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "76-OS-190",
-              [
-                "G,N"
-              ],
-              "76-OS-189,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-190(G,N)76-OS-189,,SIG,,,EVAL)",
             "target": "76-OS-190",
             "process": "G,N",
             "sf49": "76-OS-189,,SIG,,,EVAL",
@@ -186,14 +173,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "76-OS-190",
-              [
-                "G,N+P"
-              ],
-              "75-RE-188,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-190(G,N+P)75-RE-188,,SIG,,,EVAL)",
             "target": "76-OS-190",
             "process": "G,N+P",
             "sf49": "75-RE-188,,SIG,,,EVAL",
@@ -205,7 +185,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((76-OS-190(G,N)76-OS-189,,SIG,,,EVAL)",
+          "(76-OS-190(G,N+P)75-RE-188,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -215,14 +200,7 @@
         "x4_code": "((76-OS-190(G,2N)76-OS-188,,SIG,,,EVAL)+(76-OS-190(G,2N+P)75-RE-187,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "76-OS-190",
-              [
-                "G,2N"
-              ],
-              "76-OS-188,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-190(G,2N)76-OS-188,,SIG,,,EVAL)",
             "target": "76-OS-190",
             "process": "G,2N",
             "sf49": "76-OS-188,,SIG,,,EVAL",
@@ -234,14 +212,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "76-OS-190",
-              [
-                "G,2N+P"
-              ],
-              "75-RE-187,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-190(G,2N+P)75-RE-187,,SIG,,,EVAL)",
             "target": "76-OS-190",
             "process": "G,2N+P",
             "sf49": "75-RE-187,,SIG,,,EVAL",
@@ -253,7 +224,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((76-OS-190(G,2N)76-OS-188,,SIG,,,EVAL)",
+          "(76-OS-190(G,2N+P)75-RE-187,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -263,14 +239,7 @@
         "x4_code": "((76-OS-190(G,3N)76-OS-187,,SIG,,,EVAL)+(76-OS-190(G,3N+P)75-RE-186,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "76-OS-190",
-              [
-                "G,3N"
-              ],
-              "76-OS-187,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-190(G,3N)76-OS-187,,SIG,,,EVAL)",
             "target": "76-OS-190",
             "process": "G,3N",
             "sf49": "76-OS-187,,SIG,,,EVAL",
@@ -282,14 +251,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "76-OS-190",
-              [
-                "G,3N+P"
-              ],
-              "75-RE-186,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-190(G,3N+P)75-RE-186,,SIG,,,EVAL)",
             "target": "76-OS-190",
             "process": "G,3N+P",
             "sf49": "75-RE-186,,SIG,,,EVAL",
@@ -301,7 +263,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((76-OS-190(G,3N)76-OS-187,,SIG,,,EVAL)",
+          "(76-OS-190(G,3N+P)75-RE-186,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -309,16 +276,9 @@
     "007": {
       "0": {
         "x4_code": "(76-OS-190(G,X)0-NN-1,UNW,SIG,,,EVAL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "76-OS-190",
-              [
-                "G,X"
-              ],
-              "0-NN-1,UNW,SIG,,,EVAL"
-            ],
-            "type": null,
             "target": "76-OS-190",
             "process": "G,X",
             "sf49": "0-NN-1,UNW,SIG,,,EVAL",
@@ -327,10 +287,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EVAL"
+            "sf9": "EVAL",
+            "operator": null,
+            "x4_code": "(76-OS-190(G,X)0-NN-1,UNW,SIG,,,EVAL)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -340,14 +302,7 @@
         "x4_code": "((76-OS-192(G,N)76-OS-191,,SIG,,,EVAL)+(76-OS-192(G,N+P)75-RE-190,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "76-OS-192",
-              [
-                "G,N"
-              ],
-              "76-OS-191,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-192(G,N)76-OS-191,,SIG,,,EVAL)",
             "target": "76-OS-192",
             "process": "G,N",
             "sf49": "76-OS-191,,SIG,,,EVAL",
@@ -359,14 +314,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "76-OS-192",
-              [
-                "G,N+P"
-              ],
-              "75-RE-190,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-192(G,N+P)75-RE-190,,SIG,,,EVAL)",
             "target": "76-OS-192",
             "process": "G,N+P",
             "sf49": "75-RE-190,,SIG,,,EVAL",
@@ -378,7 +326,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((76-OS-192(G,N)76-OS-191,,SIG,,,EVAL)",
+          "(76-OS-192(G,N+P)75-RE-190,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -388,14 +341,7 @@
         "x4_code": "((76-OS-192(G,2N)76-OS-190,,SIG,,,EVAL)+(76-OS-192(G,2N+P)75-RE-189,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "76-OS-192",
-              [
-                "G,2N"
-              ],
-              "76-OS-190,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-192(G,2N)76-OS-190,,SIG,,,EVAL)",
             "target": "76-OS-192",
             "process": "G,2N",
             "sf49": "76-OS-190,,SIG,,,EVAL",
@@ -407,14 +353,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "76-OS-192",
-              [
-                "G,2N+P"
-              ],
-              "75-RE-189,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-192(G,2N+P)75-RE-189,,SIG,,,EVAL)",
             "target": "76-OS-192",
             "process": "G,2N+P",
             "sf49": "75-RE-189,,SIG,,,EVAL",
@@ -426,7 +365,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((76-OS-192(G,2N)76-OS-190,,SIG,,,EVAL)",
+          "(76-OS-192(G,2N+P)75-RE-189,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -436,14 +380,7 @@
         "x4_code": "((76-OS-192(G,3N)76-OS-189,,SIG,,,EVAL)+(76-OS-192(G,3N+P)75-RE-188,,SIG,,,EVAL))",
         "children": [
           {
-            "code": [
-              "76-OS-192",
-              [
-                "G,3N"
-              ],
-              "76-OS-189,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-192(G,3N)76-OS-189,,SIG,,,EVAL)",
             "target": "76-OS-192",
             "process": "G,3N",
             "sf49": "76-OS-189,,SIG,,,EVAL",
@@ -455,14 +392,7 @@
             "sf9": "EVAL"
           },
           {
-            "code": [
-              "76-OS-192",
-              [
-                "G,3N+P"
-              ],
-              "75-RE-188,,SIG,,,EVAL"
-            ],
-            "type": null,
+            "x4_code": "(76-OS-192(G,3N+P)75-RE-188,,SIG,,,EVAL)",
             "target": "76-OS-192",
             "process": "G,3N+P",
             "sf49": "75-RE-188,,SIG,,,EVAL",
@@ -474,7 +404,12 @@
             "sf9": "EVAL"
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((76-OS-192(G,3N)76-OS-189,,SIG,,,EVAL)",
+          "(76-OS-192(G,3N+P)75-RE-188,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -482,16 +417,9 @@
     "011": {
       "0": {
         "x4_code": "(76-OS-192(G,X)0-NN-1,UNW,SIG,,,EVAL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "76-OS-192",
-              [
-                "G,X"
-              ],
-              "0-NN-1,UNW,SIG,,,EVAL"
-            ],
-            "type": null,
             "target": "76-OS-192",
             "process": "G,X",
             "sf49": "0-NN-1,UNW,SIG,,,EVAL",
@@ -500,10 +428,435 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
+            "sf9": "EVAL",
+            "operator": null,
+            "x4_code": "(76-OS-192(G,X)0-NN-1,UNW,SIG,,,EVAL)"
+          }
+        ],
+        "operator": null,
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "012": {
+      "0": {
+        "x4_code": "((76-OS-186(G,2N)76-OS-184,,SIG,,,EVAL)+(76-OS-186(G,2N+P)75-RE-183,,SIG,,,EVAL))",
+        "children": [
+          {
+            "x4_code": "(76-OS-186(G,2N)76-OS-184,,SIG,,,EVAL)",
+            "target": "76-OS-186",
+            "process": "G,2N",
+            "sf49": "76-OS-184,,SIG,,,EVAL",
+            "sf4": "76-OS-184",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "EVAL"
+          },
+          {
+            "x4_code": "(76-OS-186(G,2N+P)75-RE-183,,SIG,,,EVAL)",
+            "target": "76-OS-186",
+            "process": "G,2N+P",
+            "sf49": "75-RE-183,,SIG,,,EVAL",
+            "sf4": "75-RE-183",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
             "sf9": "EVAL"
           }
         ],
-        "type": null,
+        "math_expression": [
+          "Add",
+          "((76-OS-186(G,2N)76-OS-184,,SIG,,,EVAL)",
+          "(76-OS-186(G,2N+P)75-RE-183,,SIG,,,EVAL))"
+        ],
+        "operator": "Add",
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "013": {
+      "0": {
+        "x4_code": "(76-OS-186(G,X)0-NN-1,UNW,INT,,,DERIV)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "76-OS-186",
+            "process": "G,X",
+            "sf49": "0-NN-1,UNW,INT,,,DERIV",
+            "sf4": "0-NN-1",
+            "sf5": "UNW",
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV",
+            "operator": null,
+            "x4_code": "(76-OS-186(G,X)0-NN-1,UNW,INT,,,DERIV)"
+          }
+        ],
+        "operator": null,
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "014": {
+      "0": {
+        "x4_code": "((76-OS-186(G,N)76-OS-185,,INT,,,DERIV)+(76-OS-186(G,N+P)75-RE-184,,INT,,,DERIV))",
+        "children": [
+          {
+            "x4_code": "(76-OS-186(G,N)76-OS-185,,INT,,,DERIV)",
+            "target": "76-OS-186",
+            "process": "G,N",
+            "sf49": "76-OS-185,,INT,,,DERIV",
+            "sf4": "76-OS-185",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          },
+          {
+            "x4_code": "(76-OS-186(G,N+P)75-RE-184,,INT,,,DERIV)",
+            "target": "76-OS-186",
+            "process": "G,N+P",
+            "sf49": "75-RE-184,,INT,,,DERIV",
+            "sf4": "75-RE-184",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "math_expression": [
+          "Add",
+          "((76-OS-186(G,N)76-OS-185,,INT,,,DERIV)",
+          "(76-OS-186(G,N+P)75-RE-184,,INT,,,DERIV))"
+        ],
+        "operator": "Add",
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "015": {
+      "0": {
+        "x4_code": "((76-OS-186(G,2N)76-OS-184,,INT,,,DERIV)+(76-OS-186(G,2N+P)75-RE-183,,INT,,,DERIV))",
+        "children": [
+          {
+            "x4_code": "(76-OS-186(G,2N)76-OS-184,,INT,,,DERIV)",
+            "target": "76-OS-186",
+            "process": "G,2N",
+            "sf49": "76-OS-184,,INT,,,DERIV",
+            "sf4": "76-OS-184",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          },
+          {
+            "x4_code": "(76-OS-186(G,2N+P)75-RE-183,,INT,,,DERIV)",
+            "target": "76-OS-186",
+            "process": "G,2N+P",
+            "sf49": "75-RE-183,,INT,,,DERIV",
+            "sf4": "75-RE-183",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "math_expression": [
+          "Add",
+          "((76-OS-186(G,2N)76-OS-184,,INT,,,DERIV)",
+          "(76-OS-186(G,2N+P)75-RE-183,,INT,,,DERIV))"
+        ],
+        "operator": "Add",
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "016": {
+      "0": {
+        "x4_code": "(76-OS-190(G,X)0-NN-1,UNW,INT,,,DERIV)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "76-OS-190",
+            "process": "G,X",
+            "sf49": "0-NN-1,UNW,INT,,,DERIV",
+            "sf4": "0-NN-1",
+            "sf5": "UNW",
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV",
+            "operator": null,
+            "x4_code": "(76-OS-190(G,X)0-NN-1,UNW,INT,,,DERIV)"
+          }
+        ],
+        "operator": null,
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "017": {
+      "0": {
+        "x4_code": "((76-OS-190(G,N)76-OS-189,,INT,,,DERIV)+(76-OS-190(G,N+P)75-RE-188,,INT,,,DERIV))",
+        "children": [
+          {
+            "x4_code": "(76-OS-190(G,N)76-OS-189,,INT,,,DERIV)",
+            "target": "76-OS-190",
+            "process": "G,N",
+            "sf49": "76-OS-189,,INT,,,DERIV",
+            "sf4": "76-OS-189",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          },
+          {
+            "x4_code": "(76-OS-190(G,N+P)75-RE-188,,INT,,,DERIV)",
+            "target": "76-OS-190",
+            "process": "G,N+P",
+            "sf49": "75-RE-188,,INT,,,DERIV",
+            "sf4": "75-RE-188",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "math_expression": [
+          "Add",
+          "((76-OS-190(G,N)76-OS-189,,INT,,,DERIV)",
+          "(76-OS-190(G,N+P)75-RE-188,,INT,,,DERIV))"
+        ],
+        "operator": "Add",
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "018": {
+      "0": {
+        "x4_code": "((76-OS-190(G,2N)76-OS-188,,INT,,,DERIV)+(76-OS-190(G,2N+P)75-RE-187,,INT,,,DERIV))",
+        "children": [
+          {
+            "x4_code": "(76-OS-190(G,2N)76-OS-188,,INT,,,DERIV)",
+            "target": "76-OS-190",
+            "process": "G,2N",
+            "sf49": "76-OS-188,,INT,,,DERIV",
+            "sf4": "76-OS-188",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          },
+          {
+            "x4_code": "(76-OS-190(G,2N+P)75-RE-187,,INT,,,DERIV)",
+            "target": "76-OS-190",
+            "process": "G,2N+P",
+            "sf49": "75-RE-187,,INT,,,DERIV",
+            "sf4": "75-RE-187",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "math_expression": [
+          "Add",
+          "((76-OS-190(G,2N)76-OS-188,,INT,,,DERIV)",
+          "(76-OS-190(G,2N+P)75-RE-187,,INT,,,DERIV))"
+        ],
+        "operator": "Add",
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "019": {
+      "0": {
+        "x4_code": "((76-OS-190(G,3N)76-OS-187,,INT,,,DERIV)+(76-OS-190(G,3N+P)75-RE-186,,INT,,,DERIV))",
+        "children": [
+          {
+            "x4_code": "(76-OS-190(G,3N)76-OS-187,,INT,,,DERIV)",
+            "target": "76-OS-190",
+            "process": "G,3N",
+            "sf49": "76-OS-187,,INT,,,DERIV",
+            "sf4": "76-OS-187",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          },
+          {
+            "x4_code": "(76-OS-190(G,3N+P)75-RE-186,,INT,,,DERIV)",
+            "target": "76-OS-190",
+            "process": "G,3N+P",
+            "sf49": "75-RE-186,,INT,,,DERIV",
+            "sf4": "75-RE-186",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "math_expression": [
+          "Add",
+          "((76-OS-190(G,3N)76-OS-187,,INT,,,DERIV)",
+          "(76-OS-190(G,3N+P)75-RE-186,,INT,,,DERIV))"
+        ],
+        "operator": "Add",
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "020": {
+      "0": {
+        "x4_code": "(76-OS-192(G,X)0-NN-1,UNW,INT,,,DERIV)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "76-OS-192",
+            "process": "G,X",
+            "sf49": "0-NN-1,UNW,INT,,,DERIV",
+            "sf4": "0-NN-1",
+            "sf5": "UNW",
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV",
+            "operator": null,
+            "x4_code": "(76-OS-192(G,X)0-NN-1,UNW,INT,,,DERIV)"
+          }
+        ],
+        "operator": null,
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "021": {
+      "0": {
+        "x4_code": "((76-OS-192(G,N)76-OS-191,,INT,,,DERIV)+(76-OS-192(G,N+P)75-RE-190,,INT,,,DERIV))",
+        "children": [
+          {
+            "x4_code": "(76-OS-192(G,N)76-OS-191,,INT,,,DERIV)",
+            "target": "76-OS-192",
+            "process": "G,N",
+            "sf49": "76-OS-191,,INT,,,DERIV",
+            "sf4": "76-OS-191",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          },
+          {
+            "x4_code": "(76-OS-192(G,N+P)75-RE-190,,INT,,,DERIV)",
+            "target": "76-OS-192",
+            "process": "G,N+P",
+            "sf49": "75-RE-190,,INT,,,DERIV",
+            "sf4": "75-RE-190",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "math_expression": [
+          "Add",
+          "((76-OS-192(G,N)76-OS-191,,INT,,,DERIV)",
+          "(76-OS-192(G,N+P)75-RE-190,,INT,,,DERIV))"
+        ],
+        "operator": "Add",
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "022": {
+      "0": {
+        "x4_code": "((76-OS-192(G,2N)76-OS-190,,INT,,,DERIV)+(76-OS-192(G,2N+P)75-RE-189,,INT,,,DERIV))",
+        "children": [
+          {
+            "x4_code": "(76-OS-192(G,2N)76-OS-190,,INT,,,DERIV)",
+            "target": "76-OS-192",
+            "process": "G,2N",
+            "sf49": "76-OS-190,,INT,,,DERIV",
+            "sf4": "76-OS-190",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          },
+          {
+            "x4_code": "(76-OS-192(G,2N+P)75-RE-189,,INT,,,DERIV)",
+            "target": "76-OS-192",
+            "process": "G,2N+P",
+            "sf49": "75-RE-189,,INT,,,DERIV",
+            "sf4": "75-RE-189",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "math_expression": [
+          "Add",
+          "((76-OS-192(G,2N)76-OS-190,,INT,,,DERIV)",
+          "(76-OS-192(G,2N+P)75-RE-189,,INT,,,DERIV))"
+        ],
+        "operator": "Add",
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "023": {
+      "0": {
+        "x4_code": "((76-OS-192(G,3N)76-OS-189,,INT,,,DERIV)+(76-OS-192(G,3N+P)75-RE-188,,INT,,,DERIV))",
+        "children": [
+          {
+            "x4_code": "(76-OS-192(G,3N)76-OS-189,,INT,,,DERIV)",
+            "target": "76-OS-192",
+            "process": "G,3N",
+            "sf49": "76-OS-189,,INT,,,DERIV",
+            "sf4": "76-OS-189",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          },
+          {
+            "x4_code": "(76-OS-192(G,3N+P)75-RE-188,,INT,,,DERIV)",
+            "target": "76-OS-192",
+            "process": "G,3N+P",
+            "sf49": "75-RE-188,,INT,,,DERIV",
+            "sf4": "75-RE-188",
+            "sf5": null,
+            "sf6": "INT",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV"
+          }
+        ],
+        "math_expression": [
+          "Add",
+          "((76-OS-192(G,3N)76-OS-189,,INT,,,DERIV)",
+          "(76-OS-192(G,3N+P)75-RE-188,,INT,,,DERIV))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -1201,7 +1554,7 @@
             190.01,
             177.94,
             178.46,
-            65.55,
+            165.55,
             161.23,
             147.46,
             145.84,
@@ -2527,6 +2880,402 @@
           ]
         ]
       }
+    },
+    "012": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            15.024,
+            15.269,
+            15.391,
+            15.513,
+            15.758,
+            15.88,
+            16.002,
+            16.246,
+            16.369,
+            16.491,
+            16.613,
+            16.735,
+            16.857,
+            16.98,
+            17.102,
+            17.224,
+            17.346,
+            17.468,
+            17.713,
+            17.957,
+            18.202,
+            18.324,
+            18.446,
+            18.69,
+            18.935,
+            19.179,
+            19.424,
+            19.546,
+            19.668
+          ],
+          [
+            2.185,
+            5.92,
+            9.836,
+            19.869,
+            48.087,
+            65.573,
+            80.874,
+            109.836,
+            116.393,
+            131.114,
+            129.508,
+            136.885,
+            140.984,
+            134.972,
+            128.962,
+            139.891,
+            120.077,
+            137.158,
+            125.683,
+            114.175,
+            96.488,
+            91.195,
+            88.464,
+            90.102,
+            74.266,
+            80.524,
+            80.074,
+            58.976,
+            73.174
+          ],
+          [
+            2.185,
+            2.185,
+            2.185,
+            2.732,
+            6.557,
+            9.836,
+            10.383,
+            16.597,
+            18.765,
+            19.672,
+            23.497,
+            19.672,
+            21.858,
+            20.765,
+            20.273,
+            20.219,
+            18.765,
+            20.765,
+            19.672,
+            19.126,
+            16.793,
+            16.546,
+            15.29,
+            15.443,
+            14.744,
+            15.444,
+            14.883,
+            14.198,
+            14.196
+          ]
+        ]
+      }
+    },
+    "013": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN-MAX",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB*MEV",
+          "MB*MEV"
+        ],
+        "data": [
+          [
+            20.0
+          ],
+          [
+            2389.3
+          ],
+          [
+            57.5
+          ]
+        ]
+      }
+    },
+    "014": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN-MAX",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB*MEV",
+          "MB*MEV"
+        ],
+        "data": [
+          [
+            20.0
+          ],
+          [
+            1967.9
+          ],
+          [
+            57.5
+          ]
+        ]
+      }
+    },
+    "015": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN-MAX",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB*MEV",
+          "MB*MEV"
+        ],
+        "data": [
+          [
+            20.0
+          ],
+          [
+            472.8
+          ],
+          [
+            10.3
+          ]
+        ]
+      }
+    },
+    "016": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN-MAX",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB*MEV",
+          "MB*MEV"
+        ],
+        "data": [
+          [
+            31.0
+          ],
+          [
+            3276.7
+          ],
+          [
+            62.5
+          ]
+        ]
+      }
+    },
+    "017": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN-MAX",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB*MEV",
+          "MB*MEV"
+        ],
+        "data": [
+          [
+            31.0
+          ],
+          [
+            2068.1
+          ],
+          [
+            55.4
+          ]
+        ]
+      }
+    },
+    "018": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN-MAX",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB*MEV",
+          "MB*MEV"
+        ],
+        "data": [
+          [
+            31.0
+          ],
+          [
+            1080.6
+          ],
+          [
+            25.3
+          ]
+        ]
+      }
+    },
+    "019": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN-MAX",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB*MEV",
+          "MB*MEV"
+        ],
+        "data": [
+          [
+            31.0
+          ],
+          [
+            138.5
+          ],
+          [
+            14.3
+          ]
+        ]
+      }
+    },
+    "020": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN-MAX",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB*MEV",
+          "MB*MEV"
+        ],
+        "data": [
+          [
+            31.0
+          ],
+          [
+            3392.7
+          ],
+          [
+            63.4
+          ]
+        ]
+      }
+    },
+    "021": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN-MAX",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB*MEV",
+          "MB*MEV"
+        ],
+        "data": [
+          [
+            31.0
+          ],
+          [
+            2032.8
+          ],
+          [
+            54.5
+          ]
+        ]
+      }
+    },
+    "022": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN-MAX",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB*MEV",
+          "MB*MEV"
+        ],
+        "data": [
+          [
+            31.0
+          ],
+          [
+            1221.8
+          ],
+          [
+            28.4
+          ]
+        ]
+      }
+    },
+    "023": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN-MAX",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB*MEV",
+          "MB*MEV"
+        ],
+        "data": [
+          [
+            31.0
+          ],
+          [
+            138.0
+          ],
+          [
+            15.3
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
@@ -2572,7 +3321,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE,APRVD)",
+            "x4_code": "(APRVD)",
             "free_txt": [
               " Approved by V.Varlamov."
             ]
@@ -2593,9 +3342,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
             "free_txt": [
-              "Data plotted in Fig. 7."
+              " Data plotted in Fig. 7."
             ]
           },
           {
@@ -2650,9 +3399,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
             "free_txt": [
-              "Data plotted in Fig. 7."
+              " Data plotted in Fig. 7."
             ]
           },
           {
@@ -2701,9 +3450,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
             "free_txt": [
-              "Data plotted in Fig. 8."
+              " Data plotted in Fig. 8."
             ]
           },
           {
@@ -2722,7 +3471,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "The contribution  of  partial  reaction  (g,n)  cross",
+              "The contribution  of partial  reaction  (g,2n)  cross",
               " section  into  the  experimental total neutron yield",
               " reaction  (g,xn)  cross   section   obtained   using",
               " quasimonoenergetic annihilation photons at Livermore",
@@ -2731,7 +3480,7 @@
               " ratio",
               "      F2-theor = SIG-theor(g,2n)/SIG-theor(g,xn)",
               " by the way",
-              "      SIG-eval(g,n) = (F2-theor)x(SIG-exp(g,xn))."
+              "     SIG-eval(g,2n) = (F2-theor)x(SIG-exp(g,xn))."
             ]
           }
         ],
@@ -2753,9 +3502,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
             "free_txt": [
-              "Data plotted in Fig. 8."
+              " Data plotted in Fig. 8."
             ]
           },
           {
@@ -2783,7 +3532,7 @@
               " ratio",
               "     F3-theor = SIG-theor(g,3n)/SIG-theor(g,xn)",
               " by the way",
-              "      SIG-eval(g,n) = (F3-theor)x(SIG-exp(g,xn))."
+              "     SIG-eval(g,3n) = (F3-theor)x(SIG-exp(g,xn))."
             ]
           }
         ],
@@ -2805,9 +3554,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
             "free_txt": [
-              "Data plotted in Fig. 8."
+              " Data plotted in Fig. 8."
             ]
           },
           {
@@ -2833,9 +3582,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
             "free_txt": [
-              "Data plotted in Fig. 8."
+              " Data plotted in Fig. 8."
             ]
           },
           {
@@ -2896,9 +3645,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
             "free_txt": [
-              "Data plotted in Fig. 9."
+              " Data plotted in Fig. 9."
             ]
           },
           {
@@ -2917,7 +3666,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "The contribution  of  partial  reaction  (g,n)  cross",
+              "The contribution  of partial  reaction  (g,2n)  cross",
               " section  into  the  experimental total neutron yield",
               " reaction  (g,xn)  cross   section   obtained   using",
               " quasimonoenergetic annihilation photons at Livermore",
@@ -2926,7 +3675,7 @@
               " ratio",
               "      F2-theor = SIG-theor(g,2n)/SIG-theor(g,xn)",
               " by the way",
-              "      SIG-eval(g,n) = (F2-theor)x(SIG-exp(g,xn))."
+              "     SIG-eval(g,2n) = (F2-theor)x(SIG-exp(g,xn))."
             ]
           }
         ],
@@ -2948,9 +3697,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
             "free_txt": [
-              "Data plotted in Fig. 9."
+              " Data plotted in Fig. 9."
             ]
           },
           {
@@ -2969,7 +3718,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "The contribution  of  partial  reaction  (g,n)  cross",
+              "The contribution  of partial  reaction  (g,3n)  cross",
               " section  into  the  experimental total neutron yield",
               " reaction  (g,xn)  cross   section   obtained   using",
               " quasimonoenergetic annihilation photons at Livermore",
@@ -2978,7 +3727,7 @@
               " ratio",
               "      F3-theor = SIG-theor(g,3n)/SIG-theor(g,xn)",
               " by the way",
-              "      SIG-eval(g,n) = (F3-theor)x(SIG-exp(g,xn))."
+              "     SIG-eval(g,3n) = (F3-theor)x(SIG-exp(g,xn))."
             ]
           }
         ],
@@ -3000,9 +3749,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
             "free_txt": [
-              "Data plotted in Fig. 9."
+              " Data plotted in Fig. 9."
             ]
           },
           {
@@ -3028,9 +3777,9 @@
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
             "free_txt": [
-              "Data plotted in Fig. 9."
+              " Data plotted in Fig. 9."
             ]
           },
           {
@@ -3049,6 +3798,344 @@
             "x4_code": "(DEP,M0915010)",
             "free_txt": [
               " Evaluated (g,3n) reaction cross section."
+            ]
+          }
+        ]
+      }
+    },
+    "012": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "The contribution of  partial  reaction  (g,2n)  cross",
+              " section  into  the  experimental total neutron yield",
+              " reaction  (g,xn)  cross   section   obtained   using",
+              " quasimonoenergetic annihilation photons at Livermore",
+              " (USA) was  evaluated  using  specially theoretically",
+              " calculated transitional  multiplicity   function   -",
+              " ratio",
+              "      F2-theor = SIG-theor(g,2n)/SIG-theor(g,xn)",
+              " by the way",
+              "     SIG-eval(g,2n) = (F2-theor)x(SIG-exp(g,xn))."
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(R,L0046016,B.L.Berman+,J,PR/C,19,1205,1979)",
+            "free_txt": [
+              " Experimental data for the total neutron yield",
+              " reaction (g,xn) cross section."
+            ]
+          },
+          {
+            "x4_code": "(E,,B.S.Ishkhanov+,J,YF,71,517,2008)",
+            "free_txt": [
+              " Theoretical preequilibrium  model  of   photonuclear",
+              " reactions based on the Fermi gas densities."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
+            "free_txt": [
+              " Data plotted in Fig. 7."
+            ]
+          },
+          {
+            "x4_code": "(DEP,L0011008)",
+            "free_txt": [
+              " The total  neutron  yield  reaction   (g,xn)   cross",
+              " section."
+            ]
+          }
+        ]
+      }
+    },
+    "013": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Integration of evaluated cross section."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0915002)",
+            "free_txt": [
+              " Evaluated cross section."
+            ]
+          }
+        ]
+      }
+    },
+    "014": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Integration of evaluated cross section."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0915003)",
+            "free_txt": [
+              " Evaluated cross section."
+            ]
+          }
+        ]
+      }
+    },
+    "015": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Integration of evaluated cross section."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0915012)",
+            "free_txt": [
+              " Evaluated cross section."
+            ]
+          }
+        ]
+      }
+    },
+    "016": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Integration of evaluated cross section."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0915007)",
+            "free_txt": [
+              " Evaluated cross section."
+            ]
+          }
+        ]
+      }
+    },
+    "017": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Integration of evaluated cross section."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0915004)",
+            "free_txt": [
+              " Evaluated cross section."
+            ]
+          }
+        ]
+      }
+    },
+    "018": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Integration of evaluated cross section."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0915005)",
+            "free_txt": [
+              " Evaluated cross section."
+            ]
+          }
+        ]
+      }
+    },
+    "019": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Integration of evaluated cross section."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0915006)",
+            "free_txt": [
+              " Evaluated cross section."
+            ]
+          }
+        ]
+      }
+    },
+    "020": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Integration of evaluated cross section."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0915007)",
+            "free_txt": [
+              " Evaluated cross section."
+            ]
+          }
+        ]
+      }
+    },
+    "021": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Integration of evaluated cross section."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0915008)",
+            "free_txt": [
+              " Evaluated cross section."
+            ]
+          }
+        ]
+      }
+    },
+    "022": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Integration of evaluated cross section."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0915009)",
+            "free_txt": [
+              " Evaluated cross section."
+            ]
+          }
+        ]
+      }
+    },
+    "023": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Integration of evaluated cross section."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.V.Varlamov+,J,PAN,78,746,2015)",
+            "free_txt": [
+              " Data from the Table 2."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0915010)",
+            "free_txt": [
+              " Evaluated cross section."
             ]
           }
         ]

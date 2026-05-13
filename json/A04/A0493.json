@@ -1,7 +1,7 @@
 {
   "entry": "A0493",
-  "last_updated": "2018-04-23",
-  "number_of_revisions": "5",
+  "last_updated": "2024-12-13",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(20030228C)",
@@ -11,7 +11,7 @@
       "x4_code": "(20100406A)",
       "free_txt": [
         " Correction for SF3=TOT and SF-EL in",
-        "subentries 002-004 has been done."
+        "Subents 002-004 has been done."
       ]
     },
     {
@@ -19,6 +19,13 @@
       "free_txt": [
         " SD: Ref. PTE,5,31,1981 deleted from REL-REF",
         " (translation of this article is given in IET,24,1127)."
+      ]
+    },
+    {
+      "x4_code": "(20240917A)",
+      "free_txt": [
+        " SD: Corrections in all Subents. Several",
+        "Subents were split according to EXFOR rules."
       ]
     }
   ],
@@ -86,17 +93,15 @@
     "institutes": [
       {
         "x4_code": "(2GERGSI)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(2GERTHD)",
-        "free_txt": [
-          " Institut fuer kernphysik"
-        ]
+        "free_txt": ""
       },
       {
         "x4_code": "(4RUSLIN)",
-        "free_txt": []
+        "free_txt": ""
       }
     ],
     "references": [
@@ -112,28 +117,21 @@
     ],
     "facilities": [
       {
-        "x4_code": "(FRS,2GERGSI)",
+        "x4_code": "(SYNCH,2GERGSI)",
         "free_txt": [],
         "pointer": "0",
-        "facility_type": "(FRS)",
+        "facility_type": "(SYNCH)",
         "institute": "(2GERGSI)"
       }
     ]
   },
   "reactions": {
     "002": {
-      "1": {
+      "0": {
         "x4_code": "((1-H-1(A,TOT),,SIG,,MSC)=(2-HE-4(P,TOT),,SIG,,MSC))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "A,TOT"
-              ],
-              ",,SIG,,MSC"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(A,TOT),,SIG,,MSC)",
             "target": "1-H-1",
             "process": "A,TOT",
             "sf49": ",,SIG,,MSC",
@@ -145,14 +143,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "2-HE-4",
-              [
-                "P,TOT"
-              ],
-              ",,SIG,,MSC"
-            ],
-            "type": null,
+            "x4_code": "(2-HE-4(P,TOT),,SIG,,MSC)",
             "target": "2-HE-4",
             "process": "P,TOT",
             "sf49": ",,SIG,,MSC",
@@ -164,116 +155,22 @@
             "sf9": null
           }
         ],
-        "type": "=",
-        "free_text": " Nuclear interaction part",
-        "pointer": "1"
-      },
-      "2": {
-        "x4_code": "((1-H-1(A,NON),,SIG)=(2-HE-4(P,NON),,SIG))",
-        "children": [
-          {
-            "code": [
-              "1-H-1",
-              [
-                "A,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "A,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": [
-              "2-HE-4",
-              [
-                "P,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "P,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          }
+        "math_expression": [
+          "Equal",
+          "((1-H-1(A,TOT),,SIG,,MSC)",
+          "(2-HE-4(P,TOT),,SIG,,MSC))"
         ],
-        "type": "=",
-        "free_text": "",
-        "pointer": "2"
-      },
-      "3": {
-        "x4_code": "((1-H-1(A,EL)1-H-1,,SIG,,MSC)=(2-HE-4(P,EL)2-HE-4,,SIG,,MSC))",
-        "children": [
-          {
-            "code": [
-              "1-H-1",
-              [
-                "A,EL"
-              ],
-              "1-H-1,,SIG,,MSC"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "A,EL",
-            "sf49": "1-H-1,,SIG,,MSC",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MSC",
-            "sf9": null
-          },
-          {
-            "code": [
-              "2-HE-4",
-              [
-                "P,EL"
-              ],
-              "2-HE-4,,SIG,,MSC"
-            ],
-            "type": null,
-            "target": "2-HE-4",
-            "process": "P,EL",
-            "sf49": "2-HE-4,,SIG,,MSC",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MSC",
-            "sf9": null
-          }
-        ],
-        "type": "=",
-        "free_text": "  Nuclear interaction part",
-        "pointer": "3"
+        "operator": "Equal",
+        "free_text": "Cross section for strong interaction",
+        "pointer": "0"
       }
     },
     "003": {
-      "1": {
+      "0": {
         "x4_code": "((1-H-1(2-HE-6,TOT),,SIG,,MSC)=(2-HE-6(P,TOT),,SIG,,MSC))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "2-HE-6,TOT"
-              ],
-              ",,SIG,,MSC"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(2-HE-6,TOT),,SIG,,MSC)",
             "target": "1-H-1",
             "process": "2-HE-6,TOT",
             "sf49": ",,SIG,,MSC",
@@ -285,14 +182,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "2-HE-6",
-              [
-                "P,TOT"
-              ],
-              ",,SIG,,MSC"
-            ],
-            "type": null,
+            "x4_code": "(2-HE-6(P,TOT),,SIG,,MSC)",
             "target": "2-HE-6",
             "process": "P,TOT",
             "sf49": ",,SIG,,MSC",
@@ -304,116 +194,22 @@
             "sf9": null
           }
         ],
-        "type": "=",
-        "free_text": " Nuclear interaction part",
-        "pointer": "1"
-      },
-      "2": {
-        "x4_code": "((1-H-1(2-HE-6,NON),,SIG)=(2-HE-6(P,NON),,SIG))",
-        "children": [
-          {
-            "code": [
-              "1-H-1",
-              [
-                "2-HE-6,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "2-HE-6,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": [
-              "2-HE-6",
-              [
-                "P,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "2-HE-6",
-            "process": "P,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          }
+        "math_expression": [
+          "Equal",
+          "((1-H-1(2-HE-6,TOT),,SIG,,MSC)",
+          "(2-HE-6(P,TOT),,SIG,,MSC))"
         ],
-        "type": "=",
-        "free_text": "",
-        "pointer": "2"
-      },
-      "3": {
-        "x4_code": "((1-H-1(2-HE-6,EL)1-H-1,,SIG,,MSC)=(2-HE-6(P,EL)2-HE-6,,SIG,,MSC))",
-        "children": [
-          {
-            "code": [
-              "1-H-1",
-              [
-                "2-HE-6,EL"
-              ],
-              "1-H-1,,SIG,,MSC"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "2-HE-6,EL",
-            "sf49": "1-H-1,,SIG,,MSC",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MSC",
-            "sf9": null
-          },
-          {
-            "code": [
-              "2-HE-6",
-              [
-                "P,EL"
-              ],
-              "2-HE-6,,SIG,,MSC"
-            ],
-            "type": null,
-            "target": "2-HE-6",
-            "process": "P,EL",
-            "sf49": "2-HE-6,,SIG,,MSC",
-            "sf4": "2-HE-6",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MSC",
-            "sf9": null
-          }
-        ],
-        "type": "=",
-        "free_text": "   Nuclear interaction part",
-        "pointer": "3"
+        "operator": "Equal",
+        "free_text": "Cross section for strong interaction",
+        "pointer": "0"
       }
     },
     "004": {
-      "1": {
+      "0": {
         "x4_code": "((1-H-1(2-HE-8,TOT),,SIG,,MSC)=(2-HE-8(P,TOT),,SIG,,MSC))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "2-HE-8,TOT"
-              ],
-              ",,SIG,,MSC"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(2-HE-8,TOT),,SIG,,MSC)",
             "target": "1-H-1",
             "process": "2-HE-8,TOT",
             "sf49": ",,SIG,,MSC",
@@ -425,14 +221,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "2-HE-8",
-              [
-                "P,TOT"
-              ],
-              ",,SIG,,MSC"
-            ],
-            "type": null,
+            "x4_code": "(2-HE-8(P,TOT),,SIG,,MSC)",
             "target": "2-HE-8",
             "process": "P,TOT",
             "sf49": ",,SIG,,MSC",
@@ -444,101 +233,14 @@
             "sf9": null
           }
         ],
-        "type": "=",
-        "free_text": " Nuclear interaction part",
-        "pointer": "1"
-      },
-      "2": {
-        "x4_code": "((1-H-1(2-HE-8,NON),,SIG)=(2-HE-8(P,NON),,SIG))",
-        "children": [
-          {
-            "code": [
-              "1-H-1",
-              [
-                "2-HE-8,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "2-HE-8,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": [
-              "2-HE-8",
-              [
-                "P,NON"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "2-HE-8",
-            "process": "P,NON",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          }
+        "math_expression": [
+          "Equal",
+          "((1-H-1(2-HE-8,TOT),,SIG,,MSC)",
+          "(2-HE-8(P,TOT),,SIG,,MSC))"
         ],
-        "type": "=",
-        "free_text": "",
-        "pointer": "2"
-      },
-      "3": {
-        "x4_code": "((1-H-1(2-HE-8,EL)1-H-1,,SIG,,MSC)=(2-HE-8(P,EL)2-HE-8,,SIG,,MSC))",
-        "children": [
-          {
-            "code": [
-              "1-H-1",
-              [
-                "2-HE-8,EL"
-              ],
-              "1-H-1,,SIG,,MSC"
-            ],
-            "type": null,
-            "target": "1-H-1",
-            "process": "2-HE-8,EL",
-            "sf49": "1-H-1,,SIG,,MSC",
-            "sf4": "1-H-1",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MSC",
-            "sf9": null
-          },
-          {
-            "code": [
-              "2-HE-8",
-              [
-                "P,EL"
-              ],
-              "2-HE-8,,SIG,,MSC"
-            ],
-            "type": null,
-            "target": "2-HE-8",
-            "process": "P,EL",
-            "sf49": "2-HE-8,,SIG,,MSC",
-            "sf4": "2-HE-8",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "MSC",
-            "sf9": null
-          }
-        ],
-        "type": "=",
-        "free_text": "    Nuclear interaction part",
-        "pointer": "3"
+        "operator": "Equal",
+        "free_text": "Cross section for strong interaction",
+        "pointer": "0"
       }
     },
     "005": {
@@ -546,14 +248,7 @@
         "x4_code": "((1-H-1(A,EL)1-H-1,,DT)=(2-HE-4(P,EL)2-HE-4,,DT))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "A,EL"
-              ],
-              "1-H-1,,DT"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(A,EL)1-H-1,,DT)",
             "target": "1-H-1",
             "process": "A,EL",
             "sf49": "1-H-1,,DT",
@@ -565,14 +260,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "2-HE-4",
-              [
-                "P,EL"
-              ],
-              "2-HE-4,,DT"
-            ],
-            "type": null,
+            "x4_code": "(2-HE-4(P,EL)2-HE-4,,DT)",
             "target": "2-HE-4",
             "process": "P,EL",
             "sf49": "2-HE-4,,DT",
@@ -584,7 +272,12 @@
             "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-1(A,EL)1-H-1,,DT)",
+          "(2-HE-4(P,EL)2-HE-4,,DT))"
+        ],
+        "operator": "Equal",
         "free_text": "",
         "pointer": "0"
       }
@@ -594,14 +287,7 @@
         "x4_code": "((1-H-1(2-HE-6,EL)1-H-1,,DT)=(2-HE-6(P,EL)2-HE-6,,DT))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "2-HE-6,EL"
-              ],
-              "1-H-1,,DT"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(2-HE-6,EL)1-H-1,,DT)",
             "target": "1-H-1",
             "process": "2-HE-6,EL",
             "sf49": "1-H-1,,DT",
@@ -613,14 +299,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "2-HE-6",
-              [
-                "P,EL"
-              ],
-              "2-HE-6,,DT"
-            ],
-            "type": null,
+            "x4_code": "(2-HE-6(P,EL)2-HE-6,,DT)",
             "target": "2-HE-6",
             "process": "P,EL",
             "sf49": "2-HE-6,,DT",
@@ -632,7 +311,12 @@
             "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-1(2-HE-6,EL)1-H-1,,DT)",
+          "(2-HE-6(P,EL)2-HE-6,,DT))"
+        ],
+        "operator": "Equal",
         "free_text": "",
         "pointer": "0"
       }
@@ -642,14 +326,7 @@
         "x4_code": "((1-H-1(2-HE-8,EL)1-H-1,,DT)=(2-HE-8(P,EL)2-HE-8,,DT))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "2-HE-8,EL"
-              ],
-              "1-H-1,,DT"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(2-HE-8,EL)1-H-1,,DT)",
             "target": "1-H-1",
             "process": "2-HE-8,EL",
             "sf49": "1-H-1,,DT",
@@ -661,14 +338,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "2-HE-8",
-              [
-                "P,EL"
-              ],
-              "2-HE-8,,DT"
-            ],
-            "type": null,
+            "x4_code": "(2-HE-8(P,EL)2-HE-8,,DT)",
             "target": "2-HE-8",
             "process": "P,EL",
             "sf49": "2-HE-8,,DT",
@@ -680,8 +350,247 @@
             "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-1(2-HE-8,EL)1-H-1,,DT)",
+          "(2-HE-8(P,EL)2-HE-8,,DT))"
+        ],
+        "operator": "Equal",
         "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "008": {
+      "0": {
+        "x4_code": "((1-H-1(A,NON),,SIG)=(2-HE-4(P,NON),,SIG))",
+        "children": [
+          {
+            "x4_code": "(1-H-1(A,NON),,SIG)",
+            "target": "1-H-1",
+            "process": "A,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "x4_code": "(2-HE-4(P,NON),,SIG)",
+            "target": "2-HE-4",
+            "process": "P,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "math_expression": [
+          "Equal",
+          "((1-H-1(A,NON),,SIG)",
+          "(2-HE-4(P,NON),,SIG))"
+        ],
+        "operator": "Equal",
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "009": {
+      "0": {
+        "x4_code": "((1-H-1(A,EL)1-H-1,,SIG,,MSC)=(2-HE-4(P,EL)2-HE-4,,SIG,,MSC))",
+        "children": [
+          {
+            "x4_code": "(1-H-1(A,EL)1-H-1,,SIG,,MSC)",
+            "target": "1-H-1",
+            "process": "A,EL",
+            "sf49": "1-H-1,,SIG,,MSC",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MSC",
+            "sf9": null
+          },
+          {
+            "x4_code": "(2-HE-4(P,EL)2-HE-4,,SIG,,MSC)",
+            "target": "2-HE-4",
+            "process": "P,EL",
+            "sf49": "2-HE-4,,SIG,,MSC",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MSC",
+            "sf9": null
+          }
+        ],
+        "math_expression": [
+          "Equal",
+          "((1-H-1(A,EL)1-H-1,,SIG,,MSC)",
+          "(2-HE-4(P,EL)2-HE-4,,SIG,,MSC))"
+        ],
+        "operator": "Equal",
+        "free_text": "Cross section for strong interaction",
+        "pointer": "0"
+      }
+    },
+    "010": {
+      "0": {
+        "x4_code": "((1-H-1(2-HE-6,NON),,SIG)=(2-HE-6(P,NON),,SIG))",
+        "children": [
+          {
+            "x4_code": "(1-H-1(2-HE-6,NON),,SIG)",
+            "target": "1-H-1",
+            "process": "2-HE-6,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "x4_code": "(2-HE-6(P,NON),,SIG)",
+            "target": "2-HE-6",
+            "process": "P,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "math_expression": [
+          "Equal",
+          "((1-H-1(2-HE-6,NON),,SIG)",
+          "(2-HE-6(P,NON),,SIG))"
+        ],
+        "operator": "Equal",
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "011": {
+      "0": {
+        "x4_code": "((1-H-1(2-HE-6,EL)1-H-1,,SIG,,MSC)=(2-HE-6(P,EL)2-HE-6,,SIG,,MSC))",
+        "children": [
+          {
+            "x4_code": "(1-H-1(2-HE-6,EL)1-H-1,,SIG,,MSC)",
+            "target": "1-H-1",
+            "process": "2-HE-6,EL",
+            "sf49": "1-H-1,,SIG,,MSC",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MSC",
+            "sf9": null
+          },
+          {
+            "x4_code": "(2-HE-6(P,EL)2-HE-6,,SIG,,MSC)",
+            "target": "2-HE-6",
+            "process": "P,EL",
+            "sf49": "2-HE-6,,SIG,,MSC",
+            "sf4": "2-HE-6",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MSC",
+            "sf9": null
+          }
+        ],
+        "math_expression": [
+          "Equal",
+          "((1-H-1(2-HE-6,EL)1-H-1,,SIG,,MSC)",
+          "(2-HE-6(P,EL)2-HE-6,,SIG,,MSC))"
+        ],
+        "operator": "Equal",
+        "free_text": "Cross section for strong interaction",
+        "pointer": "0"
+      }
+    },
+    "012": {
+      "0": {
+        "x4_code": "((1-H-1(2-HE-8,NON),,SIG)=(2-HE-8(P,NON),,SIG))",
+        "children": [
+          {
+            "x4_code": "(1-H-1(2-HE-8,NON),,SIG)",
+            "target": "1-H-1",
+            "process": "2-HE-8,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          },
+          {
+            "x4_code": "(2-HE-8(P,NON),,SIG)",
+            "target": "2-HE-8",
+            "process": "P,NON",
+            "sf49": ",,SIG",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
+          }
+        ],
+        "math_expression": [
+          "Equal",
+          "((1-H-1(2-HE-8,NON),,SIG)",
+          "(2-HE-8(P,NON),,SIG))"
+        ],
+        "operator": "Equal",
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "013": {
+      "0": {
+        "x4_code": "((1-H-1(2-HE-8,EL)1-H-1,,SIG,,MSC)=(2-HE-8(P,EL)2-HE-8,,SIG,,MSC))",
+        "children": [
+          {
+            "x4_code": "(1-H-1(2-HE-8,EL)1-H-1,,SIG,,MSC)",
+            "target": "1-H-1",
+            "process": "2-HE-8,EL",
+            "sf49": "1-H-1,,SIG,,MSC",
+            "sf4": "1-H-1",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MSC",
+            "sf9": null
+          },
+          {
+            "x4_code": "(2-HE-8(P,EL)2-HE-8,,SIG,,MSC)",
+            "target": "2-HE-8",
+            "process": "P,EL",
+            "sf49": "2-HE-8,,SIG,,MSC",
+            "sf4": "2-HE-8",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "MSC",
+            "sf9": null
+          }
+        ],
+        "math_expression": [
+          "Equal",
+          "((1-H-1(2-HE-8,EL)1-H-1,,SIG,,MSC)",
+          "(2-HE-8(P,EL)2-HE-8,,SIG,,MSC))"
+        ],
+        "operator": "Equal",
+        "free_text": "Cross section for strong interaction",
         "pointer": "0"
       }
     }
@@ -718,160 +627,79 @@
       }
     },
     "002": {
-      "common": {
-        "heads": [
-          "EN"
-        ],
-        "units": [
-          "MEV/A"
-        ],
-        "data": [
-          [
-            702.0
-          ]
-        ]
-      },
+      "common": null,
       "data": {
         "heads": [
-          "DATA      1",
-          "ERR-T     1",
-          "DATA      2",
-          "ERR-T     2",
-          "DATA      3",
-          "ERR-T     3"
+          "EN",
+          "DATA",
+          "ERR-T"
         ],
         "units": [
-          "MB",
-          "MB",
-          "MB",
-          "MB",
+          "MEV/A",
           "MB",
           "MB"
         ],
         "data": [
+          [
+            702.0
+          ],
           [
             131.2
           ],
           [
             1.5
-          ],
-          [
-            99.8
-          ],
-          [
-            0.9
-          ],
-          [
-            31.4
-          ],
-          [
-            0.7
           ]
         ]
       }
     },
     "003": {
-      "common": {
-        "heads": [
-          "EN"
-        ],
-        "units": [
-          "MEV/A"
-        ],
-        "data": [
-          [
-            721.0
-          ]
-        ]
-      },
+      "common": null,
       "data": {
         "heads": [
-          "DATA      1",
-          "ERR-T     1",
-          "DATA      2",
-          "ERR-T     2",
-          "DATA      3",
-          "ERR-T     3"
+          "EN",
+          "DATA",
+          "ERR-T"
         ],
         "units": [
-          "MB",
-          "MB",
-          "MB",
-          "MB",
+          "MEV/A",
           "MB",
           "MB"
         ],
         "data": [
+          [
+            721.0
+          ],
           [
             198.9
           ],
           [
             4.6
-          ],
-          [
-            161.3
-          ],
-          [
-            3.7
-          ],
-          [
-            37.6
-          ],
-          [
-            1.2
           ]
         ]
       }
     },
     "004": {
-      "common": {
-        "heads": [
-          "EN"
-        ],
-        "units": [
-          "MEV/A"
-        ],
-        "data": [
-          [
-            678.0
-          ]
-        ]
-      },
+      "common": null,
       "data": {
         "heads": [
-          "DATA      1",
-          "ERR-T     1",
-          "DATA      2",
-          "ERR-T     2",
-          "DATA      3",
-          "ERR-T     3"
+          "EN",
+          "DATA",
+          "ERR-T"
         ],
         "units": [
-          "MB",
-          "MB",
-          "MB",
-          "MB",
+          "MEV/A",
           "MB",
           "MB"
         ],
         "data": [
           [
+            678.0
+          ],
+          [
             252.0
           ],
           [
             4.8
-          ],
-          [
-            197.8
-          ],
-          [
-            3.5
-          ],
-          [
-            54.1
-          ],
-          [
-            1.7
           ]
         ]
       }
@@ -895,9 +723,7 @@
           "-"
         ],
         "units": [
-          "GEV2/C2",
-          "MB/GEV2/C2",
-          "MB/GEV2/C2"
+          "GEV2/C2"
         ],
         "data": [
           [
@@ -976,9 +802,7 @@
           "-"
         ],
         "units": [
-          "GEV2/C2",
-          "MB/GEV2/C2",
-          "MB/GEV2/C2"
+          "GEV2/C2"
         ],
         "data": [
           [
@@ -1123,9 +947,7 @@
           "-"
         ],
         "units": [
-          "GEV2/C2",
-          "MB/GEV2/C2",
-          "MB/GEV2/C2"
+          "GEV2/C2"
         ],
         "data": [
           [
@@ -1262,6 +1084,162 @@
           ]
         ]
       }
+    },
+    "008": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN",
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MEV/A",
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            702.0
+          ],
+          [
+            99.8
+          ],
+          [
+            0.9
+          ]
+        ]
+      }
+    },
+    "009": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN",
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MEV/A",
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            702.0
+          ],
+          [
+            31.4
+          ],
+          [
+            0.7
+          ]
+        ]
+      }
+    },
+    "010": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN",
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MEV/A",
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            721.0
+          ],
+          [
+            161.3
+          ],
+          [
+            3.7
+          ]
+        ]
+      }
+    },
+    "011": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN",
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MEV/A",
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            721.0
+          ],
+          [
+            37.6
+          ],
+          [
+            1.2
+          ]
+        ]
+      }
+    },
+    "012": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN",
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MEV/A",
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            678.0
+          ],
+          [
+            197.8
+          ],
+          [
+            3.5
+          ]
+        ]
+      }
+    },
+    "013": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN",
+          "DATA",
+          "ERR-T"
+        ],
+        "units": [
+          "MEV/A",
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            678.0
+          ],
+          [
+            54.1
+          ],
+          [
+            1.7
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
@@ -1271,7 +1249,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "-By authors.  The indicated energies correspond to the",
+              " By authors. The indicated energies correspond to the",
               "equivalent proton energies (in the laboratory frame)",
               "for the case of direct kinematics."
             ]
@@ -1284,17 +1262,17 @@
               "The detector IKAR consists of six in-line axial",
               "ionization chambers and has a 2-pi acceptance in",
               "azimuthal angle for the recoil proton registration.",
-              "The main constituent is the ionization",
-              "chamber IKAR, described in detail in REL-REF,  filled",
-              "with hydrogen gas at a pressure of 10 bar.  Beam",
-              "particles interacted with the protons inside  IKAR,",
-              "which thus served simultaneously as a target and a",
-              "recoil proton detector.  The recoil protons registered",
-              "in IKAR were measured in coincidence with the scattered",
-              "He particles.  For the purpose of determining the",
+              "The main constituent is the ionization chamber IKAR,",
+              "described in detail in REL-REF, filled with hydrogen",
+              "gas at a pressure of 10 bar. Beam particles interacted",
+              "with the protons inside IKAR, which thus served",
+              "simultaneously as a target and a recoil proton",
+              "detector. The recoil protons registered in IKAR were",
+              "measured in coincidence with the scattered",
+              "He particles. For the purpose of determining the",
               "scattering angle of the He particles, a system of",
-              "tracking detectors was applied.  It consisted of two",
-              "pairs of two-dimensional position-sensitive  multi-wire",
+              "tracking detectors was applied. It consisted of two",
+              "pairs of two-dimensional position-sensitive multi-wire",
               "proportional chambers."
             ]
           }
@@ -1303,14 +1281,13 @@
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
-              ".The uncertainty in the data normalization.",
-              "estimated to be 3%."
+              " The uncertainty in the data normalization."
             ]
           },
           {
             "x4_code": "(ERR-2)",
             "free_txt": [
-              ". The uncertainty are the procedure for",
+              " The uncertainty are the procedure for",
               "eliminating the tails from the angular resolution",
               "function is 2%."
             ]
@@ -1318,20 +1295,20 @@
           {
             "x4_code": "(ERR-3)",
             "free_txt": [
-              ".Calibration of the t-scale is 1.5%"
+              " Calibration of the t-scale is 1.5%"
             ]
           },
           {
             "x4_code": "(ERR-4)",
             "free_txt": [
-              ".Error in the determination of the target",
+              " Error in the determination of the target",
               "thickness is 1%."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(FRS,2GERGSI)",
+            "x4_code": "(SYNCH,2GERGSI)",
             "free_txt": []
           }
         ],
@@ -1340,8 +1317,8 @@
             "x4_code": "(SPALL)",
             "free_txt": [
               " The helium ions produced by fragmentation of",
-              "18-O entered FRS and were separated according to  their",
-              "magnetic rigidity.  The beam intensities were 1000",
+              "18-O entered FRS and were separated according to their",
+              "magnetic rigidity. The beam intensities were 1000",
               "1/sec, with the duty factor between 25% and 50%."
             ]
           }
@@ -1368,13 +1345,13 @@
           {
             "x4_code": "(I,,J.P.Burq+,J,NP/B,187,205,1981)",
             "free_txt": [
-              "   Details of IKAR"
+              " Details of IKAR"
             ]
           },
           {
             "x4_code": "(I,,J.P.Burq+,J,NP/B,217,285,1983)",
             "free_txt": [
-              "   Details of IKAR"
+              " Details of IKAR"
             ]
           },
           {
@@ -1403,12 +1380,8 @@
             "free_txt": [
               "Effective nucleon-nucleon parameters was used in",
               "Glauber calculation. See REL-REF.",
-              "1Derived from extrapolated 0 deg angular differential",
-              "cross section with the optical theorem",
-              "2Total cross section minus elastic cross section",
-              "3Extrapolation of angular differential cross section",
-              " (A0493.005) to 0 deg by the Glauber model and",
-              "integration."
+              "Derived from extrapolated 0 deg angular differential",
+              "cross section with the optical theorem"
             ]
           }
         ],
@@ -1416,14 +1389,13 @@
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
-              " The errors given include statistical and",
-              "systematical uncertainties."
+              " Total uncertainty"
             ]
           }
         ],
         "rel-ref": [
           {
-            "x4_code": "(N,,G.D.Alkhazov+,J,NP/A,712,269,2002)",
+            "x4_code": "(M,,G.D.Alkhazov+,J,NP/A,712,269,2002)",
             "free_txt": [
               " Detail of Glauber calculation"
             ]
@@ -1431,9 +1403,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.R.Neumaier+,J,NP/A,712,247,2002)",
             "free_txt": [
-              ".Table 2"
+              " Table 2"
             ]
           },
           {
@@ -1451,14 +1423,10 @@
           {
             "x4_code": null,
             "free_txt": [
-              "Effective nucleon-nucleon parameters was used in",
+              "Effective nucleon-nucleon parameters were used in",
               "Glauber calculation. See REL-REF.",
-              "1Derived from extrapolated 0 deg angular differential",
-              "cross section with the optical theorem",
-              "2Total cross section minus elastic cross section",
-              "3Extrapolation of angular differential cross section",
-              " (A0493.006) to 0 deg by the Glauber model and",
-              "integration."
+              " Derived from extrapolated 0 deg angular differential",
+              "cross section with the optical theorem"
             ]
           }
         ],
@@ -1466,14 +1434,13 @@
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
-              " The errors given include statistical and",
-              "systematical uncertainties."
+              " Total uncertainty"
             ]
           }
         ],
         "rel-ref": [
           {
-            "x4_code": "(N,,G.D.Alkhazov+,J,NP/A,712,269,2002)",
+            "x4_code": "(M,,G.D.Alkhazov+,J,NP/A,712,269,2002)",
             "free_txt": [
               " Detail of Glauber calculation"
             ]
@@ -1481,9 +1448,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.R.Neumaier+,J,NP/A,712,247,2002)",
             "free_txt": [
-              ".Table 2"
+              " Table 2"
             ]
           },
           {
@@ -1501,14 +1468,10 @@
           {
             "x4_code": null,
             "free_txt": [
-              "Effective nucleon-nucleon parameters was used in",
+              "Effective nucleon-nucleon parameters were used in",
               "Glauber calculation. See REL-REF.",
-              "1Derived from extrapolated 0 deg angular differential",
-              "cross section with the optical theorem",
-              "2Total cross section minus elastic cross section",
-              "3Extrapolation of angular differential cross section",
-              " (A0493.007) to 0 deg by the Glauber model and",
-              "integration."
+              " Derived from extrapolated 0 deg angular differential",
+              "cross section with the optical theorem"
             ]
           }
         ],
@@ -1516,8 +1479,7 @@
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
-              " The errors given include statistical and",
-              "systematical uncertainties."
+              " Total uncertainty"
             ]
           }
         ],
@@ -1531,15 +1493,15 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.R.Neumaier+,J,NP/A,712,247,2002)",
             "free_txt": [
-              ".Table 2"
+              " Table 2"
             ]
           },
           {
             "x4_code": "(DEP,A0493007)",
             "free_txt": [
-              "  Angular differential cross section"
+              " Angular differential cross section"
             ]
           }
         ]
@@ -1551,16 +1513,15 @@
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
-              " The errors given include statistical",
-              "uncertainties only."
+              " Statistical uncertainties"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.R.Neumaier+,J,NP/A,712,247,2002)",
             "free_txt": [
-              ".Table 1"
+              " Table 1"
             ]
           }
         ]
@@ -1572,16 +1533,15 @@
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
-              " The errors given include statistical",
-              "uncertainties only."
+              " Statistical uncertainties"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.R.Neumaier+,J,NP/A,712,247,2002)",
             "free_txt": [
-              ".Table 1"
+              " Table 1"
             ]
           }
         ]
@@ -1593,16 +1553,278 @@
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
-              " The errors given include statistical",
-              "uncertainties only."
+              " Statistical uncertainties"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.R.Neumaier+,J,NP/A,712,247,2002)",
             "free_txt": [
-              ".Table 1"
+              " Table 1"
+            ]
+          }
+        ]
+      }
+    },
+    "008": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Effective nucleon-nucleon parameters were used in",
+              "Glauber calculation. See REL-REF."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total uncertainty"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(M,,G.D.Alkhazov+,J,NP/A,712,269,2002)",
+            "free_txt": [
+              " Detail of Glauber calculation"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,S.R.Neumaier+,J,NP/A,712,247,2002)",
+            "free_txt": [
+              " Table 2"
+            ]
+          },
+          {
+            "x4_code": "(DEP,A0493005)",
+            "free_txt": [
+              " Angular differential cross section"
+            ]
+          }
+        ]
+      }
+    },
+    "009": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Effective nucleon-nucleon parameters were used in",
+              "Glauber calculation. See REL-REF."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total uncertainty"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(M,,G.D.Alkhazov+,J,NP/A,712,269,2002)",
+            "free_txt": [
+              " Detail of Glauber calculation"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,S.R.Neumaier+,J,NP/A,712,247,2002)",
+            "free_txt": [
+              " Table 2"
+            ]
+          },
+          {
+            "x4_code": "(DEP,A0493005)",
+            "free_txt": [
+              " Angular differential cross section"
+            ]
+          }
+        ]
+      }
+    },
+    "010": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Effective nucleon-nucleon parameters were used in",
+              "Glauber calculation. See REL-REF.",
+              " Total cross section minus elastic cross section"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total uncertainty"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(M,,G.D.Alkhazov+,J,NP/A,712,269,2002)",
+            "free_txt": [
+              " Detail of Glauber calculation"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,S.R.Neumaier+,J,NP/A,712,247,2002)",
+            "free_txt": [
+              " Table 2"
+            ]
+          },
+          {
+            "x4_code": "(DEP,A0493006)",
+            "free_txt": [
+              " Angular differential cross section"
+            ]
+          }
+        ]
+      }
+    },
+    "011": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Effective nucleon-nucleon parameters were used in",
+              "Glauber calculation. See REL-REF."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total uncertainty"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(M,,G.D.Alkhazov+,J,NP/A,712,269,2002)",
+            "free_txt": [
+              " Detail of Glauber calculation"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,S.R.Neumaier+,J,NP/A,712,247,2002)",
+            "free_txt": [
+              " Table 2"
+            ]
+          },
+          {
+            "x4_code": "(DEP,A0493006)",
+            "free_txt": [
+              " Angular differential cross section"
+            ]
+          }
+        ]
+      }
+    },
+    "012": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Effective nucleon-nucleon parameters were used in",
+              "Glauber calculation. See REL-REF.",
+              "2Total cross section minus elastic cross section"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total uncertainty"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(M,,G.D.Alkhazov+,J,NP/A,712,269,2002)",
+            "free_txt": [
+              " Detail of Glauber calculation"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,S.R.Neumaier+,J,NP/A,712,247,2002)",
+            "free_txt": [
+              " Table 2"
+            ]
+          },
+          {
+            "x4_code": "(DEP,A0493007)",
+            "free_txt": [
+              "  Angular differential cross section"
+            ]
+          }
+        ]
+      }
+    },
+    "013": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Effective nucleon-nucleon parameters were used in",
+              "Glauber calculation. See REL-REF.",
+              " Extrapolation of angular differential cross section",
+              " (A0493.007) to 0 deg by the Glauber model and",
+              "integration."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total uncertainty"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(M,,G.D.Alkhazov+,J,NP/A,712,269,2002)",
+            "free_txt": [
+              " Detail of Glauber calculation"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,S.R.Neumaier+,J,NP/A,712,247,2002)",
+            "free_txt": [
+              " Table 2"
+            ]
+          },
+          {
+            "x4_code": "(DEP,A0493007)",
+            "free_txt": [
+              "  Angular differential cross section"
             ]
           }
         ]

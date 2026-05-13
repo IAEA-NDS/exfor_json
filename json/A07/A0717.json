@@ -1,7 +1,7 @@
 {
   "entry": "A0717",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-12-13",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20050101C)",
@@ -13,6 +13,13 @@
       "x4_code": "(20050103U)",
       "free_txt": [
         " Last checking has been done."
+      ]
+    },
+    {
+      "x4_code": "(20241001A)",
+      "free_txt": [
+        " SD: Corrections in all Subents.",
+        "ERR-T -> DATA-ERR."
       ]
     }
   ],
@@ -67,7 +74,7 @@
         "x4_code": "(ACCEL,3CPRIMP)",
         "free_txt": [
           " An intermediate energy heavy-ion",
-          "accelerator at the Heavy Ion Research Facility"
+          "accelerator"
         ],
         "pointer": "0",
         "facility_type": "(ACCEL)",
@@ -78,29 +85,24 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(82-PB-0(8-O-16,X)ELEM/MASS,IND,SIG)",
+        "x4_code": "(82-PB-0(8-O-16,X)ELEM/MASS,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "82-PB-0",
-              [
-                "8-O-16,X"
-              ],
-              "ELEM/MASS,IND,SIG"
-            ],
-            "type": null,
             "target": "82-PB-0",
             "process": "8-O-16,X",
-            "sf49": "ELEM/MASS,IND,SIG",
+            "sf49": "ELEM/MASS,,SIG",
             "sf4": "ELEM/MASS",
-            "sf5": "IND",
+            "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(82-PB-0(8-O-16,X)ELEM/MASS,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -141,7 +143,7 @@
           "MASS",
           "ISOMER",
           "DATA",
-          "ERR-T",
+          "DATA-ERR",
           "DECAY-FLAG"
         ],
         "units": [
@@ -214,18 +216,18 @@
             null,
             null,
             null,
-            0.0,
-            1.0,
-            null,
-            null,
-            null,
-            null,
-            null,
-            0.0,
-            0.0,
             1.0,
             0.0,
+            null,
+            null,
+            null,
+            null,
+            null,
             1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
             1.0,
             1.0,
             null,
@@ -256,18 +258,18 @@
             1017.0,
             758.0,
             704.0,
-            542.0,
             584.0,
+            542.0,
             1327.0,
             1255.0,
             1092.0,
             1357.0,
             848.0,
+            475.0,
             1357.0,
             1080.0,
-            475.0,
-            492.0,
             1479.0,
+            492.0,
             299.0,
             293.0,
             852.0,
@@ -298,18 +300,18 @@
             150.0,
             136.0,
             127.0,
-            95.0,
             80.0,
+            95.0,
             200.0,
             196.0,
             273.0,
             203.0,
             127.0,
+            70.0,
             203.0,
             173.0,
-            70.0,
-            74.0,
             222.0,
+            74.0,
             60.0,
             59.0,
             300.0,
@@ -340,18 +342,18 @@
             16.0,
             17.0,
             18.0,
-            19.0,
             39.0,
+            19.0,
             20.0,
             21.0,
             22.0,
             23.0,
             24.0,
+            27.0,
             25.0,
             26.0,
-            27.0,
-            28.0,
             29.0,
+            28.0,
             30.0,
             31.0,
             32.0,
@@ -371,7 +373,7 @@
       "0": {
         "analysis": [
           {
-            "x4_code": "(DECAY,AREA)",
+            "x4_code": "(DECAY)",
             "free_txt": []
           }
         ],
@@ -379,22 +381,145 @@
           {
             "x4_code": null,
             "free_txt": [
-              "-By authors.  To evaluate independent cross sections",
+              "-By authors. To evaluate independent cross sections",
               "for Hg isotopes, special care has been exercised over",
               "the following difficulties:",
-              "1.  Half-lives of some Hg isotopes are very short in",
+              "1. Half-lives of some Hg isotopes are very short in",
               "comparison with the time elapsed before starting the",
-              "measurement (typically 20 S after irradiation);",
-              "2.  For some Hg isotopes gamma-decay schemes and/or",
+              "measurement (typically 20 sec after irradiation);",
+              "2. For some Hg isotopes gamma-decay schemes and/or",
               "absolute gamma-ray branching ratios have not been",
               "measured;",
-              "3.  Gamma rays which should be characteristic of some",
+              "3. Gamma rays which should be characteristic of some",
               "Hg isotopes including relevant daughter or",
-              "granddaughter nuclides are too weak to be identified or",
-              "overlapping with other gamma rays."
+              "granddaughter nuclides are too weak to be identified",
+              "or overlapping with other gamma rays."
             ]
           }
         ],
+        "detector": [
+          {
+            "x4_code": "(HPGE)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(BGO)",
+            "free_txt": [
+              " A large bismuth germanate detector (14x7x5 cm3)",
+              "and a beta-ray detector (unknown type)"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Measurement errors of the experimental cross",
+              "sections are estimated to be 15% to 30%, including the",
+              "systematic error from collection efficiency",
+              "determination, statistical error of gamma-ray counts,",
+              "and count contamination to the characteristic gamma-",
+              "ray used in cross-section calculation from neighboring",
+              "gamma rays. A probable additional error would come",
+              "from the uncertainty of the data for gamma-ray",
+              "branching ratio.",
+              "A probable example is the unusual lower measurement",
+              "cross section for 193-Hg, which has not been clarified",
+              "clear so far."
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(ACCEL,3CPRIMP)",
+            "free_txt": [
+              " An intermediate energy heavy-ion",
+              "accelerator"
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(EXTB)",
+            "free_txt": [
+              " The average beam was 2.2 particle nA."
+            ]
+          },
+          {
+            "x4_code": "(THERM)",
+            "free_txt": [
+              " An on-line gas thermochromatographic separation",
+              "device combined with a running-rabbit system"
+            ]
+          },
+          {
+            "x4_code": "(COINC)",
+            "free_txt": [
+              " Veto signals from beta+ decays."
+            ]
+          },
+          {
+            "x4_code": "(ACTIV)",
+            "free_txt": [
+              " Three different irradiation-detection periods",
+              "were employed: first, the cycle was a 120-S",
+              "irradiation followed a 420-S g-ray detection, and a",
+              "total of 143 samples were measured;",
+              "second, 10-min irradiation followed by 60-min detection",
+              "and three samples;",
+              "third, 100-min irradiation followed by 48-H detection",
+              "for one sample."
+            ]
+          },
+          {
+            "x4_code": "(GSPEC)",
+            "free_txt": []
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(M,A0504001,Zhang Li+,J,PR/C,58,156,1998)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(M,,Zhao Jinhua+,J,CST,31,530,1997)",
+            "free_txt": [
+              " In Chinese.",
+              "The two papers contain more detailed information about",
+              "experimental device."
+            ]
+          },
+          {
+            "x4_code": "(R,,V.Reus+,J,AND,29,1,1983)",
+            "free_txt": [
+              " Decay data."
+            ]
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "A molten natural lead target with a thickness of about",
+              "5.2 g/cm2 (thick enough to stop the 600-MeV 18O",
+              "incident beam). The temperature of the molten lead",
+              "target material was continuously kept at about 700.C",
+              "during the 18-O beam irradiation."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,Zhang Li+,J,PR/C,70,024603,2004)",
+            "free_txt": [
+              " Tbl.I"
+            ]
+          }
+        ]
+      }
+    },
+    "002": {
+      "0": {
         "decay-data": [
           {
             "x4_code": "(80-HG-180,3.0SEC)",
@@ -448,8 +573,8 @@
             "x4_code": "((6.)79-AU-184-G,,DG,163.2)",
             "free_txt": [
               " Au-184 has isomer state",
-              " (half-life=46sec).it is unknown,what decay was used",
-              "For analisis."
+              " (half-life=46sec). It is unknown, what decay was used",
+              "for analyses."
             ]
           },
           {
@@ -616,120 +741,8 @@
             "x4_code": "((38.)81-TL-209,,DG,324.0)",
             "free_txt": []
           }
-        ],
-        "detector": [
-          {
-            "x4_code": "(HPGE)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(BGO)",
-            "free_txt": [
-              "  A large bismuth germanate detector (14X7X5 cm3)",
-              "and a beta-ray detector (unknown type)"
-            ]
-          }
-        ],
-        "err-analys": [
-          {
-            "x4_code": "(ERR-T)",
-            "free_txt": [
-              " Measurement errors of the experimental cross",
-              "sections are estimated to be 15% to 30%, including the",
-              "systematic error from collection efficiency",
-              "determination, statistical error of gamma-ray counts,",
-              "and count contamination to the characteristic gamma-",
-              "ray used in cross-section calculation from neighboring",
-              "gamma rays.  A probable additional error would come",
-              "from the uncertainty of the data for gamma-ray",
-              "branching ratio.",
-              "A probable example is the unusual lower measurement",
-              "cross section for 193-Hg, which has not been clarified",
-              "clear so far."
-            ]
-          }
-        ],
-        "facility": [
-          {
-            "x4_code": "(ACCEL,3CPRIMP)",
-            "free_txt": [
-              " An intermediate energy heavy-ion",
-              "accelerator at the Heavy Ion Research Facility"
-            ]
-          }
-        ],
-        "method": [
-          {
-            "x4_code": "(EXTB)",
-            "free_txt": [
-              " The average beam was 2.2 particle nA."
-            ]
-          },
-          {
-            "x4_code": "(THERM)",
-            "free_txt": [
-              " An on-line gas thermochromatographic separation",
-              "device combined with a running-rabbit system"
-            ]
-          },
-          {
-            "x4_code": "(COINC)",
-            "free_txt": [
-              " Veto signals from beta+ decays."
-            ]
-          },
-          {
-            "x4_code": "(ACTIV)",
-            "free_txt": [
-              " Three different irradiation-detection periods",
-              "were employed:  first, the cycle was a 120-S",
-              "irradiation followed a 420-S g-ray detection, and a",
-              "total of 143 samples were measured;",
-              "second, 10-min irradiation followed by 60-min detection",
-              "and three samples;",
-              "third, 100-min irradiation followed by 48-H detection",
-              "for one sample."
-            ]
-          },
-          {
-            "x4_code": "(GSPEC)",
-            "free_txt": []
-          }
-        ],
-        "rel-ref": [
-          {
-            "x4_code": "(N,A0504001,ZHANG LI+,J,PR/C,58,156,1998)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(N,,ZHAO JINHUA+,J,CST,31,530,1997)",
-            "free_txt": [
-              " In Chinese.",
-              "The two papers contain more detailed information about",
-              "experimental device."
-            ]
-          },
-          {
-            "x4_code": "(R,,V.REUS+,J,AND,29,1,1983)",
-            "free_txt": [
-              " Decay data."
-            ]
-          }
-        ],
-        "sample": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "A molten natural lead target with a thickness of about",
-              "5.2 g/cm2 (thick enough to stop the 600-MeV 18O",
-              "incident beam).  The temperature of the molten lead",
-              "target material was continuously kept at about 700 C",
-              "during the 18-O beam irradiation."
-            ]
-          }
         ]
       }
-    },
-    "002": {}
+    }
   }
 }

@@ -1,23 +1,29 @@
 {
   "entry": "40947",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-09-02",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19880425C)",
       "free_txt": [
-        "  COMPILED AT CJD"
+        "  Compiled at CJD"
       ]
     },
     {
       "x4_code": "(20010315A)",
       "free_txt": [
-        " DATE is corrected"
+        " Date is corrected"
+      ]
+    },
+    {
+      "x4_code": "(20240208U)",
+      "free_txt": [
+        " Upper -> lower case correction."
       ]
     }
   ],
   "bib_record": {
-    "title": " 67-ZN(N,ALPHA)64-NI THERMAL NEUTRON REACTION CROSS-SECTION MEASUREMENT AND ITS INTERPRETATION IS THE FRAME OF THE REIGH-MOOR MULTILEVEL FORMALISM",
+    "title": " 67-Zn(n,alpha)64-Ni THermal neutron reaction cross-section measurement and its interpretation in the frame of the Reich-Moor multilevel formalism",
     "authors": [
       {
         "name": "V.A.Vtyurin"
@@ -38,7 +44,7 @@
         "name": "V.F.Ukraintsev"
       },
       {
-        "name": "Fung-Van-Zuan"
+        "name": "Fung Van Zuan"
       },
       {
         "name": "I.Chadraabal"
@@ -50,21 +56,21 @@
         "free_txt": []
       },
       {
-        "x4_code": "(4UKRIJI)",
+        "x4_code": "(4UKRIJD)",
         "free_txt": [
-          "  GREBNEV, KIRILYUK"
+          "  Grebnev, Kirilyuk"
         ]
       },
       {
         "x4_code": "(4RUSFEI)",
         "free_txt": [
-          "  UKRAINTSEV"
+          "  Ukraintsev"
         ]
       }
     ],
     "references": [
       {
-        "x4_code": "(R,JINR-P3-86-158,198603)",
+        "x4_code": "(R,JINR-P3-86-158,1986)",
         "free_txt": [],
         "publication_year": "1986",
         "doi": null,
@@ -73,13 +79,13 @@
     ],
     "facilities": [
       {
-        "x4_code": "(REAC,4UKRIJI)",
+        "x4_code": "(REAC,4UKRIJD)",
         "free_txt": [
-          "  REACTOR WWR-M"
+          "  Reactor WWR-M"
         ],
         "pointer": "0",
         "facility_type": "(REAC)",
-        "institute": "(4UKRIJI)"
+        "institute": "(4UKRIJD)"
       }
     ]
   },
@@ -87,16 +93,9 @@
     "002": {
       "0": {
         "x4_code": "(30-ZN-67(N,A)28-NI-64,PAR,SIG,,MXW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "30-ZN-67",
-              [
-                "N,A"
-              ],
-              "28-NI-64,PAR,SIG,,MXW"
-            ],
-            "type": null,
             "target": "30-ZN-67",
             "process": "N,A",
             "sf49": "28-NI-64,PAR,SIG,,MXW",
@@ -105,10 +104,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "MXW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(30-ZN-67(N,A)28-NI-64,PAR,SIG,,MXW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -119,34 +120,52 @@
       "common": null
     },
     "002": {
-      "common": null,
+      "common": {
+        "heads": [
+          "EN-DUMMY"
+        ],
+        "units": [
+          "EV"
+        ],
+        "data": [
+          [
+            0.0253
+          ]
+        ]
+      },
       "data": {
         "heads": [
-          "EN-DUMMY",
           "LVL-NUMB",
+          "DATA",
+          "DATA-ERR",
           "DATA-MAX",
           "MONIT",
           "MONIT-ERR"
         ],
         "units": [
-          "EV",
           "NO-DIM",
-          "B",
+          "MICRO-B",
+          "MICRO-B",
+          "MICRO-B",
           "MB",
           "MB"
         ],
         "data": [
           [
-            0.0253,
-            0.0253
-          ],
-          [
             0.0,
             1.0
           ],
           [
-            3.2e-05,
-            0.00013
+            null,
+            130.0
+          ],
+          [
+            null,
+            40.0
+          ],
+          [
+            32.0,
+            null
           ],
           [
             20.0,
@@ -163,11 +182,19 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "detector": [
+          {
+            "x4_code": "(IOCH)",
+            "free_txt": [
+              " Argon + methane (5%) filled at 1.5 atm pressure."
+            ]
+          }
+        ],
         "facility": [
           {
-            "x4_code": "(REAC,4UKRIJI)",
+            "x4_code": "(REAC,4UKRIJD)",
             "free_txt": [
-              "  REACTOR WWR-M"
+              "  Reactor WWR-M"
             ]
           }
         ],
@@ -175,7 +202,37 @@
           {
             "x4_code": null,
             "free_txt": [
-              ".SILICON-FILTERED NEUTRON BEAM"
+              ".Silicon-filtered neutron beam"
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(FNB)",
+            "free_txt": []
+          }
+        ]
+      }
+    },
+    "002": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Averaging of two series of measurement:",
+              " Alpha0 CS, microb    Alpha1 CS,Microb",
+              "  15+-27               140+-60",
+              "  14+-23               120+-50"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              " article."
             ]
           }
         ],
@@ -184,22 +241,29 @@
             "x4_code": "(60-ND-143(N,A)58-CE-140,PAR,SIG)",
             "free_txt": []
           }
-        ]
-      }
-    },
-    "002": {
-      "0": {
-        "en-sec": [
+        ],
+        "rel-ref": [
           {
-            "x4_code": "(LVL-NUMB,28-NI-64)",
-            "free_txt": []
+            "x4_code": "(N,21713004,A.Emsallem+,J,ZP/A,315,201,1984)",
+            "free_txt": [
+              " Data used for comparison in Table 1"
+            ]
           }
         ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              " ZINC OXIDE, ZN-67 CONTENT IS 91.8 PERCENT"
+              " Zinc oxide, Zn-67 content is 91.8 %.",
+              " Thickness 0.17+-0.02 mg/cm2."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.A.Vtyurin+,R,JINR-P3-86-158,1986)",
+            "free_txt": [
+              " Table 1."
             ]
           }
         ]

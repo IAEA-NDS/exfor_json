@@ -1,18 +1,18 @@
 {
   "entry": "41400",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-04-04",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20000203C)",
       "free_txt": [
-        "  + +  Compiled at the Center  - CJD  + +"
+        "  + +  Compiled at the center  - CJD  + +"
       ]
     },
     {
       "x4_code": "(20020701U)",
       "free_txt": [
-        "  . .  Bib-Section Corrected at CJD"
+        "  . .  BIB-section corrected at CJD"
       ]
     },
     {
@@ -20,16 +20,24 @@
       "free_txt": [
         " Last checking has been done."
       ]
+    },
+    {
+      "x4_code": "(20250225A)",
+      "free_txt": [
+        " Upper -> lower case correction.",
+        " STATUS was updated for new rules.",
+        " BIB information was updated. ERR-T -> DATA-ERR"
+      ]
     }
   ],
   "bib_record": {
-    "title": ".Measurement of Proton Widths in the 35Cl(N,P)35S Reaction at Energies 398 and 4249 eV",
+    "title": " Reaction 35Cl(n,p) and proton widths of resonances at energies 398 and 4249 eV",
     "authors": [
       {
         "name": "Yu.M.Gledenov"
       },
       {
-        "name": "L.V.Mitsina"
+        "name": "L.V.Mitsyna"
       },
       {
         "name": "M.Mitrikov"
@@ -38,7 +46,7 @@
         "name": "Yu.P.Popov"
       },
       {
-        "name": "X.Rigel"
+        "name": "X.Rigol'"
       },
       {
         "name": "V.I.Salatski"
@@ -55,9 +63,9 @@
     ],
     "references": [
       {
-        "x4_code": "(R,JINR-P3-89-351,19890530)",
+        "x4_code": "(R,JINR-P3-89-351,1989)",
         "free_txt": [
-          "  Main Reference"
+          "  Main reference"
         ],
         "publication_year": "1989",
         "doi": null,
@@ -66,20 +74,20 @@
     ],
     "facilities": [
       {
-        "x4_code": "(REAC)",
+        "x4_code": "(REAC,4ZZZDUB)",
         "free_txt": [
-          "          Reactor IBR-30 in Pulse Mode"
+          " Reactor IBR-30 in pulse mode"
         ],
         "pointer": "0",
         "facility_type": "(REAC)",
-        "institute": null
+        "institute": "(4ZZZDUB)"
       },
       {
-        "x4_code": "(LINAC)",
+        "x4_code": "(LINAC,4ZZZDUB)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(LINAC)",
-        "institute": null
+        "institute": "(4ZZZDUB)"
       }
     ]
   },
@@ -87,16 +95,9 @@
     "002": {
       "0": {
         "x4_code": "(17-CL-35(N,P),,WID)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "17-CL-35",
-              [
-                "N,P"
-              ],
-              ",,WID"
-            ],
-            "type": null,
             "target": "17-CL-35",
             "process": "N,P",
             "sf49": ",,WID",
@@ -105,10 +106,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(17-CL-35(N,P),,WID)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -116,16 +119,9 @@
     "003": {
       "0": {
         "x4_code": "(17-CL-35(N,P),,WID/STR)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "17-CL-35",
-              [
-                "N,P"
-              ],
-              ",,WID/STR"
-            ],
-            "type": null,
             "target": "17-CL-35",
             "process": "N,P",
             "sf49": ",,WID/STR",
@@ -134,10 +130,12 @@
             "sf6": "WID/STR",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(17-CL-35(N,P),,WID/STR)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -145,7 +143,19 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-1"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            1.0
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -154,7 +164,7 @@
           "EN-RES",
           "EN-RES-ERR",
           "DATA",
-          "ERR-T",
+          "DATA-ERR",
           "ASSUM",
           "ASSUM-ERR",
           "MISC"
@@ -219,10 +229,12 @@
       "data": {
         "heads": [
           "EN-RES",
+          "EN-RES-ERR",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
+          "EV",
           "EV",
           "MILLI-EV",
           "MILLI-EV"
@@ -230,6 +242,9 @@
         "data": [
           [
             1100.0
+          ],
+          [
+            200.0
           ],
           [
             0.2
@@ -244,58 +259,84 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "correction": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "For contribution from scattered neutrons for Li target."
+            ]
+          }
+        ],
         "detector": [
           {
             "x4_code": "(IOCH)",
             "free_txt": [
-              "  Gridded Two-Section Ionization Chamber",
-              "        Filled with Argon + 3% C-O2 at 0.8 and",
-              "        0.35 Atm Pressure"
+              "  Gridded two-section ionization chamber",
+              "        filled with argon + 3% C-O2 at 0.8 and",
+              "        0.35 Atm pressure.",
+              " Chamber was placed at 85 m distance from the reactor."
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              "     Not Specified, Supposed Total Error"
+              "  Not specified"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Li6(n,a) monitor reaction cross section",
+              " uncertainty - 1.%."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(REAC)",
+            "x4_code": "(REAC,4ZZZDUB)",
             "free_txt": [
-              "          Reactor IBR-30 in Pulse Mode"
+              " Reactor IBR-30 in pulse mode"
             ]
           },
           {
-            "x4_code": "(LINAC)",
+            "x4_code": "(LINAC,4ZZZDUB)",
             "free_txt": []
           }
         ],
         "method": [
           {
             "x4_code": "(TOF)",
-            "free_txt": []
+            "free_txt": [
+              " Resolution 0.06 microsec/m",
+              ". Cd ( 0.5 mm thickness) and Al (10 cm , at fist run)",
+              "filters.",
+              ". Mn filter at additional measurement to determine",
+              "corrections and to protect ionization chamber against",
+              "scattered neutrons."
+            ]
           }
         ],
         "monitor": [
           {
             "x4_code": "(3-LI-6(N,T)2-HE-4,,SIG)",
-            "free_txt": []
+            "free_txt": [
+              " Alpha particles of 2.05 MeV energy were used for",
+              "calibration."
+            ]
           }
         ],
         "rel-ref": [
           {
-            "x4_code": "(N,,V.A.VTYURIN+,R,JINR-P3-8800,1975)",
+            "x4_code": "(N,,V.A.Vtyurin+,R,JINR-P3-8800,1975)",
             "free_txt": [
               "  Experimental",
-              "                                       Details"
+              "                                       details"
             ]
           },
           {
-            "x4_code": "(R,,S.F.MUGHABGHAB+,B,NEUT.CS 1A,,1981)",
+            "x4_code": "(R,,S.F.Mughabghab+,B,NEUT.CS 1A,,,1981)",
             "free_txt": []
           }
         ],
@@ -303,28 +344,33 @@
           {
             "x4_code": null,
             "free_txt": [
-              ".Chlorine Samples were Na-Cl Salt Obtained by Sedimen-",
-              " Tation, Thicknesses are 1.75 and 0.128 Milligram/Cm2",
-              ".Lithium Sample is Li-F, Thickness 23 Microgram/Cm2"
+              ".Chlorine samples were Na-Cl salt obtained by",
+              "sedimentation,",
+              "thicknesses are 1.75 and 0.128 milligram/cm2",
+              ".Lithium sample is Li-F, thickness 23 microgram/cm2"
             ]
-          }
-        ],
-        "status": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              "  Taken from Table 2 of Main Reference"
-            ]
-          },
-          {
-            "x4_code": "(COREL,41352001)",
-            "free_txt": []
           }
         ]
       }
     },
     "002": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " For 398 keV resonance -",
+              " total width = 0.823+- 0.008,",
+              " SIG0*GAMMAgamma = (155+-13)*10**-24 cm2*eV ( corrected",
+              "for new value of SIGgamma for thermal neutrons),",
+              "were used. GAMMAgamma was revised to be 0.53+-0.07 eV.",
+              " For 4249 eV resonance -",
+              "  GAMMAgamma =~ 0.5 eV,",
+              " g*Gammatot = 0.25+-0.0025 eV",
+              " were used."
+            ]
+          }
+        ],
         "assumed": [
           {
             "x4_code": "(ASSUM,17-CL-35(N,P),,WID/STR)",
@@ -335,7 +381,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              ".Assum Value is Obtained in this Work, is Given in",
+              ".ASSUM value is obtained in this work, is given in",
               " Subent 41352002"
             ]
           }
@@ -344,7 +390,15 @@
           {
             "x4_code": "(MISC)",
             "free_txt": [
-              "  Statistical Weight of the Resonance"
+              "  Statistical weight of the resonance"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,Yu.M.Gledenov,R,JINR-P3-89-351,1989)",
+            "free_txt": [
+              " Table on page 16"
             ]
           }
         ]
@@ -352,19 +406,37 @@
     },
     "003": {
       "0": {
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Of authors.",
+              " Existence of resonance 1100. eV is not confirmed."
+            ]
+          }
+        ],
         "rel-ref": [
           {
-            "x4_code": "(R,,YU.P.POPOV+,J,ZET,40,(6),1610,1961)",
+            "x4_code": "(R,,Yu.P.Popov+,J,ZET,40,(6),1610,1961)",
             "free_txt": [
               " Resonance",
-              "  Energy Taken from this Reference"
+              "  energy taken from this reference"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(COREL,41352002)",
-            "free_txt": []
+            "x4_code": "(TABLE,,Yu.M.Gledenov,R,JINR-P3-89-351,1989)",
+            "free_txt": [
+              " Table on page 16"
+            ]
+          },
+          {
+            "x4_code": "(COREL,41352003)",
+            "free_txt": [
+              " 41352 - older measurement with lower",
+              " resolution for TOF."
+            ]
           }
         ]
       }

@@ -1,7 +1,7 @@
 {
   "entry": "A0285",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "4",
+  "last_updated": "2024-11-29",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19860321C)",
@@ -10,7 +10,7 @@
     {
       "x4_code": "(19990407A)",
       "free_txt": [
-        " Converted To lower Case."
+        " Converted to lower case."
       ]
     },
     {
@@ -23,6 +23,13 @@
       "x4_code": "(19990621A)",
       "free_txt": [
         " DATE is corrected"
+      ]
+    },
+    {
+      "x4_code": "(20240812A)",
+      "free_txt": [
+        " SD: Corrections in all Subents.",
+        "Subent 002 was split according to EXFOR rules."
       ]
     }
   ],
@@ -73,18 +80,11 @@
   },
   "reactions": {
     "002": {
-      "2": {
+      "0": {
         "x4_code": "(13-AL-27(3-LI-6,X)11-NA-22,CUM,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "13-AL-27",
-              [
-                "3-LI-6,X"
-              ],
-              "11-NA-22,CUM,SIG"
-            ],
-            "type": null,
             "target": "13-AL-27",
             "process": "3-LI-6,X",
             "sf49": "11-NA-22,CUM,SIG",
@@ -93,29 +93,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(13-AL-27(3-LI-6,X)11-NA-22,CUM,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "2"
-      },
-      "4": {
+        "pointer": "0"
+      }
+    },
+    "003": {
+      "0": {
         "x4_code": "(13-AL-27(3-LI-6,X)11-NA-24,(CUM),SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "13-AL-27",
-              [
-                "3-LI-6,X"
-              ],
-              "11-NA-24,",
-              [
-                "CUM"
-              ],
-              ",SIG"
-            ],
-            "type": null,
             "target": "13-AL-27",
             "process": "3-LI-6,X",
             "sf49": "11-NA-24,(CUM),SIG",
@@ -124,12 +117,14 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(13-AL-27(3-LI-6,X)11-NA-24,(CUM),SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "4"
+        "pointer": "0"
       }
     }
   },
@@ -172,17 +167,73 @@
     "002": {
       "common": {
         "heads": [
-          "ERR-T     2",
-          "ERR-T     4"
+          "ERR-T"
         ],
         "units": [
-          "PER-CENT",
           "PER-CENT"
         ],
         "data": [
           [
             20.0
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "EN",
+          "DATA"
+        ],
+        "units": [
+          "MEV",
+          "MB"
+        ],
+        "data": [
+          [
+            33.6,
+            38.7,
+            48.9,
+            59.1,
+            64.1,
+            69.2,
+            79.2,
+            84.3,
+            89.3,
+            99.4,
+            109.4,
+            119.4,
+            129.5,
+            139.5,
+            152.5
           ],
+          [
+            0.3,
+            0.6,
+            3.3,
+            20.3,
+            22.3,
+            26.4,
+            49.5,
+            44.2,
+            42.2,
+            38.5,
+            47.7,
+            43.2,
+            38.3,
+            41.3,
+            44.4
+          ]
+        ]
+      }
+    },
+    "003": {
+      "common": {
+        "heads": [
+          "ERR-T"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
           [
             16.0
           ]
@@ -191,12 +242,10 @@
       "data": {
         "heads": [
           "EN",
-          "DATA      4",
-          "DATA      2"
+          "DATA"
         ],
         "units": [
           "MEV",
-          "MB",
           "MB"
         ],
         "data": [
@@ -235,24 +284,6 @@
             36.1,
             38.3,
             36.2
-          ],
-          [
-            null,
-            0.3,
-            0.6,
-            3.3,
-            20.3,
-            22.3,
-            26.4,
-            49.5,
-            44.2,
-            42.2,
-            38.5,
-            47.7,
-            43.2,
-            38.3,
-            41.3,
-            44.4
           ]
         ]
       }
@@ -263,11 +294,23 @@
       "0": {
         "analysis": [
           {
-            "x4_code": "(AREA)",
+            "x4_code": null,
             "free_txt": [
-              ".Automatic Peak Determination was Performed and",
-              "Checked in Several Cases by Hand Analysis.It was",
-              "Found to be Accurate to Withim 4-8%. See Err-1."
+              "Automatic peak determination was performed and",
+              "checked in several cases by hand analysis. It was",
+              "found to be accurate to within 4-8%. See ERR-1."
+            ]
+          }
+        ],
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "1. Compiler could not exclude the production Mg-22 and",
+              " Ne-24.",
+              "2. Authors did not observe Na-22 and Na-24 production",
+              "at 23.3 MeV. Na-22 production was not observed at",
+              "28.4 MeV too."
             ]
           }
         ],
@@ -281,32 +324,37 @@
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
-              ".The Error of Determination of Peak Area."
+              " The error of determination of peak area."
             ]
           },
           {
             "x4_code": "(ERR-2)",
             "free_txt": [
-              ".The Error in the Measurement of Beam Current."
+              " The error in the measurement of beam current."
             ]
           },
           {
             "x4_code": "(ERR-3)",
             "free_txt": [
-              ".The Error of Efficiency of Detector."
+              " The error of efficiency of detector."
             ]
           },
           {
             "x4_code": "(ERR-4)",
             "free_txt": [
-              ".The Error in the Target Thickness."
+              " The error in the target thickness."
             ]
           },
           {
             "x4_code": "(ERR-5)",
             "free_txt": [
-              ".The Error of Efficiency Extrapolation For Na-22",
-              "Only."
+              " The error of efficiency extrapolation for 22Na"
+            ]
+          },
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total uncertainty"
             ]
           }
         ],
@@ -324,52 +372,35 @@
         ],
         "rel-ref": [
           {
-            "x4_code": "(N,,LADENBAUER-BELLIS+,J,PR,123,1368,1961)",
+            "x4_code": "(N,,Ladenbauer-Bellis+,J,PR,123,1368,1961)",
             "free_txt": []
           },
           {
-            "x4_code": "(N,,LADENBAUER-BELLIS+,J,NP,88,21,1966)",
-            "free_txt": [
-              "."
-            ]
+            "x4_code": "(N,,Ladenbauer-Bellis+,J,NP,88,21,1966)",
+            "free_txt": []
           }
         ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "6.25Mg/Cm**2 Aluminium Foils were Irradiated in the",
-              "Internal Beam of the Karlsruhe Isochronous Cyclotron",
-              "At 17 Energies Between 25 and 153 MeV."
+              "6.25 mg/cm2 aluminium foils were irradiated in the",
+              "internal beam of the Karlsruhe Isochronous Cyclotron",
+              "At 17 energies between 25 and 153 MeV."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,H.Klewe-Nebenius+,J,RCA,33,181,1983)",
+            "free_txt": [
+              " Tbl.2"
             ]
           }
         ]
       }
     },
-    "002": {
-      "0": {
-        "comment": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "1. Compiler Could not Exclude the Production Mg-22 and",
-              " Ne-24.",
-              "2. Authors did not Observe Na-22 and Na-24 Production",
-              "At 23.3 MeV. Na-22 Production did not Observe at 28.4",
-              "MeV Too."
-            ]
-          }
-        ],
-        "err-analys": [
-          {
-            "x4_code": "(ERR-T)",
-            "free_txt": [
-              ".Total Uncertainty Summarizes All Uncertainties",
-              "Which are Shown in Subent 1 Plus Statistical Error."
-            ]
-          }
-        ]
-      }
-    }
+    "002": {},
+    "003": {}
   }
 }

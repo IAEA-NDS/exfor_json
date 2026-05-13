@@ -1,18 +1,26 @@
 {
   "entry": "41220",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2025-03-11",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(960926C)",
+      "x4_code": "(19960926C)",
       "free_txt": [
-        "  *  *  COMPILED AND CONVERTED IN THE",
-        "                 CJD-CENTRE  *  *"
+        "  *  *  Compiled and converted in the",
+        "                 CJD-centre  *  *"
+      ]
+    },
+    {
+      "x4_code": "(20241212U)",
+      "free_txt": [
+        " M.M. Upper -> lower case correction.",
+        " Dates were corrected for 4-digits year.",
+        " STATUS information was updated."
       ]
     }
   ],
   "bib_record": {
-    "title": " DETERMINATION OF THE ABSORPTION CROSS SECTION AND OF THE RADIATIVE CAPTURE CROSS SECTION OF URANIUM-233 FOR PILE NEUTRONS",
+    "title": " Determination of the absorption cross section and of the radiative capture cross section of uranium-233 for pile neutrons",
     "authors": [
       {
         "name": "G.M.Kukavadse"
@@ -35,14 +43,14 @@
     ],
     "references": [
       {
-        "x4_code": "(C,55GENEVA,4,230,5508)",
+        "x4_code": "(C,55GENEVA,4,230,1955)",
         "free_txt": [
-          "  ORIGINAL PAPER IN RUSSIAN",
-          "  IS PRINTED BY USSR ACADEMY OF SCIENCES, 'DOKLADY",
-          "  SOVETCKOY DELEGACII NA MEZHDUNARODNOY KONFERENCII",
-          "  PO MIRNOMU ISPOL'ZOVANIYU ATOMNOY ENERGII', GENEVE,",
-          "  1955, VOL.2, 'FIZICHESKIE ISSLEDOVANIYA', PAGE 115",
-          "  MOSCOW 1955"
+          "  Original paper in Russian",
+          "  was printed by USSR Academy of Sciences, 'Doklady",
+          "  sovetckoy delegatsii na mezhdunarodnoy konferentsii",
+          "  po mirnomu ispol'zovaniyu atomnoy energii', Geneve,",
+          "  1955, vol.2, 'Fizicheskie Issledovaniya', page 115",
+          "  Moscow 1955"
         ],
         "publication_year": "1955",
         "doi": null,
@@ -52,18 +60,14 @@
     "facilities": [
       {
         "x4_code": "(REAC)",
-        "free_txt": [
-          "     REACTOR"
-        ],
+        "free_txt": [],
         "pointer": "0",
         "facility_type": "(REAC)",
         "institute": null
       },
       {
         "x4_code": "(SPECM)",
-        "free_txt": [
-          "    MASS SPECTROMETER"
-        ],
+        "free_txt": [],
         "pointer": "0",
         "facility_type": "(SPECM)",
         "institute": null
@@ -76,14 +80,7 @@
         "x4_code": "((92-U-233(N,G)92-U-234,,SIG,,SPA)/(92-U-233(N,ABS),,SIG,,SPA))",
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,G"
-              ],
-              "92-U-234,,SIG,,SPA"
-            ],
-            "type": null,
+            "x4_code": "(92-U-233(N,G)92-U-234,,SIG,,SPA)",
             "target": "92-U-233",
             "process": "N,G",
             "sf49": "92-U-234,,SIG,,SPA",
@@ -95,14 +92,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,ABS"
-              ],
-              ",,SIG,,SPA"
-            ],
-            "type": null,
+            "x4_code": "(92-U-233(N,ABS),,SIG,,SPA)",
             "target": "92-U-233",
             "process": "N,ABS",
             "sf49": ",,SIG,,SPA",
@@ -114,7 +104,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((92-U-233(N,G)92-U-234,,SIG,,SPA)",
+          "(92-U-233(N,ABS),,SIG,,SPA))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -122,16 +117,9 @@
     "003": {
       "0": {
         "x4_code": "(92-U-233(N,ABS),,ALF,,MXW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,ABS"
-              ],
-              ",,ALF,,MXW"
-            ],
-            "type": null,
             "target": "92-U-233",
             "process": "N,ABS",
             "sf49": ",,ALF,,MXW",
@@ -140,10 +128,12 @@
             "sf6": "ALF",
             "sf7": null,
             "sf8": "MXW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-233(N,ABS),,ALF,,MXW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -151,16 +141,9 @@
     "004": {
       "0": {
         "x4_code": "(92-U-233(N,G)92-U-234,,SIG,,SPA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,G"
-              ],
-              "92-U-234,,SIG,,SPA"
-            ],
-            "type": null,
             "target": "92-U-233",
             "process": "N,G",
             "sf49": "92-U-234,,SIG,,SPA",
@@ -169,10 +152,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "SPA",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-233(N,G)92-U-234,,SIG,,SPA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -180,16 +165,9 @@
     "005": {
       "0": {
         "x4_code": "(92-U-233(N,ABS),,SIG,,SPA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,ABS"
-              ],
-              ",,SIG,,SPA"
-            ],
-            "type": null,
             "target": "92-U-233",
             "process": "N,ABS",
             "sf49": ",,SIG,,SPA",
@@ -198,10 +176,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "SPA",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-233(N,ABS),,SIG,,SPA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -220,13 +200,13 @@
           "DATA-ERR"
         ],
         "units": [
-          "MEV",
+          "EV",
           "NO-DIM",
           "NO-DIM"
         ],
         "data": [
           [
-            2.53e-08
+            0.0253
           ],
           [
             0.087
@@ -247,14 +227,14 @@
           "MONIT"
         ],
         "units": [
-          "MEV",
+          "EV",
           "NO-DIM",
           "NO-DIM",
           "B"
         ],
         "data": [
           [
-            2.53e-08
+            0.0253
           ],
           [
             0.095
@@ -278,14 +258,14 @@
           "MONIT"
         ],
         "units": [
-          "MEV",
+          "EV",
           "B",
           "B",
           "B"
         ],
         "data": [
           [
-            2.53e-08
+            0.0253
           ],
           [
             50.0
@@ -309,14 +289,14 @@
           "MONIT"
         ],
         "units": [
-          "MEV",
+          "EV",
           "B",
           "B",
           "B"
         ],
         "data": [
           [
-            2.53e-08
+            0.0253
           ],
           [
             615.0
@@ -336,38 +316,28 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " ERRORS ARE NOT SPECIFIED"
+              " Errors are not specified"
             ]
           }
         ],
         "facility": [
           {
             "x4_code": "(REAC)",
-            "free_txt": [
-              "     REACTOR"
-            ]
+            "free_txt": []
           },
           {
             "x4_code": "(SPECM)",
-            "free_txt": [
-              "    MASS SPECTROMETER"
-            ]
+            "free_txt": []
           }
         ],
         "inc-spect": [
           {
             "x4_code": null,
             "free_txt": [
-              " THERMAL REACTOR SPECTRUM"
+              " Thermal reactor spectrum"
             ]
-          }
-        ],
-        "status": [
-          {
-            "x4_code": "(SCSRS)",
-            "free_txt": []
           }
         ]
       }
@@ -378,7 +348,15 @@
           {
             "x4_code": null,
             "free_txt": [
-              " ABSOLUTE MEASUREMENTS"
+              " Absolute measurements"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,G.M.Kukavadse,C,55GENEVA,4,230,1955)",
+            "free_txt": [
+              " Text page 232."
             ]
           }
         ]
@@ -390,10 +368,10 @@
           {
             "x4_code": "(ASEP)",
             "free_txt": [
-              " MASS SPECTROMETRIC AND ISOTOPIC DILUTION",
-              " ANALYSIS, AS WELL AS ALPHA-COUNTING. INTEGRATED",
-              " FLUX MONITORED BY CHANGE IN ISOTOPE RATIO OF LI",
-              " SAMPLE IRRADIATED WITH U-233."
+              " Mass spectrometric and isotopic dilution",
+              " analysis, as well as alpha-counting. Integrated",
+              " flux monitored by change in isotope ratio of Li",
+              " sample irradiated with U-233."
             ]
           }
         ],
@@ -401,6 +379,14 @@
           {
             "x4_code": "(3-LI-6(N,ABS),,SIG)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(SCSRS)",
+            "free_txt": [
+              " Source of data is not clear."
+            ]
           }
         ]
       }
@@ -415,10 +401,16 @@
         ],
         "status": [
           {
-            "x4_code": "(DEP,41216002)",
+            "x4_code": "(SCSRS)",
             "free_txt": [
-              " CALCULATED FROM MEASURED RATIO TO",
-              " ABSORPTION."
+              " Source of data is not clear."
+            ]
+          },
+          {
+            "x4_code": "(DEP,41220002)",
+            "free_txt": [
+              " Calculated from measured ratio to",
+              " absorption."
             ]
           }
         ]
@@ -426,18 +418,35 @@
     },
     "005": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Cross section was determined by measured ratio of",
+              " U capture cross-section to Li6 absorption cross",
+              " section - 0.73 (without self-shielding),",
+              "           0.66+-0.03 (with self-shielding correction)."
+            ]
+          }
+        ],
         "method": [
           {
             "x4_code": "(BURN)",
-            "free_txt": [
-              "     BURN-UP"
-            ]
+            "free_txt": []
           }
         ],
         "monitor": [
           {
             "x4_code": "(3-LI-6(N,ABS),,SIG)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,G.M.Kukavadse,C,55GENEVA,4,230,1955)",
+            "free_txt": [
+              " Text page 232."
+            ]
           }
         ]
       }

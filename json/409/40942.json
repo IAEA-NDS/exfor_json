@@ -1,29 +1,35 @@
 {
   "entry": "40942",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-09-02",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19880401C)",
       "free_txt": [
-        "  COMPILED AT CJD"
+        "  Compiled at CJD"
       ]
     },
     {
       "x4_code": "(20020729A)",
       "free_txt": [
-        " DATE is corrected"
+        " Date is corrected"
       ]
     },
     {
       "x4_code": "(20020729U)",
       "free_txt": [
-        " CORRECTED AT CJD"
+        " Corrected at CJD"
+      ]
+    },
+    {
+      "x4_code": "(20240208U)",
+      "free_txt": [
+        " Upper -> lower case correction."
       ]
     }
   ],
   "bib_record": {
-    "title": " EXCITATION CROSS-SECTIONS FOR GAMMA-TRANSITIONS IN THE ZR-90 (N,N'GAMMA) REACTION",
+    "title": " Excitation cross-sections for gamma-transitions in the 90Zr(n,n'gamma) reaction",
     "authors": [
       {
         "name": "M.V.Blinov"
@@ -43,15 +49,15 @@
     ],
     "institutes": [
       {
-        "x4_code": "(4RUSRI )",
+        "x4_code": "(4RUSRI)",
         "free_txt": []
       }
     ],
     "references": [
       {
-        "x4_code": "(C,86KHARKO,,75,198604)",
+        "x4_code": "(C,86KHARKO,,75,1986)",
         "free_txt": [
-          "  DATA-TABLE IS GIVEN"
+          "  Data table is given"
         ],
         "publication_year": "1986",
         "doi": null,
@@ -66,14 +72,7 @@
         "x4_code": "((40-ZR-90(N,INL)40-ZR-90,PAR,SIG,G)//(26-FE-56(N,INL)26-FE-56,PAR,SIG,G))",
         "children": [
           {
-            "code": [
-              "40-ZR-90",
-              [
-                "N,INL"
-              ],
-              "40-ZR-90,PAR,SIG,G"
-            ],
-            "type": null,
+            "x4_code": "(40-ZR-90(N,INL)40-ZR-90,PAR,SIG,G)",
             "target": "40-ZR-90",
             "process": "N,INL",
             "sf49": "40-ZR-90,PAR,SIG,G",
@@ -85,14 +84,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "26-FE-56",
-              [
-                "N,INL"
-              ],
-              "26-FE-56,PAR,SIG,G"
-            ],
-            "type": null,
+            "x4_code": "(26-FE-56(N,INL)26-FE-56,PAR,SIG,G)",
             "target": "26-FE-56",
             "process": "N,INL",
             "sf49": "26-FE-56,PAR,SIG,G",
@@ -104,7 +96,12 @@
             "sf9": null
           }
         ],
-        "type": "//",
+        "math_expression": [
+          "Ratio",
+          "((40-ZR-90(N,INL)40-ZR-90,PAR,SIG,G)",
+          "(26-FE-56(N,INL)26-FE-56,PAR,SIG,G))"
+        ],
+        "operator": "Ratio",
         "free_text": "",
         "pointer": "0"
       }
@@ -144,12 +141,16 @@
         "heads": [
           "E-NM",
           "DATA",
-          "DATA-ERR"
+          "DATA-ERR",
+          "LVL-INI",
+          "LVL-FIN"
         ],
         "units": [
           "KEV",
           "NO-DIM",
-          "NO-DIM"
+          "NO-DIM",
+          "KEV",
+          "KEV"
         ],
         "data": [
           [
@@ -169,6 +170,18 @@
             0.01,
             0.05,
             0.01
+          ],
+          [
+            2738.9,
+            2748.1,
+            2186.3,
+            2318.9
+          ],
+          [
+            2318.9,
+            2186.3,
+            0.0,
+            0.0
           ]
         ]
       }
@@ -180,7 +193,10 @@
         "detector": [
           {
             "x4_code": "(GELI)",
-            "free_txt": []
+            "free_txt": [
+              " For gammas registration at 125 deg angle",
+              "relative to incident neutron beam."
+            ]
           }
         ],
         "monitor": [
@@ -193,12 +209,30 @@
           {
             "x4_code": null,
             "free_txt": [
-              " ZIRCONIUM-OXIDE, ZR-90 CONTENT IS 97.5 PERCENT"
+              " Zirconium oxide, Zr-90 content is 97.5 %."
             ]
           }
         ]
       }
     },
-    "002": {}
+    "002": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              " article."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,M.V.Blinov+,C,86KHARKO,,75,1986)",
+            "free_txt": []
+          }
+        ]
+      }
+    }
   }
 }

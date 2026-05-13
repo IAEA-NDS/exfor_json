@@ -1,12 +1,12 @@
 {
   "entry": "A1072",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-08-20",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810402C)",
       "free_txt": [
-        " Compilation Produced by Arzamas RFNC-VNIIEF"
+        " Compilation produced by Arzamas RFNC-VNIIEF"
       ]
     },
     {
@@ -20,10 +20,16 @@
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
       ]
+    },
+    {
+      "x4_code": "(20240702A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
+      ]
     }
   ],
   "bib_record": {
-    "title": "T-T elastic scattering from 1.6 to 2.0 MeV",
+    "title": " t-t elastic scattering from 1.6 to 2.0 MeV",
     "authors": [
       {
         "name": "D.M.Holm"
@@ -40,7 +46,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,101,(6),1772,195603)",
+        "x4_code": "(J,PR,101,1772,1956)",
         "free_txt": [],
         "publication_year": "1956",
         "doi": null,
@@ -49,40 +55,35 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG)",
+        "x4_code": "(VDG,1USALAS)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": null
+        "institute": "(1USALAS)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-3(T,EL)1-H-3,,DA,,,EXP)",
+        "x4_code": "(1-H-3(T,EL)1-H-3,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-3",
-              [
-                "T,EL"
-              ],
-              "1-H-3,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "1-H-3",
             "process": "T,EL",
-            "sf49": "1-H-3,,DA,,,EXP",
+            "sf49": "1-H-3,,DA",
             "sf4": "1-H-3",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-3(T,EL)1-H-3,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -90,29 +91,39 @@
   },
   "data_tables": {
     "001": {
-      "common": null
-    },
-    "002": {
       "common": {
         "heads": [
-          "DATA-ERR"
+          "ERR-2",
+          "ERR-3",
+          "ERR-4"
         ],
         "units": [
+          "PER-CENT",
+          "PER-CENT",
           "PER-CENT"
         ],
         "data": [
           [
-            0.8
+            0.1
+          ],
+          [
+            0.4
+          ],
+          [
+            0.5
           ]
         ]
-      },
+      }
+    },
+    "002": {
+      "common": null,
       "data": {
         "heads": [
           "EN",
           "ANG-CM",
           "DATA-CM",
           "ERR-S",
-          "ERR-T",
+          "+ERR-T",
           "-ERR-T"
         ],
         "units": [
@@ -269,7 +280,7 @@
             5.0,
             5.0,
             2.8,
-            2.3,
+            2.8,
             2.2,
             2.5,
             2.2,
@@ -323,15 +334,6 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "comment": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "-By CAJAD- RFNC-VNIIEF Made some corrections, but these",
-              " correction are not shown."
-            ]
-          }
-        ],
         "detector": [
           {
             "x4_code": "(PROPC)",
@@ -339,21 +341,49 @@
               " Two proportional counters with a fixed angular",
               "separation of 90 degr. were used in coincidence to",
               "detect both the scattered and recoil tritons for the",
-              "laboratory range from 45 Degr. to 70 degr.",
+              "laboratory range from 45 degr. to 70 degr.",
               "A single counter was used for laboratory angles between",
               "10 degr. and 20 degr."
             ]
           }
         ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-1,0.2,0.5)",
+            "free_txt": [
+              " Uncertainty in the current integration",
+              " For 1.8-, 1.9-, and 2.0-MeV data -0.5%",
+              "  For 1.6- and 1.7-MeV data - 0.2%"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Uncertainty in the gas temperature"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3)",
+            "free_txt": [
+              " Uncertainty in the gas concentration"
+            ]
+          },
+          {
+            "x4_code": "(ERR-4)",
+            "free_txt": [
+              " Uncertainty in the secondary gas scattering"
+            ]
+          }
+        ],
         "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,1USALAS)",
             "free_txt": []
           }
         ],
         "method": [
           {
-            "x4_code": "(PHD)",
+            "x4_code": "(BCINT)",
             "free_txt": []
           }
         ],
@@ -371,21 +401,9 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " Probable error due to measurements are 0.8%"
-            ]
-          },
-          {
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Statistical error"
-            ]
-          },
-          {
-            "x4_code": "(-ERR-T)",
-            "free_txt": [
-              " Total error."
             ]
           },
           {
@@ -397,9 +415,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,D.M.Holm+,J,PR,101,1772,1956)",
             "free_txt": [
-              " Table 3,2"
+              " Tables II,III"
             ]
           }
         ]

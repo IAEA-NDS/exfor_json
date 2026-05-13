@@ -1,17 +1,29 @@
 {
   "entry": "32660",
-  "last_updated": "2007-03-07",
-  "number_of_revisions": "1",
+  "last_updated": "2025-04-13",
+  "number_of_revisions": "2",
   "histories": [
     {
       "x4_code": "(20060621C)",
       "free_txt": [
         " Compiled by Yu Hongwei"
       ]
+    },
+    {
+      "x4_code": "(20250310A)",
+      "free_txt": [
+        " Jimin Wang: Major revisions in 002 and 003"
+      ]
+    },
+    {
+      "x4_code": "(20250413A)",
+      "free_txt": [
+        " On. Major revisions in 002-003."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Precise determination of yield of Zr-95,Ba-140 and Nd-147",
+    "title": "Precise determination of yield of Zr-95, Ba-140 and Nd-147",
     "authors": [
       {
         "name": "Ze Li"
@@ -29,7 +41,7 @@
         "name": "Xiuzhi Wang"
       },
       {
-        "name": "Kexin Jing"
+        "name": "Kexing Jing"
       },
       {
         "name": "Peijia Tang"
@@ -70,9 +82,9 @@
     ],
     "references": [
       {
-        "x4_code": "(J,HFH,17,65,199505)",
+        "x4_code": "(J,HFH,17,65,1995)",
         "free_txt": [
-          "in Chinese"
+          " in Chinese"
         ],
         "publication_year": "1995",
         "doi": null,
@@ -84,18 +96,11 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY,,MXW)",
+        "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,MXW"
-            ],
-            "type": null,
-            "target": "92-U-238",
+            "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,MXW",
             "sf4": "ELEM/MASS",
@@ -103,28 +108,23 @@
             "sf6": "FY",
             "sf7": null,
             "sf8": "MXW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY)",
+        "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY"
-            ],
-            "type": null,
-            "target": "92-U-238",
+            "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY",
             "sf4": "ELEM/MASS",
@@ -132,10 +132,12 @@
             "sf6": "FY",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -143,19 +145,46 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-1",
+          "ERR-2",
+          "ERR-3"
+        ],
+        "units": [
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            1.5
+          ],
+          [
+            2.0
+          ],
+          [
+            0.3
+          ]
+        ]
+      }
     },
     "002": {
       "common": {
         "heads": [
-          "EN-DUMMY"
+          "EN-DUMMY",
+          "ERR-5"
         ],
         "units": [
-          "EV"
+          "EV",
+          "PER-CENT"
         ],
         "data": [
           [
             0.0253
+          ],
+          [
+            0.4
           ]
         ]
       },
@@ -164,13 +193,19 @@
           "ELEMENT",
           "MASS",
           "DATA",
-          "ERR-T"
+          "ERR-T",
+          "ERR-S",
+          "ERR-4",
+          "DECAY-FLAG"
         ],
         "units": [
           "NO-DIM",
           "NO-DIM",
           "PC/FIS",
-          "PER-CENT"
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -192,6 +227,21 @@
             2.6,
             2.6,
             2.7
+          ],
+          [
+            0.35,
+            0.45,
+            0.74
+          ],
+          [
+            0.3,
+            0.3,
+            0.4
+          ],
+          [
+            1.0,
+            2.0,
+            3.0
           ]
         ]
       }
@@ -215,13 +265,21 @@
           "ELEMENT",
           "MASS",
           "DATA",
-          "ERR-T"
+          "ERR-T",
+          "ERR-S",
+          "ERR-4",
+          "ERR-6",
+          "DECAY-FLAG"
         ],
         "units": [
           "NO-DIM",
           "NO-DIM",
           "PC/FIS",
-          "PER-CENT"
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -243,6 +301,26 @@
             2.7,
             2.8,
             3.4
+          ],
+          [
+            0.7,
+            0.55,
+            2.1
+          ],
+          [
+            0.3,
+            0.3,
+            0.4
+          ],
+          [
+            0.6,
+            1.0,
+            0.7
+          ],
+          [
+            1.0,
+            2.0,
+            3.0
           ]
         ]
       }
@@ -255,39 +333,31 @@
           {
             "x4_code": null,
             "free_txt": [
-              " the following correction were made:",
-              " .Gamma-ray self-absorption correction.",
-              " .Cascade coincident losses.",
-              " .The pile-up losees in the counting system.",
-              " .The influence of the background neutrons."
+              "The following correction were made:",
+              ".Gamma-ray self-absorption correction.",
+              ".Cascade coincident losses.",
+              ".The pile-up losses in the counting system.",
+              ".The influence of the background neutrons."
             ]
           }
         ],
         "decay-data": [
           {
-            "x4_code": "(40-ZR-95,64.0D,DG,756.72,0.544)",
+            "x4_code": "((1.)40-ZR-95,64.0D,DG,756.72,0.544)",
             "free_txt": []
           },
           {
-            "x4_code": "(56-BA-140,12.746D,DG,537.26,0.2439)",
+            "x4_code": "((2.)56-BA-140,12.746D,DG,537.26,0.2439)",
             "free_txt": []
           },
           {
-            "x4_code": "(60-ND-147,11.0D,DG,531.016,0.128)",
+            "x4_code": "((3.)60-ND-147,11.0D,DG,531.016,0.128)",
             "free_txt": []
           }
         ],
         "detector": [
           {
-            "x4_code": "(FISCH)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(GELI)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(HPGE)",
+            "x4_code": "(FISCH,GELI,HPGE)",
             "free_txt": []
           }
         ],
@@ -295,17 +365,37 @@
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
-              "the total uncertainty is count as the square",
-              " root of the sum of square of individual error,",
-              " include the following error:",
-              ".Fission rate:1.5%",
-              ".Gamma-ray counting statistis:0.35-2.1%",
-              ".Detector efficiency:2.0%",
-              ".Gamma-ray self-absorption:0.3-0.4%",
-              ".The background neutrons for 8 MeV:0.6-1.0%",
-              ".Geometry:0.3%",
-              ".Correction for penetrate neutrons for thermal",
-              " neutrons 0.4%"
+              " The total uncertainty"
+            ]
+          },
+          {
+            "x4_code": "(ERR-S)",
+            "free_txt": [
+              " Gamma-ray counting statistics"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Fission rate"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Detector efficiency"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3)",
+            "free_txt": [
+              " Geometry"
+            ]
+          },
+          {
+            "x4_code": "(ERR-4)",
+            "free_txt": [
+              " Gamma-ray self-absorption"
             ]
           }
         ],
@@ -313,7 +403,7 @@
           {
             "x4_code": "(TOF)",
             "free_txt": [
-              "measured the neutron spectrum"
+              " measured the neutron spectrum"
             ]
           },
           {
@@ -323,10 +413,9 @@
         ],
         "monitor": [
           {
-            "x4_code": null,
+            "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": [
-              "absolute fission rate was monitored with a double fiss.",
-              " chamber, efficiency verify by Au-197(n,g)Au-198."
+              " To verify the absolute fission rate"
             ]
           }
         ],
@@ -334,17 +423,9 @@
           {
             "x4_code": null,
             "free_txt": [
-              "Metallic uranium disk of 16 mm  diameter,0.4-0.8g/cm2",
-              "thick.U-234 content is 1.1 %,U-235 content is 90.2%",
+              "Metallic uranium disk of 16 mm diameter, 0.4-0.8 g/cm2",
+              "thick. U-234 content is 1.1%, U-235 content is 90.2%,",
               "U-236 content is 0.3%, U-238 content is 8.4%."
-            ]
-          }
-        ],
-        "status": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              "Table 3 and 5 of reference"
             ]
           }
         ]
@@ -352,6 +433,22 @@
     },
     "002": {
       "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-5)",
+            "free_txt": [
+              " Correction for penetrate neutrons"
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(REAC,3CPRAEP)",
+            "free_txt": [
+              " Heavy-water reactor"
+            ]
+          }
+        ],
         "inc-source": [
           {
             "x4_code": "(REAC)",
@@ -365,21 +462,47 @@
               "Thermal spectrum"
             ]
           }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,Ze Li+,J,HFH,17,65,1995)",
+            "free_txt": [
+              " Table 3"
+            ]
+          }
         ]
       }
     },
     "003": {
       "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-6)",
+            "free_txt": [
+              " The background neutrons"
+            ]
+          }
+        ],
         "facility": [
           {
             "x4_code": "(VDGT,3CPRAEP)",
-            "free_txt": []
+            "free_txt": [
+              " HI-13 Tandem accelerator"
+            ]
           }
         ],
         "inc-source": [
           {
             "x4_code": "(D-D)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,Ze Li+,J,HFH,17,65,1995)",
+            "free_txt": [
+              " Table 5"
+            ]
           }
         ]
       }

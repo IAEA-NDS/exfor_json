@@ -1,12 +1,12 @@
 {
   "entry": "E1580",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-08-09",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19980428T)",
       "free_txt": [
-        " CONVERTED FROM NRDF DATA NO. D1580"
+        " Converted from NRDF data No. D1580"
       ]
     },
     {
@@ -14,13 +14,23 @@
       "free_txt": [
         " DATE is corrected"
       ]
+    },
+    {
+      "x4_code": "(20240601A)",
+      "free_txt": [
+        " MA: modified REACTION in 002, COMMON, DATA",
+        "            in 002-003, AUTHOR in 001; merged",
+        "            FACILITY, DETECTOR in 001; added STATUS,",
+        "            ANG-SEC in 002-003, ERR-ANALYS in 003;",
+        "            updated Numerical data in 002."
+      ]
     }
   ],
   "bib_record": {
-    "title": " SPIN-ISOSPIN RESONANCES OBSERVED IN THE (D,2HE) AND (12C,12N) REACTIONS AT E/A=135MEV",
+    "title": "Spin-isospin resonances observed in the (d,2He) and (12C,12N) reactions at E/A = 135 MeV",
     "authors": [
       {
-        "name": "T.Ichimura"
+        "name": "T.Ichihara"
       },
       {
         "name": "T.Niizeki"
@@ -97,81 +107,78 @@
     ],
     "institutes": [
       {
-        "x4_code": "(2JPNJCL)",
-        "free_txt": [
-          " INSTITUTE FOR PHYSICAL AND CHEMICAL",
-          " RESEARCH"
-        ]
+        "x4_code": "(2JPNIPC)",
+        "free_txt": ""
       },
       {
         "x4_code": "(2JPNTIT)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(2JPNTOK)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(2JPNOSA)",
-        "free_txt": [
-          " RESEARCH CENTER FOR NUCLEAR PHYSICS, OSAKA",
-          " UNIV."
-        ]
+        "free_txt": ""
       },
       {
         "x4_code": "(2JPNTOH)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
-        "x4_code": "(2JPNJPN)",
-        "free_txt": []
+        "x4_code": "(2JPNYMG)",
+        "free_txt": ""
       },
       {
         "x4_code": "(2JPNTSU)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(2JPNKTO)",
-        "free_txt": []
+        "free_txt": ""
       }
     ],
     "references": [
       {
-        "x4_code": "(J,NP/A,569,287,1994)",
+        "x4_code": "(J,NP/A,569,287C,1994)",
         "free_txt": [],
         "publication_year": "1994",
         "doi": null,
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(CYCLO,2JPNIPC)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": "(2JPNIPC)"
+      }
+    ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(6-C-12(6-C-12,5-B-12)7-N-12,PAR,DA)",
+        "x4_code": "(6-C-12(6-C-12,5-B-12)7-N-12,PAR,DA,RSD)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "6-C-12",
-              [
-                "6-C-12,5-B-12"
-              ],
-              "7-N-12,PAR,DA"
-            ],
-            "type": null,
             "target": "6-C-12",
             "process": "6-C-12,5-B-12",
-            "sf49": "7-N-12,PAR,DA",
+            "sf49": "7-N-12,PAR,DA,RSD",
             "sf4": "7-N-12",
             "sf5": "PAR",
             "sf6": "DA",
-            "sf7": null,
+            "sf7": "RSD",
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(6-C-12(6-C-12,5-B-12)7-N-12,PAR,DA,RSD)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -179,16 +186,9 @@
     "003": {
       "0": {
         "x4_code": "(6-C-12(6-C-12,EL)6-C-12,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "6-C-12",
-              [
-                "6-C-12,EL"
-              ],
-              "6-C-12,,DA"
-            ],
-            "type": null,
             "target": "6-C-12",
             "process": "6-C-12,EL",
             "sf49": "6-C-12,,DA",
@@ -197,10 +197,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(6-C-12(6-C-12,EL)6-C-12,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -208,21 +210,33 @@
   },
   "data_tables": {
     "001": {
-      "common": null
-    },
-    "002": {
       "common": {
         "heads": [
-          "EN",
-          "E-LVL"
+          "EN"
         ],
         "units": [
-          "MEV/A",
-          "MEV"
+          "MEV/A"
         ],
         "data": [
           [
             135.0
+          ]
+        ]
+      }
+    },
+    "002": {
+      "common": {
+        "heads": [
+          "E-LVL1",
+          "E-LVL2"
+        ],
+        "units": [
+          "MEV",
+          "MEV"
+        ],
+        "data": [
+          [
+            0.0
           ],
           [
             0.0
@@ -232,9 +246,9 @@
       "data": {
         "heads": [
           "ANG-CM",
-          "DATA",
-          "+DATA-ERR",
-          "-DATA-ERR"
+          "DATA-CM",
+          "+ERR-S",
+          "-ERR-S"
         ],
         "units": [
           "ADEG",
@@ -256,6 +270,7 @@
             2.011,
             2.195,
             2.365,
+            2.554,
             2.771,
             3.004,
             3.243,
@@ -292,6 +307,7 @@
             1.486,
             1.267,
             1.133,
+            0.9806,
             0.8315,
             0.6131,
             0.4349,
@@ -316,6 +332,7 @@
             0.01371
           ],
           [
+            null,
             null,
             null,
             null,
@@ -367,47 +384,36 @@
             null,
             null,
             null,
-            -0.04745,
-            -0.0326,
-            -0.02754,
-            -0.02222,
-            -0.0213,
-            -0.02567,
-            -0.01704,
-            -0.01657,
-            -0.01558,
-            -0.01611,
-            -0.01157,
-            -0.01232,
-            -0.01324,
-            -0.01233,
-            -0.01227,
-            -0.0095,
-            -0.008931,
-            -0.008393,
-            -0.004641
+            null,
+            0.04745,
+            0.0326,
+            0.02754,
+            0.02222,
+            0.0213,
+            0.02567,
+            0.01704,
+            0.01657,
+            0.01558,
+            0.01611,
+            0.01157,
+            0.01232,
+            0.01324,
+            0.01233,
+            0.01227,
+            0.0095,
+            0.008931,
+            0.008393,
+            0.004641
           ]
         ]
       }
     },
     "003": {
-      "common": {
-        "heads": [
-          "EN"
-        ],
-        "units": [
-          "MEV/A"
-        ],
-        "data": [
-          [
-            135.0
-          ]
-        ]
-      },
+      "common": null,
       "data": {
         "heads": [
           "ANG-CM",
-          "DATA",
+          "DATA-CM",
           "+DATA-ERR",
           "-DATA-ERR"
         ],
@@ -465,6 +471,7 @@
             10.52,
             10.71,
             10.91,
+            11.1,
             11.29,
             11.59,
             11.8,
@@ -518,6 +525,7 @@
             0.77,
             0.8057,
             0.3932,
+            0.6549,
             0.2488,
             0.2357,
             0.1725,
@@ -571,6 +579,7 @@
             0.1235,
             0.1351,
             0.1089,
+            0.1422,
             0.07839,
             0.1007,
             0.06678,
@@ -613,22 +622,23 @@
             null,
             null,
             null,
-            -0.7402,
-            -0.3265,
-            -0.2567,
-            -0.1548,
-            -0.1295,
-            -0.1629,
-            -0.1993,
-            -0.1611,
-            -0.1561,
-            -0.1596,
-            -0.1131,
-            -0.09523,
-            -0.08152,
-            -0.07647,
-            -0.04794,
-            -0.05213
+            0.7402,
+            0.3265,
+            0.2567,
+            0.1548,
+            0.1295,
+            0.1629,
+            0.1993,
+            0.1611,
+            0.1561,
+            0.1596,
+            0.1131,
+            0.1803,
+            0.09523,
+            0.08152,
+            0.07647,
+            0.04794,
+            0.05213
           ]
         ]
       }
@@ -637,11 +647,23 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "detector": [
+          {
+            "x4_code": "(DRFTC,SCIN)",
+            "free_txt": []
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(CYCLO,2JPNIPC)",
+            "free_txt": []
+          }
+        ],
         "status": [
           {
             "x4_code": null,
             "free_txt": [
-              " DATA CONVERTED FROM NRDF"
+              "Data converted from NRDF"
             ]
           }
         ]
@@ -649,37 +671,27 @@
     },
     "002": {
       "0": {
-        "detector": [
-          {
-            "x4_code": "(COIN,MAGSP,SOLST)",
-            "free_txt": [
-              " OVERALL-ENERGY-RESOLUTION IS 700.KEV"
-            ]
-          }
-        ],
         "en-sec": [
           {
-            "x4_code": "(E-LVL,5-B-12)",
+            "x4_code": "(E-LVL1,7-N-12)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(E-LVL2,5-B-12)",
             "free_txt": []
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(DATA-ERR)",
+            "x4_code": "(ERR-S)",
             "free_txt": [
               " Uncertainty scanned from figure"
             ]
           }
         ],
-        "facility": [
-          {
-            "x4_code": "(CYCLO,2JPNJCL)",
-            "free_txt": []
-          }
-        ],
         "level-prop": [
           {
-            "x4_code": "(5-B-12,E-LVL=0.,SPIN=1.0,PARITY=+1.)",
+            "x4_code": "(5-B-12,E-LVL=0.,SPIN=1.,PARITY=+1.)",
             "free_txt": []
           }
         ],
@@ -694,21 +706,39 @@
             "x4_code": "(7-N-12)",
             "free_txt": []
           }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE,,T.Ichihara+,J,NP/A,569,287C,1994)",
+            "free_txt": [
+              " Fig. 4(a)"
+            ]
+          }
         ]
       }
     },
     "003": {
       "0": {
-        "facility": [
+        "err-analys": [
           {
-            "x4_code": "(CYCLO,2JPNJCL)",
-            "free_txt": []
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No information on source of uncertainties"
+            ]
           }
         ],
         "part-det": [
           {
             "x4_code": "(6-C-12)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE,,T.Ichihara+,J,NP/A,569,287C,1994)",
+            "free_txt": [
+              " Fig. 4(b)"
+            ]
           }
         ]
       }

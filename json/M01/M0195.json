@@ -1,7 +1,7 @@
 {
   "entry": "M0195",
-  "last_updated": "2013-03-28",
-  "number_of_revisions": "4",
+  "last_updated": "2026-02-26",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19870807C)",
@@ -17,15 +17,21 @@
       "x4_code": "(20121103A)",
       "free_txt": [
         " SD: Updated to new date formats,lower case.",
-        "     Corrected according last EXFOR rules and Dict.",
+        "Corrected according to the last EXFOR rules and Dict.",
         "     Ref. on transl. was added.",
-        "            VV: REACTION code in SUBENT 002 was",
-        "     corrected."
+        "     VV: REACTION code in SUBENT 002 was corrected."
+      ]
+    },
+    {
+      "x4_code": "(20260107A)",
+      "free_txt": [
+        " Corrected by VV and SD: REFERENCE,",
+        " PART-DET, STATUS."
       ]
     }
   ],
   "bib_record": {
-    "title": "Photofission cross section of Ra-226.",
+    "title": "Photofission cross section of Ra-226",
     "authors": [
       {
         "name": "E.A.Zhagrov"
@@ -48,16 +54,9 @@
     ],
     "references": [
       {
-        "x4_code": "(J,YF,13,934,1971)",
-        "free_txt": [],
-        "publication_year": "1971",
-        "doi": null,
-        "pointer": "0"
-      },
-      {
         "x4_code": "(J,SNP,13,537,1971)",
         "free_txt": [
-          " - Eng.trans.of YF,13,934,1971"
+          " English translation of YF,13,934,1971."
         ],
         "publication_year": "1971",
         "doi": null,
@@ -78,16 +77,9 @@
     "002": {
       "0": {
         "x4_code": "(88-RA-226(G,F),,SIG,,BRS)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "88-RA-226",
-              [
-                "G,F"
-              ],
-              ",,SIG,,BRS"
-            ],
-            "type": null,
             "target": "88-RA-226",
             "process": "G,F",
             "sf49": ",,SIG,,BRS",
@@ -96,10 +88,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRS",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(88-RA-226(G,F),,SIG,,BRS)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -107,7 +101,34 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-SYS",
+          "ERR-1",
+          "ERR-2",
+          "ERR-3"
+        ],
+        "units": [
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            8.0
+          ],
+          [
+            5.0
+          ],
+          [
+            3.0
+          ],
+          [
+            5.0
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -182,13 +203,39 @@
           {
             "x4_code": "(GLASD)",
             "free_txt": []
+          },
+          {
+            "x4_code": "(IOCH)",
+            "free_txt": [
+              " The bremsstrahlung flux was measured with a",
+              "thick-walled aluminum ionization chamber."
+            ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(ERR-SYS)",
             "free_txt": [
-              "No information"
+              " Systematic error includes:"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Uncertainty in the target weight"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Uncertainty in the fission registration",
+              " efficiency"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3)",
+            "free_txt": [
+              " Uncertainty in the bremsstrahlung dosimetry"
             ]
           }
         ],
@@ -210,16 +257,22 @@
             "free_txt": []
           }
         ],
-        "part-det": [
+        "sample": [
           {
-            "x4_code": "(FF)",
-            "free_txt": []
+            "x4_code": null,
+            "free_txt": [
+              "Two radium targets weighing 2140+-10 and 374 +-18 ug,",
+              "which had been prepared by vacuum deposition; their",
+              "diameter was 9 mm."
+            ]
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
-            "free_txt": []
+            "x4_code": "(CURVE,,E.A.Zhagrov+,J,SNP,13,537,1971)",
+            "free_txt": [
+              " Data from Fig. 3."
+            ]
           }
         ]
       }

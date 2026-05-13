@@ -1,7 +1,7 @@
 {
   "entry": "A1216",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-10-17",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19840220C)",
@@ -14,10 +14,16 @@
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
       ]
+    },
+    {
+      "x4_code": "(20250823A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Proton-proton scattering at 10 MeV.",
+    "title": "Proton-proton scattering at 10 MeV",
     "authors": [
       {
         "name": "L.H.Johnston"
@@ -34,7 +40,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,116,(4),989,195911)",
+        "x4_code": "(J,PR,116,989,1959)",
         "free_txt": [],
         "publication_year": "1959",
         "doi": null,
@@ -43,42 +49,37 @@
     ],
     "facilities": [
       {
-        "x4_code": "(LINAC)",
+        "x4_code": "(LINAC,1USAMIN)",
         "free_txt": [
           " Minnesota proton linear accelerator"
         ],
         "pointer": "0",
         "facility_type": "(LINAC)",
-        "institute": null
+        "institute": "(1USAMIN)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-1(P,EL)1-H-1,,DA,,,EXP)",
+        "x4_code": "(1-H-1(P,EL)1-H-1,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "P,EL"
-              ],
-              "1-H-1,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "1-H-1",
             "process": "P,EL",
-            "sf49": "1-H-1,,DA,,,EXP",
+            "sf49": "1-H-1,,DA",
             "sf4": "1-H-1",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-1(P,EL)1-H-1,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -96,7 +97,7 @@
         ],
         "units": [
           "MEV",
-          "PER-CENT"
+          "MEV"
         ],
         "data": [
           [
@@ -111,8 +112,8 @@
         "heads": [
           "ANG-CM",
           "DATA-CM",
-          "DATA-ERR",
-          "DATA-ERR1"
+          "ERR-T",
+          "ERR-1"
         ],
         "units": [
           "ADEG",
@@ -122,32 +123,32 @@
         ],
         "data": [
           [
-            10.03,
-            12.03,
-            14.03,
-            16.04,
-            18.05,
-            20.05,
-            22.06,
+            10.026,
+            12.031,
+            14.035,
+            16.041,
+            18.046,
+            20.051,
+            22.055,
             24.06,
-            26.06,
-            28.07,
-            30.07,
-            32.08,
-            34.08,
-            36.09,
-            38.09,
-            40.1,
-            44.1,
-            50.11,
+            26.064,
+            28.069,
+            30.074,
+            32.079,
+            34.083,
+            36.087,
+            38.091,
+            40.091,
+            44.103,
+            50.113,
             54.12,
-            60.13,
-            64.13,
-            70.14,
-            76.14,
-            80.14,
-            86.15,
-            90.15
+            60.128,
+            64.133,
+            70.139,
+            76.144,
+            80.145,
+            86.148,
+            90.148
           ],
           [
             854.9,
@@ -240,33 +241,7 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "detector": [
-          {
-            "x4_code": "(TELES)",
-            "free_txt": []
-          }
-        ],
-        "facility": [
-          {
-            "x4_code": "(LINAC)",
-            "free_txt": [
-              " Minnesota proton linear accelerator"
-            ]
-          }
-        ],
-        "sample": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "Hydrogen gas target"
-            ]
-          }
-        ]
-      }
-    },
-    "002": {
-      "0": {
-        "comment": [
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
@@ -276,21 +251,48 @@
             ]
           }
         ],
+        "detector": [
+          {
+            "x4_code": "(TELES,NAICR)",
+            "free_txt": []
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(LINAC,1USAMIN)",
+            "free_txt": [
+              " Minnesota proton linear accelerator"
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(BCINT)",
+            "free_txt": []
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Hydrogen gas target. The hydrogen pressure was",
+              "one-quarter atmosphere."
+            ]
+          }
+        ]
+      }
+    },
+    "002": {
+      "0": {
         "err-analys": [
           {
-            "x4_code": "(EN-ERR)",
-            "free_txt": [
-              " Scale error"
-            ]
-          },
-          {
-            "x4_code": "(DATA-ERR)",
+            "x4_code": "(ERR-T)",
             "free_txt": [
               " Absolute probable error"
             ]
           },
           {
-            "x4_code": "(DATA-ERR1)",
+            "x4_code": "(ERR-1)",
             "free_txt": [
               " Relative probable error"
             ]
@@ -298,9 +300,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,L.H.Johnston+,J,PR,116,989,1959)",
             "free_txt": [
-              " Table 2."
+              " Table II"
             ]
           }
         ]

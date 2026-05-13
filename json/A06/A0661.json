@@ -1,7 +1,7 @@
 {
   "entry": "A0661",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2026-04-01",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20040212C)",
@@ -12,10 +12,18 @@
       "free_txt": [
         " Last checking has been done."
       ]
+    },
+    {
+      "x4_code": "(20260207A)",
+      "free_txt": [
+        " SD: Small corrections in all Subents.",
+        "Energy value updated according to presentation in the",
+        "article. REL-REF -> MONIT-REF. MONITOR added."
+      ]
     }
   ],
   "bib_record": {
-    "title": "The measurement of isotopic cross sections of 12-C beam fragmentation on liquid hydrogen at 3.66 GeV/nucleon",
+    "title": "The measurement of isotopic cross sections of 12C beam fragmentation on liquid hydrogen at 3.66 GeV/nucleon",
     "authors": [
       {
         "name": "A.Korejwo"
@@ -39,16 +47,11 @@
     "institutes": [
       {
         "x4_code": "(3POLLOU)",
-        "free_txt": [
-          " Division of Nuclear Physics and Radiation",
-          " Safety and Division of Experimental Physics."
-        ]
+        "free_txt": ""
       },
       {
         "x4_code": "(4ZZZDUB)",
-        "free_txt": [
-          " Laboratory of particle physics."
-        ]
+        "free_txt": ""
       }
     ],
     "references": [
@@ -75,17 +78,10 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-1(6-C-12,X)ELEM/MASS,,SIG)",
+        "x4_code": "((1-H-1(6-C-12,X)ELEM/MASS,,SIG)=(6-C-12(P,X)ELEM/MASS,,SIG))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "6-C-12,X"
-              ],
-              "ELEM/MASS,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(6-C-12,X)ELEM/MASS,,SIG)",
             "target": "1-H-1",
             "process": "6-C-12,X",
             "sf49": "ELEM/MASS,,SIG",
@@ -95,26 +91,36 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          },
+          {
+            "x4_code": "(6-C-12(P,X)ELEM/MASS,,SIG)",
+            "target": "6-C-12",
+            "process": "P,X",
+            "sf49": "ELEM/MASS,,SIG",
+            "sf4": "ELEM/MASS",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           }
         ],
-        "type": null,
+        "math_expression": [
+          "Equal",
+          "((1-H-1(6-C-12,X)ELEM/MASS,,SIG)",
+          "(6-C-12(P,X)ELEM/MASS,,SIG))"
+        ],
+        "operator": "Equal",
         "free_text": "",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(1-H-1(6-C-12,X)ELEM,,SIG)",
+        "x4_code": "((1-H-1(6-C-12,X)ELEM,,SIG)=(6-C-12(P,X)ELEM,,SIG))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "6-C-12,X"
-              ],
-              "ELEM,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(6-C-12,X)ELEM,,SIG)",
             "target": "1-H-1",
             "process": "6-C-12,X",
             "sf49": "ELEM,,SIG",
@@ -124,9 +130,26 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
+          },
+          {
+            "x4_code": "(6-C-12(P,X)ELEM,,SIG)",
+            "target": "6-C-12",
+            "process": "P,X",
+            "sf49": "ELEM,,SIG",
+            "sf4": "ELEM",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           }
         ],
-        "type": null,
+        "math_expression": [
+          "Equal",
+          "((1-H-1(6-C-12,X)ELEM,,SIG)",
+          "(6-C-12(P,X)ELEM,,SIG))"
+        ],
+        "operator": "Equal",
         "free_text": "",
         "pointer": "0"
       }
@@ -136,14 +159,24 @@
     "001": {
       "common": {
         "heads": [
-          "EN"
+          "EN",
+          "MONIT",
+          "MONIT-ERR"
         ],
         "units": [
-          "GEV"
+          "GEV/A",
+          "MB",
+          "MB"
         ],
         "data": [
           [
-            43.32
+            3.66
+          ],
+          [
+            250.0
+          ],
+          [
+            2.0
           ]
         ]
       }
@@ -416,10 +449,10 @@
           {
             "x4_code": null,
             "free_txt": [
-              "-By authors.  In this case all the nuclei produced by",
+              "-By authors. In this case all the nuclei produced by",
               "beam fragmentation are emitted in a narrow cone along",
               "the beam direction and their momenta per nucleon are",
-              "close to the projectile value.  Therefore, it is",
+              "close to the projectile value. Therefore, it is",
               "possible to detect all the nuclei that are produced,",
               "including those with very small energy in the",
               "projectile reference frame."
@@ -430,19 +463,17 @@
           {
             "x4_code": "(SPEC)",
             "free_txt": [
-              " The ANOMALON magnetic spectrometer is based on a",
-              "system of multiwire proportional chambers (MWPC) and an",
-              "analysing magnet.  It also includes a Cherenkov",
+              " The ANOMALON magnetic spectrometer is based on",
+              "a system of multiwire proportional chambers (MWPC)",
+              "and an analysing magnet. It also includes a Cherenkov",
               "hodoscope for determining fragment charges, a trigger",
               "system consisting of scintillation and Cherenkov",
-              "detectors, and a beam monitor.  For the beam",
+              "detectors, and a beam monitor. For the beam",
               "fragmentation cross section measurements the ANOMALON",
               "set-up was equipped with a liquid hydrogen target.",
-              " MWPCs constitute a coordinate detector for determining",
-              "The positions of the charged-particle tracks.",
-              "More detailed description see:",
-              "1. A.V.Zarubim et al., JINR B1-1-93-444 (1993)",
-              "2. Yu.T.Borzunov et al., JINR Rapid Commun. 1/81 (1997)"
+              "MWPCs constitute a coordinate detector for",
+              "determining. The positions of the charged-particle",
+              "tracks. More detailed description see:"
             ]
           }
         ],
@@ -458,7 +489,7 @@
             "free_txt": [
               " The systematic errors are due mainly to",
               "uncertainty regarding the efficiency of track",
-              "reconstruction (varying with Z). Other Factors being",
+              "reconstruction (varying with Z). Other factors being",
               "negligible."
             ]
           },
@@ -479,21 +510,32 @@
         ],
         "method": [
           {
-            "x4_code": "(SITA,EXTB)",
+            "x4_code": "(SITA,EXTB,COINC)",
             "free_txt": []
-          },
+          }
+        ],
+        "monit-ref": [
           {
-            "x4_code": "(COINC,MASSP)",
+            "x4_code": "(,B.M.Bobchenko+,J,YF,30,1553,1979)",
+            "free_txt": [
+              " The value of the",
+              "inelastic cross section of the 12C + p reaction was",
+              "taken as 250 +/- 2 mb."
+            ]
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(1-H-1(6-C-12,INL)1-H-1,,SIG)",
             "free_txt": []
           }
         ],
         "rel-ref": [
           {
-            "x4_code": "(R,,B.M.BOBCHENKO+,J,YF,30,1553,1979)",
+            "x4_code": "(M,,Yu.T.Borzunov+,J,KSO,,(1/81),1,1997)",
             "free_txt": [
-              " The value of the",
-              "inelastic cross section of the 12-C+P reaction was",
-              "taken as 250 +/- 2 mb."
+              " and",
+              "A.V.Zarubin et al., JINR B1-1-93-444 (1993)"
             ]
           }
         ],
@@ -502,8 +544,8 @@
             "x4_code": null,
             "free_txt": [
               "The target is 59 mm in diameter and 136 mm long",
-              " (equivalent to 0.94 g/cm**2).  The total thickness of",
-              "the two mylar windows is 67 mg/cm**2."
+              " (equivalent to 0.94 g/cm2). The total thickness of",
+              "the two Mylar windows is 67 mg/cm2."
             ]
           }
         ]
@@ -515,7 +557,15 @@
           {
             "x4_code": "(1.)",
             "free_txt": [
-              " Systematic error is approximately."
+              " Systematic error is given approximately."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.Korejwo+,J,JP/G,26,1171,2000)",
+            "free_txt": [
+              " Table 1"
             ]
           }
         ]
@@ -528,6 +578,14 @@
             "x4_code": "(1.)",
             "free_txt": [
               " Systematic error is approximately."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.Korejwo+,J,JP/G,26,1171,2000)",
+            "free_txt": [
+              " Table 2"
             ]
           }
         ]

@@ -1,7 +1,7 @@
 {
   "entry": "A1367",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-11-07",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19820309C)",
@@ -14,10 +14,17 @@
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
       ]
+    },
+    {
+      "x4_code": "(20250916A)",
+      "free_txt": [
+        " SD: Corrections in all Subents.",
+        "ERR-T -> DATA-ERR."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Angular distribution and integral cross section of 6Li(p,a)3He reaction at energes between 50 to 190 keV",
+    "title": "Angular distribution and integral cross section of 6Li(p,alpha)3He reaction at energies between 50 to 190 keV",
     "authors": [
       {
         "name": "W.Gemeinhardt"
@@ -37,7 +44,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,ZP,197,(1),58,196610)",
+        "x4_code": "(J,ZP,197,58,1966)",
         "free_txt": [],
         "publication_year": "1966",
         "doi": null,
@@ -46,71 +53,61 @@
     ],
     "facilities": [
       {
-        "x4_code": null,
+        "x4_code": "(ACCEL,2GERMBG)",
         "free_txt": [
-          "200 KV accelerator"
+          " 200 KV accelerator"
         ],
         "pointer": "0",
-        "facility_type": null,
-        "institute": null
+        "facility_type": "(ACCEL)",
+        "institute": "(2GERMBG)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(3-LI-6(P,HE3)2-HE-4,,SIG,,,EXP)",
+        "x4_code": "(3-LI-6(P,HE3)2-HE-4,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-6",
-              [
-                "P,HE3"
-              ],
-              "2-HE-4,,SIG,,,EXP"
-            ],
-            "type": null,
             "target": "3-LI-6",
             "process": "P,HE3",
-            "sf49": "2-HE-4,,SIG,,,EXP",
+            "sf49": "2-HE-4,,SIG",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-6(P,HE3)2-HE-4,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(3-LI-6(P,HE3)2-HE-4,,DA,,LEG/RS,EXP)",
+        "x4_code": "(3-LI-6(P,HE3)2-HE-4,,DA,,COS/RS)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-6",
-              [
-                "P,HE3"
-              ],
-              "2-HE-4,,DA,,LEG/RS,EXP"
-            ],
-            "type": null,
             "target": "3-LI-6",
             "process": "P,HE3",
-            "sf49": "2-HE-4,,DA,,LEG/RS,EXP",
+            "sf49": "2-HE-4,,DA,,COS/RS",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
-            "sf8": "LEG/RS",
-            "sf9": "EXP"
+            "sf8": "COS/RS",
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-6(P,HE3)2-HE-4,,DA,,COS/RS)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -126,7 +123,7 @@
         "heads": [
           "EN",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
@@ -191,7 +188,7 @@
     "003": {
       "common": {
         "heads": [
-          "NUMBER-CM"
+          "NUMBER"
         ],
         "units": [
           "NO-DIM"
@@ -207,7 +204,7 @@
           "EN",
           "EN-ERR",
           "DATA-CM",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
@@ -237,7 +234,7 @@
             0.002
           ],
           [
-            0.017,
+            -0.017,
             0.009,
             0.011,
             0.0334,
@@ -273,33 +270,38 @@
           {
             "x4_code": "(SOLST)",
             "free_txt": [
-              " Ortec detectors 50 mm**2",
-              "The monitor - Faraday cylinder"
+              " Ortec detectors 50 mm2"
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Total error"
+              " No information about source of uncertainty"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": null,
+            "x4_code": "(ACCEL,2GERMBG)",
             "free_txt": [
-              "200 KV accelerator"
+              " 200 KV accelerator"
             ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(BCINT)",
+            "free_txt": []
           }
         ],
         "sample": [
           {
-            "x4_code": null,
+            "x4_code": "(3-LI-6,ENR=0.993)",
             "free_txt": [
-              "6Li (99.3%), thicknesses of targets: 4.61, 7.71,",
-              "15.44, 19.55 mu-g/cm**2 on nickel backing"
+              " 6Li (99.3%), thicknesses of targets:",
+              "4.61, 7.71,15.44, 19.55 ug/cm2 on nickel backing"
             ]
           }
         ]
@@ -307,15 +309,9 @@
     },
     "002": {
       "0": {
-        "part-det": [
-          {
-            "x4_code": "(A)",
-            "free_txt": []
-          }
-        ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,W.Gemeinhardt+,J,ZP,197,58,1966)",
             "free_txt": [
               " Table 1"
             ]
@@ -325,23 +321,9 @@
     },
     "003": {
       "0": {
-        "err-analys": [
-          {
-            "x4_code": "(EN-ERR)",
-            "free_txt": [
-              " Energy spread"
-            ]
-          }
-        ],
-        "part-det": [
-          {
-            "x4_code": "(A)",
-            "free_txt": []
-          }
-        ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,W.Gemeinhardt+,J,ZP,197,58,1966)",
             "free_txt": [
               " Data on fig 3"
             ]

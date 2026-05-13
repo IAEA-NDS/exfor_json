@@ -1,7 +1,7 @@
 {
   "entry": "11789",
-  "last_updated": "2012-12-03",
-  "number_of_revisions": "5",
+  "last_updated": "2026-03-27",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19760731T)",
@@ -27,6 +27,13 @@
         " SD: Ref. was corrected (ARK-60 => ARK-59).",
         "        Title added."
       ]
+    },
+    {
+      "x4_code": "(20260203A)",
+      "free_txt": [
+        " OS. ERR-ANALYS added, REACTION and",
+        " DECAY-DATA in sub.2 corrected, sub.3 added"
+      ]
     }
   ],
   "bib_record": {
@@ -50,7 +57,7 @@
     ],
     "references": [
       {
-        "x4_code": "(P,A-ARK-59,2,196001)",
+        "x4_code": "(P,A-ARK-59,2,1960)",
         "free_txt": [],
         "publication_year": "1960",
         "doi": null,
@@ -62,29 +69,48 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(29-CU-65(N,A)27-CO-62,,SIG)",
+        "x4_code": "(29-CU-65(N,A)27-CO-62-M,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "29-CU-65",
-              [
-                "N,A"
-              ],
-              "27-CO-62,,SIG"
-            ],
-            "type": null,
             "target": "29-CU-65",
             "process": "N,A",
-            "sf49": "27-CO-62,,SIG",
-            "sf4": "27-CO-62",
+            "sf49": "27-CO-62-M,,SIG",
+            "sf4": "27-CO-62-M",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(29-CU-65(N,A)27-CO-62-M,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
+        "free_text": " Reaction product given as Co-62g in the Report (see DECAY-DATA)",
+        "pointer": "0"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(29-CU-65(N,P)28-NI-65,,SIG)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "29-CU-65",
+            "process": "N,P",
+            "sf49": "28-NI-65,,SIG",
+            "sf4": "28-NI-65",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(29-CU-65(N,P)28-NI-65,,SIG)"
+          }
+        ],
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -119,22 +145,54 @@
           ]
         ]
       }
+    },
+    "003": {
+      "common": null,
+      "data": {
+        "heads": [
+          "EN",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "MEV",
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            14.8
+          ],
+          [
+            27.0
+          ],
+          [
+            5.0
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
     "001": {
       "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No Information on Sources of uncertainties"
+            ]
+          }
+        ],
         "method": [
           {
             "x4_code": "(ACTIV)",
-            "free_txt": [
-              " Activation"
-            ]
+            "free_txt": []
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,I.L.Preiss+,P,A-ARK-59,2,1960)",
             "free_txt": [
               " Data from the text of A-ARK-59,2,1960"
             ]
@@ -147,10 +205,19 @@
         "decay-data": [
           {
             "x4_code": "(27-CO-62-M,13.5MIN,B)",
-            "free_txt": []
-          },
+            "free_txt": [
+              " Compiler's comment: This half-life is attributed to",
+              " Co-62g in the report."
+            ]
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "decay-data": [
           {
-            "x4_code": "(27-CO-62-G,1.45HR,B)",
+            "x4_code": "(28-NI-65,2.56HR,B)",
             "free_txt": []
           }
         ]

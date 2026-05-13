@@ -1,7 +1,7 @@
 {
   "entry": "40220",
-  "last_updated": "2014-02-28",
-  "number_of_revisions": "4",
+  "last_updated": "2024-09-02",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19740610T)",
@@ -16,6 +16,12 @@
         "were added. Upper -> lower case correction.",
         "Dates were corrected for 4-digits year.",
         "BIB and COMMON information was added."
+      ]
+    },
+    {
+      "x4_code": "(20240627A)",
+      "free_txt": [
+        " Subent 003 was added."
       ]
     }
   ],
@@ -40,18 +46,20 @@
     ],
     "references": [
       {
-        "x4_code": "(J,ZET,47,(5),1612,196411)",
-        "free_txt": [],
-        "publication_year": "1964",
-        "doi": null,
-        "pointer": "0"
-      },
-      {
         "x4_code": "(J,JET,20,1084,1965)",
         "free_txt": [
           " Engl.translation of ZET,47,1612"
         ],
         "publication_year": "1965",
+        "doi": null,
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,ZET,47,1612,1964)",
+        "free_txt": [
+          "  Issue 5."
+        ],
+        "publication_year": "1964",
         "doi": null,
         "pointer": "0"
       },
@@ -63,6 +71,15 @@
         "publication_year": "1965",
         "doi": null,
         "pointer": "0"
+      },
+      {
+        "x4_code": "(J,PL,10,109,1964)",
+        "free_txt": [
+          " Subent 003 prelim. publication."
+        ],
+        "publication_year": "1964",
+        "doi": null,
+        "pointer": "0"
       }
     ],
     "facilities": []
@@ -71,16 +88,9 @@
     "002": {
       "0": {
         "x4_code": "(1-H-2(N,2N)1-H-1,,DA/DE,P)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "N,2N"
-              ],
-              "1-H-1,,DA/DE,P"
-            ],
-            "type": null,
             "target": "1-H-2",
             "process": "N,2N",
             "sf49": "1-H-1,,DA/DE,P",
@@ -89,10 +99,36 @@
             "sf6": "DA/DE",
             "sf7": "P",
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(N,2N)1-H-1,,DA/DE,P)"
           }
         ],
-        "type": null,
+        "operator": null,
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(0-NN-1(N,THS)0-NN-1,COH,AMP,,,DERIV)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "0-NN-1",
+            "process": "N,THS",
+            "sf49": "0-NN-1,COH,AMP,,,DERIV",
+            "sf4": "0-NN-1",
+            "sf5": "COH",
+            "sf6": "AMP",
+            "sf7": null,
+            "sf8": null,
+            "sf9": "DERIV",
+            "operator": null,
+            "x4_code": "(0-NN-1(N,THS)0-NN-1,COH,AMP,,,DERIV)"
+          }
+        ],
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -328,6 +364,32 @@
           ]
         ]
       }
+    },
+    "003": {
+      "common": null,
+      "data": {
+        "heads": [
+          "DATA",
+          "+DATA-ERR",
+          "-DATA-ERR"
+        ],
+        "units": [
+          "FERMI",
+          "FERMI",
+          "FERMI"
+        ],
+        "data": [
+          [
+            -23.6
+          ],
+          [
+            2.0
+          ],
+          [
+            1.6
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
@@ -368,8 +430,7 @@
           {
             "x4_code": "(ERR-S,3.,5.)",
             "free_txt": [
-              " Statistical error is 3-5 percent",
-              "Absolute cross section error is 4 percent"
+              " Statistical error is 3-5 %."
             ]
           },
           {
@@ -419,7 +480,7 @@
             "x4_code": "(1-H-2(N,EL)1-H-2,,DA)",
             "free_txt": [
               "Data were defined supposing diff.elas. CS of (N-D)-",
-              "scattering according to J.D.Seagrave  Phys. Rev., 97,",
+              "scattering according to J.D.Seagrave, Phys. Rev., 97,",
               "757, 1955"
             ]
           }
@@ -427,9 +488,7 @@
         "part-det": [
           {
             "x4_code": "(P)",
-            "free_txt": [
-              " Protons"
-            ]
+            "free_txt": []
           }
         ],
         "sample": [
@@ -497,9 +556,39 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,V.K.Voitovetskii+,J,NP,69,513,1965)",
             "free_txt": [
-              " DATA were digitized from Fig.4 of J,NP,69,513."
+              "Data were digitized from Fig.4."
+            ]
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Derived from measured spectra."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              " article."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.K.Voitovetskii+,J,NP,69,513,1965)",
+            "free_txt": [
+              " Text page 528.",
+              ".Text page 112. of J,PL,10,109,1964)"
             ]
           }
         ]

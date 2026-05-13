@@ -1,18 +1,33 @@
 {
   "entry": "41230",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2025-09-29",
+  "number_of_revisions": "6",
   "histories": [
     {
-      "x4_code": "(961006C)",
+      "x4_code": "(19961006C)",
       "free_txt": [
-        "  *  *  COMPILED AND CONVERTED FROM 80353",
-        "                 IN THE CJD-CENTRE  *  *"
+        "  *  *  Compiled and converted from 80353",
+        "                 in the CJD-centre  *  *"
+      ]
+    },
+    {
+      "x4_code": "(20241212A)",
+      "free_txt": [
+        " M.M. Upper -> lower case correction.",
+        " Dates were corrected for 4-digits year.",
+        " STATUS information was updated.",
+        " Ref.B,NEJTRONFIZ,,283,1961 was inserted."
+      ]
+    },
+    {
+      "x4_code": "(20240804U)",
+      "free_txt": [
+        " SPN,,209,1961 -> SPN,,209,1963."
       ]
     }
   ],
   "bib_record": {
-    "title": ".FAST NEUTRON TOTAL SCATTERING CROSS SECTIONS FOR ARGON AND KRYPTON.",
+    "title": " Fast neutron total scattering cross sections for argon and krypton",
     "authors": [
       {
         "name": "V.P.Vlasenko"
@@ -35,29 +50,41 @@
     ],
     "references": [
       {
-        "x4_code": "(B,SPN,,209,61)",
+        "x4_code": "(B,SPN,,209,1963)",
+        "free_txt": [
+          " English translation."
+        ],
+        "publication_year": "1963",
+        "doi": null,
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(B,NEJTRONFIZ,,283,1961)",
         "free_txt": [],
         "publication_year": "1961",
         "doi": null,
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(NGEN,4UKRIFU)",
+        "free_txt": [
+          " Ions accelerating tube on 150 keV"
+        ],
+        "pointer": "0",
+        "facility_type": "(NGEN)",
+        "institute": "(4UKRIFU)"
+      }
+    ]
   },
   "reactions": {
     "002": {
       "0": {
         "x4_code": "(36-KR-0(N,SCT)36-KR-0,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "36-KR-0",
-              [
-                "N,SCT"
-              ],
-              "36-KR-0,,SIG"
-            ],
-            "type": null,
             "target": "36-KR-0",
             "process": "N,SCT",
             "sf49": "36-KR-0,,SIG",
@@ -66,10 +93,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(36-KR-0(N,SCT)36-KR-0,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -77,16 +106,9 @@
     "003": {
       "0": {
         "x4_code": "(18-AR-0(N,SCT)18-AR-0,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "18-AR-0",
-              [
-                "N,SCT"
-              ],
-              "18-AR-0,,SIG"
-            ],
-            "type": null,
             "target": "18-AR-0",
             "process": "N,SCT",
             "sf49": "18-AR-0,,SIG",
@@ -95,10 +117,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(18-AR-0(N,SCT)18-AR-0,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -183,21 +207,21 @@
           {
             "x4_code": "(BF3)",
             "free_txt": [
-              "    FOR NEUTRON FLUX MONITORING"
+              "    For neutron flux monitoring"
             ]
           },
           {
             "x4_code": "(PROPC)",
             "free_txt": [
-              "  FOR SCATTERED NEUTRONS DETECTION"
+              "  For scattered neutrons detection"
             ]
           }
         ],
-        "err-analys": [
+        "facility": [
           {
-            "x4_code": null,
+            "x4_code": "(NGEN,4UKRIFU)",
             "free_txt": [
-              " ERROR, IF GIVEN, IS NOT SPECIFIED"
+              " Ions accelerating tube on 150 keV"
             ]
           }
         ],
@@ -207,29 +231,84 @@
             "free_txt": []
           }
         ],
+        "method": [
+          {
+            "x4_code": "(TRN)",
+            "free_txt": [
+              " Measurements with and without sample gas.",
+              " For testing of facility and method the measurements",
+              "of total neutron scattering C-S were performed for",
+              "oxygen and nitrogen."
+            ]
+          }
+        ],
         "monitor": [
           {
             "x4_code": null,
             "free_txt": [
-              " NO INFORMATION, PROBABLY ABSOLUTE MEASUREMENTS"
+              " No information in the article."
             ]
           }
         ],
-        "status": [
+        "sample": [
           {
-            "x4_code": "(SCSRS)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(CURVE)",
+            "x4_code": null,
             "free_txt": [
-              " DATA READ FROM THE CURVE GIVEN IN ARTICLE"
+              " Liquefied gas, Ar - 1.4 g/cm3, Kr - 2.6 g/cm3.",
+              " Thickness 4 cm."
             ]
           }
         ]
       }
     },
-    "002": {},
-    "003": {}
+    "002": {
+      "0": {
+        "add-res": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Average C-S in region 2.13 - 2.94 MeV - 3.4+-0.5 b."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE,,V.P.Vlasenko+,B,SPN,,209,1961)",
+            "free_txt": [
+              " Data read from the curve (Fig.2) given in article.",
+              " Error bars are absent on Fig.2."
+            ]
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "add-res": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              " Average C-S in region 2.13 - 2.94 MeV - 3.0+-0.5 b."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Error is not specified"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE,,V.P.Vlasenko+,B,SPN,,209,1961)",
+            "free_txt": [
+              " Data read from the curve (Fig.2) given in article"
+            ]
+          }
+        ]
+      }
+    }
   }
 }

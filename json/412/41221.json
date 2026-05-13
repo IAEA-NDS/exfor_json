@@ -1,31 +1,40 @@
 {
   "entry": "41221",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-09-02",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(960927C)",
+      "x4_code": "(19960927C)",
       "free_txt": [
-        "  *  *  COMPILED AND CONVERTED",
-        "                 IN THE CJD-CENTRE  *  *"
+        "  *  *  Compiled and converted",
+        "                 in the CJD-centre  *  *"
       ]
     },
     {
-      "x4_code": "(970213A)",
+      "x4_code": "(19970213A)",
       "free_txt": [
-        "  REACTION CODES CORRECTED"
+        "  REACTION codes corrected"
       ]
     },
     {
-      "x4_code": "(970630A)",
+      "x4_code": "(19970630A)",
       "free_txt": [
-        "  NEW DATA SET ADDED FROM ENTRY 80387",
-        "           NEW REFERENCE ADDED"
+        "  New data set added from ENTRY 80387.",
+        "           New REFERENCE added"
+      ]
+    },
+    {
+      "x4_code": "(20240401A)",
+      "free_txt": [
+        " Ref.S,AEC-TR-2435 was corrected.",
+        " BIB information was updated.",
+        " Upper -> lower case correction.",
+        " Dates were corrected for 4-digits year."
       ]
     }
   ],
   "bib_record": {
-    "title": ".DEPENDENCE OF THE EFFECTIVE NUMBER OF SECONDARY .NEUTRONS ON THE ENERGY OF CAPTURED NEUTRONS.",
+    "title": " Dependence of the effective number of secondary neutrons on the energy of captured neutrons. Part I",
     "authors": [
       {
         "name": "S.Ya.Nikitin"
@@ -34,7 +43,7 @@
         "name": "S.I.Sukhoruchkin"
       },
       {
-        "name": "K.G.Ignatiev"
+        "name": "K.G.Ignatyev"
       },
       {
         "name": "N.D.Galanina"
@@ -48,59 +57,62 @@
     ],
     "references": [
       {
-        "x4_code": "(C,55MOSCOW,,87,55)",
+        "x4_code": "(S,AEC-TR-2435,(1),81,1956)",
         "free_txt": [
-          " ENG. TRANSL. P.81."
-        ],
-        "publication_year": "1955",
-        "doi": null,
-        "pointer": "0"
-      },
-      {
-        "x4_code": "(R,AEC-TR-2435,56)",
-        "free_txt": [
-          "   ENGLISH TRANSLATION OF 55MOSCOW"
+          "   English translation of 55MOSCOW"
         ],
         "publication_year": "1956",
         "doi": null,
         "pointer": "0"
+      },
+      {
+        "x4_code": "(C,55MOSCOW,,87,1955)",
+        "free_txt": [],
+        "publication_year": "1955",
+        "doi": null,
+        "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(CYCLO)",
+        "free_txt": [
+          " Pulsed cyclotron beam"
+        ],
+        "pointer": "0",
+        "facility_type": "(CYCLO)",
+        "institute": null
+      },
+      {
+        "x4_code": "(SELVE)",
+        "free_txt": [
+          " 128-channel neutron TOF velocity selector."
+        ],
+        "pointer": "0",
+        "facility_type": "(SELVE)",
+        "institute": null
+      }
+    ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "((92-U-233(N,ABS),,ETA,,REL)//(92-U-233(N,ABS),,ETA))",
+        "x4_code": "((92-U-233(N,ABS),,ETA)//(92-U-233(N,ABS),,ETA))",
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,ABS"
-              ],
-              ",,ETA,,REL"
-            ],
-            "type": null,
+            "x4_code": "(92-U-233(N,ABS),,ETA)",
             "target": "92-U-233",
             "process": "N,ABS",
-            "sf49": ",,ETA,,REL",
+            "sf49": ",,ETA",
             "sf4": null,
             "sf5": null,
             "sf6": "ETA",
             "sf7": null,
-            "sf8": "REL",
+            "sf8": null,
             "sf9": null
           },
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,ABS"
-              ],
-              ",,ETA"
-            ],
-            "type": null,
+            "x4_code": "(92-U-233(N,ABS),,ETA)",
             "target": "92-U-233",
             "process": "N,ABS",
             "sf49": ",,ETA",
@@ -112,24 +124,22 @@
             "sf9": null
           }
         ],
-        "type": "//",
-        "free_text": "    MEASURED QUANTITY IS U-233 ETA(E)/U-233 ETA(THERMAL).",
+        "math_expression": [
+          "Ratio",
+          "((92-U-233(N,ABS),,ETA)",
+          "(92-U-233(N,ABS),,ETA))"
+        ],
+        "operator": "Ratio",
+        "free_text": "",
         "pointer": "0"
       }
     },
     "003": {
       "1": {
         "x4_code": "(92-U-233(N,TOT),,WID,,SQ/S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,TOT"
-              ],
-              ",,WID,,SQ/S0"
-            ],
-            "type": null,
             "target": "92-U-233",
             "process": "N,TOT",
             "sf49": ",,WID,,SQ/S0",
@@ -138,25 +148,20 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "SQ/S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-233(N,TOT),,WID,,SQ/S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
       "2": {
         "x4_code": "(92-U-233(N,TOT),,SIG,,RES)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,RES"
-            ],
-            "type": null,
             "target": "92-U-233",
             "process": "N,TOT",
             "sf49": ",,SIG,,RES",
@@ -165,25 +170,20 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "RES",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-233(N,TOT),,SIG,,RES)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       },
       "3": {
         "x4_code": "(92-U-233(N,F),,WID)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,F"
-              ],
-              ",,WID"
-            ],
-            "type": null,
             "target": "92-U-233",
             "process": "N,F",
             "sf49": ",,WID",
@@ -192,25 +192,20 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-233(N,F),,WID)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "3"
       },
       "4": {
         "x4_code": "(92-U-233(N,G),,WID)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": null,
             "target": "92-U-233",
             "process": "N,G",
             "sf49": ",,WID",
@@ -219,25 +214,20 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-233(N,G),,WID)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "4"
       },
       "5": {
         "x4_code": "(92-U-233(N,TOT),,WID)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,TOT"
-              ],
-              ",,WID"
-            ],
-            "type": null,
             "target": "92-U-233",
             "process": "N,TOT",
             "sf49": ",,WID",
@@ -246,10 +236,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-233(N,TOT),,WID)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "5"
       }
@@ -259,14 +251,7 @@
         "x4_code": "((92-U-235(N,ABS),,ETA)//(92-U-235(N,ABS),,ETA))",
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,ABS"
-              ],
-              ",,ETA"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,ABS),,ETA)",
             "target": "92-U-235",
             "process": "N,ABS",
             "sf49": ",,ETA",
@@ -278,14 +263,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,ABS"
-              ],
-              ",,ETA"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,ABS),,ETA)",
             "target": "92-U-235",
             "process": "N,ABS",
             "sf49": ",,ETA",
@@ -297,24 +275,22 @@
             "sf9": null
           }
         ],
-        "type": "//",
-        "free_text": "   QUANTITY MEASURED IS                       ETA(E)/ETA(THERMAL) FOR U235.",
+        "math_expression": [
+          "Ratio",
+          "((92-U-235(N,ABS),,ETA)",
+          "(92-U-235(N,ABS),,ETA))"
+        ],
+        "operator": "Ratio",
+        "free_text": "",
         "pointer": "0"
       }
     },
     "005": {
       "0": {
         "x4_code": "(92-U-235(N,TOT),,WID,,SQ/S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,TOT"
-              ],
-              ",,WID,,SQ/S0"
-            ],
-            "type": null,
             "target": "92-U-235",
             "process": "N,TOT",
             "sf49": ",,WID,,SQ/S0",
@@ -323,10 +299,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "SQ/S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-235(N,TOT),,WID,,SQ/S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -336,14 +314,7 @@
         "x4_code": "((94-PU-239(N,ABS),,ETA)//(94-PU-239(N,ABS),,ETA))",
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,ABS"
-              ],
-              ",,ETA"
-            ],
-            "type": null,
+            "x4_code": "(94-PU-239(N,ABS),,ETA)",
             "target": "94-PU-239",
             "process": "N,ABS",
             "sf49": ",,ETA",
@@ -355,14 +326,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,ABS"
-              ],
-              ",,ETA"
-            ],
-            "type": null,
+            "x4_code": "(94-PU-239(N,ABS),,ETA)",
             "target": "94-PU-239",
             "process": "N,ABS",
             "sf49": ",,ETA",
@@ -374,24 +338,22 @@
             "sf9": null
           }
         ],
-        "type": "//",
-        "free_text": "  MEASURED QUANTITY IS                   ETA(E)/ETA(THERMAL)",
+        "math_expression": [
+          "Ratio",
+          "((94-PU-239(N,ABS),,ETA)",
+          "(94-PU-239(N,ABS),,ETA))"
+        ],
+        "operator": "Ratio",
+        "free_text": "",
         "pointer": "0"
       }
     },
     "007": {
       "0": {
         "x4_code": "(94-PU-240(N,TOT),,WID,,SQ/S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-240",
-              [
-                "N,TOT"
-              ],
-              ",,WID,,SQ/S0"
-            ],
-            "type": null,
             "target": "94-PU-240",
             "process": "N,TOT",
             "sf49": ",,WID,,SQ/S0",
@@ -400,10 +362,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "SQ/S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-240(N,TOT),,WID,,SQ/S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -411,16 +375,9 @@
     "008": {
       "1": {
         "x4_code": "(94-PU-239(N,TOT),,SIG,,RES)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,RES"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,TOT",
             "sf49": ",,SIG,,RES",
@@ -429,25 +386,20 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "RES",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,TOT),,SIG,,RES)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
       "2": {
         "x4_code": "(94-PU-239(N,F),,WID)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",,WID"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": ",,WID",
@@ -456,25 +408,20 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,F),,WID)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       },
       "3": {
         "x4_code": "(94-PU-239(N,G),,WID)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,G"
-              ],
-              ",,WID"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,G",
             "sf49": ",,WID",
@@ -483,25 +430,20 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,G),,WID)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "3"
       },
       "4": {
         "x4_code": "(94-PU-239(N,TOT),,WID)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,TOT"
-              ],
-              ",,WID"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,TOT",
             "sf49": ",,WID",
@@ -510,25 +452,20 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,TOT),,WID)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "4"
       },
       "5": {
         "x4_code": "(94-PU-239(N,TOT),,WID,,SQ/S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,TOT"
-              ],
-              ",,WID,,SQ/S0"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,TOT",
             "sf49": ",,WID,,SQ/S0",
@@ -537,10 +474,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "SQ/S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,TOT),,WID,,SQ/S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "5"
       }
@@ -548,16 +487,9 @@
     "009": {
       "1": {
         "x4_code": "(94-PU-239(N,TOT),,SIG,,RES)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,TOT"
-              ],
-              ",,SIG,,RES"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,TOT",
             "sf49": ",,SIG,,RES",
@@ -566,25 +498,20 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "RES",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,TOT),,SIG,,RES)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "1"
       },
       "2": {
         "x4_code": "(94-PU-239(N,TOT),,WID)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,TOT"
-              ],
-              ",,WID"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,TOT",
             "sf49": ",,WID",
@@ -593,25 +520,20 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,TOT),,WID)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       },
       "3": {
         "x4_code": "(94-PU-239(N,TOT),,WID,,SQ/S0)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,TOT"
-              ],
-              ",,WID,,SQ/S0"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,TOT",
             "sf49": ",,WID,,SQ/S0",
@@ -620,10 +542,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": "SQ/S0",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,TOT),,WID,,SQ/S0)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "3"
       }
@@ -1119,12 +1043,12 @@
           "DATA"
         ],
         "units": [
-          "MEV",
+          "EV",
           "B*EV-SQ"
         ],
         "data": [
           [
-            1.08e-06
+            1.08
           ],
           [
             300.0
@@ -1144,43 +1068,67 @@
           "DATA      5"
         ],
         "units": [
-          "MEV",
+          "EV",
           "B",
-          "MILLI-EV",
-          "MILLI-EV",
-          "MILLI-EV",
+          "EV",
+          "EV",
+          "EV",
           "B*EV-SQ"
         ],
         "data": [
           [
-            3e-07,
-            8.07e-06,
-            1.133e-05
+            0.3,
+            8.07,
+            11.33,
+            12.2,
+            15.1,
+            18.3,
+            22.8
           ],
           [
             5000.0,
             1250.0,
-            880.0
+            880.0,
+            null,
+            null,
+            null,
+            null
           ],
           [
-            61.0,
-            67.0,
-            158.0
+            0.061,
+            0.067,
+            0.158,
+            null,
+            null,
+            null,
+            null
           ],
           [
-            39.0,
-            33.0,
-            32.0
+            0.039,
+            0.033,
+            0.032,
+            null,
+            null,
+            null,
+            null
           ],
           [
-            100.0,
-            100.0,
-            190.0
+            0.1,
+            0.1,
+            0.19,
+            null,
+            null,
+            null,
+            null
           ],
           [
             50.0,
             12.5,
-            32.0
+            32.0,
+            9.0,
+            69.0,
+            24.0,
+            13.0
           ]
         ]
       }
@@ -1199,21 +1147,21 @@
           "DATA-ERR  3"
         ],
         "units": [
-          "MEV",
-          "MEV",
+          "EV",
+          "EV",
           "B",
           "B",
-          "MILLI-EV",
-          "MILLI-EV",
+          "EV",
+          "EV",
           "B*EV-SQ",
           "B*EV-SQ"
         ],
         "data": [
           [
-            3e-07
+            0.3
           ],
           [
-            5e-09
+            0.005
           ],
           [
             4600.0
@@ -1222,10 +1170,10 @@
             300.0
           ],
           [
-            105.0
+            0.105
           ],
           [
-            5.0
+            0.005
           ],
           [
             50.0
@@ -1240,19 +1188,41 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "err-analys": [
+        "detector": [
           {
-            "x4_code": null,
+            "x4_code": "(SCIN)",
             "free_txt": [
-              " ERRORS ARE NOT SPECIFIED"
+              " ZnS(Ag) crystals pressed into plexiglas -",
+              "for fission neutrons detection."
+            ]
+          },
+          {
+            "x4_code": "(SCIN)",
+            "free_txt": [
+              " ZnS(Ag) crystals fused with boron glass -",
+              "for transmission method."
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(CYCLO)",
+            "free_txt": [
+              " Pulsed cyclotron beam"
+            ]
+          },
+          {
+            "x4_code": "(SELVE)",
+            "free_txt": [
+              " 128-channel neutron TOF velocity selector."
             ]
           }
         ],
         "method": [
           {
-            "x4_code": "(TOF)",
+            "x4_code": "(TOF,TRN)",
             "free_txt": [
-              "      TIME-OF-FLIGHT"
+              " Time resolution from 12.5 to 1.25 microsec/m."
             ]
           }
         ],
@@ -1260,31 +1230,136 @@
           {
             "x4_code": null,
             "free_txt": [
-              " NO INFORMATION"
+              " No information"
+            ]
+          }
+        ]
+      }
+    },
+    "002": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Error includes the statistical error,",
+              "an error in determining the average energy of the",
+              "channel and a possible systematic error in absorption",
+              "measurements."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(SCSRS)",
-            "free_txt": []
+            "x4_code": "(TABLE,,S.Ya.Nikitin,S,AEC-TR-2435,(1),81,1956)",
+            "free_txt": [
+              " Table 1.",
+              " In Table 1 of the article the data are given in % of",
+              " ETA for Maxwellian neutron energy distribution taken",
+              " as 100%."
+            ]
           }
         ]
       }
     },
-    "002": {},
-    "003": {},
-    "004": {},
-    "005": {},
-    "006": {},
-    "007": {},
+    "003": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,S.Ya.Nikitin,S,AEC-TR-2435,(1),81,1956)",
+            "free_txt": [
+              " Tables 2,3."
+            ]
+          }
+        ]
+      }
+    },
+    "004": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Error includes the statistical error,",
+              "an error in determining the average energy of the",
+              "channel and a possible systematic error in absorption",
+              "measurements."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,S.Ya.Nikitin,S,AEC-TR-2435,(1),81,1956)",
+            "free_txt": [
+              " Table 1."
+            ]
+          }
+        ]
+      }
+    },
+    "005": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,S.Ya.Nikitin,S,AEC-TR-2435,(1),81,1956)",
+            "free_txt": [
+              " Table 3."
+            ]
+          }
+        ]
+      }
+    },
+    "006": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Error includes the statistical error,",
+              "an error in determining the average energy of the",
+              "channel and a possible systematic error in absorption",
+              "measurements."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,S.Ya.Nikitin,S,AEC-TR-2435,(1),81,1956)",
+            "free_txt": [
+              " Table 1."
+            ]
+          }
+        ]
+      }
+    },
+    "007": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,S.Ya.Nikitin,S,AEC-TR-2435,(1),81,1956)",
+            "free_txt": [
+              " Table 3 ( see also text on page 85 - 1.08 eV resonance",
+              "belongs to Pu-240)."
+            ]
+          }
+        ]
+      }
+    },
     "008": {
       "0": {
         "method": [
           {
             "x4_code": null,
             "free_txt": [
-              "CAPTURE GAMMAS"
+              "Capture gammas"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,S.Ya.Nikitin,S,AEC-TR-2435,(1),81,1956)",
+            "free_txt": [
+              " Tables 2,3."
             ]
           }
         ]
@@ -1296,14 +1371,24 @@
           {
             "x4_code": "(SHAPE)",
             "free_txt": [
-              "    SHAPE ANALYSIS"
+              "    Shape analysis"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Errors are not specified"
             ]
           }
         ],
         "status": [
           {
             "x4_code": "(SCSRS)",
-            "free_txt": []
+            "free_txt": [
+              " Source of data is not known."
+            ]
           }
         ]
       }

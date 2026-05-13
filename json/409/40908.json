@@ -1,12 +1,12 @@
 {
   "entry": "40908",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-09-02",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19861010C)",
       "free_txt": [
-        "   COMPILED AC CJD"
+        "   Compiled at CJD"
       ]
     },
     {
@@ -14,10 +14,19 @@
       "free_txt": [
         " DATE is corrected"
       ]
+    },
+    {
+      "x4_code": "(20240208A)",
+      "free_txt": [
+        " BIB information was updated.",
+        " MONITOR line was moved in Subent 002 and corrected as",
+        " ASSUMED.",
+        " Upper -> lower case correction."
+      ]
     }
   ],
   "bib_record": {
-    "title": " AU-198 ISOMERIC STATE EXCITATION IN THE REACTION (N-GAMMA) AT THE NEUTRON ENERGY 14.6 MEV",
+    "title": " Au-198 isomeric state excitation in the reaction (n,gamma) at En = 14.6 MeV",
     "authors": [
       {
         "name": "V.L.Demekhin"
@@ -43,7 +52,7 @@
     ],
     "references": [
       {
-        "x4_code": "(C,84ALMAAT,,329,198404)",
+        "x4_code": "(C,84ALMAAT,,329,1984)",
         "free_txt": [],
         "publication_year": "1984",
         "doi": null,
@@ -52,12 +61,12 @@
     ],
     "facilities": [
       {
-        "x4_code": null,
+        "x4_code": "(NGEN)",
         "free_txt": [
-          " NEUTRON GENERATOR"
+          " Neutron generator"
         ],
         "pointer": "0",
-        "facility_type": null,
+        "facility_type": "(NGEN)",
         "institute": null
       }
     ]
@@ -65,29 +74,24 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(79-AU-197(N,G)79-AU-198-M,,SIG)",
+        "x4_code": "(79-AU-197(N,G)79-AU-198-M,,SIG,,,DERIV)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "79-AU-197",
-              [
-                "N,G"
-              ],
-              "79-AU-198-M,,SIG"
-            ],
-            "type": null,
             "target": "79-AU-197",
             "process": "N,G",
-            "sf49": "79-AU-198-M,,SIG",
+            "sf49": "79-AU-198-M,,SIG,,,DERIV",
             "sf4": "79-AU-198-M",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV",
+            "operator": null,
+            "x4_code": "(79-AU-197(N,G)79-AU-198-M,,SIG,,,DERIV)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -103,22 +107,32 @@
         "heads": [
           "EN",
           "DATA",
-          "DATA-ERR"
+          "DATA-ERR",
+          "ASSUM",
+          "ASSUM-ERR"
         ],
         "units": [
           "MEV",
-          "B",
-          "B"
+          "MICRO-B",
+          "MICRO-B",
+          "MB",
+          "MB"
         ],
         "data": [
           [
             14.6
           ],
           [
-            0.0004
+            400.0
           ],
           [
-            0.0001
+            140.0
+          ],
+          [
+            1.4
+          ],
+          [
+            0.4
           ]
         ]
       }
@@ -137,15 +151,15 @@
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              "  NOT SPECIFIED"
+              "  Not specified"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": null,
+            "x4_code": "(NGEN)",
             "free_txt": [
-              " NEUTRON GENERATOR"
+              " Neutron generator"
             ]
           }
         ],
@@ -154,37 +168,53 @@
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ],
-        "monitor": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              " NO INFORMATION"
-            ]
-          }
-        ],
-        "status": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              " FROM THE ABOVE-MENTIONED REFERENCE"
-            ]
-          }
         ]
       }
     },
     "002": {
       "0": {
-        "decay-data": [
+        "analysis": [
           {
-            "x4_code": "(79-AU-198-M,2.30D,DG,811.7)",
+            "x4_code": "(DECAY)",
+            "free_txt": [
+              " Experimental Au-198-G decay curve was compared",
+              "with theoretical calculation, taking into account",
+              "decay of Au-198-M isomeric state and using results of",
+              "V.K.Maydanyuk+, see REL-REF."
+            ]
+          }
+        ],
+        "assumed": [
+          {
+            "x4_code": "(ASSUM,79-AU-197(N,G)79-AU-198-G,,SIG)",
             "free_txt": []
           }
         ],
-        "decay-mon": [
+        "decay-data": [
+          {
+            "x4_code": "(79-AU-198-M,2.30D)",
+            "free_txt": [
+              " 811.7 keV gamma-line was not used",
+              "for C-S calculation due to very low it's intensity."
+            ]
+          },
           {
             "x4_code": "(79-AU-198-G,2.69D,DG,411.8)",
             "free_txt": []
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(N,,V.K.Maydanyuk+,C,82KIEV,,541,1982)",
+            "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,V.L.Demekhin+,C,84ALMAAT,,329,1984)",
+            "free_txt": [
+              " Text on page 329."
+            ]
           }
         ]
       }

@@ -1,7 +1,7 @@
 {
   "entry": "A0428",
-  "last_updated": "2016-10-18",
-  "number_of_revisions": "4",
+  "last_updated": "2024-12-13",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(20020719C)",
@@ -24,10 +24,17 @@
       "free_txt": [
         " REFERENCE was corrected."
       ]
+    },
+    {
+      "x4_code": "(20240914A)",
+      "free_txt": [
+        " SD: Corrections in all Subents.",
+        "Subent 004 deleted (see ADD-RES)."
+      ]
     }
   ],
   "bib_record": {
-    "title": "12-C(a,gamma)16-O: the key reaction in stellar nucleosynthesis.",
+    "title": "12-C(a,gamma)16-O: the key reaction in stellar nucleosynthesis",
     "authors": [
       {
         "name": "R.Kunz"
@@ -53,20 +60,16 @@
     ],
     "institutes": [
       {
-        "x4_code": "(2GERIFS)",
-        "free_txt": []
+        "x4_code": "(2GERTHS)",
+        "free_txt": ""
       },
       {
         "x4_code": "(2GERTUE)",
-        "free_txt": [
-          " Physikalisches Institut"
-        ]
+        "free_txt": ""
       },
       {
         "x4_code": "(2GRCATH)",
-        "free_txt": [
-          " Institute of Nuclear Physics"
-        ]
+        "free_txt": ""
       }
     ],
     "references": [
@@ -102,11 +105,11 @@
     ],
     "facilities": [
       {
-        "x4_code": "(DYNAM,2GERIFS)",
+        "x4_code": "(DYNAM,2GERTHS)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(DYNAM)",
-        "institute": "(2GERIFS)"
+        "institute": "(2GERTHS)"
       }
     ]
   },
@@ -114,16 +117,9 @@
     "002": {
       "0": {
         "x4_code": "(6-C-12(A,G)8-O-16,EP,SIG,,SFC)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "6-C-12",
-              [
-                "A,G"
-              ],
-              "8-O-16,EP,SIG,,SFC"
-            ],
-            "type": null,
             "target": "6-C-12",
             "process": "A,G",
             "sf49": "8-O-16,EP,SIG,,SFC",
@@ -132,10 +128,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "SFC",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(6-C-12(A,G)8-O-16,EP,SIG,,SFC)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -145,14 +143,7 @@
         "x4_code": "((6-C-12(A,G)8-O-16,EP,SIG)//(6-C-12(A,G)8-O-16,EP,SIG))",
         "children": [
           {
-            "code": [
-              "6-C-12",
-              [
-                "A,G"
-              ],
-              "8-O-16,EP,SIG"
-            ],
-            "type": null,
+            "x4_code": "(6-C-12(A,G)8-O-16,EP,SIG)",
             "target": "6-C-12",
             "process": "A,G",
             "sf49": "8-O-16,EP,SIG",
@@ -164,14 +155,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "6-C-12",
-              [
-                "A,G"
-              ],
-              "8-O-16,EP,SIG"
-            ],
-            "type": null,
+            "x4_code": "(6-C-12(A,G)8-O-16,EP,SIG)",
             "target": "6-C-12",
             "process": "A,G",
             "sf49": "8-O-16,EP,SIG",
@@ -183,65 +167,14 @@
             "sf9": null
           }
         ],
-        "type": "//",
+        "math_expression": [
+          "Ratio",
+          "((6-C-12(A,G)8-O-16,EP,SIG)",
+          "(6-C-12(A,G)8-O-16,EP,SIG))"
+        ],
+        "operator": "Ratio",
         "free_text": "",
         "pointer": "0"
-      }
-    },
-    "004": {
-      "M": {
-        "x4_code": "(6-C-12(A,G)8-O-16,EP,SIG,,SFC,CALC)",
-        "children": [
-          {
-            "code": [
-              "6-C-12",
-              [
-                "A,G"
-              ],
-              "8-O-16,EP,SIG,,SFC,CALC"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "A,G",
-            "sf49": "8-O-16,EP,SIG,,SFC,CALC",
-            "sf4": "8-O-16",
-            "sf5": "EP",
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": "CALC"
-          }
-        ],
-        "type": null,
-        "free_text": "",
-        "pointer": "M"
-      },
-      "T": {
-        "x4_code": "(6-C-12(A,G)8-O-16,,SIG,,SFC,CALC)",
-        "children": [
-          {
-            "code": [
-              "6-C-12",
-              [
-                "A,G"
-              ],
-              "8-O-16,,SIG,,SFC,CALC"
-            ],
-            "type": null,
-            "target": "6-C-12",
-            "process": "A,G",
-            "sf49": "8-O-16,,SIG,,SFC,CALC",
-            "sf4": "8-O-16",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": "SFC",
-            "sf9": "CALC"
-          }
-        ],
-        "type": null,
-        "free_text": "",
-        "pointer": "T"
       }
     }
   },
@@ -256,7 +189,7 @@
           "EN-CM",
           "POLAR",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "KEV",
@@ -459,7 +392,7 @@
         "heads": [
           "EN-CM",
           "DATA",
-          "ERR-T",
+          "DATA-ERR",
           "MISC",
           "MISC-ERR"
         ],
@@ -583,83 +516,21 @@
           ]
         ]
       }
-    },
-    "004": {
-      "common": {
-        "heads": [
-          "EN-CM"
-        ],
-        "units": [
-          "KEV"
-        ],
-        "data": [
-          [
-            300.0
-          ]
-        ]
-      },
-      "data": {
-        "heads": [
-          "POLAR     M",
-          "DATA      M",
-          "DATA      T",
-          "ERR-T     M",
-          "ERR-T     T"
-        ],
-        "units": [
-          "NO-DIM",
-          "B*KEV",
-          "B*KEV",
-          "B*KEV",
-          "B*KEV"
-        ],
-        "data": [
-          [
-            -1.0,
-            2.0
-          ],
-          [
-            76.0,
-            85.0
-          ],
-          [
-            165.0,
-            null
-          ],
-          [
-            20.0,
-            30.0
-          ],
-          [
-            50.0,
-            null
-          ]
-        ]
-      }
     }
   },
   "experimental_conditions": {
     "001": {
       "0": {
-        "comment": [
+        "add-res": [
           {
             "x4_code": null,
             "free_txt": [
-              "Abstract. The angular distributions of gamma-rays",
-              "from the 12-C(A,G)16-O reaction have been measured at",
-              "20 energy points in the energy range Ecm = 0.95 to",
-              "2.8 MeV. The sensitivity of the present experiment",
-              "compared to previous direct investigations was raised",
-              "by 1-2 orders of magnitude, by using an array of",
-              "highly efficient (100%) Ge detectors shielded",
-              "actively with BGOs, as well as high beam currents of",
-              "up to 500 micro-a were provided by the Stuttgart",
-              "dynamitron accelerator. The S(E1) and S(E2) factors",
-              "deduced from the gamma angular distributions have",
-              "been extrapolated to the range of helium burning",
-              "temperatures applying the R-Matrix method, which",
-              "yielded S(E1)/300 = (76 +/- 20) KeV*B and S(E2)/300 =",
-              " =(85 +/- 30) KeV*B."
+              "The S(E1) and S(E2) factors deduced from the gamma",
+              "angular distributions have been extrapolated to the",
+              "range of helium burning temperatures applying the",
+              "R-Matrix method, which yielded",
+              "S(E1)/300 = (76 +/-20) keV*b and",
+              "S(E2)/300 = =(85 +/- 30) keV*b."
             ]
           }
         ],
@@ -676,7 +547,7 @@
             "x4_code": "(BGO)",
             "free_txt": [
               " The crystals were used for active shielding and",
-              "anti-compton detectors.",
+              "anti-Compton detectors.",
               "The whole detector setup was placed on a heavy",
               "motor-driven revolving table."
             ]
@@ -684,35 +555,27 @@
         ],
         "facility": [
           {
-            "x4_code": "(DYNAM,2GERIFS)",
+            "x4_code": "(DYNAM,2GERTHS)",
             "free_txt": []
           }
         ],
         "method": [
           {
-            "x4_code": "(BCINT)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(EXTB)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(GSPEC)",
+            "x4_code": "(BCINT,EXTB,GSPEC)",
             "free_txt": []
           }
         ],
         "rel-ref": [
           {
-            "x4_code": "(N,,A.Redder+,J,NP/A,462,385,1987)",
+            "x4_code": "(M,,A.Redder+,J,NP/A,462,385,1987)",
             "free_txt": []
           },
           {
-            "x4_code": "(N,C0439001,J.M.L.Ouellet+,J,PR/C,54,1982,1996)",
+            "x4_code": "(M,C0439001,J.M.L.Ouellet+,J,PR/C,54,1982,1996)",
             "free_txt": []
           },
           {
-            "x4_code": "(N,A0652001,G.Roters+,J,EPJ/A,6,451,1999)",
+            "x4_code": "(M,A0652001,G.Roters+,J,EPJ/A,6,451,1999)",
             "free_txt": [
               " There are previous investigations on the subject"
             ]
@@ -722,13 +585,21 @@
           {
             "x4_code": null,
             "free_txt": [
-              "The target used were produced by implanting 12-C atoms",
+              "The target was produced by implanting 12-C atoms",
               "into gold. The gold layered backing used for this",
               "purpose was especially developed for long term",
-              "experiments and high beam power of up to 10 KW/cm**2.",
+              "experiments and high beam power of up to 10 KW/cm2.",
               "The depletion in respect to the detrimental 13-C was",
               "improved by a factor of 1000. The target was replaced",
               "when a deterioration of about 20% was found."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,R.Kunz+,J,PRL,86,3244,2001)",
+            "free_txt": [
+              " Tbl. I"
             ]
           }
         ]
@@ -744,8 +615,8 @@
               "and Sigma(E2) have been obtained by using the formula",
               "for the interference of E1 and E2 transitions in",
               "angular distributions, given in the paper of Dyer and",
-              "barnes . The Parameter (PHASE) Of this Formula was not",
-              "Kept open, but determined by using the elastic alpha -",
+              "barnes. The parameter (PHASE) of this formula was not",
+              "kept open, but determined by using the elastic alpha -",
               "scattering data of Plaga and D'Agostino Bruno."
             ]
           }
@@ -762,10 +633,10 @@
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " The uncertainties include both statistical and",
-              "systematic errors induced by R-Matrix analysis and",
+              " The uncertainties include both statistical",
+              "and systematic errors induced by R-Matrix analysis and",
               "fitting procedure."
             ]
           }
@@ -780,15 +651,15 @@
         ],
         "rel-ref": [
           {
-            "x4_code": "(R,,P.DYER+,J,NP/A,233,495,1974)",
+            "x4_code": "(R,,P.Dyer+,J,NP/A,233,495,1974)",
             "free_txt": []
           },
           {
-            "x4_code": "(R,C0064001,R.PLAGA+,J,NP/A,465,291,1987)",
+            "x4_code": "(R,C0064001,R.Plaga+,J,NP/A,465,291,1987)",
             "free_txt": []
           },
           {
-            "x4_code": "(R,,M.D'AGOSTINO BRUNO+,J,NC,27,1,1975)",
+            "x4_code": "(R,,M.D'Agostino Bruno+,J,NC/A,27,1,1975)",
             "free_txt": []
           }
         ]
@@ -798,10 +669,10 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " The uncertainties include both statistical and",
-              "systematic errors induced by r-matrix analysis and",
+              " The uncertainties include both statistical",
+              "and systematic errors induced by R-matrix analysis and",
               "fitting procedure."
             ]
           },
@@ -823,40 +694,6 @@
         "status": [
           {
             "x4_code": "(DEP,A0482002)",
-            "free_txt": []
-          }
-        ]
-      }
-    },
-    "004": {
-      "0": {
-        "analysis": [
-          {
-            "x4_code": "(RFN)",
-            "free_txt": []
-          }
-        ],
-        "comment": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "- By authors: astrophysical factor due to gamma",
-              "cascades has been extracted as 4 +/-4 B*KeV"
-            ]
-          }
-        ],
-        "err-analys": [
-          {
-            "x4_code": "(ERR-T)",
-            "free_txt": [
-              " The uncertainty is given in original paper",
-              "without any analysis."
-            ]
-          }
-        ],
-        "status": [
-          {
-            "x4_code": "(DEP,A0428002)",
             "free_txt": []
           }
         ]

@@ -1,13 +1,20 @@
 {
   "entry": "M0803",
-  "last_updated": "2011-10-03",
-  "number_of_revisions": "1",
+  "last_updated": "2026-01-15",
+  "number_of_revisions": "2",
   "histories": [
     {
       "x4_code": "(20110607C)",
       "free_txt": [
         " Data from the Table 2  were  compiled  at",
         " the Russia MSU SINP CDFE by V.Varlamov."
+      ]
+    },
+    {
+      "x4_code": "(20251202A)",
+      "free_txt": [
+        " Corrected by V.Varlamov: REFERENCE,",
+        " DECAY-DATA, STATUS, lowercase."
       ]
     }
   ],
@@ -32,17 +39,17 @@
     ],
     "references": [
       {
-        "x4_code": "(J,IZV,75,594,2011)",
-        "free_txt": [],
+        "x4_code": "(J,BAS,75,558,2011)",
+        "free_txt": [
+          " English translation of IZV,75,594,2011."
+        ],
         "publication_year": "2011",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,BAS,75,558,2011)",
-        "free_txt": [
-          " English translation of IZV,75,594,2011."
-        ],
+        "x4_code": "(J,IZV,75,594,2011)",
+        "free_txt": [],
         "publication_year": "2011",
         "doi": null,
         "pointer": "0"
@@ -66,16 +73,9 @@
     "002": {
       "0": {
         "x4_code": "(50-SN-0(G,X)ELEM/MASS,,SIG,,BRA/REL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "50-SN-0",
-              [
-                "G,X"
-              ],
-              "ELEM/MASS,,SIG,,BRA/REL"
-            ],
-            "type": null,
             "target": "50-SN-0",
             "process": "G,X",
             "sf49": "ELEM/MASS,,SIG,,BRA/REL",
@@ -84,10 +84,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA/REL",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(50-SN-0(G,X)ELEM/MASS,,SIG,,BRA/REL)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -116,15 +118,19 @@
           "ELEMENT",
           "MASS",
           "ISOMER",
+          "ISOMER",
           "DATA",
-          "DATA-ERR"
+          "DATA-ERR",
+          "DECAY-FLAG"
         ],
         "units": [
           "NO-DIM",
           "NO-DIM",
           "NO-DIM",
+          "NO-DIM",
           "ARB-UNITS",
-          "ARB-UNITS"
+          "ARB-UNITS",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -155,6 +161,15 @@
             1.0
           ],
           [
+            null,
+            null,
+            2.0,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
             0.0017,
             0.00433,
             0.000958,
@@ -171,6 +186,15 @@
             0.245,
             0.007,
             0.21
+          ],
+          [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0
           ]
         ]
       }
@@ -227,7 +251,7 @@
         ],
         "rel-ref": [
           {
-            "x4_code": "(I,M0738001,A.N.ERMAKOV+,J,YF,71,419,2008)",
+            "x4_code": "(I,M0738001,A.N.Ermakov+,J,YF,71,419,2008)",
             "free_txt": [
               " General description of facility and detector."
             ]
@@ -243,9 +267,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE,APRVD)",
+            "x4_code": "(APRVD)",
             "free_txt": [
-              " Data from Table 2, by S.Yu.Troshchiev."
+              " By S.Yu.Troshchiev."
             ]
           }
         ]
@@ -257,45 +281,52 @@
           {
             "x4_code": null,
             "free_txt": [
-              "Authors nominate correspondingly the following",
-              " reactions: (50-SN-112(G,P)49-IN-111)",
-              "            (50-SN-116(G,P)49-IN-115-M)",
-              "            (50-SN-117(G,P)49-IN-116-M)",
-              "            (50-SN-112(G,N)50-SN-111)",
-              "            (50-SN-114(G,N)50-SN-113)",
-              "            (50-SN-118(G,N)50-SN-117-M)",
-              "            (50-SN-124(G,N)50-SN-123-M)"
+              " (1.0) Reaction 112Sn(g,p)111gIn",
+              " (2.0) Reaction 116Sn(g,p)115mIn",
+              " (3.0) Reaction 117Sn(g,p)116m1In",
+              " (4.0) Reaction 112Sn(g,n)111Sn",
+              " (5.0) Reaction 114Sn(g,n)113Sn",
+              " (6.0) Reaction 118Sn(g,n)117mSn",
+              " (7.0) Reaction 124Sn(g,n)123mSn"
             ]
           }
         ],
         "decay-data": [
           {
-            "x4_code": "(49-IN-111,2.8047D)",
+            "x4_code": "((1.)49-IN-111-G,2.8047D)",
             "free_txt": []
           },
           {
-            "x4_code": "(49-IN-115-M,4.486HR)",
+            "x4_code": "((2.)49-IN-115-M,4.486HR)",
             "free_txt": []
           },
           {
-            "x4_code": "(49-IN-116-M,54.29MIN)",
+            "x4_code": "((3.)49-IN-116-M1,54.29MIN)",
             "free_txt": []
           },
           {
-            "x4_code": "(50-SN-111,35.3MIN)",
+            "x4_code": "((4.)50-SN-111,35.3MIN)",
             "free_txt": []
           },
           {
-            "x4_code": "(50-SN-113,115.09D)",
+            "x4_code": "((5.)50-SN-113,115.09D)",
             "free_txt": []
           },
           {
-            "x4_code": "(50-SN-117-M,13.6D)",
+            "x4_code": "((6.)50-SN-117-M,13.6D)",
             "free_txt": []
           },
           {
-            "x4_code": "(50-SN-123-M,40.06MIN)",
+            "x4_code": "((7.)50-SN-123-M,40.06MIN)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,B.S.Ishkhanov+,J,BAS,75,558,2011)",
+            "free_txt": [
+              " Data from Table 2."
+            ]
           }
         ]
       }

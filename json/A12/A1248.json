@@ -1,7 +1,7 @@
 {
   "entry": "A1248",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-11-03",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19881019C)",
@@ -13,6 +13,12 @@
       "x4_code": "(19990305U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20250903A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -34,13 +40,13 @@
     ],
     "institutes": [
       {
-        "x4_code": "(3POLINR)",
+        "x4_code": "(3POLIBJ)",
         "free_txt": []
       }
     ],
     "references": [
       {
-        "x4_code": "(J,NP/A,473,(1),179,198710)",
+        "x4_code": "(J,NP/A,473,179,1987)",
         "free_txt": [],
         "publication_year": "1987",
         "doi": null,
@@ -49,40 +55,35 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG)",
+        "x4_code": "(VDG,3POLIBJ)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": null
+        "institute": "(3POLIBJ)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-3(A,G)3-LI-7,PAR,DA,,,EXP)",
+        "x4_code": "(1-H-3(A,G)3-LI-7,PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-3",
-              [
-                "A,G"
-              ],
-              "3-LI-7,PAR,DA,,,EXP"
-            ],
-            "type": null,
             "target": "1-H-3",
             "process": "A,G",
-            "sf49": "3-LI-7,PAR,DA,,,EXP",
+            "sf49": "3-LI-7,PAR,DA",
             "sf4": "3-LI-7",
             "sf5": "PAR",
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-3(A,G)3-LI-7,PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -118,7 +119,7 @@
       "common": {
         "heads": [
           "ANG-CM",
-          "ERR-T"
+          "ERR-1"
         ],
         "units": [
           "ADEG",
@@ -135,8 +136,8 @@
       },
       "data": {
         "heads": [
-          "EN-CM",
           "E-LVL",
+          "EN-CM",
           "DATA-CM",
           "DATA-ERR"
         ],
@@ -148,42 +149,42 @@
         ],
         "data": [
           [
-            0.297,
-            0.297,
-            0.427,
-            0.427,
-            0.641,
-            0.641,
-            0.856,
-            0.856
-          ],
-          [
+            0.0,
+            0.0,
+            0.0,
             0.0,
             0.478,
-            0.0,
             0.478,
-            0.0,
             0.478,
-            0.0,
             0.478
           ],
           [
+            0.297,
+            0.427,
+            0.641,
+            0.856,
+            0.297,
+            0.427,
+            0.641,
+            0.856
+          ],
+          [
             9.4e-05,
-            4.4e-05,
             0.000141,
-            7.7e-05,
             0.00019,
-            9.9e-05,
             0.000224,
+            4.4e-05,
+            7.7e-05,
+            9.9e-05,
             0.000111
           ],
           [
             5e-06,
             5e-06,
+            7e-06,
+            7e-06,
             5e-06,
             6e-06,
-            7e-06,
-            7e-06,
             7e-06,
             7e-06
           ]
@@ -197,12 +198,22 @@
         "detector": [
           {
             "x4_code": "(GELI)",
-            "free_txt": []
+            "free_txt": [
+              " A 80 cm3 Ge(Li) detector of 2.7 keV FWHM",
+              "resolution for the 60Co 1.33 MeV peak."
+            ]
+          },
+          {
+            "x4_code": "(SPEC)",
+            "free_txt": [
+              " Neutrons were detected with a proton recoil",
+              "spectrometer"
+            ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,3POLIBJ)",
             "free_txt": []
           }
         ],
@@ -215,10 +226,7 @@
         "monitor": [
           {
             "x4_code": "(1-H-3(D,N)2-HE-4,,DA)",
-            "free_txt": [
-              " Neutrons were detected with",
-              "a proton recoil spectrometer"
-            ]
+            "free_txt": []
           }
         ],
         "sample": [
@@ -226,7 +234,7 @@
             "x4_code": null,
             "free_txt": [
               "Tritium absorbed in thin layer of titanium",
-              "evarorated onto a copper plate"
+              "evaporated onto a copper plate"
             ]
           }
         ]
@@ -243,7 +251,7 @@
             ]
           },
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(ERR-1)",
             "free_txt": [
               " The error of overall normalization."
             ]
@@ -251,9 +259,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.Burzynski+,J,NP/A,473,179,1987)",
             "free_txt": [
-              " Tabl 1"
+              " Table 2"
             ]
           }
         ]

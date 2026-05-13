@@ -1,7 +1,7 @@
 {
   "entry": "A1202",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-10-17",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19830304C)",
@@ -13,6 +13,12 @@
       "x4_code": "(19990305U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20250807A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -43,7 +49,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,72,(8),662,194710)",
+        "x4_code": "(J,PR,72,662,1947)",
         "free_txt": [],
         "publication_year": "1947",
         "doi": null,
@@ -52,42 +58,37 @@
     ],
     "facilities": [
       {
-        "x4_code": null,
+        "x4_code": "(VDG,1USALAS)",
         "free_txt": [
-          "3.5 MeV Wisconsin generator ('long tank')"
+          " 3.5 MeV electrostatic generator."
         ],
         "pointer": "0",
-        "facility_type": null,
-        "institute": null
+        "facility_type": "(VDG)",
+        "institute": "(1USALAS)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-2(P,EL)1-H-2,,DA,,,EXP)",
+        "x4_code": "(1-H-2(P,EL)1-H-2,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "P,EL"
-              ],
-              "1-H-2,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "1-H-2",
             "process": "P,EL",
-            "sf49": "1-H-2,,DA,,,EXP",
+            "sf49": "1-H-2,,DA",
             "sf4": "1-H-2",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(P,EL)1-H-2,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -100,7 +101,7 @@
     "002": {
       "common": {
         "heads": [
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "PER-CENT"
@@ -438,16 +439,24 @@
         ],
         "facility": [
           {
-            "x4_code": null,
+            "x4_code": "(VDG,1USALAS)",
             "free_txt": [
-              "3.5 MeV Wisconsin generator ('long tank')"
+              " 3.5 MeV electrostatic generator."
             ]
           }
         ],
         "method": [
           {
-            "x4_code": "(EXTB)",
+            "x4_code": "(BCINT,PHD)",
             "free_txt": []
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(I,,R.G.Herb+,J,PR,58,579,1940)",
+            "free_txt": [
+              " - generator description"
+            ]
           }
         ]
       }
@@ -456,17 +465,28 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Total error"
+              " No information about source of uncertainty"
+            ]
+          },
+          {
+            "x4_code": "(EN-ERR)",
+            "free_txt": [
+              " The energy values are believed to be correct",
+              "to +-30 keV relative to the value of 1.860 MeV for",
+              "the threshold of the Li(p,n) reaction which was used",
+              "to calibrate the energy scale. The estimated accuracy",
+              "also includes the uncertainty in the linearity of the",
+              "electrostatic analysis."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,R.Sherr+,J,PR,72,662,1947)",
             "free_txt": [
-              " Table 3"
+              " Table III"
             ]
           }
         ]

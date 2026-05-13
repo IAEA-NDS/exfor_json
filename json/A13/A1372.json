@@ -1,7 +1,7 @@
 {
   "entry": "A1372",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-11-25",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19800716C)",
@@ -14,10 +14,16 @@
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
       ]
+    },
+    {
+      "x4_code": "(20250918A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Isotopic spin selection rules X11: The mirror reactions 6Li(d,n)7Be and 6Li(d,p)7Li",
+    "title": "Isotopic spin selection rules XII: The mirror reactions 6Li(d,n)7Be and 6Li(d,p)7Li",
     "authors": [
       {
         "name": "D.H.Wilkinson"
@@ -31,7 +37,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PM,2,(13),83,195701)",
+        "x4_code": "(J,PM,2,83,1957)",
         "free_txt": [],
         "publication_year": "1957",
         "doi": null,
@@ -40,59 +46,50 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG)",
+        "x4_code": "(VDG,1USABNL)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": null
+        "institute": "(1USABNL)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "((3-LI-6(D,N)4-BE-7,PAR,SIG,,,EXP)//(3-LI-6(D,P)3-LI-7,PAR,SIG,,,EXP))",
+        "x4_code": "((3-LI-6(D,N)4-BE-7,PAR,SIG)//(3-LI-6(D,P)3-LI-7,PAR,SIG))",
         "children": [
           {
-            "code": [
-              "3-LI-6",
-              [
-                "D,N"
-              ],
-              "4-BE-7,PAR,SIG,,,EXP"
-            ],
-            "type": null,
+            "x4_code": "(3-LI-6(D,N)4-BE-7,PAR,SIG)",
             "target": "3-LI-6",
             "process": "D,N",
-            "sf49": "4-BE-7,PAR,SIG,,,EXP",
+            "sf49": "4-BE-7,PAR,SIG",
             "sf4": "4-BE-7",
             "sf5": "PAR",
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null
           },
           {
-            "code": [
-              "3-LI-6",
-              [
-                "D,P"
-              ],
-              "3-LI-7,PAR,SIG,,,EXP"
-            ],
-            "type": null,
+            "x4_code": "(3-LI-6(D,P)3-LI-7,PAR,SIG)",
             "target": "3-LI-6",
             "process": "D,P",
-            "sf49": "3-LI-7,PAR,SIG,,,EXP",
+            "sf49": "3-LI-7,PAR,SIG",
             "sf4": "3-LI-7",
             "sf5": "PAR",
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null
           }
         ],
-        "type": "//",
+        "math_expression": [
+          "Ratio",
+          "((3-LI-6(D,N)4-BE-7,PAR,SIG)",
+          "(3-LI-6(D,P)3-LI-7,PAR,SIG))"
+        ],
+        "operator": "Ratio",
         "free_text": "",
         "pointer": "0"
       }
@@ -105,21 +102,18 @@
     "002": {
       "common": {
         "heads": [
-          "EN-ERR",
           "E-LVL-NM",
           "E-LVL-DN",
-          "ERR-1"
+          "ERR-1",
+          "EN-ERR-DIG"
         ],
         "units": [
           "MEV",
           "MEV",
-          "MEV",
-          "PER-CENT"
+          "PER-CENT",
+          "MEV"
         ],
         "data": [
-          [
-            0.004
-          ],
           [
             0.43
           ],
@@ -128,6 +122,9 @@
           ],
           [
             10.0
+          ],
+          [
+            0.004
           ]
         ]
       },
@@ -135,7 +132,7 @@
         "heads": [
           "EN",
           "DATA",
-          "DATA-ERR"
+          "ERR-2"
         ],
         "units": [
           "MEV",
@@ -144,29 +141,29 @@
         ],
         "data": [
           [
-            0.1927,
-            0.2148,
-            0.2383,
-            0.2628,
-            0.2875,
-            0.3118,
-            0.3402,
-            0.3639,
-            0.3876,
-            0.4148,
-            0.4395,
-            0.4631,
-            0.4886,
-            0.5121,
-            0.5397,
-            0.5654,
-            0.5895,
-            0.6363,
-            0.6843,
-            0.7371,
-            0.7896,
-            0.8853,
-            0.9848,
+            0.193,
+            0.215,
+            0.238,
+            0.263,
+            0.287,
+            0.312,
+            0.34,
+            0.364,
+            0.388,
+            0.415,
+            0.44,
+            0.463,
+            0.489,
+            0.512,
+            0.54,
+            0.565,
+            0.59,
+            0.636,
+            0.684,
+            0.737,
+            0.79,
+            0.885,
+            0.985,
             1.087,
             1.187,
             1.29,
@@ -183,7 +180,7 @@
             1.222,
             1.241,
             1.059,
-            0.9995,
+            1.0,
             1.083,
             1.122,
             1.13,
@@ -201,45 +198,45 @@
             1.081,
             1.142,
             1.071,
-            0.9926,
+            0.993,
             0.941,
-            0.9794,
-            0.9388,
-            0.9282,
-            0.9999,
-            0.9688
+            0.979,
+            0.939,
+            0.928,
+            1.0,
+            0.969
           ],
           [
-            0.0412,
-            0.0412,
-            0.0427,
+            0.041,
+            0.041,
+            0.043,
             0.038,
-            0.0412,
-            0.0395,
-            0.0411,
-            0.0381,
-            0.0411,
-            0.0396,
+            0.041,
+            0.04,
+            0.041,
             0.038,
-            0.0395,
-            0.0364,
+            0.041,
+            0.04,
             0.038,
-            0.0348,
-            0.0364,
-            0.0364,
+            0.04,
+            0.036,
             0.038,
-            0.0395,
-            0.0395,
-            0.0475,
+            0.035,
+            0.036,
+            0.036,
+            0.038,
+            0.04,
+            0.04,
+            0.048,
             0.057,
-            0.0602,
-            0.0585,
-            0.0569,
-            0.0569,
-            0.0617,
+            0.06,
+            0.059,
+            0.057,
+            0.057,
+            0.062,
             0.068,
-            0.0696,
-            0.0665,
+            0.07,
+            0.067,
             0.068
           ]
         ]
@@ -252,12 +249,16 @@
         "detector": [
           {
             "x4_code": "(NAICR)",
-            "free_txt": []
+            "free_txt": [
+              " NaI(Tl) crystal, a cylinder of length 5 cm",
+              "and diameter 4 cm, placed close to the target in the",
+              "'end-on' position at 0. degr. to the deuteron beam."
+            ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,1USABNL)",
             "free_txt": []
           }
         ],
@@ -265,7 +266,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "Li2O,4O mu-g/cm2 on platinum of thickness 0.005 in."
+              "6Li2O with a thickness of 40 ug/cm2 deposited on",
+              "platinum of thickness 0.005 in."
             ]
           }
         ]
@@ -275,30 +277,24 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": "(EN-ERR)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          },
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " Error from graphic bars (statistical) and",
-              "digitizing"
-            ]
-          },
-          {
             "x4_code": "(ERR-1)",
             "free_txt": [
               " Systematic error"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " The uncertainties in the ratios of peak heights",
+              " Do not include the possible systematic error."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,D.H.Wilkinson,J,PM,2,83,1957)",
             "free_txt": [
-              " Fig 2"
+              " Figure 2"
             ]
           }
         ]

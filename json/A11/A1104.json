@@ -1,7 +1,7 @@
 {
   "entry": "A1104",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-08-20",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810422C)",
@@ -13,6 +13,12 @@
       "x4_code": "(19990214U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20240708A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -37,7 +43,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,76,(9),1283,194911)",
+        "x4_code": "(J,PR,76,1283,1949)",
         "free_txt": [],
         "publication_year": "1949",
         "doi": null,
@@ -46,40 +52,35 @@
     ],
     "facilities": [
       {
-        "x4_code": "(CYCLO)",
+        "x4_code": "(CYCLO,1USALAS)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(CYCLO)",
-        "institute": null
+        "institute": "(1USALAS)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-2(D,EL)1-H-2,,DA,,,EXP)",
+        "x4_code": "(1-H-2(D,EL)1-H-2,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "D,EL"
-              ],
-              "1-H-2,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "1-H-2",
             "process": "D,EL",
-            "sf49": "1-H-2,,DA,,,EXP",
+            "sf49": "1-H-2,,DA",
             "sf4": "1-H-2",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(D,EL)1-H-2,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -87,7 +88,29 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-1",
+          "ERR-2",
+          "ERR-3"
+        ],
+        "units": [
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            3.5
+          ],
+          [
+            3.5
+          ],
+          [
+            1.0
+          ]
+        ]
+      }
     },
     "002": {
       "common": {
@@ -151,18 +174,44 @@
         "detector": [
           {
             "x4_code": "(PLATE)",
-            "free_txt": []
+            "free_txt": [
+              " Each camera contained a 100-micron Ilford C-2",
+              "plate behind a thin aluminum window at the front of",
+              "the camera."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Uncertainty in the number of incident beam",
+              "particles that passed through the target"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Uncertainty in the number of tracks appearing",
+              "on a swath of accurately known width"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3)",
+            "free_txt": [
+              " Accuracy in the width of swath"
+            ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(CYCLO)",
+            "x4_code": "(CYCLO,1USALAS)",
             "free_txt": []
           }
         ],
         "method": [
           {
-            "x4_code": "(EXTB)",
+            "x4_code": "(EXTB,BCINT)",
             "free_txt": []
           }
         ],
@@ -170,7 +219,12 @@
           {
             "x4_code": null,
             "free_txt": [
-              "A gas target,contained 99.4% deuterium"
+              "A gas target, contained 99.4% deuterium. Three",
+              "different gas targets were used, one for each of the",
+              "angles investigated, the reaction products being",
+              "simultaneously recorded by two cameras, one on each",
+              "side of the target, with the exception of the 40",
+              "degree target for which only one camera was used."
             ]
           }
         ]
@@ -180,23 +234,17 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": "(ANG-ERR)",
-            "free_txt": [
-              " Scale error"
-            ]
-          },
-          {
             "x4_code": "(ERR-T)",
             "free_txt": [
-              " The rms of all the above errors"
+              " The rms of all partial errors"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,L.Rosen+,J,PR,76,1283,1949)",
             "free_txt": [
-              " Table 1"
+              " Table I"
             ]
           }
         ]

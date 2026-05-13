@@ -1,7 +1,7 @@
 {
   "entry": "13565",
-  "last_updated": "2012-12-03",
-  "number_of_revisions": "4",
+  "last_updated": "2025-08-28",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19930129C)",
@@ -10,8 +10,14 @@
     {
       "x4_code": "(20120711A)",
       "free_txt": [
-        " SD:Updated to new date formats,lower case.",
+        " SD: Updated to new date formats,lower case.",
         "     Corrected according to last EXFOR rules and Dict."
+      ]
+    },
+    {
+      "x4_code": "(20250704U)",
+      "free_txt": [
+        " OS. Minor correction in REFERENCE"
       ]
     }
   ],
@@ -39,7 +45,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,80,908,195012)",
+        "x4_code": "(J,PR,80,908(1),1950)",
         "free_txt": [],
         "publication_year": "1950",
         "doi": null,
@@ -54,14 +60,7 @@
         "x4_code": "((14-SI-0(N,G),,SIG,,MXW)/(1-H-1(N,G)1-H-2,,SIG,,MXW))",
         "children": [
           {
-            "code": [
-              "14-SI-0",
-              [
-                "N,G"
-              ],
-              ",,SIG,,MXW"
-            ],
-            "type": null,
+            "x4_code": "(14-SI-0(N,G),,SIG,,MXW)",
             "target": "14-SI-0",
             "process": "N,G",
             "sf49": ",,SIG,,MXW",
@@ -73,14 +72,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "1-H-1",
-              [
-                "N,G"
-              ],
-              "1-H-2,,SIG,,MXW"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(N,G)1-H-2,,SIG,,MXW)",
             "target": "1-H-1",
             "process": "N,G",
             "sf49": "1-H-2,,SIG,,MXW",
@@ -92,22 +84,20 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((14-SI-0(N,G),,SIG,,MXW)",
+          "(1-H-1(N,G)1-H-2,,SIG,,MXW))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "1"
       },
       "2": {
         "x4_code": "(14-SI-0(N,G),,SIG,,MXW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "14-SI-0",
-              [
-                "N,G"
-              ],
-              ",,SIG,,MXW"
-            ],
-            "type": null,
             "target": "14-SI-0",
             "process": "N,G",
             "sf49": ",,SIG,,MXW",
@@ -116,10 +106,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "MXW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(14-SI-0(N,G),,SIG,,MXW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       }
@@ -265,9 +257,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,C.W.Tittle+,J,PR,80,908(1),1950)",
             "free_txt": [
-              " Data taken from PR,80,908,1950"
+              " Data taken from text in PR,80,908,1950"
             ]
           }
         ]

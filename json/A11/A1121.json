@@ -1,7 +1,7 @@
 {
   "entry": "A1121",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-10-24",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810525C)",
@@ -14,10 +14,16 @@
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
       ]
+    },
+    {
+      "x4_code": "(20240708A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
+      ]
     }
   ],
   "bib_record": {
-    "title": "A Test of P - 4He phase shifts between 2 and 9 MeV",
+    "title": "A test of p - 4He phase shifts between 2 and 9 MeV",
     "authors": [
       {
         "name": "M.E.Brandan"
@@ -37,7 +43,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,NP/A,263,(2),189,197606)",
+        "x4_code": "(J,NP/A,263,189,1976)",
         "free_txt": [],
         "publication_year": "1976",
         "doi": null,
@@ -46,59 +52,50 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDGT)",
+        "x4_code": "(VDGT,1USAWIS)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDGT)",
-        "institute": null
+        "institute": "(1USAWIS)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "((2-HE-4(P,EL)2-HE-4,,DA,,,EXP)//(2-HE-4(P,EL)2-HE-4,,DA,,,EXP))",
+        "x4_code": "((2-HE-4(P,EL)2-HE-4,,DA)//(2-HE-4(P,EL)2-HE-4,,DA))",
         "children": [
           {
-            "code": [
-              "2-HE-4",
-              [
-                "P,EL"
-              ],
-              "2-HE-4,,DA,,,EXP"
-            ],
-            "type": null,
+            "x4_code": "(2-HE-4(P,EL)2-HE-4,,DA)",
             "target": "2-HE-4",
             "process": "P,EL",
-            "sf49": "2-HE-4,,DA,,,EXP",
+            "sf49": "2-HE-4,,DA",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null
           },
           {
-            "code": [
-              "2-HE-4",
-              [
-                "P,EL"
-              ],
-              "2-HE-4,,DA,,,EXP"
-            ],
-            "type": null,
+            "x4_code": "(2-HE-4(P,EL)2-HE-4,,DA)",
             "target": "2-HE-4",
             "process": "P,EL",
-            "sf49": "2-HE-4,,DA,,,EXP",
+            "sf49": "2-HE-4,,DA",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null
           }
         ],
-        "type": "//",
+        "math_expression": [
+          "Ratio",
+          "((2-HE-4(P,EL)2-HE-4,,DA)",
+          "(2-HE-4(P,EL)2-HE-4,,DA))"
+        ],
+        "operator": "Ratio",
         "free_text": "",
         "pointer": "0"
       }
@@ -111,12 +108,18 @@
     "002": {
       "common": {
         "heads": [
-          "ANG-NM",
-          "ANG-DN"
+          "ANG-CM-NM",
+          "ANG-CM-DN",
+          "ERR-1",
+          "ERR-2",
+          "ERR-3"
         ],
         "units": [
           "ADEG",
-          "ADEG"
+          "ADEG",
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT"
         ],
         "data": [
           [
@@ -124,6 +127,15 @@
           ],
           [
             104.4
+          ],
+          [
+            0.7
+          ],
+          [
+            0.3
+          ],
+          [
+            0.2
           ]
         ]
       },
@@ -208,15 +220,15 @@
       "0": {
         "detector": [
           {
-            "x4_code": null,
+            "x4_code": "(SOLST)",
             "free_txt": [
-              "Two pairs of the detectors"
+              " Two pairs of the detectors"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDGT)",
+            "x4_code": "(VDGT,1USAWIS)",
             "free_txt": []
           }
         ],
@@ -230,7 +242,10 @@
           {
             "x4_code": null,
             "free_txt": [
-              "4He"
+              "5 cm diameter gas cell containing 4He at 1 atm. Slits",
+              "7.7 mm and 3.0 mm wide, located respectively 3 m and",
+              "13 cm upstream from the center of the chamber,",
+              "collimated the beam."
             ]
           }
         ]
@@ -244,11 +259,37 @@
             "free_txt": [
               " Total error"
             ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Statistical errors and background subtraction"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " The uncertainty in the solid angle ratio"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3)",
+            "free_txt": [
+              " The uncertainty in the angular position of",
+              "        the detectors"
+            ]
+          },
+          {
+            "x4_code": "(ERR-4,,0.6)",
+            "free_txt": [
+              " The uncertainty in the energy at the",
+              "        center of the chamber"
+            ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,M.E.Brandan+,J,NP/A,263,189,1976)",
             "free_txt": [
               " Table 2"
             ]

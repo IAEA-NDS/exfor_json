@@ -1,7 +1,7 @@
 {
   "entry": "A1046",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-06-11",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810323C)",
@@ -13,6 +13,13 @@
       "x4_code": "(19990115U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20240425A)",
+      "free_txt": [
+        " SD: Corrections in all Subents.",
+        "Subent 003 deleted (data from another ref.)."
       ]
     }
   ],
@@ -34,7 +41,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PL/B,29,(5),299,196905)",
+        "x4_code": "(J,PL/B,29,299,1969)",
         "free_txt": [],
         "publication_year": "1969",
         "doi": null,
@@ -43,71 +50,59 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDGT)",
+        "x4_code": "(VDGT,1CANMON)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDGT)",
-        "institute": null
+        "institute": "(1CANMON)"
       }
     ]
   },
   "reactions": {
     "002": {
-      "0": {
-        "x4_code": "(1-H-2(D,G)2-HE-4,,DA,,,EXP)",
+      "1": {
+        "x4_code": "(1-H-2(D,G)2-HE-4,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "D,G"
-              ],
-              "2-HE-4,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "1-H-2",
             "process": "D,G",
-            "sf49": "2-HE-4,,DA,,,EXP",
+            "sf49": "2-HE-4,,DA",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(D,G)2-HE-4,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "0"
-      }
-    },
-    "003": {
-      "0": {
-        "x4_code": "(1-H-2(D,G)2-HE-4,,DA,,,EXP)",
+        "pointer": "1"
+      },
+      "2": {
+        "x4_code": "(1-H-2(D,G)2-HE-4,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "D,G"
-              ],
-              "2-HE-4,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "1-H-2",
             "process": "D,G",
-            "sf49": "2-HE-4,,DA,,,EXP",
+            "sf49": "2-HE-4,,DA",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(D,G)2-HE-4,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
-        "pointer": "0"
+        "pointer": "2"
       }
     }
   },
@@ -118,15 +113,13 @@
     "002": {
       "common": {
         "heads": [
-          "EN-ERR1",
           "ANG",
-          "EN-ERR",
-          "DATA-ERR1",
+          "EN-ERR-DIG1",
           "ERR-1",
-          "ERR-2"
+          "ERR-2",
+          "ERR-3"
         ],
         "units": [
-          "PER-CENT",
           "ADEG",
           "MEV",
           "PER-CENT",
@@ -134,9 +127,6 @@
           "PER-CENT"
         ],
         "data": [
-          [
-            20.0
-          ],
           [
             130.0
           ],
@@ -157,29 +147,35 @@
       "data": {
         "heads": [
           "EN",
-          "DATA",
-          "DATA-ERR",
-          "DATA-ERR2",
-          "FLAG"
+          "DATA      1",
+          "DATA      2",
+          "ERR-S     1",
+          "ERR-T     2"
         ],
         "units": [
           "MEV",
           "MB/SR",
           "MB/SR",
           "MB/SR",
-          "NO-DIM"
+          "MB/SR"
         ],
         "data": [
           [
             4.0,
-            5.932,
-            7.934,
+            6.0,
+            8.0,
             10.0
           ],
           [
-            6.9e-06,
+            null,
             1.064e-05,
             1.463e-05,
+            null
+          ],
+          [
+            6.9e-06,
+            null,
+            null,
             1.65e-05
           ],
           [
@@ -193,55 +189,6 @@
             null,
             null,
             6.8e-06
-          ],
-          [
-            1.0,
-            2.0,
-            2.0,
-            1.0
-          ]
-        ]
-      }
-    },
-    "003": {
-      "common": {
-        "heads": [
-          "EN-ERR",
-          "ANG"
-        ],
-        "units": [
-          "MEV",
-          "ADEG"
-        ],
-        "data": [
-          [
-            0.04
-          ],
-          [
-            130.0
-          ]
-        ]
-      },
-      "data": {
-        "heads": [
-          "EN",
-          "DATA",
-          "DATA-ERR"
-        ],
-        "units": [
-          "MEV",
-          "MB/SR",
-          "MB/SR"
-        ],
-        "data": [
-          [
-            12.1
-          ],
-          [
-            2.505e-05
-          ],
-          [
-            1.012e-05
           ]
         ]
       }
@@ -254,15 +201,15 @@
           {
             "x4_code": "(NAICR)",
             "free_txt": [
-              " 15.2 cm long crystal was collimated,enclosed",
-              "A Cerenkov anticoincidence shield to reduce the cosmic",
-              "ray background"
+              " 15.2 cm long crystal was collimated, enclosed",
+              "in a Cerenkov anticoincidence shield to reduce the",
+              "cosmic ray background"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDGT)",
+            "x4_code": "(VDGT,1CANMON)",
             "free_txt": []
           }
         ],
@@ -280,115 +227,60 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": "(EN-ERR)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          },
-          {
-            "x4_code": "(EN-ERR1)",
-            "free_txt": [
-              " The entire deuteron energy range"
-            ]
-          },
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " From graphic bars (definition at data-err2)",
-              "and digitizing error"
-            ]
-          },
-          {
-            "x4_code": "(DATA-ERR1)",
-            "free_txt": [
-              " The error on the cross section corresponds",
-              "to the statistical error on the g-ray yield only."
-            ]
-          },
-          {
-            "x4_code": "(DATA-ERR2)",
-            "free_txt": [
-              " Other sources of error do not include:"
-            ]
-          },
-          {
             "x4_code": "(ERR-1)",
             "free_txt": [
-              " The incertainty in the calibration of the",
-              "photon monitor"
+              " Other sources of error"
             ]
           },
           {
             "x4_code": "(ERR-2)",
             "free_txt": [
+              " The uncertainty in the calibration of the",
+              "photon monitor"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3)",
+            "free_txt": [
               " Error in the g-ray absorption in the paraffin",
               "between gas target and detector"
             ]
           }
-        ],
-        "flag": [
+        ]
+      },
+      "1": {
+        "err-analys": [
           {
-            "x4_code": "(1.)",
+            "x4_code": "(ERR-S)",
             "free_txt": [
-              " Data from text"
-            ]
-          },
-          {
-            "x4_code": "(2.)",
-            "free_txt": [
-              " Data from graphic"
+              " The error on the cross section corresponds",
+              "to the statistical error on the gamma-ray yield only."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,W.Del Blanko+,J,PL/B,29,299,1969)",
             "free_txt": [
-              " FIG 1"
+              " Fig. 1"
             ]
           }
         ]
-      }
-    },
-    "003": {
-      "0": {
-        "comment": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              " At energy 12.1 MeV the data was obtained from",
-              "Meyerhof+ 4He(g,d) cross section at Eg=30MeV by means",
-              "of the principle of detailed balance and by assuming",
-              "an angular dependence of the differential cross secti-",
-              "on in the form of sin(theta)**2 cos(theta)**2"
-            ]
-          }
-        ],
+      },
+      "2": {
         "err-analys": [
           {
-            "x4_code": "(EN-ERR)",
+            "x4_code": "(ERR-T)",
             "free_txt": [
-              " Digitizing error"
+              " Total error"
             ]
-          },
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " From graphic bars and digitizing error"
-            ]
-          }
-        ],
-        "rel-ref": [
-          {
-            "x4_code": "(R,,MEYERHOF+,J,BAP,13,(4),564,196804)",
-            "free_txt": []
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(TABLE,,W.Del Blanko+,J,PL/B,29,299,1969)",
             "free_txt": [
-              " Fig 1"
+              " Abstract"
             ]
           }
         ]

@@ -70,16 +70,9 @@
     "002": {
       "0": {
         "x4_code": "(92-U-235(N,F),,INT)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,INT"
-            ],
-            "type": null,
             "target": "92-U-235",
             "process": "N,F",
             "sf49": ",,INT",
@@ -88,10 +81,12 @@
             "sf6": "INT",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-235(N,F),,INT)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": " Integral of fission cross section",
         "pointer": "0"
       }
@@ -101,14 +96,7 @@
         "x4_code": "(((92-U-235(N,G)92-U-236,,SIG,,AV)/(92-U-235(N,F),,SIG,,AV))=(92-U-235(N,ABS),,ALF,,AV))",
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,G"
-              ],
-              "92-U-236,,SIG,,AV"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,G)92-U-236,,SIG,,AV)",
             "target": "92-U-235",
             "process": "N,G",
             "sf49": "92-U-236,,SIG,,AV",
@@ -120,14 +108,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG,,AV"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,F),,SIG,,AV)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": ",,SIG,,AV",
@@ -139,37 +120,28 @@
             "sf9": null
           },
           {
-            "code": "92-U-235",
-            "type": [
-              "N,ABS"
-            ],
-            "target": "9",
-            "process": "2",
-            "sf49": "-,U,-,2,3,5",
-            "sf4": "-",
-            "sf5": "U",
-            "sf6": "-",
-            "sf7": "2",
-            "sf8": "3",
-            "sf9": "5"
-          },
-          {
-            "code": ",,ALF,,AV",
-            "type": [
-              "N,ABS"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "A,L,F,,,A,V",
-            "sf4": "A",
-            "sf5": "L",
-            "sf6": "F",
+            "x4_code": "(92-U-235(N,ABS),,ALF,,AV)",
+            "target": "92-U-235",
+            "process": "N,ABS",
+            "sf49": ",,ALF,,AV",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "ALF",
             "sf7": null,
-            "sf8": null,
-            "sf9": "A"
+            "sf8": "AV",
+            "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          [
+            "Divide",
+            "(((92-U-235(N,G)92-U-236,,SIG,,AV)",
+            "(92-U-235(N,F),,SIG,,AV))"
+          ],
+          "(92-U-235(N,ABS),,ALF,,AV))"
+        ],
+        "operator": "Equal",
         "free_text": "",
         "pointer": "0"
       }

@@ -1,7 +1,7 @@
 {
   "entry": "40757",
-  "last_updated": "2024-03-31",
-  "number_of_revisions": "5",
+  "last_updated": "2026-03-19",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19840522T)",
@@ -17,6 +17,12 @@
         " DEP code was added in STATUS of data Subents.",
         "  Units were corrected: NO-DIM -> PRT/FIS",
         "  Subents 005-007 were added."
+      ]
+    },
+    {
+      "x4_code": "(20260212A)",
+      "free_txt": [
+        " Subents 005, 006 were corrected."
       ]
     }
   ],
@@ -84,16 +90,9 @@
     "002": {
       "0": {
         "x4_code": "(94-PU-239(N,F),PR,NU,,MXW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",PR,NU,,MXW"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": ",PR,NU,,MXW",
@@ -102,10 +101,12 @@
             "sf6": "NU",
             "sf7": null,
             "sf8": "MXW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,F),PR,NU,,MXW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -113,16 +114,9 @@
     "003": {
       "0": {
         "x4_code": "(94-PU-241(N,F),PR,NU,,MXW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-241",
-              [
-                "N,F"
-              ],
-              ",PR,NU,,MXW"
-            ],
-            "type": null,
             "target": "94-PU-241",
             "process": "N,F",
             "sf49": ",PR,NU,,MXW",
@@ -131,10 +125,12 @@
             "sf6": "NU",
             "sf7": null,
             "sf8": "MXW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-241(N,F),PR,NU,,MXW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -142,16 +138,9 @@
     "004": {
       "0": {
         "x4_code": "(92-U-233(N,F),PR,NU,,MXW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,F"
-              ],
-              ",PR,NU,,MXW"
-            ],
-            "type": null,
             "target": "92-U-233",
             "process": "N,F",
             "sf49": ",PR,NU,,MXW",
@@ -160,27 +149,22 @@
             "sf6": "NU",
             "sf7": null,
             "sf8": "MXW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-233(N,F),PR,NU,,MXW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "005": {
       "0": {
-        "x4_code": "(94-PU-239(N,F),PR,NU,,MXW)",
+        "x4_code": "((94-PU-239(N,F),PR,NU,,MXW)/(94-PU-240(0,F),PR,NU))",
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              ",PR,NU,,MXW"
-            ],
-            "type": null,
+            "x4_code": "(94-PU-239(N,F),PR,NU,,MXW)",
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": ",PR,NU,,MXW",
@@ -190,26 +174,9 @@
             "sf7": null,
             "sf8": "MXW",
             "sf9": null
-          }
-        ],
-        "type": null,
-        "free_text": "/(94-PU-240(0,F),PR,NU)",
-        "pointer": "0"
-      }
-    },
-    "006": {
-      "0": {
-        "x4_code": "(94-PU-240(0,F),PR,NU)",
-        "children": [
+          },
           {
-            "code": [
-              "94-PU-240",
-              [
-                "0,F"
-              ],
-              ",PR,NU"
-            ],
-            "type": null,
+            "x4_code": "(94-PU-240(0,F),PR,NU)",
             "target": "94-PU-240",
             "process": "0,F",
             "sf49": ",PR,NU",
@@ -221,7 +188,36 @@
             "sf9": null
           }
         ],
-        "type": null,
+        "math_expression": [
+          "Divide",
+          "((94-PU-239(N,F),PR,NU,,MXW)",
+          "(94-PU-240(0,F),PR,NU))"
+        ],
+        "operator": "Divide",
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "006": {
+      "0": {
+        "x4_code": "(94-PU-240(0,F),PR,NU)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "94-PU-240",
+            "process": "0,F",
+            "sf49": ",PR,NU",
+            "sf4": null,
+            "sf5": "PR",
+            "sf6": "NU",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-240(0,F),PR,NU)"
+          }
+        ],
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -229,16 +225,9 @@
     "007": {
       "0": {
         "x4_code": "(92-U-233(N,F),PR,NU,,FIS)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,F"
-              ],
-              ",PR,NU,,FIS"
-            ],
-            "type": null,
             "target": "92-U-233",
             "process": "N,F",
             "sf49": ",PR,NU,,FIS",
@@ -247,10 +236,12 @@
             "sf6": "NU",
             "sf7": null,
             "sf8": "FIS",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-233(N,F),PR,NU,,FIS)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -745,11 +736,16 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": "(ERR-S)",
+            "x4_code": null,
             "free_txt": [
-              " Statistical error.",
               "Systematic error is sufficiently small - comment of",
               "authors in the article."
+            ]
+          },
+          {
+            "x4_code": "(ERR-S)",
+            "free_txt": [
+              " Statistical error."
             ]
           }
         ],
@@ -773,7 +769,7 @@
           {
             "x4_code": "(COINC)",
             "free_txt": [
-              " Fission fragmants and neutrons coincidence.",
+              " Fission fragments and neutrons coincidence.",
               " Two series of measurement:",
               "Ser. Isotope  Nfragments  Ncoincidences  NU*w*eta",
               "I    Pu239    33,826      4,375          0.128+-0.002",
@@ -817,6 +813,12 @@
             ]
           }
         ],
+        "monitor": [
+          {
+            "x4_code": "(92-U-235(N,F),PR,NU,,MXW)",
+            "free_txt": []
+          }
+        ],
         "status": [
           {
             "x4_code": "(TABLE,,V.I.Kalashnikov+,S,AEC-TR-2435,(1),131,1956)",
@@ -825,7 +827,7 @@
             ]
           },
           {
-            "x4_code": "(DEP,40756005)",
+            "x4_code": "(DEP,40757005)",
             "free_txt": [
               " Ratio Pu239(n,f)/Pu240(spont.fis.)"
             ]
@@ -833,7 +835,7 @@
           {
             "x4_code": "(DEP,40757002)",
             "free_txt": [
-              " Pu239"
+              " Pu239 measured relative to U235"
             ]
           }
         ]

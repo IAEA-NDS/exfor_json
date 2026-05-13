@@ -1,7 +1,7 @@
 {
   "entry": "A1043",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-06-11",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810311C)",
@@ -12,7 +12,13 @@
     {
       "x4_code": "(19990115U)",
       "free_txt": [
-        "CNPD: corrected 4-dig. year and lower cases."
+        " CNPD: corrected 4-dig. year and lower cases"
+      ]
+    },
+    {
+      "x4_code": "(20240424A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -31,7 +37,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,NP/A,136,(1),25,196910)",
+        "x4_code": "(J,NP/A,136,25,1969)",
         "free_txt": [],
         "publication_year": "1969",
         "doi": null,
@@ -40,69 +46,59 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDGT)",
+        "x4_code": "(VDGT,1USAWIS)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDGT)",
-        "institute": null
+        "institute": "(1USAWIS)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-2(D,N)2-HE-3,,DA,,,EXP)",
+        "x4_code": "(1-H-2(D,N)2-HE-3,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "D,N"
-              ],
-              "2-HE-3,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "1-H-2",
             "process": "D,N",
-            "sf49": "2-HE-3,,DA,,,EXP",
+            "sf49": "2-HE-3,,DA",
             "sf4": "2-HE-3",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(D,N)2-HE-3,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(1-H-2(D,N)2-HE-3,,SIG,,,EXP)",
+        "x4_code": "(1-H-2(D,N)2-HE-3,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "D,N"
-              ],
-              "2-HE-3,,SIG,,,EXP"
-            ],
-            "type": null,
             "target": "1-H-2",
             "process": "D,N",
-            "sf49": "2-HE-3,,SIG,,,EXP",
+            "sf49": "2-HE-3,,SIG",
             "sf4": "2-HE-3",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(D,N)2-HE-3,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -110,7 +106,34 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-1",
+          "ERR-2",
+          "ERR-3",
+          "ERR-4"
+        ],
+        "units": [
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            0.1
+          ],
+          [
+            0.1
+          ],
+          [
+            0.3
+          ],
+          [
+            0.5
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -119,7 +142,7 @@
           "EN",
           "ANG-CM",
           "DATA-CM",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "MEV",
@@ -310,20 +333,84 @@
           {
             "x4_code": "(SOLST)",
             "free_txt": [
-              " Silicon surface-barrier detector"
+              " A thin solid state detector was used."
+            ]
+          },
+          {
+            "x4_code": "(SIBAR)",
+            "free_txt": [
+              " 3He particles were detected in eight or nine",
+              "detectors simultaneously between 10. and 50. degr.",
+              "The detector thicknesses ranged from 150. um at 10.",
+              "degr. to 30. um at 50. degr.",
+              "See REL-REF for details of neutron detection."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " The uncertainty due to beam ionization of the",
+              " gas in the Faraday cup"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " The uncertainty caused by beam scattering from",
+              "the collimating aperture"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3)",
+            "free_txt": [
+              " The uncertainty associated with the",
+              " chamber pressure"
+            ]
+          },
+          {
+            "x4_code": "(ERR-4)",
+            "free_txt": [
+              " The uncertainty due to the current integration"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDGT)",
+            "x4_code": "(VDGT,1USAWIS)",
             "free_txt": []
           }
         ],
         "method": [
           {
-            "x4_code": "(TOF)",
-            "free_txt": []
+            "x4_code": "(BCINT,TOF)",
+            "free_txt": [
+              " The absolute differential cross section",
+              "has been determined at E = 5.0, 5.8, 9.0 and 10.0 MeV",
+              "by the detection of the 3He particles, and at E = 5.0",
+              "and 5.8 MeV by the neutron time-of-flight method. The",
+              "scattering chamber is 35.6 cm in diameter and has",
+              "detector slit positions at 5. degr. intervals from",
+              "10. to 170. degr.",
+              "See REL-REF for details of TOF system."
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(M,,H.W.Lefevre+,J,RSI,33,1231,1962)",
+            "free_txt": [
+              " The neutron",
+              "time-of-flight system has been described"
+            ]
+          },
+          {
+            "x4_code": "(I,,S.T.Thornton,J,NP/A,137,531,1969)",
+            "free_txt": [
+              " The experimental",
+              "details for the present experiment"
+            ]
           }
         ],
         "sample": [
@@ -341,7 +428,7 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": "(DATA-ERR)",
+            "x4_code": "(ERR-T)",
             "free_txt": [
               " Absolute error"
             ]
@@ -349,7 +436,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.T.Thornton,J,NP/A,136,25,1969)",
             "free_txt": [
               " Table 1"
             ]
@@ -359,9 +446,20 @@
     },
     "003": {
       "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T,1.,14.)",
+            "free_txt": [
+              " The final uncertainties were determined",
+              "by adding quadratically the individual uncertainties",
+              "and ranged from 1% to 14% with a typical",
+              "uncertainty of 2%."
+            ]
+          }
+        ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.T.Thornton,J,NP/A,136,25,1969)",
             "free_txt": [
               " Table 2"
             ]

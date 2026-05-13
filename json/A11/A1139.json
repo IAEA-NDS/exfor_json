@@ -1,7 +1,7 @@
 {
   "entry": "A1139",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-10-24",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810526C)",
@@ -13,6 +13,12 @@
       "x4_code": "(19990214U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20240711A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -37,7 +43,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,93,(4),837,195402)",
+        "x4_code": "(J,PR,93,837,1954)",
         "free_txt": [],
         "publication_year": "1954",
         "doi": null,
@@ -46,40 +52,35 @@
     ],
     "facilities": [
       {
-        "x4_code": "(CYCLO)",
+        "x4_code": "(CYCLO,1USAUI )",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(CYCLO)",
-        "institute": null
+        "institute": "(1USAUI )"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(2-HE-4(P,EL)2-HE-4,,DA,,,EXP)",
+        "x4_code": "(2-HE-4(P,EL)2-HE-4,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "2-HE-4",
-              [
-                "P,EL"
-              ],
-              "2-HE-4,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "2-HE-4",
             "process": "P,EL",
-            "sf49": "2-HE-4,,DA,,,EXP",
+            "sf49": "2-HE-4,,DA",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(2-HE-4(P,EL)2-HE-4,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -93,11 +94,15 @@
       "common": {
         "heads": [
           "EN",
-          "EN-ERR"
+          "EN-ERR",
+          "ERR-1",
+          "ERR-2"
         ],
         "units": [
           "MEV",
-          "MEV"
+          "MEV",
+          "PER-CENT",
+          "PER-CENT"
         ],
         "data": [
           [
@@ -105,6 +110,12 @@
           ],
           [
             0.04
+          ],
+          [
+            0.1
+          ],
+          [
+            0.9
           ]
         ]
       },
@@ -112,7 +123,7 @@
         "heads": [
           "ANG-CM",
           "DATA-CM",
-          "DATA-ERR",
+          "ERR-T",
           "FLAG"
         ],
         "units": [
@@ -248,18 +259,22 @@
         "detector": [
           {
             "x4_code": "(PLATE)",
-            "free_txt": []
+            "free_txt": [
+              " Six 100-micron thick Ilford C-2 nuclear",
+              "plates mounted around the periphery of a cylindrical",
+              "photographic plate holder."
+            ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(CYCLO)",
+            "x4_code": "(CYCLO,1USAUI )",
             "free_txt": []
           }
         ],
         "method": [
           {
-            "x4_code": "(EXTB)",
+            "x4_code": "(EXTB,BCINT)",
             "free_txt": []
           }
         ],
@@ -277,15 +292,22 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": "(EN-ERR)",
+            "x4_code": "(ERR-T)",
             "free_txt": [
-              " Energy accuracy"
+              " Total error"
             ]
           },
           {
-            "x4_code": "(DATA-ERR)",
+            "x4_code": "(ERR-1)",
             "free_txt": [
-              " rms error"
+              " Uncertainty in geometrical factors measurement"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Uncertainty in the charge, gas pressure, and",
+              "   temperature"
             ]
           }
         ],
@@ -317,7 +339,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,W.E.Kreger+,J,PR,93,837,1954)",
             "free_txt": [
               " Table 2"
             ]

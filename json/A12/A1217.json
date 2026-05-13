@@ -1,7 +1,7 @@
 {
   "entry": "A1217",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-10-17",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19870608C)",
@@ -13,6 +13,12 @@
       "x4_code": "(19990305U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20250823A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -43,7 +49,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,74,(11),1594,194812)",
+        "x4_code": "(J,PR,74,1594,1948)",
         "free_txt": [],
         "publication_year": "1948",
         "doi": null,
@@ -52,40 +58,35 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG)",
+        "x4_code": "(VDG,1USAMIN)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": null
+        "institute": "(1USAMIN)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-2(D,EL)1-H-2,,DA,,,EXP)",
+        "x4_code": "(1-H-2(D,EL)1-H-2,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "D,EL"
-              ],
-              "1-H-2,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "1-H-2",
             "process": "D,EL",
-            "sf49": "1-H-2,,DA,,,EXP",
+            "sf49": "1-H-2,,DA",
             "sf4": "1-H-2",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(D,EL)1-H-2,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -93,22 +94,27 @@
   },
   "data_tables": {
     "001": {
-      "common": null
-    },
-    "002": {
       "common": {
         "heads": [
+          "ERR-1",
           "ERR-T"
         ],
         "units": [
+          "PER-CENT",
           "PER-CENT"
         ],
         "data": [
           [
             1.5
+          ],
+          [
+            2.5
           ]
         ]
-      },
+      }
+    },
+    "002": {
+      "common": null,
       "data": {
         "heads": [
           "EN",
@@ -272,6 +278,24 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "correction": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "A correction has been made for:",
+              " * the energy lost by the beam in passing through the",
+              "entrance window and through the deuterium to the",
+              "center of the scattering chamber;",
+              " * the scattering cross sections due to the proton-",
+              "deuteron scattering from the hydrogen contaminations in",
+              "the ion beam and in the scattering chamber gas;",
+              " * the finite size of the beam of deuterons passing",
+              "through the scattering chamber and to the finite",
+              "angular aperture of the slits in front of the",
+              "proportional counter, etc."
+            ]
+          }
+        ],
         "detector": [
           {
             "x4_code": "(PROPC)",
@@ -280,9 +304,33 @@
             ]
           }
         ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " The probable errors due to gas pressure",
+              "measurement, current measurement, measurement of",
+              "geometrical factors."
+            ]
+          },
+          {
+            "x4_code": "(ERR-S,1.,1.5)",
+            "free_txt": [
+              " The statistical probable error < 1%,",
+              "except at 80, 90, and 100 degr. where this error at",
+              "some points may be 1.5%."
+            ]
+          }
+        ],
         "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,1USAMIN)",
             "free_txt": []
           }
         ],
@@ -298,19 +346,11 @@
     },
     "002": {
       "0": {
-        "err-analys": [
-          {
-            "x4_code": "(ERR-T)",
-            "free_txt": [
-              " Total error"
-            ]
-          }
-        ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,J.M.Blair+,J,PR,74,1594,1948)",
             "free_txt": [
-              " Table 1"
+              " Table I"
             ]
           }
         ]

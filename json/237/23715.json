@@ -62,16 +62,6 @@
         "publication_year": "1985",
         "doi": null,
         "pointer": "0"
-      },
-      {
-        "x4_code": "((P,INDC(FR)-66,36,1985)=(P,NEANDC(E)-262/L,36,1985))",
-        "free_txt": [
-          " In French",
-          " Prelim. data for He-6, Li-9, Be-10, Be-12, C-15"
-        ],
-        "publication_year": "1985",
-        "doi": null,
-        "pointer": "0"
       }
     ],
     "facilities": [
@@ -92,14 +82,7 @@
         "x4_code": "((92-U-235(N,F)ELEM/MASS,TER,FY)/(92-U-235(N,F)2-HE-4,TER,FY))",
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,TER,FY"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,TER,FY)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,TER,FY",
@@ -111,14 +94,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "2-HE-4,TER,FY"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F)2-HE-4,TER,FY)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "2-HE-4,TER,FY",
@@ -130,22 +106,20 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((92-U-235(N,F)ELEM/MASS,TER,FY)",
+          "(92-U-235(N,F)2-HE-4,TER,FY))"
+        ],
+        "operator": "Divide",
         "free_text": " Ratio is given in the article to 10**4 alphas,so factor 10-4 was applied to data in DATA block.",
         "pointer": "1"
       },
       "2": {
         "x4_code": "(92-U-235(N,F)ELEM/MASS,TER,KE)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,TER,KE"
-            ],
-            "type": null,
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,TER,KE",
@@ -154,10 +128,12 @@
             "sf6": "KE",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,TER,KE)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       }

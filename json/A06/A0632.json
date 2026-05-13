@@ -1,7 +1,7 @@
 {
   "entry": "A0632",
-  "last_updated": "2021-09-21",
-  "number_of_revisions": "4",
+  "last_updated": "2026-04-01",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19990601C)",
@@ -25,6 +25,12 @@
       "x4_code": "(20210317A)",
       "free_txt": [
         " SD: Entry re-compiled."
+      ]
+    },
+    {
+      "x4_code": "(20260204U)",
+      "free_txt": [
+        " SD: Small corrections in all Subents."
       ]
     }
   ],
@@ -93,7 +99,7 @@
       {
         "x4_code": "(CCW,2GERMST)",
         "free_txt": [
-          " The accelerator (350 kV)"
+          " The accelerator (350 kV)."
         ],
         "pointer": "0",
         "facility_type": "(CCW)",
@@ -102,7 +108,7 @@
       {
         "x4_code": "(CCW,2GERBOC)",
         "free_txt": [
-          " the accelerators (100 kV and 400 kV)"
+          " The accelerators (100 kV and 400 kV)."
         ],
         "pointer": "0",
         "facility_type": "(CCW)",
@@ -111,7 +117,7 @@
       {
         "x4_code": "(VDG,2GERBOC)",
         "free_txt": [
-          " the accelerator (4 MV)",
+          " The accelerator (4 MV).",
           "             The energy spread:",
           "+-0.020 keV for 100 kV accelerator.",
           "+-0.3   keV for 350 kV accelerator.",
@@ -119,7 +125,7 @@
           " Accelerators provided p, d, 6Li, and 7Li ion beams in",
           "the c.m. energy range E = 10 to 1450 keV. At the lowest",
           "energies, the p and d beam currents on target were",
-          "600 uA and those of the 6-Li and 7-Li beams were 40 uA.",
+          "600 uA and those of the 6Li and 7Li beams were 40 uA.",
           " At higher energies the currents were limited by",
           "dead time effects in the detectors (kept below 3%) or",
           "by requirements of the beam calorimeters. The",
@@ -140,14 +146,7 @@
         "x4_code": "((1-H-1(3-LI-6,HE3)2-HE-4,,SIG,,SFC)=(3-LI-6(P,HE3)2-HE-4,,SIG,,SFC))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "3-LI-6,HE3"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(3-LI-6,HE3)2-HE-4,,SIG,,SFC)",
             "target": "1-H-1",
             "process": "3-LI-6,HE3",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -159,14 +158,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "3-LI-6",
-              [
-                "P,HE3"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
+            "x4_code": "(3-LI-6(P,HE3)2-HE-4,,SIG,,SFC)",
             "target": "3-LI-6",
             "process": "P,HE3",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -178,7 +170,12 @@
             "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-1(3-LI-6,HE3)2-HE-4,,SIG,,SFC)",
+          "(3-LI-6(P,HE3)2-HE-4,,SIG,,SFC))"
+        ],
+        "operator": "Equal",
         "free_text": "",
         "pointer": "0"
       }
@@ -188,14 +185,7 @@
         "x4_code": "((1-H-2(3-LI-6,A)2-HE-4,,SIG,,SFC)=(3-LI-6(D,A)2-HE-4,,SIG,,SFC))",
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "3-LI-6,A"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
+            "x4_code": "(1-H-2(3-LI-6,A)2-HE-4,,SIG,,SFC)",
             "target": "1-H-2",
             "process": "3-LI-6,A",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -207,14 +197,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "3-LI-6",
-              [
-                "D,A"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
+            "x4_code": "(3-LI-6(D,A)2-HE-4,,SIG,,SFC)",
             "target": "3-LI-6",
             "process": "D,A",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -226,7 +209,12 @@
             "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-2(3-LI-6,A)2-HE-4,,SIG,,SFC)",
+          "(3-LI-6(D,A)2-HE-4,,SIG,,SFC))"
+        ],
+        "operator": "Equal",
         "free_text": "",
         "pointer": "0"
       }
@@ -236,14 +224,7 @@
         "x4_code": "((1-H-1(3-LI-7,A)2-HE-4,,SIG,,SFC)=(3-LI-7(P,A)2-HE-4,,SIG,,SFC))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "3-LI-7,A"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(3-LI-7,A)2-HE-4,,SIG,,SFC)",
             "target": "1-H-1",
             "process": "3-LI-7,A",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -255,14 +236,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "3-LI-7",
-              [
-                "P,A"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
+            "x4_code": "(3-LI-7(P,A)2-HE-4,,SIG,,SFC)",
             "target": "3-LI-7",
             "process": "P,A",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -274,45 +248,24 @@
             "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-1(3-LI-7,A)2-HE-4,,SIG,,SFC)",
+          "(3-LI-7(P,A)2-HE-4,,SIG,,SFC))"
+        ],
+        "operator": "Equal",
         "free_text": "",
         "pointer": "0"
       }
     },
     "005": {
       "0": {
-        "x4_code": "((1-H-1(3-LI-6,HE3)2-HE-4,,DA,A,REL)=(3-LI-6(P,HE3)2-HE-4,,DA,,REL))",
+        "x4_code": "((1-H-1(3-LI-6,HE3)2-HE-4,,DA,,REL)=(3-LI-6(P,HE3)2-HE-4,,DA,RSD,REL))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "3-LI-6,HE3"
-              ],
-              "2-HE-4,,DA,A,REL"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(3-LI-6,HE3)2-HE-4,,DA,,REL)",
             "target": "1-H-1",
             "process": "3-LI-6,HE3",
-            "sf49": "2-HE-4,,DA,A,REL",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "DA",
-            "sf7": "A",
-            "sf8": "REL",
-            "sf9": null
-          },
-          {
-            "code": [
-              "3-LI-6",
-              [
-                "P,HE3"
-              ],
-              "2-HE-4,,DA,,REL"
-            ],
-            "type": null,
-            "target": "3-LI-6",
-            "process": "P,HE3",
             "sf49": "2-HE-4,,DA,,REL",
             "sf4": "2-HE-4",
             "sf5": null,
@@ -320,9 +273,26 @@
             "sf7": null,
             "sf8": "REL",
             "sf9": null
+          },
+          {
+            "x4_code": "(3-LI-6(P,HE3)2-HE-4,,DA,RSD,REL)",
+            "target": "3-LI-6",
+            "process": "P,HE3",
+            "sf49": "2-HE-4,,DA,RSD,REL",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "DA",
+            "sf7": "RSD",
+            "sf8": "REL",
+            "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-1(3-LI-6,HE3)2-HE-4,,DA,,REL)",
+          "(3-LI-6(P,HE3)2-HE-4,,DA,RSD,REL))"
+        ],
+        "operator": "Equal",
         "free_text": " The observed number of counts in each detectorcorrected for its solid angle.",
         "pointer": "0"
       }
@@ -330,16 +300,9 @@
     "007": {
       "0": {
         "x4_code": "(3-LI-6(P,HE3)2-HE-4,,DA,,REL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-6",
-              [
-                "P,HE3"
-              ],
-              "2-HE-4,,DA,,REL"
-            ],
-            "type": null,
             "target": "3-LI-6",
             "process": "P,HE3",
             "sf49": "2-HE-4,,DA,,REL",
@@ -348,10 +311,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": "REL",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-6(P,HE3)2-HE-4,,DA,,REL)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": " The observed number of counts in each detectorcorrected for its solid angle.",
         "pointer": "0"
       }
@@ -361,14 +326,7 @@
         "x4_code": "((1-H-2(3-LI-6,A)2-HE-4,,DA,A,REL)=(3-LI-6(D,A)2-HE-4,,DA,,REL))",
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "3-LI-6,A"
-              ],
-              "2-HE-4,,DA,A,REL"
-            ],
-            "type": null,
+            "x4_code": "(1-H-2(3-LI-6,A)2-HE-4,,DA,A,REL)",
             "target": "1-H-2",
             "process": "3-LI-6,A",
             "sf49": "2-HE-4,,DA,A,REL",
@@ -380,14 +338,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "3-LI-6",
-              [
-                "D,A"
-              ],
-              "2-HE-4,,DA,,REL"
-            ],
-            "type": null,
+            "x4_code": "(3-LI-6(D,A)2-HE-4,,DA,,REL)",
             "target": "3-LI-6",
             "process": "D,A",
             "sf49": "2-HE-4,,DA,,REL",
@@ -399,7 +350,12 @@
             "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-2(3-LI-6,A)2-HE-4,,DA,A,REL)",
+          "(3-LI-6(D,A)2-HE-4,,DA,,REL))"
+        ],
+        "operator": "Equal",
         "free_text": " The observed number of counts in each detectorcorrected for its solid angle.",
         "pointer": "0"
       }
@@ -407,16 +363,9 @@
     "014": {
       "0": {
         "x4_code": "(3-LI-6(D,A)2-HE-4,,DA,,REL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-6",
-              [
-                "D,A"
-              ],
-              "2-HE-4,,DA,,REL"
-            ],
-            "type": null,
             "target": "3-LI-6",
             "process": "D,A",
             "sf49": "2-HE-4,,DA,,REL",
@@ -425,10 +374,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": "REL",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-6(D,A)2-HE-4,,DA,,REL)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": " The observed number of counts in each detectorcorrected for its solid angle.",
         "pointer": "0"
       }
@@ -438,14 +389,7 @@
         "x4_code": "((1-H-1(3-LI-7,A)2-HE-4,,DA,,REL)=(3-LI-7(P,A)2-HE-4,,DA,,REL))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "3-LI-7,A"
-              ],
-              "2-HE-4,,DA,,REL"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(3-LI-7,A)2-HE-4,,DA,,REL)",
             "target": "1-H-1",
             "process": "3-LI-7,A",
             "sf49": "2-HE-4,,DA,,REL",
@@ -457,14 +401,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "3-LI-7",
-              [
-                "P,A"
-              ],
-              "2-HE-4,,DA,,REL"
-            ],
-            "type": null,
+            "x4_code": "(3-LI-7(P,A)2-HE-4,,DA,,REL)",
             "target": "3-LI-7",
             "process": "P,A",
             "sf49": "2-HE-4,,DA,,REL",
@@ -476,7 +413,12 @@
             "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-1(3-LI-7,A)2-HE-4,,DA,,REL)",
+          "(3-LI-7(P,A)2-HE-4,,DA,,REL))"
+        ],
+        "operator": "Equal",
         "free_text": " The observed number of counts in each detectorcorrected for its solid angle.",
         "pointer": "0"
       }
@@ -484,16 +426,9 @@
     "018": {
       "0": {
         "x4_code": "(3-LI-7(P,A)2-HE-4,,DA,,REL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-7",
-              [
-                "P,A"
-              ],
-              "2-HE-4,,DA,,REL"
-            ],
-            "type": null,
             "target": "3-LI-7",
             "process": "P,A",
             "sf49": "2-HE-4,,DA,,REL",
@@ -502,10 +437,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": "REL",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-7(P,A)2-HE-4,,DA,,REL)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": " The observed number of counts in each detectorcorrected for its solid angle.",
         "pointer": "0"
       }
@@ -513,16 +450,9 @@
     "020": {
       "0": {
         "x4_code": "(3-LI-6(P,HE3)2-HE-4,,DA,,LEG/RS)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-6",
-              [
-                "P,HE3"
-              ],
-              "2-HE-4,,DA,,LEG/RS"
-            ],
-            "type": null,
             "target": "3-LI-6",
             "process": "P,HE3",
             "sf49": "2-HE-4,,DA,,LEG/RS",
@@ -531,10 +461,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": "LEG/RS",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-6(P,HE3)2-HE-4,,DA,,LEG/RS)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -542,16 +474,9 @@
     "021": {
       "0": {
         "x4_code": "(3-LI-6(D,A)2-HE-4,,DA,,LEG/RS)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-6",
-              [
-                "D,A"
-              ],
-              "2-HE-4,,DA,,LEG/RS"
-            ],
-            "type": null,
             "target": "3-LI-6",
             "process": "D,A",
             "sf49": "2-HE-4,,DA,,LEG/RS",
@@ -560,10 +485,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": "LEG/RS",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-6(D,A)2-HE-4,,DA,,LEG/RS)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -571,16 +498,9 @@
     "022": {
       "0": {
         "x4_code": "(3-LI-7(P,A)2-HE-4,,DA,,LEG/RS)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-7",
-              [
-                "P,A"
-              ],
-              "2-HE-4,,DA,,LEG/RS"
-            ],
-            "type": null,
             "target": "3-LI-7",
             "process": "P,A",
             "sf49": "2-HE-4,,DA,,LEG/RS",
@@ -589,10 +509,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": "LEG/RS",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-7(P,A)2-HE-4,,DA,,LEG/RS)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -602,14 +524,7 @@
         "x4_code": "((1-H-1(3-LI-6,HE3)2-HE-4,,SIG,,SFC)=(3-LI-6(P,HE3)2-HE-4,,SIG,,SFC))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "3-LI-6,HE3"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(3-LI-6,HE3)2-HE-4,,SIG,,SFC)",
             "target": "1-H-1",
             "process": "3-LI-6,HE3",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -621,14 +536,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "3-LI-6",
-              [
-                "P,HE3"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
+            "x4_code": "(3-LI-6(P,HE3)2-HE-4,,SIG,,SFC)",
             "target": "3-LI-6",
             "process": "P,HE3",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -640,7 +548,12 @@
             "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-1(3-LI-6,HE3)2-HE-4,,SIG,,SFC)",
+          "(3-LI-6(P,HE3)2-HE-4,,SIG,,SFC))"
+        ],
+        "operator": "Equal",
         "free_text": "",
         "pointer": "0"
       }
@@ -648,16 +561,9 @@
     "024": {
       "0": {
         "x4_code": "(3-LI-6(P,HE3)2-HE-4,,SIG,,SFC)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-6",
-              [
-                "P,HE3"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
             "target": "3-LI-6",
             "process": "P,HE3",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -666,10 +572,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "SFC",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-6(P,HE3)2-HE-4,,SIG,,SFC)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -679,14 +587,7 @@
         "x4_code": "((1-H-2(3-LI-6,A)2-HE-4,,SIG,,SFC)=(3-LI-6(D,A)2-HE-4,,SIG,,SFC))",
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "3-LI-6,A"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
+            "x4_code": "(1-H-2(3-LI-6,A)2-HE-4,,SIG,,SFC)",
             "target": "1-H-2",
             "process": "3-LI-6,A",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -698,14 +599,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "3-LI-6",
-              [
-                "D,A"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
+            "x4_code": "(3-LI-6(D,A)2-HE-4,,SIG,,SFC)",
             "target": "3-LI-6",
             "process": "D,A",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -717,7 +611,12 @@
             "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-2(3-LI-6,A)2-HE-4,,SIG,,SFC)",
+          "(3-LI-6(D,A)2-HE-4,,SIG,,SFC))"
+        ],
+        "operator": "Equal",
         "free_text": "",
         "pointer": "0"
       }
@@ -725,16 +624,9 @@
     "026": {
       "0": {
         "x4_code": "(3-LI-6(D,A)2-HE-4,,SIG,,SFC)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-6",
-              [
-                "D,A"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
             "target": "3-LI-6",
             "process": "D,A",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -743,10 +635,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "SFC",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-6(D,A)2-HE-4,,SIG,,SFC)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -756,14 +650,7 @@
         "x4_code": "((1-H-1(3-LI-7,A)2-HE-4,,SIG,,SFC)=(3-LI-7(P,A)2-HE-4,,SIG,,SFC))",
         "children": [
           {
-            "code": [
-              "1-H-1",
-              [
-                "3-LI-7,A"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
+            "x4_code": "(1-H-1(3-LI-7,A)2-HE-4,,SIG,,SFC)",
             "target": "1-H-1",
             "process": "3-LI-7,A",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -775,14 +662,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "3-LI-7",
-              [
-                "P,A"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
+            "x4_code": "(3-LI-7(P,A)2-HE-4,,SIG,,SFC)",
             "target": "3-LI-7",
             "process": "P,A",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -794,7 +674,12 @@
             "sf9": null
           }
         ],
-        "type": "=",
+        "math_expression": [
+          "Equal",
+          "((1-H-1(3-LI-7,A)2-HE-4,,SIG,,SFC)",
+          "(3-LI-7(P,A)2-HE-4,,SIG,,SFC))"
+        ],
+        "operator": "Equal",
         "free_text": "",
         "pointer": "0"
       }
@@ -802,16 +687,9 @@
     "028": {
       "0": {
         "x4_code": "(3-LI-7(P,A)2-HE-4,,SIG,,SFC)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-7",
-              [
-                "P,A"
-              ],
-              "2-HE-4,,SIG,,SFC"
-            ],
-            "type": null,
             "target": "3-LI-7",
             "process": "P,A",
             "sf49": "2-HE-4,,SIG,,SFC",
@@ -820,10 +698,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "SFC",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-7(P,A)2-HE-4,,SIG,,SFC)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -1890,19 +1770,19 @@
     "020": {
       "common": {
         "heads": [
-          "EN-ERR-DIG",
-          "NUMBER-CM"
+          "NUMBER",
+          "EN-ERR-DIG"
         ],
         "units": [
-          "PER-CENT",
-          "NO-DIM"
+          "NO-DIM",
+          "PER-CENT"
         ],
         "data": [
           [
-            1.6
+            1.0
           ],
           [
-            1.0
+            1.6
           ]
         ]
       },
@@ -2035,19 +1915,19 @@
     "021": {
       "common": {
         "heads": [
-          "EN-ERR-DIG",
-          "NUMBER-CM"
+          "NUMBER",
+          "EN-ERR-DIG"
         ],
         "units": [
-          "PER-CENT",
-          "NO-DIM"
+          "NO-DIM",
+          "PER-CENT"
         ],
         "data": [
           [
-            1.6
+            2.0
           ],
           [
-            2.0
+            1.6
           ]
         ]
       },
@@ -2186,19 +2066,19 @@
     "022": {
       "common": {
         "heads": [
-          "EN-ERR-DIG",
-          "NUMBER-CM"
+          "NUMBER",
+          "EN-ERR-DIG"
         ],
         "units": [
-          "PER-CENT",
-          "NO-DIM"
+          "NO-DIM",
+          "PER-CENT"
         ],
         "data": [
           [
-            1.6
+            2.0
           ],
           [
-            2.0
+            1.6
           ]
         ]
       },
@@ -2933,8 +2813,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "The fusion reactions 6Li(p,alpha)3He, 6Li(d,alpha)",
-              "4He, and 7Li(p,alpha) 4He have been studied over the",
+              "The fusion reactions 6Li(p,alpha)3He, 6Li(d,alpha)4He,",
+              "and 7Li(p,alpha)4He have been studied over the",
               "c.m. energy range E= 10 to 1450 keV. Each reaction",
               "involved the use of hydrogen projectiles and LiF",
               "solid targets as well as Li projectiles and hydrogen",
@@ -2956,19 +2836,19 @@
           {
             "x4_code": "(CCW,2GERMST)",
             "free_txt": [
-              " The accelerator (350 kV)"
+              " The accelerator (350 kV)."
             ]
           },
           {
             "x4_code": "(CCW,2GERBOC)",
             "free_txt": [
-              " the accelerators (100 kV and 400 kV)"
+              " The accelerators (100 kV and 400 kV)."
             ]
           },
           {
             "x4_code": "(VDG,2GERBOC)",
             "free_txt": [
-              " the accelerator (4 MV)",
+              " The accelerator (4 MV).",
               "             The energy spread:",
               "+-0.020 keV for 100 kV accelerator.",
               "+-0.3   keV for 350 kV accelerator.",
@@ -2976,7 +2856,7 @@
               " Accelerators provided p, d, 6Li, and 7Li ion beams in",
               "the c.m. energy range E = 10 to 1450 keV. At the lowest",
               "energies, the p and d beam currents on target were",
-              "600 uA and those of the 6-Li and 7-Li beams were 40 uA.",
+              "600 uA and those of the 6Li and 7Li beams were 40 uA.",
               " At higher energies the currents were limited by",
               "dead time effects in the detectors (kept below 3%) or",
               "by requirements of the beam calorimeters. The",
@@ -3015,7 +2895,7 @@
               " All values have an additional common error",
               "of 7% due to",
               "   * uncertainties in proton beam (1% and 2.5%)",
-              "   * uncertainties in pressure (2%), and",
+              "   * uncertainty in pressure (2%), and",
               "   * uncertainty in target thickness and solid",
               "     angle 6.4%"
             ]
@@ -3034,8 +2914,8 @@
             "x4_code": null,
             "free_txt": [
               "The hydrogen gas (H2 = 99.99% or D2 = 99.9%) was",
-              "not recirculated. The H2 (D2) gas pressure given above",
-              "was reduced to 1.8 x 10**(-2) (7.5 x 10**(-3)) mbar",
+              "not recirculated. The H2(D2) gas pressure was",
+              "reduced to 1.8 x 10**(-2) (7.5 x 10**(-3)) mbar",
               "and 1.8 x 10**(-5) (5 x 10**(-6)) mbar in the region",
               "of the first and fourth pumping stage, respectively.",
               "Disk-shaped target chamber (20 cm diameter,",
@@ -3045,9 +2925,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Table 1 from Z.Phys.,A342(1992)471"
+              " Table 1"
             ]
           }
         ]
@@ -3079,7 +2959,7 @@
               " All values have an additional common error",
               "of 7% due to",
               "   * uncertainties in proton beam (1% and 2.5%)",
-              "   * uncertainties in pressure (2%), and",
+              "   * uncertainty in pressure (2%), and",
               "   * uncertainty in target thickness and solid",
               "     angle 6.4%"
             ]
@@ -3098,8 +2978,8 @@
             "x4_code": null,
             "free_txt": [
               "The hydrogen gas (H2 = 99.99% or D2 = 99.9%) was",
-              "not recirculated. The H2 (D2) gas pressure given above",
-              "was reduced to 1.8 x 10**(-2) (7.5 x 10**(-3)) mbar",
+              "not recirculated. The H2 (D2) gas pressure was",
+              "reduced to 1.8 x 10**(-2) (7.5 x 10**(-3)) mbar",
               "and 1.8 x 10**(-5) (5 x 10**(-6)) mbar in the region",
               "of the first and fourth pumping stage, respectively.",
               "Disk-shaped target chamber (20 cm diameter,",
@@ -3109,9 +2989,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Table 1 from Z.Phys.,A342(1992)471"
+              " Table 1"
             ]
           }
         ]
@@ -3143,7 +3023,7 @@
               " All values have an additional common error",
               "of 7% due to",
               "   * uncertainties in proton beam (1% and 2.5%)",
-              "   * uncertainties in pressure (2%), and",
+              "   * uncertainty in pressure (2%), and",
               "   * uncertainty in target thickness and solid",
               "     angle 6.4%"
             ]
@@ -3162,8 +3042,8 @@
             "x4_code": null,
             "free_txt": [
               "The hydrogen gas (H2 = 99.99% or D2 = 99.9%) was",
-              "not recirculated. The H2 (D2) gas pressure given above",
-              "was reduced to 1.8 x 10**(-2) (7.5 x 10**(-3)) mbar",
+              "not recirculated. The H2 (D2) gas pressure was",
+              "reduced to 1.8 x 10**(-2) (7.5 x 10**(-3)) mbar",
               "and 1.8 x 10**(-5) (5 x 10**(-6)) mbar in the region",
               "of the first and fourth pumping stage, respectively.",
               "Disk-shaped target chamber (20 cm diameter,",
@@ -3173,9 +3053,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Table 1 from Z.Phys.,A342(1992)471"
+              " Table 1"
             ]
           }
         ]
@@ -3213,8 +3093,8 @@
             "x4_code": null,
             "free_txt": [
               "The hydrogen gas (H2 = 99.99% or D2 = 99.9%) was",
-              "not recirculated. The H2 (D2) gas pressure given above",
-              "was reduced to 1.8 x 10**(-2) (7.5 x 10**(-3)) mbar",
+              "not recirculated. The H2 (D2) gas pressure was",
+              "reduced to 1.8 x 10**(-2) (7.5 x 10**(-3)) mbar",
               "and 1.8 x 10**(-5) (5 x 10**(-6)) mbar in the region",
               "of the first and fourth pumping stage, respectively.",
               "Disk-shaped target chamber (20 cm diameter,",
@@ -3224,9 +3104,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Fig. 5 from Z.Phys.,A342(1992)471"
+              " Fig. 5"
             ]
           }
         ]
@@ -3267,15 +3147,15 @@
             "free_txt": [
               " A 1.1 ug/cm2 thick LiF target on a",
               "Ta backing",
-              " Cyclindrical target chamber (close geometry)"
+              " Cylindrical target chamber (close geometry)"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Fig. 5 from Z.Phys.,A342(1992)471"
+              " Fig. 5"
             ]
           }
         ]
@@ -3313,8 +3193,8 @@
             "x4_code": null,
             "free_txt": [
               "The hydrogen gas (H2 = 99.99% or D2 = 99.9%) was",
-              "not recirculated. The H2 (D2) gas pressure given above",
-              "was reduced to 1.8 x 10**(-2) (7.5 x 10**(-3)) mbar",
+              "not recirculated. The H2 (D2) gas pressure was",
+              "reduced to 1.8 x 10**(-2) (7.5 x 10**(-3)) mbar",
               "and 1.8 x 10**(-5) (5 x 10**(-6)) mbar in the region",
               "of the first and fourth pumping stage, respectively.",
               "Disk-shaped target chamber (20 cm diameter,",
@@ -3324,9 +3204,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Fig. 5 from Z.Phys.,A342(1992)471"
+              " Fig. 5"
             ]
           }
         ]
@@ -3367,15 +3247,15 @@
             "free_txt": [
               " A 1.1 ug/cm2 thick LiF target on a",
               "Ta backing",
-              " Cyclindrical target chamber (close geometry)"
+              " Cylindrical target chamber (close geometry)"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Fig. 5 from Z.Phys.,A342(1992)471"
+              " Fig. 5"
             ]
           }
         ]
@@ -3413,8 +3293,8 @@
             "x4_code": null,
             "free_txt": [
               "The hydrogen gas (H2 = 99.99% or D2 = 99.9%) was",
-              "not recirculated. The H2 (D2) gas pressure given above",
-              "was reduced to 1.8 x 10**(-2) (7.5 x 10**(-3)) mbar",
+              "not recirculated. The H2 (D2) gas pressure was",
+              "reduced to 1.8 x 10**(-2) (7.5 x 10**(-3)) mbar",
               "and 1.8 x 10**(-5) (5 x 10**(-6)) mbar in the region",
               "of the first and fourth pumping stage, respectively.",
               "Disk-shaped target chamber (20 cm diameter,",
@@ -3424,9 +3304,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Fig. 5 from Z.Phys.,A342(1992)471"
+              " Fig. 5"
             ]
           }
         ]
@@ -3465,18 +3345,18 @@
           {
             "x4_code": "(3-LI-7,NAT=0.92)",
             "free_txt": [
-              " A 1.1 ug/cm 2 thick LiF target on a",
+              " A 1.1 ug/cm2 thick LiF target on a",
               "Ta backing (Li of natural isotopic composition:",
               "6Li= 8%, 7Li= 92%)",
-              " Cyclindrical target chamber (close geometry)"
+              " Cylindrical target chamber (close geometry)"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Fig. 5 from Z.Phys.,A342(1992)471"
+              " Fig. 5"
             ]
           }
         ]
@@ -3505,9 +3385,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Fig. 6a from Z.Phys.,A342(1992)471"
+              " Fig. 6a"
             ]
           }
         ]
@@ -3520,12 +3400,12 @@
             "x4_code": null,
             "free_txt": [
               "Due to the identical boson character of the ejectiles",
-              "in 6Li(d,alpha) 4He and 7Li(p,alpha) 4He, the",
+              "in 6Li(d,alpha)4He and 7Li(p,alpha)4He, the",
               "distributions are symmetrical about angle=90 degr.",
               "and thus can be described by even Legendre",
               "polynomials. Fits to the distributions of both",
               "reactions have shown that the data can be described",
-              "sufficiently with an A2 coefficient (A4=~0) ."
+              "sufficiently with an A2 coefficient (A4=~0)."
             ]
           }
         ],
@@ -3539,9 +3419,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Fig. 6b from Z.Phys.,A342(1992)471"
+              " Fig. 6b"
             ]
           }
         ]
@@ -3554,12 +3434,12 @@
             "x4_code": null,
             "free_txt": [
               "Due to the identical boson character of the ejectiles",
-              "in 6Li(d,alpha) 4He and 7Li(p,alpha) 4He, the",
+              "in 6Li(d,alpha)4He and 7Li(p,alpha)4He, the",
               "distributions are symmetrical about angle=90 degr.",
               "and thus can be described by even Legendre",
               "polynomials. Fits to the distributions of both",
               "reactions have shown that the data can be described",
-              "sufficiently with an A2 coefficient (A4=~0) ."
+              "sufficiently with an A2 coefficient (A4=~0)."
             ]
           }
         ],
@@ -3573,9 +3453,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Fig. 6c from Z.Phys.,A342(1992)471"
+              " Fig. 6c"
             ]
           }
         ]
@@ -3606,8 +3486,8 @@
             "free_txt": [
               " All values have an additional common error",
               "of 5% due to",
-              "   * uncertainties in proton beam (2.5%)",
-              "   * uncertainties in pressure (1.7%), and",
+              "   * uncertainty in proton beam (2.5%)",
+              "   * uncertainty in pressure (1.7%), and",
               "   * uncertainty in target thickness and solid",
               "     angle 3.6%"
             ]
@@ -3631,9 +3511,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Table 1 from Z.Phys.,A342(1992)471"
+              " Table 1"
             ]
           }
         ]
@@ -3658,7 +3538,7 @@
             "free_txt": [
               " Errors quoted arise from uncertainties in",
               "number of counts, effective energy, angular",
-              "distributions, and target stoichometry."
+              "distributions, and target stoichiometry."
             ]
           },
           {
@@ -3689,15 +3569,15 @@
             "free_txt": [
               " A 1.1 ug/cm2 thick LiF target on a",
               "Ta backing",
-              " Cyclindrical target chamber (close geometry)"
+              " Cylindrical target chamber (close geometry)"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Table 1 from Z.Phys.,A342(1992)471"
+              " Table 1"
             ]
           }
         ]
@@ -3709,7 +3589,7 @@
           {
             "x4_code": "(SI)",
             "free_txt": [
-              " A pair of Si detectors (450 mm2 active area) was",
+              " A pair of Si detectors (450 mm2 active area) were",
               "placed at opposite sides to the beam axis, and with",
               "each detector at a distance of 9 mm from the beam axis."
             ]
@@ -3728,8 +3608,8 @@
             "free_txt": [
               " All values have an additional common error",
               "of 5% due to",
-              "   * uncertainties in proton beam (2.5%)",
-              "   * uncertainties in pressure (1.7%), and",
+              "   * uncertainty in proton beam (2.5%)",
+              "   * uncertainty in pressure (1.7%), and",
               "   * uncertainty in target thickness and solid",
               "     angle 3.6%"
             ]
@@ -3747,15 +3627,15 @@
           {
             "x4_code": null,
             "free_txt": [
-              "rectangular target chamber (close geometry)"
+              "Rectangular target chamber (close geometry)"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Table 1 from Z.Phys.,A342(1992)471"
+              " Table 1"
             ]
           }
         ]
@@ -3780,7 +3660,7 @@
             "free_txt": [
               " Errors quoted arise from uncertainties in",
               "number of counts, effective energy, angular",
-              "distributions, and target stoichometry."
+              "distributions, and target stoichiometry."
             ]
           },
           {
@@ -3811,15 +3691,15 @@
             "free_txt": [
               " A 1.1 ug/cm2 thick LiF target on a",
               "Ta backing",
-              " Cyclindrical target chamber (close geometry)"
+              " Cylindrical target chamber (close geometry)"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Table 1 from Z.Phys.,A342(1992)471"
+              " Table 1"
             ]
           }
         ]
@@ -3850,8 +3730,8 @@
             "free_txt": [
               " All values have an additional common error",
               "of 5% due to",
-              "   * uncertainties in proton beam (2.5%)",
-              "   * uncertainties in pressure (1.7%), and",
+              "   * uncertainty in proton beam (2.5%)",
+              "   * uncertainty in pressure (1.7%), and",
               "   * uncertainty in target thickness and solid",
               "     angle 3.6%"
             ]
@@ -3875,9 +3755,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Table 1 from Z.Phys.,A342(1992)471"
+              " Table 1"
             ]
           }
         ]
@@ -3902,14 +3782,14 @@
             "free_txt": [
               " Errors quoted arise from uncertainties in",
               "number of counts, effective energy, angular",
-              "distributions, and target stoich!ometry."
+              "distributions, and target stoichiometry."
             ]
           },
           {
             "x4_code": "(ERR-2)",
             "free_txt": [
               " All values have an additional common error of",
-              "10% due to the uncertainty in normalisation."
+              "10% due to the uncertainty in normalization."
             ]
           }
         ],
@@ -3940,15 +3820,15 @@
               " A 1.1 ug/cm 2 thick LiF target on a",
               "Ta backing (Li of natural isotopic composition:",
               "6Li= 8%, 7Li= 92%)",
-              " Cyclindrical target chamber (close geometry)"
+              " Cylindrical target chamber (close geometry)"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.Engstler+,J,ZP/A,342,471,1992)",
             "free_txt": [
-              " Table 1 from Z.Phys.,A342(1992)471"
+              " Table 1"
             ]
           }
         ]

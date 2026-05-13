@@ -1,7 +1,7 @@
 {
   "entry": "A1082",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-08-20",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19811105C)",
@@ -13,6 +13,12 @@
       "x4_code": "(19990205U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20240704A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -31,7 +37,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,NP/A,174,(2),399,197110)",
+        "x4_code": "(J,NP/A,174,399,1971)",
         "free_txt": [],
         "publication_year": "1971",
         "doi": null,
@@ -40,69 +46,59 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG)",
+        "x4_code": "(VDG,3HKGHKU)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": null
+        "institute": "(3HKGHKU)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(2-HE-4(T,EL)2-HE-4,,DA,,,EXP)",
+        "x4_code": "(2-HE-4(T,EL)2-HE-4,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "2-HE-4",
-              [
-                "T,EL"
-              ],
-              "2-HE-4,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "2-HE-4",
             "process": "T,EL",
-            "sf49": "2-HE-4,,DA,,,EXP",
+            "sf49": "2-HE-4,,DA",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(2-HE-4(T,EL)2-HE-4,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(2-HE-4(HE3,EL)2-HE-4,,DA,,,EXP)",
+        "x4_code": "(2-HE-4(HE3,EL)2-HE-4,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "2-HE-4",
-              [
-                "HE3,EL"
-              ],
-              "2-HE-4,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "2-HE-4",
             "process": "HE3,EL",
-            "sf49": "2-HE-4,,DA,,,EXP",
+            "sf49": "2-HE-4,,DA",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(2-HE-4(HE3,EL)2-HE-4,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -110,7 +106,19 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ANG-RSL"
+        ],
+        "units": [
+          "ADEG"
+        ],
+        "data": [
+          [
+            0.5
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -119,7 +127,7 @@
           "EN",
           "ANG-CM",
           "DATA-CM",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
@@ -258,7 +266,7 @@
           "EN",
           "ANG-CM",
           "DATA-CM",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
@@ -418,33 +426,32 @@
         ],
         "detector": [
           {
-            "x4_code": "(SOLST)",
+            "x4_code": "(SIBAR)",
             "free_txt": [
-              " Two silicon surface-barrier detectors. A",
-              "goniometer carries two radial arms on which the",
-              "detector systems are seated and which can be separately",
-              "rotated, over an angular range of 6 to 150 degr., with",
-              "an angular resolution 0.5 degr. One of the two detec-",
-              "tors is rotated to cover the whole angular range of",
-              "interest, while the other one is fixed at 40 degr. and",
-              "used as a monitor."
+              " Two silicon surface-barrier detectors.",
+              "One of the two detectors is rotated to cover the",
+              "whole angular range of interest, while the other one",
+              "is fixed at 40 degr. and used as a monitor."
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Total error. Uncertainty in angular resolution",
-              "of the detector position are estimated and added into",
-              "the overall error attached to the differential cross",
-              "sections in the tables."
+              " The overall error"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,3HKGHKU)",
+            "free_txt": []
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(BCINT)",
             "free_txt": []
           }
         ],
@@ -452,7 +459,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "The target gas is 4He gas of pressure around 10mm of Hg"
+              "4He gas of pressure around 10 mm of Hg"
             ]
           }
         ]
@@ -462,7 +469,7 @@
       "0": {
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,L.S.Chuang,J,NP/A,174,399,1971)",
             "free_txt": [
               " Table 1"
             ]
@@ -474,7 +481,7 @@
       "0": {
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,L.S.Chuang,J,NP/A,174,399,1971)",
             "free_txt": [
               " Table 2"
             ]

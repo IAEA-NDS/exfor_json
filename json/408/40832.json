@@ -1,7 +1,7 @@
 {
   "entry": "40832",
-  "last_updated": "2009-07-24",
-  "number_of_revisions": "4",
+  "last_updated": "2026-03-19",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19850129C)",
@@ -15,19 +15,37 @@
         " Free text was corrected to be human-readable.",
         " BIB information was added. STATUS was added."
       ]
+    },
+    {
+      "x4_code": "(20250801A)",
+      "free_txt": [
+        " S,IAEA-336,198505 ->",
+        "            S,IAEA-TECDOC-336,315,1985.",
+        "STATUS was updated according to now-day rules.",
+        " Subent 003 was deleted according to a comment of",
+        "N.Otsuka (NDS, IAEA) - data are the same as in",
+        "Subent 40921.002"
+      ]
+    },
+    {
+      "x4_code": "(20251006A)",
+      "free_txt": [
+        " Ref. S,INDC(CCP)-235 and",
+        "C,84UPPSAL,,315,1984 were added."
+      ]
     }
   ],
   "bib_record": {
-    "title": " U-236-to-U-235 cross-section ratio measurement for neutron energies 4.24 - 10.7 MeV",
+    "title": " The 236U and 238U to 235U fission cross-sections ratios in the neutron energy range 5 - 11 MeV",
     "authors": [
       {
-        "name": "A.A.Goverdovskij"
+        "name": "A.A.Goverdovsky"
       },
       {
         "name": "A.K.Gordjushin"
       },
       {
-        "name": "B.D.Kuz'Minov"
+        "name": "B.D.Kuzminov"
       },
       {
         "name": "V.F.Mitrofanov"
@@ -44,26 +62,26 @@
     ],
     "references": [
       {
-        "x4_code": "(S,IAEA-336,198505)",
+        "x4_code": "((C,83KIEV,2,193,1983)=(S,INDC(CCP)-235,(2),193,1984))",
         "free_txt": [
-          " 84UPPSAL. Data are given .",
-          "     IAEA-TECDOC-336 - Proc.of 84UPPSAL."
+          " Preliminary data"
         ],
-        "publication_year": "1985",
-        "doi": null,
-        "pointer": "0"
-      },
-      {
-        "x4_code": "(C,83KIEV,2,193,198310)",
-        "free_txt": [
-          "  Preliminary Data"
-        ],
-        "publication_year": "1983",
+        "publication_year": "1984",
         "doi": null,
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(ACCEL)",
+        "free_txt": [
+          " Electrostatic accelerators in pulse mode."
+        ],
+        "pointer": "0",
+        "facility_type": "(ACCEL)",
+        "institute": null
+      }
+    ]
   },
   "reactions": {
     "002": {
@@ -71,14 +89,7 @@
         "x4_code": "((92-U-236(N,F),,SIG)/(92-U-235(N,F),,SIG))",
         "children": [
           {
-            "code": [
-              "92-U-236",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(92-U-236(N,F),,SIG)",
             "target": "92-U-236",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -90,14 +101,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F),,SIG)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -109,55 +113,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
-        "free_text": "",
-        "pointer": "0"
-      }
-    },
-    "003": {
-      "0": {
-        "x4_code": "((92-U-236(N,F),,SIG)/(92-U-235(N,F),,SIG))",
-        "children": [
-          {
-            "code": [
-              "92-U-236",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-236",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          },
-          {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
-            "target": "92-U-235",
-            "process": "N,F",
-            "sf49": ",,SIG",
-            "sf4": null,
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          }
+        "math_expression": [
+          "Divide",
+          "((92-U-236(N,F),,SIG)",
+          "(92-U-235(N,F),,SIG))"
         ],
-        "type": "/",
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -212,10 +173,6 @@
           ]
         ]
       }
-    },
-    "003": {
-      "common": null,
-      "data": null
     }
   },
   "experimental_conditions": {
@@ -241,6 +198,14 @@
             ]
           }
         ],
+        "facility": [
+          {
+            "x4_code": "(ACCEL)",
+            "free_txt": [
+              " Electrostatic accelerators in pulse mode."
+            ]
+          }
+        ],
         "inc-source": [
           {
             "x4_code": "(D-D)",
@@ -255,11 +220,20 @@
             ]
           }
         ],
+        "rel-ref": [
+          {
+            "x4_code": "(O,40831002,A.A.Goverdovsky,S,IAEA-TECDOC-336,315,1985)",
+            "free_txt": [
+              "Data of Table 4 of IAEA-TECDOC-336,315,1985 are in",
+              "Subents 40831.003, .004"
+            ]
+          }
+        ],
         "status": [
           {
             "x4_code": null,
             "free_txt": [
-              "  From C,84UPPSAL. Reference not checked."
+              "  From C,84UPPSAL. The article was not checked."
             ]
           }
         ]
@@ -267,6 +241,20 @@
     },
     "002": {
       "0": {
+        "err-analys": [
+          {
+            "x4_code": "(ERR-S)",
+            "free_txt": [
+              " Statistical"
+            ]
+          },
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total"
+            ]
+          }
+        ],
         "monitor": [
           {
             "x4_code": null,
@@ -279,60 +267,31 @@
           {
             "x4_code": null,
             "free_txt": [
-              " Four samples  were used",
+              " Four samples were used",
               "  First:  U-234 content is .002 %,  U-235 - 99.992 %,",
-              "          U-236 -.004 %,  U-238 -.002 %,  thickness",
-              "          0.258 milligram/ cm**2 .",
+              "          U-236 -.004 %,  U-238 -.002 %,",
+              "          thickness 0.258 milligram/ cm**2 .",
               "  Second: U-235 content is 3.002 % , U-236 -96.87 %,",
-              "          U-238 - 0.13 %, thickness 0.198 milligr/cm**2",
+              "          U-238 - 0.13 %,",
+              "          thickness 0.198 milligram/cm**2.",
               "  Third:  U-235 content is 4.973 % , U-236 -94.90 % ,",
-              "          U-238 -0.13 %, thickness 0.198 milligr/cm**2.",
+              "          U-238 -0.13 %,",
+              "          thickness 0.198 milligram/cm**2.",
               "  Fourth: U-235 content is 6.943 % , U-236 - 92.929 % ,",
-              "    U-238 - 0.127 % , thickness 0.198 milligram/cm**2."
-            ]
-          }
-        ]
-      }
-    },
-    "003": {
-      "0": {
-        "analysis": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              " Energy dependence of ratio was normalized by absolute",
-              " measurement of ratio at energies 7.34, 8.10, 9.91 MeV,",
-              " given in Subent 002."
-            ]
-          }
-        ],
-        "monitor": [
-          {
-            "x4_code": "((92-U-236(N,F),,SIG)/(92-U-235(N,F),,SIG))",
-            "free_txt": []
-          }
-        ],
-        "sample": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              " First sample U-234 content is .020 % , U-235 -",
-              " 99.992 % , U-236 - 0.004 % , U-238- 0.002 % ,",
-              " thickness  0.410 milligram/cm**2.",
-              " Second sample  U-234 content is .0001 % ,",
-              " U-235 -0.047 % , U-236 - 98.845 % ,U-238 -",
-              " 0.107 % , thickness  0.490 milligram/cm**2."
+              "          U-238 - 0.127 % ,",
+              "          thickness 0.198 milligram/cm**2."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(SPSDD,40921002)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(DEP,40832002)",
-            "free_txt": []
+            "x4_code": null,
+            "free_txt": [
+              "  Source of data is not clear.",
+              " Value at 7.34 MeV are the same as in Table 3,",
+              " values at 8.10 and 8.91 MeV differs from the values in",
+              "Table 3."
+            ]
           }
         ]
       }

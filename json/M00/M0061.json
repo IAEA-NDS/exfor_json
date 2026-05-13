@@ -1,7 +1,7 @@
 {
   "entry": "M0061",
-  "last_updated": "2013-03-28",
-  "number_of_revisions": "4",
+  "last_updated": "2026-01-15",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19840130C)",
@@ -16,16 +16,24 @@
     {
       "x4_code": "(20121030A)",
       "free_txt": [
-        " SD: Updated to new date formats,lower case.",
+        " SD: Updated to new date formats,lowercase.",
         "     Corrected according last EXFOR rules and Dict.",
         "     Ref. on transl. was added.",
         "            VV: STATUS, REACTION code in SUBENT 002",
         "     were corrected."
       ]
+    },
+    {
+      "x4_code": "(20251202A)",
+      "free_txt": [
+        " Corrected by V.Varlamov: TITLE, REFERENCE,",
+        " FACILITY, PART-DET, DETECTOR, DECAY-DATA, REACTION,",
+        " STATUS."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Isomeric yield ratios of the reactions Au-197(gamma,n)Au-196-g, Au-197(gamma,n)Au-196-m, Au-197(e,e'n)Au-196-g, and Au-197(e,e'n)Au-196-m at energies of 10-90 MeV.",
+    "title": "Isomeric ratios of the yields of the reactions Au-197(gamma,n)Au-196-m,g and Au-197(e,e'n)Au-196-m,g energies 10-90 MeV.",
     "authors": [
       {
         "name": "L.Z.Dzhilavyan"
@@ -48,17 +56,17 @@
     ],
     "references": [
       {
-        "x4_code": "(J,YF,33,591,1981)",
-        "free_txt": [],
+        "x4_code": "(J,SNP,33,308,1981)",
+        "free_txt": [
+          " English translation of YF,33,591,1981"
+        ],
         "publication_year": "1981",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,SNP,33,308,1981)",
-        "free_txt": [
-          " - Eng.trans.of YF,33,591,1981"
-        ],
+        "x4_code": "(J,YF,33,591,1981)",
+        "free_txt": [],
         "publication_year": "1981",
         "doi": null,
         "pointer": "0"
@@ -67,7 +75,9 @@
     "facilities": [
       {
         "x4_code": "(LINAC,4RUSJIA)",
-        "free_txt": [],
+        "free_txt": [
+          " LUE-100 linear electron accelerator."
+        ],
         "pointer": "0",
         "facility_type": "(LINAC)",
         "institute": "(4RUSJIA)"
@@ -77,29 +87,24 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(79-AU-197(G,N)79-AU-196-M/G,,SIG/RAT,,BRA/REL)",
+        "x4_code": "(79-AU-197(G,N)79-AU-196-M2/G+M1,,SIG/RAT,,BRA/REL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "79-AU-197",
-              [
-                "G,N"
-              ],
-              "79-AU-196-M/G,,SIG/RAT,,BRA/REL"
-            ],
-            "type": null,
             "target": "79-AU-197",
             "process": "G,N",
-            "sf49": "79-AU-196-M/G,,SIG/RAT,,BRA/REL",
-            "sf4": "79-AU-196-M/G",
+            "sf49": "79-AU-196-M2/G+M1,,SIG/RAT,,BRA/REL",
+            "sf4": "79-AU-196-M2/G+M1",
             "sf5": null,
             "sf6": "SIG/RAT",
             "sf7": null,
             "sf8": "BRA/REL",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(79-AU-197(G,N)79-AU-196-M2/G+M1,,SIG/RAT,,BRA/REL)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -174,16 +179,19 @@
             "x4_code": null,
             "free_txt": [
               "Isomeric yield ratios of the (gamma,n) and (e,e'n)",
-              "reactions on nuclei Au-197 with production of high-spin",
-              " (j(pi)=12(-1)) states of nucleus Au-196 were measured",
-              "by means of activation method."
+              " reactions on nuclei Au-197 with production of",
+              " high-spin (j(pi)=12(-1)) states of Au-196 were",
+              " measured by means of activation method."
             ]
           }
         ],
         "detector": [
           {
             "x4_code": "(GELI)",
-            "free_txt": []
+            "free_txt": [
+              " Ge(Li) spectrometer with resolution 3.5 keV at",
+              " E = 355.7 keV."
+            ]
           }
         ],
         "err-analys": [
@@ -197,7 +205,9 @@
         "facility": [
           {
             "x4_code": "(LINAC,4RUSJIA)",
-            "free_txt": []
+            "free_txt": [
+              " LUE-100 linear electron accelerator."
+            ]
           }
         ],
         "inc-source": [
@@ -211,23 +221,30 @@
             "x4_code": "(ACTIV)",
             "free_txt": []
           }
-        ],
-        "part-det": [
+        ]
+      }
+    },
+    "002": {
+      "0": {
+        "decay-data": [
           {
-            "x4_code": "(N)",
+            "x4_code": "(79-AU-196-G,6.18D,DG,355.7)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(79-AU-196-M2,9.7HR,DG,147.8)",
             "free_txt": []
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,L.Z.Dzhilavyan+,J,SNP,33,308,1981)",
             "free_txt": [
               " Data from Fig. 3."
             ]
           }
         ]
       }
-    },
-    "002": {}
+    }
   }
 }

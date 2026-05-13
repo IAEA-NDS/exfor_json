@@ -1,15 +1,22 @@
 {
   "entry": "F0699",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2026-03-05",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20030716C)",
       "free_txt": []
+    },
+    {
+      "x4_code": "(20251222A)",
+      "free_txt": [
+        " SD: Corrections in all Subents.",
+        "Subents 004 and 005 were merged."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Polarization measurement of fast neutrons from the 9Be(a,n)12C and the 13C(a,n)16O reaction using a high-pressure 4He-polarimeter in a new design.",
+    "title": "Polarization measurement of fast neutrons from the 9Be(alpha,n)12C and the 13C(alpha,n)16O reaction using a high-pressure 4He-polarimeter in a new design",
     "authors": [
       {
         "name": "W.Weiss"
@@ -29,7 +36,7 @@
     ],
     "institutes": [
       {
-        "x4_code": "(2GERIFS)",
+        "x4_code": "(2GERTHS)",
         "free_txt": []
       }
     ],
@@ -44,13 +51,13 @@
     ],
     "facilities": [
       {
-        "x4_code": "(DYNAM)",
+        "x4_code": "(DYNAM,2GERTHS)",
         "free_txt": [
-          " Stuttgart neutron scattering facility SCORPION."
+          " Stuttgart facility SCORPION."
         ],
         "pointer": "0",
         "facility_type": "(DYNAM)",
-        "institute": null
+        "institute": "(2GERTHS)"
       }
     ]
   },
@@ -58,16 +65,9 @@
     "002": {
       "0": {
         "x4_code": "(4-BE-9(A,N)6-C-12,,POL/DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "4-BE-9",
-              [
-                "A,N"
-              ],
-              "6-C-12,,POL/DA"
-            ],
-            "type": null,
             "target": "4-BE-9",
             "process": "A,N",
             "sf49": "6-C-12,,POL/DA",
@@ -76,10 +76,12 @@
             "sf6": "POL/DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(4-BE-9(A,N)6-C-12,,POL/DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -87,16 +89,9 @@
     "003": {
       "0": {
         "x4_code": "(4-BE-9(A,N)6-C-12,,POL/DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "4-BE-9",
-              [
-                "A,N"
-              ],
-              "6-C-12,,POL/DA"
-            ],
-            "type": null,
             "target": "4-BE-9",
             "process": "A,N",
             "sf49": "6-C-12,,POL/DA",
@@ -105,10 +100,12 @@
             "sf6": "POL/DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(4-BE-9(A,N)6-C-12,,POL/DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -116,16 +113,9 @@
     "004": {
       "0": {
         "x4_code": "(6-C-13(A,N)8-O-16,,POL/DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "6-C-13",
-              [
-                "A,N"
-              ],
-              "8-O-16,,POL/DA"
-            ],
-            "type": null,
             "target": "6-C-13",
             "process": "A,N",
             "sf49": "8-O-16,,POL/DA",
@@ -134,39 +124,12 @@
             "sf6": "POL/DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(6-C-13(A,N)8-O-16,,POL/DA)"
           }
         ],
-        "type": null,
-        "free_text": "",
-        "pointer": "0"
-      }
-    },
-    "005": {
-      "0": {
-        "x4_code": "(6-C-13(A,N)8-O-16,,POL/DA)",
-        "children": [
-          {
-            "code": [
-              "6-C-13",
-              [
-                "A,N"
-              ],
-              "8-O-16,,POL/DA"
-            ],
-            "type": null,
-            "target": "6-C-13",
-            "process": "A,N",
-            "sf49": "8-O-16,,POL/DA",
-            "sf4": "8-O-16",
-            "sf5": null,
-            "sf6": "POL/DA",
-            "sf7": null,
-            "sf8": null,
-            "sf9": null
-          }
-        ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -174,7 +137,19 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "EN-RSL"
+        ],
+        "units": [
+          "MEV"
+        ],
+        "data": [
+          [
+            0.07
+          ]
+        ]
+      }
     },
     "002": {
       "common": {
@@ -294,31 +269,41 @@
       }
     },
     "004": {
-      "common": {
-        "heads": [
-          "EN"
-        ],
-        "units": [
-          "MEV"
-        ],
-        "data": [
-          [
-            2.406
-          ]
-        ]
-      },
+      "common": null,
       "data": {
         "heads": [
+          "EN",
           "ANG",
           "DATA",
           "DATA-ERR"
         ],
         "units": [
+          "MEV",
           "ADEG",
           "NO-DIM",
           "NO-DIM"
         ],
         "data": [
+          [
+            2.406,
+            2.406,
+            2.406,
+            2.406,
+            2.406,
+            2.406,
+            2.406,
+            2.406,
+            3.308,
+            3.308,
+            3.308,
+            3.308,
+            3.308,
+            3.308,
+            3.308,
+            3.308,
+            3.308,
+            3.308
+          ],
           [
             0.0,
             10.94,
@@ -327,58 +312,7 @@
             54.14,
             59.42,
             68.85,
-            75.08
-          ],
-          [
-            0.0,
-            0.003,
-            0.068,
-            0.08,
-            0.055,
-            -0.161,
-            -0.349,
-            -0.413
-          ],
-          [
-            0.038,
-            0.028,
-            0.027,
-            0.028,
-            0.04,
-            0.047,
-            0.079,
-            0.047
-          ]
-        ]
-      }
-    },
-    "005": {
-      "common": {
-        "heads": [
-          "EN"
-        ],
-        "units": [
-          "MEV"
-        ],
-        "data": [
-          [
-            3.308
-          ]
-        ]
-      },
-      "data": {
-        "heads": [
-          "ANG",
-          "DATA",
-          "DATA-ERR"
-        ],
-        "units": [
-          "ADEG",
-          "NO-DIM",
-          "NO-DIM"
-        ],
-        "data": [
-          [
+            75.08,
             0.0,
             11.02,
             22.0,
@@ -392,6 +326,14 @@
           ],
           [
             0.0,
+            0.003,
+            0.068,
+            0.08,
+            0.055,
+            -0.161,
+            -0.349,
+            -0.413,
+            0.0,
             -0.115,
             -0.169,
             -0.167,
@@ -403,6 +345,14 @@
             -0.161
           ],
           [
+            0.038,
+            0.028,
+            0.027,
+            0.028,
+            0.04,
+            0.047,
+            0.079,
+            0.047,
             0.034,
             0.027,
             0.025,
@@ -421,15 +371,6 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "comment": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "All measurements were performed using high-pressure",
-              " 4He polarimeters."
-            ]
-          }
-        ],
         "detector": [
           {
             "x4_code": null,
@@ -450,27 +391,36 @@
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              "  Definition error",
-              "Energetic resolution varied between 12% (13C, 5.4 MeV)",
-              "and 10% (9Be, 8.5 MeV).",
+              " No information about source of uncertainty",
               "The errors of the present experiment could be kept",
               "small because of the use of the SCORPION facility",
-              "favouring small systematic errors and the fourfold",
+              "favoring small systematic errors and the fourfold",
               "redundant measurement."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(DYNAM)",
+            "x4_code": "(DYNAM,2GERTHS)",
             "free_txt": [
-              " Stuttgart neutron scattering facility SCORPION."
+              " Stuttgart facility SCORPION."
+            ]
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Gas pressure: maximum 180 bar; test pressure: 250 bar;",
+              "gas mixture: 95% helium-4, 5% xenon;",
+              "volume: 120 ml ~ 1.8 g 4He at 170 bar;",
+              "inner cell diameter: 46 mm."
             ]
           }
         ],
         "method": [
           {
-            "x4_code": "(TOF)",
+            "x4_code": "(TOF,DSCAT,LRASY)",
             "free_txt": []
           }
         ]
@@ -480,9 +430,9 @@
       "0": {
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,W.Weiss+,J,NIM/A,292,359,1990)",
             "free_txt": [
-              "Table 1"
+              " Table 1"
             ]
           }
         ]
@@ -492,9 +442,9 @@
       "0": {
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,W.Weiss+,J,NIM/A,292,359,1990)",
             "free_txt": [
-              "Table 2"
+              " Table 2"
             ]
           }
         ]
@@ -504,21 +454,9 @@
       "0": {
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,W.Weiss+,J,NIM/A,292,359,1990)",
             "free_txt": [
-              "Table 3"
-            ]
-          }
-        ]
-      }
-    },
-    "005": {
-      "0": {
-        "status": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              "Table 4"
+              " Table 3"
             ]
           }
         ]

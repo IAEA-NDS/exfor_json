@@ -1,7 +1,7 @@
 {
   "entry": "10570",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-10-27",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19760126C)",
@@ -10,7 +10,7 @@
     {
       "x4_code": "(19830913A)",
       "free_txt": [
-        " Converted to REACTION formalism"
+        " Converted to reaction formalism."
       ]
     },
     {
@@ -22,13 +22,21 @@
     {
       "x4_code": "(20040602A)",
       "free_txt": [
-        " Converted to new date formats, lower case.",
-        "            Data restored."
+        " Converted to new date formats, lower",
+        "            case. Data restored."
+      ]
+    },
+    {
+      "x4_code": "(20240624A)",
+      "free_txt": [
+        " BP: Updated entry, added main reference,",
+        "            FACILITY, NRDC Memo 4C-3/0420 comments.",
+        "            Corrected ERR-ANALYS."
       ]
     }
   ],
   "bib_record": {
-    "title": "Small Angle Neutron Scattering from Pb and 238U",
+    "title": "Small-angle neutron scattering from Pb and 238U between 0.6 and 2.2 MeV",
     "authors": [
       {
         "name": "L.L.Yu"
@@ -45,29 +53,42 @@
     ],
     "references": [
       {
-        "x4_code": "(J,BAP,20,1496(BD9),197512)",
-        "free_txt": [],
+        "x4_code": "(J,NP/A,324,160,1979)",
+        "free_txt": [
+          " Main reference.",
+          "#doi:10.1016/0375-9474(79)90085-X"
+        ],
+        "publication_year": "1979",
+        "doi": "10.1016/0375-9474(79)90085-X",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,BAP,20,1496(BD9),1975)",
+        "free_txt": [
+          " Initial publication."
+        ],
         "publication_year": "1975",
         "doi": null,
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(VDG,1USAORE)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": "(1USAORE)"
+      }
+    ]
   },
   "reactions": {
     "002": {
       "0": {
         "x4_code": "(82-PB-0(N,EL)82-PB-0,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "82-PB-0",
-              [
-                "N,EL"
-              ],
-              "82-PB-0,,DA"
-            ],
-            "type": null,
             "target": "82-PB-0",
             "process": "N,EL",
             "sf49": "82-PB-0,,DA",
@@ -76,10 +97,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(82-PB-0(N,EL)82-PB-0,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -87,16 +110,9 @@
     "003": {
       "0": {
         "x4_code": "(92-U-238(N,EL)92-U-238,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,EL"
-              ],
-              "92-U-238,,DA"
-            ],
-            "type": null,
             "target": "92-U-238",
             "process": "N,EL",
             "sf49": "92-U-238,,DA",
@@ -105,10 +121,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-238(N,EL)92-U-238,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -116,7 +134,29 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-1",
+          "ERR-2",
+          "ERR-3"
+        ],
+        "units": [
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            4.0
+          ],
+          [
+            2.0
+          ],
+          [
+            3.0
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -126,7 +166,7 @@
           "ANG-RSL",
           "EN",
           "DATA",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "ADEG",
@@ -427,7 +467,7 @@
           "ANG-RSL",
           "EN",
           "DATA",
-          "DATA-ERR"
+          "ERR-T"
         ],
         "units": [
           "ADEG",
@@ -729,31 +769,100 @@
             "x4_code": null,
             "free_txt": [
               "Data corrected for multiple scattering, inelastic",
-              " scattering, and background effects."
+              "scattering, and background effects. Cross sections",
+              "for 238U were corrected for inelastic scattering with",
+              "the previously measured inelastic cross sections",
+              "summarized by Lambropoulos. The magnitude of this",
+              "correction at 1.5 deg ranged from about 10% at low",
+              "energies to less than 1% at high energies. Use of a",
+              "more recent set of evaluated cross sections would not",
+              "substantially alter the results. Inelastic scattering",
+              "corrections for lead were negligible."
+            ]
+          }
+        ],
+        "detector": [
+          {
+            "x4_code": "(SCIN)",
+            "free_txt": [
+              " NE218 scintillator. Bias levels were set to",
+              "reject events corresponding to recoil protons of less",
+              "than 0.4 MeV and greater than 6 MeV. Pulse shape",
+              "discrimination against gamma-rays was also employed."
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(DATA-ERR)",
+            "x4_code": "(ERR-T)",
             "free_txt": [
-              " No information on source of uncertainties."
+              " When these are quadratically combined with",
+              "the effects of possible errors in alignment listed in",
+              "table 1, the overall systematic uncertainties in",
+              "cross section are approximately 7%, 11%, and 7% for",
+              "the 0.5, 1.0, and 1.5 degree data, respectively."
             ]
+          },
+          {
+            "x4_code": "(ERR-S,8.,13.)",
+            "free_txt": [
+              " When fluctuations in values of the",
+              "cross sections stemming from the various corrections",
+              "are quadratically combined with statistical standard",
+              "deviations in the yields, uncertainties off 7% to 13%",
+              "result."
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Fluctuations in source fluence."
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Electronic bias drifts."
+            ]
+          },
+          {
+            "x4_code": "(ERR-3)",
+            "free_txt": [
+              " Variations in detector sensitivity over the",
+              "face of the detector."
+            ]
+          },
+          {
+            "x4_code": "(ERR-4,3.,10.)",
+            "free_txt": [
+              " Possible errors in alignment."
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(VDG,1USAORE)",
+            "free_txt": []
           }
         ],
         "inc-source": [
           {
             "x4_code": "(P-LI7)",
             "free_txt": [
-              " Protons on lithium-7"
+              " 1.5 ns pulsed 4 MeV proton beam stroked thick",
+              "lithium metal target and produced neutron energy",
+              "continuum spectrum."
             ]
           }
         ],
         "method": [
           {
-            "x4_code": "(TOF)",
+            "x4_code": "(TOF,PSD)",
             "free_txt": [
-              " Time-of-flight"
+              " Time-of-flight. Neutron flight paths from",
+              "source to scatterer and from scatterer to detector",
+              "were each 5 m. Data were averaged over 100 keV",
+              "incident energy bins."
             ]
           }
         ],
@@ -770,13 +879,37 @@
             "x4_code": "(APRVD)",
             "free_txt": [
               " Approved by author 1976/5/24.",
-              " Tabulated data received from Yu. 1976/1/20."
+              " tabulated data received from Yu. 1976/1/20."
             ]
           }
         ]
       }
     },
-    "002": {},
-    "003": {}
+    "002": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.L.Yu+,J,NP/A,324,160,1979)",
+            "free_txt": [
+              "Authors data, also shown in Fig.3, page 165 of",
+              "J,NP/A,324,160,1979."
+            ]
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,L.L.Yu+,J,NP/A,324,160,1979)",
+            "free_txt": [
+              "Authors data, also shown in Fig.3, page 165 of",
+              "J,NP/A,324,160,1979."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

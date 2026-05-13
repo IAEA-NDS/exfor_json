@@ -69,14 +69,7 @@
         "x4_code": "(((94-PU-238(N,EL),,WID/RED)*(94-PU-238(N,F),,WID))/(94-PU-238(N,TOT),,WID))",
         "children": [
           {
-            "code": [
-              "94-PU-238",
-              [
-                "N,EL"
-              ],
-              ",,WID/RED"
-            ],
-            "type": "*",
+            "x4_code": "(94-PU-238(N,EL),,WID/RED)",
             "target": "94-PU-238",
             "process": "N,EL",
             "sf49": ",,WID/RED",
@@ -88,14 +81,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "94-PU-238",
-              [
-                "N,F"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
+            "x4_code": "(94-PU-238(N,F),,WID)",
             "target": "94-PU-238",
             "process": "N,F",
             "sf49": ",,WID",
@@ -107,37 +93,28 @@
             "sf9": null
           },
           {
-            "code": "94-PU-238",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "9",
-            "process": "4",
-            "sf49": "-,P,U,-,2,3,8",
-            "sf4": "-",
-            "sf5": "P",
-            "sf6": "U",
-            "sf7": "-",
-            "sf8": "2",
-            "sf9": "3"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
+            "x4_code": "(94-PU-238(N,TOT),,WID)",
+            "target": "94-PU-238",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
             "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Multiply",
+          "(((94-PU-238(N,EL),,WID/RED)",
+          [
+            "Divide",
+            "(94-PU-238(N,F),,WID))",
+            "(94-PU-238(N,TOT),,WID))"
+          ]
+        ],
+        "operator": "Multiply",
         "free_text": "",
         "pointer": "0"
       }
@@ -145,16 +122,9 @@
     "003": {
       "0": {
         "x4_code": "(94-PU-238(N,0),,D)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-238",
-              [
-                "N,0"
-              ],
-              ",,D"
-            ],
-            "type": null,
             "target": "94-PU-238",
             "process": "N,0",
             "sf49": ",,D",
@@ -163,10 +133,12 @@
             "sf6": "D",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-238(N,0),,D)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -174,16 +146,9 @@
     "004": {
       "0": {
         "x4_code": "(94-PU-238(N,F),,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-238",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
             "target": "94-PU-238",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -192,10 +157,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-238(N,F),,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }

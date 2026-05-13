@@ -1,17 +1,25 @@
 {
   "entry": "40988",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2024-09-02",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(890913C)",
+      "x4_code": "(19890913C)",
       "free_txt": [
-        "  COMPILED AT THE CENTRE - CJD"
+        "  Compiled at the centre - CJD."
+      ]
+    },
+    {
+      "x4_code": "(20240208A)",
+      "free_txt": [
+        " Upper -> lower case correction.",
+        " Dates were corrected for 4-digits year.",
+        " Decay data, partial uncertainties were added."
       ]
     }
   ],
   "bib_record": {
-    "title": " THERMAL NEUTRONS RADIATION CAPTURE CROSS-SECTION FOR U-236 AND TH-232",
+    "title": " Thermal neutrons radiation capture cross-section for U-236 and Th-232",
     "authors": [
       {
         "name": "A.N.Davletshin"
@@ -31,13 +39,13 @@
     ],
     "institutes": [
       {
-        "x4_code": "(4CCPFEI)",
+        "x4_code": "(4RUSFEI)",
         "free_txt": []
       }
     ],
     "references": [
       {
-        "x4_code": "(C,87KIEV,2,309,8709)",
+        "x4_code": "(C,87KIEV,2,309,1987)",
         "free_txt": [],
         "publication_year": "1987",
         "doi": null,
@@ -46,13 +54,13 @@
     ],
     "facilities": [
       {
-        "x4_code": "(REAC)",
+        "x4_code": "(REAC,4RUSFEI)",
         "free_txt": [
-          " REACTOR BR-10"
+          " Reactor BR-10."
         ],
         "pointer": "0",
         "facility_type": "(REAC)",
-        "institute": null
+        "institute": "(4RUSFEI)"
       }
     ]
   },
@@ -60,16 +68,9 @@
     "002": {
       "0": {
         "x4_code": "(92-U-236(N,G)92-U-237,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-236",
-              [
-                "N,G"
-              ],
-              "92-U-237,,SIG"
-            ],
-            "type": null,
             "target": "92-U-236",
             "process": "N,G",
             "sf49": "92-U-237,,SIG",
@@ -78,10 +79,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-236(N,G)92-U-237,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -89,16 +92,9 @@
     "003": {
       "0": {
         "x4_code": "(90-TH-232(N,G)90-TH-233,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "90-TH-232",
-              [
-                "N,G"
-              ],
-              "90-TH-233,,SIG"
-            ],
-            "type": null,
             "target": "90-TH-232",
             "process": "N,G",
             "sf49": "90-TH-233,,SIG",
@@ -107,10 +103,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(90-TH-232(N,G)90-TH-233,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -118,7 +116,19 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-1"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            1.5
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -126,12 +136,14 @@
         "heads": [
           "EN",
           "DATA",
-          "ERR-T"
+          "ERR-T",
+          "ERR-3"
         ],
         "units": [
           "EV",
           "B",
-          "B"
+          "B",
+          "PER-CENT"
         ],
         "data": [
           [
@@ -142,6 +154,9 @@
           ],
           [
             0.1
+          ],
+          [
+            1.1
           ]
         ]
       }
@@ -152,12 +167,14 @@
         "heads": [
           "EN",
           "DATA",
-          "ERR-T"
+          "ERR-T",
+          "ERR-3"
         ],
         "units": [
           "EV",
           "B",
-          "B"
+          "B",
+          "PER-CENT"
         ],
         "data": [
           [
@@ -168,6 +185,9 @@
           ],
           [
             0.2
+          ],
+          [
+            2.0
           ]
         ]
       }
@@ -180,8 +200,17 @@
           {
             "x4_code": null,
             "free_txt": [
-              " CORRECTIONS IN THE SELF-SHIELDING WERE MADE"
+              " For self-shielding :",
+              " Au - 1.057, U - 1.009, Th - 1.010.",
+              " For activation by scattered neutrons - 0.987, 0.973,",
+              " 0.977, respectively."
             ]
+          }
+        ],
+        "decay-mon": [
+          {
+            "x4_code": "(79-AU-198,,DG,412.)",
+            "free_txt": []
           }
         ],
         "detector": [
@@ -194,24 +223,37 @@
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
-              " TOTAL ERROR"
+              " Total error"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Uncertainty of detector absolute efficiency",
+              "for Au."
+            ]
+          },
+          {
+            "x4_code": "(ERR-2,0.4,0.5)",
+            "free_txt": [
+              " Uncertainty including statistics and",
+              "corrections for self-absorption and for activation",
+              "by scattering neutrons."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(REAC)",
+            "x4_code": "(REAC,4RUSFEI)",
             "free_txt": [
-              " REACTOR BR-10"
+              " Reactor BR-10."
             ]
           }
         ],
         "inc-source": [
           {
             "x4_code": "(THCOL)",
-            "free_txt": [
-              " THERMAL COLUMN"
-            ]
+            "free_txt": []
           }
         ],
         "method": [
@@ -220,30 +262,78 @@
             "free_txt": []
           }
         ],
+        "monit-ref": [
+          {
+            "x4_code": "(,S.F.Mughabghab+,B,NEUT.CS 1A,,,1981)",
+            "free_txt": []
+          }
+        ],
         "monitor": [
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
             "free_txt": []
-          }
-        ],
-        "status": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              " DATA ARE TAKEN FROM THE REFERENCE"
-            ]
           }
         ]
       }
     },
     "002": {
       "0": {
+        "decay-data": [
+          {
+            "x4_code": "(92-U-237,,DG,208.)",
+            "free_txt": []
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-3)",
+            "free_txt": [
+              " Uncertainty of detector absolute efficiency",
+              "for U"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(A,,,R,BNL-325,(1),1973)",
+            "free_txt": [
+              "                  5.2+-0.3 b"
+            ]
+          },
+          {
+            "x4_code": "(A,,C.M.Lederer+,B,LEDERER-7,,,1978)",
+            "free_txt": [
+              "      5.1+-0.3 b"
+            ]
+          },
+          {
+            "x4_code": "(A,,S.F.Mughabghab+,B,NEUT.CS 1A,,,1981)",
+            "free_txt": [
+              "  5.11+-0.21 b"
+            ]
+          },
+          {
+            "x4_code": "(A,40579006,L.N.Yurova+,C,83KIEV,2,177,1983)",
+            "free_txt": [
+              "                                          5.00+-0.14 b"
+            ]
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              " POWDER IN THE STAINLESS-STEEL CONTAINER,",
-              " U-236 CONTENT 98.5 PC"
+              " U(3)O(8) powder in the stainless-steel container,",
+              " U-236 content 98.5 %."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              ",,A.N.Davletshin+,C,87KIEV,2,309,1987)",
+              " Table on page 311."
             ]
           }
         ]
@@ -251,11 +341,55 @@
     },
     "003": {
       "0": {
+        "decay-data": [
+          {
+            "x4_code": "(90-TH-233,,DG,312.)",
+            "free_txt": []
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-3)",
+            "free_txt": [
+              " Uncertainty of detector absolute efficiency",
+              "for Th."
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(A,,,R,BNL-325,(1),1973)",
+            "free_txt": [
+              "                  7.4+-0.008 b"
+            ]
+          },
+          {
+            "x4_code": "(A,,C.M.Lederer+,B,LEDERER-7,,,1978)",
+            "free_txt": [
+              "      7.4+-0.1 b"
+            ]
+          },
+          {
+            "x4_code": "(A,,S.F.Mughabghab+,B,NEUT.CS 1A,,,1981)",
+            "free_txt": [
+              "  7.37+-0.06 b"
+            ]
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              " POWDER IN THE STAINLESS-STEEL CONTAINER"
+              " ThO(2) powder in the stainless-steel container"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE)",
+            "free_txt": [
+              ",,A.N.Davletshin+,C,87KIEV,2,309,1987)",
+              " Table on page 311."
             ]
           }
         ]

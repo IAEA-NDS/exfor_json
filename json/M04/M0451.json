@@ -1,7 +1,7 @@
 {
   "entry": "M0451",
-  "last_updated": "2013-08-23",
-  "number_of_revisions": "4",
+  "last_updated": "2025-11-03",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19910218C)",
@@ -12,6 +12,13 @@
       "free_txt": [
         " Corrected    by   V.Varlamov:   REACTION,",
         " ANALYSIS, ERR-ANALYS, dates, lowercase."
+      ]
+    },
+    {
+      "x4_code": "(20250825A)",
+      "free_txt": [
+        " Corrected by V.Varlamov: METHOD, ANALYSIS,",
+        " ERR-ANALYS, DATA, STATUS."
       ]
     }
   ],
@@ -66,16 +73,9 @@
     "002": {
       "0": {
         "x4_code": "(4-BE-9(G,TOT),,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "4-BE-9",
-              [
-                "G,TOT"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
             "target": "4-BE-9",
             "process": "G,TOT",
             "sf49": ",,SIG",
@@ -84,11 +84,13 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(4-BE-9(G,TOT),,SIG)"
           }
         ],
-        "type": null,
-        "free_text": "",
+        "operator": null,
+        "free_text": "Nuclear absorption cross-section as difference between total absorption cross-section and atomic absorption cross-section.",
         "pointer": "0"
       }
     }
@@ -103,7 +105,7 @@
         "heads": [
           "EN",
           "DATA",
-          "ERR-S"
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
@@ -154,7 +156,8 @@
             25.0,
             25.5,
             25.95,
-            26.25
+            26.25,
+            27.25
           ],
           [
             1.1,
@@ -199,7 +202,8 @@
             7.8,
             8.5,
             7.2,
-            6.2
+            6.2,
+            8.3
           ],
           [
             1.2,
@@ -244,7 +248,8 @@
             0.6,
             0.9,
             1.0,
-            1.3
+            1.3,
+            0.8
           ]
         ]
       }
@@ -257,10 +262,10 @@
           {
             "x4_code": null,
             "free_txt": [
-              "The   photonuclear   total  absorption  cross section",
-              " was obtained as  a  difference  between  the  total",
-              " photon  absorption cross section measured and atomic",
-              " absorption cross section previously published."
+              "The   photonuclear   total  absorption  cross-section",
+              " was obtained as  a  difference  between  the",
+              " total photon  absorption cross-section  and",
+              " atomic absorption cross section published before."
             ]
           }
         ],
@@ -270,7 +275,7 @@
             "free_txt": [
               "Total absorption  of  gamma-rays from 15 to 27 MeV in",
               " be  has  been  measured  using  the   bremsstrahlung",
-              " spectrum  of  a 30 MeV betatron and compton magnetic",
+              " spectrum  of  a 30 MeV betatron and Compton magnetic",
               " spectrometer.   Data   are   presented   of    total",
               " photonuclear  absorption  with  the ambiguity due to",
               " atomic absorption."
@@ -281,16 +286,16 @@
           {
             "x4_code": "(MAGSP,CEREN)",
             "free_txt": [
-              " Magnetic   spectrometer   and  cerenkov",
+              " Magnetic   spectrometer   and  Cerenkov",
               " detector."
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-S)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Statistical errors only."
+              " Mean-root-squared uncertainties."
             ]
           }
         ],
@@ -308,13 +313,13 @@
         ],
         "method": [
           {
-            "x4_code": "(EXTB,SITA,MAGFR)",
+            "x4_code": "(EXTB,TRN,MAGFR)",
             "free_txt": [
               " G-rays passed  through  the  target",
-              " were  analysed by the compton-spectrometer consisted",
+              " were  analysed by the Compton-spectrometer consisted",
               " of a 21 mg/cm**2 polyethylene  converter,  a  17  cm",
               " radius double focussing 70-degrees sector-magnet and",
-              " four cerenkov detectors."
+              " four Cerenkov detectors."
             ]
           }
         ],
@@ -326,10 +331,10 @@
         ],
         "rel-ref": [
           {
-            "x4_code": "(R,,K.Siegbahn,B,SIEGBAHN,,1955)",
+            "x4_code": "(R,,K.Siegbahn,B,SIEGBAHN,,,1955)",
             "free_txt": [
-              " Atomic    absorption",
-              " cross section data."
+              " Atomic   absorption",
+              " cross-section data."
             ]
           }
         ],
@@ -337,18 +342,23 @@
           {
             "x4_code": null,
             "free_txt": [
-              "51.5 cm long berillium target."
+              "51.5 cm long beryllium target."
             ]
-          }
-        ],
-        "status": [
-          {
-            "x4_code": "(CURVE)",
-            "free_txt": []
           }
         ]
       }
     },
-    "002": {}
+    "002": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(CURVE,,U.Miklavzic+,J,NP,31,570,1962)",
+            "free_txt": [
+              " Data from Fig. 3."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

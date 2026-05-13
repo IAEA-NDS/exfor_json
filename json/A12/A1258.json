@@ -1,7 +1,7 @@
 {
   "entry": "A1258",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-11-07",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19871215C)",
@@ -14,10 +14,16 @@
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
       ]
+    },
+    {
+      "x4_code": "(20250904A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Activation measurement of the 3He(a,g)7Be reaction",
+    "title": "Activation measurement of the 3He(4He,gamma)7Be reaction",
     "authors": [
       {
         "name": "H.Volk"
@@ -49,40 +55,37 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDGT)",
-        "free_txt": [],
+        "x4_code": "(DYNAM,2GERMST)",
+        "free_txt": [
+          " Dynamitron-Tandem-Accelerator"
+        ],
         "pointer": "0",
-        "facility_type": "(VDGT)",
-        "institute": null
+        "facility_type": "(DYNAM)",
+        "institute": "(2GERMST)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(2-HE-3(A,G)4-BE-7,,SIG,,SFC,EXP)",
+        "x4_code": "(2-HE-3(A,G)4-BE-7,,SIG,,SFC,DERIV)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "2-HE-3",
-              [
-                "A,G"
-              ],
-              "4-BE-7,,SIG,,SFC,EXP"
-            ],
-            "type": null,
             "target": "2-HE-3",
             "process": "A,G",
-            "sf49": "4-BE-7,,SIG,,SFC,EXP",
+            "sf49": "4-BE-7,,SIG,,SFC,DERIV",
             "sf4": "4-BE-7",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "SFC",
-            "sf9": "EXP"
+            "sf9": "DERIV",
+            "operator": null,
+            "x4_code": "(2-HE-3(A,G)4-BE-7,,SIG,,SFC,DERIV)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -93,30 +96,42 @@
       "common": null
     },
     "002": {
-      "common": null,
-      "data": {
+      "common": {
         "heads": [
-          "EN",
-          "DATA",
-          "ERR-T"
+          "EN"
         ],
         "units": [
-          "MEV",
-          "MB*MEV",
-          "MB*MEV"
+          "MEV"
         ],
         "data": [
           [
-            0.0,
             0.0
-          ],
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "DATA",
+          "ERR-T",
+          "DECAY-FLAG"
+        ],
+        "units": [
+          "MB*MEV",
+          "MB*MEV",
+          "NO-DIM"
+        ],
+        "data": [
           [
             0.56,
-            0.62
+            0.38
           ],
           [
             0.03,
-            0.06
+            0.03
+          ],
+          [
+            1.0,
+            2.0
           ]
         ]
       }
@@ -127,20 +142,64 @@
       "0": {
         "detector": [
           {
-            "x4_code": "(GELI)",
-            "free_txt": []
+            "x4_code": "(GELI,GE-IN)",
+            "free_txt": [
+              " Two detectors were used: one Ge(Li),",
+              "80 ccm, and one intrinsic Ge, 80 ccm, both with a",
+              "resolution of 1.7 keV at Eg=1.3 MeV. For determining",
+              "the detector efficiencies the available calibrated",
+              "sources (152Eu, 22Na, 54Mn, 60Co, 133Ba) turned out",
+              "to be too intense for the small distances between",
+              "source and detector (25-30 mm)."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-1,,1.)",
+            "free_txt": [
+              " Uncertainty in total number of incident",
+              "4He particles"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2,4.5,8.3)",
+            "free_txt": [
+              " Uncertainty in the cross section",
+              "including errors in B(E) and the determination of E"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3,3.7,4.3)",
+            "free_txt": [
+              " Uncertainty in the number of produced",
+              "7Be atoms including statistical errors, uncertainties",
+              "in the efficiency of gamma-detectors and error of the",
+              "branching ratio (see ANALYSIS)."
+            ]
+          },
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error"
+            ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDGT)",
-            "free_txt": []
+            "x4_code": "(DYNAM,2GERMST)",
+            "free_txt": [
+              " Dynamitron-Tandem-Accelerator"
+            ]
           }
         ],
         "method": [
           {
             "x4_code": "(ACTIV)",
-            "free_txt": []
+            "free_txt": [
+              " Three different activation measurements were",
+              "made."
+            ]
           }
         ],
         "sample": [
@@ -155,17 +214,35 @@
     },
     "002": {
       "0": {
-        "err-analys": [
+        "analysis": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": null,
             "free_txt": [
-              " Total error"
+              "The experimental data have been extrapolated by using",
+              "a theoretical calculation (see REL-REF) normalized to",
+              "the experimental data at Ec.m. = 400-1266 keV."
             ]
+          }
+        ],
+        "decay-data": [
+          {
+            "x4_code": "((1.)4-BE-7,53.44D,DG,478.,0.104)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "((2.)4-BE-7,53.44D,DG,478.,0.154)",
+            "free_txt": []
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(N,,Q.K.K.Liu+,J,PR/C,23,645,1981)",
+            "free_txt": []
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,H.Volk+,J,ZP/A,310,91,1983)",
             "free_txt": [
               " Table 3"
             ]

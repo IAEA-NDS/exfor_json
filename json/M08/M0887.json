@@ -101,14 +101,7 @@
         "x4_code": "((42-MO-100(G,X)41-NB-98-M,,SIG,,BRA)/(42-MO-100(G,N)42-MO-99,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "42-MO-100",
-              [
-                "G,X"
-              ],
-              "41-NB-98-M,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-100(G,X)41-NB-98-M,,SIG,,BRA)",
             "target": "42-MO-100",
             "process": "G,X",
             "sf49": "41-NB-98-M,,SIG,,BRA",
@@ -120,14 +113,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "42-MO-100",
-              [
-                "G,N"
-              ],
-              "42-MO-99,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-100(G,N)42-MO-99,,SIG,,BRA)",
             "target": "42-MO-100",
             "process": "G,N",
             "sf49": "42-MO-99,,SIG,,BRA",
@@ -139,7 +125,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((42-MO-100(G,X)41-NB-98-M,,SIG,,BRA)",
+          "(42-MO-100(G,N)42-MO-99,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": " Uncertainty of 42-MO-100(G,N)42-MO-99 reaction yield is 6%.",
         "pointer": "0"
       }
@@ -149,14 +140,7 @@
         "x4_code": "((42-MO-98(G,P)41-NB-97,,SIG,,BRA)/(42-MO-100(G,N)42-MO-99,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "42-MO-98",
-              [
-                "G,P"
-              ],
-              "41-NB-97,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-98(G,P)41-NB-97,,SIG,,BRA)",
             "target": "42-MO-98",
             "process": "G,P",
             "sf49": "41-NB-97,,SIG,,BRA",
@@ -168,14 +152,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "42-MO-100",
-              [
-                "G,N"
-              ],
-              "42-MO-99,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-100(G,N)42-MO-99,,SIG,,BRA)",
             "target": "42-MO-100",
             "process": "G,N",
             "sf49": "42-MO-99,,SIG,,BRA",
@@ -187,7 +164,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((42-MO-98(G,P)41-NB-97,,SIG,,BRA)",
+          "(42-MO-100(G,N)42-MO-99,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -197,14 +179,7 @@
         "x4_code": "(((42-MO-97(G,P)41-NB-96,,SIG,,BRA)+(42-MO-98(G,X)41-NB-96,,SIG,,BRA))/(42-MO-100(G,N)42-MO-99,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "42-MO-97",
-              [
-                "G,P"
-              ],
-              "41-NB-96,,SIG,,BRA"
-            ],
-            "type": "+",
+            "x4_code": "(42-MO-97(G,P)41-NB-96,,SIG,,BRA)",
             "target": "42-MO-97",
             "process": "G,P",
             "sf49": "41-NB-96,,SIG,,BRA",
@@ -216,14 +191,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "42-MO-98",
-              [
-                "G,X"
-              ],
-              "41-NB-96,,SIG,,BRA"
-            ],
-            "type": "+",
+            "x4_code": "(42-MO-98(G,X)41-NB-96,,SIG,,BRA)",
             "target": "42-MO-98",
             "process": "G,X",
             "sf49": "41-NB-96,,SIG,,BRA",
@@ -235,37 +203,28 @@
             "sf9": null
           },
           {
-            "code": "42-MO-100",
-            "type": [
-              "G,N"
-            ],
-            "target": "4",
-            "process": "2",
-            "sf49": "-,M,O,-,1,0,0",
-            "sf4": "-",
-            "sf5": "M",
-            "sf6": "O",
-            "sf7": "-",
-            "sf8": "1",
-            "sf9": "0"
-          },
-          {
-            "code": "42-MO-99,,SIG,,BRA",
-            "type": [
-              "G,N"
-            ],
-            "target": "4",
-            "process": "2",
-            "sf49": "-,M,O,-,9,9,,,S,I,G,,,B,R,A",
-            "sf4": "-",
-            "sf5": "M",
-            "sf6": "O",
-            "sf7": "-",
-            "sf8": "9",
-            "sf9": "9"
+            "x4_code": "(42-MO-100(G,N)42-MO-99,,SIG,,BRA)",
+            "target": "42-MO-100",
+            "process": "G,N",
+            "sf49": "42-MO-99,,SIG,,BRA",
+            "sf4": "42-MO-99",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          [
+            "Add",
+            "(((42-MO-97(G,P)41-NB-96,,SIG,,BRA)",
+            "(42-MO-98(G,X)41-NB-96,,SIG,,BRA))"
+          ],
+          "(42-MO-100(G,N)42-MO-99,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -275,14 +234,7 @@
         "x4_code": "(((42-MO-96(G,P)41-NB-95,,SIG,,BRA)+(42-MO-97(G,X)41-NB-95,,SIG,,BRA))/(42-MO-100(G,N)42-MO-99,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "42-MO-96",
-              [
-                "G,P"
-              ],
-              "41-NB-95,,SIG,,BRA"
-            ],
-            "type": "+",
+            "x4_code": "(42-MO-96(G,P)41-NB-95,,SIG,,BRA)",
             "target": "42-MO-96",
             "process": "G,P",
             "sf49": "41-NB-95,,SIG,,BRA",
@@ -294,14 +246,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "42-MO-97",
-              [
-                "G,X"
-              ],
-              "41-NB-95,,SIG,,BRA"
-            ],
-            "type": "+",
+            "x4_code": "(42-MO-97(G,X)41-NB-95,,SIG,,BRA)",
             "target": "42-MO-97",
             "process": "G,X",
             "sf49": "41-NB-95,,SIG,,BRA",
@@ -313,37 +258,28 @@
             "sf9": null
           },
           {
-            "code": "42-MO-100",
-            "type": [
-              "G,N"
-            ],
-            "target": "4",
-            "process": "2",
-            "sf49": "-,M,O,-,1,0,0",
-            "sf4": "-",
-            "sf5": "M",
-            "sf6": "O",
-            "sf7": "-",
-            "sf8": "1",
-            "sf9": "0"
-          },
-          {
-            "code": "42-MO-99,,SIG,,BRA",
-            "type": [
-              "G,N"
-            ],
-            "target": "4",
-            "process": "2",
-            "sf49": "-,M,O,-,9,9,,,S,I,G,,,B,R,A",
-            "sf4": "-",
-            "sf5": "M",
-            "sf6": "O",
-            "sf7": "-",
-            "sf8": "9",
-            "sf9": "9"
+            "x4_code": "(42-MO-100(G,N)42-MO-99,,SIG,,BRA)",
+            "target": "42-MO-100",
+            "process": "G,N",
+            "sf49": "42-MO-99,,SIG,,BRA",
+            "sf4": "42-MO-99",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "BRA",
+            "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          [
+            "Add",
+            "(((42-MO-96(G,P)41-NB-95,,SIG,,BRA)",
+            "(42-MO-97(G,X)41-NB-95,,SIG,,BRA))"
+          ],
+          "(42-MO-100(G,N)42-MO-99,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -353,14 +289,7 @@
         "x4_code": "((42-MO-94(G,X)41-NB-92,,SIG,,BRA)/(42-MO-100(G,N)42-MO-99,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "42-MO-94",
-              [
-                "G,X"
-              ],
-              "41-NB-92,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-94(G,X)41-NB-92,,SIG,,BRA)",
             "target": "42-MO-94",
             "process": "G,X",
             "sf49": "41-NB-92,,SIG,,BRA",
@@ -372,14 +301,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "42-MO-100",
-              [
-                "G,N"
-              ],
-              "42-MO-99,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-100(G,N)42-MO-99,,SIG,,BRA)",
             "target": "42-MO-100",
             "process": "G,N",
             "sf49": "42-MO-99,,SIG,,BRA",
@@ -391,7 +313,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((42-MO-94(G,X)41-NB-92,,SIG,,BRA)",
+          "(42-MO-100(G,N)42-MO-99,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": " Uncertainty of 42-MO-100(G,N)42-MO-99 reaction yield is 6%.",
         "pointer": "0"
       }
@@ -401,14 +328,7 @@
         "x4_code": "((42-MO-92(G,N)42-MO-91,,SIG,,BRA)/(42-MO-100(G,N)42-MO-99,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "42-MO-92",
-              [
-                "G,N"
-              ],
-              "42-MO-91,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-92(G,N)42-MO-91,,SIG,,BRA)",
             "target": "42-MO-92",
             "process": "G,N",
             "sf49": "42-MO-91,,SIG,,BRA",
@@ -420,14 +340,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "42-MO-100",
-              [
-                "G,N"
-              ],
-              "42-MO-99,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-100(G,N)42-MO-99,,SIG,,BRA)",
             "target": "42-MO-100",
             "process": "G,N",
             "sf49": "42-MO-99,,SIG,,BRA",
@@ -439,7 +352,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((42-MO-92(G,N)42-MO-91,,SIG,,BRA)",
+          "(42-MO-100(G,N)42-MO-99,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -449,14 +367,7 @@
         "x4_code": "((42-MO-92(G,2N)42-MO-90,,SIG,,BRA)/(42-MO-100(G,N)42-MO-99,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "42-MO-92",
-              [
-                "G,2N"
-              ],
-              "42-MO-90,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-92(G,2N)42-MO-90,,SIG,,BRA)",
             "target": "42-MO-92",
             "process": "G,2N",
             "sf49": "42-MO-90,,SIG,,BRA",
@@ -468,14 +379,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "42-MO-100",
-              [
-                "G,N"
-              ],
-              "42-MO-99,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-100(G,N)42-MO-99,,SIG,,BRA)",
             "target": "42-MO-100",
             "process": "G,N",
             "sf49": "42-MO-99,,SIG,,BRA",
@@ -487,7 +391,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((42-MO-92(G,2N)42-MO-90,,SIG,,BRA)",
+          "(42-MO-100(G,N)42-MO-99,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -497,14 +406,7 @@
         "x4_code": "((42-MO-92(G,X)41-NB-90,,SIG,,BRA)/(42-MO-100(G,N)42-MO-99,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "42-MO-92",
-              [
-                "G,X"
-              ],
-              "41-NB-90,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-92(G,X)41-NB-90,,SIG,,BRA)",
             "target": "42-MO-92",
             "process": "G,X",
             "sf49": "41-NB-90,,SIG,,BRA",
@@ -516,14 +418,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "42-MO-100",
-              [
-                "G,N"
-              ],
-              "42-MO-99,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-100(G,N)42-MO-99,,SIG,,BRA)",
             "target": "42-MO-100",
             "process": "G,N",
             "sf49": "42-MO-99,,SIG,,BRA",
@@ -535,7 +430,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((42-MO-92(G,X)41-NB-90,,SIG,,BRA)",
+          "(42-MO-100(G,N)42-MO-99,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -545,14 +445,7 @@
         "x4_code": "((42-MO-92(G,X)41-NB-89,,SIG,,BRA)/(42-MO-100(G,N)42-MO-99,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "42-MO-92",
-              [
-                "G,X"
-              ],
-              "41-NB-89,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-92(G,X)41-NB-89,,SIG,,BRA)",
             "target": "42-MO-92",
             "process": "G,X",
             "sf49": "41-NB-89,,SIG,,BRA",
@@ -564,14 +457,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "42-MO-100",
-              [
-                "G,N"
-              ],
-              "42-MO-99,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-100(G,N)42-MO-99,,SIG,,BRA)",
             "target": "42-MO-100",
             "process": "G,N",
             "sf49": "42-MO-99,,SIG,,BRA",
@@ -583,7 +469,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((42-MO-92(G,X)41-NB-89,,SIG,,BRA)",
+          "(42-MO-100(G,N)42-MO-99,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": " Uncertainty of 42-MO-100(G,N)42-MO-99 reaction yield is 6%.",
         "pointer": "0"
       }
@@ -593,14 +484,7 @@
         "x4_code": "((42-MO-92(G,X)41-NB-89-M,,SIG,,BRA)/(42-MO-100(G,N)42-MO-99,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "42-MO-92",
-              [
-                "G,X"
-              ],
-              "41-NB-89-M,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-92(G,X)41-NB-89-M,,SIG,,BRA)",
             "target": "42-MO-92",
             "process": "G,X",
             "sf49": "41-NB-89-M,,SIG,,BRA",
@@ -612,14 +496,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "42-MO-100",
-              [
-                "G,N"
-              ],
-              "42-MO-99,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-100(G,N)42-MO-99,,SIG,,BRA)",
             "target": "42-MO-100",
             "process": "G,N",
             "sf49": "42-MO-99,,SIG,,BRA",
@@ -631,7 +508,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((42-MO-92(G,X)41-NB-89-M,,SIG,,BRA)",
+          "(42-MO-100(G,N)42-MO-99,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": " Uncertainty of 42-MO-100(G,N)42-MO-99 reaction yield is 6%.",
         "pointer": "0"
       }
@@ -641,14 +523,7 @@
         "x4_code": "((42-MO-92(G,4N)42-MO-88,,SIG,,BRA)/(42-MO-100(G,N)42-MO-99,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "42-MO-92",
-              [
-                "G,4N"
-              ],
-              "42-MO-88,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-92(G,4N)42-MO-88,,SIG,,BRA)",
             "target": "42-MO-92",
             "process": "G,4N",
             "sf49": "42-MO-88,,SIG,,BRA",
@@ -660,14 +535,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "42-MO-100",
-              [
-                "G,N"
-              ],
-              "42-MO-99,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-100(G,N)42-MO-99,,SIG,,BRA)",
             "target": "42-MO-100",
             "process": "G,N",
             "sf49": "42-MO-99,,SIG,,BRA",
@@ -679,7 +547,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((42-MO-92(G,4N)42-MO-88,,SIG,,BRA)",
+          "(42-MO-100(G,N)42-MO-99,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": " Uncertainty of 42-MO-100(G,N)42-MO-99 reaction yield is 6%.",
         "pointer": "0"
       }
@@ -689,14 +562,7 @@
         "x4_code": "((42-MO-97(G,P)41-NB-96,,SIG,,BRA)/(42-MO-100(G,N)42-MO-99,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "42-MO-97",
-              [
-                "G,P"
-              ],
-              "41-NB-96,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-97(G,P)41-NB-96,,SIG,,BRA)",
             "target": "42-MO-97",
             "process": "G,P",
             "sf49": "41-NB-96,,SIG,,BRA",
@@ -708,14 +574,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "42-MO-100",
-              [
-                "G,N"
-              ],
-              "42-MO-99,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-100(G,N)42-MO-99,,SIG,,BRA)",
             "target": "42-MO-100",
             "process": "G,N",
             "sf49": "42-MO-99,,SIG,,BRA",
@@ -727,7 +586,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((42-MO-97(G,P)41-NB-96,,SIG,,BRA)",
+          "(42-MO-100(G,N)42-MO-99,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": " Uncertainty of 42-MO-100(G,N)42-MO-99 reaction yield is 5%.",
         "pointer": "0"
       }
@@ -737,14 +601,7 @@
         "x4_code": "((42-MO-96(G,P)41-NB-95,,SIG,,BRA)/(42-MO-100(G,N)42-MO-99,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "42-MO-96",
-              [
-                "G,P"
-              ],
-              "41-NB-95,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-96(G,P)41-NB-95,,SIG,,BRA)",
             "target": "42-MO-96",
             "process": "G,P",
             "sf49": "41-NB-95,,SIG,,BRA",
@@ -756,14 +613,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "42-MO-100",
-              [
-                "G,N"
-              ],
-              "42-MO-99,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(42-MO-100(G,N)42-MO-99,,SIG,,BRA)",
             "target": "42-MO-100",
             "process": "G,N",
             "sf49": "42-MO-99,,SIG,,BRA",
@@ -775,7 +625,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((42-MO-96(G,P)41-NB-95,,SIG,,BRA)",
+          "(42-MO-100(G,N)42-MO-99,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": " Uncertainty of 42-MO-100(G,N)42-MO-99 reaction yield is 5%.",
         "pointer": "0"
       }

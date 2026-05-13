@@ -1,7 +1,7 @@
 {
   "entry": "41346",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-04-04",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19830809C)",
@@ -14,16 +14,24 @@
       "free_txt": [
         "  .Converted at the center - CJD"
       ]
+    },
+    {
+      "x4_code": "(20250214A)",
+      "free_txt": [
+        " Upper -> lower case correction.",
+        " STATUS information was updated for new rules.",
+        " ERR-ANALYS, REL-REF and DECAY-DATA were added."
+      ]
     }
   ],
   "bib_record": {
-    "title": ".ISOMERIC RATIOS IN NUCLEAR REACTIONS LEADING TO THE ISOTOPES IR190, AU196, AND AM242.",
+    "title": " Isomeric ratios in nuclear reactions leading to the isotopes Ir190, Au196, and Am242",
     "authors": [
       {
         "name": "G.N.Flerov"
       },
       {
-        "name": "Yu.P.Gangrskiy"
+        "name": "Yu.P.Gangrskii"
       },
       {
         "name": "B.N.Markov"
@@ -46,48 +54,57 @@
     ],
     "references": [
       {
-        "x4_code": "(J,YF,6,(1),17,196707)",
-        "free_txt": [],
-        "publication_year": "1967",
+        "x4_code": "(J,SNP,6,12,1968)",
+        "free_txt": [
+          " Engl.translation."
+        ],
+        "publication_year": "1968",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,SNP,6,12,1968)",
-        "free_txt": [],
-        "publication_year": "1968",
+        "x4_code": "(J,YF,6,17,1967)",
+        "free_txt": [
+          " Issue 1."
+        ],
+        "publication_year": "1967",
         "doi": null,
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(NGEN,4ZZZDUB)",
+        "free_txt": [
+          " Neutron generator NG-200"
+        ],
+        "pointer": "0",
+        "facility_type": "(NGEN)",
+        "institute": "(4ZZZDUB)"
+      }
+    ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(79-AU-197(N,2N)79-AU-196-M/G,,SIG/RAT)",
+        "x4_code": "(79-AU-197(N,2N)79-AU-196-M2/G+M1,,SIG/RAT)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "79-AU-197",
-              [
-                "N,2N"
-              ],
-              "79-AU-196-M/G,,SIG/RAT"
-            ],
-            "type": null,
             "target": "79-AU-197",
             "process": "N,2N",
-            "sf49": "79-AU-196-M/G,,SIG/RAT",
-            "sf4": "79-AU-196-M/G",
+            "sf49": "79-AU-196-M2/G+M1,,SIG/RAT",
+            "sf4": "79-AU-196-M2/G+M1",
             "sf5": null,
             "sf6": "SIG/RAT",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(79-AU-197(N,2N)79-AU-196-M2/G+M1,,SIG/RAT)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -127,22 +144,56 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "comment": [
+        "facility": [
           {
-            "x4_code": null,
+            "x4_code": "(NGEN,4ZZZDUB)",
             "free_txt": [
-              ".Charged particle's data is given in ENTRY A0650"
+              " Neutron generator NG-200"
+            ]
+          }
+        ],
+        "rel-ref": [
+          {
+            "x4_code": "(O,A0650001,G.N.Flerov+,J,SNP,6,12,1968)",
+            "free_txt": [
+              " Charged particle's data is given in ENTRY A0650"
+            ]
+          }
+        ]
+      }
+    },
+    "002": {
+      "0": {
+        "decay-data": [
+          {
+            "x4_code": "(79-AU-196-M2,9.7HR,DG,148.)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(79-AU-196-G,6.2D,DG,330./355.)",
+            "free_txt": [
+              "330 and 355 keV lines were not resolved."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              "article."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(SCSRS)",
-            "free_txt": []
+            "x4_code": "(TABLE,,G.N.Flerov+,J,SNP,6,12,1968)",
+            "free_txt": [
+              " Table on page 14 - DATA. Text on page 14 - DATA-ERR."
+            ]
           }
         ]
       }
-    },
-    "002": {}
+    }
   }
 }

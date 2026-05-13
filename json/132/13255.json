@@ -1,21 +1,28 @@
 {
   "entry": "13255",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2025-01-13",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(890628C)",
+      "x4_code": "(19890628C)",
       "free_txt": [
         " VM"
       ]
     },
     {
-      "x4_code": "(900117A)",
+      "x4_code": "(19900117A)",
       "free_txt": []
+    },
+    {
+      "x4_code": "(20241201A)",
+      "free_txt": [
+        " OG. Converted to lower case and 4-digit",
+        "year. STATUS, ERR-ANALYS updated."
+      ]
     }
   ],
   "bib_record": {
-    "title": "A COMPILATION OF YIELDS FROM NEUTRON-INDUCED FISSION OF 232TH, 235U, 236U, 237NP, 238U, AND 239PU MEASURED RADIOCHEMICALLY AT LOS ALAMOS",
+    "title": "A compilation of yields from neutron-induced fission of 232Th, 235U, 236U, 237Np, 238U, and 239Pu measured radiochemically at Los Alamos",
     "authors": [
       {
         "name": "G.P.Ford"
@@ -32,10 +39,8 @@
     ],
     "references": [
       {
-        "x4_code": "(R,LA-6129,7602)",
-        "free_txt": [
-          " DATA COMPILATION"
-        ],
+        "x4_code": "(R,LA-6129,43,1976)",
+        "free_txt": [],
         "publication_year": "1976",
         "doi": null,
         "pointer": "0"
@@ -43,11 +48,11 @@
     ],
     "facilities": [
       {
-        "x4_code": "(CCW)",
+        "x4_code": "(CCW,1USALAS)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(CCW)",
-        "institute": null
+        "institute": "(1USALAS)"
       }
     ]
   },
@@ -57,14 +62,7 @@
         "x4_code": "(((94-PU-239(N,F)ELEM/MASS,CUM,FY)/(94-PU-239(N,F)42-MO-99,CUM,FY))//((92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)/(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)))",
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY"
-            ],
-            "type": "/",
+            "x4_code": "(94-PU-239(N,F)ELEM/MASS,CUM,FY)",
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY",
@@ -76,14 +74,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "42-MO-99,CUM,FY"
-            ],
-            "type": "/",
+            "x4_code": "(94-PU-239(N,F)42-MO-99,CUM,FY)",
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": "42-MO-99,CUM,FY",
@@ -95,14 +86,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,MXW"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,MXW",
@@ -114,14 +98,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "42-MO-99,CUM,FY,,MXW"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "42-MO-99,CUM,FY,,MXW",
@@ -133,22 +110,28 @@
             "sf9": null
           }
         ],
-        "type": "//",
+        "math_expression": [
+          "Ratio",
+          [
+            "Divide",
+            "(((94-PU-239(N,F)ELEM/MASS,CUM,FY)",
+            "(94-PU-239(N,F)42-MO-99,CUM,FY))"
+          ],
+          [
+            "Divide",
+            "((92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
+            "(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)))"
+          ]
+        ],
+        "operator": "Ratio",
         "free_text": "",
         "pointer": "1"
       },
       "2": {
         "x4_code": "(94-PU-239(N,F)ELEM/MASS,CUM,FY)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY",
@@ -157,10 +140,12 @@
             "sf6": "FY",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,F)ELEM/MASS,CUM,FY)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       }
@@ -170,14 +155,7 @@
         "x4_code": "(((94-PU-239(N,F)55-CS-136,IND,FY)/(94-PU-239(N,F)42-MO-99,CUM,FY))//((92-U-235(N,F)55-CS-136,IND,FY,,MXW)/(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)))",
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "55-CS-136,IND,FY"
-            ],
-            "type": "/",
+            "x4_code": "(94-PU-239(N,F)55-CS-136,IND,FY)",
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": "55-CS-136,IND,FY",
@@ -189,14 +167,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "42-MO-99,CUM,FY"
-            ],
-            "type": "/",
+            "x4_code": "(94-PU-239(N,F)42-MO-99,CUM,FY)",
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": "42-MO-99,CUM,FY",
@@ -208,14 +179,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "55-CS-136,IND,FY,,MXW"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,F)55-CS-136,IND,FY,,MXW)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "55-CS-136,IND,FY,,MXW",
@@ -227,14 +191,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "42-MO-99,CUM,FY,,MXW"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "42-MO-99,CUM,FY,,MXW",
@@ -246,22 +203,28 @@
             "sf9": null
           }
         ],
-        "type": "//",
+        "math_expression": [
+          "Ratio",
+          [
+            "Divide",
+            "(((94-PU-239(N,F)55-CS-136,IND,FY)",
+            "(94-PU-239(N,F)42-MO-99,CUM,FY))"
+          ],
+          [
+            "Divide",
+            "((92-U-235(N,F)55-CS-136,IND,FY,,MXW)",
+            "(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)))"
+          ]
+        ],
+        "operator": "Ratio",
         "free_text": "",
         "pointer": "1"
       },
       "2": {
         "x4_code": "(94-PU-239(N,F)55-CS-136,IND,FY)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "55-CS-136,IND,FY"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": "55-CS-136,IND,FY",
@@ -270,10 +233,12 @@
             "sf6": "FY",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,F)55-CS-136,IND,FY)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       }
@@ -283,14 +248,7 @@
         "x4_code": "(((92-U-235(N,F)ELEM/MASS,CUM,FY)/(92-U-235(N,F)42-MO-99,CUM,FY))//((92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)/(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)))",
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY",
@@ -302,14 +260,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "42-MO-99,CUM,FY"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,F)42-MO-99,CUM,FY)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "42-MO-99,CUM,FY",
@@ -321,14 +272,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,MXW"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,MXW",
@@ -340,14 +284,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "42-MO-99,CUM,FY,,MXW"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "42-MO-99,CUM,FY,,MXW",
@@ -359,22 +296,28 @@
             "sf9": null
           }
         ],
-        "type": "//",
+        "math_expression": [
+          "Ratio",
+          [
+            "Divide",
+            "(((92-U-235(N,F)ELEM/MASS,CUM,FY)",
+            "(92-U-235(N,F)42-MO-99,CUM,FY))"
+          ],
+          [
+            "Divide",
+            "((92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
+            "(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)))"
+          ]
+        ],
+        "operator": "Ratio",
         "free_text": "",
         "pointer": "1"
       },
       "2": {
         "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY"
-            ],
-            "type": null,
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY",
@@ -383,27 +326,22 @@
             "sf6": "FY",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       }
     },
     "005": {
       "1": {
-        "x4_code": "(((92-U-238(N,F)ELEM/MASS,CUM,FY)/(92-U-238(N,F)42-MO-99,CUM,FY))//((92-U-238(N,F)ELEM/MASS,CUM,FY,,MXW)/(92-U-238(N,F)42-MO-99,CUM,FY,,MXW)))",
+        "x4_code": "(((92-U-238(N,F)ELEM/MASS,CUM,FY)/(92-U-238(N,F)42-MO-99,CUM,FY))//((92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)/(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)))",
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY)",
             "target": "92-U-238",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY",
@@ -415,14 +353,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "42-MO-99,CUM,FY"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-238(N,F)42-MO-99,CUM,FY)",
             "target": "92-U-238",
             "process": "N,F",
             "sf49": "42-MO-99,CUM,FY",
@@ -434,15 +365,8 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,MXW"
-            ],
-            "type": "/",
-            "target": "92-U-238",
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
+            "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,MXW",
             "sf4": "ELEM/MASS",
@@ -453,15 +377,8 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "42-MO-99,CUM,FY,,MXW"
-            ],
-            "type": "/",
-            "target": "92-U-238",
+            "x4_code": "(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)",
+            "target": "92-U-235",
             "process": "N,F",
             "sf49": "42-MO-99,CUM,FY,,MXW",
             "sf4": "42-MO-99",
@@ -472,22 +389,28 @@
             "sf9": null
           }
         ],
-        "type": "//",
+        "math_expression": [
+          "Ratio",
+          [
+            "Divide",
+            "(((92-U-238(N,F)ELEM/MASS,CUM,FY)",
+            "(92-U-238(N,F)42-MO-99,CUM,FY))"
+          ],
+          [
+            "Divide",
+            "((92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
+            "(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)))"
+          ]
+        ],
+        "operator": "Ratio",
         "free_text": "",
         "pointer": "1"
       },
       "2": {
         "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY"
-            ],
-            "type": null,
             "target": "92-U-238",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY",
@@ -496,10 +419,12 @@
             "sf6": "FY",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       }
@@ -545,7 +470,7 @@
           "NO-DIM",
           "PER-CENT",
           "PC/FIS",
-          "NO-DIM"
+          "PC/FIS"
         ],
         "data": [
           [
@@ -796,7 +721,7 @@
         ],
         "units": [
           "MEV",
-          "PC/FIS"
+          "NO-DIM"
         ],
         "data": [
           [
@@ -920,15 +845,15 @@
       "0": {
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              "NO INFORMATION"
+              " No information on sources of uncertainties."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(CCW)",
+            "x4_code": "(CCW,1USALAS)",
             "free_txt": []
           }
         ],
@@ -940,16 +865,8 @@
         ],
         "method": [
           {
-            "x4_code": "(RCHEM)",
+            "x4_code": "(CHSEP)",
             "free_txt": []
-          }
-        ],
-        "status": [
-          {
-            "x4_code": "(RIDER)",
-            "free_txt": [
-              " REFERENCE 64OTH1"
-            ]
           }
         ]
       }
@@ -974,6 +891,17 @@
             "free_txt": []
           }
         ]
+      },
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,G.P.Ford+,R,LA-6129-MS,43,1976)",
+            "free_txt": [
+              " MONIT1, DATA1",
+              "and DATA2 presented in Tab.VIII, page 34."
+            ]
+          }
+        ]
       }
     },
     "003": {
@@ -994,6 +922,17 @@
           {
             "x4_code": "(RVAL)",
             "free_txt": []
+          }
+        ]
+      },
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,G.P.Ford+,R,LA-6129-MS,43,1976)",
+            "free_txt": [
+              " MONIT1, DATA1",
+              "and DATA2 presented in Tab.VIII, page 34."
+            ]
           }
         ]
       }
@@ -1018,6 +957,17 @@
             "free_txt": []
           }
         ]
+      },
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,G.P.Ford+,R,LA-6129-MS,43,1976)",
+            "free_txt": [
+              " MONIT1, DATA1",
+              "and DATA2 presented in Tab.IV, pages 21-22."
+            ]
+          }
+        ]
       }
     },
     "005": {
@@ -1030,7 +980,7 @@
           {
             "x4_code": "((MONIT2)92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
             "free_txt": [
-              "  VALUES FOR 136CS NOT GIVEN"
+              "  Values for 136Cs not given"
             ]
           }
         ]
@@ -1040,6 +990,18 @@
           {
             "x4_code": "(RVAL)",
             "free_txt": []
+          }
+        ]
+      },
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,G.P.Ford+,R,LA-6129-MS,43,1976)",
+            "free_txt": [
+              " MONIT1, DATA1",
+              "and DATA2 are similar but slightly different from those",
+              "presented in Tab.VII, page 28."
+            ]
           }
         ]
       }

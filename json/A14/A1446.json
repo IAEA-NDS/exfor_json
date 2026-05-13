@@ -1,7 +1,7 @@
 {
   "entry": "A1446",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-11-25",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19801002C)",
@@ -13,6 +13,12 @@
       "x4_code": "(19990220U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20250924A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -43,40 +49,35 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG)",
+        "x4_code": "(VDG,2NOROSL)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": null
+        "institute": "(2NOROSL)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(3-LI-6(D,P)3-LI-7,PAR,DA,,,EXP)",
+        "x4_code": "(3-LI-6(D,P)3-LI-7,PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "3-LI-6",
-              [
-                "D,P"
-              ],
-              "3-LI-7,PAR,DA,,,EXP"
-            ],
-            "type": null,
             "target": "3-LI-6",
             "process": "D,P",
-            "sf49": "3-LI-7,PAR,DA,,,EXP",
+            "sf49": "3-LI-7,PAR,DA",
             "sf4": "3-LI-7",
             "sf5": "PAR",
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(3-LI-6(D,P)3-LI-7,PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -90,23 +91,43 @@
       "common": {
         "heads": [
           "EN",
-          "ANG-ERR",
-          "E-LVL"
+          "E-LVL",
+          "E-LVL-NRM",
+          "ANG-ERR-D",
+          "ANG-NRM",
+          "MONIT",
+          "MONIT-ERR"
         ],
         "units": [
           "MEV",
+          "MEV",
+          "MEV",
           "ADEG",
-          "MEV"
+          "ADEG",
+          "MB/SR",
+          "MB/SR"
         ],
         "data": [
           [
             1.8
           ],
           [
+            4.63
+          ],
+          [
+            0.0
+          ],
+          [
             0.5
           ],
           [
-            4.63
+            36.0
+          ],
+          [
+            0.6
+          ],
+          [
+            0.3
           ]
         ]
       },
@@ -123,25 +144,25 @@
         ],
         "data": [
           [
-            11.76,
-            23.43,
-            35.21,
-            69.12,
+            11.8,
+            23.4,
+            35.2,
+            69.1,
             101.5
           ],
           [
             0.585,
-            0.3992,
+            0.399,
             0.637,
-            0.6444,
+            0.644,
             1.24
           ],
           [
-            0.1178,
-            0.0589,
-            0.0473,
-            0.1766,
-            0.2119
+            0.118,
+            0.059,
+            0.047,
+            0.177,
+            0.212
           ]
         ]
       }
@@ -152,29 +173,29 @@
       "0": {
         "detector": [
           {
-            "x4_code": "(MAGSP,SOLST)",
+            "x4_code": "(MAGSP,SIBAR)",
             "free_txt": [
               " The spectrometer was equipped with an",
-              "Ortec surface barrier detector with an activ area",
-              "450mm**2 as a monitor a surface barrier detector was",
+              "ORTEC surface barrier detector with an active area",
+              "450 mm2. As a monitor a surface barrier detector was",
               "placed at an angle of 135 degr."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,2NOROSL)",
             "free_txt": []
           }
         ],
         "sample": [
           {
-            "x4_code": null,
+            "x4_code": "(3-LI-6,ENR=0.95)",
             "free_txt": [
-              "The target consisted of Li2SO4, enriched to 95% in 6Li",
-              "and evaporated in vacuo onto thin carbon foils. Target",
-              "thicknesses were roughly estimated to be between 10 and",
-              "50 microg/cm**2."
+              " The target consisted of Li2SO4,",
+              "enriched to 95% in 6Li and evaporated in vacuo onto",
+              "thin carbon foils. Target thicknesses were roughly",
+              "estimated to be between 10 and 50 ug/cm2."
             ]
           }
         ]
@@ -182,41 +203,47 @@
     },
     "002": {
       "0": {
-        "comment": [
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
-              "An estimated of the differential cross section was made",
-              "by comparison with the 7Li(d,p0)8Li (gr.st.), for",
-              "which the dif.cross section is determined by sellshop."
+              "An estimate of the differential cross section was",
+              "made by comparison with the 7Li(d,p)8Li(0) reaction,",
+              "for which the differential cross section is",
+              "determined by Sellshop at the same deuteron energy",
+              "and at one of the same angles (30 degr.). From that",
+              "value and the mass ratio 5: 95 for the 7Li : 6Li",
+              "abundance, one obtains a differential cross section",
+              "of 0.6 +- 0.3 mb/sr at an angle of 36. degr. in the",
+              "center of mass system."
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(ANG-ERR)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          },
-          {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " From graphic bars and the digitizing"
+              " No information about source of uncertainty"
             ]
           }
         ],
         "monit-ref": [
           {
-            "x4_code": "(A1387004,SELLSHOP,J,PR,119,251,1960)",
+            "x4_code": "(A1387004,J.P.F.Sellschop,J,PR,119,251,1960)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(3-LI-7(D,P)3-LI-8,PAR,DA)",
             "free_txt": []
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,T.Holtebekk+,J,PNV,3,215,1969)",
             "free_txt": [
-              " Fig 2"
+              " Figure 2"
             ]
           }
         ]

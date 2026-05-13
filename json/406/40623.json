@@ -1,7 +1,7 @@
 {
   "entry": "40623",
-  "last_updated": "2023-02-27",
-  "number_of_revisions": "5",
+  "last_updated": "2026-03-19",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19830531C)",
@@ -35,6 +35,13 @@
       "x4_code": "(20221027A)",
       "free_txt": [
         " Subent 003 was corrected."
+      ]
+    },
+    {
+      "x4_code": "(20260216A)",
+      "free_txt": [
+        " ANG-RSL was moved in Subents 003, 004.",
+        "STATUS was corrected for new rules."
       ]
     }
   ],
@@ -100,16 +107,9 @@
     "002": {
       "0": {
         "x4_code": "(41-NB-93(N,INL)41-NB-93,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "41-NB-93",
-              [
-                "N,INL"
-              ],
-              "41-NB-93,,SIG"
-            ],
-            "type": null,
             "target": "41-NB-93",
             "process": "N,INL",
             "sf49": "41-NB-93,,SIG",
@@ -118,10 +118,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(41-NB-93(N,INL)41-NB-93,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -129,16 +131,9 @@
     "003": {
       "0": {
         "x4_code": "(41-NB-93(N,SCT)41-NB-93,PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "41-NB-93",
-              [
-                "N,SCT"
-              ],
-              "41-NB-93,PAR,DA"
-            ],
-            "type": null,
             "target": "41-NB-93",
             "process": "N,SCT",
             "sf49": "41-NB-93,PAR,DA",
@@ -147,39 +142,36 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(41-NB-93(N,SCT)41-NB-93,PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "004": {
       "0": {
-        "x4_code": "(41-NB-93(N,INL)41-NB-93,,DA/DE)",
+        "x4_code": "(41-NB-93(N,X)0-NN-1,EM,DA/DE)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "41-NB-93",
-              [
-                "N,INL"
-              ],
-              "41-NB-93,,DA/DE"
-            ],
-            "type": null,
             "target": "41-NB-93",
-            "process": "N,INL",
-            "sf49": "41-NB-93,,DA/DE",
-            "sf4": "41-NB-93",
-            "sf5": null,
+            "process": "N,X",
+            "sf49": "0-NN-1,EM,DA/DE",
+            "sf4": "0-NN-1",
+            "sf5": "EM",
             "sf6": "DA/DE",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(41-NB-93(N,X)0-NN-1,EM,DA/DE)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -189,17 +181,12 @@
     "001": {
       "common": {
         "heads": [
-          "ANG-RSL",
           "ERR-2"
         ],
         "units": [
-          "ADEG",
           "PER-CENT"
         ],
         "data": [
-          [
-            1.0
-          ],
           [
             4.0
           ]
@@ -252,14 +239,19 @@
     "003": {
       "common": {
         "heads": [
-          "E-EXC-MX-A"
+          "E-EXC-MX-A",
+          "ANG-RSL"
         ],
         "units": [
-          "MEV"
+          "MEV",
+          "ADEG"
         ],
         "data": [
           [
             1.1
+          ],
+          [
+            1.0
           ]
         ]
       },
@@ -441,7 +433,19 @@
       }
     },
     "004": {
-      "common": null,
+      "common": {
+        "heads": [
+          "ANG-RSL"
+        ],
+        "units": [
+          "ADEG"
+        ],
+        "data": [
+          [
+            1.0
+          ]
+        ]
+      },
       "data": {
         "heads": [
           "EN",
@@ -7863,9 +7867,9 @@
             ]
           },
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.P.Simakov+,J,SNP,37,477,1983)",
             "free_txt": [
-              " Table I of YF,37,(4),801,1983"
+              ") Table I"
             ]
           }
         ]
@@ -7883,9 +7887,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.P.Simakov+,J,SNP,37,477,1983)",
             "free_txt": [
-              " Table I of YF,37,(4),801,1983"
+              ") Table I"
             ]
           }
         ]

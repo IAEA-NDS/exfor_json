@@ -1,23 +1,31 @@
 {
   "entry": "12166",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2025-08-22",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(760803T)",
+      "x4_code": "(19760803T)",
       "free_txt": [
-        " TRANSLATED FROM SCISRS"
+        " Translated from SCISRS"
       ]
     },
     {
-      "x4_code": "(821012A)",
+      "x4_code": "(19821012A)",
       "free_txt": [
-        " CONVERTED TO REACTION FORMALISM"
+        " Converted to REACTION formalism"
+      ]
+    },
+    {
+      "x4_code": "(20250507A)",
+      "free_txt": [
+        " OS. REACTION in sub.2 corrected, STATUS",
+        " corrected, FACILITY added, converted to lower and",
+        " upper case"
       ]
     }
   ],
   "bib_record": {
-    "title": "THE HALF-LIVES OF TL204, AU195, IR192, AND ITS LONG-LIVED ISOMER IR192M2.",
+    "title": "The half-lives of Tl204, Au195, Ir192, and its long-lived isomer Ir192m2.",
     "authors": [
       {
         "name": "G.Harbottle"
@@ -31,41 +39,46 @@
     ],
     "references": [
       {
-        "x4_code": "(J,NP,41,604,63)",
-        "free_txt": [],
+        "x4_code": "(J,NP,41,604,1963)",
+        "free_txt": [
+          "#doi:10.1016/0029-5582(63)90539-X"
+        ],
         "publication_year": "1963",
-        "doi": null,
+        "doi": "10.1016/0029-5582(63)90539-X",
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USABNL)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USABNL)"
+      }
+    ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(77-IR-191(N,G)77-IR-192-M,,SIG,,SPA)",
+        "x4_code": "(77-IR-191(N,G)77-IR-192-M2,,SIG,,SPA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "77-IR-191",
-              [
-                "N,G"
-              ],
-              "77-IR-192-M,,SIG,,SPA"
-            ],
-            "type": null,
             "target": "77-IR-191",
             "process": "N,G",
-            "sf49": "77-IR-192-M,,SIG,,SPA",
-            "sf4": "77-IR-192-M",
+            "sf49": "77-IR-192-M2,,SIG,,SPA",
+            "sf4": "77-IR-192-M2",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "SPA",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(77-IR-191(N,G)77-IR-192-M2,,SIG,,SPA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -83,7 +96,6 @@
           "DATA",
           "+DATA-ERR",
           "-DATA-ERR",
-          "HL",
           "MONIT"
         ],
         "units": [
@@ -91,7 +103,6 @@
           "B",
           "B",
           "B",
-          "YR",
           "B"
         ],
         "data": [
@@ -108,9 +119,6 @@
             0.11
           ],
           [
-            600.0
-          ],
-          [
             1000.0
           ]
         ]
@@ -120,9 +128,9 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "status": [
+        "facility": [
           {
-            "x4_code": "(SCSRS)",
+            "x4_code": "(REAC,1USABNL)",
             "free_txt": []
           }
         ]
@@ -130,24 +138,33 @@
     },
     "002": {
       "0": {
-        "half-life": [
+        "decay-data": [
           {
-            "x4_code": "(HL,77-IR-192-M2)",
-            "free_txt": []
+            "x4_code": "(77-IR-192-M2,600.YR)",
+            "free_txt": [
+              " Compiler's comment (2025): Half-life is currently",
+              " known to be 240 y."
+            ]
           }
         ],
         "method": [
           {
             "x4_code": "(ACTIV)",
-            "free_txt": [
-              " ACTIVATION"
-            ]
+            "free_txt": []
           }
         ],
         "monitor": [
           {
             "x4_code": "(77-IR-191(N,G)77-IR-192,,SIG)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,G.Harbottle,J,NP,41,604,1963)",
+            "free_txt": [
+              " Text p.606"
+            ]
           }
         ]
       }

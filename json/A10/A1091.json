@@ -1,7 +1,7 @@
 {
   "entry": "A1091",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-08-20",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810420C)",
@@ -13,6 +13,12 @@
       "x4_code": "(19990205U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20240708A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -26,16 +32,16 @@
     "institutes": [
       {
         "x4_code": "(1USALAS)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(1USATEX)",
-        "free_txt": []
+        "free_txt": ""
       }
     ],
     "references": [
       {
-        "x4_code": "(J,PR,84,(4),695,195111)",
+        "x4_code": "(J,PR,84,695,1951)",
         "free_txt": [],
         "publication_year": "1951",
         "doi": null,
@@ -45,7 +51,9 @@
     "facilities": [
       {
         "x4_code": "(CYCLO,1USALAS)",
-        "free_txt": [],
+        "free_txt": [
+          " 42-inch cyclotron"
+        ],
         "pointer": "0",
         "facility_type": "(CYCLO)",
         "institute": "(1USALAS)"
@@ -55,29 +63,24 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(2-HE-3(D,P)2-HE-4,,DA,,,EXP)",
+        "x4_code": "(2-HE-3(D,P)2-HE-4,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "2-HE-3",
-              [
-                "D,P"
-              ],
-              "2-HE-4,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "2-HE-3",
             "process": "D,P",
-            "sf49": "2-HE-4,,DA,,,EXP",
+            "sf49": "2-HE-4,,DA",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(2-HE-3(D,P)2-HE-4,,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -85,24 +88,56 @@
   },
   "data_tables": {
     "001": {
-      "common": null
-    },
-    "002": {
       "common": {
         "heads": [
-          "EN",
-          "DATA-ERR"
+          "ERR-T",
+          "ERR-1",
+          "ERR-2",
+          "ERR-3",
+          "ERR-4",
+          "ERR-5"
         ],
         "units": [
-          "MEV",
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT",
+          "PER-CENT",
           "PER-CENT"
         ],
         "data": [
           [
-            10.2
+            4.7
           ],
           [
-            4.7
+            3.2
+          ],
+          [
+            2.0
+          ],
+          [
+            2.5
+          ],
+          [
+            1.0
+          ],
+          [
+            0.5
+          ]
+        ]
+      }
+    },
+    "002": {
+      "common": {
+        "heads": [
+          "EN"
+        ],
+        "units": [
+          "MEV"
+        ],
+        "data": [
+          [
+            10.2
           ]
         ]
       },
@@ -197,13 +232,61 @@
           {
             "x4_code": "(PLATE)",
             "free_txt": [
-              " Multiplate camera"
+              " Emulsion thickness is about 1800 um"
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " The absolute rms standard error"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1)",
+            "free_txt": [
+              " Statistical error"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Uncertainty in discrimination of tracks of",
+              "proper length and direction"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3)",
+            "free_txt": [
+              " Uncertainty in current integrator"
+            ]
+          },
+          {
+            "x4_code": "(ERR-4)",
+            "free_txt": [
+              " Uncertainty in gas measurements (pressure and",
+              "temperature)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-5)",
+            "free_txt": [
+              " Uncertainty in camera geometry"
             ]
           }
         ],
         "facility": [
           {
             "x4_code": "(CYCLO,1USALAS)",
+            "free_txt": [
+              " 42-inch cyclotron"
+            ]
+          }
+        ],
+        "method": [
+          {
+            "x4_code": "(EXTB,BCINT)",
             "free_txt": []
           }
         ],
@@ -219,17 +302,9 @@
     },
     "002": {
       "0": {
-        "err-analys": [
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " Absolute error"
-            ]
-          }
-        ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,J.C.Allred,J,PR,84,695,1951)",
             "free_txt": [
               " Table 1"
             ]

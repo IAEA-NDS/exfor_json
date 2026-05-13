@@ -1,7 +1,7 @@
 {
   "entry": "40359",
-  "last_updated": "2020-08-27",
-  "number_of_revisions": "6",
+  "last_updated": "2025-03-11",
+  "number_of_revisions": "7",
   "histories": [
     {
       "x4_code": "(19771209C)",
@@ -27,6 +27,14 @@
       "x4_code": "(20200720A)",
       "free_txt": [
         " Subent 002 was corrected."
+      ]
+    },
+    {
+      "x4_code": "(20250128U)",
+      "free_txt": [
+        " Free text in COMMENT of Subent 003 was",
+        " corrected. STATUS was updated for new rules.",
+        " ERR-ANALYS was moved from Subent 001 to 002."
       ]
     }
   ],
@@ -64,7 +72,9 @@
     "references": [
       {
         "x4_code": "((R,YK-23,10,1976)=(R,INDC(CCP)-106,10,1976))",
-        "free_txt": [],
+        "free_txt": [
+          "In Russian"
+        ],
         "publication_year": "1976",
         "doi": null,
         "pointer": "0"
@@ -84,16 +94,9 @@
     "002": {
       "0": {
         "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA,,MSC)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "6-C-12",
-              [
-                "N,INL"
-              ],
-              "6-C-12,PAR,DA,,MSC"
-            ],
-            "type": null,
             "target": "6-C-12",
             "process": "N,INL",
             "sf49": "6-C-12,PAR,DA,,MSC",
@@ -102,10 +105,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": "MSC",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(6-C-12(N,INL)6-C-12,PAR,DA,,MSC)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": " Any reaction emitting a neutron slower than (n,n3) neutron is included.",
         "pointer": "0"
       }
@@ -113,16 +118,9 @@
     "003": {
       "0": {
         "x4_code": "(6-C-12(N,INL)6-C-12,PAR,SIG,,MSC)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "6-C-12",
-              [
-                "N,INL"
-              ],
-              "6-C-12,PAR,SIG,,MSC"
-            ],
-            "type": null,
             "target": "6-C-12",
             "process": "N,INL",
             "sf49": "6-C-12,PAR,SIG,,MSC",
@@ -131,10 +129,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "MSC",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(6-C-12(N,INL)6-C-12,PAR,SIG,,MSC)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": " Contribution of any reaction emitting a neutron slower than (n,n3) neutron is included .",
         "pointer": "0"
       }
@@ -256,34 +256,6 @@
             ]
           }
         ],
-        "err-analys": [
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " Mean-square error for 3 measurement",
-              ". Errors of normalization coefficient:"
-            ]
-          },
-          {
-            "x4_code": "(ERR-S,3.,5.)",
-            "free_txt": [
-              " Statistical error."
-            ]
-          },
-          {
-            "x4_code": "(ERR-1,,2.)",
-            "free_txt": [
-              " Error due to elastic and inelastic peaks",
-              "separation."
-            ]
-          },
-          {
-            "x4_code": "(ERR-2,3.,5.)",
-            "free_txt": [
-              " Error of data used in analysis"
-            ]
-          }
-        ],
         "facility": [
           {
             "x4_code": "(VDG,4RUSFEI)",
@@ -348,15 +320,43 @@
               " Average value of three measurements of",
               "non-elastically scattering neutrons.",
               "Elastic and inelastic (4.43 MeV) peaks were separated",
-              "with  uncertainty < 2.%."
+              "with uncertainty < 2.%."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Mean-square error for 3 measurement",
+              ". Errors of normalization coefficient:"
+            ]
+          },
+          {
+            "x4_code": "(ERR-S,3.,5.)",
+            "free_txt": [
+              " Statistical error."
+            ]
+          },
+          {
+            "x4_code": "(ERR-1,,2.)",
+            "free_txt": [
+              " Error due to elastic and inelastic peaks",
+              "separation."
+            ]
+          },
+          {
+            "x4_code": "(ERR-2,3.,5.)",
+            "free_txt": [
+              " Error of data used in analysis"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,O.A.Sal'nikov+,R,INDC(CCP)-106,10,1976)",
             "free_txt": [
-              " Table 2 of INDC(CCP)-106,10,1976"
+              " Table 2"
             ]
           }
         ]
@@ -377,13 +377,8 @@
               "Of authors.",
               " Measured angular distribution was fitted by Legendre",
               "polynomials in the form:",
-              "SIG(COS(angle))="
-            ]
-          },
-          {
-            "x4_code": "(1/(4*PI))",
-            "free_txt": [
-              "*(a0+a1*P1(COS(angle))+a2*P2(COS(angle))).",
+              " SIG(COS(angle))=",
+              " (1/(4*PI))*(a0+a1*P1(COS(angle))+a2*P2(COS(angle))).",
               "Coefficient a0 is emission total cross-section, what is",
               "cross-section of all reactions with excited level",
               "energy > 9.63 MeV."
@@ -392,9 +387,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,O.A.Sal'nikov+,R,INDC(CCP)-106,10,1976)",
             "free_txt": [
-              " Text page 12 of INDC(CCP)-106,10,1976"
+              "        Text page 12 of INDC(CCP)-106,10,1976"
             ]
           },
           {

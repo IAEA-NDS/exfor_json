@@ -1,12 +1,12 @@
 {
   "entry": "41431",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-04-04",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20031110C)",
       "free_txt": [
-        "   Compiled at the Centre - CJD"
+        "   Compiled at the centre - CJD"
       ]
     },
     {
@@ -14,10 +14,19 @@
       "free_txt": [
         " Last checking has been done."
       ]
+    },
+    {
+      "x4_code": "(20250225A)",
+      "free_txt": [
+        " Upper -> lower case correction",
+        " STATUS was added in data Subents.",
+        " Ref. R,INDC(CCP)-235,(2),366,1983 was added.",
+        " Reaction was corrected at Subent 003."
+      ]
     }
   ],
   "bib_record": {
-    "title": ".Neutron Level Spins of 121-Sb",
+    "title": " Neutron level spins of 121-Sb",
     "authors": [
       {
         "name": "F.N.Belyaev"
@@ -37,15 +46,15 @@
       {
         "x4_code": "(4RUSKUR)",
         "free_txt": [
-          "   Experimental Site"
+          "   Experimental site"
         ]
       }
     ],
     "references": [
       {
-        "x4_code": "(C,83KIEV,2,366,198310)",
+        "x4_code": "((C,83KIEV,2,366,1983)=(R,INDC(CCP)-235,(2),366,1983))",
         "free_txt": [
-          " Main Reference"
+          "Main ref. In Russian."
         ],
         "publication_year": "1983",
         "doi": null,
@@ -56,7 +65,7 @@
       {
         "x4_code": "(LINAC,4RUSKUR)",
         "free_txt": [
-          " Linear Accelerator of Electrons"
+          " Linear accelerator of electrons"
         ],
         "pointer": "0",
         "facility_type": "(LINAC)",
@@ -68,16 +77,9 @@
     "002": {
       "0": {
         "x4_code": "(51-SB-121(N,0),,J)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "51-SB-121",
-              [
-                "N,0"
-              ],
-              ",,J"
-            ],
-            "type": null,
             "target": "51-SB-121",
             "process": "N,0",
             "sf49": ",,J",
@@ -86,59 +88,52 @@
             "sf6": "J",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(51-SB-121(N,0),,J)"
           }
         ],
-        "type": null,
-        "free_text": " Spin of Neutron Level",
+        "operator": null,
+        "free_text": "",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "((51-SB-121(N,G)51-SB-122,,SPC,,AV)//(51-SB-121(N,G)51-SB-122,,SPC,,AV))",
+        "x4_code": "((51-SB-121(N,G)51-SB-122,,SPC,,RES/AV)//(51-SB-121(N,G)51-SB-122,,SPC,,RES/AV))",
         "children": [
           {
-            "code": [
-              "51-SB-121",
-              [
-                "N,G"
-              ],
-              "51-SB-122,,SPC,,AV"
-            ],
-            "type": null,
+            "x4_code": "(51-SB-121(N,G)51-SB-122,,SPC,,RES/AV)",
             "target": "51-SB-121",
             "process": "N,G",
-            "sf49": "51-SB-122,,SPC,,AV",
+            "sf49": "51-SB-122,,SPC,,RES/AV",
             "sf4": "51-SB-122",
             "sf5": null,
             "sf6": "SPC",
             "sf7": null,
-            "sf8": "AV",
+            "sf8": "RES/AV",
             "sf9": null
           },
           {
-            "code": [
-              "51-SB-121",
-              [
-                "N,G"
-              ],
-              "51-SB-122,,SPC,,AV"
-            ],
-            "type": null,
+            "x4_code": "(51-SB-121(N,G)51-SB-122,,SPC,,RES/AV)",
             "target": "51-SB-121",
             "process": "N,G",
-            "sf49": "51-SB-122,,SPC,,AV",
+            "sf49": "51-SB-122,,SPC,,RES/AV",
             "sf4": "51-SB-122",
             "sf5": null,
             "sf6": "SPC",
             "sf7": null,
-            "sf8": "AV",
+            "sf8": "RES/AV",
             "sf9": null
           }
         ],
-        "type": "//",
-        "free_text": "     Experimental Ratio of Averaged Intensities For 50-100 KeV Interval To 100-130 KeV Interval.",
+        "math_expression": [
+          "Ratio",
+          "((51-SB-121(N,G)51-SB-122,,SPC,,RES/AV)",
+          "(51-SB-121(N,G)51-SB-122,,SPC,,RES/AV))"
+        ],
+        "operator": "Ratio",
+        "free_text": "  Experimental ratio of averaged intensities for 50-100 keV interval to 100-130 keV interval.",
         "pointer": "0"
       }
     }
@@ -236,8 +231,8 @@
       "common": {
         "heads": [
           "E-MIN-NM",
-          "E-MIN-DN",
           "E-MAX-NM",
+          "E-MIN-DN",
           "E-MAX-DN"
         ],
         "units": [
@@ -263,7 +258,7 @@
       },
       "data": {
         "heads": [
-          "EN",
+          "EN-RES",
           "DATA",
           "DATA-ERR"
         ],
@@ -371,15 +366,8 @@
           {
             "x4_code": "(NAICR)",
             "free_txt": [
-              " Two Scintillation Detectors Nai(TL)"
-            ]
-          }
-        ],
-        "err-analys": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              ".Errors, If Present, are not Specified"
+              " Two scintillation detectors NaI(Tl) of",
+              "60 x 10 mm size."
             ]
           }
         ],
@@ -387,7 +375,7 @@
           {
             "x4_code": "(LINAC,4RUSKUR)",
             "free_txt": [
-              " Linear Accelerator of Electrons"
+              " Linear accelerator of electrons"
             ]
           }
         ],
@@ -395,7 +383,7 @@
           {
             "x4_code": "(TOF)",
             "free_txt": [
-              " 45 M Flight Path."
+              " 45 m flight path."
             ]
           },
           {
@@ -407,22 +395,55 @@
           {
             "x4_code": null,
             "free_txt": [
-              " Antimony Dioxide SB2-O4 of 98.2 % Enrichment,",
-              "     12 G Weight and 0.5 G/Cm2 Thickness."
+              " Antimony dioxide Sb121(2)O(4) of 98.2 % enrichment,",
+              "     12 g weight and 0.5 g/cm2 thickness."
             ]
+          },
+          {
+            "x4_code": "(51-SB-121,ENR=0.982)",
+            "free_txt": []
           }
         ],
         "status": [
           {
             "x4_code": "(PRELM)",
+            "free_txt": []
+          }
+        ]
+      }
+    },
+    "002": {
+      "0": {
+        "status": [
+          {
+            "x4_code": "(TABLE,,F.N.Belyaev+,R,INDC(CCP)-235,(2),366,1983)",
             "free_txt": [
-              " Data from Main Reference"
+              " Table on pages 367-368."
             ]
           }
         ]
       }
     },
-    "002": {},
-    "003": {}
+    "003": {
+      "0": {
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Type of uncertainty is not explained in the",
+              "article."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,F.N.Belyaev+,R,INDC(CCP)-235,(2),366,1983)",
+            "free_txt": [
+              " Table on pages 367-368."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

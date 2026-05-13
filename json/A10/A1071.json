@@ -1,7 +1,7 @@
 {
   "entry": "A1071",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-08-20",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810327C)",
@@ -13,6 +13,12 @@
       "x4_code": "(19990205U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20240702A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -46,7 +52,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,NP/A,219,(1),157,197401)",
+        "x4_code": "(J,NP/A,219,157,1974)",
         "free_txt": [],
         "publication_year": "1974",
         "doi": null,
@@ -55,69 +61,59 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDGT)",
+        "x4_code": "(VDGT,1USASTF)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDGT)",
-        "institute": null
+        "institute": "(1USASTF)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(2-HE-3(HE3,G+2P)2-HE-4,,DA,,,EXP)",
+        "x4_code": "(2-HE-3(HE3,G)4-BE-6,PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "2-HE-3",
-              [
-                "HE3,G+2P"
-              ],
-              "2-HE-4,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "2-HE-3",
-            "process": "HE3,G+2P",
-            "sf49": "2-HE-4,,DA,,,EXP",
-            "sf4": "2-HE-4",
-            "sf5": null,
+            "process": "HE3,G",
+            "sf49": "4-BE-6,PAR,DA",
+            "sf4": "4-BE-6",
+            "sf5": "PAR",
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(2-HE-3(HE3,G)4-BE-6,PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(2-HE-3(HE3,G+2P)2-HE-4,PAR,DA,,,EXP)",
+        "x4_code": "(2-HE-3(HE3,G)4-BE-6,PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "2-HE-3",
-              [
-                "HE3,G+2P"
-              ],
-              "2-HE-4,PAR,DA,,,EXP"
-            ],
-            "type": null,
             "target": "2-HE-3",
-            "process": "HE3,G+2P",
-            "sf49": "2-HE-4,PAR,DA,,,EXP",
-            "sf4": "2-HE-4",
+            "process": "HE3,G",
+            "sf49": "4-BE-6,PAR,DA",
+            "sf4": "4-BE-6",
             "sf5": "PAR",
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(2-HE-3(HE3,G)4-BE-6,PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -130,19 +126,29 @@
     "002": {
       "common": {
         "heads": [
-          "EN-ERR",
-          "ANG"
+          "E-LVL",
+          "E-LVL",
+          "ANG",
+          "EN-ERR-DIG"
         ],
         "units": [
           "MEV",
-          "ADEG"
+          "MEV",
+          "ADEG",
+          "MEV"
         ],
         "data": [
           [
-            0.1
+            0.0
+          ],
+          [
+            1.5
           ],
           [
             90.0
+          ],
+          [
+            0.1
           ]
         ]
       },
@@ -216,18 +222,28 @@
       }
     },
     "003": {
-      "common": {
+      "common": null,
+      "data": {
         "heads": [
-          "E-LVL-MIN",
-          "E-LVL-MAX",
-          "ANG"
+          "EN",
+          "E-LVL",
+          "E-LVL",
+          "ANG",
+          "DATA",
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
           "MEV",
-          "ADEG"
+          "MEV",
+          "ADEG",
+          "MB/SR",
+          "MB/SR"
         ],
         "data": [
+          [
+            11.8
+          ],
           [
             0.0
           ],
@@ -236,23 +252,6 @@
           ],
           [
             90.0
-          ]
-        ]
-      },
-      "data": {
-        "heads": [
-          "EN",
-          "DATA",
-          "ERR-S"
-        ],
-        "units": [
-          "MEV",
-          "MB/SR",
-          "MB/SR"
-        ],
-        "data": [
-          [
-            11.8
           ],
           [
             0.00064
@@ -276,9 +275,27 @@
             ]
           }
         ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No information about source of uncertainty"
+            ]
+          }
+        ],
         "facility": [
           {
-            "x4_code": "(VDGT)",
+            "x4_code": "(VDGT,1USASTF)",
+            "free_txt": []
+          }
+        ],
+        "level-prop": [
+          {
+            "x4_code": "(4-BE-6,E-LVL=0.0,SPIN=0.,PARITY=+1.)",
+            "free_txt": []
+          },
+          {
+            "x4_code": "(4-BE-6,E-LVL=1.5,SPIN=2.,PARITY=+1.)",
             "free_txt": []
           }
         ],
@@ -290,9 +307,11 @@
         ],
         "sample": [
           {
-            "x4_code": null,
+            "x4_code": "(2-HE-3,ENR=0.9995)",
             "free_txt": [
-              "The target consisted of 99.95% enriched 3He gas"
+              " The target consisted of 99.95%",
+              "enriched 3He gas contained in a cylindrical, gold",
+              "lined, stainless steel."
             ]
           }
         ]
@@ -300,23 +319,9 @@
     },
     "002": {
       "0": {
-        "err-analys": [
-          {
-            "x4_code": "(EN-ERR)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          },
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " From graphic bars (statistic) and digitizing"
-            ]
-          }
-        ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,E.Ventura+,J,NP/A,219,157,1974)",
             "free_txt": [
               " Fig 4"
             ]
@@ -326,19 +331,11 @@
     },
     "003": {
       "0": {
-        "err-analys": [
-          {
-            "x4_code": "(ERR-S)",
-            "free_txt": [
-              "  Statistical error"
-            ]
-          }
-        ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,E.Ventura+,J,NP/A,219,157,1974)",
             "free_txt": [
-              " From text p.163"
+              " from text p.163"
             ]
           }
         ]

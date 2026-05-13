@@ -1,7 +1,7 @@
 {
   "entry": "40831",
-  "last_updated": "2020-02-17",
-  "number_of_revisions": "5",
+  "last_updated": "2026-03-19",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19841220C)",
@@ -13,7 +13,7 @@
         " M.M. Upper -> lower case correction.",
         " Dates were corrected for 4-digits year.",
         " Refs. SJA,56,173,1984 , SJA,56,176,1984 ,",
-        " INDC(CCP)-235,159,1984 were added.",
+        " INDC(CCP)-235,(2),159,1984 were added.",
         " BIB information was added.",
         " COMMENT was added."
       ]
@@ -23,10 +23,17 @@
       "free_txt": [
         " Minor correction in Subent 004 Status."
       ]
+    },
+    {
+      "x4_code": "(20251006A)",
+      "free_txt": [
+        " Ref. S,INDC(CCP)-235 was corrected.",
+        "STATUS was corrected for new rules."
+      ]
     }
   ],
   "bib_record": {
-    "title": " Measurement of the fission cross-section ratio U-238/U-235 for fast neutrons",
+    "title": " Measurement of the fission cross-section ratio 238U/235U for fast neutrons",
     "authors": [
       {
         "name": "A.A.Goverdovskii"
@@ -58,7 +65,7 @@
     ],
     "references": [
       {
-        "x4_code": "((C,83KIEV,2,159,1983)=(R,INDC(CCP)-235,159,1984))",
+        "x4_code": "((C,83KIEV,2,159,1983)=(S,INDC(CCP)-235,(2),159,1984))",
         "free_txt": [
           "Vol.II"
         ],
@@ -113,14 +120,7 @@
         "x4_code": "((92-U-238(N,F),,SIG)/(92-U-235(N,F),,SIG))",
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(92-U-238(N,F),,SIG)",
             "target": "92-U-238",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -132,14 +132,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F),,SIG)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -151,7 +144,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((92-U-238(N,F),,SIG)",
+          "(92-U-235(N,F),,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -161,14 +159,7 @@
         "x4_code": "((92-U-238(N,F),,SIG)/(92-U-235(N,F),,SIG))",
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(92-U-238(N,F),,SIG)",
             "target": "92-U-238",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -180,14 +171,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F),,SIG)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -199,7 +183,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((92-U-238(N,F),,SIG)",
+          "(92-U-235(N,F),,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -209,14 +198,7 @@
         "x4_code": "((92-U-238(N,F),,SIG)/(92-U-235(N,F),,SIG))",
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(92-U-238(N,F),,SIG)",
             "target": "92-U-238",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -228,14 +210,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F),,SIG)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -247,7 +222,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((92-U-238(N,F),,SIG)",
+          "(92-U-235(N,F),,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -670,18 +650,18 @@
           {
             "x4_code": null,
             "free_txt": [
-              " Sample  number  2 contains  6.864 % of U-235,",
+              " Sample number 2 contains 6.864 % of U-235,",
               "        0.020 % of U-236, 93.116 % of U-238 .",
-              "  3-d sample contains  3.213 % of U-235,",
+              "  3-d sample contains 3.213 % of U-235,",
               "        0.007 % of U-236, 96.78 % U-238 ."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,A.A.Goverdovskii,J,SJA,56,173,1984)",
             "free_txt": [
-              " Table 1 of AE,56,(3),162,1984"
+              " Table 1"
             ]
           }
         ]
@@ -716,7 +696,7 @@
           {
             "x4_code": "(ERR-2)",
             "free_txt": [
-              "  Error due to the  total deceleration",
+              "  Error due to the total deceleration",
               "         of the fragments in the layer"
             ]
           },
@@ -791,13 +771,13 @@
           {
             "x4_code": "(APRVD)",
             "free_txt": [
-              "  Gordjushin, 1984-12-20"
+              "  Gordyushin, 1984-12-20"
             ]
           },
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,A.A.Goverdovskii,J,SJA,56,173,1984)",
             "free_txt": [
-              "  Table 2 of SJA,56,173,1984",
+              " Table 2",
               "Table 3 of 83KIEV,2,159,1983 - data for",
               "EN=5.44-14.76 MeV ."
             ]
@@ -933,13 +913,13 @@
           {
             "x4_code": "(APRVD)",
             "free_txt": [
-              "  Gordjushin, 1984-12-20"
+              "  Gordyushin, 1984-12-20"
             ]
           },
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,A.A.Goverdovskii,J,SJA,56,176,1984)",
             "free_txt": [
-              " Table 1 of Sov.J.Atom.Energy 56(1984)176,",
+              " Table 1",
               "Table 3 of Conf.Proc.83KIEV,v.2,p.159,1983 - data for",
               "EN=5.44-14.76 MeV ."
             ]

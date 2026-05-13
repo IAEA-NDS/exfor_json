@@ -1,17 +1,26 @@
 {
   "entry": "41313",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-04-04",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19981121C)",
       "free_txt": [
-        "  + +  COMPILED AT THE CJD  + +"
+        "  + +  Compiled at the CJD  + +"
+      ]
+    },
+    {
+      "x4_code": "(20250214A)",
+      "free_txt": [
+        " Upper -> lower case correction.",
+        " STATUS information was updated for new rules.",
+        " EN-ERR -> -EN-ERR. +EN-ERR was added.",
+        " ERR-ANALYS was corrected as given in the article."
       ]
     }
   ],
   "bib_record": {
-    "title": ".DETERMINATION OF THE 56-FE(N.P)56-MN CROSS SECTION AT 14.8 MEV",
+    "title": " Determination of the 56-Fe(n,p)56-Mn cross section at 14.8 MeV",
     "authors": [
       {
         "name": "Z.A.Ramendik"
@@ -31,18 +40,18 @@
     ],
     "references": [
       {
-        "x4_code": "(J,AE,42,(2),136,197702)",
+        "x4_code": "(J,SJA,42,152,1977)",
         "free_txt": [
-          " MAIN REFERENCE,DATA ARE GIVEN"
+          " English translation of AE 42 136"
         ],
         "publication_year": "1977",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,SJA,42,152,1977)",
+        "x4_code": "(J,AE,42,136,1977)",
         "free_txt": [
-          "   ENGLISH TRANSLATION OF AE 42 136"
+          " Issue 2. Main ref., data are given"
         ],
         "publication_year": "1977",
         "doi": null,
@@ -53,7 +62,7 @@
       {
         "x4_code": "(VDG)",
         "free_txt": [
-          "  NEUTRON GENERATOR"
+          "  Neutron generator"
         ],
         "pointer": "0",
         "facility_type": "(VDG)",
@@ -65,16 +74,9 @@
     "002": {
       "0": {
         "x4_code": "(26-FE-56(N,P)25-MN-56,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "26-FE-56",
-              [
-                "N,P"
-              ],
-              "25-MN-56,,SIG"
-            ],
-            "type": null,
             "target": "26-FE-56",
             "process": "N,P",
             "sf49": "25-MN-56,,SIG",
@@ -83,10 +85,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(26-FE-56(N,P)25-MN-56,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -97,11 +101,13 @@
       "common": {
         "heads": [
           "EN",
-          "EN-ERR",
+          "-EN-ERR",
+          "+EN-ERR",
           "ERR-S",
-          "ERR-1"
+          "ERR-SYS"
         ],
         "units": [
+          "MEV",
           "MEV",
           "MEV",
           "PER-CENT",
@@ -113,6 +119,9 @@
           ],
           [
             0.11
+          ],
+          [
+            0.02
           ],
           [
             0.23
@@ -152,7 +161,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              ".TAKEN INTO ACCOUNT FE-56 CONTENT=91.68 PC"
+              ".Taken into account Fe-56 content=91.68 %."
             ]
           }
         ],
@@ -160,22 +169,51 @@
           {
             "x4_code": null,
             "free_txt": [
-              ".CORRECTIONS WERE MADE FOR FE-57(N,D)MN-56 AND",
-              " FE-57(N,N+P)MN-56 REACTIONS"
+              ".Corrections were made for Fe-57(n,d)Mn-56 and",
+              " Fe-57(n,n+p)Mn-56 reactions.",
+              " For instability of neutron flux."
+            ]
+          }
+        ],
+        "detector": [
+          {
+            "x4_code": "(D4PI)",
+            "free_txt": [
+              " 4PI beta counter.",
+              ".BDBS-3-1eM-type gamma spectrometer."
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(ERR-SYS)",
             "free_txt": [
-              " TOTAL ERROR, 3 STANDARD DEVIATIONS"
+              " Total systematic error(0.68 confidence level)",
+              " includes:",
+              " neutron flux - 0.75 %,",
+              " correction coefficient K  - 0.3 %,",
+              " half-life and irradiation time - 0.05 %,",
+              " parasitic reactions on Fe-57 - 0.05 %.",
+              ". Angle and distance ~0.1%",
+              ". Mass geometry, sample density ~< 0.02 %."
             ]
           },
           {
-            "x4_code": "(ERR-1)",
+            "x4_code": "(ERR-S)",
             "free_txt": [
-              " SYSTEMATIC ERROR"
+              " Total statistical error (0.68 confidence level)",
+              " includes:",
+              " neutron flux - 0.2 %,",
+              " activity measurement - 0.1 %,",
+              "half-life and irradiation time - 0.05 %"
+            ]
+          },
+          {
+            "x4_code": "(ERR-T)",
+            "free_txt": [
+              " Total error - 1.5 %",
+              " was obtained from linear superposition of systematic",
+              "and statistical errors taken for confidence level 0.99."
             ]
           }
         ],
@@ -183,7 +221,7 @@
           {
             "x4_code": "(VDG)",
             "free_txt": [
-              "  NEUTRON GENERATOR"
+              "  Neutron generator"
             ]
           }
         ],
@@ -196,7 +234,9 @@
         "method": [
           {
             "x4_code": "(ACTIV)",
-            "free_txt": []
+            "free_txt": [
+              " Irradiation time 8-10 hr."
+            ]
           },
           {
             "x4_code": "(ASSOP)",
@@ -204,7 +244,9 @@
           },
           {
             "x4_code": "(COINC)",
-            "free_txt": []
+            "free_txt": [
+              " Beta - gamma coincidence ."
+            ]
           }
         ],
         "monitor": [
@@ -217,17 +259,13 @@
           {
             "x4_code": null,
             "free_txt": [
-              ".CHEMICALLY PURE IRON, NATURAL ISOTOPE ABUNDANCE",
-              " THICKNESS 80 MILLIGRAM/CM2"
+              ".Chemically pure iron, natural isotope abundance.",
+              " Thickness ~ 80 milligram/cm2 ."
             ]
-          }
-        ],
-        "status": [
+          },
           {
-            "x4_code": null,
-            "free_txt": [
-              ".DATA TAKEN FROM MAIN REFERENCE"
-            ]
+            "x4_code": "(26-FE-56,NAT=0.9168)",
+            "free_txt": []
           }
         ]
       }
@@ -238,6 +276,14 @@
           {
             "x4_code": "(25-MN-56,2.577HR,B-)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,Z.A.Ramendik+,J,SJA,42,152,1977)",
+            "free_txt": [
+              " Text page 154."
+            ]
           }
         ]
       }

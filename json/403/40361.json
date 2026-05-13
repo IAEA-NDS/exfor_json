@@ -76,16 +76,9 @@
     "002": {
       "0": {
         "x4_code": "(92-U-233(N,F),,DA,FF,COS/RSD)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,F"
-              ],
-              ",,DA,FF,COS/RSD"
-            ],
-            "type": null,
             "target": "92-U-233",
             "process": "N,F",
             "sf49": ",,DA,FF,COS/RSD",
@@ -94,10 +87,12 @@
             "sf6": "DA",
             "sf7": "FF",
             "sf8": "COS/RSD",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-233(N,F),,DA,FF,COS/RSD)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -107,14 +102,7 @@
         "x4_code": "((92-U-233(N,F),,SIG)/(92-U-235(N,F),,SIG))",
         "children": [
           {
-            "code": [
-              "92-U-233",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(92-U-233(N,F),,SIG)",
             "target": "92-U-233",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -126,14 +114,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              ",,SIG"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F),,SIG)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": ",,SIG",
@@ -145,7 +126,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((92-U-233(N,F),,SIG)",
+          "(92-U-235(N,F),,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -1038,13 +1024,6 @@
           }
         ],
         "monitor": [
-          {
-            "x4_code": "((MONIT)(92-U-233(N,F),,SIG)/(92-U-235(N,F),,SIG))",
-            "free_txt": [
-              " Normalized to ratio =1.51",
-              "at neutron energy EN=1 MeV ."
-            ]
-          },
           {
             "x4_code": "((MONIT)(92-U-233(N,F),,SIG)/(92-U-235(N,F),,SIG))",
             "free_txt": [

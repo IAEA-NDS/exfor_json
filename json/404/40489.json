@@ -1,7 +1,7 @@
 {
   "entry": "40489",
-  "last_updated": "2023-01-18b",
-  "number_of_revisions": "6",
+  "last_updated": "2024-12-10",
+  "number_of_revisions": "7",
   "histories": [
     {
       "x4_code": "(19800808C)",
@@ -34,6 +34,13 @@
       "x4_code": "(20220722A)",
       "free_txt": [
         " Update for current rules and dictionaries."
+      ]
+    },
+    {
+      "x4_code": "(20241024A)",
+      "free_txt": [
+        " Subent 004 was corrected.",
+        " Status was updated for new rules."
       ]
     }
   ],
@@ -116,14 +123,7 @@
         "x4_code": "((92-U-235(N,F)ELEM/MASS,CUM,FY,,FST)//(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW))",
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,FST"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,FST)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,FST",
@@ -135,14 +135,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,MXW"
-            ],
-            "type": null,
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,MXW",
@@ -154,7 +147,12 @@
             "sf9": null
           }
         ],
-        "type": "//",
+        "math_expression": [
+          "Ratio",
+          "((92-U-235(N,F)ELEM/MASS,CUM,FY,,FST)",
+          "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW))"
+        ],
+        "operator": "Ratio",
         "free_text": "  Ratio of yields for the fission by fast and thermal neutrons",
         "pointer": "0"
       }
@@ -164,14 +162,7 @@
         "x4_code": "((94-PU-239(N,F)ELEM/MASS,CUM,FY,,FST)//(94-PU-239(N,F)ELEM/MASS,CUM,FY,,MXW))",
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,FST"
-            ],
-            "type": null,
+            "x4_code": "(94-PU-239(N,F)ELEM/MASS,CUM,FY,,FST)",
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,FST",
@@ -183,14 +174,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,MXW"
-            ],
-            "type": null,
+            "x4_code": "(94-PU-239(N,F)ELEM/MASS,CUM,FY,,MXW)",
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,MXW",
@@ -202,24 +186,22 @@
             "sf9": null
           }
         ],
-        "type": "//",
+        "math_expression": [
+          "Ratio",
+          "((94-PU-239(N,F)ELEM/MASS,CUM,FY,,FST)",
+          "(94-PU-239(N,F)ELEM/MASS,CUM,FY,,MXW))"
+        ],
+        "operator": "Ratio",
         "free_text": " Ratio of yields  for the fast and for the thermal neutrons",
         "pointer": "0"
       }
     },
     "004": {
       "0": {
-        "x4_code": "((92-U-238(N,F)ELEM/MASS,CUM,FY,,FST)//(92-U-238(N,F)ELEM/MASS,CUM,FY,,MXW))",
+        "x4_code": "((92-U-238(N,F)ELEM/MASS,CUM,FY,,FST)//(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW))",
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,FST"
-            ],
-            "type": null,
+            "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY,,FST)",
             "target": "92-U-238",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,FST",
@@ -231,15 +213,8 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,MXW"
-            ],
-            "type": null,
-            "target": "92-U-238",
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
+            "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,MXW",
             "sf4": "ELEM/MASS",
@@ -250,7 +225,12 @@
             "sf9": null
           }
         ],
-        "type": "//",
+        "math_expression": [
+          "Ratio",
+          "((92-U-238(N,F)ELEM/MASS,CUM,FY,,FST)",
+          "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW))"
+        ],
+        "operator": "Ratio",
         "free_text": "  Ratio of yields  for the fast neutrons and the thermal neutrons",
         "pointer": "0"
       }
@@ -258,16 +238,9 @@
     "005": {
       "0": {
         "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,FST)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,FST"
-            ],
-            "type": null,
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,FST",
@@ -276,10 +249,12 @@
             "sf6": "FY",
             "sf7": null,
             "sf8": "FST",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,FST)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -287,16 +262,9 @@
     "006": {
       "0": {
         "x4_code": "(94-PU-239(N,F)ELEM/MASS,CUM,FY,,FST)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-239",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,FST"
-            ],
-            "type": null,
             "target": "94-PU-239",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,FST",
@@ -305,10 +273,12 @@
             "sf6": "FY",
             "sf7": null,
             "sf8": "FST",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(94-PU-239(N,F)ELEM/MASS,CUM,FY,,FST)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -316,16 +286,9 @@
     "007": {
       "0": {
         "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY,,FST)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "92-U-238",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,FST"
-            ],
-            "type": null,
             "target": "92-U-238",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,FST",
@@ -334,10 +297,12 @@
             "sf6": "FY",
             "sf7": null,
             "sf8": "FST",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-238(N,F)ELEM/MASS,CUM,FY,,FST)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -1260,23 +1225,11 @@
     },
     "002": {
       "0": {
-        "monitor": [
-          {
-            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
-            "free_txt": []
-          }
-        ],
-        "result": [
-          {
-            "x4_code": "(RVAL)",
-            "free_txt": []
-          }
-        ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,L.N.Yurova+,J,SJA,47,528,1979)",
             "free_txt": [
-              " Table 1 of J,SJA,47,528,1980"
+              " Table 1"
             ]
           }
         ]
@@ -1292,17 +1245,11 @@
             ]
           }
         ],
-        "result": [
-          {
-            "x4_code": "(RVAL)",
-            "free_txt": []
-          }
-        ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,L.N.Yurova+,J,SJA,47,528,1979)",
             "free_txt": [
-              " Table 1 of J,SJA,47,528,1980"
+              " Table 1"
             ]
           }
         ]
@@ -1310,23 +1257,11 @@
     },
     "004": {
       "0": {
-        "monitor": [
-          {
-            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
-            "free_txt": []
-          }
-        ],
-        "result": [
-          {
-            "x4_code": "(RVAL)",
-            "free_txt": []
-          }
-        ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,L.N.Yurova+,J,SJA,47,528,1979)",
             "free_txt": [
-              " Table 1 of J,SJA,47,528,1980"
+              " Table 1"
             ]
           }
         ]
@@ -1336,10 +1271,9 @@
       "0": {
         "monit-ref": [
           {
-            "x4_code": "(,W.Walker,R,IAEA-169,(11a),1974)",
+            "x4_code": "(,W.H.Walker,R,IAEA-169,(1),285,1974)",
             "free_txt": [
-              " W.Walker,C,73BOLOGNA, Paper # 11a, 1973.",
-              " Published in IAEA-169 (1974)."
+              " Paper # 11a, Conf. at 1973."
             ]
           }
         ],
@@ -1351,9 +1285,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,L.N.Yurova+,J,SJA,47,528,1979)",
             "free_txt": [
-              " Table 2 of J,SJA,47,528,1980"
+              " Table 2"
             ]
           },
           {
@@ -1369,10 +1303,9 @@
       "0": {
         "monit-ref": [
           {
-            "x4_code": "(,W.Walker,R,IAEA-169,(11a),1974)",
+            "x4_code": "(,W.H.Walker,R,IAEA-169,(1),285,1974)",
             "free_txt": [
-              " W.Walker,C,73BOLOGNA, Paper # 11a, 1973.",
-              " Published in IAEA-169 (1974)."
+              " Paper # 11a, Conf. at 1973."
             ]
           }
         ],
@@ -1384,9 +1317,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,L.N.Yurova+,J,SJA,47,528,1979)",
             "free_txt": [
-              " Table 2 of J,SJA,47,528,1980"
+              " Table 2"
             ]
           },
           {
@@ -1403,14 +1336,17 @@
         "monitor": [
           {
             "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
-            "free_txt": []
+            "free_txt": [
+              " Paper # 11a, 1973.",
+              " Published in IAEA-169 (1974)."
+            ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,L.N.Yurova+,J,SJA,47,528,1979)",
             "free_txt": [
-              " Table 2 of J,SJA,47,528,1980"
+              " Table 2"
             ]
           },
           {

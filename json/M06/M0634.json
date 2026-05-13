@@ -1,7 +1,7 @@
 {
   "entry": "M0634",
-  "last_updated": "2013-08-23",
-  "number_of_revisions": "5",
+  "last_updated": "2025-06-11",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(20020419C)",
@@ -22,10 +22,17 @@
       "free_txt": [
         " Corrected by V.Varlamov: REACTION."
       ]
+    },
+    {
+      "x4_code": "(20250422A)",
+      "free_txt": [
+        " Corrected by V. Varlamov: TITLE, COMMENT,",
+        " REFERENCE, SAMPLE, ANALYSIS, REACTION, STATUS."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Photofission cross section for 234U in the energy region of 5 - 9 MeV.",
+    "title": "Cross section for 234U photofission in the energy region 5-9 MeV.",
     "authors": [
       {
         "name": "A.S.Soldatov"
@@ -48,14 +55,16 @@
     ],
     "references": [
       {
-        "x4_code": "(J,YF,61,1427,1998)",
-        "free_txt": [],
+        "x4_code": "(J,PAN,61,1325,1998)",
+        "free_txt": [
+          " English translation of YF,61,1427,1998."
+        ],
         "publication_year": "1998",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,PAN,61,1325,1998)",
+        "x4_code": "(J,YF,61,1427,1998)",
         "free_txt": [],
         "publication_year": "1998",
         "doi": null,
@@ -78,14 +87,7 @@
         "x4_code": "((92-U-234(G,F),,SIG,,BRA)/(92-U-238(G,F),,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "92-U-234",
-              [
-                "G,F"
-              ],
-              ",,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(92-U-234(G,F),,SIG,,BRA)",
             "target": "92-U-234",
             "process": "G,F",
             "sf49": ",,SIG,,BRA",
@@ -97,14 +99,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-238",
-              [
-                "G,F"
-              ],
-              ",,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(92-U-238(G,F),,SIG,,BRA)",
             "target": "92-U-238",
             "process": "G,F",
             "sf49": ",,SIG,,BRA",
@@ -116,25 +111,23 @@
             "sf9": null
           }
         ],
-        "type": "/",
-        "free_text": "",
+        "math_expression": [
+          "Divide",
+          "((92-U-234(G,F),,SIG,,BRA)",
+          "(92-U-238(G,F),,SIG,,BRA))"
+        ],
+        "operator": "Divide",
+        "free_text": " Ratio of the reaction yields.",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(94-PU-238(G,F),,SIG,,BRS)",
+        "x4_code": "(92-U-234(G,F),,SIG,,BRS)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "94-PU-238",
-              [
-                "G,F"
-              ],
-              ",,SIG,,BRS"
-            ],
-            "type": null,
-            "target": "94-PU-238",
+            "target": "92-U-234",
             "process": "G,F",
             "sf49": ",,SIG,,BRS",
             "sf4": null,
@@ -142,10 +135,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRS",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(92-U-234(G,F),,SIG,,BRS)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -568,23 +563,12 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "analysis": [
-          {
-            "x4_code": "(UNFLD)",
-            "free_txt": [
-              " The  unfolding  of the reaction cross section",
-              " using the iterational method from  the  experimental",
-              " reaction yield measured using the the direct fission",
-              " fragment counting."
-            ]
-          }
-        ],
         "comment": [
           {
             "x4_code": null,
             "free_txt": [
               "The relative  photofission  cross  sections  for 234U",
-              " were measured in the bremsstrahlung beam  of   SSCRF",
+              " were  measured  in the bremsstrahlung beam  of   SRC",
               " IPPE  microtron  in  the  g-ray energy region of 4.7",
               " - 9.0 MeV with step of 25 keV in  subbarrier  range.",
               " Energy   dependencies   of  the  photofission  cross",
@@ -594,7 +578,7 @@
               " previously measured angular distributions of fission",
               " fragments.  On  the  basis   of   these   data   the",
               " theoretical   analysis   of   the   234U  subbarrier",
-              " photofossion was carried out in the framework of the",
+              " photofission was carried out in the framework of the",
               " one-dimensional  double-humped  barrier model taking",
               " into account damping effects of  vibrational  states",
               " in the secondary minimum. Fission barrier parameters",
@@ -616,7 +600,7 @@
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Mean-square errors."
+              " Mean-root-squared errors."
             ]
           }
         ],
@@ -636,7 +620,7 @@
           {
             "x4_code": "(EXTB,STTA)",
             "free_txt": [
-              " stack of Th and U targets."
+              " Stack of Th and U targets."
             ]
           }
         ],
@@ -654,29 +638,74 @@
             "free_txt": []
           }
         ],
-        "sample": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "The Al-U-oxide  target.  Thickness  of  U-234  - 0.63",
-              " mg/cm**2,  U-238 - 1 mg/cm**2.  the U-234 target was",
-              " enriched in isotope U-234 to 92.8 %  (U-235 - 6.7 %,",
-              " U-238  -  0.5  %).  the  u-238  target  was  natural",
-              " uranium."
-            ]
-          }
-        ],
         "status": [
           {
-            "x4_code": "(TABLE,APRVD)",
+            "x4_code": "(APRVD)",
             "free_txt": [
-              " by A.I.Blokhin."
+              " By A.I.Blokhin."
             ]
           }
         ]
       }
     },
-    "002": {},
-    "003": {}
+    "002": {
+      "0": {
+        "sample": [
+          {
+            "x4_code": "(92-U-234,ENR=0.928)",
+            "free_txt": [
+              " U-235 - 6.7 %, U-238 - 0.5  %.",
+              " 0.63 mg/cm**2"
+            ]
+          },
+          {
+            "x4_code": "(92-U-238,NAT=0.99275)",
+            "free_txt": [
+              " Natural uranium, 1 mg/cm**2."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.S.Soldatov+,J,PAN,61,1325,1998)",
+            "free_txt": [
+              " Data presented in Fig. 1."
+            ]
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": "(UNFLD)",
+            "free_txt": [
+              " The  unfolding  of the reaction cross section",
+              " using the iterational method from  the  experimental",
+              " reaction yield measured using the the direct fission",
+              " fragment counting."
+            ]
+          }
+        ],
+        "sample": [
+          {
+            "x4_code": "(92-U-234,ENR=0.928)",
+            "free_txt": [
+              " U-235 - 6.7 %, U-238 - 0.5  %.",
+              " 0.63 mg/cm**2"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.S.Soldatov+,J,PAN,61,1325,1998)",
+            "free_txt": [
+              " Data presented in Fig. 2."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

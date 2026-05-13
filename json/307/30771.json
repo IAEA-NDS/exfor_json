@@ -1,7 +1,7 @@
 {
   "entry": "30771",
-  "last_updated": "2009-12-24",
-  "number_of_revisions": "4",
+  "last_updated": "2024-09-17",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19880119C)",
@@ -14,10 +14,16 @@
       "free_txt": [
         " SD:Updated to new date formats,lower case."
       ]
+    },
+    {
+      "x4_code": "(20240524A)",
+      "free_txt": [
+        " On. Major revisions in 002-004."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Lu-175(n,g)Lu-176-m cross sections",
+    "title": "s-process branch at 176Lu",
     "authors": [
       {
         "name": "B.J.Allen"
@@ -26,41 +32,72 @@
         "name": "G.C.Lowenthal"
       },
       {
-        "name": "J.W.Boldeman"
-      },
-      {
         "name": "J.R.De Laeter"
       }
     ],
     "institutes": [
       {
         "x4_code": "(3AULAUA)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(3AULWAI)",
-        "free_txt": [
-          " Last author"
-        ]
+        "free_txt": ""
       }
     ],
-    "references": [],
-    "facilities": []
+    "references": [
+      {
+        "x4_code": "(J,JP/G,7,1271,1981)",
+        "free_txt": [],
+        "publication_year": "1981",
+        "doi": null,
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(C,81GRENOB,,573,1981)",
+        "free_txt": [
+          " final 175Lu(n,g) data in text"
+        ],
+        "publication_year": "1981",
+        "doi": null,
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,AAEC/AP/PR-81,8,1981)",
+        "free_txt": [
+          " final 175Lu(n,g) data in text"
+        ],
+        "publication_year": "1981",
+        "doi": null,
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(P,AAEC/PR-44-PD,19,1978)",
+        "free_txt": [
+          " preliminary 175Lu(n,g) isomeric ratio in text"
+        ],
+        "publication_year": "1978",
+        "doi": null,
+        "pointer": "0"
+      }
+    ],
+    "facilities": [
+      {
+        "x4_code": "(VDG)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDG)",
+        "institute": null
+      }
+    ]
   },
   "reactions": {
     "002": {
       "1": {
-        "x4_code": "(71-LU-175(N,G)71-LU-176-M,,SIG)",
+        "x4_code": "((71-LU-175(N,G)71-LU-176-M,,SIG)/(79-AU-197(N,G)79-AU-198,,SIG))",
         "children": [
           {
-            "code": [
-              "71-LU-175",
-              [
-                "N,G"
-              ],
-              "71-LU-176-M,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(71-LU-175(N,G)71-LU-176-M,,SIG)",
             "target": "71-LU-175",
             "process": "N,G",
             "sf49": "71-LU-176-M,,SIG",
@@ -70,94 +107,133 @@
             "sf7": null,
             "sf8": null,
             "sf9": null
-          }
-        ],
-        "type": null,
-        "free_text": "",
-        "pointer": "1"
-      },
-      "2": {
-        "x4_code": "(71-LU-175(N,G)71-LU-176-M/T,,SIG/RAT)",
-        "children": [
+          },
           {
-            "code": [
-              "71-LU-175",
-              [
-                "N,G"
-              ],
-              "71-LU-176-M/T,,SIG/RAT"
-            ],
-            "type": null,
-            "target": "71-LU-175",
+            "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG)",
+            "target": "79-AU-197",
             "process": "N,G",
-            "sf49": "71-LU-176-M/T,,SIG/RAT",
-            "sf4": "71-LU-176-M/T",
+            "sf49": "79-AU-198,,SIG",
+            "sf4": "79-AU-198",
             "sf5": null,
-            "sf6": "SIG/RAT",
+            "sf6": "SIG",
             "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": null,
+        "math_expression": [
+          "Divide",
+          "((71-LU-175(N,G)71-LU-176-M,,SIG)",
+          "(79-AU-197(N,G)79-AU-198,,SIG))"
+        ],
+        "operator": "Divide",
+        "free_text": "",
+        "pointer": "1"
+      },
+      "2": {
+        "x4_code": "(71-LU-175(N,G)71-LU-176-M,,SIG)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "71-LU-175",
+            "process": "N,G",
+            "sf49": "71-LU-176-M,,SIG",
+            "sf4": "71-LU-176-M",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(71-LU-175(N,G)71-LU-176-M,,SIG)"
+          }
+        ],
+        "operator": null,
         "free_text": "",
         "pointer": "2"
       }
     },
     "003": {
-      "0": {
-        "x4_code": "(73-TA-181(N,G)73-TA-182-G,,SIG)",
+      "1": {
+        "x4_code": "((73-TA-181(N,G)73-TA-182-G,,SIG,,SPA)/(79-AU-197(N,G)79-AU-198,,SIG,,SPA))",
         "children": [
           {
-            "code": [
-              "73-TA-181",
-              [
-                "N,G"
-              ],
-              "73-TA-182-G,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(73-TA-181(N,G)73-TA-182-G,,SIG,,SPA)",
             "target": "73-TA-181",
             "process": "N,G",
-            "sf49": "73-TA-182-G,,SIG",
+            "sf49": "73-TA-182-G,,SIG,,SPA",
             "sf4": "73-TA-182-G",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
-            "sf8": null,
+            "sf8": "SPA",
+            "sf9": null
+          },
+          {
+            "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,SPA)",
+            "target": "79-AU-197",
+            "process": "N,G",
+            "sf49": "79-AU-198,,SIG,,SPA",
+            "sf4": "79-AU-198",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
             "sf9": null
           }
         ],
-        "type": null,
+        "math_expression": [
+          "Divide",
+          "((73-TA-181(N,G)73-TA-182-G,,SIG,,SPA)",
+          "(79-AU-197(N,G)79-AU-198,,SIG,,SPA))"
+        ],
+        "operator": "Divide",
         "free_text": "",
-        "pointer": "0"
+        "pointer": "1"
+      },
+      "2": {
+        "x4_code": "(73-TA-181(N,G)73-TA-182-G,,SIG,,SPA)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "73-TA-181",
+            "process": "N,G",
+            "sf49": "73-TA-182-G,,SIG,,SPA",
+            "sf4": "73-TA-182-G",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SPA",
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(73-TA-181(N,G)73-TA-182-G,,SIG,,SPA)"
+          }
+        ],
+        "operator": null,
+        "free_text": "",
+        "pointer": "2"
       }
     },
     "004": {
       "0": {
-        "x4_code": "(71-LU-175(N,G)71-LU-176-M,,SIG,,MXW)",
+        "x4_code": "(71-LU-175(N,G)71-LU-176-M,,SIG,,SPA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "71-LU-175",
-              [
-                "N,G"
-              ],
-              "71-LU-176-M,,SIG,,MXW"
-            ],
-            "type": null,
             "target": "71-LU-175",
             "process": "N,G",
-            "sf49": "71-LU-176-M,,SIG,,MXW",
+            "sf49": "71-LU-176-M,,SIG,,SPA",
             "sf4": "71-LU-176-M",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
-            "sf8": "MXW",
-            "sf9": null
+            "sf8": "SPA",
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(71-LU-175(N,G)71-LU-176-M,,SIG,,SPA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -170,14 +246,10 @@
     "002": {
       "common": {
         "heads": [
-          "MONIT",
-          "MONIT-ERR",
-          "ASSUM",
-          "ASSUM-ERR"
+          "MONIT     2",
+          "MONIT-ERR 2"
         ],
         "units": [
-          "MB",
-          "MB",
           "MB",
           "MB"
         ],
@@ -187,19 +259,13 @@
           ],
           [
             23.0
-          ],
-          [
-            1230.0
-          ],
-          [
-            130.0
           ]
         ]
       },
       "data": {
         "heads": [
           "EN",
-          "EN-RSL",
+          "EN-RSL-HW",
           "DATA      1",
           "DATA-ERR  1",
           "DATA      2",
@@ -208,49 +274,8 @@
         "units": [
           "KEV",
           "KEV",
-          "MB",
-          "MB",
           "NO-DIM",
-          "NO-DIM"
-        ],
-        "data": [
-          [
-            30.0
-          ],
-          [
-            10.0
-          ],
-          [
-            958.0
-          ],
-          [
-            58.0
-          ],
-          [
-            0.78
-          ],
-          [
-            0.1
-          ]
-        ]
-      }
-    },
-    "003": {
-      "common": null,
-      "data": {
-        "heads": [
-          "EN",
-          "EN-RSL",
-          "DATA",
-          "DATA-ERR",
-          "MONIT",
-          "MONIT-ERR"
-        ],
-        "units": [
-          "KEV",
-          "KEV",
-          "MB",
-          "MB",
+          "NO-DIM",
           "MB",
           "MB"
         ],
@@ -262,16 +287,74 @@
             10.0
           ],
           [
-            834.0
+            1.654
           ],
           [
-            74.0
+            0.076
           ],
+          [
+            958.0
+          ],
+          [
+            58.0
+          ]
+        ]
+      }
+    },
+    "003": {
+      "common": {
+        "heads": [
+          "MONIT     2",
+          "MONIT-ERR 2"
+        ],
+        "units": [
+          "MB",
+          "MB"
+        ],
+        "data": [
           [
             579.0
           ],
           [
             23.0
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "EN-MIN",
+          "EN-MAX",
+          "DATA      1",
+          "DATA-ERR  1",
+          "DATA      2",
+          "DATA-ERR  2"
+        ],
+        "units": [
+          "KEV",
+          "KEV",
+          "NO-DIM",
+          "NO-DIM",
+          "MB",
+          "MB"
+        ],
+        "data": [
+          [
+            2.0
+          ],
+          [
+            105.0
+          ],
+          [
+            1.44
+          ],
+          [
+            0.12
+          ],
+          [
+            834.0
+          ],
+          [
+            74.0
           ]
         ]
       }
@@ -280,7 +363,7 @@
       "common": null,
       "data": {
         "heads": [
-          "EN-MEAN",
+          "EN-DUMMY",
           "DATA",
           "DATA-ERR"
         ],
@@ -309,20 +392,39 @@
         "detector": [
           {
             "x4_code": "(GELI)",
-            "free_txt": []
+            "free_txt": [
+              " 40 cm3 volume, for 176Hf 88 keV gamma-ray"
+            ]
           },
           {
-            "x4_code": "(D4PI)",
+            "x4_code": "(PROPC)",
             "free_txt": [
-              " 4Pi beta-gamma coincidence detector for Au",
-              "       activity."
+              " 4pi beta-gamma coincidence chamber for Au"
             ]
+          },
+          {
+            "x4_code": "(LONGC)",
+            "free_txt": [
+              " To monitor neutron flux at 0 deg every 15 min"
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(VDG)",
+            "free_txt": []
           }
         ],
         "method": [
           {
             "x4_code": "(ACTIV)",
             "free_txt": []
+          },
+          {
+            "x4_code": "(BGCT)",
+            "free_txt": [
+              " for Au"
+            ]
           }
         ],
         "monitor": [
@@ -335,10 +437,36 @@
     },
     "002": {
       "0": {
-        "assumed": [
+        "analysis": [
           {
-            "x4_code": "(ASSUM,71-LU-175(N,G)71-LU-176,,SIG)",
-            "free_txt": []
+            "x4_code": null,
+            "free_txt": [
+              "Weighted mean of the four results. The authors",
+              " concluded 175Lu(n,g)/197Au(n,g) is not sensitive",
+              " to the neutron energy range."
+            ]
+          }
+        ],
+        "add-res": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "175Lu(n,g)176mLu/175Lu(n,g)(176gLu+176mLu)=0.78+/-0.10"
+            ]
+          }
+        ],
+        "correction": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Corrected for",
+              " . 176mLu decay after irradiation",
+              " . photo peak efficiency",
+              " . 176gLu decay background",
+              " . 87.3 keV Kxbeta peak due to lead fluorescence",
+              " . Absorption in Al foil",
+              " . thickness of sources on the source-detector distance"
+            ]
           }
         ],
         "decay-data": [
@@ -349,75 +477,40 @@
         ],
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Isotope         Quantity              Value    1 sigma",
-              "-------------------------------------------------------",
-              " Lu-176-m    -half life(hours)         3.635     0.003",
-              "             -88 keV gamma fraction    0.0890    0.0015",
-              "             -Detector eff.at 88keV    0.0088    0.0002",
-              "             -Effect of source thickness on",
-              "              source-detector dist.(%) 1.0       0.3",
-              "             -Self-shielding of 88 keV",
-              "              gamma-ray in sources(%)  4.3-11.8  0.5",
-              "             -Peak area determination",
-              "                  random(%)                     0.6-2.4",
-              "                  systematic(%)                 0.4-2.5",
-              "             -Correction for Lu-176(%) <0.1      0.1",
-              "             -Pb fluorescence-KXB at 87.3keV(%)   0.2",
-              " Au-198      -Half-life(days)          2.696     0.001",
-              "             -Mass of foils (Mg)       24-65     0.020",
-              "             -Coincidence counting",
-              "                  random(%)                     0.2-0.4",
-              "                  systematic(%)                 0.3-0.5",
-              "-------------------------------------------------------"
+              " No information on sources of uncertainty.",
+              "By compiler (2024-05-24):",
+              " Detailed error budgets are summarized in the journal",
+              "publication, but it is not clear which parts are",
+              "applicable to the final value of the cross section."
             ]
           }
         ],
         "inc-source": [
           {
             "x4_code": "(P-LI7)",
-            "free_txt": []
+            "free_txt": [
+              " with proton 25 keV above the 7Li(p,n)",
+              " threshold energy (1.881 MeV)."
+            ]
           }
         ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "Metallic Lu sample"
+              "Lu2O3 samples (99.9% pure) stacked alternately between",
+              " Au discs (12.7 mm diameter, 25-60 mg/cm2) in Cd can",
+              " (0.64 mm thick)"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,B.J.Allen+,C,81GRENOB,,573,1981)",
             "free_txt": [
-              " Data taken from Conf.Grenoble Sep.1981,Pag.573",
-              "Total cross section (1230 +- 130 mb)used in the",
-              "isomeric ratio,is the weighted average value",
-              "taken from:"
-            ]
-          }
-        ]
-      },
-      "2": {
-        "status": [
-          {
-            "x4_code": "(DEP,11679020)",
-            "free_txt": [
-              "  1411 +- 170 mb"
-            ]
-          },
-          {
-            "x4_code": "(DEP,30233010)",
-            "free_txt": [
-              "  1240 +- 190 mb"
-            ]
-          },
-          {
-            "x4_code": "(DEP,10720005)",
-            "free_txt": [
-              "  1208 +-  60 mb"
+              " Text (p.574)"
             ]
           }
         ]
@@ -433,24 +526,26 @@
         ],
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              "No information"
+              " No information on sources of uncertainty"
             ]
           }
         ],
         "inc-source": [
           {
             "x4_code": "(P-LI7)",
-            "free_txt": []
+            "free_txt": [
+              " with proton 30 keV above the 7Li(p,n)",
+              " threshold energy (1.881 MeV)"
+            ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,B.J.Allen+,J,JP/G,7,1271,1981)",
             "free_txt": [
-              " Data taken from JP/G,7(1981)pag.1271,",
-              " from text on p.1280"
+              " Text (p.1280)"
             ]
           }
         ]
@@ -458,13 +553,15 @@
     },
     "004": {
       "0": {
-        "decay-data": [
+        "err-analys": [
           {
-            "x4_code": "(71-LU-176-M,3.635HR,DG,88.36,0.0890)",
-            "free_txt": []
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No information on sources of uncertainty"
+            ]
           }
         ],
-        "err-analys": [
+        "inc-source": [
           {
             "x4_code": null,
             "free_txt": [
@@ -476,7 +573,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "Thermal neutron spectrum.No other information is given"
+              "Thermal neutron spectrum flux"
             ]
           }
         ],
@@ -484,16 +581,16 @@
           {
             "x4_code": null,
             "free_txt": [
-              "Lu2-O3 foils"
+              "Lu2O3 samples stacked between Au discs (12.7 mm",
+              " diameter, 25-60 mg/cm2)"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,B.J.Allen+,J,JP/G,7,1271,1981)",
             "free_txt": [
-              " Data taken from JP/G,7(1981) pag.1271,",
-              " from text on p.1280"
+              " Text (p.1280)"
             ]
           }
         ]

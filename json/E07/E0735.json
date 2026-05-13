@@ -1,12 +1,20 @@
 {
   "entry": "E0735",
-  "last_updated": "2010-01-28",
-  "number_of_revisions": "1",
+  "last_updated": "2024-06-25",
+  "number_of_revisions": "2",
   "histories": [
     {
       "x4_code": "(20090810C)",
       "free_txt": [
         " Nh"
+      ]
+    },
+    {
+      "x4_code": "(20240505A)",
+      "free_txt": [
+        " MA: modified COMMON and ERR-ANALYS in 002,",
+        "            REACTION and numerical data in 004, STATUS",
+        "            in 002-004; added ANG-SEC in 002-004."
       ]
     }
   ],
@@ -44,26 +52,20 @@
     "institutes": [
       {
         "x4_code": "(2JPNKTO)",
-        "free_txt": [
-          " Department of Physics"
-        ]
+        "free_txt": ""
       },
       {
         "x4_code": "(2JPNOSA)",
-        "free_txt": [
-          " Research Center for Nuclear Physics"
-        ]
+        "free_txt": ""
       },
       {
         "x4_code": "(2JPNKUE)",
-        "free_txt": [
-          " Department of Physics"
-        ]
+        "free_txt": ""
       }
     ],
     "references": [
       {
-        "x4_code": "(J,NP/A,380,(1),111,198205)",
+        "x4_code": "(J,NP/A,380,111,1982)",
         "free_txt": [],
         "publication_year": "1982",
         "doi": null,
@@ -86,16 +88,9 @@
     "002": {
       "0": {
         "x4_code": "(1-H-2(P,N+P)1-H-1,,DA/DA/DE,P/P/P)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "P,N+P"
-              ],
-              "1-H-1,,DA/DA/DE,P/P/P"
-            ],
-            "type": null,
             "target": "1-H-2",
             "process": "P,N+P",
             "sf49": "1-H-1,,DA/DA/DE,P/P/P",
@@ -104,10 +99,12 @@
             "sf6": "DA/DA/DE",
             "sf7": "P/P/P",
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(P,N+P)1-H-1,,DA/DA/DE,P/P/P)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -115,16 +112,9 @@
     "003": {
       "0": {
         "x4_code": "(1-H-2(P,N+P)1-H-1,,POL/DA/DA,P/P,ANA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "P,N+P"
-              ],
-              "1-H-1,,POL/DA/DA,P/P,ANA"
-            ],
-            "type": null,
             "target": "1-H-2",
             "process": "P,N+P",
             "sf49": "1-H-1,,POL/DA/DA,P/P,ANA",
@@ -133,39 +123,36 @@
             "sf6": "POL/DA/DA",
             "sf7": "P/P",
             "sf8": "ANA",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(P,N+P)1-H-1,,POL/DA/DA,P/P,ANA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
     },
     "004": {
       "0": {
-        "x4_code": "(1-H-2(P,N+P)1-H-1,,POL/DA/DA,P/N,ANA)",
+        "x4_code": "(1-H-2(P,N+P)1-H-1,,POL/DA/DA,N/P,ANA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "P,N+P"
-              ],
-              "1-H-1,,POL/DA/DA,P/N,ANA"
-            ],
-            "type": null,
             "target": "1-H-2",
             "process": "P,N+P",
-            "sf49": "1-H-1,,POL/DA/DA,P/N,ANA",
+            "sf49": "1-H-1,,POL/DA/DA,N/P,ANA",
             "sf4": "1-H-1",
             "sf5": null,
             "sf6": "POL/DA/DA",
-            "sf7": "P/N",
+            "sf7": "N/P",
             "sf8": "ANA",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(P,N+P)1-H-1,,POL/DA/DA,N/P,ANA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -190,14 +177,24 @@
     "002": {
       "common": {
         "heads": [
-          "ANG"
+          "ANG1",
+          "ANG2",
+          "DATA-ERR"
         ],
         "units": [
-          "ADEG"
+          "ADEG",
+          "ADEG",
+          "MB/SR2/MEV"
         ],
         "data": [
           [
             42.5
+          ],
+          [
+            42.5
+          ],
+          [
+            10.0
           ]
         ]
       },
@@ -449,16 +446,6 @@
         ],
         "data": [
           [
-            16.5,
-            23.0,
-            30.0,
-            37.0,
-            41.5,
-            43.5,
-            48.0,
-            55.0
-          ],
-          [
             70.5,
             63.5,
             57.0,
@@ -467,6 +454,16 @@
             43.5,
             39.0,
             32.0
+          ],
+          [
+            16.5,
+            23.0,
+            30.0,
+            37.0,
+            41.5,
+            43.5,
+            48.0,
+            55.0
           ],
           [
             0.133,
@@ -549,7 +546,7 @@
             "free_txt": [
               "- Chemical-form of target is CD2.",
               "- Physical-form of target is solid.",
-              "- Target-thickness is 1.6, 2.7 mg/cm**2."
+              "- Target-thickness is 1.6, 2.7 mg/cm2."
             ]
           }
         ]
@@ -559,12 +556,6 @@
       "0": {
         "en-sec": [
           {
-            "x4_code": null,
-            "free_txt": [
-              "ANG is polar angle (lab.) between beam and proton"
-            ]
-          },
-          {
             "x4_code": "(E,P)",
             "free_txt": []
           }
@@ -573,8 +564,14 @@
           {
             "x4_code": "(ERR-S)",
             "free_txt": [
-              " Over-all uncertainty in absolute cross section",
-              "        is about 10%."
+              " Statistical uncertainty"
+            ]
+          },
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Over-all uncertainty in absolute cross",
+              "           section is about 10%."
             ]
           }
         ],
@@ -594,9 +591,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,H.Shimizu+,J,NP/A,380,111,1982)",
             "free_txt": [
-              " Scanned from Fig.4, p117 of reference"
+              " Fig. 4"
             ]
           }
         ]
@@ -604,15 +601,6 @@
     },
     "003": {
       "0": {
-        "en-sec": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "- ANG1 is polar angle (lab.) between beam and proton",
-              "- ANG2 is polar angle (lab.) between beam and neutron"
-            ]
-          }
-        ],
         "err-analys": [
           {
             "x4_code": "(ERR-1)",
@@ -643,9 +631,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,H.Shimizu+,J,NP/A,380,111,1982)",
             "free_txt": [
-              " Taken from Table 1, p118 of reference"
+              " Table 1"
             ]
           }
         ]
@@ -653,15 +641,6 @@
     },
     "004": {
       "0": {
-        "en-sec": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "- ANG1 is polar angle (lab.) between beam and proton",
-              "- ANG2 is polar angle (lab.) between beam and neutron"
-            ]
-          }
-        ],
         "err-analys": [
           {
             "x4_code": "(ERR-1)",
@@ -680,21 +659,21 @@
           {
             "x4_code": "(COINC)",
             "free_txt": [
-              " Detect proton and neutron in coincidence."
+              " Detect neutron and proton in coincidence."
             ]
           }
         ],
         "part-det": [
           {
-            "x4_code": "(P,N)",
+            "x4_code": "(N,P)",
             "free_txt": []
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,H.Shimizu+,J,NP/A,380,111,1982)",
             "free_txt": [
-              " Taken from Table 2, p118 of reference"
+              " Table 2"
             ]
           }
         ]

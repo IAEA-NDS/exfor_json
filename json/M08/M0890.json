@@ -1,7 +1,7 @@
 {
   "entry": "M0890",
-  "last_updated": "2018-04-06",
-  "number_of_revisions": "2",
+  "last_updated": "2026-01-15",
+  "number_of_revisions": "3",
   "histories": [
     {
       "x4_code": "(20150112C)",
@@ -15,6 +15,13 @@
       "free_txt": [
         " Corrected by SD and VV: STATUS updated in",
         " SUBENTS 003 - 005."
+      ]
+    },
+    {
+      "x4_code": "(20251202A)",
+      "free_txt": [
+        " Corrected by V.Varlamov: REFERENCE,",
+        " ANALYSIS, REACTION, DECAY-DATA, STATUS."
       ]
     }
   ],
@@ -33,15 +40,6 @@
     ],
     "references": [
       {
-        "x4_code": "(J,YF,77,1496,2014)",
-        "free_txt": [
-          "#doi:10.7868/S0044002714110051"
-        ],
-        "publication_year": "2014",
-        "doi": "10.7868/S0044002714110051",
-        "pointer": "0"
-      },
-      {
         "x4_code": "(J,PAN,77,1429,2014)",
         "free_txt": [
           "#doi:10.1134/S1063778814110040",
@@ -49,6 +47,15 @@
         ],
         "publication_year": "2014",
         "doi": "10.1134/S1063778814110040",
+        "pointer": "0"
+      },
+      {
+        "x4_code": "(J,YF,77,1496,2014)",
+        "free_txt": [
+          "#doi:10.7868/S0044002714110051"
+        ],
+        "publication_year": "2014",
+        "doi": "10.7868/S0044002714110051",
         "pointer": "0"
       }
     ],
@@ -65,36 +72,22 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "((47-AG-109(G,A)45-RH-105,,SIG,,BRA)/(47-AG-109(G,N)47-AG-108,,SIG,,BRA,DERIV))",
+        "x4_code": "((47-AG-109(G,A)45-RH-105,,SIG,,BRA,DERIV)/(47-AG-109(G,N)47-AG-108,,SIG,,BRA,DERIV))",
         "children": [
           {
-            "code": [
-              "47-AG-109",
-              [
-                "G,A"
-              ],
-              "45-RH-105,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(47-AG-109(G,A)45-RH-105,,SIG,,BRA,DERIV)",
             "target": "47-AG-109",
             "process": "G,A",
-            "sf49": "45-RH-105,,SIG,,BRA",
+            "sf49": "45-RH-105,,SIG,,BRA,DERIV",
             "sf4": "45-RH-105",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           },
           {
-            "code": [
-              "47-AG-109",
-              [
-                "G,N"
-              ],
-              "47-AG-108,,SIG,,BRA,DERIV"
-            ],
-            "type": null,
+            "x4_code": "(47-AG-109(G,N)47-AG-108,,SIG,,BRA,DERIV)",
             "target": "47-AG-109",
             "process": "G,N",
             "sf49": "47-AG-108,,SIG,,BRA,DERIV",
@@ -106,43 +99,34 @@
             "sf9": "DERIV"
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((47-AG-109(G,A)45-RH-105,,SIG,,BRA,DERIV)",
+          "(47-AG-109(G,N)47-AG-108,,SIG,,BRA,DERIV))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "((48-CD-113(G,A)46-PD-109,,SIG,,BRA)/(48-CD-113(G,N)48-CD-112,,SIG,,BRA,DERIV))",
+        "x4_code": "((48-CD-113(G,A)46-PD-109,,SIG,,BRA,DERIV)/(48-CD-113(G,N)48-CD-112,,SIG,,BRA,DERIV))",
         "children": [
           {
-            "code": [
-              "48-CD-113",
-              [
-                "G,A"
-              ],
-              "46-PD-109,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(48-CD-113(G,A)46-PD-109,,SIG,,BRA,DERIV)",
             "target": "48-CD-113",
             "process": "G,A",
-            "sf49": "46-PD-109,,SIG,,BRA",
+            "sf49": "46-PD-109,,SIG,,BRA,DERIV",
             "sf4": "46-PD-109",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           },
           {
-            "code": [
-              "48-CD-113",
-              [
-                "G,N"
-              ],
-              "48-CD-112,,SIG,,BRA,DERIV"
-            ],
-            "type": null,
+            "x4_code": "(48-CD-113(G,N)48-CD-112,,SIG,,BRA,DERIV)",
             "target": "48-CD-113",
             "process": "G,N",
             "sf49": "48-CD-112,,SIG,,BRA,DERIV",
@@ -154,7 +138,12 @@
             "sf9": "DERIV"
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((48-CD-113(G,A)46-PD-109,,SIG,,BRA,DERIV)",
+          "(48-CD-113(G,N)48-CD-112,,SIG,,BRA,DERIV))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -164,14 +153,7 @@
         "x4_code": "((49-IN-115(G,A)47-AG-111,,SIG,,BRA)/(49-IN-115(G,N)49-IN-114,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "49-IN-115",
-              [
-                "G,A"
-              ],
-              "47-AG-111,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(49-IN-115(G,A)47-AG-111,,SIG,,BRA)",
             "target": "49-IN-115",
             "process": "G,A",
             "sf49": "47-AG-111,,SIG,,BRA",
@@ -183,14 +165,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "49-IN-115",
-              [
-                "G,N"
-              ],
-              "49-IN-114,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(49-IN-115(G,N)49-IN-114,,SIG,,BRA)",
             "target": "49-IN-115",
             "process": "G,N",
             "sf49": "49-IN-114,,SIG,,BRA",
@@ -202,43 +177,34 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((49-IN-115(G,A)47-AG-111,,SIG,,BRA)",
+          "(49-IN-115(G,N)49-IN-114,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
     },
     "005": {
       "0": {
-        "x4_code": "((50-SN-119(G,A)48-CD-115-G,,SIG,,BRA)/(50-SN-119(G,N)50-SN-118,,SIG,,BRA,DERIV))",
+        "x4_code": "((50-SN-119(G,A)48-CD-115-G,,SIG,,BRA,DERIV)/(50-SN-119(G,N)50-SN-118,,SIG,,BRA,DERIV))",
         "children": [
           {
-            "code": [
-              "50-SN-119",
-              [
-                "G,A"
-              ],
-              "48-CD-115-G,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(50-SN-119(G,A)48-CD-115-G,,SIG,,BRA,DERIV)",
             "target": "50-SN-119",
             "process": "G,A",
-            "sf49": "48-CD-115-G,,SIG,,BRA",
+            "sf49": "48-CD-115-G,,SIG,,BRA,DERIV",
             "sf4": "48-CD-115-G",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           },
           {
-            "code": [
-              "50-SN-119",
-              [
-                "G,N"
-              ],
-              "50-SN-118,,SIG,,BRA,DERIV"
-            ],
-            "type": null,
+            "x4_code": "(50-SN-119(G,N)50-SN-118,,SIG,,BRA,DERIV)",
             "target": "50-SN-119",
             "process": "G,N",
             "sf49": "50-SN-118,,SIG,,BRA,DERIV",
@@ -250,7 +216,12 @@
             "sf9": "DERIV"
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((50-SN-119(G,A)48-CD-115-G,,SIG,,BRA,DERIV)",
+          "(50-SN-119(G,N)50-SN-118,,SIG,,BRA,DERIV))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -260,14 +231,7 @@
         "x4_code": "((70-YB-176(G,A)68-ER-172,,SIG,,BRA)/(70-YB-176(G,N)70-YB-175,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "70-YB-176",
-              [
-                "G,A"
-              ],
-              "68-ER-172,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(70-YB-176(G,A)68-ER-172,,SIG,,BRA)",
             "target": "70-YB-176",
             "process": "G,A",
             "sf49": "68-ER-172,,SIG,,BRA",
@@ -279,14 +243,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "70-YB-176",
-              [
-                "G,N"
-              ],
-              "70-YB-175,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(70-YB-176(G,N)70-YB-175,,SIG,,BRA)",
             "target": "70-YB-176",
             "process": "G,N",
             "sf49": "70-YB-175,,SIG,,BRA",
@@ -298,7 +255,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((70-YB-176(G,A)68-ER-172,,SIG,,BRA)",
+          "(70-YB-176(G,N)70-YB-175,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -308,14 +270,7 @@
         "x4_code": "((73-TA-181(G,A)71-LU-177-G,,SIG,,BRA)/(73-TA-181(G,N)73-TA-180,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "73-TA-181",
-              [
-                "G,A"
-              ],
-              "71-LU-177-G,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(73-TA-181(G,A)71-LU-177-G,,SIG,,BRA)",
             "target": "73-TA-181",
             "process": "G,A",
             "sf49": "71-LU-177-G,,SIG,,BRA",
@@ -327,14 +282,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "73-TA-181",
-              [
-                "G,N"
-              ],
-              "73-TA-180,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(73-TA-181(G,N)73-TA-180,,SIG,,BRA)",
             "target": "73-TA-181",
             "process": "G,N",
             "sf49": "73-TA-180,,SIG,,BRA",
@@ -346,7 +294,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((73-TA-181(G,A)71-LU-177-G,,SIG,,BRA)",
+          "(73-TA-181(G,N)73-TA-180,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -356,14 +309,7 @@
         "x4_code": "((77-IR-193(G,A)75-RE-189,,SIG,,BRA)/(77-IR-193(G,N)77-IR-192,,SIG,,BRA))",
         "children": [
           {
-            "code": [
-              "77-IR-193",
-              [
-                "G,A"
-              ],
-              "75-RE-189,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(77-IR-193(G,A)75-RE-189,,SIG,,BRA)",
             "target": "77-IR-193",
             "process": "G,A",
             "sf49": "75-RE-189,,SIG,,BRA",
@@ -375,14 +321,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "77-IR-193",
-              [
-                "G,N"
-              ],
-              "77-IR-192,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(77-IR-193(G,N)77-IR-192,,SIG,,BRA)",
             "target": "77-IR-193",
             "process": "G,N",
             "sf49": "77-IR-192,,SIG,,BRA",
@@ -394,43 +333,34 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((77-IR-193(G,A)75-RE-189,,SIG,,BRA)",
+          "(77-IR-193(G,N)77-IR-192,,SIG,,BRA))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
     },
     "009": {
       "0": {
-        "x4_code": "((82-PB-207(G,A)80-HG-203,,SIG,,BRA)/(82-PB-207(G,N)82-PB-206,,SIG,,BRA,DERIV))",
+        "x4_code": "((82-PB-207(G,A)80-HG-203,,SIG,,BRA,DERIV)/(82-PB-207(G,N)82-PB-206,,SIG,,BRA,DERIV))",
         "children": [
           {
-            "code": [
-              "82-PB-207",
-              [
-                "G,A"
-              ],
-              "80-HG-203,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(82-PB-207(G,A)80-HG-203,,SIG,,BRA,DERIV)",
             "target": "82-PB-207",
             "process": "G,A",
-            "sf49": "80-HG-203,,SIG,,BRA",
+            "sf49": "80-HG-203,,SIG,,BRA,DERIV",
             "sf4": "80-HG-203",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           },
           {
-            "code": [
-              "82-PB-207",
-              [
-                "G,N"
-              ],
-              "82-PB-206,,SIG,,BRA,DERIV"
-            ],
-            "type": null,
+            "x4_code": "(82-PB-207(G,N)82-PB-206,,SIG,,BRA,DERIV)",
             "target": "82-PB-207",
             "process": "G,N",
             "sf49": "82-PB-206,,SIG,,BRA,DERIV",
@@ -442,43 +372,34 @@
             "sf9": "DERIV"
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((82-PB-207(G,A)80-HG-203,,SIG,,BRA,DERIV)",
+          "(82-PB-207(G,N)82-PB-206,,SIG,,BRA,DERIV))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
     },
     "010": {
       "0": {
-        "x4_code": "((48-CD-112(G,P)47-AG-111,,SIG,,BRA)/(48-CD-112(G,N)48-CD-111,,SIG,,BRA,DERIV))",
+        "x4_code": "((48-CD-112(G,P)47-AG-111,,SIG,,BRA,DERIV)/(48-CD-112(G,N)48-CD-111,,SIG,,BRA,DERIV))",
         "children": [
           {
-            "code": [
-              "48-CD-112",
-              [
-                "G,P"
-              ],
-              "47-AG-111,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(48-CD-112(G,P)47-AG-111,,SIG,,BRA,DERIV)",
             "target": "48-CD-112",
             "process": "G,P",
-            "sf49": "47-AG-111,,SIG,,BRA",
+            "sf49": "47-AG-111,,SIG,,BRA,DERIV",
             "sf4": "47-AG-111",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           },
           {
-            "code": [
-              "48-CD-112",
-              [
-                "G,N"
-              ],
-              "48-CD-111,,SIG,,BRA,DERIV"
-            ],
-            "type": null,
+            "x4_code": "(48-CD-112(G,N)48-CD-111,,SIG,,BRA,DERIV)",
             "target": "48-CD-112",
             "process": "G,N",
             "sf49": "48-CD-111,,SIG,,BRA,DERIV",
@@ -490,43 +411,34 @@
             "sf9": "DERIV"
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((48-CD-112(G,P)47-AG-111,,SIG,,BRA,DERIV)",
+          "(48-CD-112(G,N)48-CD-111,,SIG,,BRA,DERIV))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
     },
     "011": {
       "0": {
-        "x4_code": "((48-CD-113(G,P)47-AG-112,,SIG,,BRA)/(48-CD-113(G,N)48-CD-112,,SIG,,BRA,DERIV))",
+        "x4_code": "((48-CD-113(G,P)47-AG-112,,SIG,,BRA,DERIV)/(48-CD-113(G,N)48-CD-112,,SIG,,BRA,DERIV))",
         "children": [
           {
-            "code": [
-              "48-CD-113",
-              [
-                "G,P"
-              ],
-              "47-AG-112,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(48-CD-113(G,P)47-AG-112,,SIG,,BRA,DERIV)",
             "target": "48-CD-113",
             "process": "G,P",
-            "sf49": "47-AG-112,,SIG,,BRA",
+            "sf49": "47-AG-112,,SIG,,BRA,DERIV",
             "sf4": "47-AG-112",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           },
           {
-            "code": [
-              "48-CD-113",
-              [
-                "G,N"
-              ],
-              "48-CD-112,,SIG,,BRA,DERIV"
-            ],
-            "type": null,
+            "x4_code": "(48-CD-113(G,N)48-CD-112,,SIG,,BRA,DERIV)",
             "target": "48-CD-113",
             "process": "G,N",
             "sf49": "48-CD-112,,SIG,,BRA,DERIV",
@@ -538,43 +450,34 @@
             "sf9": "DERIV"
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((48-CD-113(G,P)47-AG-112,,SIG,,BRA,DERIV)",
+          "(48-CD-113(G,N)48-CD-112,,SIG,,BRA,DERIV))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
     },
     "012": {
       "0": {
-        "x4_code": "((48-CD-114(G,P)47-AG-113-G,M+,SIG,,BRA)/(48-CD-114(G,N)48-CD-113,,SIG,,BRA,DERIV))",
+        "x4_code": "((48-CD-114(G,P)47-AG-113-G,M+,SIG,,BRA,DERIV)/(48-CD-114(G,N)48-CD-113,,SIG,,BRA,DERIV))",
         "children": [
           {
-            "code": [
-              "48-CD-114",
-              [
-                "G,P"
-              ],
-              "47-AG-113-G,M+,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(48-CD-114(G,P)47-AG-113-G,M+,SIG,,BRA,DERIV)",
             "target": "48-CD-114",
             "process": "G,P",
-            "sf49": "47-AG-113-G,M+,SIG,,BRA",
+            "sf49": "47-AG-113-G,M+,SIG,,BRA,DERIV",
             "sf4": "47-AG-113-G",
             "sf5": "M+",
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           },
           {
-            "code": [
-              "48-CD-114",
-              [
-                "G,N"
-              ],
-              "48-CD-113,,SIG,,BRA,DERIV"
-            ],
-            "type": null,
+            "x4_code": "(48-CD-114(G,N)48-CD-113,,SIG,,BRA,DERIV)",
             "target": "48-CD-114",
             "process": "G,N",
             "sf49": "48-CD-113,,SIG,,BRA,DERIV",
@@ -586,43 +489,34 @@
             "sf9": "DERIV"
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((48-CD-114(G,P)47-AG-113-G,M+,SIG,,BRA,DERIV)",
+          "(48-CD-114(G,N)48-CD-113,,SIG,,BRA,DERIV))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
     },
     "013": {
       "0": {
-        "x4_code": "((50-SN-118(G,P)49-IN-117,,SIG,,BRA)/(50-SN-118(G,N)50-SN-117,,SIG,,BRA,DERIV))",
+        "x4_code": "((50-SN-118(G,P)49-IN-117,,SIG,,BRA,DERIV)/(50-SN-118(G,N)50-SN-117,,SIG,,BRA,DERIV))",
         "children": [
           {
-            "code": [
-              "50-SN-118",
-              [
-                "G,P"
-              ],
-              "49-IN-117,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(50-SN-118(G,P)49-IN-117,,SIG,,BRA,DERIV)",
             "target": "50-SN-118",
             "process": "G,P",
-            "sf49": "49-IN-117,,SIG,,BRA",
+            "sf49": "49-IN-117,,SIG,,BRA,DERIV",
             "sf4": "49-IN-117",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           },
           {
-            "code": [
-              "50-SN-118",
-              [
-                "G,N"
-              ],
-              "50-SN-117,,SIG,,BRA,DERIV"
-            ],
-            "type": null,
+            "x4_code": "(50-SN-118(G,N)50-SN-117,,SIG,,BRA,DERIV)",
             "target": "50-SN-118",
             "process": "G,N",
             "sf49": "50-SN-117,,SIG,,BRA,DERIV",
@@ -634,91 +528,73 @@
             "sf9": "DERIV"
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((50-SN-118(G,P)49-IN-117,,SIG,,BRA,DERIV)",
+          "(50-SN-118(G,N)50-SN-117,,SIG,,BRA,DERIV))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
     },
     "014": {
       "0": {
-        "x4_code": "((50-SN-116(G,P)49-IN-115-M,,SIG,,BRA)/(50-SN-116(G,N)50-SN-115,,SIG,,BRA))",
+        "x4_code": "((50-SN-116(G,P)49-IN-115-M,,SIG,,BRA,DERIV)/(50-SN-116(G,N)50-SN-115,,SIG,,BRA,DERIV))",
         "children": [
           {
-            "code": [
-              "50-SN-116",
-              [
-                "G,P"
-              ],
-              "49-IN-115-M,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(50-SN-116(G,P)49-IN-115-M,,SIG,,BRA,DERIV)",
             "target": "50-SN-116",
             "process": "G,P",
-            "sf49": "49-IN-115-M,,SIG,,BRA",
+            "sf49": "49-IN-115-M,,SIG,,BRA,DERIV",
             "sf4": "49-IN-115-M",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           },
           {
-            "code": [
-              "50-SN-116",
-              [
-                "G,N"
-              ],
-              "50-SN-115,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(50-SN-116(G,N)50-SN-115,,SIG,,BRA,DERIV)",
             "target": "50-SN-116",
             "process": "G,N",
-            "sf49": "50-SN-115,,SIG,,BRA",
+            "sf49": "50-SN-115,,SIG,,BRA,DERIV",
             "sf4": "50-SN-115",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((50-SN-116(G,P)49-IN-115-M,,SIG,,BRA,DERIV)",
+          "(50-SN-116(G,N)50-SN-115,,SIG,,BRA,DERIV))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
     },
     "015": {
       "0": {
-        "x4_code": "((50-SN-114(G,P)49-IN-113-M,,SIG,,BRA)/(50-SN-114(G,N)50-SN-113,,SIG,,BRA,DERIV))",
+        "x4_code": "((50-SN-114(G,P)49-IN-113-M,,SIG,,BRA,DERIV)/(50-SN-114(G,N)50-SN-113,,SIG,,BRA,DERIV))",
         "children": [
           {
-            "code": [
-              "50-SN-114",
-              [
-                "G,P"
-              ],
-              "49-IN-113-M,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(50-SN-114(G,P)49-IN-113-M,,SIG,,BRA,DERIV)",
             "target": "50-SN-114",
             "process": "G,P",
-            "sf49": "49-IN-113-M,,SIG,,BRA",
+            "sf49": "49-IN-113-M,,SIG,,BRA,DERIV",
             "sf4": "49-IN-113-M",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           },
           {
-            "code": [
-              "50-SN-114",
-              [
-                "G,N"
-              ],
-              "50-SN-113,,SIG,,BRA,DERIV"
-            ],
-            "type": null,
+            "x4_code": "(50-SN-114(G,N)50-SN-113,,SIG,,BRA,DERIV)",
             "target": "50-SN-114",
             "process": "G,N",
             "sf49": "50-SN-113,,SIG,,BRA,DERIV",
@@ -730,43 +606,34 @@
             "sf9": "DERIV"
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((50-SN-114(G,P)49-IN-113-M,,SIG,,BRA,DERIV)",
+          "(50-SN-114(G,N)50-SN-113,,SIG,,BRA,DERIV))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
     },
     "016": {
       "0": {
-        "x4_code": "((70-YB-174(G,P)69-TM-173,,SIG,,BRA)/(70-YB-174(G,N)70-YB-173,,SIG,,BRA,DERIV))",
+        "x4_code": "((70-YB-174(G,P)69-TM-173,,SIG,,BRA,DERIV)/(70-YB-174(G,N)70-YB-173,,SIG,,BRA,DERIV))",
         "children": [
           {
-            "code": [
-              "70-YB-174",
-              [
-                "G,P"
-              ],
-              "69-TM-173,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(70-YB-174(G,P)69-TM-173,,SIG,,BRA,DERIV)",
             "target": "70-YB-174",
             "process": "G,P",
-            "sf49": "69-TM-173,,SIG,,BRA",
+            "sf49": "69-TM-173,,SIG,,BRA,DERIV",
             "sf4": "69-TM-173",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           },
           {
-            "code": [
-              "70-YB-174",
-              [
-                "G,N"
-              ],
-              "70-YB-173,,SIG,,BRA,DERIV"
-            ],
-            "type": null,
+            "x4_code": "(70-YB-174(G,N)70-YB-173,,SIG,,BRA,DERIV)",
             "target": "70-YB-174",
             "process": "G,N",
             "sf49": "70-YB-173,,SIG,,BRA,DERIV",
@@ -778,55 +645,51 @@
             "sf9": "DERIV"
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((70-YB-174(G,P)69-TM-173,,SIG,,BRA,DERIV)",
+          "(70-YB-174(G,N)70-YB-173,,SIG,,BRA,DERIV))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
     },
     "017": {
       "0": {
-        "x4_code": "((72-HF-178(G,P)71-LU-177-G,,SIG,,BRA)/(72-HF-178(G,N)72-HF-177,,SIG,,BRA))",
+        "x4_code": "((72-HF-178(G,P)71-LU-177-G,,SIG,,BRA,DERIV)/(72-HF-178(G,N)72-HF-177,,SIG,,BRA,DERIV))",
         "children": [
           {
-            "code": [
-              "72-HF-178",
-              [
-                "G,P"
-              ],
-              "71-LU-177-G,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(72-HF-178(G,P)71-LU-177-G,,SIG,,BRA,DERIV)",
             "target": "72-HF-178",
             "process": "G,P",
-            "sf49": "71-LU-177-G,,SIG,,BRA",
+            "sf49": "71-LU-177-G,,SIG,,BRA,DERIV",
             "sf4": "71-LU-177-G",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           },
           {
-            "code": [
-              "72-HF-178",
-              [
-                "G,N"
-              ],
-              "72-HF-177,,SIG,,BRA"
-            ],
-            "type": null,
+            "x4_code": "(72-HF-178(G,N)72-HF-177,,SIG,,BRA,DERIV)",
             "target": "72-HF-178",
             "process": "G,N",
-            "sf49": "72-HF-177,,SIG,,BRA",
+            "sf49": "72-HF-177,,SIG,,BRA,DERIV",
             "sf4": "72-HF-177",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": "BRA",
-            "sf9": null
+            "sf9": "DERIV"
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((72-HF-178(G,P)71-LU-177-G,,SIG,,BRA,DERIV)",
+          "(72-HF-178(G,N)72-HF-177,,SIG,,BRA,DERIV))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -1230,7 +1093,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "116Cd(g,n)115gCd as (g,n) surrogate."
+              "116Cd(g,n)115gCd measured as a surrogate of",
+              " 109Ag(g,n)108Ag."
             ]
           }
         ],
@@ -1262,7 +1126,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 2."
             ]
@@ -1276,7 +1140,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "115In(gamma,n)114mIn as (gamma,n) surrogate."
+              "115In(g,n)114mIn measured as a surrogate of",
+              " 113Cd(g,n)112Cd."
             ]
           }
         ],
@@ -1308,7 +1173,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 2."
             ]
@@ -1346,7 +1211,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 2."
             ]
@@ -1360,7 +1225,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "124Sn(gamma,n)123mSn as (gamma,n) surrogate."
+              "124Sn(g,n)123mSn measured as a surrogate of",
+              " 119Sn(g,n)118Sn."
             ]
           }
         ],
@@ -1392,7 +1258,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 2."
             ]
@@ -1430,7 +1296,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 2."
             ]
@@ -1462,7 +1328,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 2."
             ]
@@ -1500,7 +1366,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 2."
             ]
@@ -1514,7 +1380,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "204Pb(g,n)203Pb as (g,n) surrogate."
+              "204Pb(g,n)203Pb measured as a surrogate of",
+              " 207Pb(g,n)206Pb."
             ]
           }
         ],
@@ -1546,7 +1413,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 2."
             ]
@@ -1560,7 +1427,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "114Sn(g,n)113Sn as (g,n) surrogate."
+              "114Sn(g,n)113Sn measured as a surrogate of",
+              " 112Cd(g,n)111Cd."
             ]
           }
         ],
@@ -1592,7 +1460,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 3."
             ]
@@ -1606,7 +1474,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "115In(g,n)114mIn as (g,n) surrogate."
+              "115In(g,n)114mIn measured as a surrogate of",
+              " 113Cd(g,n)112Cd."
             ]
           }
         ],
@@ -1638,7 +1507,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 3."
             ]
@@ -1652,7 +1521,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "114Sn(g,n)113Sn as (g,n) surrogate."
+              "114Sn(g,n)113Sn measured as a surrogate of",
+              " 114Cd(g,n)113Cd."
             ]
           }
         ],
@@ -1684,7 +1554,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 3."
             ]
@@ -1698,7 +1568,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "114Sn(g,n)113Sn as (g,n) surrogate."
+              "114Sn(g,n)113Sn measured as a surrogate of",
+              " 118Sn(g,n)117Sn."
             ]
           }
         ],
@@ -1734,7 +1605,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 3."
             ]
@@ -1744,6 +1615,15 @@
     },
     "014": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "114Sn(g,n)113Sn measured as a surrogate of",
+              " 116Sn(g,n)115Sn."
+            ]
+          }
+        ],
         "decay-data": [
           {
             "x4_code": "(49-IN-115-M,4.49HR,DG,336.0)",
@@ -1772,7 +1652,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 3."
             ]
@@ -1786,7 +1666,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "170Yb(g,n)169Yb as (g,n) surrogate."
+              "170Yb(g,n)169Yb measured as a surrogate of",
+              " 114Sn(g,n)113Sn."
             ]
           }
         ],
@@ -1818,7 +1699,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 3."
             ]
@@ -1832,7 +1713,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "176Hf(g,n)175Hf as (g,n) surrogate."
+              "176Hf(g,n)175Hf measured as a surrogate of",
+              " 174Yb(g,n)173Yb."
             ]
           }
         ],
@@ -1844,7 +1726,7 @@
             ]
           },
           {
-            "x4_code": "(72-HF-175-G,70.0D,DG,343.0)",
+            "x4_code": "(72-HF-175,70.0D,DG,343.0)",
             "free_txt": []
           }
         ],
@@ -1864,7 +1746,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 3."
             ]
@@ -1874,6 +1756,16 @@
     },
     "017": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "A surrogate reaction was measured, but without",
+              " specification of the surrogate reaction in the",
+              " article."
+            ]
+          }
+        ],
         "decay-data": [
           {
             "x4_code": "(71-LU-177-G,6.65D,DG,208.0)",
@@ -1900,7 +1792,7 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,S.A.Karamian,J,PAN,77,1429,2014)",
             "free_txt": [
               " Data from table 3."
             ]

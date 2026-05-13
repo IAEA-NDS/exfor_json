@@ -1,21 +1,28 @@
 {
   "entry": "12613",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2026-03-27",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(780501C)",
+      "x4_code": "(19780501C)",
       "free_txt": []
     },
     {
-      "x4_code": "(830808A)",
+      "x4_code": "(19830808A)",
       "free_txt": [
-        " DECAY-DATA CORRECTED."
+        " Decay-data corrected."
+      ]
+    },
+    {
+      "x4_code": "(20260208A)",
+      "free_txt": [
+        " OS. Correction in sub.3, STATUS, FACILITY,",
+        "DATA-ERR added, converted to lower and upper case"
       ]
     }
   ],
   "bib_record": {
-    "title": "NEUTRON ACTIVATION CROSS-SECTIONS OF RU-96 AND RU-102.",
+    "title": "Neutron activation cross-sections of Ru-96 and Ru-102.",
     "authors": [
       {
         "name": "S.Katcoff"
@@ -32,29 +39,32 @@
     ],
     "references": [
       {
-        "x4_code": "(J,JIN,7,194,58)",
-        "free_txt": [],
+        "x4_code": "(J,JIN,7,194,1958)",
+        "free_txt": [
+          "#doi:10.1016/0022-1902(58)80068-8"
+        ],
         "publication_year": "1958",
-        "doi": null,
+        "doi": "10.1016/0022-1902(58)80068-8",
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(REAC,1USABNL)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(REAC)",
+        "institute": "(1USABNL)"
+      }
+    ]
   },
   "reactions": {
     "002": {
       "0": {
         "x4_code": "(44-RU-96(N,G)44-RU-97,,SIG,,MXW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "44-RU-96",
-              [
-                "N,G"
-              ],
-              "44-RU-97,,SIG,,MXW"
-            ],
-            "type": null,
             "target": "44-RU-96",
             "process": "N,G",
             "sf49": "44-RU-97,,SIG,,MXW",
@@ -63,10 +73,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "MXW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(44-RU-96(N,G)44-RU-97,,SIG,,MXW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -74,16 +86,9 @@
     "003": {
       "0": {
         "x4_code": "(44-RU-102(N,G)44-RU-103,,SIG,,MXW)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "44-RU-102",
-              [
-                "N,G"
-              ],
-              "44-RU-103,,SIG,,MXW"
-            ],
-            "type": null,
             "target": "44-RU-102",
             "process": "N,G",
             "sf49": "44-RU-103,,SIG,,MXW",
@@ -92,10 +97,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": "MXW",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(44-RU-102(N,G)44-RU-103,,SIG,,MXW)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -105,14 +112,19 @@
     "001": {
       "common": {
         "heads": [
-          "EN-DUMMY"
+          "EN-DUMMY",
+          "DATA-ERR"
         ],
         "units": [
-          "EV"
+          "EV",
+          "PER-CENT"
         ],
         "data": [
           [
             0.0253
+          ],
+          [
+            15.0
           ]
         ]
       }
@@ -157,8 +169,8 @@
           {
             "x4_code": null,
             "free_txt": [
-              "CORRECTIONS FOR FAST AND EPITHERMAL NEUTRONS BY MEANS",
-              " OF CADMIUM COVERS."
+              "Corrections for fast and EPITHERMAL neutrons by means",
+              " of cadmium covers."
             ]
           }
         ],
@@ -172,27 +184,41 @@
           {
             "x4_code": "(PROPC)",
             "free_txt": [
-              " ARGON-FILLED PROPORTIONAL COUNTER"
+              " Argon-filled proportional counter"
             ]
           },
           {
             "x4_code": "(NAICR)",
             "free_txt": [
-              " SODIUM-IODIDE CRYSTAL WITH"
+              " Sodium-iodide crystal with"
             ]
           },
           {
             "x4_code": "(SCIN)",
             "free_txt": [
-              " SCINTILLATION SPECTROMETER"
+              " Scintillation spectrometer"
             ]
           }
         ],
         "err-analys": [
           {
-            "x4_code": null,
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              "ABSOLUTE ERROR APPROXIMATELY 15 PERCENT"
+              " Absolute error approximately 15%"
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(REAC,1USABNL)",
+            "free_txt": []
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(REAC)",
+            "free_txt": [
+              " Brookhaven reactor"
             ]
           }
         ],
@@ -200,7 +226,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "PILE SPECTRUM"
+              "Pile spectrum"
             ]
           }
         ],
@@ -208,8 +234,8 @@
           {
             "x4_code": "(COINC)",
             "free_txt": [
-              " SODIUM-22 CALIBRATED BY MEANS OF BETA-GAMMA",
-              " COINCIDENCE COUNTING"
+              " Sodium-22 calibrated by means of beta-gamma",
+              " coincidence counting"
             ]
           }
         ],
@@ -217,6 +243,14 @@
           {
             "x4_code": "(79-AU-197(N,G)79-AU-198,,SIG,,MXW)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,S.Katcoff+,J,JIN,7,194,1958)",
+            "free_txt": [
+              " Table 2"
+            ]
           }
         ]
       }
@@ -235,7 +269,7 @@
       "0": {
         "decay-data": [
           {
-            "x4_code": "(44-RU-103-G,39.7D,DG,498.,0.90)",
+            "x4_code": "(44-RU-103,39.7D,DG,498.,0.90)",
             "free_txt": []
           },
           {

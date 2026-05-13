@@ -1,7 +1,7 @@
 {
   "entry": "P0094",
-  "last_updated": "2019-01-21",
-  "number_of_revisions": "4",
+  "last_updated": "2024-12-15",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19830620T)",
@@ -20,6 +20,12 @@
       "free_txt": [
         " BP: Added doi, reference to the previous",
         "           measurement, cross section ratio data."
+      ]
+    },
+    {
+      "x4_code": "(20241018U)",
+      "free_txt": [
+        " OS. DECAY-DATA in sub.2 modified"
       ]
     }
   ],
@@ -44,7 +50,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,90,460,195305)",
+        "x4_code": "(J,PR,90,460,1953)",
         "free_txt": [
           "#doi:10.1103/PhysRev.90.460"
         ],
@@ -67,16 +73,9 @@
     "002": {
       "0": {
         "x4_code": "(47-AG-109(A,2N)49-IN-111,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "47-AG-109",
-              [
-                "A,2N"
-              ],
-              "49-IN-111,,SIG"
-            ],
-            "type": null,
             "target": "47-AG-109",
             "process": "A,2N",
             "sf49": "49-IN-111,,SIG",
@@ -85,10 +84,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(47-AG-109(A,2N)49-IN-111,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -96,16 +97,9 @@
     "003": {
       "0": {
         "x4_code": "(47-AG-109(A,N)49-IN-112,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "47-AG-109",
-              [
-                "A,N"
-              ],
-              "49-IN-112,,SIG"
-            ],
-            "type": null,
             "target": "47-AG-109",
             "process": "A,N",
             "sf49": "49-IN-112,,SIG",
@@ -114,10 +108,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(47-AG-109(A,N)49-IN-112,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -127,14 +123,7 @@
         "x4_code": "((47-AG-109(A,2N)49-IN-111,,SIG)/(47-AG-109(A,N)49-IN-112,,SIG))",
         "children": [
           {
-            "code": [
-              "47-AG-109",
-              [
-                "A,2N"
-              ],
-              "49-IN-111,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(47-AG-109(A,2N)49-IN-111,,SIG)",
             "target": "47-AG-109",
             "process": "A,2N",
             "sf49": "49-IN-111,,SIG",
@@ -146,14 +135,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "47-AG-109",
-              [
-                "A,N"
-              ],
-              "49-IN-112,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(47-AG-109(A,N)49-IN-112,,SIG)",
             "target": "47-AG-109",
             "process": "A,N",
             "sf49": "49-IN-112,,SIG",
@@ -165,7 +147,12 @@
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Divide",
+          "((47-AG-109(A,2N)49-IN-111,,SIG)",
+          "(47-AG-109(A,N)49-IN-112,,SIG))"
+        ],
+        "operator": "Divide",
         "free_text": "",
         "pointer": "0"
       }
@@ -335,7 +322,7 @@
       "0": {
         "decay-data": [
           {
-            "x4_code": "(49-IN-111-G,2.84D,EC)",
+            "x4_code": "(49-IN-111-G,2.84D)",
             "free_txt": []
           }
         ],

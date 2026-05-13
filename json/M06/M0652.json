@@ -1,7 +1,7 @@
 {
   "entry": "M0652",
-  "last_updated": "2021-06-28",
-  "number_of_revisions": "4",
+  "last_updated": "2025-11-07",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(20040428C)",
@@ -12,6 +12,14 @@
       "free_txt": [
         " Corrected by SD and VV: STATUS,",
         " corrections in all SUBENTs."
+      ]
+    },
+    {
+      "x4_code": "(20250924A)",
+      "free_txt": [
+        " Corrected by V.Varlamov: DECAY-DATA,",
+        " REACTION free text in SUBENT 003, REACTION IN SUBENTS",
+        " and 007, ERR-ANALYS in SUBENTS 004, 005, STATUS."
       ]
     }
   ],
@@ -71,16 +79,9 @@
     "002": {
       "0": {
         "x4_code": "(30-ZN-64(E,N)30-ZN-63,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "30-ZN-64",
-              [
-                "E,N"
-              ],
-              "30-ZN-63,,SIG"
-            ],
-            "type": null,
             "target": "30-ZN-64",
             "process": "E,N",
             "sf49": "30-ZN-63,,SIG",
@@ -89,10 +90,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(30-ZN-64(E,N)30-ZN-63,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -100,16 +103,9 @@
     "003": {
       "0": {
         "x4_code": "(30-ZN-64(E,X)29-CU-62,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "30-ZN-64",
-              [
-                "E,X"
-              ],
-              "29-CU-62,,SIG"
-            ],
-            "type": null,
             "target": "30-ZN-64",
             "process": "E,X",
             "sf49": "29-CU-62,,SIG",
@@ -118,27 +114,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(30-ZN-64(E,X)29-CU-62,,SIG)"
           }
         ],
-        "type": null,
-        "free_text": "",
+        "operator": null,
+        "free_text": " Cross-section of (e,n+p) reaction.",
         "pointer": "0"
       }
     },
     "004": {
       "0": {
         "x4_code": "(30-ZN-64(G,N)30-ZN-63,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "30-ZN-64",
-              [
-                "G,N"
-              ],
-              "30-ZN-63,,SIG"
-            ],
-            "type": null,
             "target": "30-ZN-64",
             "process": "G,N",
             "sf49": "30-ZN-63,,SIG",
@@ -147,10 +138,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(30-ZN-64(G,N)30-ZN-63,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -158,16 +151,9 @@
     "005": {
       "0": {
         "x4_code": "(30-ZN-64(G,X)29-CU-62,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "30-ZN-64",
-              [
-                "G,X"
-              ],
-              "29-CU-62,,SIG"
-            ],
-            "type": null,
             "target": "30-ZN-64",
             "process": "G,X",
             "sf49": "29-CU-62,,SIG",
@@ -176,27 +162,22 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(30-ZN-64(G,X)29-CU-62,,SIG)"
           }
         ],
-        "type": null,
-        "free_text": "",
+        "operator": null,
+        "free_text": " Cross-section of the reaction (g,n+p).",
         "pointer": "0"
       }
     },
     "006": {
       "0": {
-        "x4_code": "((30-ZN-64(G,N)30-ZN-63,,SIG)+(30-ZN-64(G,X)29-CU-62,,SIG))",
+        "x4_code": "((30-ZN-64(G,N)30-ZN-63,,SIG)+(30-ZN-64(G,N+P)29-CU-62,,SIG))",
         "children": [
           {
-            "code": [
-              "30-ZN-64",
-              [
-                "G,N"
-              ],
-              "30-ZN-63,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(30-ZN-64(G,N)30-ZN-63,,SIG)",
             "target": "30-ZN-64",
             "process": "G,N",
             "sf49": "30-ZN-63,,SIG",
@@ -208,16 +189,9 @@
             "sf9": null
           },
           {
-            "code": [
-              "30-ZN-64",
-              [
-                "G,X"
-              ],
-              "29-CU-62,,SIG"
-            ],
-            "type": null,
+            "x4_code": "(30-ZN-64(G,N+P)29-CU-62,,SIG)",
             "target": "30-ZN-64",
-            "process": "G,X",
+            "process": "G,N+P",
             "sf49": "29-CU-62,,SIG",
             "sf4": "29-CU-62",
             "sf5": null,
@@ -227,36 +201,36 @@
             "sf9": null
           }
         ],
-        "type": "+",
-        "free_text": "",
+        "math_expression": [
+          "Add",
+          "((30-ZN-64(G,N)30-ZN-63,,SIG)",
+          "(30-ZN-64(G,N+P)29-CU-62,,SIG))"
+        ],
+        "operator": "Add",
+        "free_text": " The sum of cross sections of the reactions (g,n) + (g,np).",
         "pointer": "0"
       }
     },
     "007": {
       "0": {
-        "x4_code": "(30-ZN-64(G,ABS),,SIG,,,DERIV)",
+        "x4_code": "(30-ZN-64(G,X)0-NN-1,UNW,SIG,,,DERIV)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "30-ZN-64",
-              [
-                "G,ABS"
-              ],
-              ",,SIG,,,DERIV"
-            ],
-            "type": null,
             "target": "30-ZN-64",
-            "process": "G,ABS",
-            "sf49": ",,SIG,,,DERIV",
-            "sf4": null,
-            "sf5": null,
+            "process": "G,X",
+            "sf49": "0-NN-1,UNW,SIG,,,DERIV",
+            "sf4": "0-NN-1",
+            "sf5": "UNW",
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "DERIV"
+            "sf9": "DERIV",
+            "operator": null,
+            "x4_code": "(30-ZN-64(G,X)0-NN-1,UNW,SIG,,,DERIV)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -3340,7 +3314,7 @@
             "x4_code": null,
             "free_txt": [
               "Electrodisintegration reaction cross sections were",
-              " measured and converted into photodosintegration",
+              " measured and converted into photodisintegration",
               " reaction cross sections using virtual photon",
               " formalism."
             ]
@@ -3356,14 +3330,14 @@
               " quasideuteron (QD) energy regions was performed by a",
               " trial function fitting to the respective (e,n) and",
               " (e,np) electrodisintegration yields measured by",
-              " residual activity. Absolute cross section for the",
+              " residual activity. Absolute cross-section for the",
               " reaction 64Zn(g,n) from threshold to 60 MeV was",
               " obtained for the first time. Statistical and direct",
               " contributions to the (g,np) process, later being",
               " remarkably well described by the QD model were",
               " separated in the interval 40 - 60 MeV. A possible",
               " direct contribution for the (g,n) decay in GDR was",
-              " also addressed. The total photoabsorption cross",
+              " also addressed. The total photoabsorption cross-",
               " section of 64Zn was reevaluated up to 21 MeV."
             ]
           }
@@ -3416,7 +3390,7 @@
           {
             "x4_code": null,
             "free_txt": [
-              "Two nat-Zn foils (8.87(56) and 7.33(47) mg/cm**2."
+              "Two nat-Zn foils (8.87(56) and 7.33(47)) mg/cm**2."
             ]
           }
         ],
@@ -3426,19 +3400,18 @@
             "free_txt": [
               " By M.N.Martins."
             ]
-          },
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              " The data in form of tables were received",
-              " from the authors (M.N.Martins)."
-            ]
           }
         ]
       }
     },
     "002": {
       "0": {
+        "decay-data": [
+          {
+            "x4_code": "(30-ZN-63,38.47MIN)",
+            "free_txt": []
+          }
+        ],
         "err-analys": [
           {
             "x4_code": "(ERR-S)",
@@ -3449,17 +3422,19 @@
           {
             "x4_code": "(ERR-SYS,,15.)",
             "free_txt": [
-              " The overal uncertainty of",
-              " electrodisintegration reaction cross sections",
+              " The overall uncertainty of",
+              " electrodisintegration reaction cross-section",
               " absolute scale is better than 15%."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,T.E.Rodrigues+,J,PR/C,68,014618,2003)",
             "free_txt": [
-              "Data are presented in Fig. 1."
+              " The data in form of table were received",
+              " from the authors (M.N.Martins).",
+              " Data are presented in Fig. 1."
             ]
           }
         ]
@@ -3467,6 +3442,12 @@
     },
     "003": {
       "0": {
+        "decay-data": [
+          {
+            "x4_code": "(29-CU-62,9.74MIN)",
+            "free_txt": []
+          }
+        ],
         "err-analys": [
           {
             "x4_code": "(ERR-S)",
@@ -3477,17 +3458,19 @@
           {
             "x4_code": "(ERR-SYS,,15.)",
             "free_txt": [
-              " The overal uncertainty of",
-              " electrodisintegration reaction cross sections",
+              " The overall uncertainty of",
+              " electrodisintegration reaction cross-section",
               " absolute scale is better than 15%."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,T.E.Rodrigues+,J,PR/C,68,014618,2003)",
             "free_txt": [
-              "Data are presented in Fig. 2."
+              " The data in form of table were received",
+              " from the authors (M.N.Martins).",
+              " Data are presented in Fig. 2."
             ]
           }
         ]
@@ -3495,19 +3478,46 @@
     },
     "004": {
       "0": {
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Cross-section of the reaction (g,n) obtained from the",
+              " cross-section of the reaction (e,n) using equation",
+              " (16) of the article."
+            ]
+          }
+        ],
+        "critique": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Absolute cross-section values in fig. 3 are slightly",
+              " different from those in author's table."
+            ]
+          }
+        ],
         "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
-              "No information about source of uncertainties"
+              "No information about uncertainties"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,T.E.Rodrigues+,J,PR/C,68,014618,2003)",
             "free_txt": [
-              "Data are presented in Fig. 3."
+              " The data in form of table were received",
+              " from the authors (M.N.Martins)."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0652002)",
+            "free_txt": [
+              " Cross-section of the reaction (e,n).",
+              " Data are presented in fig. 3 (circles)."
             ]
           }
         ]
@@ -3515,19 +3525,37 @@
     },
     "005": {
       "0": {
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Cross-section of the reaction (g,n+p) obtained from",
+              " cross-section of the reaction (e,n+p) using equation",
+              " (17) of the article."
+            ]
+          }
+        ],
         "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
-              "No information about source of uncertainties."
+              "No information about uncertainties."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,T.E.Rodrigues+,J,PR/C,68,014618,2003)",
             "free_txt": [
-              " Data are presented in Fig. 3."
+              " The data in form of table were received",
+              " from the authors (M.N.Martins)."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0652003)",
+            "free_txt": [
+              " Cross-section of the reaction (e,n+p).",
+              " Data are presented in Fig. 3 (triangles)."
             ]
           }
         ]
@@ -3535,11 +3563,42 @@
     },
     "006": {
       "0": {
+        "critique": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Absolute cross-section values in Fig. 3 are slightly",
+              " different from those in author's table."
+            ]
+          }
+        ],
         "err-analys": [
           {
             "x4_code": null,
             "free_txt": [
-              "No information about source of uncertainties"
+              "No information about uncertainties."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,T.E.Rodrigues+,J,PR/C,68,014618,2003)",
+            "free_txt": [
+              " The data in form of table were received",
+              " from the authors (M.N.Martins)."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0652004)",
+            "free_txt": [
+              " Cross-section of the reaction (g,n)."
+            ]
+          },
+          {
+            "x4_code": "(DEP,M0652005)",
+            "free_txt": [
+              " Cross-section of the reaction (g,n+p).",
+              " Data are presented in Fig. 3 (squares)."
             ]
           }
         ]
@@ -3551,9 +3610,10 @@
           {
             "x4_code": null,
             "free_txt": [
-              "The cross section for reaction (g,abs) was obtained",
+              "The cross-section of the total photoneutron reaction",
+              " (g,sn) = (g,n) + (g,n+p) + (g,2n) was obtained",
               " as measured sum of (g,n) and (g,np) reactions",
-              " cross sections and cross sections for (g,2nX)",
+              " cross sections and cross-section of (g,2n)",
               " reaction of Carlos."
             ]
           }
@@ -3562,21 +3622,25 @@
           {
             "x4_code": null,
             "free_txt": [
-              "No information about source of uncertainties"
+              "No information about uncertainties."
             ]
           }
         ],
         "rel-ref": [
           {
-            "x4_code": "(R,,P.Carlos+,J,NP/A,258,365,1976)",
-            "free_txt": []
+            "x4_code": "(R,L0043003,P.Carlos+,J,NP/A,258,365,1976)",
+            "free_txt": [
+              " The cross-section of the reaction (g,2n)."
+            ]
           }
         ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(TABLE,,T.E.Rodrigues+,J,PR/C,68,014618,2003)",
             "free_txt": [
-              "Data are presented in Fig. 7."
+              " The data in form of table were received",
+              " from the authors (M.N.Martins).",
+              " Data are presented in Fig. 7."
             ]
           },
           {
@@ -3589,7 +3653,7 @@
           {
             "x4_code": "(DEP,L0043004)",
             "free_txt": [
-              " Cross section of (g,2nX) reaction."
+              " The cross-section of (g,2nX) reaction."
             ]
           }
         ]

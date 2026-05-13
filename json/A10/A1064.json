@@ -1,7 +1,7 @@
 {
   "entry": "A1064",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-06-11",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810326C)",
@@ -13,6 +13,13 @@
       "x4_code": "(19990205U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20240427A)",
+      "free_txt": [
+        " SD: Corrections in all Subents. Subent 004",
+        "deleted (same data as in Subent 003 multiplied by 4Pi)."
       ]
     }
   ],
@@ -37,7 +44,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,88,(3),473,195211)",
+        "x4_code": "(J,PR,88,473,1952)",
         "free_txt": [],
         "publication_year": "1952",
         "doi": null,
@@ -46,98 +53,59 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG)",
+        "x4_code": "(VDG,1USARIC)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": null
+        "institute": "(1USARIC)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(2-HE-3(D,P)2-HE-4,,DA,,REL,EXP)",
+        "x4_code": "(2-HE-3(D,P)2-HE-4,,DA,,REL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "2-HE-3",
-              [
-                "D,P"
-              ],
-              "2-HE-4,,DA,,REL,EXP"
-            ],
-            "type": null,
             "target": "2-HE-3",
             "process": "D,P",
-            "sf49": "2-HE-4,,DA,,REL,EXP",
+            "sf49": "2-HE-4,,DA,,REL",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": "REL",
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(2-HE-3(D,P)2-HE-4,,DA,,REL)"
           }
         ],
-        "type": null,
-        "free_text": "",
+        "operator": null,
+        "free_text": "Relative proton intensity",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(2-HE-3(D,P)2-HE-4,,DA,,,EXP)",
+        "x4_code": "(2-HE-3(D,P)2-HE-4,,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "2-HE-3",
-              [
-                "D,P"
-              ],
-              "2-HE-4,,DA,,,EXP"
-            ],
-            "type": null,
             "target": "2-HE-3",
             "process": "D,P",
-            "sf49": "2-HE-4,,DA,,,EXP",
+            "sf49": "2-HE-4,,DA",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(2-HE-3(D,P)2-HE-4,,DA)"
           }
         ],
-        "type": null,
-        "free_text": "",
-        "pointer": "0"
-      }
-    },
-    "004": {
-      "0": {
-        "x4_code": "(2-HE-3(D,P)2-HE-4,,SIG,,,EXP)",
-        "children": [
-          {
-            "code": [
-              "2-HE-3",
-              [
-                "D,P"
-              ],
-              "2-HE-4,,SIG,,,EXP"
-            ],
-            "type": null,
-            "target": "2-HE-3",
-            "process": "D,P",
-            "sf49": "2-HE-4,,SIG,,,EXP",
-            "sf4": "2-HE-4",
-            "sf5": null,
-            "sf6": "SIG",
-            "sf7": null,
-            "sf8": null,
-            "sf9": "EXP"
-          }
-        ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -147,9 +115,9 @@
     "001": {
       "common": {
         "heads": [
-          "ANG2-ERR",
-          "ERR-S",
-          "ERR-1"
+          "ANG-ERR",
+          "ERR-1",
+          "ERR-2"
         ],
         "units": [
           "PER-CENT",
@@ -161,10 +129,10 @@
             3.0
           ],
           [
-            2.0
+            1.0
           ],
           [
-            1.0
+            3.0
           ]
         ]
       }
@@ -172,8 +140,8 @@
     "002": {
       "common": {
         "heads": [
-          "ANG-ERR",
-          "DATA-ERR"
+          "ANG-ERR-D",
+          "ERR-DIG"
         ],
         "units": [
           "ADEG",
@@ -246,91 +214,91 @@
           ],
           [
             0.0,
-            6.106,
-            12.26,
-            18.51,
-            25.02,
-            31.32,
-            37.46,
-            43.71,
-            50.07,
-            56.38,
-            62.51,
-            80.77,
+            6.1,
+            12.3,
+            18.5,
+            25.0,
+            31.3,
+            37.5,
+            43.7,
+            50.1,
+            56.4,
+            62.5,
+            80.8,
             0.0,
-            6.386,
-            12.86,
+            6.4,
+            12.9,
             19.2,
-            25.75,
-            32.22,
-            38.81,
+            25.8,
+            32.2,
+            38.8,
             45.1,
-            51.48,
-            57.89,
-            64.16,
-            70.43,
-            76.58,
-            82.82,
-            88.68,
+            51.5,
+            57.9,
+            64.2,
+            70.4,
+            76.6,
+            82.8,
+            88.7,
             0.0,
-            6.291,
-            12.96,
-            19.33,
-            25.91,
-            32.34,
-            38.79,
-            45.35,
-            51.87,
-            58.24,
-            64.65,
-            71.08,
-            77.39,
-            83.62,
-            89.44
+            6.3,
+            13.0,
+            19.3,
+            25.9,
+            32.3,
+            38.8,
+            45.4,
+            51.9,
+            58.2,
+            64.7,
+            71.1,
+            77.4,
+            83.6,
+            89.4
           ],
           [
-            0.9982,
-            0.9883,
+            0.998,
+            0.988,
             1.021,
             1.024,
-            0.9914,
+            0.991,
             1.009,
-            0.9775,
-            0.9831,
-            0.9617,
-            0.9826,
+            0.978,
+            0.983,
+            0.962,
+            0.983,
             1.007,
-            0.9839,
+            0.984,
             1.001,
             1.008,
             1.023,
-            0.9945,
+            0.995,
             1.032,
-            0.9864,
-            0.9805,
-            0.9952,
-            0.98,
-            0.9741,
-            0.9833,
-            0.9943,
-            0.966,
-            0.9677,
-            0.9676,
-            1.01,
-            0.9816,
-            0.9965,
+            0.986,
             0.981,
-            0.9673,
+            0.995,
+            0.98,
+            0.974,
+            0.983,
+            0.994,
+            0.966,
+            0.968,
+            0.968,
+            1.01,
+            0.982,
+            0.997,
+            0.981,
+            0.967,
             0.969,
-            0.9744,
-            0.9569,
+            0.974,
+            0.957,
             0.928,
-            0.9106,
-            0.9028,
-            0.9063,
+            0.911,
+            0.903,
+            0.906,
             0.927,
             0.923,
-            0.9115
+            0.912
           ]
         ]
       }
@@ -352,12 +320,10 @@
       "data": {
         "heads": [
           "EN",
-          "DATA",
-          "DATA-ERR"
+          "DATA"
         ],
         "units": [
           "MEV",
-          "MB/SR",
           "MB/SR"
         ],
         "data": [
@@ -402,101 +368,6 @@
             13.4,
             11.8,
             10.8
-          ],
-          [
-            0.332,
-            0.576,
-            0.888,
-            1.072,
-            1.088,
-            1.016,
-            0.888,
-            0.752,
-            0.668,
-            0.608,
-            0.554,
-            0.488,
-            0.436,
-            0.384,
-            0.31,
-            0.286,
-            0.268,
-            0.236,
-            0.216
-          ]
-        ]
-      }
-    },
-    "004": {
-      "common": {
-        "heads": [
-          "EN-ERR",
-          "DATA-ERR"
-        ],
-        "units": [
-          "MEV",
-          "MB"
-        ],
-        "data": [
-          [
-            0.003
-          ],
-          [
-            1.5
-          ]
-        ]
-      },
-      "data": {
-        "heads": [
-          "EN",
-          "DATA"
-        ],
-        "units": [
-          "MEV",
-          "MB"
-        ],
-        "data": [
-          [
-            0.1889,
-            0.2462,
-            0.304,
-            0.363,
-            0.4204,
-            0.4793,
-            0.5355,
-            0.5916,
-            0.646,
-            0.7138,
-            0.7685,
-            0.8275,
-            0.8843,
-            0.9721,
-            1.104,
-            1.229,
-            1.355,
-            1.491,
-            1.597
-          ],
-          [
-            206.2,
-            360.8,
-            554.9,
-            673.1,
-            682.0,
-            636.2,
-            557.0,
-            470.3,
-            418.4,
-            380.2,
-            349.6,
-            308.3,
-            274.7,
-            242.5,
-            193.3,
-            180.7,
-            169.6,
-            147.7,
-            136.7
           ]
         ]
       }
@@ -521,30 +392,31 @@
         ],
         "err-analys": [
           {
-            "x4_code": "(ANG2-ERR)",
+            "x4_code": "(ERR-S,1.,2.)",
             "free_txt": [
-              " Probable error in solid angle"
-            ]
-          },
-          {
-            "x4_code": "(ERR-S)",
-            "free_txt": [
-              " The statistical probable errors of the points",
-              "were about 1% near 400 KeV and less than 2% elsewhere."
+              " The statistical probable errors of the",
+              "points were about 1% near 400 KeV and less than 2%",
+              "elsewhere."
             ]
           },
           {
             "x4_code": "(ERR-1)",
             "free_txt": [
               " The estimated probable errors of the current",
-              "integrator and number of 3He atoms",
+              "integrator and number of 3He atoms"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " Uncertainty in the solid angle",
               "Backgrounds of each type of counter were negligible."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,1USARIC)",
             "free_txt": []
           }
         ],
@@ -566,25 +438,11 @@
     },
     "002": {
       "0": {
-        "err-analys": [
-          {
-            "x4_code": "(ANG-ERR)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          },
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          }
-        ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,T.W.Bonner+,J,PR,88,473,1952)",
             "free_txt": [
-              " FIG 2"
+              " Fig. 2"
             ]
           }
         ]
@@ -592,45 +450,11 @@
     },
     "003": {
       "0": {
-        "err-analys": [
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " Statistical error"
-            ]
-          }
-        ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,T.W.Bonner+,J,PR,88,473,1952)",
             "free_txt": [
               " Table 1"
-            ]
-          }
-        ]
-      }
-    },
-    "004": {
-      "0": {
-        "err-analys": [
-          {
-            "x4_code": "(EN-ERR)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          },
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          }
-        ],
-        "status": [
-          {
-            "x4_code": "(CURVE)",
-            "free_txt": [
-              " Fig 3"
             ]
           }
         ]

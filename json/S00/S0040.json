@@ -1,7 +1,7 @@
 {
   "entry": "S0040",
-  "last_updated": "2021-03-05",
-  "number_of_revisions": "5",
+  "last_updated": "2025-04-01",
+  "number_of_revisions": "6",
   "histories": [
     {
       "x4_code": "(19950420C)",
@@ -20,6 +20,12 @@
       "x4_code": "(20210113A)",
       "free_txt": [
         " On. Major revision in 004."
+      ]
+    },
+    {
+      "x4_code": "(20250226A)",
+      "free_txt": [
+        " Jimin Wang: Revision in ERR-ANALYS and 002."
       ]
     }
   ],
@@ -70,29 +76,24 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(39-Y-89(P,N)40-ZR-89,,SIG)",
+        "x4_code": "(39-Y-89(P,N)40-ZR-89,,SIG,,,DERIV)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "39-Y-89",
-              [
-                "P,N"
-              ],
-              "40-ZR-89,,SIG"
-            ],
-            "type": null,
             "target": "39-Y-89",
             "process": "P,N",
-            "sf49": "40-ZR-89,,SIG",
+            "sf49": "40-ZR-89,,SIG,,,DERIV",
             "sf4": "40-ZR-89",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": "DERIV",
+            "operator": null,
+            "x4_code": "(39-Y-89(P,N)40-ZR-89,,SIG,,,DERIV)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -100,16 +101,9 @@
     "003": {
       "0": {
         "x4_code": "(39-Y-89(P,2N)40-ZR-88,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "39-Y-89",
-              [
-                "P,2N"
-              ],
-              "40-ZR-88,,SIG"
-            ],
-            "type": null,
             "target": "39-Y-89",
             "process": "P,2N",
             "sf49": "40-ZR-88,,SIG",
@@ -118,10 +112,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(39-Y-89(P,2N)40-ZR-88,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -129,16 +125,9 @@
     "004": {
       "0": {
         "x4_code": "(39-Y-89(P,X)39-Y-88,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "39-Y-89",
-              [
-                "P,X"
-              ],
-              "39-Y-88,,SIG"
-            ],
-            "type": null,
             "target": "39-Y-89",
             "process": "P,X",
             "sf49": "39-Y-88,,SIG",
@@ -147,10 +136,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(39-Y-89(P,X)39-Y-88,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -725,8 +716,13 @@
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
-              " The dominant uncertainties include:",
-              "  * 0.5%-4% for statistics"
+              " The total uncertainty                 (3.3%-5%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-S,0.5,4.)",
+            "free_txt": [
+              " statistics                     (0.5%-4%)"
             ]
           },
           {
@@ -756,8 +752,7 @@
           {
             "x4_code": "(ERR-5)",
             "free_txt": [
-              " correction of scattering and other items (1.5%)",
-              "The total uncertainty is 3.3%-5%."
+              " correction of scattering and other items (1.5%)"
             ]
           }
         ],
@@ -807,9 +802,10 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,Zhao Wenrong+,J,CNP,14,7,1992)",
             "free_txt": [
-              " Data taken from the authors."
+              " Table 2",
+              " Data taken from the authors"
             ]
           }
         ]
@@ -817,10 +813,35 @@
     },
     "002": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "To obtain the total cross section, the isomer ratios",
+              "of P0012 were applied, the measured apparent cross",
+              "sections were multiplied by a factor of 1.039 for Ep",
+              "below 10 MeV and 1.019 for Ep above 10 MeV."
+            ]
+          }
+        ],
         "decay-data": [
           {
             "x4_code": "(40-ZR-89-G,3.268D,G,909.2,0.9901)",
             "free_txt": []
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(DEP,P0012002)",
+            "free_txt": [
+              " The cross section of the ground state."
+            ]
+          },
+          {
+            "x4_code": "(DEP,P0012003)",
+            "free_txt": [
+              " The cross section of isomeric state."
+            ]
           }
         ]
       }

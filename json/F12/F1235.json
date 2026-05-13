@@ -1,11 +1,17 @@
 {
   "entry": "F1235",
-  "last_updated": "2015-03-11",
-  "number_of_revisions": "1",
+  "last_updated": "2026-01-22",
+  "number_of_revisions": "2",
   "histories": [
     {
       "x4_code": "(20140922C)",
       "free_txt": []
+    },
+    {
+      "x4_code": "(20251205U)",
+      "free_txt": [
+        " SD: Small corrections in all Subents."
+      ]
     }
   ],
   "bib_record": {
@@ -32,17 +38,17 @@
     ],
     "references": [
       {
-        "x4_code": "(J,AE,2,(4),345,1957)",
-        "free_txt": [],
+        "x4_code": "(J,SJA,2,419,1957)",
+        "free_txt": [
+          " English translation"
+        ],
         "publication_year": "1957",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,SJA,2,(4),419,1957)",
-        "free_txt": [
-          " English translation"
-        ],
+        "x4_code": "(J,AE,2,345,1957)",
+        "free_txt": [],
         "publication_year": "1957",
         "doi": null,
         "pointer": "0"
@@ -62,16 +68,9 @@
     "002": {
       "0": {
         "x4_code": "(29-CU-0(P,X)ELEM/MASS,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "29-CU-0",
-              [
-                "P,X"
-              ],
-              "ELEM/MASS,,SIG"
-            ],
-            "type": null,
             "target": "29-CU-0",
             "process": "P,X",
             "sf49": "ELEM/MASS,,SIG",
@@ -80,10 +79,12 @@
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(29-CU-0(P,X)ELEM/MASS,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -93,14 +94,7 @@
         "x4_code": "((29-CU-0(P,X)21-SC-43,CUM,SIG)+(29-CU-0(P,X)21-SC-44-G,CUM,SIG))",
         "children": [
           {
-            "code": [
-              "29-CU-0",
-              [
-                "P,X"
-              ],
-              "21-SC-43,CUM,SIG"
-            ],
-            "type": null,
+            "x4_code": "(29-CU-0(P,X)21-SC-43,CUM,SIG)",
             "target": "29-CU-0",
             "process": "P,X",
             "sf49": "21-SC-43,CUM,SIG",
@@ -112,14 +106,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "29-CU-0",
-              [
-                "P,X"
-              ],
-              "21-SC-44-G,CUM,SIG"
-            ],
-            "type": null,
+            "x4_code": "(29-CU-0(P,X)21-SC-44-G,CUM,SIG)",
             "target": "29-CU-0",
             "process": "P,X",
             "sf49": "21-SC-44-G,CUM,SIG",
@@ -131,7 +118,12 @@
             "sf9": null
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((29-CU-0(P,X)21-SC-43,CUM,SIG)",
+          "(29-CU-0(P,X)21-SC-44-G,CUM,SIG))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -391,21 +383,19 @@
               "2*10**(-4)% of Ag, 10**(-3)% of Fe, Ni, Pd."
             ]
           }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.K.Lavrukhina+,J,SJA,2,419,1957)",
+            "free_txt": [
+              " Table 1"
+            ]
+          }
         ]
       }
     },
     "002": {
       "0": {
-        "comment": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "Metastable state of 23-V-50-M was specified by",
-              "authors in table 1 (page 348,) that is in disagreement",
-              "with now-day decay data."
-            ]
-          }
-        ],
         "decay-data": [
           {
             "x4_code": "(29-CU-60,23.MIN,B+,,,                 DG)",
@@ -485,13 +475,15 @@
           },
           {
             "x4_code": "(23-V-50-M,2.5HR,B+,,,                 B-,,,                 ICE)",
-            "free_txt": []
+            "free_txt": [
+              "   Metastable state of 23-V-50-M was specified by",
+              "   authors in table 1 (page 348) that is in",
+              "   disagreement with now-day decay data."
+            ]
           },
           {
             "x4_code": "(22-TI-45,3.HR,B+,,,               DG)",
-            "free_txt": [
-              "As printed in Table 1"
-            ]
+            "free_txt": []
           },
           {
             "x4_code": "(21-SC-46-G,70.D,B-,,,               XR,,,               DG)",
@@ -543,14 +535,6 @@
               "As printed in Table 1"
             ]
           }
-        ],
-        "status": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              " Table 1 from the reference."
-            ]
-          }
         ]
       }
     },
@@ -564,14 +548,6 @@
           {
             "x4_code": "(21-SC-44-G,4.HR,B+,,,               XR,,,               DG)",
             "free_txt": []
-          }
-        ],
-        "status": [
-          {
-            "x4_code": "(TABLE)",
-            "free_txt": [
-              " Table 1 from the reference."
-            ]
           }
         ]
       }

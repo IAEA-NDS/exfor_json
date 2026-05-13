@@ -1,12 +1,19 @@
 {
   "entry": "C2632",
-  "last_updated": "2022-02-15",
-  "number_of_revisions": "1",
+  "last_updated": "2025-03-03",
+  "number_of_revisions": "2",
   "histories": [
     {
       "x4_code": "(20210617C)",
       "free_txt": [
         " Compiled by S.H."
+      ]
+    },
+    {
+      "x4_code": "(20250130A)",
+      "free_txt": [
+        " BP: Updated entry to new STATUS, added",
+        "Legendre polynomials."
       ]
     }
   ],
@@ -60,8 +67,8 @@
       {
         "x4_code": "(1USAUSA)",
         "free_txt": [
-          " South Dakota School of Mines and Technology",
-          "          Rapid City,South Dakota"
+          " South Dakota School of Mines & Technology,",
+          "Department of Physics, Rapid City, SD57701, USA"
         ]
       },
       {
@@ -100,9 +107,11 @@
     "references": [
       {
         "x4_code": "(J,PL/B,813,136033,2021)",
-        "free_txt": [],
+        "free_txt": [
+          "#doi:10.1016/j.physletb.2020.136033"
+        ],
         "publication_year": "2021",
-        "doi": null,
+        "doi": "10.1016/j.physletb.2020.136033",
         "pointer": "0"
       }
     ],
@@ -110,7 +119,7 @@
       {
         "x4_code": "(LINAC,1USAANL)",
         "free_txt": [
-          " Experiment performed using the ATLAS",
+          " Experiment performed using the atlas",
           "accelerator at Argonne National Laboratory."
         ],
         "pointer": "0",
@@ -123,16 +132,9 @@
     "002": {
       "0": {
         "x4_code": "(12-MG-24(HE3,P)13-AL-26,PAR,DA,G,REL)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "12-MG-24",
-              [
-                "HE3,P"
-              ],
-              "13-AL-26,PAR,DA,G,REL"
-            ],
-            "type": null,
             "target": "12-MG-24",
             "process": "HE3,P",
             "sf49": "13-AL-26,PAR,DA,G,REL",
@@ -141,10 +143,36 @@
             "sf6": "DA",
             "sf7": "G",
             "sf8": "REL",
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(12-MG-24(HE3,P)13-AL-26,PAR,DA,G,REL)"
           }
         ],
-        "type": null,
+        "operator": null,
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(12-MG-25(HE3,D)13-AL-26,PAR,DA,G,LEG/RS)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "12-MG-25",
+            "process": "HE3,D",
+            "sf49": "13-AL-26,PAR,DA,G,LEG/RS",
+            "sf4": "13-AL-26",
+            "sf5": "PAR",
+            "sf6": "DA",
+            "sf7": "G",
+            "sf8": "LEG/RS",
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(12-MG-25(HE3,D)13-AL-26,PAR,DA,G,LEG/RS)"
+          }
+        ],
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -152,9 +180,6 @@
   },
   "data_tables": {
     "001": {
-      "common": null
-    },
-    "002": {
       "common": {
         "heads": [
           "EN"
@@ -167,7 +192,10 @@
             10.0
           ]
         ]
-      },
+      }
+    },
+    "002": {
+      "common": null,
       "data": {
         "heads": [
           "E",
@@ -356,6 +384,65 @@
           ]
         ]
       }
+    },
+    "003": {
+      "common": null,
+      "data": {
+        "heads": [
+          "E",
+          "NUMBER",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "KEV",
+          "NO-DIM",
+          "NO-DIM",
+          "NO-DIM"
+        ],
+        "data": [
+          [
+            2361.0,
+            2361.0,
+            2986.0,
+            2986.0,
+            3239.0,
+            3239.0,
+            4327.0,
+            4327.0
+          ],
+          [
+            2.0,
+            4.0,
+            2.0,
+            4.0,
+            2.0,
+            4.0,
+            2.0,
+            4.0
+          ],
+          [
+            0.15,
+            0.01,
+            0.29,
+            -0.12,
+            0.12,
+            -0.03,
+            0.15,
+            -0.04
+          ],
+          [
+            0.02,
+            0.02,
+            0.01,
+            0.02,
+            0.04,
+            0.03,
+            0.04,
+            0.03
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
@@ -365,9 +452,9 @@
           {
             "x4_code": "(HPGE)",
             "free_txt": [
-              " Gamma rays were detected using Gammasphere",
+              " Gamma rays were detected using gammasphere",
               "array, consisting of 110 Compton-suppressed HPGe",
-              "detectors, which cover almost 4Pi solid angle."
+              "detectors, which cover almost 4pi solid angle."
             ]
           }
         ],
@@ -375,7 +462,7 @@
           {
             "x4_code": "(LINAC,1USAANL)",
             "free_txt": [
-              " Experiment performed using the ATLAS",
+              " Experiment performed using the atlas",
               "accelerator at Argonne National Laboratory."
             ]
           }
@@ -404,8 +491,42 @@
           {
             "x4_code": "(CURVE)",
             "free_txt": [
-              " Data taken from fig. 4 of the reference,",
-              "        Waiting for data from author"
+              ",,A.Kankainen+,J,PL/B,813,136033,2021) Fig. 4.",
+              "Waiting for data from author"
+            ]
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Fits to the measured (arbitrary units) yields at each",
+              "angle were then performed. The standard angular",
+              "distribution function W(theta) = a0[1 + a2P2(cos theta)",
+              " + a4P4(cos theta) ], where P2 and P4 are Legendre",
+              "polynomials, was fitted to the data. The extracted",
+              "coefficients, a2 and a4, contain information on the",
+              "multipolarity of the transitions."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " No details on sources of uncertainties."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(TABLE,,A.Kankainen+,J,PL/B,813,136033,2021)",
+            "free_txt": [
+              " Fig.4, p.3"
             ]
           }
         ]

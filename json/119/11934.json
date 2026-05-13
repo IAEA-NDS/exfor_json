@@ -1,23 +1,30 @@
 {
   "entry": "11934",
-  "last_updated": "2023-05-23",
-  "number_of_revisions": "4",
+  "last_updated": "2026-03-27",
+  "number_of_revisions": "5",
   "histories": [
     {
-      "x4_code": "(760802T)",
+      "x4_code": "(19760802T)",
       "free_txt": [
-        " TRANSLATED FROM SCISRS"
+        " Translated from SCISRS"
       ]
     },
     {
-      "x4_code": "(830802A)",
+      "x4_code": "(19830802A)",
       "free_txt": [
-        " CONVERTED TO REACTION FORMALISM"
+        " Converted to reaction formalism"
+      ]
+    },
+    {
+      "x4_code": "(20260201A)",
+      "free_txt": [
+        " FACILITY, INC-SOURCE added, minor BIB",
+        " correction"
       ]
     }
   ],
   "bib_record": {
-    "title": "(N,D) AND (N,P) REACTIONS NEAR Z=50.",
+    "title": " (n,d) and (n,p) reactions near Z=50.",
     "authors": [
       {
         "name": "R.A.Peck Jr"
@@ -31,14 +38,24 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,123,1738,61)",
-        "free_txt": [],
+        "x4_code": "(J,PR,123,1738,1961)",
+        "free_txt": [
+          "#doi:10.1103/PhysRev.123.1738"
+        ],
         "publication_year": "1961",
-        "doi": null,
+        "doi": "10.1103/PhysRev.123.1738",
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(CCW,1USABRN)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(CCW)",
+        "institute": "(1USABRN)"
+      }
+    ]
   },
   "reactions": {
     "002": {
@@ -46,14 +63,7 @@
         "x4_code": "((45-RH-103(N,X)1-H-1,PAR,DA)+(45-RH-103(N,D)44-RU-102,PAR,DA))",
         "children": [
           {
-            "code": [
-              "45-RH-103",
-              [
-                "N,X"
-              ],
-              "1-H-1,PAR,DA"
-            ],
-            "type": null,
+            "x4_code": "(45-RH-103(N,X)1-H-1,PAR,DA)",
             "target": "45-RH-103",
             "process": "N,X",
             "sf49": "1-H-1,PAR,DA",
@@ -65,14 +75,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "45-RH-103",
-              [
-                "N,D"
-              ],
-              "44-RU-102,PAR,DA"
-            ],
-            "type": null,
+            "x4_code": "(45-RH-103(N,D)44-RU-102,PAR,DA)",
             "target": "45-RH-103",
             "process": "N,D",
             "sf49": "44-RU-102,PAR,DA",
@@ -84,7 +87,12 @@
             "sf9": null
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((45-RH-103(N,X)1-H-1,PAR,DA)",
+          "(45-RH-103(N,D)44-RU-102,PAR,DA))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -94,14 +102,7 @@
         "x4_code": "((45-RH-103(N,X)1-H-1,PAR,DA)+(45-RH-103(N,D)44-RU-102,PAR,DA))",
         "children": [
           {
-            "code": [
-              "45-RH-103",
-              [
-                "N,X"
-              ],
-              "1-H-1,PAR,DA"
-            ],
-            "type": null,
+            "x4_code": "(45-RH-103(N,X)1-H-1,PAR,DA)",
             "target": "45-RH-103",
             "process": "N,X",
             "sf49": "1-H-1,PAR,DA",
@@ -113,14 +114,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "45-RH-103",
-              [
-                "N,D"
-              ],
-              "44-RU-102,PAR,DA"
-            ],
-            "type": null,
+            "x4_code": "(45-RH-103(N,D)44-RU-102,PAR,DA)",
             "target": "45-RH-103",
             "process": "N,D",
             "sf49": "44-RU-102,PAR,DA",
@@ -132,7 +126,12 @@
             "sf9": null
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((45-RH-103(N,X)1-H-1,PAR,DA)",
+          "(45-RH-103(N,D)44-RU-102,PAR,DA))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -140,16 +139,9 @@
     "004": {
       "0": {
         "x4_code": "(45-RH-103(N,P)44-RU-103,PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "45-RH-103",
-              [
-                "N,P"
-              ],
-              "44-RU-103,PAR,DA"
-            ],
-            "type": null,
             "target": "45-RH-103",
             "process": "N,P",
             "sf49": "44-RU-103,PAR,DA",
@@ -158,10 +150,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(45-RH-103(N,P)44-RU-103,PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -171,14 +165,7 @@
         "x4_code": "((45-RH-103(N,X)1-H-1,PAR,DA)+(45-RH-103(N,D)44-RU-102,PAR,DA))",
         "children": [
           {
-            "code": [
-              "45-RH-103",
-              [
-                "N,X"
-              ],
-              "1-H-1,PAR,DA"
-            ],
-            "type": null,
+            "x4_code": "(45-RH-103(N,X)1-H-1,PAR,DA)",
             "target": "45-RH-103",
             "process": "N,X",
             "sf49": "1-H-1,PAR,DA",
@@ -190,14 +177,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "45-RH-103",
-              [
-                "N,D"
-              ],
-              "44-RU-102,PAR,DA"
-            ],
-            "type": null,
+            "x4_code": "(45-RH-103(N,D)44-RU-102,PAR,DA)",
             "target": "45-RH-103",
             "process": "N,D",
             "sf49": "44-RU-102,PAR,DA",
@@ -209,7 +189,12 @@
             "sf9": null
           }
         ],
-        "type": "+",
+        "math_expression": [
+          "Add",
+          "((45-RH-103(N,X)1-H-1,PAR,DA)",
+          "(45-RH-103(N,D)44-RU-102,PAR,DA))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -217,16 +202,9 @@
     "006": {
       "0": {
         "x4_code": "(49-IN-0(N,D),PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "49-IN-0",
-              [
-                "N,D"
-              ],
-              ",PAR,DA"
-            ],
-            "type": null,
             "target": "49-IN-0",
             "process": "N,D",
             "sf49": ",PAR,DA",
@@ -235,10 +213,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(49-IN-0(N,D),PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -246,16 +226,9 @@
     "007": {
       "0": {
         "x4_code": "(49-IN-0(N,D),PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "49-IN-0",
-              [
-                "N,D"
-              ],
-              ",PAR,DA"
-            ],
-            "type": null,
             "target": "49-IN-0",
             "process": "N,D",
             "sf49": ",PAR,DA",
@@ -264,10 +237,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(49-IN-0(N,D),PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -275,16 +250,9 @@
     "008": {
       "0": {
         "x4_code": "(49-IN-0(N,P),PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "49-IN-0",
-              [
-                "N,P"
-              ],
-              ",PAR,DA"
-            ],
-            "type": null,
             "target": "49-IN-0",
             "process": "N,P",
             "sf49": ",PAR,DA",
@@ -293,10 +261,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(49-IN-0(N,P),PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -304,16 +274,9 @@
     "009": {
       "0": {
         "x4_code": "(49-IN-0(N,X)1-H-1,PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "49-IN-0",
-              [
-                "N,X"
-              ],
-              "1-H-1,PAR,DA"
-            ],
-            "type": null,
             "target": "49-IN-0",
             "process": "N,X",
             "sf49": "1-H-1,PAR,DA",
@@ -322,10 +285,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(49-IN-0(N,X)1-H-1,PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -333,16 +298,9 @@
     "010": {
       "0": {
         "x4_code": "(51-SB-0(N,D),PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "51-SB-0",
-              [
-                "N,D"
-              ],
-              ",PAR,DA"
-            ],
-            "type": null,
             "target": "51-SB-0",
             "process": "N,D",
             "sf49": ",PAR,DA",
@@ -351,10 +309,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(51-SB-0(N,D),PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -362,16 +322,9 @@
     "011": {
       "0": {
         "x4_code": "(51-SB-0(N,N+P),PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "51-SB-0",
-              [
-                "N,N+P"
-              ],
-              ",PAR,DA"
-            ],
-            "type": null,
             "target": "51-SB-0",
             "process": "N,N+P",
             "sf49": ",PAR,DA",
@@ -380,10 +333,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(51-SB-0(N,N+P),PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -391,16 +346,9 @@
     "012": {
       "0": {
         "x4_code": "(51-SB-0(N,P),PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "51-SB-0",
-              [
-                "N,P"
-              ],
-              ",PAR,DA"
-            ],
-            "type": null,
             "target": "51-SB-0",
             "process": "N,P",
             "sf49": ",PAR,DA",
@@ -409,10 +357,12 @@
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(51-SB-0(N,P),PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -1341,8 +1291,20 @@
           {
             "x4_code": "(TRD)",
             "free_txt": [
-              " NUCLEAR EMULSIONS."
+              " Nuclear emulsions."
             ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(CCW,1USABRN)",
+            "free_txt": []
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(D-T)",
+            "free_txt": []
           }
         ],
         "status": [

@@ -84,14 +84,7 @@
         "x4_code": "(((62-SM-147(N,EL),,WID,,G)*(62-SM-147(N,A),,WID))/(62-SM-147(N,TOT),,WID))",
         "children": [
           {
-            "code": [
-              "62-SM-147",
-              [
-                "N,EL"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
+            "x4_code": "(62-SM-147(N,EL),,WID,,G)",
             "target": "62-SM-147",
             "process": "N,EL",
             "sf49": ",,WID,,G",
@@ -103,14 +96,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "62-SM-147",
-              [
-                "N,A"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
+            "x4_code": "(62-SM-147(N,A),,WID)",
             "target": "62-SM-147",
             "process": "N,A",
             "sf49": ",,WID",
@@ -122,37 +108,28 @@
             "sf9": null
           },
           {
-            "code": "62-SM-147",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "6",
-            "process": "2",
-            "sf49": "-,S,M,-,1,4,7",
-            "sf4": "-",
-            "sf5": "S",
-            "sf6": "M",
-            "sf7": "-",
-            "sf8": "1",
-            "sf9": "4"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
+            "x4_code": "(62-SM-147(N,TOT),,WID)",
+            "target": "62-SM-147",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
             "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Multiply",
+          "(((62-SM-147(N,EL),,WID,,G)",
+          [
+            "Divide",
+            "(62-SM-147(N,A),,WID))",
+            "(62-SM-147(N,TOT),,WID))"
+          ]
+        ],
+        "operator": "Multiply",
         "free_text": "",
         "pointer": "0"
       }
@@ -160,16 +137,9 @@
     "003": {
       "0": {
         "x4_code": "(62-SM-147(N,A),,WID)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "62-SM-147",
-              [
-                "N,A"
-              ],
-              ",,WID"
-            ],
-            "type": null,
             "target": "62-SM-147",
             "process": "N,A",
             "sf49": ",,WID",
@@ -178,10 +148,12 @@
             "sf6": "WID",
             "sf7": null,
             "sf8": null,
-            "sf9": null
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(62-SM-147(N,A),,WID)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }

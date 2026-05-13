@@ -1,12 +1,19 @@
 {
   "entry": "T0166",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-12-15",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20010612C)",
       "free_txt": [
         " SB+VM"
+      ]
+    },
+    {
+      "x4_code": "(20241023A)",
+      "free_txt": [
+        " OS. REACTION in sub.2 modified, ERR-ANALYS",
+        " updated, minor BIB updates"
       ]
     }
   ],
@@ -73,19 +80,21 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR/C,40,246,198907)",
-        "free_txt": [],
+        "x4_code": "(J,PR/C,40,246,1989)",
+        "free_txt": [
+          "#doi:10.1103/PhysRevC.40.246"
+        ],
         "publication_year": "1989",
-        "doi": null,
+        "doi": "10.1103/PhysRevC.40.246",
         "pointer": "0"
       }
     ],
     "facilities": [
       {
-        "x4_code": "(MESON,1CANTMF)",
+        "x4_code": "(LINAC,1CANTMF)",
         "free_txt": [],
         "pointer": "0",
-        "facility_type": "(MESON)",
+        "facility_type": "(LINAC)",
         "institute": "(1CANTMF)"
       }
     ]
@@ -93,29 +102,24 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(82-PB-208(P,INL)82-PB-208,PAR,DA,,,EXP)",
+        "x4_code": "(82-PB-208(P,INL)82-PB-208,PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "82-PB-208",
-              [
-                "P,INL"
-              ],
-              "82-PB-208,PAR,DA,,,EXP"
-            ],
-            "type": null,
             "target": "82-PB-208",
             "process": "P,INL",
-            "sf49": "82-PB-208,PAR,DA,,,EXP",
+            "sf49": "82-PB-208,PAR,DA",
             "sf4": "82-PB-208",
             "sf5": "PAR",
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(82-PB-208(P,INL)82-PB-208,PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "  Figures 3,8",
         "pointer": "0"
       }
@@ -143,13 +147,25 @@
       }
     },
     "002": {
-      "common": null,
+      "common": {
+        "heads": [
+          "ANG-ERR-D"
+        ],
+        "units": [
+          "ADEG"
+        ],
+        "data": [
+          [
+            0.08
+          ]
+        ]
+      },
       "data": {
         "heads": [
           "E-EXC",
           "ANG",
           "DATA",
-          "ERR-T"
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
@@ -286,7 +302,7 @@
         ],
         "facility": [
           {
-            "x4_code": "(MESON,1CANTMF)",
+            "x4_code": "(LINAC,1CANTMF)",
             "free_txt": []
           }
         ],
@@ -306,11 +322,11 @@
         ],
         "rel-ref": [
           {
-            "x4_code": "(R,,D.A.HUTCHEON+,J,PRL,447,315,1981)",
+            "x4_code": "(R,,D.A.Hutcheon+,J,PRL,47,315,1981)",
             "free_txt": []
           },
           {
-            "x4_code": "(R,,D.A.HUTCHEON+,J,NP/A,484,429,1988)",
+            "x4_code": "(R,,D.A.Hutcheon+,J,NP/A,483,429,1988)",
             "free_txt": [
               "Elastic Scattering Data For Pb-208 at 400 MeV. The Data",
               "Were Used to Check of Absolute Cross Section",
@@ -328,9 +344,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,L.W.Swenson+,J,PR/C,40,246,1989)",
             "free_txt": [
-              " Scanned from figues in reference by CAJAD.",
+              "Scanned from figues 3,8 by CAJAD.",
               "No reply from D.K. McDaniels to author proof."
             ]
           }
@@ -355,10 +371,17 @@
         ],
         "err-analys": [
           {
-            "x4_code": "(ERR-T)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Uncertainty scanned from figures.",
-              "Data-point reader uncertainty in angle 0.08 degrees."
+              " No information on sources of uncertainties.",
+              "Uncertainty scanned from figures."
+            ]
+          },
+          {
+            "x4_code": "(ANG-ERR-D)",
+            "free_txt": [
+              " Data-point reader uncertainty in angle",
+              " 0.08 degrees."
             ]
           }
         ],

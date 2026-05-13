@@ -1,7 +1,7 @@
 {
   "entry": "A1067",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2024-06-11",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19810605C)",
@@ -13,6 +13,13 @@
       "x4_code": "(19990205U)",
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
+      ]
+    },
+    {
+      "x4_code": "(20240427A)",
+      "free_txt": [
+        " SD: Corrections in all Subents.",
+        "Subent 003 added."
       ]
     }
   ],
@@ -31,7 +38,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR/C,9,(3),805,197403)",
+        "x4_code": "(J,PR/C,9,805,1974)",
         "free_txt": [],
         "publication_year": "1974",
         "doi": null,
@@ -40,40 +47,59 @@
     ],
     "facilities": [
       {
-        "x4_code": "(VDG)",
+        "x4_code": "(VDG,1USACAL)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(VDG)",
-        "institute": null
+        "institute": "(1USACAL)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(2-HE-3(HE3,2P)2-HE-4,,SIG,,,EXP)",
+        "x4_code": "(2-HE-3(HE3,2P)2-HE-4,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "2-HE-3",
-              [
-                "HE3,2P"
-              ],
-              "2-HE-4,,SIG,,,EXP"
-            ],
-            "type": null,
             "target": "2-HE-3",
             "process": "HE3,2P",
-            "sf49": "2-HE-4,,SIG,,,EXP",
+            "sf49": "2-HE-4,,SIG",
             "sf4": "2-HE-4",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(2-HE-3(HE3,2P)2-HE-4,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(2-HE-3(HE3,2P)2-HE-4,,SIG,,SFC)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "2-HE-3",
+            "process": "HE3,2P",
+            "sf49": "2-HE-4,,SIG,,SFC",
+            "sf4": "2-HE-4",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": "SFC",
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(2-HE-3(HE3,2P)2-HE-4,,SIG,,SFC)"
+          }
+        ],
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -86,61 +112,133 @@
     "002": {
       "common": {
         "heads": [
-          "EN-ERR",
-          "DATA-ERR"
+          "EN-ERR-DIG",
+          "ERR-DIG"
         ],
         "units": [
-          "MEV",
+          "KEV",
           "PER-CENT"
         ],
         "data": [
           [
-            0.001
+            0.1
           ],
           [
-            5.0
+            1.7
           ]
         ]
       },
       "data": {
         "heads": [
           "EN-CM",
-          "DATA-CM"
+          "DATA"
         ],
         "units": [
-          "MEV",
-          "MB"
+          "KEV",
+          "MICRO-B"
         ],
         "data": [
           [
-            0.0327,
-            0.0327,
-            0.0343,
-            0.0386,
-            0.0432,
-            0.0473,
-            0.0486,
-            0.06,
-            0.0749,
-            0.0984,
-            0.1138,
-            0.1181,
-            0.1484
+            29.8,
+            33.1,
+            33.1,
+            34.4,
+            38.7,
+            43.3,
+            47.1,
+            48.6,
+            60.3,
+            74.6,
+            98.3,
+            113.9,
+            118.0,
+            147.5
           ],
           [
-            4.4e-07,
-            7.01e-07,
-            6.02e-07,
-            4.8e-06,
-            8.19e-06,
-            2.04e-05,
-            1.7e-05,
-            0.000165,
-            0.00093,
-            0.0069,
-            0.0206,
-            0.0255,
-            0.0859
+            0.06245,
+            0.6746,
+            0.4392,
+            0.6042,
+            3.9,
+            8.247,
+            19.95,
+            16.81,
+            155.0,
+            908.4,
+            6813.0,
+            19850.0,
+            25700.0,
+            83780.0
+          ]
+        ]
+      }
+    },
+    "003": {
+      "common": {
+        "heads": [
+          "EN-ERR-DIG",
+          "ERR-DIG"
+        ],
+        "units": [
+          "KEV",
+          "B*MEV"
+        ],
+        "data": [
+          [
+            0.2
+          ],
+          [
+            0.01
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "EN-CM",
+          "DATA",
+          "DATA-ERR"
+        ],
+        "units": [
+          "KEV",
+          "B*MEV",
+          "B*MEV"
+        ],
+        "data": [
+          [
+            30.2,
+            33.3,
+            34.2,
+            43.6,
+            47.4,
+            49.0,
+            60.9,
+            73.0,
+            98.0,
+            113.1
+          ],
+          [
+            3.0,
+            6.21,
+            5.9,
+            4.59,
+            4.88,
+            3.19,
+            3.69,
+            3.98,
+            3.78,
+            4.05
+          ],
+          [
+            null,
+            null,
+            3.02,
+            null,
+            1.23,
+            null,
+            null,
+            null,
+            null,
+            0.72
           ]
         ]
       }
@@ -153,13 +251,13 @@
           {
             "x4_code": "(CSICR)",
             "free_txt": [
-              " Large area (12-5 cm2)"
+              " Large area (12.5 cm2)"
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(VDG)",
+            "x4_code": "(VDG,1USACAL)",
             "free_txt": []
           }
         ],
@@ -181,25 +279,31 @@
     },
     "002": {
       "0": {
-        "err-analys": [
+        "status": [
           {
-            "x4_code": "(EN-ERR)",
+            "x4_code": "(CURVE,,M.R.Dwarakanath,J,PR/C,9,805,1974)",
             "free_txt": [
-              " Digitizing error"
+              " Fig 3"
             ]
-          },
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " Digitizing error"
+              " No information about source of uncertainty"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,M.R.Dwarakanath,J,PR/C,9,805,1974)",
             "free_txt": [
-              " Fig 3"
+              " Fig 4"
             ]
           }
         ]

@@ -1,7 +1,7 @@
 {
   "entry": "A1256",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-11-03",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19871110C)",
@@ -14,10 +14,17 @@
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
       ]
+    },
+    {
+      "x4_code": "(20250904A)",
+      "free_txt": [
+        " SD: Corrections in all Subents.",
+        "Subent 003 added."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Tensor-polarized-deuteron capture on deuterium and the d state of 4He",
+    "title": "Tensor-polarized-deuteron capture on deuterium and the D state of 4He",
     "authors": [
       {
         "name": "H.R.Weller"
@@ -48,41 +55,68 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PRL,53,(14),1325,198410)",
+        "x4_code": "(J,PRL,53,1325,1984)",
         "free_txt": [],
         "publication_year": "1984",
         "doi": null,
         "pointer": "0"
       }
     ],
-    "facilities": []
+    "facilities": [
+      {
+        "x4_code": "(VDGT,1USATNL)",
+        "free_txt": [],
+        "pointer": "0",
+        "facility_type": "(VDGT)",
+        "institute": "(1USATNL)"
+      }
+    ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-2(D,G)2-HE-4,PAR,DA,,,EXP)",
+        "x4_code": "(1-H-2(D,G)2-HE-4,PAR,DA)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "D,G"
-              ],
-              "2-HE-4,PAR,DA,,,EXP"
-            ],
-            "type": null,
             "target": "1-H-2",
             "process": "D,G",
-            "sf49": "2-HE-4,PAR,DA,,,EXP",
+            "sf49": "2-HE-4,PAR,DA",
             "sf4": "2-HE-4",
             "sf5": "PAR",
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(D,G)2-HE-4,PAR,DA)"
           }
         ],
-        "type": null,
+        "operator": null,
+        "free_text": "",
+        "pointer": "0"
+      }
+    },
+    "003": {
+      "0": {
+        "x4_code": "(1-H-2(D,G)2-HE-4,20/PAR,POL/DA,,TAP)",
+        "math_expression": null,
+        "children": [
+          {
+            "target": "1-H-2",
+            "process": "D,G",
+            "sf49": "2-HE-4,20/PAR,POL/DA,,TAP",
+            "sf4": "2-HE-4",
+            "sf5": "20/PAR",
+            "sf6": "POL/DA",
+            "sf7": null,
+            "sf8": "TAP",
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(D,G)2-HE-4,20/PAR,POL/DA,,TAP)"
+          }
+        ],
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -90,18 +124,13 @@
   },
   "data_tables": {
     "001": {
-      "common": null
-    },
-    "002": {
       "common": {
         "heads": [
           "EN",
-          "ANG-ERR",
           "E-LVL"
         ],
         "units": [
           "MEV",
-          "ADEG",
           "MEV"
         ],
         "data": [
@@ -109,10 +138,22 @@
             9.7
           ],
           [
-            0.5
-          ],
-          [
             0.0
+          ]
+        ]
+      }
+    },
+    "002": {
+      "common": {
+        "heads": [
+          "ANG-ERR-D"
+        ],
+        "units": [
+          "ADEG"
+        ],
+        "data": [
+          [
+            0.5
           ]
         ]
       },
@@ -120,7 +161,7 @@
         "heads": [
           "ANG-CM",
           "DATA-CM",
-          "DATA-ERR"
+          "ERR-S"
         ],
         "units": [
           "ADEG",
@@ -129,7 +170,7 @@
         ],
         "data": [
           [
-            51.36,
+            51.4,
             72.7,
             101.8,
             112.7,
@@ -154,6 +195,64 @@
           ]
         ]
       }
+    },
+    "003": {
+      "common": {
+        "heads": [
+          "ANG-ERR-D",
+          "ERR-DIG"
+        ],
+        "units": [
+          "ADEG",
+          "NO-DIM"
+        ],
+        "data": [
+          [
+            0.2
+          ],
+          [
+            0.0005
+          ]
+        ]
+      },
+      "data": {
+        "heads": [
+          "ANG-CM",
+          "DATA",
+          "ERR-S"
+        ],
+        "units": [
+          "ADEG",
+          "NO-DIM",
+          "NO-DIM"
+        ],
+        "data": [
+          [
+            51.9,
+            73.0,
+            103.0,
+            112.7,
+            132.5,
+            142.1
+          ],
+          [
+            -0.2118,
+            -0.2708,
+            -0.2292,
+            -0.1998,
+            -0.2,
+            -0.2171
+          ],
+          [
+            0.0232,
+            0.0449,
+            0.0588,
+            0.0341,
+            0.0294,
+            0.0341
+          ]
+        ]
+      }
     }
   },
   "experimental_conditions": {
@@ -167,13 +266,27 @@
             ]
           }
         ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-S)",
+            "free_txt": [
+              " Statistical error"
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "x4_code": "(VDGT,1USATNL)",
+            "free_txt": []
+          }
+        ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
               "A target thickness of 1.7 mg/sm2 was obtained by",
-              "operating the gas cell at the pressure of 270 kpa",
-              "absolute. Tantalum foil having a thickness 2.5e-3 mm"
+              "operating the gas cell at the pressure of 270 kPa",
+              "absolute. Tantalum foil having a thickness 2.5E-3 mm."
             ]
           }
         ]
@@ -181,32 +294,43 @@
     },
     "002": {
       "0": {
-        "err-analys": [
-          {
-            "x4_code": "(ANG-ERR)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          },
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " Statistical error from graphic bars and",
-              "digitizing"
-            ]
-          }
-        ],
         "monit-ref": [
           {
-            "x4_code": "(A1032001,MEYERHOF+,J,NP/A,131,(3),489,196907)",
+            "x4_code": "(A1032003,W.E.Meyerhof+,J,NP/A,131,489,1969)",
+            "free_txt": []
+          }
+        ],
+        "monitor": [
+          {
+            "x4_code": "(1-H-2(D,G)2-HE-4,,DA)",
             "free_txt": []
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,H.R.Weller+,J,PRL,53,1325,1984)",
             "free_txt": [
-              " fig 2"
+              " Figure 2"
+            ]
+          }
+        ]
+      }
+    },
+    "003": {
+      "0": {
+        "inc-source": [
+          {
+            "x4_code": "(POLIS)",
+            "free_txt": [
+              " Lamb-shift polarized-ion source"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE,,H.R.Weller+,J,PRL,53,1325,1984)",
+            "free_txt": [
+              " Figure 2"
             ]
           }
         ]

@@ -1,7 +1,7 @@
 {
   "entry": "A1175",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2025-10-17",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(19820816C)",
@@ -12,8 +12,7 @@
     {
       "x4_code": "(19961202A)",
       "free_txt": [
-        " Reference is Corrected and Some Little",
-        "Corrections."
+        " Small corrections in BIB section."
       ]
     },
     {
@@ -27,10 +26,16 @@
       "free_txt": [
         "CNPD: corrected 4-dig. year and lower cases."
       ]
+    },
+    {
+      "x4_code": "(20250729A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
+      ]
     }
   ],
   "bib_record": {
-    "title": "Cross section for the reaction D(D,P)3H",
+    "title": "Cross section for the reaction D(d,p)3H",
     "authors": [
       {
         "name": "C.F.Cook"
@@ -47,7 +52,7 @@
     ],
     "references": [
       {
-        "x4_code": "(J,PR,89,(4),785,195302)",
+        "x4_code": "(J,PR,89,785,1953)",
         "free_txt": [],
         "publication_year": "1953",
         "doi": null,
@@ -56,40 +61,35 @@
     ],
     "facilities": [
       {
-        "x4_code": "(CCW)",
+        "x4_code": "(CCW,1USARIC)",
         "free_txt": [],
         "pointer": "0",
         "facility_type": "(CCW)",
-        "institute": null
+        "institute": "(1USARIC)"
       }
     ]
   },
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(1-H-2(D,P)1-H-3,,SIG,,,EXP)",
+        "x4_code": "(1-H-2(D,P)1-H-3,,SIG)",
+        "math_expression": null,
         "children": [
           {
-            "code": [
-              "1-H-2",
-              [
-                "D,P"
-              ],
-              "1-H-3,,SIG,,,EXP"
-            ],
-            "type": null,
             "target": "1-H-2",
             "process": "D,P",
-            "sf49": "1-H-3,,SIG,,,EXP",
+            "sf49": "1-H-3,,SIG",
             "sf4": "1-H-3",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": "EXP"
+            "sf9": null,
+            "operator": null,
+            "x4_code": "(1-H-2(D,P)1-H-3,,SIG)"
           }
         ],
-        "type": null,
+        "operator": null,
         "free_text": "",
         "pointer": "0"
       }
@@ -102,8 +102,8 @@
     "002": {
       "common": {
         "heads": [
-          "EN-ERR",
-          "DATA-ERR"
+          "EN-ERR-DIG",
+          "ERR-DIG"
         ],
         "units": [
           "MEV",
@@ -145,15 +145,15 @@
             0.102
           ],
           [
-            3.507,
-            4.343,
-            4.596,
-            5.312,
-            6.981,
+            3.51,
+            4.34,
+            4.6,
+            5.31,
+            6.98,
             7.15,
             8.07,
-            8.906,
-            8.744,
+            8.91,
+            8.74,
             10.83,
             11.59,
             12.59,
@@ -167,9 +167,18 @@
   "experimental_conditions": {
     "001": {
       "0": {
+        "detector": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Counter filled to a pressure of 0.5 atmosphere with a",
+              "mixture of argon plus 5% CO(2)"
+            ]
+          }
+        ],
         "facility": [
           {
-            "x4_code": "(CCW)",
+            "x4_code": "(CCW,1USARIC)",
             "free_txt": []
           }
         ],
@@ -177,7 +186,9 @@
           {
             "x4_code": null,
             "free_txt": [
-              "Thin targets of deuterium absorbed in zirkonium"
+              "Three calibrated targets were used to determine the",
+              "D-D cross section at 100 keV. Two of these had Zr-D",
+              "deposits of 50 ug/cm2, and the third had 25 ug/cm2."
             ]
           }
         ]
@@ -185,24 +196,9 @@
     },
     "002": {
       "0": {
-        "err-analys": [
-          {
-            "x4_code": "(EN-ERR)",
-            "free_txt": [
-              " Digitizing error"
-            ]
-          },
-          {
-            "x4_code": "(DATA-ERR)",
-            "free_txt": [
-              " Digitizing error. Any Analysis of",
-              "uncertainties is absent."
-            ]
-          }
-        ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,C.F.Cook+,J,PR,89,785,1953)",
             "free_txt": [
               " Fig 2"
             ]

@@ -77,14 +77,7 @@
         "x4_code": "(((26-FE-56(N,G),,WID,,G)*(26-FE-56(N,EL),,WID))/(26-FE-56(N,TOT),,WID))",
         "children": [
           {
-            "code": [
-              "26-FE-56",
-              [
-                "N,G"
-              ],
-              ",,WID,,G"
-            ],
-            "type": "*",
+            "x4_code": "(26-FE-56(N,G),,WID,,G)",
             "target": "26-FE-56",
             "process": "N,G",
             "sf49": ",,WID,,G",
@@ -96,14 +89,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "26-FE-56",
-              [
-                "N,EL"
-              ],
-              ",,WID"
-            ],
-            "type": "*",
+            "x4_code": "(26-FE-56(N,EL),,WID)",
             "target": "26-FE-56",
             "process": "N,EL",
             "sf49": ",,WID",
@@ -115,37 +101,28 @@
             "sf9": null
           },
           {
-            "code": "26-FE-56",
-            "type": [
-              "N,TOT"
-            ],
-            "target": "2",
-            "process": "6",
-            "sf49": "-,F,E,-,5,6",
-            "sf4": "-",
-            "sf5": "F",
-            "sf6": "E",
-            "sf7": "-",
-            "sf8": "5",
-            "sf9": "6"
-          },
-          {
-            "code": ",,WID",
-            "type": [
-              "N,TOT"
-            ],
-            "target": ",",
-            "process": ",",
-            "sf49": "W,I,D",
-            "sf4": "W",
-            "sf5": "I",
-            "sf6": "D",
+            "x4_code": "(26-FE-56(N,TOT),,WID)",
+            "target": "26-FE-56",
+            "process": "N,TOT",
+            "sf49": ",,WID",
+            "sf4": null,
+            "sf5": null,
+            "sf6": "WID",
             "sf7": null,
             "sf8": null,
             "sf9": null
           }
         ],
-        "type": "/",
+        "math_expression": [
+          "Multiply",
+          "(((26-FE-56(N,G),,WID,,G)",
+          [
+            "Divide",
+            "(26-FE-56(N,EL),,WID))",
+            "(26-FE-56(N,TOT),,WID))"
+          ]
+        ],
+        "operator": "Multiply",
         "free_text": "",
         "pointer": "0"
       }

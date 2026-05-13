@@ -69,14 +69,7 @@
         "x4_code": "(((92-U-235(N,F)ELEM/MASS,CUM,FY,,SPA)/(92-U-235(N,F)42-MO-99,CUM,FY,,SPA))//((92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)/(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)))",
         "children": [
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,SPA"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,SPA)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,SPA",
@@ -88,14 +81,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "42-MO-99,CUM,FY,,SPA"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,F)42-MO-99,CUM,FY,,SPA)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "42-MO-99,CUM,FY,,SPA",
@@ -107,14 +93,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "ELEM/MASS,CUM,FY,,MXW"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "ELEM/MASS,CUM,FY,,MXW",
@@ -126,14 +105,7 @@
             "sf9": null
           },
           {
-            "code": [
-              "92-U-235",
-              [
-                "N,F"
-              ],
-              "42-MO-99,CUM,FY,,MXW"
-            ],
-            "type": "/",
+            "x4_code": "(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)",
             "target": "92-U-235",
             "process": "N,F",
             "sf49": "42-MO-99,CUM,FY,,MXW",
@@ -145,7 +117,20 @@
             "sf9": null
           }
         ],
-        "type": "//",
+        "math_expression": [
+          "Ratio",
+          [
+            "Divide",
+            "(((92-U-235(N,F)ELEM/MASS,CUM,FY,,SPA)",
+            "(92-U-235(N,F)42-MO-99,CUM,FY,,SPA))"
+          ],
+          [
+            "Divide",
+            "((92-U-235(N,F)ELEM/MASS,CUM,FY,,MXW)",
+            "(92-U-235(N,F)42-MO-99,CUM,FY,,MXW)))"
+          ]
+        ],
+        "operator": "Ratio",
         "free_text": "",
         "pointer": "0"
       }
