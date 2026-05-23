@@ -1,7 +1,7 @@
 {
   "entry": "M0824",
-  "last_updated": "2014-03-31",
-  "number_of_revisions": "2",
+  "last_updated": "2026-05-18",
+  "number_of_revisions": "3",
   "histories": [
     {
       "x4_code": "(20110927C)",
@@ -14,6 +14,13 @@
       "x4_code": "(20140225A)",
       "free_txt": [
         " Corrected by V.Varlamov: REFERENCE."
+      ]
+    },
+    {
+      "x4_code": "(20260411A)",
+      "free_txt": [
+        " Corrected by V.Varlamov: REFERENCE,",
+        " CORRECTION -> ANALYSIS, REACTION, STATUS."
       ]
     }
   ],
@@ -44,18 +51,18 @@
     ],
     "references": [
       {
-        "x4_code": "(J,YF,8,1080,1968)",
-        "free_txt": [],
-        "publication_year": "1968",
+        "x4_code": "(J,SNP,8,626,1969)",
+        "free_txt": [
+          " English translation of YF,8,1080,1968."
+        ],
+        "publication_year": "1969",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,SNP,8,626,1969)",
-        "free_txt": [
-          " English translation of YF,8,1080,1968"
-        ],
-        "publication_year": "1969",
+        "x4_code": "(J,YF,8,1080,1968)",
+        "free_txt": [],
+        "publication_year": "1968",
         "doi": null,
         "pointer": "0"
       }
@@ -73,12 +80,12 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(16-S-32(G,ABS),,SIG)",
+        "x4_code": "(16-S-32(G,TOT),,SIG)",
         "math_expression": null,
         "children": [
           {
             "target": "16-S-32",
-            "process": "G,ABS",
+            "process": "G,TOT",
             "sf49": ",,SIG",
             "sf4": null,
             "sf5": null,
@@ -87,22 +94,22 @@
             "sf8": null,
             "sf9": null,
             "operator": null,
-            "x4_code": "(16-S-32(G,ABS),,SIG)"
+            "x4_code": "(16-S-32(G,TOT),,SIG)"
           }
         ],
         "operator": null,
-        "free_text": "",
+        "free_text": "Nuclear photoabsorption cross-section as difference between total photon absorption cross section and atomic absorption cross section.",
         "pointer": "0"
       }
     },
     "003": {
       "0": {
-        "x4_code": "(16-S-32(G,ABS),,INT)",
+        "x4_code": "(16-S-32(G,TOT),,INT)",
         "math_expression": null,
         "children": [
           {
             "target": "16-S-32",
-            "process": "G,ABS",
+            "process": "G,TOT",
             "sf49": ",,INT",
             "sf4": null,
             "sf5": null,
@@ -111,11 +118,11 @@
             "sf8": null,
             "sf9": null,
             "operator": null,
-            "x4_code": "(16-S-32(G,ABS),,INT)"
+            "x4_code": "(16-S-32(G,TOT),,INT)"
           }
         ],
         "operator": null,
-        "free_text": "",
+        "free_text": "Nuclear photoabsorption cross-section as difference between total photon absorption cross section and atomic absorption cross section.",
         "pointer": "0"
       }
     }
@@ -333,17 +340,6 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "correction": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "Photoabsorption cross   section   was   obtained   by",
-              " subtraction of the atomic absorption  cross  section",
-              " from  the  experimentally measured sum of atomic and",
-              " nuclear absorption cross sections."
-            ]
-          }
-        ],
         "detector": [
           {
             "x4_code": "(BPAIR)",
@@ -382,6 +378,17 @@
     },
     "002": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Photoabsorption cross   section   was   obtained   by",
+              " subtraction of the atomic absorption  cross  section",
+              " from  the  experimentally measured sum of atomic and",
+              " nuclear absorption cross sections."
+            ]
+          }
+        ],
         "err-analys": [
           {
             "x4_code": "(DATA-ERR)",
@@ -392,9 +399,9 @@
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,B.S.Dolbilkin+,J,SNP,8,626,1969)",
             "free_txt": [
-              " Data from Fig. 1 of YF,8,1080,1968."
+              " Data from Fig. 1."
             ]
           }
         ]
@@ -412,14 +419,16 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,B.S.Dolbilkin+,J,SNP,8,626,1969)",
             "free_txt": [
-              " Data from Tab. 2 of YF,8,1080,1968."
+              " Data from Table II."
             ]
           },
           {
             "x4_code": "(DEP,M0824002)",
-            "free_txt": []
+            "free_txt": [
+              " Reaction cross-section."
+            ]
           }
         ]
       }

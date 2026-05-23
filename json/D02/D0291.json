@@ -1,12 +1,20 @@
 {
   "entry": "D0291",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2026-05-08",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20050315C)",
       "free_txt": [
         " SD"
+      ]
+    },
+    {
+      "x4_code": "(20260119A)",
+      "free_txt": [
+        " SD: Corrections in all Subents.",
+        "DATA-ERR1 -> ERR-1. ERR-DIG and ANG-ERR-D deleted (not",
+        "relevant). E=30.5 -> 30.3 MeV."
       ]
     }
   ],
@@ -52,14 +60,11 @@
     ],
     "facilities": [
       {
-        "x4_code": "(LINAC)",
-        "free_txt": [
-          " The Rutherford High Energy Laboratory linear",
-          "accelerator was used."
-        ],
+        "x4_code": "(LINAC,2UK NIN)",
+        "free_txt": [],
         "pointer": "0",
         "facility_type": "(LINAC)",
-        "institute": null
+        "institute": "(2UK NIN)"
       }
     ]
   },
@@ -166,28 +171,18 @@
       "common": {
         "heads": [
           "EN",
-          "ANG-ERR-D",
-          "ERR-DIG",
-          "DATA-ERR1"
+          "ERR-1"
         ],
         "units": [
           "MEV",
-          "ADEG",
-          "PER-CENT",
           "PER-CENT"
         ],
         "data": [
           [
-            30.5
+            30.3
           ],
           [
-            0.7
-          ],
-          [
-            0.3
-          ],
-          [
-            5.0
+            25.0
           ]
         ]
       }
@@ -198,7 +193,7 @@
         "heads": [
           "ANG-CM",
           "DATA-CM",
-          "ERR-S"
+          "ERR-2"
         ],
         "units": [
           "ADEG",
@@ -306,12 +301,24 @@
       }
     },
     "003": {
-      "common": null,
+      "common": {
+        "heads": [
+          "POL-BM"
+        ],
+        "units": [
+          "NO-DIM"
+        ],
+        "data": [
+          [
+            0.5
+          ]
+        ]
+      },
       "data": {
         "heads": [
           "ANG-CM",
-          "DATA-CM",
-          "ERR-S"
+          "DATA",
+          "ERR-2"
         ],
         "units": [
           "ADEG",
@@ -425,7 +432,7 @@
           "E-LVL",
           "ANG-CM",
           "DATA-CM",
-          "ERR-S"
+          "ERR-2"
         ],
         "units": [
           "MEV",
@@ -682,13 +689,25 @@
       }
     },
     "005": {
-      "common": null,
+      "common": {
+        "heads": [
+          "POL-BM"
+        ],
+        "units": [
+          "NO-DIM"
+        ],
+        "data": [
+          [
+            0.5
+          ]
+        ]
+      },
       "data": {
         "heads": [
           "E-LVL",
           "ANG-CM",
-          "DATA-CM",
-          "ERR-S"
+          "DATA",
+          "ERR-2"
         ],
         "units": [
           "MEV",
@@ -952,9 +971,9 @@
           {
             "x4_code": "(SILI)",
             "free_txt": [
-              "Scattered protons were detected by four 5 mm",
-              "deep Si(Li) detecors, enabling measurements to be made",
-              "at four scattering angles simultaneously."
+              " Scattered protons were detected by four 5 mm",
+              "deep Si(Li) detectors, enabling measurements to be",
+              "made at four scattering angles simultaneously."
             ]
           },
           {
@@ -972,19 +991,35 @@
         ],
         "err-analys": [
           {
-            "x4_code": "(DATA-ERR1)",
+            "x4_code": "(ERR-1)",
             "free_txt": [
-              " Experimental error"
+              " The cross section normalization predicted by",
+              "the optical model searches was used to normalize all",
+              "experimental cross sections. The normalization",
+              "constants derived from various sets of optical",
+              "parameters which gave a reasonable fit to the data",
+              "varied by about +- 25%"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              " The errors arise mainly from uncertainty in",
+              "the background and, in the case of the 4.46 MeV state,",
+              "in the separation from neighbouring states."
             ]
           }
         ],
         "facility": [
           {
-            "x4_code": "(LINAC)",
-            "free_txt": [
-              " The Rutherford High Energy Laboratory linear",
-              "accelerator was used."
-            ]
+            "x4_code": "(LINAC,2UK NIN)",
+            "free_txt": []
+          }
+        ],
+        "inc-source": [
+          {
+            "x4_code": "(POLIS)",
+            "free_txt": []
           }
         ],
         "sample": [
@@ -998,9 +1033,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,O.Karban+,J,NP/A,133,255,1969)",
             "free_txt": [
-              "Tables from the article"
+              " Table 1"
             ]
           }
         ]
@@ -1008,25 +1043,7 @@
     },
     "002": {},
     "003": {},
-    "004": {
-      "0": {
-        "en-sec": [
-          {
-            "x4_code": "(E-LVL,5-B-11)",
-            "free_txt": []
-          }
-        ]
-      }
-    },
-    "005": {
-      "0": {
-        "en-sec": [
-          {
-            "x4_code": "(E-LVL,5-B-11)",
-            "free_txt": []
-          }
-        ]
-      }
-    }
+    "004": {},
+    "005": {}
   }
 }

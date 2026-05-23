@@ -1,7 +1,7 @@
 {
   "entry": "K2348",
-  "last_updated": "2019-02-22",
-  "number_of_revisions": "2",
+  "last_updated": "2026-05-08",
+  "number_of_revisions": "3",
   "histories": [
     {
       "x4_code": "(20110707C)",
@@ -13,9 +13,16 @@
       "x4_code": "(20190114A)",
       "free_txt": [
         " Tada. 005: REACTION is changed.",
-        "            004:(COREL,K2199003) another",
-        "            measurement (F.Kitatani, 2017-05-09) is",
-        "            added."
+        "            004:(COREL,K2199003) another measurement",
+        "            (F.Kitatani, 2017-05-09) is added."
+      ]
+    },
+    {
+      "x4_code": "(20260228A)",
+      "free_txt": [
+        " MA: added CORRECTION in 001; modified",
+        "            REACTION in 005, DATA in 002-004, STATUS",
+        "            in 002-005."
       ]
     }
   ],
@@ -47,17 +54,15 @@
     "institutes": [
       {
         "x4_code": "(2JPNJAE)",
-        "free_txt": []
+        "free_txt": ""
       },
       {
         "x4_code": "(2JPNKON)",
-        "free_txt": [
-          " Department of physics"
-        ]
+        "free_txt": ""
       },
       {
         "x4_code": "(2JPNAIS)",
-        "free_txt": []
+        "free_txt": ""
       }
     ],
     "references": [
@@ -157,24 +162,39 @@
     },
     "005": {
       "0": {
-        "x4_code": "(79-AU-197(G,X)0-NN-1,,SIG)",
-        "math_expression": null,
+        "x4_code": "((79-AU-197(G,N)79-AU-196,,SIG)+(79-AU-197(G,2N)79-AU-195,,SIG))",
         "children": [
           {
+            "x4_code": "(79-AU-197(G,N)79-AU-196,,SIG)",
             "target": "79-AU-197",
-            "process": "G,X",
-            "sf49": "0-NN-1,,SIG",
-            "sf4": "0-NN-1",
+            "process": "G,N",
+            "sf49": "79-AU-196,,SIG",
+            "sf4": "79-AU-196",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
-            "sf9": null,
-            "operator": null,
-            "x4_code": "(79-AU-197(G,X)0-NN-1,,SIG)"
+            "sf9": null
+          },
+          {
+            "x4_code": "(79-AU-197(G,2N)79-AU-195,,SIG)",
+            "target": "79-AU-197",
+            "process": "G,2N",
+            "sf49": "79-AU-195,,SIG",
+            "sf4": "79-AU-195",
+            "sf5": null,
+            "sf6": "SIG",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           }
         ],
-        "operator": null,
+        "math_expression": [
+          "Add",
+          "((79-AU-197(G,N)79-AU-196,,SIG)",
+          "(79-AU-197(G,2N)79-AU-195,,SIG))"
+        ],
+        "operator": "Add",
         "free_text": "",
         "pointer": "0"
       }
@@ -211,7 +231,7 @@
           "ERR-T",
           "ERR-S",
           "ERR-3",
-          "MISC",
+          "ERR-6",
           "ERR-4",
           "ERR-5"
         ],
@@ -366,7 +386,7 @@
           "ERR-T",
           "ERR-S",
           "ERR-3",
-          "MISC",
+          "ERR-6",
           "ERR-4",
           "ERR-5"
         ],
@@ -575,7 +595,7 @@
           "ERR-T",
           "ERR-S",
           "ERR-3",
-          "MISC",
+          "ERR-6",
           "ERR-4",
           "ERR-5"
         ],
@@ -761,6 +781,14 @@
             ]
           }
         ],
+        "correction": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "Corrected for finite incident photon spectrum effect."
+            ]
+          }
+        ],
         "comment": [
           {
             "x4_code": null,
@@ -866,6 +894,12 @@
             ]
           },
           {
+            "x4_code": "(ERR-6)",
+            "free_txt": [
+              " Errors of neutron counts"
+            ]
+          },
+          {
             "x4_code": "(ERR-4)",
             "free_txt": [
               " Errors of the neutron detection efficiency"
@@ -882,14 +916,6 @@
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Errors of total gamma counts"
-            ]
-          }
-        ],
-        "misc-col": [
-          {
-            "x4_code": "(MISC)",
-            "free_txt": [
-              " Errors of neutron counts"
             ]
           }
         ],
@@ -911,10 +937,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,F.Kitatani+,J,NST,48,1017,2011)",
             "free_txt": [
-              " Table.2 of Journal of Nuclear Science and",
-              "        Technology 48(2011)1017"
+              " Table 2"
             ]
           }
         ]
@@ -936,6 +961,12 @@
             ]
           },
           {
+            "x4_code": "(ERR-6)",
+            "free_txt": [
+              " Errors of neutron counts"
+            ]
+          },
+          {
             "x4_code": "(ERR-4)",
             "free_txt": [
               " Errors of the neutron detection efficiency"
@@ -952,14 +983,6 @@
             "x4_code": "(ERR-S)",
             "free_txt": [
               " Errors of total gamma counts"
-            ]
-          }
-        ],
-        "misc-col": [
-          {
-            "x4_code": "(MISC)",
-            "free_txt": [
-              " Errors of neutron counts"
             ]
           }
         ],
@@ -981,10 +1004,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,F.Kitatani+,J,NST,48,1017,2011)",
             "free_txt": [
-              " Table.2 of Journal of Nuclear Science and",
-              "        Technology 48(2011)1017"
+              " Table 2"
             ]
           }
         ]
@@ -1003,6 +1025,12 @@
             "x4_code": "(ERR-3)",
             "free_txt": [
               " Errors of the fraction of the gamma flux"
+            ]
+          },
+          {
+            "x4_code": "(ERR-6)",
+            "free_txt": [
+              " Errors of neutron counts"
             ]
           },
           {
@@ -1025,14 +1053,6 @@
             ]
           }
         ],
-        "misc-col": [
-          {
-            "x4_code": "(MISC)",
-            "free_txt": [
-              " Errors of neutron counts"
-            ]
-          }
-        ],
         "sample": [
           {
             "x4_code": null,
@@ -1045,10 +1065,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,F.Kitatani+,J,NST,48,1017,2011)",
             "free_txt": [
-              " Table.2 of Journal of Nuclear Science and",
-              "        Technology 48(2011)1017"
+              " Table 2"
             ]
           },
           {
@@ -1075,10 +1094,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,F.Kitatani+,J,NST,48,1017,2011)",
             "free_txt": [
-              " Table.2 of Journal of Nuclear Science and",
-              "        Technology 48(2011)1017"
+              " Table 2"
             ]
           }
         ]

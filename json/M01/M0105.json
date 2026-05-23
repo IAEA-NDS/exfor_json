@@ -1,7 +1,7 @@
 {
   "entry": "M0105",
-  "last_updated": "2013-08-23",
-  "number_of_revisions": "4",
+  "last_updated": "2026-05-18",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19840405C)",
@@ -19,13 +19,21 @@
         " Corrected by V.Varlamov: dates,",
         " REFERENCE, REACTION, STATUS, lowercase."
       ]
+    },
+    {
+      "x4_code": "(20260413A)",
+      "free_txt": [
+        " Corrected by V.Varlamov: AUTHOR,",
+        " REFERENCE, SAMPLE, PART-DET, ANALYSIS, ERR-ANALYS,",
+        " COMMENT, DATA, COMMON, STATUS."
+      ]
     }
   ],
   "bib_record": {
     "title": "Photoprotons from Li-6.",
     "authors": [
       {
-        "name": "E.D.Makhnovskiy"
+        "name": "E.D.Makhnovskii"
       }
     ],
     "institutes": [
@@ -36,17 +44,17 @@
     ],
     "references": [
       {
-        "x4_code": "(J,ZET,46,1136,1964)",
-        "free_txt": [],
+        "x4_code": "(J,JET,19,769,1964)",
+        "free_txt": [
+          " English translation of J,ZET,46,1136,1964."
+        ],
         "publication_year": "1964",
         "doi": null,
         "pointer": "0"
       },
       {
-        "x4_code": "(J,JET,19,769,1964)",
-        "free_txt": [
-          " English translation of J,ZET,46,1136,1964."
-        ],
+        "x4_code": "(J,ZET,46,1136,1964)",
+        "free_txt": [],
         "publication_year": "1964",
         "doi": null,
         "pointer": "0"
@@ -114,12 +122,17 @@
   },
   "data_tables": {
     "001": {
+      "common": null
+    },
+    "002": {
       "common": {
         "heads": [
+          "EN-MAX",
           "ANG-MIN",
           "ANG-MAX"
         ],
         "units": [
+          "MEV",
           "ADEG",
           "ADEG"
         ],
@@ -128,22 +141,10 @@
             20.0
           ],
           [
-            130.0
-          ]
-        ]
-      }
-    },
-    "002": {
-      "common": {
-        "heads": [
-          "EN-MAX"
-        ],
-        "units": [
-          "MEV"
-        ],
-        "data": [
-          [
             20.0
+          ],
+          [
+            160.0
           ]
         ]
       },
@@ -357,7 +358,7 @@
         "heads": [
           "EN",
           "DATA",
-          "ERR-S"
+          "DATA-ERR"
         ],
         "units": [
           "MEV",
@@ -366,7 +367,7 @@
         ],
         "data": [
           [
-            12.2,
+            11.6,
             13.4,
             14.6,
             15.8,
@@ -399,29 +400,10 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "comment": [
-          {
-            "x4_code": null,
-            "free_txt": [
-              "Energy and  angular  distributions  of  protons  were",
-              " studied    with   Li6   target   irradiated   by   a",
-              " bremsstrahlung gamma-beam with Eg(max) = 20 MeV  for",
-              " the angles: 20, 50, 70, 90, 110 and 130 degrees."
-            ]
-          }
-        ],
         "detector": [
           {
             "x4_code": "(PLATE)",
             "free_txt": []
-          }
-        ],
-        "err-analys": [
-          {
-            "x4_code": "(ERR-S)",
-            "free_txt": [
-              " Statistical errors."
-            ]
           }
         ],
         "facility": [
@@ -442,27 +424,44 @@
             "free_txt": []
           }
         ],
-        "part-det": [
+        "sample": [
           {
-            "x4_code": "(P)",
-            "free_txt": []
-          }
-        ],
-        "status": [
-          {
-            "x4_code": "(CURVE)",
-            "free_txt": []
+            "x4_code": null,
+            "free_txt": [
+              "The target (90% 6Li and 10% 7Li) had thickness 0f 6.8",
+              " mg/sm**2."
+            ]
           }
         ]
       }
     },
     "002": {
       "0": {
-        "status": [
+        "analysis": [
           {
             "x4_code": null,
             "free_txt": [
-              "Data from Fig. 1."
+              " Energy and angular distributions of protons",
+              "  produced by irradiation of 6Li with",
+              "  Bremsstrahlung of maximum energy En-max = 20 MeV",
+              "  were measured in nuclear emulsions at angles 20,",
+              "  50, 70, 90, 110, 130, and 160 degrees."
+            ]
+          }
+        ],
+        "err-analys": [
+          {
+            "x4_code": "(ERR-S)",
+            "free_txt": [
+              " Statistical errors."
+            ]
+          }
+        ],
+        "status": [
+          {
+            "x4_code": "(CURVE,,E.D.Makhnovskii,J,JET,19,769,1964)",
+            "free_txt": [
+              " Data from Fig. 1."
             ]
           }
         ]
@@ -470,17 +469,34 @@
     },
     "003": {
       "0": {
+        "analysis": [
+          {
+            "x4_code": "(INTAD)",
+            "free_txt": [
+              " Integration of proton angular",
+              " distribution for Ep > 5.7 MeV."
+            ]
+          }
+        ],
         "en-sec": [
           {
             "x4_code": "(E-LVL,2-HE-5)",
             "free_txt": []
           }
         ],
+        "err-analys": [
+          {
+            "x4_code": "(DATA-ERR)",
+            "free_txt": [
+              " Mean-root-squared uncertainties."
+            ]
+          }
+        ],
         "status": [
           {
-            "x4_code": null,
+            "x4_code": "(CURVE,,E.D.Makhnovskii,J,JET,19,769,1964)",
             "free_txt": [
-              "Data from Fig. 2."
+              " Data from Fig. 2."
             ]
           }
         ]

@@ -1,12 +1,12 @@
 {
   "entry": "A1461",
-  "last_updated": "2020-06-23",
-  "number_of_revisions": "4",
+  "last_updated": "2026-05-08",
+  "number_of_revisions": "5",
   "histories": [
     {
       "x4_code": "(19800907C)",
       "free_txt": [
-        " Compilation Produced by RFNC-VNIIEF Sarov"
+        " Compilation produced by RFNC-VNIIEF Sarov"
       ]
     },
     {
@@ -20,6 +20,12 @@
       "free_txt": [
         " SD: Corrections in all Subents. Digitized",
         "data were changed on tabulated from thesis. BIB updated"
+      ]
+    },
+    {
+      "x4_code": "(20260317A)",
+      "free_txt": [
+        " SD: Corrections in all Subents."
       ]
     }
   ],
@@ -50,7 +56,7 @@
       {
         "x4_code": "(T,WILSON,1965)",
         "free_txt": [
-          " tables; experim.description"
+          " tables; experim. description"
         ],
         "publication_year": "1965",
         "doi": null,
@@ -60,7 +66,7 @@
         "x4_code": "(J,PL,14,313,1965)",
         "free_txt": [
           " Preliminary accounts of this",
-          "                   experiment and"
+          "experiment and"
         ],
         "publication_year": "1965",
         "doi": null,
@@ -69,7 +75,7 @@
       {
         "x4_code": "(J,PL,14,315,1965)",
         "free_txt": [
-          "  the result's interpretation"
+          " the result's interpretation"
         ],
         "publication_year": "1965",
         "doi": null,
@@ -89,21 +95,21 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(3-LI-7(P,A)2-HE-4,PAR,DA)",
+        "x4_code": "(3-LI-7(P,A)2-HE-4,ISP,DA)",
         "math_expression": null,
         "children": [
           {
             "target": "3-LI-7",
             "process": "P,A",
-            "sf49": "2-HE-4,PAR,DA",
+            "sf49": "2-HE-4,ISP,DA",
             "sf4": "2-HE-4",
-            "sf5": "PAR",
+            "sf5": "ISP",
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
             "sf9": null,
             "operator": null,
-            "x4_code": "(3-LI-7(P,A)2-HE-4,PAR,DA)"
+            "x4_code": "(3-LI-7(P,A)2-HE-4,ISP,DA)"
           }
         ],
         "operator": null,
@@ -113,45 +119,60 @@
     },
     "003": {
       "0": {
-        "x4_code": "(3-LI-7(P,G)4-BE-8,PAR,DA)",
-        "math_expression": null,
+        "x4_code": "((3-LI-7(P,A)2-HE-4,ISP,DA)//(3-LI-7(P,A)2-HE-4,ISP,DA))",
         "children": [
           {
+            "x4_code": "(3-LI-7(P,A)2-HE-4,ISP,DA)",
             "target": "3-LI-7",
-            "process": "P,G",
-            "sf49": "4-BE-8,PAR,DA",
-            "sf4": "4-BE-8",
-            "sf5": "PAR",
+            "process": "P,A",
+            "sf49": "2-HE-4,ISP,DA",
+            "sf4": "2-HE-4",
+            "sf5": "ISP",
             "sf6": "DA",
             "sf7": null,
             "sf8": null,
-            "sf9": null,
-            "operator": null,
-            "x4_code": "(3-LI-7(P,G)4-BE-8,PAR,DA)"
+            "sf9": null
+          },
+          {
+            "x4_code": "(3-LI-7(P,A)2-HE-4,ISP,DA)",
+            "target": "3-LI-7",
+            "process": "P,A",
+            "sf49": "2-HE-4,ISP,DA",
+            "sf4": "2-HE-4",
+            "sf5": "ISP",
+            "sf6": "DA",
+            "sf7": null,
+            "sf8": null,
+            "sf9": null
           }
         ],
-        "operator": null,
+        "math_expression": [
+          "Ratio",
+          "((3-LI-7(P,A)2-HE-4,ISP,DA)",
+          "(3-LI-7(P,A)2-HE-4,ISP,DA))"
+        ],
+        "operator": "Ratio",
         "free_text": "",
         "pointer": "0"
       }
     },
     "004": {
       "0": {
-        "x4_code": "(3-LI-7(P,G)4-BE-8,PAR,DA)",
+        "x4_code": "(3-LI-7(P,A)2-HE-4,ISP,SIG)",
         "math_expression": null,
         "children": [
           {
             "target": "3-LI-7",
-            "process": "P,G",
-            "sf49": "4-BE-8,PAR,DA",
-            "sf4": "4-BE-8",
-            "sf5": "PAR",
-            "sf6": "DA",
+            "process": "P,A",
+            "sf49": "2-HE-4,ISP,SIG",
+            "sf4": "2-HE-4",
+            "sf5": "ISP",
+            "sf6": "SIG",
             "sf7": null,
             "sf8": null,
             "sf9": null,
             "operator": null,
-            "x4_code": "(3-LI-7(P,G)4-BE-8,PAR,DA)"
+            "x4_code": "(3-LI-7(P,A)2-HE-4,ISP,SIG)"
           }
         ],
         "operator": null,
@@ -162,31 +183,24 @@
   },
   "data_tables": {
     "001": {
-      "common": {
-        "heads": [
-          "ANG"
-        ],
-        "units": [
-          "ADEG"
-        ],
-        "data": [
-          [
-            120.0
-          ]
-        ]
-      }
+      "common": null
     },
     "002": {
       "common": {
         "heads": [
-          "E-LVL"
+          "E-LVL",
+          "ANG"
         ],
         "units": [
-          "MEV"
+          "MEV",
+          "ADEG"
         ],
         "data": [
           [
             0.0
+          ],
+          [
+            120.0
           ]
         ]
       },
@@ -277,28 +291,34 @@
     "003": {
       "common": {
         "heads": [
-          "E-LVL"
+          "E-LVL-NM",
+          "E-LVL-DN",
+          "ANG"
         ],
         "units": [
-          "MEV"
+          "MEV",
+          "MEV",
+          "ADEG"
         ],
         "data": [
           [
             16.62
+          ],
+          [
+            0.0
+          ],
+          [
+            120.0
           ]
         ]
       },
       "data": {
         "heads": [
           "EN",
-          "DATA",
-          "DATA-ERR",
-          "MISC"
+          "DATA"
         ],
         "units": [
           "MEV",
-          "MU-B/SR",
-          "MU-B/SR",
           "NO-DIM"
         ],
         "data": [
@@ -311,26 +331,6 @@
             1.105,
             1.3,
             2.4
-          ],
-          [
-            6.43,
-            0.512,
-            1.2,
-            1.29,
-            1.43,
-            1.82,
-            2.17,
-            2.05
-          ],
-          [
-            0.7,
-            0.1,
-            0.14,
-            0.19,
-            0.21,
-            0.36,
-            0.32,
-            0.41
           ],
           [
             0.00237,
@@ -348,37 +348,33 @@
     "004": {
       "common": {
         "heads": [
-          "E-LVL",
-          "EN-ERR",
-          "ERR-DIG"
+          "E-LVL"
         ],
         "units": [
-          "MEV",
-          "MEV",
-          "MU-B/SR"
+          "MEV"
         ],
         "data": [
           [
             16.62
-          ],
-          [
-            0.001
-          ],
-          [
-            0.01
           ]
         ]
       },
       "data": {
         "heads": [
           "EN",
+          "EN-ERR",
           "DATA",
-          "DATA-ERR"
+          "DATA-ERR",
+          "ERR-DIG",
+          "FLAG"
         ],
         "units": [
           "MEV",
-          "MU-B/SR",
-          "MU-B/SR"
+          "MEV",
+          "MICRO-B",
+          "MICRO-B",
+          "MICRO-B",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -386,27 +382,102 @@
             0.43,
             0.438,
             0.441,
+            0.441,
             0.447,
             0.452,
-            0.458
+            0.458,
+            0.655,
+            0.85,
+            0.95,
+            1.03,
+            1.105,
+            1.3,
+            2.4
+          ],
+          [
+            0.001,
+            0.001,
+            0.001,
+            0.001,
+            null,
+            0.001,
+            0.001,
+            0.001,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
           ],
           [
             0.86,
             2.38,
             5.9,
             6.46,
+            6.43,
             4.62,
             2.95,
-            1.81
+            1.81,
+            0.512,
+            1.2,
+            1.29,
+            1.43,
+            1.82,
+            2.17,
+            2.05
           ],
           [
             0.2,
             0.31,
             0.45,
             0.61,
+            0.7,
             0.45,
             0.41,
-            0.3
+            0.3,
+            0.1,
+            0.14,
+            0.19,
+            0.21,
+            0.36,
+            0.32,
+            0.41
+          ],
+          [
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            null,
+            0.01,
+            0.01,
+            0.01,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            1.0,
+            null,
+            null,
+            null,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
           ]
         ]
       }
@@ -415,12 +486,56 @@
   "experimental_conditions": {
     "001": {
       "0": {
-        "err-analys": [
+        "add-res": [
           {
-            "x4_code": "(DATA-ERR)",
+            "x4_code": null,
             "free_txt": [
-              " No information about source of uncertainties"
+              "A final confirmation of the occurrence of the",
+              "7Li(p,gamma)8Be*(alpha)4He reaction was obtained by",
+              "observing coincidences between the capture gamma",
+              "radiation and the breakup particles."
             ]
+          }
+        ],
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "From the article: The 8Be levels in question (16.62",
+              "and 16.92 MeV) can particle-decay only by the breakup",
+              "into two alpha particles; each level has an",
+              "alpha-particle width of approximately 0.1 MeV."
+            ]
+          }
+        ],
+        "detector": [
+          {
+            "x4_code": "(MAGSP,SOLST,PLATE)",
+            "free_txt": [
+              " The alpha-particles were momentum",
+              "analyzed in a 180. degr. double-focusing magnetic",
+              "spectrometer of 50 cm radius. The plates were made of",
+              "thin glass, 8 inches by 2 inches, supporting a",
+              "50 micron thick K-1 or K-2 emulsion composition."
+            ]
+          },
+          {
+            "x4_code": "(SOLST)",
+            "free_txt": [
+              "  A solid-state detector was used for some",
+              "confirmatory measurements as well as for a",
+              "determination of the alpha0 excitation function for",
+              "the purpose of normalizing the emulsion data.",
+              " An independent measurement of the alpha0 excitation",
+              "curve was made with another solid state detector (but",
+              "not used in conjunction with the magnetic spectrometer)"
+            ]
+          }
+        ],
+        "en-sec": [
+          {
+            "x4_code": "(E-LVL,4-BE-8)",
+            "free_txt": []
           }
         ],
         "facility": [
@@ -440,7 +555,7 @@
             "x4_code": null,
             "free_txt": [
               "The targets consisted of a thin film of LiF deposited",
-              "on 0.75 inch diam. x 0.20 inch  thick tantalum disks",
+              "on 0.75 inch diam. x 0.20 inch thick tantalum disks",
               "by vacuum evaporation."
             ]
           }
@@ -457,29 +572,11 @@
             ]
           }
         ],
-        "detector": [
+        "err-analys": [
           {
-            "x4_code": "(MAGSP,SOLST,PLATE)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " The alpha-particles were momentum",
-              "analyzed in a 180.degr. double-focusing magnetic",
-              "spectrometer of 50 cm radius. The plates were made of",
-              "thin glass,  8 inches by 2 inches, supporting a",
-              "50 micron thick K-1 or K-2 emulsion composition",
-              "manufactured by Ilford of England.",
-              " A solid-state detector was used for some confirmatory",
-              "measurements as well as for a determination of the",
-              "alpha0 excitation function for the purpose of",
-              "normalizing the emulsion data."
-            ]
-          },
-          {
-            "x4_code": "(SOLST)",
-            "free_txt": [
-              "  An independent measurement of the alpha0",
-              "excitation curve was made with another solid state",
-              "detector (but not used in conjunction with the magnetic",
-              "spectrometer)."
+              " No information about source of uncertainties"
             ]
           }
         ],
@@ -499,9 +596,9 @@
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,M.Wilson,T,WILSON,1965)",
             "free_txt": [
-              " Tbl.III from M.Wilson's thesis"
+              " Tbl.III"
             ]
           }
         ]
@@ -509,20 +606,18 @@
     },
     "003": {
       "0": {
-        "detector": [
-          {
-            "x4_code": "(NAICR)",
-            "free_txt": [
-              " The gamma-ray detector was a 7.65 cm x 7.65 cm",
-              " NaI crystal"
-            ]
-          }
-        ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,M.Wilson,T,WILSON,1965)",
             "free_txt": [
-              " Tbl.III from M.Wilson's thesis"
+              " Tbl.III"
+            ]
+          },
+          {
+            "x4_code": "(DEP,A1461002)",
+            "free_txt": [
+              " Diff.cr.sect. at 120.degr. at the same",
+              "excited state"
             ]
           }
         ]
@@ -530,21 +625,35 @@
     },
     "004": {
       "0": {
-        "detector": [
+        "err-analys": [
           {
-            "x4_code": "(NAICR)",
+            "x4_code": "(DATA-ERR)",
             "free_txt": [
-              " The gamma-ray detector was a 7.65 cm x 7.65 cm",
-              " NaI crystal"
+              " No information about source of uncertainty"
+            ]
+          }
+        ],
+        "flag": [
+          {
+            "x4_code": "(1.)",
+            "free_txt": [
+              " Values from the table"
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(CURVE)",
+            "x4_code": "(CURVE,,M.Wilson,T,WILSON,1965)",
             "free_txt": [
-              " Fig. 8 from M.Wilson's thesis (same on fig.7 of",
-              "                               Nucl.Phys.,77(1966)129"
+              " Fig. 8 (same on fig.7",
+              "                            of Nucl.Phys.,77(1966)129"
+            ]
+          },
+          {
+            "x4_code": "(TABLE,,M.Wilson,T,WILSON,1965)",
+            "free_txt": [
+              " Tbl.III (Values",
+              "with FLAG=1 in the DATA section)."
             ]
           }
         ]

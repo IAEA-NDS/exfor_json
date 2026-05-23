@@ -1,12 +1,18 @@
 {
   "entry": "D0066",
-  "last_updated": "2006-07-20",
-  "number_of_revisions": "3",
+  "last_updated": "2026-05-08",
+  "number_of_revisions": "4",
   "histories": [
     {
       "x4_code": "(20031124C)",
       "free_txt": [
         " SD"
+      ]
+    },
+    {
+      "x4_code": "(20251107A)",
+      "free_txt": [
+        " On. Major revisions in 002-003 and 005."
       ]
     }
   ],
@@ -23,10 +29,7 @@
     "institutes": [
       {
         "x4_code": "(3INDBDA)",
-        "free_txt": [
-          " The authors are from the MS Univ.",
-          "of Baroda"
-        ]
+        "free_txt": []
       }
     ],
     "references": [
@@ -41,9 +44,7 @@
     "facilities": [
       {
         "x4_code": "(CYCLO,3INDVEC)",
-        "free_txt": [
-          " Variable energy cyclotron"
-        ],
+        "free_txt": [],
         "pointer": "0",
         "facility_type": "(CYCLO)",
         "institute": "(3INDVEC)"
@@ -53,21 +54,21 @@
   "reactions": {
     "002": {
       "0": {
-        "x4_code": "(65-TB-159(A,N)67-HO-162,,SIG)",
+        "x4_code": "(65-TB-159(A,N)67-HO-162-M,,SIG)",
         "math_expression": null,
         "children": [
           {
             "target": "65-TB-159",
             "process": "A,N",
-            "sf49": "67-HO-162,,SIG",
-            "sf4": "67-HO-162",
+            "sf49": "67-HO-162-M,,SIG",
+            "sf4": "67-HO-162-M",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
             "sf9": null,
             "operator": null,
-            "x4_code": "(65-TB-159(A,N)67-HO-162,,SIG)"
+            "x4_code": "(65-TB-159(A,N)67-HO-162-M,,SIG)"
           }
         ],
         "operator": null,
@@ -77,21 +78,21 @@
     },
     "003": {
       "0": {
-        "x4_code": "(65-TB-159(A,3N)67-HO-160,,SIG)",
+        "x4_code": "(65-TB-159(A,3N)67-HO-160-M1,,SIG)",
         "math_expression": null,
         "children": [
           {
             "target": "65-TB-159",
             "process": "A,3N",
-            "sf49": "67-HO-160,,SIG",
-            "sf4": "67-HO-160",
+            "sf49": "67-HO-160-M1,,SIG",
+            "sf4": "67-HO-160-M1",
             "sf5": null,
             "sf6": "SIG",
             "sf7": null,
             "sf8": null,
             "sf9": null,
             "operator": null,
-            "x4_code": "(65-TB-159(A,3N)67-HO-160,,SIG)"
+            "x4_code": "(65-TB-159(A,3N)67-HO-160-M1,,SIG)"
           }
         ],
         "operator": null,
@@ -125,12 +126,12 @@
     },
     "005": {
       "0": {
-        "x4_code": "(65-TB-159(A,3N+A)65-TB-156,,SIG)",
+        "x4_code": "(65-TB-159(A,X)65-TB-156,,SIG)",
         "math_expression": null,
         "children": [
           {
             "target": "65-TB-159",
-            "process": "A,3N+A",
+            "process": "A,X",
             "sf49": "65-TB-156,,SIG",
             "sf4": "65-TB-156",
             "sf5": null,
@@ -139,7 +140,7 @@
             "sf8": null,
             "sf9": null,
             "operator": null,
-            "x4_code": "(65-TB-159(A,3N+A)65-TB-156,,SIG)"
+            "x4_code": "(65-TB-159(A,X)65-TB-156,,SIG)"
           }
         ],
         "operator": null,
@@ -150,7 +151,19 @@
   },
   "data_tables": {
     "001": {
-      "common": null
+      "common": {
+        "heads": [
+          "ERR-2"
+        ],
+        "units": [
+          "PER-CENT"
+        ],
+        "data": [
+          [
+            6.0
+          ]
+        ]
+      }
     },
     "002": {
       "common": null,
@@ -312,13 +325,15 @@
           "EN",
           "EN-ERR",
           "DATA",
-          "ERR-T"
+          "ERR-T",
+          "FLAG"
         ],
         "units": [
           "MEV",
           "MEV",
           "MB",
-          "MB"
+          "MB",
+          "NO-DIM"
         ],
         "data": [
           [
@@ -340,6 +355,11 @@
             null,
             0.1,
             0.3
+          ],
+          [
+            1.0,
+            null,
+            null
           ]
         ]
       }
@@ -366,21 +386,39 @@
           {
             "x4_code": "(ERR-T)",
             "free_txt": [
-              " Contributions to the total error are:",
-              "  * photopeak - 1-5%;",
-              "  * detector efficiency - (3-4)%;",
-              "  * photopeak efficiency (1-4%);",
-              "  * uniformity of the foil thickness (1-2%);",
-              "  * monitor cross section (6%)"
+              " Overall errors propagated (7-9%) from"
+            ]
+          },
+          {
+            "x4_code": "(ERR-1,1.,2.)",
+            "free_txt": [
+              " foil thickness uniformity    (1-2%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-2)",
+            "free_txt": [
+              "       beam flux determination        (6%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-3,3.,4.)",
+            "free_txt": [
+              " detector efficiency          (3-4%)"
+            ]
+          },
+          {
+            "x4_code": "(ERR-S,1.,4.)",
+            "free_txt": [
+              " photopeak area determination (1-4%)",
+              "  * photopeak efficiency (1-4%);"
             ]
           }
         ],
         "facility": [
           {
             "x4_code": "(CYCLO,3INDVEC)",
-            "free_txt": [
-              " Variable energy cyclotron"
-            ]
+            "free_txt": []
           }
         ],
         "method": [
@@ -391,38 +429,33 @@
         ],
         "monit-ref": [
           {
-            "x4_code": "(B0174001,H.J.PROBST+,J,ARI,27,431,1967)",
+            "x4_code": "(B0174002,H.J.Probst+,J,ARI,27,431,1976)",
             "free_txt": []
           }
         ],
         "monitor": [
           {
             "x4_code": "(13-AL-27(A,X)11-NA-24,,SIG)",
-            "free_txt": [
-              " The incident alpha-",
-              "particle flux was derived by measuring the activity of",
-              "24Na in the aluminium foil."
-            ]
+            "free_txt": []
           }
         ],
         "sample": [
           {
             "x4_code": null,
             "free_txt": [
-              "Spectroscopically pure (99.99%) terbium foils of",
-              "thickness 20.6 mg/cm2. The samples were cut into pieces",
-              "of 1.2x1.2cm2 and glued on aluminium frame of size",
-              "3.0x2.5cm2 having a circular hole of diam. 8 mm in",
-              "its center. The aluminium foils were also inserted in",
-              "the stack, which acts as energy degraders"
+              "Spectroscopically pure (99.99%) Tb foils (20.6 mg/cm2,",
+              " 1.2x1.2 cm2) glued on Al frame (3.0x2.5 cm2, 8 mm in",
+              " diameter).",
+              "The Al foils were also inserted in the stack, which",
+              " acts as energy degraders."
             ]
           }
         ],
         "status": [
           {
-            "x4_code": "(TABLE)",
+            "x4_code": "(TABLE,,N.L.Singh+,J,ASL,51,271,2001)",
             "free_txt": [
-              " Table 2 from main ref."
+              " Table 2"
             ]
           }
         ]
@@ -430,13 +463,19 @@
     },
     "002": {
       "0": {
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "*By author:",
+              "The cross sections were measured for 162mHo residual",
+              " nucleus."
+            ]
+          }
+        ],
         "decay-data": [
           {
             "x4_code": "(67-HO-162-M,68.MIN,DG,185.,0.29,                    DG,283.,0.145,                    DG,937.,0.138)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(67-HO-162-G,15.MIN,DG,81.,0.077,                 DG,1319.,0.037)",
             "free_txt": []
           }
         ]
@@ -444,13 +483,19 @@
     },
     "003": {
       "0": {
+        "comment": [
+          {
+            "x4_code": null,
+            "free_txt": [
+              "*By author:",
+              "The cross sections were measured for 160mHo residual",
+              " nucleus."
+            ]
+          }
+        ],
         "decay-data": [
           {
-            "x4_code": "(67-HO-160-M1,5.02HR,DG,728.,0.297,                    DG,962.,0.176,                    DG,966.,0.162)",
-            "free_txt": []
-          },
-          {
-            "x4_code": "(67-HO-160-G,26.MIN,DG,728.,0.297,                  DG,962.,0.176,                  DG,966.,0.162)",
+            "x4_code": "(67-HO-160-M1,5.02HR,DG,728.,0.297,                     DG,962.,0.176,                     DG,966.,0.162)",
             "free_txt": []
           }
         ]
@@ -460,7 +505,7 @@
       "0": {
         "decay-data": [
           {
-            "x4_code": "(67-HO-159-G,33.MIN,DG,121.,0.34,                  DG,132.,0.227,                  DG,253.,0.14,                  DG,310.,0.144)",
+            "x4_code": "(67-HO-159-G,33.MIN,DG,121.,0.34,                    DG,132.,0.227,                    DG,253.,0.14,                    DG,310.,0.144)",
             "free_txt": []
           }
         ]
@@ -470,8 +515,17 @@
       "0": {
         "decay-data": [
           {
-            "x4_code": "(65-TB-156-G,5.4D,DG,199.,0.418,                DG,534.,0.662,                DG,1222.,0.317)",
+            "x4_code": "(65-TB-156-G,5.4D,DG,199.,0.418,                  DG,534.,0.662,                  DG,1222.,0.317)",
             "free_txt": []
+          }
+        ],
+        "flag": [
+          {
+            "x4_code": "(1.)",
+            "free_txt": [
+              " \"0.0 mb\" is given as the cross section",
+              " uncertainty in the article table"
+            ]
           }
         ]
       }
